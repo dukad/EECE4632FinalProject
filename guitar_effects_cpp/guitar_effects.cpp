@@ -3,10 +3,14 @@
 #include "ap_axi_sdata.h"
 
 
-#define FRAME RATE 88200
+#define FRAME_RATE 88200
 #define LPF_FILTER_LENGTH 441
 #define DELAY_BUFFER_SIZE 44100
 
+// function definitions
+short distortion(short input, int threshold, float clip_factor);
+short compression(short input, short min_threshold, short max_threshold, short zero_threshold, short& current_level, short values_buffer[LPF_FILTER_LENGTH], short compression_buffer_index, short lpf_coefficients[LPF_FILTER_LENGTH]);
+short delay(short input, short delay_samples, float delay_mult, short delay_buffer[DELAY_BUFFER_SIZE], short delay_buffer_index);
 
 void guitar_effects (
     hls::stream< ap_axis<16,2,5,6> > &INPUT,
@@ -35,7 +39,7 @@ void guitar_effects (
 
     //compression vars
     short current_level = 0;
-    short values_buffer[LPF_FILTER_LENGTH] = {0};
+    short compression_buffer[LPF_FILTER_LENGTH] = {0};
     short compression_buffer_index = 0;
     short lpf_coefficients[LPF_FILTER_LENGTH] = {0};
     
@@ -43,27 +47,30 @@ void guitar_effects (
     short delay_buffer[DELAY_BUFFER_SIZE] = {0};
     short delay_buffer_index = 0;
 
+    ap_axis<16,2,5,6> tmp;
+    short tmp_short;
   
     // main loop to control all effects
     while(1) {   
         INPUT.read(tmp); // store input data to tmp
-        tmp = tmp.data.to_int(); // convert tmp to int
+        tmp_short = tmp.data.to_int(); // convert tmp to int
         // use control input to determine which effect to use
         // 4 effects, with bool states each in order distortion, compression, delay, wah
         // if the first bit is 1, apply distortion
         if (control & 0x1000) {
-            tmp = distortion(tmp, distortion_threshold, distortion_clip_factor);
+            tmp_short = distortion(tmp_short, distortion_threshold, distortion_clip_factor);
         }
         if (control & 0x0100) {
             // apply compression function
-            tmp = compression(tmp, compression_min_threshold, compression_max_threshold, compression_zero_threshold, current_level);
+            tmp_short = compression(tmp_short, compression_min_threshold, compression_max_threshold, compression_zero_threshold, current_level, compression_buffer, compression_buffer_index, lpf_coefficients);
         } 
         if (control & 0x0010) {
             //apply delay function
-            tmp = delay(tmp, delay_samples, delay_mult, delay_buffer);
+            tmp_short = delay(tmp_short, delay_samples, delay_mult, delay_buffer, delay_buffer_index);
         }
         if (control & 0x0001) {
             //apply wah function
+        	tmp_short = tmp_short;
         }
 
         OUTPUT.write(tmp); // write tmp to output
@@ -91,16 +98,19 @@ short distortion(short input, int threshold, float clip_factor) {
 }
 
 //compression effect
-short compression(short input, short min_threshold, short max_threshold, short zero_threshold, short& current_level, short values_buffer[LPF_FILTER_LENGTH], short buffer_index, short lpf_coefficients[LPF_FILTER_LENGTH]) {
+short compression(short input, short min_threshold, short max_threshold, short zero_threshold, short& current_level, short values_buffer[LPF_FILTER_LENGTH], short compression_buffer_index, short lpf_coefficients[LPF_FILTER_LENGTH]) {
     // rectify the input signal and apply a low pass filter
-    short abs_in = abs(input);
+	short abs_in = input;
+	if (input < 0) {
+		abs_in = -input;
+	}
 
     //store input in buffer for future use
     values_buffer[compression_buffer_index] = abs_in;
-    compression_buffer_index = (buffer_index + 1) % LPF_FILTER_LENGTH; // update index
+    compression_buffer_index = (compression_buffer_index + 1) % LPF_FILTER_LENGTH; // update index
 
     // compute FIR out
-    for (int i = 0; i < LPF_FILTER_LENGTH; i++) {
+    LPF_Loop : for (int i = 0; i < LPF_FILTER_LENGTH; i++) {
         //iterate through filter
         int coeff_index = (compression_buffer_index + i) % LPF_FILTER_LENGTH; // get value to index the previous values by, essentially iterate though but loop if needed
         current_level += values_buffer[coeff_index] * lpf_coefficients[i];
@@ -111,11 +121,22 @@ short compression(short input, short min_threshold, short max_threshold, short z
     // if the current level is above the max threshold, then scale the input down
     float compression_factor;
     if (current_level > max_threshold) {
-        compression_factor = max_threshold / current_level;
-        output = input * compression_factor;
+    	if (current_level > 0) {
+    		//realistically this will always be the case because max threshold will always be > 0
+    		compression_factor = max_threshold / current_level;
+    		output = input * compression_factor;
+    	} else {
+    		output = input;
+    	}
+
     } else if ((current_level < min_threshold) && (current_level > zero_threshold))  {
-        compression_factor = min_threshold / current_level;
-        output = input * compression_factor;
+    	if (current_level > 0) {
+    		compression_factor = min_threshold / current_level;
+    		output = input * compression_factor;
+    	} else {
+    		output = input;
+    	}
+
     } else {
         // dont change if within desired range
         output = input;
@@ -125,7 +146,7 @@ short compression(short input, short min_threshold, short max_threshold, short z
 }
 
 //delay effect
-short delay(short input, short delay_samples, float delay_mult, short delay_buffer[DELAY_BUFFER_SIZE], short buffer_index) {
+short delay(short input, short delay_samples, float delay_mult, short delay_buffer[DELAY_BUFFER_SIZE], short delay_buffer_index) {
     // add delayed output to input signal
     short output;
     output = input + (delay_buffer[(delay_buffer_index - delay_samples) % DELAY_BUFFER_SIZE]*delay_mult); // add a previous sample to the input

@@ -1,0 +1,179 @@
+
+
+================================================================
+== Synthesis Summary Report of 'guitar_effects'
+================================================================
++ General Information: 
+    * Date:           Wed Mar 27 14:29:23 2024
+    * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
+    * Project:        Guitar_Effects
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg400-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +------------------------------+------+------+---------+-----------+----------+---------+-------+----------+----------+--------+-----------+-----------+-----+
+    |            Modules           | Issue|      | Latency |  Latency  | Iteration|         |  Trip |          |          |        |           |           |     |
+    |            & Loops           | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count | Pipelined|   BRAM   |   DSP  |     FF    |    LUT    | URAM|
+    +------------------------------+------+------+---------+-----------+----------+---------+-------+----------+----------+--------+-----------+-----------+-----+
+    |+ guitar_effects              |     -|  0.04|        -|          -|         -|        -|      -|        no|  64 (22%)|  5 (2%)|  1371 (1%)|  3194 (6%)|    -|
+    | + guitar_effects_Pipeline_1  |     -|  1.62|    44102|  4.410e+05|         -|    44102|      -|        no|         -|       -|   18 (~0%)|   63 (~0%)|    -|
+    |  o Loop 1                    |     -|  7.30|    44100|  4.410e+05|         1|        1|  44100|       yes|         -|       -|          -|          -|    -|
+    | o VITIS_LOOP_54_1            |     -|  7.30|        -|          -|        39|        -|      -|        no|         -|       -|          -|          -|    -|
+    +------------------------------+------+------+---------+-----------+----------+---------+-------+----------+----------+--------+-----------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* S_AXILITE Interfaces
++-----------------+------------+---------------+--------+----------+
+| Interface       | Data Width | Address Width | Offset | Register |
++-----------------+------------+---------------+--------+----------+
+| s_axi_control_r | 32         | 6             | 16     | 0        |
++-----------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++-----------------+----------------------------+--------+-------+--------+-------------------------------------------+
+| Interface       | Register                   | Offset | Width | Access | Description                               |
++-----------------+----------------------------+--------+-------+--------+-------------------------------------------+
+| s_axi_control_r | control                    | 0x10   | 32    | W      | Data signal of control                    |
+| s_axi_control_r | distortion_threshold       | 0x18   | 32    | W      | Data signal of distortion_threshold       |
+| s_axi_control_r | distortion_clip_factor     | 0x20   | 32    | W      | Data signal of distortion_clip_factor     |
+| s_axi_control_r | compression_min_threshold  | 0x28   | 32    | W      | Data signal of compression_min_threshold  |
+| s_axi_control_r | compression_max_threshold  | 0x30   | 32    | W      | Data signal of compression_max_threshold  |
+| s_axi_control_r | compression_zero_threshold | 0x38   | 32    | W      | Data signal of compression_zero_threshold |
++-----------------+----------------------------+--------+-------+--------+-------------------------------------------+
+
+* AXIS
++-----------+---------------+-------+-------+-----+-------+-------+--------+-------+-------+--------+
+| Interface | Register Mode | TDATA | TDEST | TID | TKEEP | TLAST | TREADY | TSTRB | TUSER | TVALID |
++-----------+---------------+-------+-------+-----+-------+-------+--------+-------+-------+--------+
+| INPUT_r   | both          | 16    | 6     | 5   | 2     | 1     | 1      | 2     | 2     | 1      |
+| OUTPUT_r  | both          | 16    | 6     | 5   | 2     | 1     | 1      | 2     | 2     | 1      |
++-----------+---------------+-------+-------+-----+-------+-------+--------+-------+-------+--------+
+
+* REGISTER
++---------------+---------+----------+
+| Interface     | Mode    | Bitwidth |
++---------------+---------+----------+
+| delay_mult    | ap_none | 32       |
+| delay_samples | ap_none | 32       |
++---------------+---------+----------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------------------------------+
+| Interface | Type       | Ports                             |
++-----------+------------+-----------------------------------+
+| ap_clk    | clock      | ap_clk                            |
+| ap_rst_n  | reset      | ap_rst_n                          |
+| ap_ctrl   | ap_ctrl_hs | ap_done ap_idle ap_ready ap_start |
++-----------+------------+-----------------------------------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------------------------+-----------+--------------------------------------------+
+| Argument                   | Direction | Datatype                                   |
++----------------------------+-----------+--------------------------------------------+
+| INPUT                      | in        | stream<hls::axis<ap_int<16>, 2, 5, 6>, 0>& |
+| OUTPUT                     | out       | stream<hls::axis<ap_int<16>, 2, 5, 6>, 0>& |
+| control                    | in        | char&                                      |
+| distortion_threshold       | in        | short&                                     |
+| distortion_clip_factor     | in        | float&                                     |
+| compression_min_threshold  | in        | short&                                     |
+| compression_max_threshold  | in        | short&                                     |
+| compression_zero_threshold | in        | short&                                     |
+| delay_mult                 | in        | float&                                     |
+| delay_samples              | in        | int&                                       |
++----------------------------+-----------+--------------------------------------------+
+
+* SW-to-HW Mapping
++----------------------------+-----------------+-----------+------------------------------------------------------+
+| Argument                   | HW Interface    | HW Type   | HW Info                                              |
++----------------------------+-----------------+-----------+------------------------------------------------------+
+| INPUT                      | INPUT_r         | interface |                                                      |
+| OUTPUT                     | OUTPUT_r        | interface |                                                      |
+| control                    | s_axi_control_r | register  | name=control offset=0x10 range=32                    |
+| distortion_threshold       | s_axi_control_r | register  | name=distortion_threshold offset=0x18 range=32       |
+| distortion_clip_factor     | s_axi_control_r | register  | name=distortion_clip_factor offset=0x20 range=32     |
+| compression_min_threshold  | s_axi_control_r | register  | name=compression_min_threshold offset=0x28 range=32  |
+| compression_max_threshold  | s_axi_control_r | register  | name=compression_max_threshold offset=0x30 range=32  |
+| compression_zero_threshold | s_axi_control_r | register  | name=compression_zero_threshold offset=0x38 range=32 |
+| delay_mult                 | delay_mult      | port      |                                                      |
+| delay_samples              | delay_samples   | port      |                                                      |
++----------------------------+-----------------+-----------+------------------------------------------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+  No burst in design
+
+================================================================
+== Bind Op Report
+================================================================
++-----------------------------------------+-----+--------+--------------------+------+---------+---------+
+| Name                                    | DSP | Pragma | Variable           | Op   | Impl    | Latency |
++-----------------------------------------+-----+--------+--------------------+------+---------+---------+
+| + guitar_effects                        | 5   |        |                    |      |         |         |
+|   negative_threshold_fu_339_p2          | -   |        | negative_threshold | sub  | fabric  | 0       |
+|   grp_fu_303_p0                         | -   |        | sub_i76            | sub  | fabric  | 0       |
+|   add_ln92_fu_391_p2                    | -   |        | add_ln92           | add  | fabric  | 0       |
+|   fmul_32ns_32ns_32_4_max_dsp_1_U3      | 3   |        | mul14_i            | fmul | maxdsp  | 3       |
+|   faddfsub_32ns_32ns_32_5_full_dsp_1_U2 | 2   |        | dc_1               | fsub | fulldsp | 4       |
+|   add_ln346_1_fu_435_p2                 | -   |        | add_ln346_1        | add  | fabric  | 0       |
+|   sub_ln1512_1_fu_449_p2                | -   |        | sub_ln1512_1       | sub  | fabric  | 0       |
+|   result_V_5_fu_528_p2                  | -   |        | result_V_5         | sub  | fabric  | 0       |
+|   sub_ln90_fu_396_p2                    | -   |        | sub_ln90           | sub  | fabric  | 0       |
+|   fmul_32ns_32ns_32_4_max_dsp_1_U3      | 3   |        | mul_i              | fmul | maxdsp  | 3       |
+|   faddfsub_32ns_32ns_32_5_full_dsp_1_U2 | 2   |        | dc                 | fsub | fulldsp | 4       |
+|   add_ln346_fu_586_p2                   | -   |        | add_ln346          | add  | fabric  | 0       |
+|   sub_ln1512_fu_600_p2                  | -   |        | sub_ln1512         | sub  | fabric  | 0       |
+|   result_V_2_fu_540_p2                  | -   |        | result_V_2         | sub  | fabric  | 0       |
+|   fmul_32ns_32ns_32_4_max_dsp_1_U3      | 3   |        | mul_i1             | fmul | maxdsp  | 3       |
+|   faddfsub_32ns_32ns_32_5_full_dsp_1_U2 | 2   |        | dc_2               | fsub | fulldsp | 4       |
+|   add_ln346_2_fu_718_p2                 | -   |        | add_ln346_2        | add  | fabric  | 0       |
+|   sub_ln1512_2_fu_732_p2                | -   |        | sub_ln1512_2       | sub  | fabric  | 0       |
+|   result_V_8_fu_811_p2                  | -   |        | result_V_8         | sub  | fabric  | 0       |
+|  + guitar_effects_Pipeline_1            | 0   |        |                    |      |         |         |
+|    empty_21_fu_56_p2                    | -   |        | empty_21           | add  | fabric  | 0       |
++-----------------------------------------+-----+--------+--------------------+------+---------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
++------------------+------+------+--------+--------------+---------+------+---------+
+| Name             | BRAM | URAM | Pragma | Variable     | Storage | Impl | Latency |
++------------------+------+------+--------+--------------+---------+------+---------+
+| + guitar_effects | 64   | 0    |        |              |         |      |         |
+|   delay_buffer_U | 64   | -    |        | delay_buffer | ram_1p  | auto | 1       |
++------------------+------+------+--------+--------------+---------+------+---------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------+-------------------------------------------+---------------------------------------------------------------------+
+| Type      | Options                                   | Location                                                            |
++-----------+-------------------------------------------+---------------------------------------------------------------------+
+| interface | axis port=INPUT                           | guitar_effects.cpp:28 in guitar_effects, INPUT                      |
+| interface | axis port=OUTPUT                          | guitar_effects.cpp:29 in guitar_effects, OUTPUT                     |
+| interface | s_axilite port=control                    | guitar_effects.cpp:30 in guitar_effects, control                    |
+| interface | s_axilite port=distortion_threshold       | guitar_effects.cpp:31 in guitar_effects, distortion_threshold       |
+| interface | s_axilite port=distortion_clip_factor     | guitar_effects.cpp:32 in guitar_effects, distortion_clip_factor     |
+| interface | s_axilite port=compression_min_threshold  | guitar_effects.cpp:33 in guitar_effects, compression_min_threshold  |
+| interface | s_axilite port=compression_max_threshold  | guitar_effects.cpp:34 in guitar_effects, compression_max_threshold  |
+| interface | s_axilite port=compression_zero_threshold | guitar_effects.cpp:35 in guitar_effects, compression_zero_threshold |
++-----------+-------------------------------------------+---------------------------------------------------------------------+
+
+
