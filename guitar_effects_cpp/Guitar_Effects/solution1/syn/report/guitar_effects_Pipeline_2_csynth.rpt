@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'guitar_effects_Pipeline_2'
 ================================================================
-* Date:           Wed Mar 27 15:08:50 2024
+* Date:           Wed Mar 27 19:50:55 2024
 
 * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
 * Project:        Guitar_Effects
@@ -85,7 +85,7 @@
     +--------------------+----------+----+---+----+------------+------------+
     |    Variable Name   | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +--------------------+----------+----+---+----+------------+------------+
-    |empty_23_fu_56_p2   |         +|   0|  0|  23|          16|           1|
+    |empty_25_fu_56_p2   |         +|   0|  0|  23|          16|           1|
     |exitcond1_fu_50_p2  |      icmp|   0|  0|  13|          16|          16|
     +--------------------+----------+----+---+----+------------+------------+
     |Total               |          |   0|  0|  36|          32|          17|
@@ -131,6 +131,6 @@
 |delay_buffer_address0  |  out|   16|   ap_memory|               delay_buffer|         array|
 |delay_buffer_ce0       |  out|    1|   ap_memory|               delay_buffer|         array|
 |delay_buffer_we0       |  out|    1|   ap_memory|               delay_buffer|         array|
-|delay_buffer_d0        |  out|   16|   ap_memory|               delay_buffer|         array|
+|delay_buffer_d0        |  out|   32|   ap_memory|               delay_buffer|         array|
 +-----------------------+-----+-----+------------+---------------------------+--------------+
 

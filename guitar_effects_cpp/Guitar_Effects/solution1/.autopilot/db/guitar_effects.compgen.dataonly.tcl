@@ -2,55 +2,47 @@
 
 set axilite_register_dict [dict create]
 set port_control_r {
+axilite_out { 
+	dir O
+	width 32
+	depth 1
+	mode ap_vld
+	offset 16
+	offset_end 23
+}
 control { 
 	dir I
 	width 8
 	depth 1
 	mode ap_none
-	offset 16
-	offset_end 23
+	offset 32
+	offset_end 39
 }
 distortion_threshold { 
 	dir I
-	width 16
+	width 32
 	depth 1
 	mode ap_none
-	offset 24
-	offset_end 31
+	offset 40
+	offset_end 47
 }
 distortion_clip_factor { 
 	dir I
 	width 32
 	depth 1
 	mode ap_none
-	offset 32
-	offset_end 39
-}
-compression_min_threshold { 
-	dir I
-	width 16
-	depth 1
-	mode ap_none
-	offset 40
-	offset_end 47
-}
-compression_max_threshold { 
-	dir I
-	width 16
-	depth 1
-	mode ap_none
 	offset 48
 	offset_end 55
 }
-compression_zero_threshold { 
+compression_min_threshold { 
 	dir I
-	width 16
+	width 32
 	depth 1
 	mode ap_none
 	offset 56
 	offset_end 63
 }
-delay_mult { 
+compression_max_threshold { 
 	dir I
 	width 32
 	depth 1
@@ -58,13 +50,29 @@ delay_mult {
 	offset 64
 	offset_end 71
 }
-delay_samples { 
+compression_zero_threshold { 
 	dir I
 	width 32
 	depth 1
 	mode ap_none
 	offset 72
 	offset_end 79
+}
+delay_mult { 
+	dir I
+	width 32
+	depth 1
+	mode ap_none
+	offset 80
+	offset_end 87
+}
+delay_samples { 
+	dir I
+	width 32
+	depth 1
+	mode ap_none
+	offset 88
+	offset_end 95
 }
 }
 dict set axilite_register_dict control_r $port_control_r

@@ -12,16 +12,11 @@
   <warningLogs>
     <logs>
       <synLog>
-        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="Guitar_Effects" solutionName="solution1" date="2024-03-27T15:08:50.673-0400" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="Guitar_Effects" solutionName="solution1" date="2024-03-27T19:50:56.454-0400" type="Warning"/>
       </synLog>
       <simLog/>
       <mgLog/>
-      <packageLog>
-        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'guitar_effects_sitofp_32s_32_6_no_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.&#xD;" projectName="Guitar_Effects" solutionName="solution1" date="2024-03-27T15:09:35.616-0400" type="Warning"/>
-        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'guitar_effects_fmul_32ns_32ns_32_4_max_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.&#xD;" projectName="Guitar_Effects" solutionName="solution1" date="2024-03-27T15:09:31.909-0400" type="Warning"/>
-        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'guitar_effects_fdiv_32ns_32ns_32_16_no_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.&#xD;" projectName="Guitar_Effects" solutionName="solution1" date="2024-03-27T15:09:29.908-0400" type="Warning"/>
-        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'guitar_effects_faddfsub_32ns_32ns_32_5_full_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.&#xD;" projectName="Guitar_Effects" solutionName="solution1" date="2024-03-27T15:09:25.907-0400" type="Warning"/>
-      </packageLog>
+      <packageLog/>
       <csimLog/>
     </logs>
   </warningLogs>

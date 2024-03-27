@@ -19,7 +19,7 @@ using namespace sc_dt;
 
 struct guitar_effects_delay_buffer_RAM_AUTO_1R1W_ram : public sc_core::sc_module {
 
-  static const unsigned DataWidth = 16;
+  static const unsigned DataWidth = 32;
   static const unsigned AddressRange = 44100;
   static const unsigned AddressWidth = 16;
 
@@ -76,7 +76,7 @@ void prc_write_0()
 SC_MODULE(guitar_effects_delay_buffer_RAM_AUTO_1R1W) {
 
 
-static const unsigned DataWidth = 16;
+static const unsigned DataWidth = 32;
 static const unsigned AddressRange = 44100;
 static const unsigned AddressWidth = 16;
 

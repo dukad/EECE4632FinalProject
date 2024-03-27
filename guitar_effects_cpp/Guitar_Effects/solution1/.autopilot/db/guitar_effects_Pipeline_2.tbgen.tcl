@@ -13,10 +13,10 @@ set hasInterrupt 0
 set C_modelName {guitar_effects_Pipeline_2}
 set C_modelType { void 0 }
 set C_modelArgList {
-	{ delay_buffer int 16 regular {array 44100 { 0 3 } 0 1 }  }
+	{ delay_buffer int 32 regular {array 44100 { 0 3 } 0 1 }  }
 }
 set C_modelArgMapList {[ 
-	{ "Name" : "delay_buffer", "interface" : "memory", "bitwidth" : 16, "direction" : "WRITEONLY"} ]}
+	{ "Name" : "delay_buffer", "interface" : "memory", "bitwidth" : 32, "direction" : "WRITEONLY"} ]}
 # RTL Port declarations: 
 set portNum 10
 set portList { 
@@ -29,7 +29,7 @@ set portList {
 	{ delay_buffer_address0 sc_out sc_lv 16 signal 0 } 
 	{ delay_buffer_ce0 sc_out sc_logic 1 signal 0 } 
 	{ delay_buffer_we0 sc_out sc_logic 1 signal 0 } 
-	{ delay_buffer_d0 sc_out sc_lv 16 signal 0 } 
+	{ delay_buffer_d0 sc_out sc_lv 32 signal 0 } 
 }
 set NewPortList {[ 
 	{ "name": "ap_clk", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "clock", "bundle":{"name": "ap_clk", "role": "default" }} , 
@@ -41,7 +41,7 @@ set NewPortList {[
  	{ "name": "delay_buffer_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "delay_buffer", "role": "address0" }} , 
  	{ "name": "delay_buffer_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "delay_buffer", "role": "ce0" }} , 
  	{ "name": "delay_buffer_we0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "delay_buffer", "role": "we0" }} , 
- 	{ "name": "delay_buffer_d0", "direction": "out", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "delay_buffer", "role": "d0" }}  ]}
+ 	{ "name": "delay_buffer_d0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "delay_buffer", "role": "d0" }}  ]}
 
 set RtlHierarchyInfo {[
 	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1"],
@@ -80,5 +80,5 @@ set PipelineEnableSignalInfo {[
 ]}
 
 set Spec2ImplPortList { 
-	delay_buffer { ap_memory {  { delay_buffer_address0 mem_address 1 16 }  { delay_buffer_ce0 mem_ce 1 1 }  { delay_buffer_we0 mem_we 1 1 }  { delay_buffer_d0 mem_din 1 16 } } }
+	delay_buffer { ap_memory {  { delay_buffer_address0 mem_address 1 16 }  { delay_buffer_ce0 mem_ce 1 1 }  { delay_buffer_we0 mem_we 1 1 }  { delay_buffer_d0 mem_din 1 32 } } }
 }

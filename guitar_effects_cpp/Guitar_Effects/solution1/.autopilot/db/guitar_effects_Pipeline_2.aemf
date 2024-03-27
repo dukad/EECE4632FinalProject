@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1711566530172">
-  <ports id="1" name="delay_buffer" type="PortType" coreName="RAM" coreId="842412597" bitwidth="16" direction="DirOut" iftype="IfTypeRegister" arraysize="44100">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1711583455990">
+  <ports id="1" name="delay_buffer" type="PortType" coreName="RAM" coreId="1936484399" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="44100">
     <dataInputObjs>getelementptr</dataInputObjs>
   </ports>
   <edges id="25" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.1"/>
@@ -14,10 +14,10 @@
   <edges id="37" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
   <edges id="38" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@ports.0"/>
   <edges id="41" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
-  <edges id="43" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
-  <edges id="44" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3"/>
-  <edges id="45" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3"/>
-  <edges id="46" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.4"/>
+  <edges id="44" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
+  <edges id="45" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3"/>
+  <edges id="46" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3"/>
+  <edges id="47" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.4"/>
   <edges id="63" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0"/>
   <edges id="64" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.1"/>
   <edges id="65" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1"/>
@@ -41,18 +41,18 @@
       <controlInputObjs>memset.loop</controlInputObjs>
     </node_objs>
   </blocks>
-  <blocks id="20" name="VITIS_LOOP_59_2.exitStub" type="BlockType">
+  <blocks id="20" name="split.exitStub" type="BlockType">
     <controlInputObjs>memset.loop</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="_ln0" coreId="1852793632" opcode="ret" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="_ln0" coreId="2178977786" opcode="ret" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1"/>
   </blocks>
-  <regions anchor_node="-1" region_type="8" interval="1" typeName="Pipeline" iiViolation="" id="74" pipe_depth="1" RegionName="Loop 1">
+  <regions anchor_node="-1" region_type="8" interval="1" typeName="Pipeline" iiViolation="" id="75" pipe_depth="1" RegionName="Loop 1">
     <basic_blocks id="12" name="memset.loop" type="BlockType">
       <controlInputObjs>newFuncRoot</controlInputObjs>
       <controlInputObjs>memset.loop.split</controlInputObjs>
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>br</controlOutputObjs>
-      <controlOutputObjs>VITIS_LOOP_59_2.exitStub</controlOutputObjs>
+      <controlOutputObjs>split.exitStub</controlOutputObjs>
       <controlOutputObjs>memset.loop.split</controlOutputObjs>
       <node_objs xsi:type="cdfg:CdfgNode" id="6" name="p_load" coreId="1852793632" bitwidth="16" opcode="load" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
         <dataInputObjs>alloca</dataInputObjs>
@@ -65,7 +65,7 @@
         <dataOutputObjs>br</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="10" name="empty_23" rtlName="empty_23_fu_56_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" bitwidth="16" opcode="add" m_display="0" m_delay="2.07" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="10" name="empty_25" rtlName="empty_25_fu_56_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" bitwidth="16" opcode="add" m_display="0" m_delay="2.07" m_topoIndex="6" m_clusterGroupNumber="-1">
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
@@ -73,14 +73,14 @@
       <node_objs xsi:type="cdfg:CdfgNode" id="11" name="br_ln0" coreId="1852793632" opcode="br" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
         <dataInputObjs>icmp</dataInputObjs>
         <controlInputObjs>memset.loop.split</controlInputObjs>
-        <controlInputObjs>VITIS_LOOP_59_2.exitStub</controlInputObjs>
+        <controlInputObjs>split.exitStub</controlInputObjs>
       </node_objs>
     </basic_blocks>
     <basic_blocks id="18" name="memset.loop.split" type="BlockType">
       <controlInputObjs>memset.loop</controlInputObjs>
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>memset.loop</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="13" name="p_cast3" rtlName="p_cast3_fu_62_p1" coreId="1852793632" bitwidth="64" opcode="zext" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="13" name="p_cast4" rtlName="p_cast4_fu_62_p1" coreId="1852793632" bitwidth="64" opcode="zext" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
       </node_objs>
@@ -113,14 +113,14 @@
   <expressionNodes realName="exitcond1_fu_50">
     <nodeIds>8</nodeIds>
   </expressionNodes>
+  <expressionNodes realName="empty_25_fu_56">
+    <nodeIds>10</nodeIds>
+  </expressionNodes>
   <expressionNodes realName="empty_fu_24">
     <nodeIds>2</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="p_cast3_fu_62">
+  <expressionNodes realName="p_cast4_fu_62">
     <nodeIds>13</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="empty_23_fu_56">
-    <nodeIds>10</nodeIds>
   </expressionNodes>
   <ioNodes realName="store_ln0_store_fu_67">
     <nodeIds>16</nodeIds>

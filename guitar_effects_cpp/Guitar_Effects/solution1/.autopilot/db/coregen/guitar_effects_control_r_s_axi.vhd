@@ -32,12 +32,14 @@ port (
     RRESP                 :out  STD_LOGIC_VECTOR(1 downto 0);
     RVALID                :out  STD_LOGIC;
     RREADY                :in   STD_LOGIC;
+    axilite_out           :in   STD_LOGIC_VECTOR(31 downto 0);
+    axilite_out_ap_vld    :in   STD_LOGIC;
     control               :out  STD_LOGIC_VECTOR(7 downto 0);
-    distortion_threshold  :out  STD_LOGIC_VECTOR(15 downto 0);
+    distortion_threshold  :out  STD_LOGIC_VECTOR(31 downto 0);
     distortion_clip_factor :out  STD_LOGIC_VECTOR(31 downto 0);
-    compression_min_threshold :out  STD_LOGIC_VECTOR(15 downto 0);
-    compression_max_threshold :out  STD_LOGIC_VECTOR(15 downto 0);
-    compression_zero_threshold :out  STD_LOGIC_VECTOR(15 downto 0);
+    compression_min_threshold :out  STD_LOGIC_VECTOR(31 downto 0);
+    compression_max_threshold :out  STD_LOGIC_VECTOR(31 downto 0);
+    compression_zero_threshold :out  STD_LOGIC_VECTOR(31 downto 0);
     delay_mult            :out  STD_LOGIC_VECTOR(31 downto 0);
     delay_samples         :out  STD_LOGIC_VECTOR(31 downto 0)
 );
@@ -48,35 +50,36 @@ end entity guitar_effects_control_r_s_axi;
 -- 0x04 : reserved
 -- 0x08 : reserved
 -- 0x0c : reserved
--- 0x10 : Data signal of control
+-- 0x10 : Data signal of axilite_out
+--        bit 31~0 - axilite_out[31:0] (Read)
+-- 0x14 : Control signal of axilite_out
+--        bit 0  - axilite_out_ap_vld (Read/COR)
+--        others - reserved
+-- 0x20 : Data signal of control
 --        bit 7~0 - control[7:0] (Read/Write)
 --        others  - reserved
--- 0x14 : reserved
--- 0x18 : Data signal of distortion_threshold
---        bit 15~0 - distortion_threshold[15:0] (Read/Write)
---        others   - reserved
--- 0x1c : reserved
--- 0x20 : Data signal of distortion_clip_factor
---        bit 31~0 - distortion_clip_factor[31:0] (Read/Write)
 -- 0x24 : reserved
--- 0x28 : Data signal of compression_min_threshold
---        bit 15~0 - compression_min_threshold[15:0] (Read/Write)
---        others   - reserved
+-- 0x28 : Data signal of distortion_threshold
+--        bit 31~0 - distortion_threshold[31:0] (Read/Write)
 -- 0x2c : reserved
--- 0x30 : Data signal of compression_max_threshold
---        bit 15~0 - compression_max_threshold[15:0] (Read/Write)
---        others   - reserved
+-- 0x30 : Data signal of distortion_clip_factor
+--        bit 31~0 - distortion_clip_factor[31:0] (Read/Write)
 -- 0x34 : reserved
--- 0x38 : Data signal of compression_zero_threshold
---        bit 15~0 - compression_zero_threshold[15:0] (Read/Write)
---        others   - reserved
+-- 0x38 : Data signal of compression_min_threshold
+--        bit 31~0 - compression_min_threshold[31:0] (Read/Write)
 -- 0x3c : reserved
--- 0x40 : Data signal of delay_mult
---        bit 31~0 - delay_mult[31:0] (Read/Write)
+-- 0x40 : Data signal of compression_max_threshold
+--        bit 31~0 - compression_max_threshold[31:0] (Read/Write)
 -- 0x44 : reserved
--- 0x48 : Data signal of delay_samples
---        bit 31~0 - delay_samples[31:0] (Read/Write)
+-- 0x48 : Data signal of compression_zero_threshold
+--        bit 31~0 - compression_zero_threshold[31:0] (Read/Write)
 -- 0x4c : reserved
+-- 0x50 : Data signal of delay_mult
+--        bit 31~0 - delay_mult[31:0] (Read/Write)
+-- 0x54 : reserved
+-- 0x58 : Data signal of delay_samples
+--        bit 31~0 - delay_samples[31:0] (Read/Write)
+-- 0x5c : reserved
 -- (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
 architecture behave of guitar_effects_control_r_s_axi is
@@ -84,22 +87,24 @@ architecture behave of guitar_effects_control_r_s_axi is
     signal wstate  : states := wrreset;
     signal rstate  : states := rdreset;
     signal wnext, rnext: states;
-    constant ADDR_CONTROL_DATA_0                    : INTEGER := 16#10#;
-    constant ADDR_CONTROL_CTRL                      : INTEGER := 16#14#;
-    constant ADDR_DISTORTION_THRESHOLD_DATA_0       : INTEGER := 16#18#;
-    constant ADDR_DISTORTION_THRESHOLD_CTRL         : INTEGER := 16#1c#;
-    constant ADDR_DISTORTION_CLIP_FACTOR_DATA_0     : INTEGER := 16#20#;
-    constant ADDR_DISTORTION_CLIP_FACTOR_CTRL       : INTEGER := 16#24#;
-    constant ADDR_COMPRESSION_MIN_THRESHOLD_DATA_0  : INTEGER := 16#28#;
-    constant ADDR_COMPRESSION_MIN_THRESHOLD_CTRL    : INTEGER := 16#2c#;
-    constant ADDR_COMPRESSION_MAX_THRESHOLD_DATA_0  : INTEGER := 16#30#;
-    constant ADDR_COMPRESSION_MAX_THRESHOLD_CTRL    : INTEGER := 16#34#;
-    constant ADDR_COMPRESSION_ZERO_THRESHOLD_DATA_0 : INTEGER := 16#38#;
-    constant ADDR_COMPRESSION_ZERO_THRESHOLD_CTRL   : INTEGER := 16#3c#;
-    constant ADDR_DELAY_MULT_DATA_0                 : INTEGER := 16#40#;
-    constant ADDR_DELAY_MULT_CTRL                   : INTEGER := 16#44#;
-    constant ADDR_DELAY_SAMPLES_DATA_0              : INTEGER := 16#48#;
-    constant ADDR_DELAY_SAMPLES_CTRL                : INTEGER := 16#4c#;
+    constant ADDR_AXILITE_OUT_DATA_0                : INTEGER := 16#10#;
+    constant ADDR_AXILITE_OUT_CTRL                  : INTEGER := 16#14#;
+    constant ADDR_CONTROL_DATA_0                    : INTEGER := 16#20#;
+    constant ADDR_CONTROL_CTRL                      : INTEGER := 16#24#;
+    constant ADDR_DISTORTION_THRESHOLD_DATA_0       : INTEGER := 16#28#;
+    constant ADDR_DISTORTION_THRESHOLD_CTRL         : INTEGER := 16#2c#;
+    constant ADDR_DISTORTION_CLIP_FACTOR_DATA_0     : INTEGER := 16#30#;
+    constant ADDR_DISTORTION_CLIP_FACTOR_CTRL       : INTEGER := 16#34#;
+    constant ADDR_COMPRESSION_MIN_THRESHOLD_DATA_0  : INTEGER := 16#38#;
+    constant ADDR_COMPRESSION_MIN_THRESHOLD_CTRL    : INTEGER := 16#3c#;
+    constant ADDR_COMPRESSION_MAX_THRESHOLD_DATA_0  : INTEGER := 16#40#;
+    constant ADDR_COMPRESSION_MAX_THRESHOLD_CTRL    : INTEGER := 16#44#;
+    constant ADDR_COMPRESSION_ZERO_THRESHOLD_DATA_0 : INTEGER := 16#48#;
+    constant ADDR_COMPRESSION_ZERO_THRESHOLD_CTRL   : INTEGER := 16#4c#;
+    constant ADDR_DELAY_MULT_DATA_0                 : INTEGER := 16#50#;
+    constant ADDR_DELAY_MULT_CTRL                   : INTEGER := 16#54#;
+    constant ADDR_DELAY_SAMPLES_DATA_0              : INTEGER := 16#58#;
+    constant ADDR_DELAY_SAMPLES_CTRL                : INTEGER := 16#5c#;
     constant ADDR_BITS         : INTEGER := 7;
 
     signal waddr               : UNSIGNED(ADDR_BITS-1 downto 0);
@@ -114,12 +119,14 @@ architecture behave of guitar_effects_control_r_s_axi is
     signal ARREADY_t           : STD_LOGIC;
     signal RVALID_t            : STD_LOGIC;
     -- internal registers
+    signal int_axilite_out_ap_vld : STD_LOGIC;
+    signal int_axilite_out     : UNSIGNED(31 downto 0) := (others => '0');
     signal int_control         : UNSIGNED(7 downto 0) := (others => '0');
-    signal int_distortion_threshold : UNSIGNED(15 downto 0) := (others => '0');
+    signal int_distortion_threshold : UNSIGNED(31 downto 0) := (others => '0');
     signal int_distortion_clip_factor : UNSIGNED(31 downto 0) := (others => '0');
-    signal int_compression_min_threshold : UNSIGNED(15 downto 0) := (others => '0');
-    signal int_compression_max_threshold : UNSIGNED(15 downto 0) := (others => '0');
-    signal int_compression_zero_threshold : UNSIGNED(15 downto 0) := (others => '0');
+    signal int_compression_min_threshold : UNSIGNED(31 downto 0) := (others => '0');
+    signal int_compression_max_threshold : UNSIGNED(31 downto 0) := (others => '0');
+    signal int_compression_zero_threshold : UNSIGNED(31 downto 0) := (others => '0');
     signal int_delay_mult      : UNSIGNED(31 downto 0) := (others => '0');
     signal int_delay_samples   : UNSIGNED(31 downto 0) := (others => '0');
 
@@ -237,18 +244,22 @@ begin
                 if (ar_hs = '1') then
                     rdata_data <= (others => '0');
                     case (TO_INTEGER(raddr)) is
+                    when ADDR_AXILITE_OUT_DATA_0 =>
+                        rdata_data <= RESIZE(int_axilite_out(31 downto 0), 32);
+                    when ADDR_AXILITE_OUT_CTRL =>
+                        rdata_data(0) <= int_axilite_out_ap_vld;
                     when ADDR_CONTROL_DATA_0 =>
                         rdata_data <= RESIZE(int_control(7 downto 0), 32);
                     when ADDR_DISTORTION_THRESHOLD_DATA_0 =>
-                        rdata_data <= RESIZE(int_distortion_threshold(15 downto 0), 32);
+                        rdata_data <= RESIZE(int_distortion_threshold(31 downto 0), 32);
                     when ADDR_DISTORTION_CLIP_FACTOR_DATA_0 =>
                         rdata_data <= RESIZE(int_distortion_clip_factor(31 downto 0), 32);
                     when ADDR_COMPRESSION_MIN_THRESHOLD_DATA_0 =>
-                        rdata_data <= RESIZE(int_compression_min_threshold(15 downto 0), 32);
+                        rdata_data <= RESIZE(int_compression_min_threshold(31 downto 0), 32);
                     when ADDR_COMPRESSION_MAX_THRESHOLD_DATA_0 =>
-                        rdata_data <= RESIZE(int_compression_max_threshold(15 downto 0), 32);
+                        rdata_data <= RESIZE(int_compression_max_threshold(31 downto 0), 32);
                     when ADDR_COMPRESSION_ZERO_THRESHOLD_DATA_0 =>
-                        rdata_data <= RESIZE(int_compression_zero_threshold(15 downto 0), 32);
+                        rdata_data <= RESIZE(int_compression_zero_threshold(31 downto 0), 32);
                     when ADDR_DELAY_MULT_DATA_0 =>
                         rdata_data <= RESIZE(int_delay_mult(31 downto 0), 32);
                     when ADDR_DELAY_SAMPLES_DATA_0 =>
@@ -274,6 +285,34 @@ begin
     process (ACLK)
     begin
         if (ACLK'event and ACLK = '1') then
+            if (ARESET = '1') then
+                int_axilite_out <= (others => '0');
+            elsif (ACLK_EN = '1') then
+                if (axilite_out_ap_vld = '1') then
+                    int_axilite_out <= UNSIGNED(axilite_out);
+                end if;
+            end if;
+        end if;
+    end process;
+
+    process (ACLK)
+    begin
+        if (ACLK'event and ACLK = '1') then
+            if (ARESET = '1') then
+                int_axilite_out_ap_vld <= '0';
+            elsif (ACLK_EN = '1') then
+                if (axilite_out_ap_vld = '1') then
+                    int_axilite_out_ap_vld <= '1';
+                elsif (ar_hs = '1' and raddr = ADDR_AXILITE_OUT_CTRL) then
+                    int_axilite_out_ap_vld <= '0'; -- clear on read
+                end if;
+            end if;
+        end if;
+    end process;
+
+    process (ACLK)
+    begin
+        if (ACLK'event and ACLK = '1') then
             if (ACLK_EN = '1') then
                 if (w_hs = '1' and waddr = ADDR_CONTROL_DATA_0) then
                     int_control(7 downto 0) <= (UNSIGNED(WDATA(7 downto 0)) and wmask(7 downto 0)) or ((not wmask(7 downto 0)) and int_control(7 downto 0));
@@ -287,7 +326,7 @@ begin
         if (ACLK'event and ACLK = '1') then
             if (ACLK_EN = '1') then
                 if (w_hs = '1' and waddr = ADDR_DISTORTION_THRESHOLD_DATA_0) then
-                    int_distortion_threshold(15 downto 0) <= (UNSIGNED(WDATA(15 downto 0)) and wmask(15 downto 0)) or ((not wmask(15 downto 0)) and int_distortion_threshold(15 downto 0));
+                    int_distortion_threshold(31 downto 0) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_distortion_threshold(31 downto 0));
                 end if;
             end if;
         end if;
@@ -309,7 +348,7 @@ begin
         if (ACLK'event and ACLK = '1') then
             if (ACLK_EN = '1') then
                 if (w_hs = '1' and waddr = ADDR_COMPRESSION_MIN_THRESHOLD_DATA_0) then
-                    int_compression_min_threshold(15 downto 0) <= (UNSIGNED(WDATA(15 downto 0)) and wmask(15 downto 0)) or ((not wmask(15 downto 0)) and int_compression_min_threshold(15 downto 0));
+                    int_compression_min_threshold(31 downto 0) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_compression_min_threshold(31 downto 0));
                 end if;
             end if;
         end if;
@@ -320,7 +359,7 @@ begin
         if (ACLK'event and ACLK = '1') then
             if (ACLK_EN = '1') then
                 if (w_hs = '1' and waddr = ADDR_COMPRESSION_MAX_THRESHOLD_DATA_0) then
-                    int_compression_max_threshold(15 downto 0) <= (UNSIGNED(WDATA(15 downto 0)) and wmask(15 downto 0)) or ((not wmask(15 downto 0)) and int_compression_max_threshold(15 downto 0));
+                    int_compression_max_threshold(31 downto 0) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_compression_max_threshold(31 downto 0));
                 end if;
             end if;
         end if;
@@ -331,7 +370,7 @@ begin
         if (ACLK'event and ACLK = '1') then
             if (ACLK_EN = '1') then
                 if (w_hs = '1' and waddr = ADDR_COMPRESSION_ZERO_THRESHOLD_DATA_0) then
-                    int_compression_zero_threshold(15 downto 0) <= (UNSIGNED(WDATA(15 downto 0)) and wmask(15 downto 0)) or ((not wmask(15 downto 0)) and int_compression_zero_threshold(15 downto 0));
+                    int_compression_zero_threshold(31 downto 0) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_compression_zero_threshold(31 downto 0));
                 end if;
             end if;
         end if;

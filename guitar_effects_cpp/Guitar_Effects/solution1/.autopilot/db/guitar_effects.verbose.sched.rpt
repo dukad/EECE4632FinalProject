@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'guitar_effects'
 ================================================================
-* Date:           Wed Mar 27 15:08:49 2024
+* Date:           Wed Mar 27 19:50:55 2024
 
 * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
 * Project:        Guitar_Effects
@@ -41,7 +41,7 @@
         |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
         |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
         +-------------------+---------+---------+----------+-----------+-----------+------+----------+
-        |- VITIS_LOOP_59_2  |        ?|        ?|    5 ~ 73|          -|          -|     ?|        no|
+        |- VITIS_LOOP_63_2  |        ?|        ?|    5 ~ 90|          -|          -|     ?|        no|
         +-------------------+---------+---------+----------+-----------+-----------+------+----------+
 
 ============================================================
@@ -70,7 +70,7 @@ IsGatedGlobalClock: 0
 ============================================================
 + Verbose Summary: Schedule
 ============================================================
-* Number of FSM states : 80
+* Number of FSM states : 97
 * Pipeline : 0
 * Dataflow Pipeline: 0
 
@@ -96,7 +96,7 @@ IsGatedGlobalClock: 0
 19 --> 20 
 20 --> 21 
 21 --> 22 
-22 --> 59 41 23 
+22 --> 23 
 23 --> 24 
 24 --> 25 
 25 --> 26 
@@ -112,9 +112,9 @@ IsGatedGlobalClock: 0
 35 --> 36 
 36 --> 37 
 37 --> 38 
-38 --> 39 
+38 --> 75 57 39 
 39 --> 40 
-40 --> 59 
+40 --> 41 
 41 --> 42 
 42 --> 43 
 43 --> 44 
@@ -130,11 +130,11 @@ IsGatedGlobalClock: 0
 53 --> 54 
 54 --> 55 
 55 --> 56 
-56 --> 57 
+56 --> 75 
 57 --> 58 
 58 --> 59 
 59 --> 60 
-60 --> 61 79 
+60 --> 61 
 61 --> 62 
 62 --> 63 
 63 --> 64 
@@ -149,429 +149,505 @@ IsGatedGlobalClock: 0
 72 --> 73 
 73 --> 74 
 74 --> 75 
-75 --> 76 
+75 --> 76 77 
 76 --> 77 
-77 --> 78 
+77 --> 78 96 
 78 --> 79 
 79 --> 80 
-80 --> 22 
+80 --> 81 
+81 --> 82 
+82 --> 83 
+83 --> 84 
+84 --> 85 
+85 --> 86 
+86 --> 87 
+87 --> 88 
+88 --> 89 
+89 --> 90 
+90 --> 91 
+91 --> 92 
+92 --> 93 
+93 --> 94 
+94 --> 95 
+95 --> 96 
+96 --> 97 
+97 --> 38 
 
 * FSM state operations: 
 
-State 1 <SV = 0> <Delay = 6.75>
-ST_1 : Operation 81 [1/1] (0.00ns)   --->   "%current_level_1 = alloca i32 1"   --->   Operation 81 'alloca' 'current_level_1' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 82 [1/1] (0.00ns)   --->   "%delay_buffer = alloca i64 1" [guitar_effects.cpp:52]   --->   Operation 82 'alloca' 'delay_buffer' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 44100> <RAM>
-ST_1 : Operation 83 [1/1] (1.00ns)   --->   "%control_read = read i8 @_ssdm_op_Read.s_axilite.i8P0A, i8 %control"   --->   Operation 83 'read' 'control_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
-ST_1 : Operation 84 [1/1] (0.00ns)   --->   "%tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i8.i32, i8 %control_read, i32 7"   --->   Operation 84 'bitselect' 'tmp' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 85 [1/1] (1.00ns)   --->   "%distortion_threshold_read = read i16 @_ssdm_op_Read.s_axilite.i16P0A, i16 %distortion_threshold"   --->   Operation 85 'read' 'distortion_threshold_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
-ST_1 : Operation 86 [1/1] (1.00ns)   --->   "%distortion_clip_factor_read = read i32 @_ssdm_op_Read.s_axilite.i32P0A, i32 %distortion_clip_factor"   --->   Operation 86 'read' 'distortion_clip_factor_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
-ST_1 : Operation 87 [1/1] (1.00ns)   --->   "%compression_min_threshold_read = read i16 @_ssdm_op_Read.s_axilite.i16P0A, i16 %compression_min_threshold"   --->   Operation 87 'read' 'compression_min_threshold_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
-ST_1 : Operation 88 [1/1] (1.00ns)   --->   "%compression_max_threshold_read = read i16 @_ssdm_op_Read.s_axilite.i16P0A, i16 %compression_max_threshold"   --->   Operation 88 'read' 'compression_max_threshold_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
-ST_1 : Operation 89 [1/1] (1.00ns)   --->   "%compression_zero_threshold_read = read i16 @_ssdm_op_Read.s_axilite.i16P0A, i16 %compression_zero_threshold"   --->   Operation 89 'read' 'compression_zero_threshold_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
-ST_1 : Operation 90 [1/1] (0.00ns)   --->   "%tmp_2 = bitselect i1 @_ssdm_op_BitSelect.i1.i8.i32, i8 %control_read, i32 4"   --->   Operation 90 'bitselect' 'tmp_2' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 91 [1/1] (1.00ns)   --->   "%delay_samples_read = read i32 @_ssdm_op_Read.s_axilite.i32P0A, i32 %delay_samples"   --->   Operation 91 'read' 'delay_samples_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
-ST_1 : Operation 92 [1/1] (0.00ns)   --->   "%empty = trunc i32 %delay_samples_read"   --->   Operation 92 'trunc' 'empty' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 93 [1/1] (1.00ns)   --->   "%delay_mult_read = read i32 @_ssdm_op_Read.s_axilite.i32P0A, i32 %delay_mult"   --->   Operation 93 'read' 'delay_mult_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
-ST_1 : Operation 94 [1/1] (0.00ns)   --->   "%delay_mult_assign = bitcast i32 %delay_mult_read"   --->   Operation 94 'bitcast' 'delay_mult_assign' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 95 [1/1] (0.00ns)   --->   "%delay_samples_assign_cast = sext i16 %empty"   --->   Operation 95 'sext' 'delay_samples_assign_cast' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 96 [1/1] (2.07ns)   --->   "%sub_i122 = sub i17 0, i17 %delay_samples_assign_cast"   --->   Operation 96 'sub' 'sub_i122' <Predicate = true> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 97 [21/21] (3.68ns)   --->   "%rem_i = srem i17 %sub_i122, i17 44100"   --->   Operation 97 'srem' 'rem_i' <Predicate = true> <Delay = 3.68> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 20> <II = 17> <Delay = 3.68> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 98 [1/1] (1.58ns)   --->   "%store_ln59 = store i16 0, i16 %current_level_1" [guitar_effects.cpp:59]   --->   Operation 98 'store' 'store_ln59' <Predicate = true> <Delay = 1.58>
+State 1 <SV = 0> <Delay = 1.58>
+ST_1 : Operation 98 [1/1] (0.00ns)   --->   "%empty = alloca i32 1"   --->   Operation 98 'alloca' 'empty' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 99 [1/1] (0.00ns)   --->   "%current_level_1 = alloca i32 1"   --->   Operation 99 'alloca' 'current_level_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 100 [1/1] (1.00ns)   --->   "%delay_samples_read = read i32 @_ssdm_op_Read.s_axilite.i32, i32 %delay_samples" [guitar_effects.cpp:15]   --->   Operation 100 'read' 'delay_samples_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 101 [1/1] (1.00ns)   --->   "%delay_mult_read = read i32 @_ssdm_op_Read.s_axilite.float, i32 %delay_mult" [guitar_effects.cpp:15]   --->   Operation 101 'read' 'delay_mult_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 102 [1/1] (1.00ns)   --->   "%compression_zero_threshold_read = read i32 @_ssdm_op_Read.s_axilite.i32, i32 %compression_zero_threshold" [guitar_effects.cpp:15]   --->   Operation 102 'read' 'compression_zero_threshold_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 103 [1/1] (1.00ns)   --->   "%compression_max_threshold_read = read i32 @_ssdm_op_Read.s_axilite.i32, i32 %compression_max_threshold" [guitar_effects.cpp:15]   --->   Operation 103 'read' 'compression_max_threshold_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 104 [1/1] (1.00ns)   --->   "%compression_min_threshold_read = read i32 @_ssdm_op_Read.s_axilite.i32, i32 %compression_min_threshold" [guitar_effects.cpp:15]   --->   Operation 104 'read' 'compression_min_threshold_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 105 [1/1] (1.00ns)   --->   "%distortion_clip_factor_read = read i32 @_ssdm_op_Read.s_axilite.float, i32 %distortion_clip_factor" [guitar_effects.cpp:15]   --->   Operation 105 'read' 'distortion_clip_factor_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 106 [1/1] (1.00ns)   --->   "%distortion_threshold_read = read i32 @_ssdm_op_Read.s_axilite.i32, i32 %distortion_threshold" [guitar_effects.cpp:15]   --->   Operation 106 'read' 'distortion_threshold_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 107 [1/1] (1.00ns)   --->   "%control_read = read i8 @_ssdm_op_Read.s_axilite.i8, i8 %control" [guitar_effects.cpp:15]   --->   Operation 107 'read' 'control_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 108 [1/1] (0.00ns)   --->   "%trunc_ln15 = trunc i8 %control_read" [guitar_effects.cpp:15]   --->   Operation 108 'trunc' 'trunc_ln15' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 109 [1/1] (0.00ns)   --->   "%delay_buffer = alloca i64 1" [guitar_effects.cpp:56]   --->   Operation 109 'alloca' 'delay_buffer' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 44100> <RAM>
+ST_1 : Operation 110 [1/1] (0.00ns)   --->   "%tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i8.i32, i8 %control_read, i32 3" [guitar_effects.cpp:15]   --->   Operation 110 'bitselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 111 [1/1] (0.00ns)   --->   "%tmp_2 = bitselect i1 @_ssdm_op_BitSelect.i1.i8.i32, i8 %control_read, i32 2" [guitar_effects.cpp:15]   --->   Operation 111 'bitselect' 'tmp_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 112 [1/1] (0.00ns)   --->   "%tmp_3 = bitselect i1 @_ssdm_op_BitSelect.i1.i8.i32, i8 %control_read, i32 1" [guitar_effects.cpp:15]   --->   Operation 112 'bitselect' 'tmp_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 113 [1/1] (1.58ns)   --->   "%store_ln63 = store i32 0, i32 %current_level_1" [guitar_effects.cpp:63]   --->   Operation 113 'store' 'store_ln63' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 114 [1/1] (1.58ns)   --->   "%store_ln63 = store i32 0, i32 %empty" [guitar_effects.cpp:63]   --->   Operation 114 'store' 'store_ln63' <Predicate = true> <Delay = 1.58>
 
-State 2 <SV = 1> <Delay = 3.68>
-ST_2 : Operation 99 [20/21] (3.68ns)   --->   "%rem_i = srem i17 %sub_i122, i17 44100"   --->   Operation 99 'srem' 'rem_i' <Predicate = true> <Delay = 3.68> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 20> <II = 17> <Delay = 3.68> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+State 2 <SV = 1> <Delay = 6.68>
+ST_2 : Operation 115 [1/1] (2.55ns)   --->   "%sub_i135 = sub i32 0, i32 %delay_samples_read" [guitar_effects.cpp:15]   --->   Operation 115 'sub' 'sub_i135' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 116 [36/36] (4.13ns)   --->   "%rem_i = srem i32 %sub_i135, i32 44100" [guitar_effects.cpp:15]   --->   Operation 116 'srem' 'rem_i' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 16> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
 
-State 3 <SV = 2> <Delay = 3.68>
-ST_3 : Operation 100 [19/21] (3.68ns)   --->   "%rem_i = srem i17 %sub_i122, i17 44100"   --->   Operation 100 'srem' 'rem_i' <Predicate = true> <Delay = 3.68> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 20> <II = 17> <Delay = 3.68> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+State 3 <SV = 2> <Delay = 4.13>
+ST_3 : Operation 117 [35/36] (4.13ns)   --->   "%rem_i = srem i32 %sub_i135, i32 44100" [guitar_effects.cpp:15]   --->   Operation 117 'srem' 'rem_i' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 16> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
 
-State 4 <SV = 3> <Delay = 3.68>
-ST_4 : Operation 101 [18/21] (3.68ns)   --->   "%rem_i = srem i17 %sub_i122, i17 44100"   --->   Operation 101 'srem' 'rem_i' <Predicate = true> <Delay = 3.68> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 20> <II = 17> <Delay = 3.68> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+State 4 <SV = 3> <Delay = 4.13>
+ST_4 : Operation 118 [34/36] (4.13ns)   --->   "%rem_i = srem i32 %sub_i135, i32 44100" [guitar_effects.cpp:15]   --->   Operation 118 'srem' 'rem_i' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 16> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
 
-State 5 <SV = 4> <Delay = 3.68>
-ST_5 : Operation 102 [17/21] (3.68ns)   --->   "%rem_i = srem i17 %sub_i122, i17 44100"   --->   Operation 102 'srem' 'rem_i' <Predicate = true> <Delay = 3.68> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 20> <II = 17> <Delay = 3.68> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+State 5 <SV = 4> <Delay = 4.13>
+ST_5 : Operation 119 [33/36] (4.13ns)   --->   "%rem_i = srem i32 %sub_i135, i32 44100" [guitar_effects.cpp:15]   --->   Operation 119 'srem' 'rem_i' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 16> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
 
-State 6 <SV = 5> <Delay = 3.68>
-ST_6 : Operation 103 [16/21] (3.68ns)   --->   "%rem_i = srem i17 %sub_i122, i17 44100"   --->   Operation 103 'srem' 'rem_i' <Predicate = true> <Delay = 3.68> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 20> <II = 17> <Delay = 3.68> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+State 6 <SV = 5> <Delay = 4.13>
+ST_6 : Operation 120 [32/36] (4.13ns)   --->   "%rem_i = srem i32 %sub_i135, i32 44100" [guitar_effects.cpp:15]   --->   Operation 120 'srem' 'rem_i' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 16> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
 
-State 7 <SV = 6> <Delay = 3.68>
-ST_7 : Operation 104 [15/21] (3.68ns)   --->   "%rem_i = srem i17 %sub_i122, i17 44100"   --->   Operation 104 'srem' 'rem_i' <Predicate = true> <Delay = 3.68> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 20> <II = 17> <Delay = 3.68> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+State 7 <SV = 6> <Delay = 4.13>
+ST_7 : Operation 121 [31/36] (4.13ns)   --->   "%rem_i = srem i32 %sub_i135, i32 44100" [guitar_effects.cpp:15]   --->   Operation 121 'srem' 'rem_i' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 16> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
 
-State 8 <SV = 7> <Delay = 3.68>
-ST_8 : Operation 105 [14/21] (3.68ns)   --->   "%rem_i = srem i17 %sub_i122, i17 44100"   --->   Operation 105 'srem' 'rem_i' <Predicate = true> <Delay = 3.68> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 20> <II = 17> <Delay = 3.68> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+State 8 <SV = 7> <Delay = 4.13>
+ST_8 : Operation 122 [30/36] (4.13ns)   --->   "%rem_i = srem i32 %sub_i135, i32 44100" [guitar_effects.cpp:15]   --->   Operation 122 'srem' 'rem_i' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 16> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
 
-State 9 <SV = 8> <Delay = 3.68>
-ST_9 : Operation 106 [13/21] (3.68ns)   --->   "%rem_i = srem i17 %sub_i122, i17 44100"   --->   Operation 106 'srem' 'rem_i' <Predicate = true> <Delay = 3.68> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 20> <II = 17> <Delay = 3.68> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+State 9 <SV = 8> <Delay = 4.13>
+ST_9 : Operation 123 [29/36] (4.13ns)   --->   "%rem_i = srem i32 %sub_i135, i32 44100" [guitar_effects.cpp:15]   --->   Operation 123 'srem' 'rem_i' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 16> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
 
-State 10 <SV = 9> <Delay = 3.68>
-ST_10 : Operation 107 [12/21] (3.68ns)   --->   "%rem_i = srem i17 %sub_i122, i17 44100"   --->   Operation 107 'srem' 'rem_i' <Predicate = true> <Delay = 3.68> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 20> <II = 17> <Delay = 3.68> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+State 10 <SV = 9> <Delay = 4.13>
+ST_10 : Operation 124 [28/36] (4.13ns)   --->   "%rem_i = srem i32 %sub_i135, i32 44100" [guitar_effects.cpp:15]   --->   Operation 124 'srem' 'rem_i' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 16> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
 
-State 11 <SV = 10> <Delay = 3.68>
-ST_11 : Operation 108 [11/21] (3.68ns)   --->   "%rem_i = srem i17 %sub_i122, i17 44100"   --->   Operation 108 'srem' 'rem_i' <Predicate = true> <Delay = 3.68> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 20> <II = 17> <Delay = 3.68> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+State 11 <SV = 10> <Delay = 4.13>
+ST_11 : Operation 125 [27/36] (4.13ns)   --->   "%rem_i = srem i32 %sub_i135, i32 44100" [guitar_effects.cpp:15]   --->   Operation 125 'srem' 'rem_i' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 16> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
 
-State 12 <SV = 11> <Delay = 3.68>
-ST_12 : Operation 109 [10/21] (3.68ns)   --->   "%rem_i = srem i17 %sub_i122, i17 44100"   --->   Operation 109 'srem' 'rem_i' <Predicate = true> <Delay = 3.68> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 20> <II = 17> <Delay = 3.68> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+State 12 <SV = 11> <Delay = 4.13>
+ST_12 : Operation 126 [26/36] (4.13ns)   --->   "%rem_i = srem i32 %sub_i135, i32 44100" [guitar_effects.cpp:15]   --->   Operation 126 'srem' 'rem_i' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 16> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
 
-State 13 <SV = 12> <Delay = 3.68>
-ST_13 : Operation 110 [9/21] (3.68ns)   --->   "%rem_i = srem i17 %sub_i122, i17 44100"   --->   Operation 110 'srem' 'rem_i' <Predicate = true> <Delay = 3.68> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 20> <II = 17> <Delay = 3.68> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+State 13 <SV = 12> <Delay = 4.13>
+ST_13 : Operation 127 [25/36] (4.13ns)   --->   "%rem_i = srem i32 %sub_i135, i32 44100" [guitar_effects.cpp:15]   --->   Operation 127 'srem' 'rem_i' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 16> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
 
-State 14 <SV = 13> <Delay = 3.68>
-ST_14 : Operation 111 [8/21] (3.68ns)   --->   "%rem_i = srem i17 %sub_i122, i17 44100"   --->   Operation 111 'srem' 'rem_i' <Predicate = true> <Delay = 3.68> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 20> <II = 17> <Delay = 3.68> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+State 14 <SV = 13> <Delay = 4.13>
+ST_14 : Operation 128 [24/36] (4.13ns)   --->   "%rem_i = srem i32 %sub_i135, i32 44100" [guitar_effects.cpp:15]   --->   Operation 128 'srem' 'rem_i' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 16> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
 
-State 15 <SV = 14> <Delay = 3.68>
-ST_15 : Operation 112 [7/21] (3.68ns)   --->   "%rem_i = srem i17 %sub_i122, i17 44100"   --->   Operation 112 'srem' 'rem_i' <Predicate = true> <Delay = 3.68> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 20> <II = 17> <Delay = 3.68> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+State 15 <SV = 14> <Delay = 4.13>
+ST_15 : Operation 129 [23/36] (4.13ns)   --->   "%rem_i = srem i32 %sub_i135, i32 44100" [guitar_effects.cpp:15]   --->   Operation 129 'srem' 'rem_i' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 16> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
 
-State 16 <SV = 15> <Delay = 6.41>
-ST_16 : Operation 113 [1/1] (0.00ns)   --->   "%conv5_i42 = sext i16 %distortion_threshold_read"   --->   Operation 113 'sext' 'conv5_i42' <Predicate = true> <Delay = 0.00>
-ST_16 : Operation 114 [6/6] (6.41ns)   --->   "%conv5_i = sitofp i32 %conv5_i42"   --->   Operation 114 'sitofp' 'conv5_i' <Predicate = true> <Delay = 6.41> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 6.41> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
-ST_16 : Operation 115 [6/21] (3.68ns)   --->   "%rem_i = srem i17 %sub_i122, i17 44100"   --->   Operation 115 'srem' 'rem_i' <Predicate = true> <Delay = 3.68> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 20> <II = 17> <Delay = 3.68> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+State 16 <SV = 15> <Delay = 4.13>
+ST_16 : Operation 130 [22/36] (4.13ns)   --->   "%rem_i = srem i32 %sub_i135, i32 44100" [guitar_effects.cpp:15]   --->   Operation 130 'srem' 'rem_i' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 16> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
 
-State 17 <SV = 16> <Delay = 6.41>
-ST_17 : Operation 116 [5/6] (6.41ns)   --->   "%conv5_i = sitofp i32 %conv5_i42"   --->   Operation 116 'sitofp' 'conv5_i' <Predicate = true> <Delay = 6.41> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 6.41> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
-ST_17 : Operation 117 [5/21] (3.68ns)   --->   "%rem_i = srem i17 %sub_i122, i17 44100"   --->   Operation 117 'srem' 'rem_i' <Predicate = true> <Delay = 3.68> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 20> <II = 17> <Delay = 3.68> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+State 17 <SV = 16> <Delay = 4.13>
+ST_17 : Operation 131 [21/36] (4.13ns)   --->   "%rem_i = srem i32 %sub_i135, i32 44100" [guitar_effects.cpp:15]   --->   Operation 131 'srem' 'rem_i' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 16> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
 
-State 18 <SV = 17> <Delay = 6.41>
-ST_18 : Operation 118 [4/6] (6.41ns)   --->   "%conv5_i = sitofp i32 %conv5_i42"   --->   Operation 118 'sitofp' 'conv5_i' <Predicate = true> <Delay = 6.41> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 6.41> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
-ST_18 : Operation 119 [4/21] (3.68ns)   --->   "%rem_i = srem i17 %sub_i122, i17 44100"   --->   Operation 119 'srem' 'rem_i' <Predicate = true> <Delay = 3.68> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 20> <II = 17> <Delay = 3.68> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+State 18 <SV = 17> <Delay = 4.13>
+ST_18 : Operation 132 [20/36] (4.13ns)   --->   "%rem_i = srem i32 %sub_i135, i32 44100" [guitar_effects.cpp:15]   --->   Operation 132 'srem' 'rem_i' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 16> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
 
-State 19 <SV = 18> <Delay = 6.41>
-ST_19 : Operation 120 [3/6] (6.41ns)   --->   "%conv5_i = sitofp i32 %conv5_i42"   --->   Operation 120 'sitofp' 'conv5_i' <Predicate = true> <Delay = 6.41> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 6.41> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
-ST_19 : Operation 121 [3/21] (3.68ns)   --->   "%rem_i = srem i17 %sub_i122, i17 44100"   --->   Operation 121 'srem' 'rem_i' <Predicate = true> <Delay = 3.68> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 20> <II = 17> <Delay = 3.68> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+State 19 <SV = 18> <Delay = 4.13>
+ST_19 : Operation 133 [19/36] (4.13ns)   --->   "%rem_i = srem i32 %sub_i135, i32 44100" [guitar_effects.cpp:15]   --->   Operation 133 'srem' 'rem_i' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 16> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
 
-State 20 <SV = 19> <Delay = 6.41>
-ST_20 : Operation 122 [2/2] (0.00ns)   --->   "%call_ln0 = call void @guitar_effects_Pipeline_2, i16 %delay_buffer"   --->   Operation 122 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_20 : Operation 123 [2/6] (6.41ns)   --->   "%conv5_i = sitofp i32 %conv5_i42"   --->   Operation 123 'sitofp' 'conv5_i' <Predicate = true> <Delay = 6.41> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 6.41> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
-ST_20 : Operation 124 [2/21] (3.68ns)   --->   "%rem_i = srem i17 %sub_i122, i17 44100"   --->   Operation 124 'srem' 'rem_i' <Predicate = true> <Delay = 3.68> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 20> <II = 17> <Delay = 3.68> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+State 20 <SV = 19> <Delay = 4.13>
+ST_20 : Operation 134 [18/36] (4.13ns)   --->   "%rem_i = srem i32 %sub_i135, i32 44100" [guitar_effects.cpp:15]   --->   Operation 134 'srem' 'rem_i' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 16> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
 
-State 21 <SV = 20> <Delay = 6.41>
-ST_21 : Operation 125 [1/1] (0.00ns)   --->   "%spectopmodule_ln15 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_13" [guitar_effects.cpp:15]   --->   Operation 125 'spectopmodule' 'spectopmodule_ln15' <Predicate = true> <Delay = 0.00>
-ST_21 : Operation 126 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %INPUT_r_V_data_V, i2 %INPUT_r_V_keep_V, i2 %INPUT_r_V_strb_V, i2 %INPUT_r_V_user_V, i1 %INPUT_r_V_last_V, i5 %INPUT_r_V_id_V, i6 %INPUT_r_V_dest_V, void @empty, i32 1, i32 1, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 126 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_21 : Operation 127 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %INPUT_r_V_data_V"   --->   Operation 127 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_21 : Operation 128 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i2 %INPUT_r_V_keep_V"   --->   Operation 128 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_21 : Operation 129 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i2 %INPUT_r_V_strb_V"   --->   Operation 129 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_21 : Operation 130 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i2 %INPUT_r_V_user_V"   --->   Operation 130 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_21 : Operation 131 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %INPUT_r_V_last_V"   --->   Operation 131 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_21 : Operation 132 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i5 %INPUT_r_V_id_V"   --->   Operation 132 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_21 : Operation 133 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i6 %INPUT_r_V_dest_V"   --->   Operation 133 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_21 : Operation 134 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %OUTPUT_r_V_data_V, i2 %OUTPUT_r_V_keep_V, i2 %OUTPUT_r_V_strb_V, i2 %OUTPUT_r_V_user_V, i1 %OUTPUT_r_V_last_V, i5 %OUTPUT_r_V_id_V, i6 %OUTPUT_r_V_dest_V, void @empty, i32 1, i32 1, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 134 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_21 : Operation 135 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %OUTPUT_r_V_data_V"   --->   Operation 135 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_21 : Operation 136 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i2 %OUTPUT_r_V_keep_V"   --->   Operation 136 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_21 : Operation 137 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i2 %OUTPUT_r_V_strb_V"   --->   Operation 137 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_21 : Operation 138 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i2 %OUTPUT_r_V_user_V"   --->   Operation 138 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_21 : Operation 139 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %OUTPUT_r_V_last_V"   --->   Operation 139 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_21 : Operation 140 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i5 %OUTPUT_r_V_id_V"   --->   Operation 140 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_21 : Operation 141 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i6 %OUTPUT_r_V_dest_V"   --->   Operation 141 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_21 : Operation 142 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i8 %control"   --->   Operation 142 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_21 : Operation 143 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %control, void @empty_2, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_3, void @empty_4, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 143 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_21 : Operation 144 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %control, void @empty_5, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 144 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_21 : Operation 145 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %distortion_threshold"   --->   Operation 145 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_21 : Operation 146 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %distortion_threshold, void @empty_2, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_3, void @empty_6, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 146 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_21 : Operation 147 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %distortion_threshold, void @empty_5, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 147 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_21 : Operation 148 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %distortion_clip_factor"   --->   Operation 148 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_21 : Operation 149 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %distortion_clip_factor, void @empty_2, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_3, void @empty_7, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 149 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_21 : Operation 150 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %distortion_clip_factor, void @empty_5, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 150 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_21 : Operation 151 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %compression_min_threshold"   --->   Operation 151 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_21 : Operation 152 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %compression_min_threshold, void @empty_2, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_3, void @empty_8, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 152 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_21 : Operation 153 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %compression_min_threshold, void @empty_5, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 153 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_21 : Operation 154 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %compression_max_threshold"   --->   Operation 154 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_21 : Operation 155 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %compression_max_threshold, void @empty_2, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_3, void @empty_9, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 155 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_21 : Operation 156 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %compression_max_threshold, void @empty_5, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 156 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_21 : Operation 157 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %compression_zero_threshold"   --->   Operation 157 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_21 : Operation 158 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %compression_zero_threshold, void @empty_2, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_3, void @empty_10, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 158 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_21 : Operation 159 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %compression_zero_threshold, void @empty_5, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 159 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_21 : Operation 160 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %delay_mult"   --->   Operation 160 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_21 : Operation 161 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %delay_mult, void @empty_2, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_3, void @empty_11, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 161 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_21 : Operation 162 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %delay_mult, void @empty_5, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 162 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_21 : Operation 163 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %delay_samples"   --->   Operation 163 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_21 : Operation 164 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %delay_samples, void @empty_2, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_3, void @empty_12, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 164 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_21 : Operation 165 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %delay_samples, void @empty_5, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 165 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_21 : Operation 166 [1/2] (0.00ns)   --->   "%call_ln0 = call void @guitar_effects_Pipeline_2, i16 %delay_buffer"   --->   Operation 166 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_21 : Operation 167 [1/1] (0.00ns)   --->   "%distortion_threshold_load_cast = sext i16 %distortion_threshold_read"   --->   Operation 167 'sext' 'distortion_threshold_load_cast' <Predicate = true> <Delay = 0.00>
-ST_21 : Operation 168 [1/1] (0.00ns)   --->   "%clip_factor_assign = bitcast i32 %distortion_clip_factor_read"   --->   Operation 168 'bitcast' 'clip_factor_assign' <Predicate = true> <Delay = 0.00>
-ST_21 : Operation 169 [1/1] (0.00ns)   --->   "%delay_buffer_addr = getelementptr i16 %delay_buffer, i64 0, i64 0"   --->   Operation 169 'getelementptr' 'delay_buffer_addr' <Predicate = true> <Delay = 0.00>
-ST_21 : Operation 170 [1/1] (2.07ns)   --->   "%negative_threshold = sub i16 0, i16 %distortion_threshold_read"   --->   Operation 170 'sub' 'negative_threshold' <Predicate = true> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_21 : Operation 171 [1/6] (6.41ns)   --->   "%conv5_i = sitofp i32 %conv5_i42"   --->   Operation 171 'sitofp' 'conv5_i' <Predicate = true> <Delay = 6.41> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 6.41> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
-ST_21 : Operation 172 [1/21] (3.68ns)   --->   "%rem_i = srem i17 %sub_i122, i17 44100"   --->   Operation 172 'srem' 'rem_i' <Predicate = true> <Delay = 3.68> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 20> <II = 17> <Delay = 3.68> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
-ST_21 : Operation 173 [1/1] (0.00ns)   --->   "%idxprom_i = zext i17 %rem_i"   --->   Operation 173 'zext' 'idxprom_i' <Predicate = true> <Delay = 0.00>
-ST_21 : Operation 174 [1/1] (0.00ns)   --->   "%delay_buffer_addr_1 = getelementptr i16 %delay_buffer, i64 0, i64 %idxprom_i"   --->   Operation 174 'getelementptr' 'delay_buffer_addr_1' <Predicate = true> <Delay = 0.00>
-ST_21 : Operation 175 [1/1] (0.00ns)   --->   "%br_ln59 = br void %while.body" [guitar_effects.cpp:59]   --->   Operation 175 'br' 'br_ln59' <Predicate = true> <Delay = 0.00>
+State 21 <SV = 20> <Delay = 4.13>
+ST_21 : Operation 135 [17/36] (4.13ns)   --->   "%rem_i = srem i32 %sub_i135, i32 44100" [guitar_effects.cpp:15]   --->   Operation 135 'srem' 'rem_i' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 16> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
 
 State 22 <SV = 21> <Delay = 4.13>
-ST_22 : Operation 176 [1/1] (0.00ns)   --->   "%specloopname_ln0 = specloopname void @_ssdm_op_SpecLoopName, void @empty_14"   --->   Operation 176 'specloopname' 'specloopname_ln0' <Predicate = true> <Delay = 0.00>
-ST_22 : Operation 177 [1/1] (0.00ns)   --->   "%empty_26 = read i34 @_ssdm_op_Read.axis.volatile.i16P0A.i2P0A.i2P0A.i2P0A.i1P0A.i5P0A.i6P0A, i16 %INPUT_r_V_data_V, i2 %INPUT_r_V_keep_V, i2 %INPUT_r_V_strb_V, i2 %INPUT_r_V_user_V, i1 %INPUT_r_V_last_V, i5 %INPUT_r_V_id_V, i6 %INPUT_r_V_dest_V"   --->   Operation 177 'read' 'empty_26' <Predicate = true> <Delay = 0.00> <CoreInst = "axis">   --->   Core 115 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
-ST_22 : Operation 178 [1/1] (0.00ns)   --->   "%tmp_data_V = extractvalue i34 %empty_26"   --->   Operation 178 'extractvalue' 'tmp_data_V' <Predicate = true> <Delay = 0.00>
-ST_22 : Operation 179 [1/1] (0.00ns)   --->   "%tmp_keep_V = extractvalue i34 %empty_26"   --->   Operation 179 'extractvalue' 'tmp_keep_V' <Predicate = true> <Delay = 0.00>
-ST_22 : Operation 180 [1/1] (0.00ns)   --->   "%tmp_strb_V = extractvalue i34 %empty_26"   --->   Operation 180 'extractvalue' 'tmp_strb_V' <Predicate = true> <Delay = 0.00>
-ST_22 : Operation 181 [1/1] (0.00ns)   --->   "%tmp_user_V = extractvalue i34 %empty_26"   --->   Operation 181 'extractvalue' 'tmp_user_V' <Predicate = true> <Delay = 0.00>
-ST_22 : Operation 182 [1/1] (0.00ns)   --->   "%tmp_last_V = extractvalue i34 %empty_26"   --->   Operation 182 'extractvalue' 'tmp_last_V' <Predicate = true> <Delay = 0.00>
-ST_22 : Operation 183 [1/1] (0.00ns)   --->   "%tmp_id_V = extractvalue i34 %empty_26"   --->   Operation 183 'extractvalue' 'tmp_id_V' <Predicate = true> <Delay = 0.00>
-ST_22 : Operation 184 [1/1] (0.00ns)   --->   "%tmp_dest_V = extractvalue i34 %empty_26"   --->   Operation 184 'extractvalue' 'tmp_dest_V' <Predicate = true> <Delay = 0.00>
-ST_22 : Operation 185 [1/1] (1.70ns)   --->   "%br_ln65 = br i1 %tmp, void %if.end, void %if.then" [guitar_effects.cpp:65]   --->   Operation 185 'br' 'br_ln65' <Predicate = true> <Delay = 1.70>
-ST_22 : Operation 186 [1/1] (0.00ns)   --->   "%sext_ln94 = sext i16 %tmp_data_V" [guitar_effects.cpp:94]   --->   Operation 186 'sext' 'sext_ln94' <Predicate = (tmp)> <Delay = 0.00>
-ST_22 : Operation 187 [1/1] (2.42ns)   --->   "%icmp_ln94 = icmp_sgt  i16 %tmp_data_V, i16 %distortion_threshold_read" [guitar_effects.cpp:94]   --->   Operation 187 'icmp' 'icmp_ln94' <Predicate = (tmp)> <Delay = 2.42> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.42> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_22 : Operation 188 [1/1] (0.00ns)   --->   "%br_ln94 = br i1 %icmp_ln94, void %if.else.i, void %if.then.i" [guitar_effects.cpp:94]   --->   Operation 188 'br' 'br_ln94' <Predicate = (tmp)> <Delay = 0.00>
-ST_22 : Operation 189 [1/1] (2.42ns)   --->   "%icmp_ln96 = icmp_slt  i16 %tmp_data_V, i16 %negative_threshold" [guitar_effects.cpp:96]   --->   Operation 189 'icmp' 'icmp_ln96' <Predicate = (tmp & !icmp_ln94)> <Delay = 2.42> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.42> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_22 : Operation 190 [1/1] (1.70ns)   --->   "%br_ln96 = br i1 %icmp_ln96, void %if.end, void %if.then10.i" [guitar_effects.cpp:96]   --->   Operation 190 'br' 'br_ln96' <Predicate = (tmp & !icmp_ln94)> <Delay = 1.70>
-ST_22 : Operation 191 [1/1] (2.07ns)   --->   "%add_ln97 = add i17 %sext_ln94, i17 %distortion_threshold_load_cast" [guitar_effects.cpp:97]   --->   Operation 191 'add' 'add_ln97' <Predicate = (tmp & !icmp_ln94 & icmp_ln96)> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_22 : Operation 192 [1/1] (2.07ns)   --->   "%sub_ln95 = sub i17 %sext_ln94, i17 %distortion_threshold_load_cast" [guitar_effects.cpp:95]   --->   Operation 192 'sub' 'sub_ln95' <Predicate = (tmp & icmp_ln94)> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 136 [16/36] (4.13ns)   --->   "%rem_i = srem i32 %sub_i135, i32 44100" [guitar_effects.cpp:15]   --->   Operation 136 'srem' 'rem_i' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 16> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
 
-State 23 <SV = 22> <Delay = 6.41>
-ST_23 : Operation 193 [1/1] (0.00ns)   --->   "%sext_ln97 = sext i17 %add_ln97" [guitar_effects.cpp:97]   --->   Operation 193 'sext' 'sext_ln97' <Predicate = true> <Delay = 0.00>
-ST_23 : Operation 194 [6/6] (6.41ns)   --->   "%conv13_i = sitofp i32 %sext_ln97" [guitar_effects.cpp:97]   --->   Operation 194 'sitofp' 'conv13_i' <Predicate = true> <Delay = 6.41> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 6.41> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+State 23 <SV = 22> <Delay = 4.13>
+ST_23 : Operation 137 [15/36] (4.13ns)   --->   "%rem_i = srem i32 %sub_i135, i32 44100" [guitar_effects.cpp:15]   --->   Operation 137 'srem' 'rem_i' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 16> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
 
-State 24 <SV = 23> <Delay = 6.41>
-ST_24 : Operation 195 [5/6] (6.41ns)   --->   "%conv13_i = sitofp i32 %sext_ln97" [guitar_effects.cpp:97]   --->   Operation 195 'sitofp' 'conv13_i' <Predicate = true> <Delay = 6.41> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 6.41> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+State 24 <SV = 23> <Delay = 4.13>
+ST_24 : Operation 138 [14/36] (4.13ns)   --->   "%rem_i = srem i32 %sub_i135, i32 44100" [guitar_effects.cpp:15]   --->   Operation 138 'srem' 'rem_i' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 16> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
 
-State 25 <SV = 24> <Delay = 6.41>
-ST_25 : Operation 196 [4/6] (6.41ns)   --->   "%conv13_i = sitofp i32 %sext_ln97" [guitar_effects.cpp:97]   --->   Operation 196 'sitofp' 'conv13_i' <Predicate = true> <Delay = 6.41> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 6.41> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+State 25 <SV = 24> <Delay = 4.13>
+ST_25 : Operation 139 [13/36] (4.13ns)   --->   "%rem_i = srem i32 %sub_i135, i32 44100" [guitar_effects.cpp:15]   --->   Operation 139 'srem' 'rem_i' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 16> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
 
-State 26 <SV = 25> <Delay = 6.41>
-ST_26 : Operation 197 [3/6] (6.41ns)   --->   "%conv13_i = sitofp i32 %sext_ln97" [guitar_effects.cpp:97]   --->   Operation 197 'sitofp' 'conv13_i' <Predicate = true> <Delay = 6.41> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 6.41> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+State 26 <SV = 25> <Delay = 4.13>
+ST_26 : Operation 140 [12/36] (4.13ns)   --->   "%rem_i = srem i32 %sub_i135, i32 44100" [guitar_effects.cpp:15]   --->   Operation 140 'srem' 'rem_i' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 16> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
 
-State 27 <SV = 26> <Delay = 6.41>
-ST_27 : Operation 198 [2/6] (6.41ns)   --->   "%conv13_i = sitofp i32 %sext_ln97" [guitar_effects.cpp:97]   --->   Operation 198 'sitofp' 'conv13_i' <Predicate = true> <Delay = 6.41> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 6.41> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+State 27 <SV = 26> <Delay = 4.13>
+ST_27 : Operation 141 [11/36] (4.13ns)   --->   "%rem_i = srem i32 %sub_i135, i32 44100" [guitar_effects.cpp:15]   --->   Operation 141 'srem' 'rem_i' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 16> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
 
-State 28 <SV = 27> <Delay = 6.41>
-ST_28 : Operation 199 [1/6] (6.41ns)   --->   "%conv13_i = sitofp i32 %sext_ln97" [guitar_effects.cpp:97]   --->   Operation 199 'sitofp' 'conv13_i' <Predicate = true> <Delay = 6.41> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 6.41> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+State 28 <SV = 27> <Delay = 4.13>
+ST_28 : Operation 142 [10/36] (4.13ns)   --->   "%rem_i = srem i32 %sub_i135, i32 44100" [guitar_effects.cpp:15]   --->   Operation 142 'srem' 'rem_i' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 16> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
 
-State 29 <SV = 28> <Delay = 5.70>
-ST_29 : Operation 200 [4/4] (5.70ns)   --->   "%mul14_i = fmul i32 %conv13_i, i32 %clip_factor_assign" [guitar_effects.cpp:97]   --->   Operation 200 'fmul' 'mul14_i' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+State 29 <SV = 28> <Delay = 4.13>
+ST_29 : Operation 143 [9/36] (4.13ns)   --->   "%rem_i = srem i32 %sub_i135, i32 44100" [guitar_effects.cpp:15]   --->   Operation 143 'srem' 'rem_i' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 16> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
 
-State 30 <SV = 29> <Delay = 5.70>
-ST_30 : Operation 201 [3/4] (5.70ns)   --->   "%mul14_i = fmul i32 %conv13_i, i32 %clip_factor_assign" [guitar_effects.cpp:97]   --->   Operation 201 'fmul' 'mul14_i' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+State 30 <SV = 29> <Delay = 4.13>
+ST_30 : Operation 144 [8/36] (4.13ns)   --->   "%rem_i = srem i32 %sub_i135, i32 44100" [guitar_effects.cpp:15]   --->   Operation 144 'srem' 'rem_i' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 16> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
 
-State 31 <SV = 30> <Delay = 5.70>
-ST_31 : Operation 202 [2/4] (5.70ns)   --->   "%mul14_i = fmul i32 %conv13_i, i32 %clip_factor_assign" [guitar_effects.cpp:97]   --->   Operation 202 'fmul' 'mul14_i' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+State 31 <SV = 30> <Delay = 4.13>
+ST_31 : Operation 145 [7/36] (4.13ns)   --->   "%rem_i = srem i32 %sub_i135, i32 44100" [guitar_effects.cpp:15]   --->   Operation 145 'srem' 'rem_i' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 16> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
 
-State 32 <SV = 31> <Delay = 5.70>
-ST_32 : Operation 203 [1/4] (5.70ns)   --->   "%mul14_i = fmul i32 %conv13_i, i32 %clip_factor_assign" [guitar_effects.cpp:97]   --->   Operation 203 'fmul' 'mul14_i' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+State 32 <SV = 31> <Delay = 6.41>
+ST_32 : Operation 146 [6/6] (6.41ns)   --->   "%conv2_i = sitofp i32 %distortion_threshold_read" [guitar_effects.cpp:15]   --->   Operation 146 'sitofp' 'conv2_i' <Predicate = true> <Delay = 6.41> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 6.41> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+ST_32 : Operation 147 [6/36] (4.13ns)   --->   "%rem_i = srem i32 %sub_i135, i32 44100" [guitar_effects.cpp:15]   --->   Operation 147 'srem' 'rem_i' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 16> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
 
-State 33 <SV = 32> <Delay = 7.25>
-ST_33 : Operation 204 [5/5] (7.25ns)   --->   "%dc_1 = fsub i32 %mul14_i, i32 %conv5_i" [guitar_effects.cpp:97]   --->   Operation 204 'fsub' 'dc_1' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+State 33 <SV = 32> <Delay = 6.41>
+ST_33 : Operation 148 [5/6] (6.41ns)   --->   "%conv2_i = sitofp i32 %distortion_threshold_read" [guitar_effects.cpp:15]   --->   Operation 148 'sitofp' 'conv2_i' <Predicate = true> <Delay = 6.41> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 6.41> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+ST_33 : Operation 149 [5/36] (4.13ns)   --->   "%rem_i = srem i32 %sub_i135, i32 44100" [guitar_effects.cpp:15]   --->   Operation 149 'srem' 'rem_i' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 16> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
 
-State 34 <SV = 33> <Delay = 7.25>
-ST_34 : Operation 205 [4/5] (7.25ns)   --->   "%dc_1 = fsub i32 %mul14_i, i32 %conv5_i" [guitar_effects.cpp:97]   --->   Operation 205 'fsub' 'dc_1' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+State 34 <SV = 33> <Delay = 6.41>
+ST_34 : Operation 150 [4/6] (6.41ns)   --->   "%conv2_i = sitofp i32 %distortion_threshold_read" [guitar_effects.cpp:15]   --->   Operation 150 'sitofp' 'conv2_i' <Predicate = true> <Delay = 6.41> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 6.41> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+ST_34 : Operation 151 [4/36] (4.13ns)   --->   "%rem_i = srem i32 %sub_i135, i32 44100" [guitar_effects.cpp:15]   --->   Operation 151 'srem' 'rem_i' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 16> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
 
-State 35 <SV = 34> <Delay = 7.25>
-ST_35 : Operation 206 [3/5] (7.25ns)   --->   "%dc_1 = fsub i32 %mul14_i, i32 %conv5_i" [guitar_effects.cpp:97]   --->   Operation 206 'fsub' 'dc_1' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+State 35 <SV = 34> <Delay = 6.41>
+ST_35 : Operation 152 [3/6] (6.41ns)   --->   "%conv2_i = sitofp i32 %distortion_threshold_read" [guitar_effects.cpp:15]   --->   Operation 152 'sitofp' 'conv2_i' <Predicate = true> <Delay = 6.41> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 6.41> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+ST_35 : Operation 153 [3/36] (4.13ns)   --->   "%rem_i = srem i32 %sub_i135, i32 44100" [guitar_effects.cpp:15]   --->   Operation 153 'srem' 'rem_i' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 16> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
 
-State 36 <SV = 35> <Delay = 7.25>
-ST_36 : Operation 207 [2/5] (7.25ns)   --->   "%dc_1 = fsub i32 %mul14_i, i32 %conv5_i" [guitar_effects.cpp:97]   --->   Operation 207 'fsub' 'dc_1' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+State 36 <SV = 35> <Delay = 6.41>
+ST_36 : Operation 154 [2/2] (0.00ns)   --->   "%call_ln0 = call void @guitar_effects_Pipeline_2, i32 %delay_buffer"   --->   Operation 154 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_36 : Operation 155 [2/6] (6.41ns)   --->   "%conv2_i = sitofp i32 %distortion_threshold_read" [guitar_effects.cpp:15]   --->   Operation 155 'sitofp' 'conv2_i' <Predicate = true> <Delay = 6.41> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 6.41> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+ST_36 : Operation 156 [2/36] (4.13ns)   --->   "%rem_i = srem i32 %sub_i135, i32 44100" [guitar_effects.cpp:15]   --->   Operation 156 'srem' 'rem_i' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 16> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
 
-State 37 <SV = 36> <Delay = 7.25>
-ST_37 : Operation 208 [1/5] (7.25ns)   --->   "%dc_1 = fsub i32 %mul14_i, i32 %conv5_i" [guitar_effects.cpp:97]   --->   Operation 208 'fsub' 'dc_1' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+State 37 <SV = 36> <Delay = 6.41>
+ST_37 : Operation 157 [1/1] (0.00ns)   --->   "%spectopmodule_ln15 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_14" [guitar_effects.cpp:15]   --->   Operation 157 'spectopmodule' 'spectopmodule_ln15' <Predicate = true> <Delay = 0.00>
+ST_37 : Operation 158 [1/1] (0.00ns)   --->   "%specinterface_ln15 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty_15, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0" [guitar_effects.cpp:15]   --->   Operation 158 'specinterface' 'specinterface_ln15' <Predicate = true> <Delay = 0.00>
+ST_37 : Operation 159 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %INPUT_r_V_data_V, i4 %INPUT_r_V_keep_V, i4 %INPUT_r_V_strb_V, i2 %INPUT_r_V_user_V, i1 %INPUT_r_V_last_V, i5 %INPUT_r_V_id_V, i6 %INPUT_r_V_dest_V, void @empty, i32 1, i32 1, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 159 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_37 : Operation 160 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %INPUT_r_V_data_V"   --->   Operation 160 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_37 : Operation 161 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i4 %INPUT_r_V_keep_V"   --->   Operation 161 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_37 : Operation 162 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i4 %INPUT_r_V_strb_V"   --->   Operation 162 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_37 : Operation 163 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i2 %INPUT_r_V_user_V"   --->   Operation 163 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_37 : Operation 164 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %INPUT_r_V_last_V"   --->   Operation 164 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_37 : Operation 165 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i5 %INPUT_r_V_id_V"   --->   Operation 165 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_37 : Operation 166 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i6 %INPUT_r_V_dest_V"   --->   Operation 166 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_37 : Operation 167 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %OUTPUT_r_V_data_V, i4 %OUTPUT_r_V_keep_V, i4 %OUTPUT_r_V_strb_V, i2 %OUTPUT_r_V_user_V, i1 %OUTPUT_r_V_last_V, i5 %OUTPUT_r_V_id_V, i6 %OUTPUT_r_V_dest_V, void @empty, i32 1, i32 1, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 167 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_37 : Operation 168 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %OUTPUT_r_V_data_V"   --->   Operation 168 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_37 : Operation 169 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i4 %OUTPUT_r_V_keep_V"   --->   Operation 169 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_37 : Operation 170 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i4 %OUTPUT_r_V_strb_V"   --->   Operation 170 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_37 : Operation 171 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i2 %OUTPUT_r_V_user_V"   --->   Operation 171 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_37 : Operation 172 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %OUTPUT_r_V_last_V"   --->   Operation 172 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_37 : Operation 173 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i5 %OUTPUT_r_V_id_V"   --->   Operation 173 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_37 : Operation 174 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i6 %OUTPUT_r_V_dest_V"   --->   Operation 174 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_37 : Operation 175 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %axilite_out"   --->   Operation 175 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_37 : Operation 176 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %axilite_out, void @empty_2, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_3, void @empty_4, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 176 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_37 : Operation 177 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %axilite_out, void @empty_5, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 177 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_37 : Operation 178 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i8 %control"   --->   Operation 178 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_37 : Operation 179 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %control, void @empty_2, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_3, void @empty_6, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 179 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_37 : Operation 180 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %control, void @empty_5, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 180 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_37 : Operation 181 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %distortion_threshold"   --->   Operation 181 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_37 : Operation 182 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %distortion_threshold, void @empty_2, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_3, void @empty_7, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 182 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_37 : Operation 183 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %distortion_threshold, void @empty_5, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 183 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_37 : Operation 184 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %distortion_clip_factor"   --->   Operation 184 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_37 : Operation 185 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %distortion_clip_factor, void @empty_2, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_3, void @empty_8, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 185 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_37 : Operation 186 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %distortion_clip_factor, void @empty_5, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 186 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_37 : Operation 187 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %compression_min_threshold"   --->   Operation 187 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_37 : Operation 188 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %compression_min_threshold, void @empty_2, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_3, void @empty_9, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 188 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_37 : Operation 189 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %compression_min_threshold, void @empty_5, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 189 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_37 : Operation 190 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %compression_max_threshold"   --->   Operation 190 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_37 : Operation 191 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %compression_max_threshold, void @empty_2, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_3, void @empty_10, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 191 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_37 : Operation 192 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %compression_max_threshold, void @empty_5, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 192 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_37 : Operation 193 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %compression_zero_threshold"   --->   Operation 193 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_37 : Operation 194 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %compression_zero_threshold, void @empty_2, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_3, void @empty_11, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 194 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_37 : Operation 195 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %compression_zero_threshold, void @empty_5, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 195 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_37 : Operation 196 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %delay_mult"   --->   Operation 196 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_37 : Operation 197 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %delay_mult, void @empty_2, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_3, void @empty_12, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 197 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_37 : Operation 198 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %delay_mult, void @empty_5, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 198 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_37 : Operation 199 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %delay_samples"   --->   Operation 199 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_37 : Operation 200 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %delay_samples, void @empty_2, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_3, void @empty_13, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 200 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_37 : Operation 201 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %delay_samples, void @empty_5, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 201 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_37 : Operation 202 [1/2] (0.00ns)   --->   "%call_ln0 = call void @guitar_effects_Pipeline_2, i32 %delay_buffer"   --->   Operation 202 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_37 : Operation 203 [1/1] (0.00ns)   --->   "%delay_buffer_addr = getelementptr i32 %delay_buffer, i64 0, i64 0"   --->   Operation 203 'getelementptr' 'delay_buffer_addr' <Predicate = true> <Delay = 0.00>
+ST_37 : Operation 204 [1/1] (2.55ns)   --->   "%negative_threshold = sub i32 0, i32 %distortion_threshold_read" [guitar_effects.cpp:15]   --->   Operation 204 'sub' 'negative_threshold' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 205 [1/6] (6.41ns)   --->   "%conv2_i = sitofp i32 %distortion_threshold_read" [guitar_effects.cpp:15]   --->   Operation 205 'sitofp' 'conv2_i' <Predicate = true> <Delay = 6.41> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 6.41> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+ST_37 : Operation 206 [1/36] (4.13ns)   --->   "%rem_i = srem i32 %sub_i135, i32 44100" [guitar_effects.cpp:15]   --->   Operation 206 'srem' 'rem_i' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 16> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 207 [1/1] (0.00ns)   --->   "%empty_28 = trunc i16 %rem_i" [guitar_effects.cpp:15]   --->   Operation 207 'trunc' 'empty_28' <Predicate = true> <Delay = 0.00>
+ST_37 : Operation 208 [1/1] (0.00ns)   --->   "%idxprom_i_cast = zext i16 %empty_28" [guitar_effects.cpp:15]   --->   Operation 208 'zext' 'idxprom_i_cast' <Predicate = true> <Delay = 0.00>
+ST_37 : Operation 209 [1/1] (0.00ns)   --->   "%delay_buffer_addr_1 = getelementptr i32 %delay_buffer, i64 0, i64 %idxprom_i_cast" [guitar_effects.cpp:15]   --->   Operation 209 'getelementptr' 'delay_buffer_addr_1' <Predicate = true> <Delay = 0.00>
+ST_37 : Operation 210 [1/1] (0.00ns)   --->   "%br_ln63 = br void %while.body" [guitar_effects.cpp:63]   --->   Operation 210 'br' 'br_ln63' <Predicate = true> <Delay = 0.00>
 
-State 38 <SV = 37> <Delay = 2.88>
-ST_38 : Operation 209 [1/1] (0.00ns)   --->   "%data_V_1 = bitcast i32 %dc_1" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:317]   --->   Operation 209 'bitcast' 'data_V_1' <Predicate = true> <Delay = 0.00>
-ST_38 : Operation 210 [1/1] (0.00ns)   --->   "%p_Result_2 = bitselect i1 @_ssdm_op_BitSelect.i1.i32.i32, i32 %data_V_1, i32 31"   --->   Operation 210 'bitselect' 'p_Result_2' <Predicate = true> <Delay = 0.00>
-ST_38 : Operation 211 [1/1] (0.00ns)   --->   "%xs_exp_V_1 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %data_V_1, i32 23, i32 30"   --->   Operation 211 'partselect' 'xs_exp_V_1' <Predicate = true> <Delay = 0.00>
-ST_38 : Operation 212 [1/1] (0.00ns)   --->   "%p_Result_3 = trunc i32 %data_V_1"   --->   Operation 212 'trunc' 'p_Result_3' <Predicate = true> <Delay = 0.00>
-ST_38 : Operation 213 [1/1] (0.00ns)   --->   "%zext_ln346_1 = zext i8 %xs_exp_V_1" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:346]   --->   Operation 213 'zext' 'zext_ln346_1' <Predicate = true> <Delay = 0.00>
-ST_38 : Operation 214 [1/1] (1.91ns)   --->   "%add_ln346_1 = add i9 %zext_ln346_1, i9 385" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:346]   --->   Operation 214 'add' 'add_ln346_1' <Predicate = true> <Delay = 1.91> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_38 : Operation 215 [1/1] (0.00ns)   --->   "%isNeg_1 = bitselect i1 @_ssdm_op_BitSelect.i1.i9.i32, i9 %add_ln346_1, i32 8"   --->   Operation 215 'bitselect' 'isNeg_1' <Predicate = true> <Delay = 0.00>
-ST_38 : Operation 216 [1/1] (1.91ns)   --->   "%sub_ln1512_1 = sub i8 127, i8 %xs_exp_V_1"   --->   Operation 216 'sub' 'sub_ln1512_1' <Predicate = true> <Delay = 1.91> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_38 : Operation 217 [1/1] (0.00ns)   --->   "%sext_ln1512_1 = sext i8 %sub_ln1512_1"   --->   Operation 217 'sext' 'sext_ln1512_1' <Predicate = true> <Delay = 0.00>
-ST_38 : Operation 218 [1/1] (0.96ns)   --->   "%ush_1 = select i1 %isNeg_1, i9 %sext_ln1512_1, i9 %add_ln346_1"   --->   Operation 218 'select' 'ush_1' <Predicate = true> <Delay = 0.96> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+State 38 <SV = 37> <Delay = 4.18>
+ST_38 : Operation 211 [1/1] (0.00ns)   --->   "%p_load = load i32 %empty" [guitar_effects.cpp:70]   --->   Operation 211 'load' 'p_load' <Predicate = true> <Delay = 0.00>
+ST_38 : Operation 212 [1/1] (0.00ns)   --->   "%specloopname_ln0 = specloopname void @_ssdm_op_SpecLoopName, void @empty_16"   --->   Operation 212 'specloopname' 'specloopname_ln0' <Predicate = true> <Delay = 0.00>
+ST_38 : Operation 213 [1/1] (0.00ns)   --->   "%empty_29 = read i54 @_ssdm_op_Read.axis.volatile.i32P0A.i4P0A.i4P0A.i2P0A.i1P0A.i5P0A.i6P0A, i32 %INPUT_r_V_data_V, i4 %INPUT_r_V_keep_V, i4 %INPUT_r_V_strb_V, i2 %INPUT_r_V_user_V, i1 %INPUT_r_V_last_V, i5 %INPUT_r_V_id_V, i6 %INPUT_r_V_dest_V"   --->   Operation 213 'read' 'empty_29' <Predicate = true> <Delay = 0.00> <CoreInst = "axis">   --->   Core 115 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_38 : Operation 214 [1/1] (0.00ns)   --->   "%tmp_data_V_1 = extractvalue i54 %empty_29"   --->   Operation 214 'extractvalue' 'tmp_data_V_1' <Predicate = true> <Delay = 0.00>
+ST_38 : Operation 215 [1/1] (0.00ns)   --->   "%tmp_keep_V = extractvalue i54 %empty_29"   --->   Operation 215 'extractvalue' 'tmp_keep_V' <Predicate = true> <Delay = 0.00>
+ST_38 : Operation 216 [1/1] (0.00ns)   --->   "%tmp_strb_V = extractvalue i54 %empty_29"   --->   Operation 216 'extractvalue' 'tmp_strb_V' <Predicate = true> <Delay = 0.00>
+ST_38 : Operation 217 [1/1] (0.00ns)   --->   "%tmp_user_V = extractvalue i54 %empty_29"   --->   Operation 217 'extractvalue' 'tmp_user_V' <Predicate = true> <Delay = 0.00>
+ST_38 : Operation 218 [1/1] (0.00ns)   --->   "%tmp_last_V = extractvalue i54 %empty_29"   --->   Operation 218 'extractvalue' 'tmp_last_V' <Predicate = true> <Delay = 0.00>
+ST_38 : Operation 219 [1/1] (0.00ns)   --->   "%tmp_id_V = extractvalue i54 %empty_29"   --->   Operation 219 'extractvalue' 'tmp_id_V' <Predicate = true> <Delay = 0.00>
+ST_38 : Operation 220 [1/1] (0.00ns)   --->   "%tmp_dest_V = extractvalue i54 %empty_29"   --->   Operation 220 'extractvalue' 'tmp_dest_V' <Predicate = true> <Delay = 0.00>
+ST_38 : Operation 221 [1/1] (1.70ns)   --->   "%br_ln69 = br i1 %tmp, void %if.end, void %if.then" [guitar_effects.cpp:69]   --->   Operation 221 'br' 'br_ln69' <Predicate = true> <Delay = 1.70>
+ST_38 : Operation 222 [1/1] (2.55ns)   --->   "%add_ln70 = add i32 %p_load, i32 1" [guitar_effects.cpp:70]   --->   Operation 222 'add' 'add_ln70' <Predicate = (tmp)> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_38 : Operation 223 [1/1] (2.47ns)   --->   "%icmp_ln104 = icmp_sgt  i32 %tmp_data_V_1, i32 %distortion_threshold_read" [guitar_effects.cpp:104]   --->   Operation 223 'icmp' 'icmp_ln104' <Predicate = (tmp)> <Delay = 2.47> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_38 : Operation 224 [1/1] (0.00ns)   --->   "%br_ln104 = br i1 %icmp_ln104, void %if.else.i, void %if.then.i" [guitar_effects.cpp:104]   --->   Operation 224 'br' 'br_ln104' <Predicate = (tmp)> <Delay = 0.00>
+ST_38 : Operation 225 [1/1] (2.47ns)   --->   "%icmp_ln106 = icmp_slt  i32 %tmp_data_V_1, i32 %negative_threshold" [guitar_effects.cpp:106]   --->   Operation 225 'icmp' 'icmp_ln106' <Predicate = (tmp & !icmp_ln104)> <Delay = 2.47> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_38 : Operation 226 [1/1] (1.70ns)   --->   "%br_ln106 = br i1 %icmp_ln106, void %if.end, void %if.then5.i" [guitar_effects.cpp:106]   --->   Operation 226 'br' 'br_ln106' <Predicate = (tmp & !icmp_ln104)> <Delay = 1.70>
+ST_38 : Operation 227 [1/1] (2.55ns)   --->   "%add_ln107 = add i32 %tmp_data_V_1, i32 %distortion_threshold_read" [guitar_effects.cpp:107]   --->   Operation 227 'add' 'add_ln107' <Predicate = (tmp & !icmp_ln104 & icmp_ln106)> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_38 : Operation 228 [1/1] (2.55ns)   --->   "%sub_ln105 = sub i32 %tmp_data_V_1, i32 %distortion_threshold_read" [guitar_effects.cpp:105]   --->   Operation 228 'sub' 'sub_ln105' <Predicate = (tmp & icmp_ln104)> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 
-State 39 <SV = 38> <Delay = 4.42>
-ST_39 : Operation 219 [1/1] (0.00ns)   --->   "%mantissa_1 = bitconcatenate i25 @_ssdm_op_BitConcatenate.i25.i1.i23.i1, i1 1, i23 %p_Result_3, i1 0" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:15]   --->   Operation 219 'bitconcatenate' 'mantissa_1' <Predicate = true> <Delay = 0.00>
-ST_39 : Operation 220 [1/1] (0.00ns)   --->   "%zext_ln15_1 = zext i25 %mantissa_1" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:15]   --->   Operation 220 'zext' 'zext_ln15_1' <Predicate = true> <Delay = 0.00>
-ST_39 : Operation 221 [1/1] (0.00ns)   --->   "%sext_ln1488_1 = sext i9 %ush_1"   --->   Operation 221 'sext' 'sext_ln1488_1' <Predicate = true> <Delay = 0.00>
-ST_39 : Operation 222 [1/1] (0.00ns)   --->   "%zext_ln1488_1 = zext i32 %sext_ln1488_1"   --->   Operation 222 'zext' 'zext_ln1488_1' <Predicate = true> <Delay = 0.00>
-ST_39 : Operation 223 [1/1] (0.00ns) (grouped into LUT with out node val_1)   --->   "%r_V_2 = lshr i63 %zext_ln15_1, i63 %zext_ln1488_1"   --->   Operation 223 'lshr' 'r_V_2' <Predicate = (isNeg_1)> <Delay = 0.00> <CoreInst = "Shifter">   --->   Core 75 'Shifter' <Latency = 0> <II = 1> <Delay = 4.42> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
-ST_39 : Operation 224 [1/1] (0.00ns) (grouped into LUT with out node val_1)   --->   "%r_V_3 = shl i63 %zext_ln15_1, i63 %zext_ln1488_1"   --->   Operation 224 'shl' 'r_V_3' <Predicate = (!isNeg_1)> <Delay = 0.00> <CoreInst = "Shifter">   --->   Core 75 'Shifter' <Latency = 0> <II = 1> <Delay = 4.42> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
-ST_39 : Operation 225 [1/1] (0.00ns) (grouped into LUT with out node val_1)   --->   "%tmp_12 = bitselect i1 @_ssdm_op_BitSelect.i1.i63.i32, i63 %r_V_2, i32 24"   --->   Operation 225 'bitselect' 'tmp_12' <Predicate = (isNeg_1)> <Delay = 0.00>
-ST_39 : Operation 226 [1/1] (0.00ns) (grouped into LUT with out node val_1)   --->   "%zext_ln818_1 = zext i1 %tmp_12"   --->   Operation 226 'zext' 'zext_ln818_1' <Predicate = (isNeg_1)> <Delay = 0.00>
-ST_39 : Operation 227 [1/1] (0.00ns) (grouped into LUT with out node val_1)   --->   "%tmp_4 = partselect i16 @_ssdm_op_PartSelect.i16.i63.i32.i32, i63 %r_V_3, i32 24, i32 39"   --->   Operation 227 'partselect' 'tmp_4' <Predicate = (!isNeg_1)> <Delay = 0.00>
-ST_39 : Operation 228 [1/1] (4.42ns) (out node of the LUT)   --->   "%val_1 = select i1 %isNeg_1, i16 %zext_ln818_1, i16 %tmp_4"   --->   Operation 228 'select' 'val_1' <Predicate = true> <Delay = 4.42> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+State 39 <SV = 38> <Delay = 6.41>
+ST_39 : Operation 229 [6/6] (6.41ns)   --->   "%conv7_i = sitofp i32 %add_ln107" [guitar_effects.cpp:107]   --->   Operation 229 'sitofp' 'conv7_i' <Predicate = true> <Delay = 6.41> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 6.41> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
 
-State 40 <SV = 39> <Delay = 2.88>
-ST_40 : Operation 229 [1/1] (2.07ns)   --->   "%result_V_5 = sub i16 0, i16 %val_1"   --->   Operation 229 'sub' 'result_V_5' <Predicate = (p_Result_2)> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_40 : Operation 230 [1/1] (0.80ns)   --->   "%result_V_9 = select i1 %p_Result_2, i16 %result_V_5, i16 %val_1" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:59]   --->   Operation 230 'select' 'result_V_9' <Predicate = true> <Delay = 0.80> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_40 : Operation 231 [1/1] (1.70ns)   --->   "%br_ln98 = br void %if.end" [guitar_effects.cpp:98]   --->   Operation 231 'br' 'br_ln98' <Predicate = true> <Delay = 1.70>
+State 40 <SV = 39> <Delay = 6.41>
+ST_40 : Operation 230 [5/6] (6.41ns)   --->   "%conv7_i = sitofp i32 %add_ln107" [guitar_effects.cpp:107]   --->   Operation 230 'sitofp' 'conv7_i' <Predicate = true> <Delay = 6.41> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 6.41> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
 
-State 41 <SV = 22> <Delay = 6.41>
-ST_41 : Operation 232 [1/1] (0.00ns)   --->   "%sext_ln95 = sext i17 %sub_ln95" [guitar_effects.cpp:95]   --->   Operation 232 'sext' 'sext_ln95' <Predicate = true> <Delay = 0.00>
-ST_41 : Operation 233 [6/6] (6.41ns)   --->   "%conv4_i = sitofp i32 %sext_ln95" [guitar_effects.cpp:95]   --->   Operation 233 'sitofp' 'conv4_i' <Predicate = true> <Delay = 6.41> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 6.41> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+State 41 <SV = 40> <Delay = 6.41>
+ST_41 : Operation 231 [4/6] (6.41ns)   --->   "%conv7_i = sitofp i32 %add_ln107" [guitar_effects.cpp:107]   --->   Operation 231 'sitofp' 'conv7_i' <Predicate = true> <Delay = 6.41> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 6.41> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
 
-State 42 <SV = 23> <Delay = 6.41>
-ST_42 : Operation 234 [5/6] (6.41ns)   --->   "%conv4_i = sitofp i32 %sext_ln95" [guitar_effects.cpp:95]   --->   Operation 234 'sitofp' 'conv4_i' <Predicate = true> <Delay = 6.41> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 6.41> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+State 42 <SV = 41> <Delay = 6.41>
+ST_42 : Operation 232 [3/6] (6.41ns)   --->   "%conv7_i = sitofp i32 %add_ln107" [guitar_effects.cpp:107]   --->   Operation 232 'sitofp' 'conv7_i' <Predicate = true> <Delay = 6.41> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 6.41> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
 
-State 43 <SV = 24> <Delay = 6.41>
-ST_43 : Operation 235 [4/6] (6.41ns)   --->   "%conv4_i = sitofp i32 %sext_ln95" [guitar_effects.cpp:95]   --->   Operation 235 'sitofp' 'conv4_i' <Predicate = true> <Delay = 6.41> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 6.41> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+State 43 <SV = 42> <Delay = 6.41>
+ST_43 : Operation 233 [2/6] (6.41ns)   --->   "%conv7_i = sitofp i32 %add_ln107" [guitar_effects.cpp:107]   --->   Operation 233 'sitofp' 'conv7_i' <Predicate = true> <Delay = 6.41> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 6.41> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
 
-State 44 <SV = 25> <Delay = 6.41>
-ST_44 : Operation 236 [3/6] (6.41ns)   --->   "%conv4_i = sitofp i32 %sext_ln95" [guitar_effects.cpp:95]   --->   Operation 236 'sitofp' 'conv4_i' <Predicate = true> <Delay = 6.41> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 6.41> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+State 44 <SV = 43> <Delay = 6.41>
+ST_44 : Operation 234 [1/6] (6.41ns)   --->   "%conv7_i = sitofp i32 %add_ln107" [guitar_effects.cpp:107]   --->   Operation 234 'sitofp' 'conv7_i' <Predicate = true> <Delay = 6.41> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 6.41> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
 
-State 45 <SV = 26> <Delay = 6.41>
-ST_45 : Operation 237 [2/6] (6.41ns)   --->   "%conv4_i = sitofp i32 %sext_ln95" [guitar_effects.cpp:95]   --->   Operation 237 'sitofp' 'conv4_i' <Predicate = true> <Delay = 6.41> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 6.41> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+State 45 <SV = 44> <Delay = 5.70>
+ST_45 : Operation 235 [4/4] (5.70ns)   --->   "%mul8_i = fmul i32 %conv7_i, i32 %distortion_clip_factor_read" [guitar_effects.cpp:107]   --->   Operation 235 'fmul' 'mul8_i' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
 
-State 46 <SV = 27> <Delay = 6.41>
-ST_46 : Operation 238 [1/6] (6.41ns)   --->   "%conv4_i = sitofp i32 %sext_ln95" [guitar_effects.cpp:95]   --->   Operation 238 'sitofp' 'conv4_i' <Predicate = true> <Delay = 6.41> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 6.41> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+State 46 <SV = 45> <Delay = 5.70>
+ST_46 : Operation 236 [3/4] (5.70ns)   --->   "%mul8_i = fmul i32 %conv7_i, i32 %distortion_clip_factor_read" [guitar_effects.cpp:107]   --->   Operation 236 'fmul' 'mul8_i' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
 
-State 47 <SV = 28> <Delay = 5.70>
-ST_47 : Operation 239 [4/4] (5.70ns)   --->   "%mul_i = fmul i32 %conv4_i, i32 %clip_factor_assign" [guitar_effects.cpp:95]   --->   Operation 239 'fmul' 'mul_i' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+State 47 <SV = 46> <Delay = 5.70>
+ST_47 : Operation 237 [2/4] (5.70ns)   --->   "%mul8_i = fmul i32 %conv7_i, i32 %distortion_clip_factor_read" [guitar_effects.cpp:107]   --->   Operation 237 'fmul' 'mul8_i' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
 
-State 48 <SV = 29> <Delay = 5.70>
-ST_48 : Operation 240 [3/4] (5.70ns)   --->   "%mul_i = fmul i32 %conv4_i, i32 %clip_factor_assign" [guitar_effects.cpp:95]   --->   Operation 240 'fmul' 'mul_i' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+State 48 <SV = 47> <Delay = 5.70>
+ST_48 : Operation 238 [1/4] (5.70ns)   --->   "%mul8_i = fmul i32 %conv7_i, i32 %distortion_clip_factor_read" [guitar_effects.cpp:107]   --->   Operation 238 'fmul' 'mul8_i' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
 
-State 49 <SV = 30> <Delay = 5.70>
-ST_49 : Operation 241 [2/4] (5.70ns)   --->   "%mul_i = fmul i32 %conv4_i, i32 %clip_factor_assign" [guitar_effects.cpp:95]   --->   Operation 241 'fmul' 'mul_i' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+State 49 <SV = 48> <Delay = 7.25>
+ST_49 : Operation 239 [5/5] (7.25ns)   --->   "%dc_1 = fsub i32 %mul8_i, i32 %conv2_i" [guitar_effects.cpp:107]   --->   Operation 239 'fsub' 'dc_1' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
 
-State 50 <SV = 31> <Delay = 5.70>
-ST_50 : Operation 242 [1/4] (5.70ns)   --->   "%mul_i = fmul i32 %conv4_i, i32 %clip_factor_assign" [guitar_effects.cpp:95]   --->   Operation 242 'fmul' 'mul_i' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+State 50 <SV = 49> <Delay = 7.25>
+ST_50 : Operation 240 [4/5] (7.25ns)   --->   "%dc_1 = fsub i32 %mul8_i, i32 %conv2_i" [guitar_effects.cpp:107]   --->   Operation 240 'fsub' 'dc_1' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
 
-State 51 <SV = 32> <Delay = 7.25>
-ST_51 : Operation 243 [5/5] (7.25ns)   --->   "%dc = fadd i32 %mul_i, i32 %conv5_i" [guitar_effects.cpp:95]   --->   Operation 243 'fadd' 'dc' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+State 51 <SV = 50> <Delay = 7.25>
+ST_51 : Operation 241 [3/5] (7.25ns)   --->   "%dc_1 = fsub i32 %mul8_i, i32 %conv2_i" [guitar_effects.cpp:107]   --->   Operation 241 'fsub' 'dc_1' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
 
-State 52 <SV = 33> <Delay = 7.25>
-ST_52 : Operation 244 [4/5] (7.25ns)   --->   "%dc = fadd i32 %mul_i, i32 %conv5_i" [guitar_effects.cpp:95]   --->   Operation 244 'fadd' 'dc' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+State 52 <SV = 51> <Delay = 7.25>
+ST_52 : Operation 242 [2/5] (7.25ns)   --->   "%dc_1 = fsub i32 %mul8_i, i32 %conv2_i" [guitar_effects.cpp:107]   --->   Operation 242 'fsub' 'dc_1' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
 
-State 53 <SV = 34> <Delay = 7.25>
-ST_53 : Operation 245 [3/5] (7.25ns)   --->   "%dc = fadd i32 %mul_i, i32 %conv5_i" [guitar_effects.cpp:95]   --->   Operation 245 'fadd' 'dc' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+State 53 <SV = 52> <Delay = 7.25>
+ST_53 : Operation 243 [1/5] (7.25ns)   --->   "%dc_1 = fsub i32 %mul8_i, i32 %conv2_i" [guitar_effects.cpp:107]   --->   Operation 243 'fsub' 'dc_1' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
 
-State 54 <SV = 35> <Delay = 7.25>
-ST_54 : Operation 246 [2/5] (7.25ns)   --->   "%dc = fadd i32 %mul_i, i32 %conv5_i" [guitar_effects.cpp:95]   --->   Operation 246 'fadd' 'dc' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+State 54 <SV = 53> <Delay = 2.88>
+ST_54 : Operation 244 [1/1] (0.00ns)   --->   "%data_V_1 = bitcast i32 %dc_1" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:317]   --->   Operation 244 'bitcast' 'data_V_1' <Predicate = true> <Delay = 0.00>
+ST_54 : Operation 245 [1/1] (0.00ns)   --->   "%p_Result_2 = bitselect i1 @_ssdm_op_BitSelect.i1.i32.i32, i32 %data_V_1, i32 31"   --->   Operation 245 'bitselect' 'p_Result_2' <Predicate = true> <Delay = 0.00>
+ST_54 : Operation 246 [1/1] (0.00ns)   --->   "%xs_exp_V_1 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %data_V_1, i32 23, i32 30"   --->   Operation 246 'partselect' 'xs_exp_V_1' <Predicate = true> <Delay = 0.00>
+ST_54 : Operation 247 [1/1] (0.00ns)   --->   "%p_Result_3 = trunc i32 %data_V_1"   --->   Operation 247 'trunc' 'p_Result_3' <Predicate = true> <Delay = 0.00>
+ST_54 : Operation 248 [1/1] (0.00ns)   --->   "%zext_ln346_1 = zext i8 %xs_exp_V_1" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:346]   --->   Operation 248 'zext' 'zext_ln346_1' <Predicate = true> <Delay = 0.00>
+ST_54 : Operation 249 [1/1] (1.91ns)   --->   "%add_ln346_1 = add i9 %zext_ln346_1, i9 385" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:346]   --->   Operation 249 'add' 'add_ln346_1' <Predicate = true> <Delay = 1.91> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_54 : Operation 250 [1/1] (0.00ns)   --->   "%isNeg_1 = bitselect i1 @_ssdm_op_BitSelect.i1.i9.i32, i9 %add_ln346_1, i32 8"   --->   Operation 250 'bitselect' 'isNeg_1' <Predicate = true> <Delay = 0.00>
+ST_54 : Operation 251 [1/1] (1.91ns)   --->   "%sub_ln1512_1 = sub i8 127, i8 %xs_exp_V_1"   --->   Operation 251 'sub' 'sub_ln1512_1' <Predicate = true> <Delay = 1.91> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_54 : Operation 252 [1/1] (0.00ns)   --->   "%sext_ln1512_1 = sext i8 %sub_ln1512_1"   --->   Operation 252 'sext' 'sext_ln1512_1' <Predicate = true> <Delay = 0.00>
+ST_54 : Operation 253 [1/1] (0.96ns)   --->   "%ush_1 = select i1 %isNeg_1, i9 %sext_ln1512_1, i9 %add_ln346_1"   --->   Operation 253 'select' 'ush_1' <Predicate = true> <Delay = 0.96> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 
-State 55 <SV = 36> <Delay = 7.25>
-ST_55 : Operation 247 [1/5] (7.25ns)   --->   "%dc = fadd i32 %mul_i, i32 %conv5_i" [guitar_effects.cpp:95]   --->   Operation 247 'fadd' 'dc' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+State 55 <SV = 54> <Delay = 4.42>
+ST_55 : Operation 254 [1/1] (0.00ns)   --->   "%mantissa_1 = bitconcatenate i25 @_ssdm_op_BitConcatenate.i25.i1.i23.i1, i1 1, i23 %p_Result_3, i1 0" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:15]   --->   Operation 254 'bitconcatenate' 'mantissa_1' <Predicate = true> <Delay = 0.00>
+ST_55 : Operation 255 [1/1] (0.00ns)   --->   "%zext_ln15_1 = zext i25 %mantissa_1" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:15]   --->   Operation 255 'zext' 'zext_ln15_1' <Predicate = true> <Delay = 0.00>
+ST_55 : Operation 256 [1/1] (0.00ns)   --->   "%sext_ln1488_1 = sext i9 %ush_1"   --->   Operation 256 'sext' 'sext_ln1488_1' <Predicate = true> <Delay = 0.00>
+ST_55 : Operation 257 [1/1] (0.00ns)   --->   "%zext_ln1488_1 = zext i32 %sext_ln1488_1"   --->   Operation 257 'zext' 'zext_ln1488_1' <Predicate = true> <Delay = 0.00>
+ST_55 : Operation 258 [1/1] (0.00ns) (grouped into LUT with out node val_1)   --->   "%r_V_2 = lshr i79 %zext_ln15_1, i79 %zext_ln1488_1"   --->   Operation 258 'lshr' 'r_V_2' <Predicate = (isNeg_1)> <Delay = 0.00> <CoreInst = "Shifter">   --->   Core 75 'Shifter' <Latency = 0> <II = 1> <Delay = 4.42> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_55 : Operation 259 [1/1] (0.00ns) (grouped into LUT with out node val_1)   --->   "%r_V_3 = shl i79 %zext_ln15_1, i79 %zext_ln1488_1"   --->   Operation 259 'shl' 'r_V_3' <Predicate = (!isNeg_1)> <Delay = 0.00> <CoreInst = "Shifter">   --->   Core 75 'Shifter' <Latency = 0> <II = 1> <Delay = 4.42> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_55 : Operation 260 [1/1] (0.00ns) (grouped into LUT with out node val_1)   --->   "%tmp_13 = bitselect i1 @_ssdm_op_BitSelect.i1.i79.i32, i79 %r_V_2, i32 24"   --->   Operation 260 'bitselect' 'tmp_13' <Predicate = (isNeg_1)> <Delay = 0.00>
+ST_55 : Operation 261 [1/1] (0.00ns) (grouped into LUT with out node val_1)   --->   "%zext_ln818_1 = zext i1 %tmp_13"   --->   Operation 261 'zext' 'zext_ln818_1' <Predicate = (isNeg_1)> <Delay = 0.00>
+ST_55 : Operation 262 [1/1] (0.00ns) (grouped into LUT with out node val_1)   --->   "%tmp_4 = partselect i32 @_ssdm_op_PartSelect.i32.i79.i32.i32, i79 %r_V_3, i32 24, i32 55"   --->   Operation 262 'partselect' 'tmp_4' <Predicate = (!isNeg_1)> <Delay = 0.00>
+ST_55 : Operation 263 [1/1] (4.42ns) (out node of the LUT)   --->   "%val_1 = select i1 %isNeg_1, i32 %zext_ln818_1, i32 %tmp_4"   --->   Operation 263 'select' 'val_1' <Predicate = true> <Delay = 4.42> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 
-State 56 <SV = 37> <Delay = 2.88>
-ST_56 : Operation 248 [1/1] (0.00ns)   --->   "%data_V = bitcast i32 %dc" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:317]   --->   Operation 248 'bitcast' 'data_V' <Predicate = true> <Delay = 0.00>
-ST_56 : Operation 249 [1/1] (0.00ns)   --->   "%p_Result_s = bitselect i1 @_ssdm_op_BitSelect.i1.i32.i32, i32 %data_V, i32 31"   --->   Operation 249 'bitselect' 'p_Result_s' <Predicate = true> <Delay = 0.00>
-ST_56 : Operation 250 [1/1] (0.00ns)   --->   "%xs_exp_V = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %data_V, i32 23, i32 30"   --->   Operation 250 'partselect' 'xs_exp_V' <Predicate = true> <Delay = 0.00>
-ST_56 : Operation 251 [1/1] (0.00ns)   --->   "%p_Result_1 = trunc i32 %data_V"   --->   Operation 251 'trunc' 'p_Result_1' <Predicate = true> <Delay = 0.00>
-ST_56 : Operation 252 [1/1] (0.00ns)   --->   "%zext_ln346 = zext i8 %xs_exp_V" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:346]   --->   Operation 252 'zext' 'zext_ln346' <Predicate = true> <Delay = 0.00>
-ST_56 : Operation 253 [1/1] (1.91ns)   --->   "%add_ln346 = add i9 %zext_ln346, i9 385" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:346]   --->   Operation 253 'add' 'add_ln346' <Predicate = true> <Delay = 1.91> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_56 : Operation 254 [1/1] (0.00ns)   --->   "%isNeg = bitselect i1 @_ssdm_op_BitSelect.i1.i9.i32, i9 %add_ln346, i32 8"   --->   Operation 254 'bitselect' 'isNeg' <Predicate = true> <Delay = 0.00>
-ST_56 : Operation 255 [1/1] (1.91ns)   --->   "%sub_ln1512 = sub i8 127, i8 %xs_exp_V"   --->   Operation 255 'sub' 'sub_ln1512' <Predicate = true> <Delay = 1.91> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_56 : Operation 256 [1/1] (0.00ns)   --->   "%sext_ln1512 = sext i8 %sub_ln1512"   --->   Operation 256 'sext' 'sext_ln1512' <Predicate = true> <Delay = 0.00>
-ST_56 : Operation 257 [1/1] (0.96ns)   --->   "%ush = select i1 %isNeg, i9 %sext_ln1512, i9 %add_ln346"   --->   Operation 257 'select' 'ush' <Predicate = true> <Delay = 0.96> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+State 56 <SV = 55> <Delay = 3.25>
+ST_56 : Operation 264 [1/1] (2.55ns)   --->   "%result_V_5 = sub i32 0, i32 %val_1"   --->   Operation 264 'sub' 'result_V_5' <Predicate = (p_Result_2)> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_56 : Operation 265 [1/1] (0.69ns)   --->   "%result_V_9 = select i1 %p_Result_2, i32 %result_V_5, i32 %val_1" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:59]   --->   Operation 265 'select' 'result_V_9' <Predicate = true> <Delay = 0.69> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_56 : Operation 266 [1/1] (1.70ns)   --->   "%br_ln108 = br void %if.end" [guitar_effects.cpp:108]   --->   Operation 266 'br' 'br_ln108' <Predicate = true> <Delay = 1.70>
 
-State 57 <SV = 38> <Delay = 4.42>
-ST_57 : Operation 258 [1/1] (0.00ns)   --->   "%mantissa = bitconcatenate i25 @_ssdm_op_BitConcatenate.i25.i1.i23.i1, i1 1, i23 %p_Result_1, i1 0" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:15]   --->   Operation 258 'bitconcatenate' 'mantissa' <Predicate = true> <Delay = 0.00>
-ST_57 : Operation 259 [1/1] (0.00ns)   --->   "%zext_ln15 = zext i25 %mantissa" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:15]   --->   Operation 259 'zext' 'zext_ln15' <Predicate = true> <Delay = 0.00>
-ST_57 : Operation 260 [1/1] (0.00ns)   --->   "%sext_ln1488 = sext i9 %ush"   --->   Operation 260 'sext' 'sext_ln1488' <Predicate = true> <Delay = 0.00>
-ST_57 : Operation 261 [1/1] (0.00ns)   --->   "%zext_ln1488 = zext i32 %sext_ln1488"   --->   Operation 261 'zext' 'zext_ln1488' <Predicate = true> <Delay = 0.00>
-ST_57 : Operation 262 [1/1] (0.00ns) (grouped into LUT with out node val)   --->   "%r_V = lshr i63 %zext_ln15, i63 %zext_ln1488"   --->   Operation 262 'lshr' 'r_V' <Predicate = (isNeg)> <Delay = 0.00> <CoreInst = "Shifter">   --->   Core 75 'Shifter' <Latency = 0> <II = 1> <Delay = 4.42> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
-ST_57 : Operation 263 [1/1] (0.00ns) (grouped into LUT with out node val)   --->   "%r_V_1 = shl i63 %zext_ln15, i63 %zext_ln1488"   --->   Operation 263 'shl' 'r_V_1' <Predicate = (!isNeg)> <Delay = 0.00> <CoreInst = "Shifter">   --->   Core 75 'Shifter' <Latency = 0> <II = 1> <Delay = 4.42> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
-ST_57 : Operation 264 [1/1] (0.00ns) (grouped into LUT with out node val)   --->   "%tmp_8 = bitselect i1 @_ssdm_op_BitSelect.i1.i63.i32, i63 %r_V, i32 24"   --->   Operation 264 'bitselect' 'tmp_8' <Predicate = (isNeg)> <Delay = 0.00>
-ST_57 : Operation 265 [1/1] (0.00ns) (grouped into LUT with out node val)   --->   "%zext_ln818 = zext i1 %tmp_8"   --->   Operation 265 'zext' 'zext_ln818' <Predicate = (isNeg)> <Delay = 0.00>
-ST_57 : Operation 266 [1/1] (0.00ns) (grouped into LUT with out node val)   --->   "%tmp_1 = partselect i16 @_ssdm_op_PartSelect.i16.i63.i32.i32, i63 %r_V_1, i32 24, i32 39"   --->   Operation 266 'partselect' 'tmp_1' <Predicate = (!isNeg)> <Delay = 0.00>
-ST_57 : Operation 267 [1/1] (4.42ns) (out node of the LUT)   --->   "%val = select i1 %isNeg, i16 %zext_ln818, i16 %tmp_1"   --->   Operation 267 'select' 'val' <Predicate = true> <Delay = 4.42> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+State 57 <SV = 38> <Delay = 6.41>
+ST_57 : Operation 267 [6/6] (6.41ns)   --->   "%conv_i = sitofp i32 %sub_ln105" [guitar_effects.cpp:105]   --->   Operation 267 'sitofp' 'conv_i' <Predicate = true> <Delay = 6.41> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 6.41> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
 
-State 58 <SV = 39> <Delay = 2.88>
-ST_58 : Operation 268 [1/1] (2.07ns)   --->   "%result_V_2 = sub i16 0, i16 %val"   --->   Operation 268 'sub' 'result_V_2' <Predicate = (p_Result_s)> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_58 : Operation 269 [1/1] (0.80ns)   --->   "%result_V = select i1 %p_Result_s, i16 %result_V_2, i16 %val" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:59]   --->   Operation 269 'select' 'result_V' <Predicate = true> <Delay = 0.80> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_58 : Operation 270 [1/1] (1.70ns)   --->   "%br_ln96 = br void %if.end" [guitar_effects.cpp:96]   --->   Operation 270 'br' 'br_ln96' <Predicate = true> <Delay = 1.70>
+State 58 <SV = 39> <Delay = 6.41>
+ST_58 : Operation 268 [5/6] (6.41ns)   --->   "%conv_i = sitofp i32 %sub_ln105" [guitar_effects.cpp:105]   --->   Operation 268 'sitofp' 'conv_i' <Predicate = true> <Delay = 6.41> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 6.41> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
 
 State 59 <SV = 40> <Delay = 6.41>
-ST_59 : Operation 271 [1/1] (0.00ns)   --->   "%tmp_short = phi i16 %result_V, void %if.then.i, i16 %result_V_9, void %if.then10.i, i16 %tmp_data_V, void %while.body, i16 %tmp_data_V, void %if.else.i"   --->   Operation 271 'phi' 'tmp_short' <Predicate = true> <Delay = 0.00>
-ST_59 : Operation 272 [1/1] (1.58ns)   --->   "%br_ln68 = br i1 %tmp, void %if.end11, void %if.then8" [guitar_effects.cpp:68]   --->   Operation 272 'br' 'br_ln68' <Predicate = true> <Delay = 1.58>
-ST_59 : Operation 273 [1/1] (0.00ns)   --->   "%current_level_1_load = load i16 %current_level_1" [guitar_effects.cpp:70]   --->   Operation 273 'load' 'current_level_1_load' <Predicate = (tmp)> <Delay = 0.00>
-ST_59 : Operation 274 [2/2] (6.41ns)   --->   "%call_ret = call i32 @compression, i16 %tmp_short, i16 %compression_min_threshold_read, i16 %compression_max_threshold_read, i16 %compression_zero_threshold_read, i16 %current_level_1_load, i16 %compression_buffer" [guitar_effects.cpp:70]   --->   Operation 274 'call' 'call_ret' <Predicate = (tmp)> <Delay = 6.41> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_59 : Operation 269 [4/6] (6.41ns)   --->   "%conv_i = sitofp i32 %sub_ln105" [guitar_effects.cpp:105]   --->   Operation 269 'sitofp' 'conv_i' <Predicate = true> <Delay = 6.41> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 6.41> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
 
-State 60 <SV = 41> <Delay = 6.17>
-ST_60 : Operation 275 [1/2] (4.58ns)   --->   "%call_ret = call i32 @compression, i16 %tmp_short, i16 %compression_min_threshold_read, i16 %compression_max_threshold_read, i16 %compression_zero_threshold_read, i16 %current_level_1_load, i16 %compression_buffer" [guitar_effects.cpp:70]   --->   Operation 275 'call' 'call_ret' <Predicate = (tmp)> <Delay = 4.58> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_60 : Operation 276 [1/1] (0.00ns)   --->   "%tmp_short_2 = extractvalue i32 %call_ret" [guitar_effects.cpp:70]   --->   Operation 276 'extractvalue' 'tmp_short_2' <Predicate = (tmp)> <Delay = 0.00>
-ST_60 : Operation 277 [1/1] (0.00ns)   --->   "%current_level = extractvalue i32 %call_ret" [guitar_effects.cpp:70]   --->   Operation 277 'extractvalue' 'current_level' <Predicate = (tmp)> <Delay = 0.00>
-ST_60 : Operation 278 [1/1] (1.58ns)   --->   "%store_ln71 = store i16 %current_level, i16 %current_level_1" [guitar_effects.cpp:71]   --->   Operation 278 'store' 'store_ln71' <Predicate = (tmp)> <Delay = 1.58>
-ST_60 : Operation 279 [1/1] (1.58ns)   --->   "%br_ln71 = br void %if.end11" [guitar_effects.cpp:71]   --->   Operation 279 'br' 'br_ln71' <Predicate = (tmp)> <Delay = 1.58>
-ST_60 : Operation 280 [1/1] (0.00ns)   --->   "%tmp_short_3 = phi i16 %tmp_short_2, void %if.then8, i16 %tmp_short, void %if.end"   --->   Operation 280 'phi' 'tmp_short_3' <Predicate = true> <Delay = 0.00>
-ST_60 : Operation 281 [1/1] (0.00ns)   --->   "%br_ln72 = br i1 %tmp_2, void %if.end19, void %if.then15" [guitar_effects.cpp:72]   --->   Operation 281 'br' 'br_ln72' <Predicate = true> <Delay = 0.00>
-ST_60 : Operation 282 [2/2] (3.25ns)   --->   "%delay_buffer_load = load i16 %delay_buffer_addr_1" [guitar_effects.cpp:157]   --->   Operation 282 'load' 'delay_buffer_load' <Predicate = (tmp_2)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 44100> <RAM>
+State 60 <SV = 41> <Delay = 6.41>
+ST_60 : Operation 270 [3/6] (6.41ns)   --->   "%conv_i = sitofp i32 %sub_ln105" [guitar_effects.cpp:105]   --->   Operation 270 'sitofp' 'conv_i' <Predicate = true> <Delay = 6.41> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 6.41> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
 
-State 61 <SV = 42> <Delay = 3.25>
-ST_61 : Operation 283 [1/2] (3.25ns)   --->   "%delay_buffer_load = load i16 %delay_buffer_addr_1" [guitar_effects.cpp:157]   --->   Operation 283 'load' 'delay_buffer_load' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 44100> <RAM>
+State 61 <SV = 42> <Delay = 6.41>
+ST_61 : Operation 271 [2/6] (6.41ns)   --->   "%conv_i = sitofp i32 %sub_ln105" [guitar_effects.cpp:105]   --->   Operation 271 'sitofp' 'conv_i' <Predicate = true> <Delay = 6.41> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 6.41> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
 
 State 62 <SV = 43> <Delay = 6.41>
-ST_62 : Operation 284 [1/1] (0.00ns)   --->   "%sext_ln157_1 = sext i16 %delay_buffer_load" [guitar_effects.cpp:157]   --->   Operation 284 'sext' 'sext_ln157_1' <Predicate = true> <Delay = 0.00>
-ST_62 : Operation 285 [6/6] (6.41ns)   --->   "%conv5_i1 = sitofp i32 %sext_ln157_1" [guitar_effects.cpp:157]   --->   Operation 285 'sitofp' 'conv5_i1' <Predicate = true> <Delay = 6.41> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 6.41> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+ST_62 : Operation 272 [1/6] (6.41ns)   --->   "%conv_i = sitofp i32 %sub_ln105" [guitar_effects.cpp:105]   --->   Operation 272 'sitofp' 'conv_i' <Predicate = true> <Delay = 6.41> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 6.41> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
 
-State 63 <SV = 44> <Delay = 6.41>
-ST_63 : Operation 286 [5/6] (6.41ns)   --->   "%conv5_i1 = sitofp i32 %sext_ln157_1" [guitar_effects.cpp:157]   --->   Operation 286 'sitofp' 'conv5_i1' <Predicate = true> <Delay = 6.41> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 6.41> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+State 63 <SV = 44> <Delay = 5.70>
+ST_63 : Operation 273 [4/4] (5.70ns)   --->   "%mul_i = fmul i32 %conv_i, i32 %distortion_clip_factor_read" [guitar_effects.cpp:105]   --->   Operation 273 'fmul' 'mul_i' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
 
-State 64 <SV = 45> <Delay = 6.41>
-ST_64 : Operation 287 [4/6] (6.41ns)   --->   "%conv5_i1 = sitofp i32 %sext_ln157_1" [guitar_effects.cpp:157]   --->   Operation 287 'sitofp' 'conv5_i1' <Predicate = true> <Delay = 6.41> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 6.41> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+State 64 <SV = 45> <Delay = 5.70>
+ST_64 : Operation 274 [3/4] (5.70ns)   --->   "%mul_i = fmul i32 %conv_i, i32 %distortion_clip_factor_read" [guitar_effects.cpp:105]   --->   Operation 274 'fmul' 'mul_i' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
 
-State 65 <SV = 46> <Delay = 6.41>
-ST_65 : Operation 288 [3/6] (6.41ns)   --->   "%conv5_i1 = sitofp i32 %sext_ln157_1" [guitar_effects.cpp:157]   --->   Operation 288 'sitofp' 'conv5_i1' <Predicate = true> <Delay = 6.41> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 6.41> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+State 65 <SV = 46> <Delay = 5.70>
+ST_65 : Operation 275 [2/4] (5.70ns)   --->   "%mul_i = fmul i32 %conv_i, i32 %distortion_clip_factor_read" [guitar_effects.cpp:105]   --->   Operation 275 'fmul' 'mul_i' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
 
-State 66 <SV = 47> <Delay = 6.41>
-ST_66 : Operation 289 [1/1] (0.00ns)   --->   "%sext_ln157 = sext i16 %tmp_short_3" [guitar_effects.cpp:157]   --->   Operation 289 'sext' 'sext_ln157' <Predicate = true> <Delay = 0.00>
-ST_66 : Operation 290 [6/6] (6.41ns)   --->   "%conv1_i = sitofp i32 %sext_ln157" [guitar_effects.cpp:157]   --->   Operation 290 'sitofp' 'conv1_i' <Predicate = true> <Delay = 6.41> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 6.41> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
-ST_66 : Operation 291 [2/6] (6.41ns)   --->   "%conv5_i1 = sitofp i32 %sext_ln157_1" [guitar_effects.cpp:157]   --->   Operation 291 'sitofp' 'conv5_i1' <Predicate = true> <Delay = 6.41> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 6.41> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+State 66 <SV = 47> <Delay = 5.70>
+ST_66 : Operation 276 [1/4] (5.70ns)   --->   "%mul_i = fmul i32 %conv_i, i32 %distortion_clip_factor_read" [guitar_effects.cpp:105]   --->   Operation 276 'fmul' 'mul_i' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
 
-State 67 <SV = 48> <Delay = 6.41>
-ST_67 : Operation 292 [5/6] (6.41ns)   --->   "%conv1_i = sitofp i32 %sext_ln157" [guitar_effects.cpp:157]   --->   Operation 292 'sitofp' 'conv1_i' <Predicate = true> <Delay = 6.41> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 6.41> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
-ST_67 : Operation 293 [1/6] (6.41ns)   --->   "%conv5_i1 = sitofp i32 %sext_ln157_1" [guitar_effects.cpp:157]   --->   Operation 293 'sitofp' 'conv5_i1' <Predicate = true> <Delay = 6.41> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 6.41> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+State 67 <SV = 48> <Delay = 7.25>
+ST_67 : Operation 277 [5/5] (7.25ns)   --->   "%dc = fadd i32 %mul_i, i32 %conv2_i" [guitar_effects.cpp:105]   --->   Operation 277 'fadd' 'dc' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
 
-State 68 <SV = 49> <Delay = 6.41>
-ST_68 : Operation 294 [4/6] (6.41ns)   --->   "%conv1_i = sitofp i32 %sext_ln157" [guitar_effects.cpp:157]   --->   Operation 294 'sitofp' 'conv1_i' <Predicate = true> <Delay = 6.41> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 6.41> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
-ST_68 : Operation 295 [4/4] (5.70ns)   --->   "%mul_i1 = fmul i32 %conv5_i1, i32 %delay_mult_assign" [guitar_effects.cpp:157]   --->   Operation 295 'fmul' 'mul_i1' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+State 68 <SV = 49> <Delay = 7.25>
+ST_68 : Operation 278 [4/5] (7.25ns)   --->   "%dc = fadd i32 %mul_i, i32 %conv2_i" [guitar_effects.cpp:105]   --->   Operation 278 'fadd' 'dc' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
 
-State 69 <SV = 50> <Delay = 6.41>
-ST_69 : Operation 296 [3/6] (6.41ns)   --->   "%conv1_i = sitofp i32 %sext_ln157" [guitar_effects.cpp:157]   --->   Operation 296 'sitofp' 'conv1_i' <Predicate = true> <Delay = 6.41> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 6.41> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
-ST_69 : Operation 297 [3/4] (5.70ns)   --->   "%mul_i1 = fmul i32 %conv5_i1, i32 %delay_mult_assign" [guitar_effects.cpp:157]   --->   Operation 297 'fmul' 'mul_i1' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+State 69 <SV = 50> <Delay = 7.25>
+ST_69 : Operation 279 [3/5] (7.25ns)   --->   "%dc = fadd i32 %mul_i, i32 %conv2_i" [guitar_effects.cpp:105]   --->   Operation 279 'fadd' 'dc' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
 
-State 70 <SV = 51> <Delay = 6.41>
-ST_70 : Operation 298 [2/6] (6.41ns)   --->   "%conv1_i = sitofp i32 %sext_ln157" [guitar_effects.cpp:157]   --->   Operation 298 'sitofp' 'conv1_i' <Predicate = true> <Delay = 6.41> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 6.41> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
-ST_70 : Operation 299 [2/4] (5.70ns)   --->   "%mul_i1 = fmul i32 %conv5_i1, i32 %delay_mult_assign" [guitar_effects.cpp:157]   --->   Operation 299 'fmul' 'mul_i1' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+State 70 <SV = 51> <Delay = 7.25>
+ST_70 : Operation 280 [2/5] (7.25ns)   --->   "%dc = fadd i32 %mul_i, i32 %conv2_i" [guitar_effects.cpp:105]   --->   Operation 280 'fadd' 'dc' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
 
-State 71 <SV = 52> <Delay = 6.41>
-ST_71 : Operation 300 [1/6] (6.41ns)   --->   "%conv1_i = sitofp i32 %sext_ln157" [guitar_effects.cpp:157]   --->   Operation 300 'sitofp' 'conv1_i' <Predicate = true> <Delay = 6.41> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 6.41> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
-ST_71 : Operation 301 [1/4] (5.70ns)   --->   "%mul_i1 = fmul i32 %conv5_i1, i32 %delay_mult_assign" [guitar_effects.cpp:157]   --->   Operation 301 'fmul' 'mul_i1' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+State 71 <SV = 52> <Delay = 7.25>
+ST_71 : Operation 281 [1/5] (7.25ns)   --->   "%dc = fadd i32 %mul_i, i32 %conv2_i" [guitar_effects.cpp:105]   --->   Operation 281 'fadd' 'dc' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
 
-State 72 <SV = 53> <Delay = 7.25>
-ST_72 : Operation 302 [5/5] (7.25ns)   --->   "%dc_2 = fadd i32 %conv1_i, i32 %mul_i1" [guitar_effects.cpp:157]   --->   Operation 302 'fadd' 'dc_2' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+State 72 <SV = 53> <Delay = 2.88>
+ST_72 : Operation 282 [1/1] (0.00ns)   --->   "%data_V = bitcast i32 %dc" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:317]   --->   Operation 282 'bitcast' 'data_V' <Predicate = true> <Delay = 0.00>
+ST_72 : Operation 283 [1/1] (0.00ns)   --->   "%p_Result_s = bitselect i1 @_ssdm_op_BitSelect.i1.i32.i32, i32 %data_V, i32 31"   --->   Operation 283 'bitselect' 'p_Result_s' <Predicate = true> <Delay = 0.00>
+ST_72 : Operation 284 [1/1] (0.00ns)   --->   "%xs_exp_V = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %data_V, i32 23, i32 30"   --->   Operation 284 'partselect' 'xs_exp_V' <Predicate = true> <Delay = 0.00>
+ST_72 : Operation 285 [1/1] (0.00ns)   --->   "%p_Result_1 = trunc i32 %data_V"   --->   Operation 285 'trunc' 'p_Result_1' <Predicate = true> <Delay = 0.00>
+ST_72 : Operation 286 [1/1] (0.00ns)   --->   "%zext_ln346 = zext i8 %xs_exp_V" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:346]   --->   Operation 286 'zext' 'zext_ln346' <Predicate = true> <Delay = 0.00>
+ST_72 : Operation 287 [1/1] (1.91ns)   --->   "%add_ln346 = add i9 %zext_ln346, i9 385" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:346]   --->   Operation 287 'add' 'add_ln346' <Predicate = true> <Delay = 1.91> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_72 : Operation 288 [1/1] (0.00ns)   --->   "%isNeg = bitselect i1 @_ssdm_op_BitSelect.i1.i9.i32, i9 %add_ln346, i32 8"   --->   Operation 288 'bitselect' 'isNeg' <Predicate = true> <Delay = 0.00>
+ST_72 : Operation 289 [1/1] (1.91ns)   --->   "%sub_ln1512 = sub i8 127, i8 %xs_exp_V"   --->   Operation 289 'sub' 'sub_ln1512' <Predicate = true> <Delay = 1.91> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_72 : Operation 290 [1/1] (0.00ns)   --->   "%sext_ln1512 = sext i8 %sub_ln1512"   --->   Operation 290 'sext' 'sext_ln1512' <Predicate = true> <Delay = 0.00>
+ST_72 : Operation 291 [1/1] (0.96ns)   --->   "%ush = select i1 %isNeg, i9 %sext_ln1512, i9 %add_ln346"   --->   Operation 291 'select' 'ush' <Predicate = true> <Delay = 0.96> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 
-State 73 <SV = 54> <Delay = 7.25>
-ST_73 : Operation 303 [4/5] (7.25ns)   --->   "%dc_2 = fadd i32 %conv1_i, i32 %mul_i1" [guitar_effects.cpp:157]   --->   Operation 303 'fadd' 'dc_2' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+State 73 <SV = 54> <Delay = 4.42>
+ST_73 : Operation 292 [1/1] (0.00ns)   --->   "%mantissa = bitconcatenate i25 @_ssdm_op_BitConcatenate.i25.i1.i23.i1, i1 1, i23 %p_Result_1, i1 0" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:15]   --->   Operation 292 'bitconcatenate' 'mantissa' <Predicate = true> <Delay = 0.00>
+ST_73 : Operation 293 [1/1] (0.00ns)   --->   "%zext_ln15 = zext i25 %mantissa" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:15]   --->   Operation 293 'zext' 'zext_ln15' <Predicate = true> <Delay = 0.00>
+ST_73 : Operation 294 [1/1] (0.00ns)   --->   "%sext_ln1488 = sext i9 %ush"   --->   Operation 294 'sext' 'sext_ln1488' <Predicate = true> <Delay = 0.00>
+ST_73 : Operation 295 [1/1] (0.00ns)   --->   "%zext_ln1488 = zext i32 %sext_ln1488"   --->   Operation 295 'zext' 'zext_ln1488' <Predicate = true> <Delay = 0.00>
+ST_73 : Operation 296 [1/1] (0.00ns) (grouped into LUT with out node val)   --->   "%r_V = lshr i79 %zext_ln15, i79 %zext_ln1488"   --->   Operation 296 'lshr' 'r_V' <Predicate = (isNeg)> <Delay = 0.00> <CoreInst = "Shifter">   --->   Core 75 'Shifter' <Latency = 0> <II = 1> <Delay = 4.42> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_73 : Operation 297 [1/1] (0.00ns) (grouped into LUT with out node val)   --->   "%r_V_1 = shl i79 %zext_ln15, i79 %zext_ln1488"   --->   Operation 297 'shl' 'r_V_1' <Predicate = (!isNeg)> <Delay = 0.00> <CoreInst = "Shifter">   --->   Core 75 'Shifter' <Latency = 0> <II = 1> <Delay = 4.42> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_73 : Operation 298 [1/1] (0.00ns) (grouped into LUT with out node val)   --->   "%tmp_9 = bitselect i1 @_ssdm_op_BitSelect.i1.i79.i32, i79 %r_V, i32 24"   --->   Operation 298 'bitselect' 'tmp_9' <Predicate = (isNeg)> <Delay = 0.00>
+ST_73 : Operation 299 [1/1] (0.00ns) (grouped into LUT with out node val)   --->   "%zext_ln818 = zext i1 %tmp_9"   --->   Operation 299 'zext' 'zext_ln818' <Predicate = (isNeg)> <Delay = 0.00>
+ST_73 : Operation 300 [1/1] (0.00ns) (grouped into LUT with out node val)   --->   "%tmp_1 = partselect i32 @_ssdm_op_PartSelect.i32.i79.i32.i32, i79 %r_V_1, i32 24, i32 55"   --->   Operation 300 'partselect' 'tmp_1' <Predicate = (!isNeg)> <Delay = 0.00>
+ST_73 : Operation 301 [1/1] (4.42ns) (out node of the LUT)   --->   "%val = select i1 %isNeg, i32 %zext_ln818, i32 %tmp_1"   --->   Operation 301 'select' 'val' <Predicate = true> <Delay = 4.42> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 
-State 74 <SV = 55> <Delay = 7.25>
-ST_74 : Operation 304 [3/5] (7.25ns)   --->   "%dc_2 = fadd i32 %conv1_i, i32 %mul_i1" [guitar_effects.cpp:157]   --->   Operation 304 'fadd' 'dc_2' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+State 74 <SV = 55> <Delay = 3.25>
+ST_74 : Operation 302 [1/1] (2.55ns)   --->   "%result_V_2 = sub i32 0, i32 %val"   --->   Operation 302 'sub' 'result_V_2' <Predicate = (p_Result_s)> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_74 : Operation 303 [1/1] (0.69ns)   --->   "%result_V = select i1 %p_Result_s, i32 %result_V_2, i32 %val" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:59]   --->   Operation 303 'select' 'result_V' <Predicate = true> <Delay = 0.69> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_74 : Operation 304 [1/1] (1.70ns)   --->   "%br_ln106 = br void %if.end" [guitar_effects.cpp:106]   --->   Operation 304 'br' 'br_ln106' <Predicate = true> <Delay = 1.70>
 
-State 75 <SV = 56> <Delay = 7.25>
-ST_75 : Operation 305 [2/5] (7.25ns)   --->   "%dc_2 = fadd i32 %conv1_i, i32 %mul_i1" [guitar_effects.cpp:157]   --->   Operation 305 'fadd' 'dc_2' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+State 75 <SV = 56> <Delay = 6.50>
+ST_75 : Operation 305 [1/1] (0.00ns)   --->   "%empty_30 = phi i32 %add_ln70, void %if.then.i, i32 %add_ln70, void %if.then5.i, i32 %p_load, void %while.body, i32 %add_ln70, void %if.else.i" [guitar_effects.cpp:70]   --->   Operation 305 'phi' 'empty_30' <Predicate = true> <Delay = 0.00>
+ST_75 : Operation 306 [1/1] (0.00ns)   --->   "%tmp_int = phi i32 %result_V, void %if.then.i, i32 %result_V_9, void %if.then5.i, i32 %tmp_data_V_1, void %while.body, i32 %tmp_data_V_1, void %if.else.i"   --->   Operation 306 'phi' 'tmp_int' <Predicate = true> <Delay = 0.00>
+ST_75 : Operation 307 [1/1] (1.58ns)   --->   "%br_ln73 = br i1 %tmp_2, void %if.end10, void %if.then6" [guitar_effects.cpp:73]   --->   Operation 307 'br' 'br_ln73' <Predicate = true> <Delay = 1.58>
+ST_75 : Operation 308 [1/1] (0.00ns)   --->   "%current_level_1_load = load i32 %current_level_1" [guitar_effects.cpp:76]   --->   Operation 308 'load' 'current_level_1_load' <Predicate = (tmp_2)> <Delay = 0.00>
+ST_75 : Operation 309 [2/2] (6.50ns)   --->   "%call_ret = call i64 @compression, i32 %tmp_int, i32 %compression_min_threshold_read, i32 %compression_max_threshold_read, i32 %compression_zero_threshold_read, i32 %current_level_1_load, i32 %compression_buffer" [guitar_effects.cpp:76]   --->   Operation 309 'call' 'call_ret' <Predicate = (tmp_2)> <Delay = 6.50> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
-State 76 <SV = 57> <Delay = 7.25>
-ST_76 : Operation 306 [1/5] (7.25ns)   --->   "%dc_2 = fadd i32 %conv1_i, i32 %mul_i1" [guitar_effects.cpp:157]   --->   Operation 306 'fadd' 'dc_2' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+State 76 <SV = 57> <Delay = 6.54>
+ST_76 : Operation 310 [1/1] (2.55ns)   --->   "%add_ln75 = add i32 %empty_30, i32 1" [guitar_effects.cpp:75]   --->   Operation 310 'add' 'add_ln75' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_76 : Operation 311 [1/2] (4.95ns)   --->   "%call_ret = call i64 @compression, i32 %tmp_int, i32 %compression_min_threshold_read, i32 %compression_max_threshold_read, i32 %compression_zero_threshold_read, i32 %current_level_1_load, i32 %compression_buffer" [guitar_effects.cpp:76]   --->   Operation 311 'call' 'call_ret' <Predicate = true> <Delay = 4.95> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_76 : Operation 312 [1/1] (0.00ns)   --->   "%tmp_int_2 = extractvalue i64 %call_ret" [guitar_effects.cpp:76]   --->   Operation 312 'extractvalue' 'tmp_int_2' <Predicate = true> <Delay = 0.00>
+ST_76 : Operation 313 [1/1] (0.00ns)   --->   "%current_level = extractvalue i64 %call_ret" [guitar_effects.cpp:76]   --->   Operation 313 'extractvalue' 'current_level' <Predicate = true> <Delay = 0.00>
+ST_76 : Operation 314 [1/1] (1.58ns)   --->   "%store_ln77 = store i32 %current_level, i32 %current_level_1" [guitar_effects.cpp:77]   --->   Operation 314 'store' 'store_ln77' <Predicate = true> <Delay = 1.58>
+ST_76 : Operation 315 [1/1] (1.58ns)   --->   "%br_ln77 = br void %if.end10" [guitar_effects.cpp:77]   --->   Operation 315 'br' 'br_ln77' <Predicate = true> <Delay = 1.58>
 
-State 77 <SV = 58> <Delay = 2.88>
-ST_77 : Operation 307 [1/1] (0.00ns)   --->   "%data_V_2 = bitcast i32 %dc_2" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:317]   --->   Operation 307 'bitcast' 'data_V_2' <Predicate = true> <Delay = 0.00>
-ST_77 : Operation 308 [1/1] (0.00ns)   --->   "%p_Result_4 = bitselect i1 @_ssdm_op_BitSelect.i1.i32.i32, i32 %data_V_2, i32 31"   --->   Operation 308 'bitselect' 'p_Result_4' <Predicate = true> <Delay = 0.00>
-ST_77 : Operation 309 [1/1] (0.00ns)   --->   "%xs_exp_V_2 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %data_V_2, i32 23, i32 30"   --->   Operation 309 'partselect' 'xs_exp_V_2' <Predicate = true> <Delay = 0.00>
-ST_77 : Operation 310 [1/1] (0.00ns)   --->   "%p_Result_5 = trunc i32 %data_V_2"   --->   Operation 310 'trunc' 'p_Result_5' <Predicate = true> <Delay = 0.00>
-ST_77 : Operation 311 [1/1] (0.00ns)   --->   "%zext_ln346_2 = zext i8 %xs_exp_V_2" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:346]   --->   Operation 311 'zext' 'zext_ln346_2' <Predicate = true> <Delay = 0.00>
-ST_77 : Operation 312 [1/1] (1.91ns)   --->   "%add_ln346_2 = add i9 %zext_ln346_2, i9 385" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:346]   --->   Operation 312 'add' 'add_ln346_2' <Predicate = true> <Delay = 1.91> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_77 : Operation 313 [1/1] (0.00ns)   --->   "%isNeg_2 = bitselect i1 @_ssdm_op_BitSelect.i1.i9.i32, i9 %add_ln346_2, i32 8"   --->   Operation 313 'bitselect' 'isNeg_2' <Predicate = true> <Delay = 0.00>
-ST_77 : Operation 314 [1/1] (1.91ns)   --->   "%sub_ln1512_2 = sub i8 127, i8 %xs_exp_V_2"   --->   Operation 314 'sub' 'sub_ln1512_2' <Predicate = true> <Delay = 1.91> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_77 : Operation 315 [1/1] (0.00ns)   --->   "%sext_ln1512_2 = sext i8 %sub_ln1512_2"   --->   Operation 315 'sext' 'sext_ln1512_2' <Predicate = true> <Delay = 0.00>
-ST_77 : Operation 316 [1/1] (0.96ns)   --->   "%ush_2 = select i1 %isNeg_2, i9 %sext_ln1512_2, i9 %add_ln346_2"   --->   Operation 316 'select' 'ush_2' <Predicate = true> <Delay = 0.96> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+State 77 <SV = 58> <Delay = 3.25>
+ST_77 : Operation 316 [1/1] (0.00ns)   --->   "%empty_31 = phi i32 %add_ln75, void %if.then6, i32 %empty_30, void %if.end" [guitar_effects.cpp:75]   --->   Operation 316 'phi' 'empty_31' <Predicate = true> <Delay = 0.00>
+ST_77 : Operation 317 [1/1] (0.00ns)   --->   "%tmp_int_3 = phi i32 %tmp_int_2, void %if.then6, i32 %tmp_int, void %if.end"   --->   Operation 317 'phi' 'tmp_int_3' <Predicate = true> <Delay = 0.00>
+ST_77 : Operation 318 [1/1] (1.58ns)   --->   "%br_ln78 = br i1 %tmp_3, void %if.end18, void %if.then14" [guitar_effects.cpp:78]   --->   Operation 318 'br' 'br_ln78' <Predicate = true> <Delay = 1.58>
+ST_77 : Operation 319 [2/2] (3.25ns)   --->   "%delay_buffer_load = load i16 %delay_buffer_addr_1" [guitar_effects.cpp:167]   --->   Operation 319 'load' 'delay_buffer_load' <Predicate = (tmp_3)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 44100> <RAM>
 
-State 78 <SV = 59> <Delay = 4.42>
-ST_78 : Operation 317 [1/1] (0.00ns)   --->   "%mantissa_2 = bitconcatenate i25 @_ssdm_op_BitConcatenate.i25.i1.i23.i1, i1 1, i23 %p_Result_5, i1 0" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:15]   --->   Operation 317 'bitconcatenate' 'mantissa_2' <Predicate = true> <Delay = 0.00>
-ST_78 : Operation 318 [1/1] (0.00ns)   --->   "%zext_ln15_2 = zext i25 %mantissa_2" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:15]   --->   Operation 318 'zext' 'zext_ln15_2' <Predicate = true> <Delay = 0.00>
-ST_78 : Operation 319 [1/1] (0.00ns)   --->   "%sext_ln1488_2 = sext i9 %ush_2"   --->   Operation 319 'sext' 'sext_ln1488_2' <Predicate = true> <Delay = 0.00>
-ST_78 : Operation 320 [1/1] (0.00ns)   --->   "%zext_ln1488_2 = zext i32 %sext_ln1488_2"   --->   Operation 320 'zext' 'zext_ln1488_2' <Predicate = true> <Delay = 0.00>
-ST_78 : Operation 321 [1/1] (0.00ns) (grouped into LUT with out node val_2)   --->   "%r_V_4 = lshr i63 %zext_ln15_2, i63 %zext_ln1488_2"   --->   Operation 321 'lshr' 'r_V_4' <Predicate = (isNeg_2)> <Delay = 0.00> <CoreInst = "Shifter">   --->   Core 75 'Shifter' <Latency = 0> <II = 1> <Delay = 4.42> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
-ST_78 : Operation 322 [1/1] (0.00ns) (grouped into LUT with out node val_2)   --->   "%r_V_5 = shl i63 %zext_ln15_2, i63 %zext_ln1488_2"   --->   Operation 322 'shl' 'r_V_5' <Predicate = (!isNeg_2)> <Delay = 0.00> <CoreInst = "Shifter">   --->   Core 75 'Shifter' <Latency = 0> <II = 1> <Delay = 4.42> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
-ST_78 : Operation 323 [1/1] (0.00ns) (grouped into LUT with out node val_2)   --->   "%tmp_16 = bitselect i1 @_ssdm_op_BitSelect.i1.i63.i32, i63 %r_V_4, i32 24"   --->   Operation 323 'bitselect' 'tmp_16' <Predicate = (isNeg_2)> <Delay = 0.00>
-ST_78 : Operation 324 [1/1] (0.00ns) (grouped into LUT with out node val_2)   --->   "%zext_ln818_2 = zext i1 %tmp_16"   --->   Operation 324 'zext' 'zext_ln818_2' <Predicate = (isNeg_2)> <Delay = 0.00>
-ST_78 : Operation 325 [1/1] (0.00ns) (grouped into LUT with out node val_2)   --->   "%tmp_7 = partselect i16 @_ssdm_op_PartSelect.i16.i63.i32.i32, i63 %r_V_5, i32 24, i32 39"   --->   Operation 325 'partselect' 'tmp_7' <Predicate = (!isNeg_2)> <Delay = 0.00>
-ST_78 : Operation 326 [1/1] (4.42ns) (out node of the LUT)   --->   "%val_2 = select i1 %isNeg_2, i16 %zext_ln818_2, i16 %tmp_7"   --->   Operation 326 'select' 'val_2' <Predicate = true> <Delay = 4.42> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+State 78 <SV = 59> <Delay = 3.25>
+ST_78 : Operation 320 [1/2] (3.25ns)   --->   "%delay_buffer_load = load i16 %delay_buffer_addr_1" [guitar_effects.cpp:167]   --->   Operation 320 'load' 'delay_buffer_load' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 44100> <RAM>
 
-State 79 <SV = 60> <Delay = 6.13>
-ST_79 : Operation 327 [1/1] (2.07ns)   --->   "%result_V_8 = sub i16 0, i16 %val_2"   --->   Operation 327 'sub' 'result_V_8' <Predicate = (tmp_2 & p_Result_4)> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_79 : Operation 328 [1/1] (0.80ns)   --->   "%result_V_10 = select i1 %p_Result_4, i16 %result_V_8, i16 %val_2" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:59]   --->   Operation 328 'select' 'result_V_10' <Predicate = (tmp_2)> <Delay = 0.80> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_79 : Operation 329 [1/1] (3.25ns)   --->   "%store_ln160 = store i16 %result_V_10, i16 %delay_buffer_addr" [guitar_effects.cpp:160]   --->   Operation 329 'store' 'store_ln160' <Predicate = (tmp_2)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 44100> <RAM>
-ST_79 : Operation 330 [1/1] (0.00ns)   --->   "%br_ln75 = br void %if.end19" [guitar_effects.cpp:75]   --->   Operation 330 'br' 'br_ln75' <Predicate = (tmp_2)> <Delay = 0.00>
-ST_79 : Operation 331 [2/2] (0.00ns)   --->   "%write_ln304 = write void @_ssdm_op_Write.axis.volatile.i16P0A.i2P0A.i2P0A.i2P0A.i1P0A.i5P0A.i6P0A, i16 %OUTPUT_r_V_data_V, i2 %OUTPUT_r_V_keep_V, i2 %OUTPUT_r_V_strb_V, i2 %OUTPUT_r_V_user_V, i1 %OUTPUT_r_V_last_V, i5 %OUTPUT_r_V_id_V, i6 %OUTPUT_r_V_dest_V, i16 %tmp_data_V, i2 %tmp_keep_V, i2 %tmp_strb_V, i2 %tmp_user_V, i1 %tmp_last_V, i5 %tmp_id_V, i6 %tmp_dest_V"   --->   Operation 331 'write' 'write_ln304' <Predicate = true> <Delay = 0.00> <CoreInst = "axis">   --->   Core 115 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+State 79 <SV = 60> <Delay = 6.41>
+ST_79 : Operation 321 [6/6] (6.41ns)   --->   "%conv1_i = sitofp i32 %delay_buffer_load" [guitar_effects.cpp:167]   --->   Operation 321 'sitofp' 'conv1_i' <Predicate = true> <Delay = 6.41> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 6.41> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
 
-State 80 <SV = 61> <Delay = 0.00>
-ST_80 : Operation 332 [1/2] (0.00ns)   --->   "%write_ln304 = write void @_ssdm_op_Write.axis.volatile.i16P0A.i2P0A.i2P0A.i2P0A.i1P0A.i5P0A.i6P0A, i16 %OUTPUT_r_V_data_V, i2 %OUTPUT_r_V_keep_V, i2 %OUTPUT_r_V_strb_V, i2 %OUTPUT_r_V_user_V, i1 %OUTPUT_r_V_last_V, i5 %OUTPUT_r_V_id_V, i6 %OUTPUT_r_V_dest_V, i16 %tmp_data_V, i2 %tmp_keep_V, i2 %tmp_strb_V, i2 %tmp_user_V, i1 %tmp_last_V, i5 %tmp_id_V, i6 %tmp_dest_V"   --->   Operation 332 'write' 'write_ln304' <Predicate = true> <Delay = 0.00> <CoreInst = "axis">   --->   Core 115 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
-ST_80 : Operation 333 [1/1] (0.00ns)   --->   "%br_ln82 = br i1 %tmp_last_V, void %if.end28, void %while.end" [guitar_effects.cpp:82]   --->   Operation 333 'br' 'br_ln82' <Predicate = true> <Delay = 0.00>
-ST_80 : Operation 334 [1/1] (0.00ns)   --->   "%br_ln59 = br void %while.body" [guitar_effects.cpp:59]   --->   Operation 334 'br' 'br_ln59' <Predicate = (!tmp_last_V)> <Delay = 0.00>
-ST_80 : Operation 335 [1/1] (0.00ns)   --->   "%ret_ln87 = ret" [guitar_effects.cpp:87]   --->   Operation 335 'ret' 'ret_ln87' <Predicate = (tmp_last_V)> <Delay = 0.00>
+State 80 <SV = 61> <Delay = 6.41>
+ST_80 : Operation 322 [5/6] (6.41ns)   --->   "%conv1_i = sitofp i32 %delay_buffer_load" [guitar_effects.cpp:167]   --->   Operation 322 'sitofp' 'conv1_i' <Predicate = true> <Delay = 6.41> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 6.41> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+
+State 81 <SV = 62> <Delay = 6.41>
+ST_81 : Operation 323 [4/6] (6.41ns)   --->   "%conv1_i = sitofp i32 %delay_buffer_load" [guitar_effects.cpp:167]   --->   Operation 323 'sitofp' 'conv1_i' <Predicate = true> <Delay = 6.41> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 6.41> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+
+State 82 <SV = 63> <Delay = 6.41>
+ST_82 : Operation 324 [3/6] (6.41ns)   --->   "%conv1_i = sitofp i32 %delay_buffer_load" [guitar_effects.cpp:167]   --->   Operation 324 'sitofp' 'conv1_i' <Predicate = true> <Delay = 6.41> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 6.41> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+
+State 83 <SV = 64> <Delay = 6.41>
+ST_83 : Operation 325 [6/6] (6.41ns)   --->   "%conv_i1 = sitofp i32 %tmp_int_3" [guitar_effects.cpp:167]   --->   Operation 325 'sitofp' 'conv_i1' <Predicate = true> <Delay = 6.41> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 6.41> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+ST_83 : Operation 326 [2/6] (6.41ns)   --->   "%conv1_i = sitofp i32 %delay_buffer_load" [guitar_effects.cpp:167]   --->   Operation 326 'sitofp' 'conv1_i' <Predicate = true> <Delay = 6.41> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 6.41> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+
+State 84 <SV = 65> <Delay = 6.41>
+ST_84 : Operation 327 [5/6] (6.41ns)   --->   "%conv_i1 = sitofp i32 %tmp_int_3" [guitar_effects.cpp:167]   --->   Operation 327 'sitofp' 'conv_i1' <Predicate = true> <Delay = 6.41> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 6.41> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+ST_84 : Operation 328 [1/6] (6.41ns)   --->   "%conv1_i = sitofp i32 %delay_buffer_load" [guitar_effects.cpp:167]   --->   Operation 328 'sitofp' 'conv1_i' <Predicate = true> <Delay = 6.41> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 6.41> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+
+State 85 <SV = 66> <Delay = 6.41>
+ST_85 : Operation 329 [4/6] (6.41ns)   --->   "%conv_i1 = sitofp i32 %tmp_int_3" [guitar_effects.cpp:167]   --->   Operation 329 'sitofp' 'conv_i1' <Predicate = true> <Delay = 6.41> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 6.41> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+ST_85 : Operation 330 [4/4] (5.70ns)   --->   "%mul_i1 = fmul i32 %conv1_i, i32 %delay_mult_read" [guitar_effects.cpp:167]   --->   Operation 330 'fmul' 'mul_i1' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 86 <SV = 67> <Delay = 6.41>
+ST_86 : Operation 331 [3/6] (6.41ns)   --->   "%conv_i1 = sitofp i32 %tmp_int_3" [guitar_effects.cpp:167]   --->   Operation 331 'sitofp' 'conv_i1' <Predicate = true> <Delay = 6.41> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 6.41> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+ST_86 : Operation 332 [3/4] (5.70ns)   --->   "%mul_i1 = fmul i32 %conv1_i, i32 %delay_mult_read" [guitar_effects.cpp:167]   --->   Operation 332 'fmul' 'mul_i1' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 87 <SV = 68> <Delay = 6.41>
+ST_87 : Operation 333 [2/6] (6.41ns)   --->   "%conv_i1 = sitofp i32 %tmp_int_3" [guitar_effects.cpp:167]   --->   Operation 333 'sitofp' 'conv_i1' <Predicate = true> <Delay = 6.41> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 6.41> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+ST_87 : Operation 334 [2/4] (5.70ns)   --->   "%mul_i1 = fmul i32 %conv1_i, i32 %delay_mult_read" [guitar_effects.cpp:167]   --->   Operation 334 'fmul' 'mul_i1' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 88 <SV = 69> <Delay = 6.41>
+ST_88 : Operation 335 [1/6] (6.41ns)   --->   "%conv_i1 = sitofp i32 %tmp_int_3" [guitar_effects.cpp:167]   --->   Operation 335 'sitofp' 'conv_i1' <Predicate = true> <Delay = 6.41> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 6.41> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+ST_88 : Operation 336 [1/4] (5.70ns)   --->   "%mul_i1 = fmul i32 %conv1_i, i32 %delay_mult_read" [guitar_effects.cpp:167]   --->   Operation 336 'fmul' 'mul_i1' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 89 <SV = 70> <Delay = 7.25>
+ST_89 : Operation 337 [5/5] (7.25ns)   --->   "%dc_2 = fadd i32 %conv_i1, i32 %mul_i1" [guitar_effects.cpp:167]   --->   Operation 337 'fadd' 'dc_2' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 90 <SV = 71> <Delay = 7.25>
+ST_90 : Operation 338 [4/5] (7.25ns)   --->   "%dc_2 = fadd i32 %conv_i1, i32 %mul_i1" [guitar_effects.cpp:167]   --->   Operation 338 'fadd' 'dc_2' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 91 <SV = 72> <Delay = 7.25>
+ST_91 : Operation 339 [3/5] (7.25ns)   --->   "%dc_2 = fadd i32 %conv_i1, i32 %mul_i1" [guitar_effects.cpp:167]   --->   Operation 339 'fadd' 'dc_2' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 92 <SV = 73> <Delay = 7.25>
+ST_92 : Operation 340 [2/5] (7.25ns)   --->   "%dc_2 = fadd i32 %conv_i1, i32 %mul_i1" [guitar_effects.cpp:167]   --->   Operation 340 'fadd' 'dc_2' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 93 <SV = 74> <Delay = 7.25>
+ST_93 : Operation 341 [1/5] (7.25ns)   --->   "%dc_2 = fadd i32 %conv_i1, i32 %mul_i1" [guitar_effects.cpp:167]   --->   Operation 341 'fadd' 'dc_2' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 94 <SV = 75> <Delay = 2.88>
+ST_94 : Operation 342 [1/1] (0.00ns)   --->   "%data_V_2 = bitcast i32 %dc_2" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:317]   --->   Operation 342 'bitcast' 'data_V_2' <Predicate = true> <Delay = 0.00>
+ST_94 : Operation 343 [1/1] (0.00ns)   --->   "%p_Result_4 = bitselect i1 @_ssdm_op_BitSelect.i1.i32.i32, i32 %data_V_2, i32 31"   --->   Operation 343 'bitselect' 'p_Result_4' <Predicate = true> <Delay = 0.00>
+ST_94 : Operation 344 [1/1] (0.00ns)   --->   "%xs_exp_V_2 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %data_V_2, i32 23, i32 30"   --->   Operation 344 'partselect' 'xs_exp_V_2' <Predicate = true> <Delay = 0.00>
+ST_94 : Operation 345 [1/1] (0.00ns)   --->   "%p_Result_5 = trunc i32 %data_V_2"   --->   Operation 345 'trunc' 'p_Result_5' <Predicate = true> <Delay = 0.00>
+ST_94 : Operation 346 [1/1] (0.00ns)   --->   "%zext_ln346_2 = zext i8 %xs_exp_V_2" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:346]   --->   Operation 346 'zext' 'zext_ln346_2' <Predicate = true> <Delay = 0.00>
+ST_94 : Operation 347 [1/1] (1.91ns)   --->   "%add_ln346_2 = add i9 %zext_ln346_2, i9 385" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:346]   --->   Operation 347 'add' 'add_ln346_2' <Predicate = true> <Delay = 1.91> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_94 : Operation 348 [1/1] (0.00ns)   --->   "%isNeg_2 = bitselect i1 @_ssdm_op_BitSelect.i1.i9.i32, i9 %add_ln346_2, i32 8"   --->   Operation 348 'bitselect' 'isNeg_2' <Predicate = true> <Delay = 0.00>
+ST_94 : Operation 349 [1/1] (1.91ns)   --->   "%sub_ln1512_2 = sub i8 127, i8 %xs_exp_V_2"   --->   Operation 349 'sub' 'sub_ln1512_2' <Predicate = true> <Delay = 1.91> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_94 : Operation 350 [1/1] (0.00ns)   --->   "%sext_ln1512_2 = sext i8 %sub_ln1512_2"   --->   Operation 350 'sext' 'sext_ln1512_2' <Predicate = true> <Delay = 0.00>
+ST_94 : Operation 351 [1/1] (0.96ns)   --->   "%ush_2 = select i1 %isNeg_2, i9 %sext_ln1512_2, i9 %add_ln346_2"   --->   Operation 351 'select' 'ush_2' <Predicate = true> <Delay = 0.96> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+
+State 95 <SV = 76> <Delay = 4.42>
+ST_95 : Operation 352 [1/1] (0.00ns)   --->   "%mantissa_2 = bitconcatenate i25 @_ssdm_op_BitConcatenate.i25.i1.i23.i1, i1 1, i23 %p_Result_5, i1 0" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:15]   --->   Operation 352 'bitconcatenate' 'mantissa_2' <Predicate = true> <Delay = 0.00>
+ST_95 : Operation 353 [1/1] (0.00ns)   --->   "%zext_ln15_2 = zext i25 %mantissa_2" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:15]   --->   Operation 353 'zext' 'zext_ln15_2' <Predicate = true> <Delay = 0.00>
+ST_95 : Operation 354 [1/1] (0.00ns)   --->   "%sext_ln1488_2 = sext i9 %ush_2"   --->   Operation 354 'sext' 'sext_ln1488_2' <Predicate = true> <Delay = 0.00>
+ST_95 : Operation 355 [1/1] (0.00ns)   --->   "%zext_ln1488_2 = zext i32 %sext_ln1488_2"   --->   Operation 355 'zext' 'zext_ln1488_2' <Predicate = true> <Delay = 0.00>
+ST_95 : Operation 356 [1/1] (0.00ns) (grouped into LUT with out node val_2)   --->   "%r_V_4 = lshr i79 %zext_ln15_2, i79 %zext_ln1488_2"   --->   Operation 356 'lshr' 'r_V_4' <Predicate = (isNeg_2)> <Delay = 0.00> <CoreInst = "Shifter">   --->   Core 75 'Shifter' <Latency = 0> <II = 1> <Delay = 4.42> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_95 : Operation 357 [1/1] (0.00ns) (grouped into LUT with out node val_2)   --->   "%r_V_5 = shl i79 %zext_ln15_2, i79 %zext_ln1488_2"   --->   Operation 357 'shl' 'r_V_5' <Predicate = (!isNeg_2)> <Delay = 0.00> <CoreInst = "Shifter">   --->   Core 75 'Shifter' <Latency = 0> <II = 1> <Delay = 4.42> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_95 : Operation 358 [1/1] (0.00ns) (grouped into LUT with out node val_2)   --->   "%tmp_17 = bitselect i1 @_ssdm_op_BitSelect.i1.i79.i32, i79 %r_V_4, i32 24"   --->   Operation 358 'bitselect' 'tmp_17' <Predicate = (isNeg_2)> <Delay = 0.00>
+ST_95 : Operation 359 [1/1] (0.00ns) (grouped into LUT with out node val_2)   --->   "%zext_ln818_2 = zext i1 %tmp_17"   --->   Operation 359 'zext' 'zext_ln818_2' <Predicate = (isNeg_2)> <Delay = 0.00>
+ST_95 : Operation 360 [1/1] (0.00ns) (grouped into LUT with out node val_2)   --->   "%tmp_7 = partselect i32 @_ssdm_op_PartSelect.i32.i79.i32.i32, i79 %r_V_5, i32 24, i32 55"   --->   Operation 360 'partselect' 'tmp_7' <Predicate = (!isNeg_2)> <Delay = 0.00>
+ST_95 : Operation 361 [1/1] (4.42ns) (out node of the LUT)   --->   "%val_2 = select i1 %isNeg_2, i32 %zext_ln818_2, i32 %tmp_7"   --->   Operation 361 'select' 'val_2' <Predicate = true> <Delay = 4.42> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+
+State 96 <SV = 77> <Delay = 6.50>
+ST_96 : Operation 362 [1/1] (2.55ns)   --->   "%add_ln80 = add i32 %empty_31, i32 1" [guitar_effects.cpp:80]   --->   Operation 362 'add' 'add_ln80' <Predicate = (tmp_3)> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_96 : Operation 363 [1/1] (2.55ns)   --->   "%result_V_8 = sub i32 0, i32 %val_2"   --->   Operation 363 'sub' 'result_V_8' <Predicate = (tmp_3 & p_Result_4)> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_96 : Operation 364 [1/1] (0.69ns)   --->   "%result_V_10 = select i1 %p_Result_4, i32 %result_V_8, i32 %val_2" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:59]   --->   Operation 364 'select' 'result_V_10' <Predicate = (tmp_3)> <Delay = 0.69> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_96 : Operation 365 [1/1] (3.25ns)   --->   "%store_ln170 = store i32 %result_V_10, i16 %delay_buffer_addr" [guitar_effects.cpp:170]   --->   Operation 365 'store' 'store_ln170' <Predicate = (tmp_3)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 44100> <RAM>
+ST_96 : Operation 366 [1/1] (1.58ns)   --->   "%br_ln82 = br void %if.end18" [guitar_effects.cpp:82]   --->   Operation 366 'br' 'br_ln82' <Predicate = (tmp_3)> <Delay = 1.58>
+ST_96 : Operation 367 [1/1] (0.00ns)   --->   "%tmp_int_6 = phi i32 %result_V_10, void %if.then14, i32 %tmp_int_3, void %if.end10"   --->   Operation 367 'phi' 'tmp_int_6' <Predicate = true> <Delay = 0.00>
+ST_96 : Operation 368 [2/2] (0.00ns)   --->   "%write_ln304 = write void @_ssdm_op_Write.axis.volatile.i32P0A.i4P0A.i4P0A.i2P0A.i1P0A.i5P0A.i6P0A, i32 %OUTPUT_r_V_data_V, i4 %OUTPUT_r_V_keep_V, i4 %OUTPUT_r_V_strb_V, i2 %OUTPUT_r_V_user_V, i1 %OUTPUT_r_V_last_V, i5 %OUTPUT_r_V_id_V, i6 %OUTPUT_r_V_dest_V, i32 %tmp_int_6, i4 %tmp_keep_V, i4 %tmp_strb_V, i2 %tmp_user_V, i1 %tmp_last_V, i5 %tmp_id_V, i6 %tmp_dest_V"   --->   Operation 368 'write' 'write_ln304' <Predicate = true> <Delay = 0.00> <CoreInst = "axis">   --->   Core 115 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+
+State 97 <SV = 78> <Delay = 4.83>
+ST_97 : Operation 369 [1/1] (0.00ns)   --->   "%empty_32 = phi i32 %add_ln80, void %if.then14, i32 %empty_31, void %if.end10" [guitar_effects.cpp:80]   --->   Operation 369 'phi' 'empty_32' <Predicate = true> <Delay = 0.00>
+ST_97 : Operation 370 [1/1] (2.55ns)   --->   "%add_ln85 = add i32 %empty_32, i32 1" [guitar_effects.cpp:85]   --->   Operation 370 'add' 'add_ln85' <Predicate = (trunc_ln15)> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_97 : Operation 371 [1/1] (0.69ns)   --->   "%select_ln83 = select i1 %trunc_ln15, i32 %add_ln85, i32 %empty_32" [guitar_effects.cpp:83]   --->   Operation 371 'select' 'select_ln83' <Predicate = true> <Delay = 0.69> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_97 : Operation 372 [1/2] (0.00ns)   --->   "%write_ln304 = write void @_ssdm_op_Write.axis.volatile.i32P0A.i4P0A.i4P0A.i2P0A.i1P0A.i5P0A.i6P0A, i32 %OUTPUT_r_V_data_V, i4 %OUTPUT_r_V_keep_V, i4 %OUTPUT_r_V_strb_V, i2 %OUTPUT_r_V_user_V, i1 %OUTPUT_r_V_last_V, i5 %OUTPUT_r_V_id_V, i6 %OUTPUT_r_V_dest_V, i32 %tmp_int_6, i4 %tmp_keep_V, i4 %tmp_strb_V, i2 %tmp_user_V, i1 %tmp_last_V, i5 %tmp_id_V, i6 %tmp_dest_V"   --->   Operation 372 'write' 'write_ln304' <Predicate = true> <Delay = 0.00> <CoreInst = "axis">   --->   Core 115 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_97 : Operation 373 [1/1] (0.00ns)   --->   "%br_ln91 = br i1 %tmp_last_V, void %if.end29, void %if.then28" [guitar_effects.cpp:91]   --->   Operation 373 'br' 'br_ln91' <Predicate = true> <Delay = 0.00>
+ST_97 : Operation 374 [1/1] (1.58ns)   --->   "%store_ln63 = store i32 %select_ln83, i32 %empty" [guitar_effects.cpp:63]   --->   Operation 374 'store' 'store_ln63' <Predicate = (!tmp_last_V)> <Delay = 1.58>
+ST_97 : Operation 375 [1/1] (0.00ns)   --->   "%br_ln63 = br void %while.body" [guitar_effects.cpp:63]   --->   Operation 375 'br' 'br_ln63' <Predicate = (!tmp_last_V)> <Delay = 0.00>
+ST_97 : Operation 376 [1/1] (1.00ns)   --->   "%write_ln70 = write void @_ssdm_op_Write.s_axilite.i32P0A, i32 %axilite_out, i32 %select_ln83" [guitar_effects.cpp:70]   --->   Operation 376 'write' 'write_ln70' <Predicate = (tmp_last_V)> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_97 : Operation 377 [1/1] (0.00ns)   --->   "%ret_ln97 = ret" [guitar_effects.cpp:97]   --->   Operation 377 'ret' 'ret_ln97' <Predicate = (tmp_last_V)> <Delay = 0.00>
 
 
 ============================================================
@@ -579,341 +655,412 @@ ST_80 : Operation 335 [1/1] (0.00ns)   --->   "%ret_ln87 = ret" [guitar_effects.
 ============================================================
 Target clock period: 10ns, clock uncertainty: 2.7ns.
 
- <State 1>: 6.76ns
+ <State 1>: 1.59ns
 The critical path consists of the following:
-	s_axi read operation ('delay_samples_read') on port 'delay_samples' [78]  (1 ns)
-	'sub' operation ('sub_i122') [87]  (2.08 ns)
-	'srem' operation ('rem_i') [88]  (3.68 ns)
+	'alloca' operation ('current_level') [26]  (0 ns)
+	'store' operation ('store_ln63', guitar_effects.cpp:63) of constant 0 on local variable 'current_level' [94]  (1.59 ns)
 
- <State 2>: 3.68ns
+ <State 2>: 6.69ns
 The critical path consists of the following:
-	'srem' operation ('rem_i') [88]  (3.68 ns)
+	'sub' operation ('sub_i135', guitar_effects.cpp:15) [89]  (2.55 ns)
+	'srem' operation ('rem_i', guitar_effects.cpp:15) [90]  (4.13 ns)
 
- <State 3>: 3.68ns
+ <State 3>: 4.13ns
 The critical path consists of the following:
-	'srem' operation ('rem_i') [88]  (3.68 ns)
+	'srem' operation ('rem_i', guitar_effects.cpp:15) [90]  (4.13 ns)
 
- <State 4>: 3.68ns
+ <State 4>: 4.13ns
 The critical path consists of the following:
-	'srem' operation ('rem_i') [88]  (3.68 ns)
+	'srem' operation ('rem_i', guitar_effects.cpp:15) [90]  (4.13 ns)
 
- <State 5>: 3.68ns
+ <State 5>: 4.13ns
 The critical path consists of the following:
-	'srem' operation ('rem_i') [88]  (3.68 ns)
+	'srem' operation ('rem_i', guitar_effects.cpp:15) [90]  (4.13 ns)
 
- <State 6>: 3.68ns
+ <State 6>: 4.13ns
 The critical path consists of the following:
-	'srem' operation ('rem_i') [88]  (3.68 ns)
+	'srem' operation ('rem_i', guitar_effects.cpp:15) [90]  (4.13 ns)
 
- <State 7>: 3.68ns
+ <State 7>: 4.13ns
 The critical path consists of the following:
-	'srem' operation ('rem_i') [88]  (3.68 ns)
+	'srem' operation ('rem_i', guitar_effects.cpp:15) [90]  (4.13 ns)
 
- <State 8>: 3.68ns
+ <State 8>: 4.13ns
 The critical path consists of the following:
-	'srem' operation ('rem_i') [88]  (3.68 ns)
+	'srem' operation ('rem_i', guitar_effects.cpp:15) [90]  (4.13 ns)
 
- <State 9>: 3.68ns
+ <State 9>: 4.13ns
 The critical path consists of the following:
-	'srem' operation ('rem_i') [88]  (3.68 ns)
+	'srem' operation ('rem_i', guitar_effects.cpp:15) [90]  (4.13 ns)
 
- <State 10>: 3.68ns
+ <State 10>: 4.13ns
 The critical path consists of the following:
-	'srem' operation ('rem_i') [88]  (3.68 ns)
+	'srem' operation ('rem_i', guitar_effects.cpp:15) [90]  (4.13 ns)
 
- <State 11>: 3.68ns
+ <State 11>: 4.13ns
 The critical path consists of the following:
-	'srem' operation ('rem_i') [88]  (3.68 ns)
+	'srem' operation ('rem_i', guitar_effects.cpp:15) [90]  (4.13 ns)
 
- <State 12>: 3.68ns
+ <State 12>: 4.13ns
 The critical path consists of the following:
-	'srem' operation ('rem_i') [88]  (3.68 ns)
+	'srem' operation ('rem_i', guitar_effects.cpp:15) [90]  (4.13 ns)
 
- <State 13>: 3.68ns
+ <State 13>: 4.13ns
 The critical path consists of the following:
-	'srem' operation ('rem_i') [88]  (3.68 ns)
+	'srem' operation ('rem_i', guitar_effects.cpp:15) [90]  (4.13 ns)
 
- <State 14>: 3.68ns
+ <State 14>: 4.13ns
 The critical path consists of the following:
-	'srem' operation ('rem_i') [88]  (3.68 ns)
+	'srem' operation ('rem_i', guitar_effects.cpp:15) [90]  (4.13 ns)
 
- <State 15>: 3.68ns
+ <State 15>: 4.13ns
 The critical path consists of the following:
-	'srem' operation ('rem_i') [88]  (3.68 ns)
+	'srem' operation ('rem_i', guitar_effects.cpp:15) [90]  (4.13 ns)
 
- <State 16>: 6.41ns
+ <State 16>: 4.13ns
 The critical path consists of the following:
-	'sitofp' operation ('conv5_i') [85]  (6.41 ns)
+	'srem' operation ('rem_i', guitar_effects.cpp:15) [90]  (4.13 ns)
 
- <State 17>: 6.41ns
+ <State 17>: 4.13ns
 The critical path consists of the following:
-	'sitofp' operation ('conv5_i') [85]  (6.41 ns)
+	'srem' operation ('rem_i', guitar_effects.cpp:15) [90]  (4.13 ns)
 
- <State 18>: 6.41ns
+ <State 18>: 4.13ns
 The critical path consists of the following:
-	'sitofp' operation ('conv5_i') [85]  (6.41 ns)
+	'srem' operation ('rem_i', guitar_effects.cpp:15) [90]  (4.13 ns)
 
- <State 19>: 6.41ns
+ <State 19>: 4.13ns
 The critical path consists of the following:
-	'sitofp' operation ('conv5_i') [85]  (6.41 ns)
+	'srem' operation ('rem_i', guitar_effects.cpp:15) [90]  (4.13 ns)
 
- <State 20>: 6.41ns
+ <State 20>: 4.13ns
 The critical path consists of the following:
-	'sitofp' operation ('conv5_i') [85]  (6.41 ns)
+	'srem' operation ('rem_i', guitar_effects.cpp:15) [90]  (4.13 ns)
 
- <State 21>: 6.41ns
+ <State 21>: 4.13ns
 The critical path consists of the following:
-	'sitofp' operation ('conv5_i') [85]  (6.41 ns)
+	'srem' operation ('rem_i', guitar_effects.cpp:15) [90]  (4.13 ns)
 
- <State 22>: 4.14ns
+ <State 22>: 4.13ns
 The critical path consists of the following:
-	axis read operation ('empty_26') on port 'INPUT_r_V_data_V' [95]  (0 ns)
-	'icmp' operation ('icmp_ln96', guitar_effects.cpp:96) [109]  (2.43 ns)
-	multiplexor before 'phi' operation ('tmp.data.V') with incoming values : ('tmp.data.V') ('result.V', r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:59) [170]  (1.71 ns)
+	'srem' operation ('rem_i', guitar_effects.cpp:15) [90]  (4.13 ns)
 
- <State 23>: 6.41ns
+ <State 23>: 4.13ns
 The critical path consists of the following:
-	'sitofp' operation ('conv13_i', guitar_effects.cpp:97) [114]  (6.41 ns)
+	'srem' operation ('rem_i', guitar_effects.cpp:15) [90]  (4.13 ns)
 
- <State 24>: 6.41ns
+ <State 24>: 4.13ns
 The critical path consists of the following:
-	'sitofp' operation ('conv13_i', guitar_effects.cpp:97) [114]  (6.41 ns)
+	'srem' operation ('rem_i', guitar_effects.cpp:15) [90]  (4.13 ns)
 
- <State 25>: 6.41ns
+ <State 25>: 4.13ns
 The critical path consists of the following:
-	'sitofp' operation ('conv13_i', guitar_effects.cpp:97) [114]  (6.41 ns)
+	'srem' operation ('rem_i', guitar_effects.cpp:15) [90]  (4.13 ns)
 
- <State 26>: 6.41ns
+ <State 26>: 4.13ns
 The critical path consists of the following:
-	'sitofp' operation ('conv13_i', guitar_effects.cpp:97) [114]  (6.41 ns)
+	'srem' operation ('rem_i', guitar_effects.cpp:15) [90]  (4.13 ns)
 
- <State 27>: 6.41ns
+ <State 27>: 4.13ns
 The critical path consists of the following:
-	'sitofp' operation ('conv13_i', guitar_effects.cpp:97) [114]  (6.41 ns)
+	'srem' operation ('rem_i', guitar_effects.cpp:15) [90]  (4.13 ns)
 
- <State 28>: 6.41ns
+ <State 28>: 4.13ns
 The critical path consists of the following:
-	'sitofp' operation ('conv13_i', guitar_effects.cpp:97) [114]  (6.41 ns)
+	'srem' operation ('rem_i', guitar_effects.cpp:15) [90]  (4.13 ns)
 
- <State 29>: 5.7ns
+ <State 29>: 4.13ns
 The critical path consists of the following:
-	'fmul' operation ('mul14_i', guitar_effects.cpp:97) [115]  (5.7 ns)
+	'srem' operation ('rem_i', guitar_effects.cpp:15) [90]  (4.13 ns)
 
- <State 30>: 5.7ns
+ <State 30>: 4.13ns
 The critical path consists of the following:
-	'fmul' operation ('mul14_i', guitar_effects.cpp:97) [115]  (5.7 ns)
+	'srem' operation ('rem_i', guitar_effects.cpp:15) [90]  (4.13 ns)
 
- <State 31>: 5.7ns
+ <State 31>: 4.13ns
 The critical path consists of the following:
-	'fmul' operation ('mul14_i', guitar_effects.cpp:97) [115]  (5.7 ns)
+	'srem' operation ('rem_i', guitar_effects.cpp:15) [90]  (4.13 ns)
 
- <State 32>: 5.7ns
+ <State 32>: 6.41ns
 The critical path consists of the following:
-	'fmul' operation ('mul14_i', guitar_effects.cpp:97) [115]  (5.7 ns)
+	'sitofp' operation ('conv2_i', guitar_effects.cpp:15) [88]  (6.41 ns)
 
- <State 33>: 7.26ns
+ <State 33>: 6.41ns
 The critical path consists of the following:
-	'fsub' operation ('x', guitar_effects.cpp:97) [116]  (7.26 ns)
+	'sitofp' operation ('conv2_i', guitar_effects.cpp:15) [88]  (6.41 ns)
 
- <State 34>: 7.26ns
+ <State 34>: 6.41ns
 The critical path consists of the following:
-	'fsub' operation ('x', guitar_effects.cpp:97) [116]  (7.26 ns)
+	'sitofp' operation ('conv2_i', guitar_effects.cpp:15) [88]  (6.41 ns)
 
- <State 35>: 7.26ns
+ <State 35>: 6.41ns
 The critical path consists of the following:
-	'fsub' operation ('x', guitar_effects.cpp:97) [116]  (7.26 ns)
+	'sitofp' operation ('conv2_i', guitar_effects.cpp:15) [88]  (6.41 ns)
 
- <State 36>: 7.26ns
+ <State 36>: 6.41ns
 The critical path consists of the following:
-	'fsub' operation ('x', guitar_effects.cpp:97) [116]  (7.26 ns)
+	'sitofp' operation ('conv2_i', guitar_effects.cpp:15) [88]  (6.41 ns)
 
- <State 37>: 7.26ns
+ <State 37>: 6.41ns
 The critical path consists of the following:
-	'fsub' operation ('x', guitar_effects.cpp:97) [116]  (7.26 ns)
+	'sitofp' operation ('conv2_i', guitar_effects.cpp:15) [88]  (6.41 ns)
 
- <State 38>: 2.88ns
+ <State 38>: 4.18ns
 The critical path consists of the following:
-	'add' operation ('sh', r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:346) [124]  (1.92 ns)
-	'select' operation ('ush') [128]  (0.968 ns)
+	axis read operation ('empty_29') on port 'INPUT_r_V_data_V' [100]  (0 ns)
+	'icmp' operation ('icmp_ln106', guitar_effects.cpp:106) [114]  (2.47 ns)
+	multiplexor before 'phi' operation ('empty_30', guitar_effects.cpp:70) with incoming values : ('p_load', guitar_effects.cpp:70) ('add_ln70', guitar_effects.cpp:70) [173]  (1.71 ns)
 
- <State 39>: 4.42ns
+ <State 39>: 6.41ns
 The critical path consists of the following:
-	'lshr' operation ('r.V') [131]  (0 ns)
-	'select' operation ('val') [136]  (4.42 ns)
+	'sitofp' operation ('conv7_i', guitar_effects.cpp:107) [118]  (6.41 ns)
 
- <State 40>: 2.88ns
+ <State 40>: 6.41ns
 The critical path consists of the following:
-	'sub' operation ('result.V') [137]  (2.08 ns)
-	'select' operation ('result.V', r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:59) [138]  (0.805 ns)
+	'sitofp' operation ('conv7_i', guitar_effects.cpp:107) [118]  (6.41 ns)
 
  <State 41>: 6.41ns
 The critical path consists of the following:
-	'sitofp' operation ('conv4_i', guitar_effects.cpp:95) [143]  (6.41 ns)
+	'sitofp' operation ('conv7_i', guitar_effects.cpp:107) [118]  (6.41 ns)
 
  <State 42>: 6.41ns
 The critical path consists of the following:
-	'sitofp' operation ('conv4_i', guitar_effects.cpp:95) [143]  (6.41 ns)
+	'sitofp' operation ('conv7_i', guitar_effects.cpp:107) [118]  (6.41 ns)
 
  <State 43>: 6.41ns
 The critical path consists of the following:
-	'sitofp' operation ('conv4_i', guitar_effects.cpp:95) [143]  (6.41 ns)
+	'sitofp' operation ('conv7_i', guitar_effects.cpp:107) [118]  (6.41 ns)
 
  <State 44>: 6.41ns
 The critical path consists of the following:
-	'sitofp' operation ('conv4_i', guitar_effects.cpp:95) [143]  (6.41 ns)
+	'sitofp' operation ('conv7_i', guitar_effects.cpp:107) [118]  (6.41 ns)
 
- <State 45>: 6.41ns
+ <State 45>: 5.7ns
 The critical path consists of the following:
-	'sitofp' operation ('conv4_i', guitar_effects.cpp:95) [143]  (6.41 ns)
+	'fmul' operation ('mul8_i', guitar_effects.cpp:107) [119]  (5.7 ns)
 
- <State 46>: 6.41ns
+ <State 46>: 5.7ns
 The critical path consists of the following:
-	'sitofp' operation ('conv4_i', guitar_effects.cpp:95) [143]  (6.41 ns)
+	'fmul' operation ('mul8_i', guitar_effects.cpp:107) [119]  (5.7 ns)
 
  <State 47>: 5.7ns
 The critical path consists of the following:
-	'fmul' operation ('mul_i', guitar_effects.cpp:95) [144]  (5.7 ns)
+	'fmul' operation ('mul8_i', guitar_effects.cpp:107) [119]  (5.7 ns)
 
  <State 48>: 5.7ns
 The critical path consists of the following:
-	'fmul' operation ('mul_i', guitar_effects.cpp:95) [144]  (5.7 ns)
+	'fmul' operation ('mul8_i', guitar_effects.cpp:107) [119]  (5.7 ns)
 
- <State 49>: 5.7ns
+ <State 49>: 7.26ns
 The critical path consists of the following:
-	'fmul' operation ('mul_i', guitar_effects.cpp:95) [144]  (5.7 ns)
+	'fsub' operation ('x', guitar_effects.cpp:107) [120]  (7.26 ns)
 
- <State 50>: 5.7ns
+ <State 50>: 7.26ns
 The critical path consists of the following:
-	'fmul' operation ('mul_i', guitar_effects.cpp:95) [144]  (5.7 ns)
+	'fsub' operation ('x', guitar_effects.cpp:107) [120]  (7.26 ns)
 
  <State 51>: 7.26ns
 The critical path consists of the following:
-	'fadd' operation ('x', guitar_effects.cpp:95) [145]  (7.26 ns)
+	'fsub' operation ('x', guitar_effects.cpp:107) [120]  (7.26 ns)
 
  <State 52>: 7.26ns
 The critical path consists of the following:
-	'fadd' operation ('x', guitar_effects.cpp:95) [145]  (7.26 ns)
+	'fsub' operation ('x', guitar_effects.cpp:107) [120]  (7.26 ns)
 
  <State 53>: 7.26ns
 The critical path consists of the following:
-	'fadd' operation ('x', guitar_effects.cpp:95) [145]  (7.26 ns)
+	'fsub' operation ('x', guitar_effects.cpp:107) [120]  (7.26 ns)
 
- <State 54>: 7.26ns
+ <State 54>: 2.88ns
 The critical path consists of the following:
-	'fadd' operation ('x', guitar_effects.cpp:95) [145]  (7.26 ns)
+	'sub' operation ('sub_ln1512_1') [130]  (1.92 ns)
+	'select' operation ('ush') [132]  (0.968 ns)
 
- <State 55>: 7.26ns
+ <State 55>: 4.42ns
 The critical path consists of the following:
-	'fadd' operation ('x', guitar_effects.cpp:95) [145]  (7.26 ns)
+	'lshr' operation ('r.V') [135]  (0 ns)
+	'select' operation ('val') [140]  (4.42 ns)
 
- <State 56>: 2.88ns
+ <State 56>: 3.25ns
 The critical path consists of the following:
-	'add' operation ('sh', r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:346) [153]  (1.92 ns)
-	'select' operation ('ush') [157]  (0.968 ns)
+	'sub' operation ('result.V') [141]  (2.55 ns)
+	'select' operation ('result.V', r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:59) [142]  (0.698 ns)
 
- <State 57>: 4.42ns
+ <State 57>: 6.41ns
 The critical path consists of the following:
-	'shl' operation ('r.V') [161]  (0 ns)
-	'select' operation ('val') [165]  (4.42 ns)
+	'sitofp' operation ('conv_i', guitar_effects.cpp:105) [146]  (6.41 ns)
 
- <State 58>: 2.88ns
+ <State 58>: 6.41ns
 The critical path consists of the following:
-	'sub' operation ('result.V') [166]  (2.08 ns)
-	'select' operation ('result.V', r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:59) [167]  (0.805 ns)
+	'sitofp' operation ('conv_i', guitar_effects.cpp:105) [146]  (6.41 ns)
 
  <State 59>: 6.41ns
 The critical path consists of the following:
-	'phi' operation ('tmp.data.V') with incoming values : ('tmp.data.V') ('result.V', r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:59) [170]  (0 ns)
-	'call' operation ('call_ret', guitar_effects.cpp:70) to 'compression' [174]  (6.41 ns)
+	'sitofp' operation ('conv_i', guitar_effects.cpp:105) [146]  (6.41 ns)
 
- <State 60>: 6.18ns
+ <State 60>: 6.41ns
 The critical path consists of the following:
-	'call' operation ('call_ret', guitar_effects.cpp:70) to 'compression' [174]  (4.59 ns)
-	multiplexor before 'phi' operation ('tmp_short') with incoming values : ('tmp.data.V') ('result.V', r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:59) ('tmp_short', guitar_effects.cpp:70) [180]  (1.59 ns)
-	'phi' operation ('tmp_short') with incoming values : ('tmp.data.V') ('result.V', r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:59) ('tmp_short', guitar_effects.cpp:70) [180]  (0 ns)
+	'sitofp' operation ('conv_i', guitar_effects.cpp:105) [146]  (6.41 ns)
 
- <State 61>: 3.25ns
+ <State 61>: 6.41ns
 The critical path consists of the following:
-	'load' operation ('delay_buffer_load', guitar_effects.cpp:157) on array 'delay_buffer', guitar_effects.cpp:52 [185]  (3.25 ns)
+	'sitofp' operation ('conv_i', guitar_effects.cpp:105) [146]  (6.41 ns)
 
  <State 62>: 6.41ns
 The critical path consists of the following:
-	'sitofp' operation ('conv5_i1', guitar_effects.cpp:157) [187]  (6.41 ns)
+	'sitofp' operation ('conv_i', guitar_effects.cpp:105) [146]  (6.41 ns)
 
- <State 63>: 6.41ns
+ <State 63>: 5.7ns
 The critical path consists of the following:
-	'sitofp' operation ('conv5_i1', guitar_effects.cpp:157) [187]  (6.41 ns)
+	'fmul' operation ('mul_i', guitar_effects.cpp:105) [147]  (5.7 ns)
 
- <State 64>: 6.41ns
+ <State 64>: 5.7ns
 The critical path consists of the following:
-	'sitofp' operation ('conv5_i1', guitar_effects.cpp:157) [187]  (6.41 ns)
+	'fmul' operation ('mul_i', guitar_effects.cpp:105) [147]  (5.7 ns)
 
- <State 65>: 6.41ns
+ <State 65>: 5.7ns
 The critical path consists of the following:
-	'sitofp' operation ('conv5_i1', guitar_effects.cpp:157) [187]  (6.41 ns)
+	'fmul' operation ('mul_i', guitar_effects.cpp:105) [147]  (5.7 ns)
 
- <State 66>: 6.41ns
+ <State 66>: 5.7ns
 The critical path consists of the following:
-	'sitofp' operation ('conv1_i', guitar_effects.cpp:157) [184]  (6.41 ns)
+	'fmul' operation ('mul_i', guitar_effects.cpp:105) [147]  (5.7 ns)
 
- <State 67>: 6.41ns
+ <State 67>: 7.26ns
 The critical path consists of the following:
-	'sitofp' operation ('conv1_i', guitar_effects.cpp:157) [184]  (6.41 ns)
+	'fadd' operation ('x', guitar_effects.cpp:105) [148]  (7.26 ns)
 
- <State 68>: 6.41ns
+ <State 68>: 7.26ns
 The critical path consists of the following:
-	'sitofp' operation ('conv1_i', guitar_effects.cpp:157) [184]  (6.41 ns)
+	'fadd' operation ('x', guitar_effects.cpp:105) [148]  (7.26 ns)
 
- <State 69>: 6.41ns
+ <State 69>: 7.26ns
 The critical path consists of the following:
-	'sitofp' operation ('conv1_i', guitar_effects.cpp:157) [184]  (6.41 ns)
+	'fadd' operation ('x', guitar_effects.cpp:105) [148]  (7.26 ns)
 
- <State 70>: 6.41ns
+ <State 70>: 7.26ns
 The critical path consists of the following:
-	'sitofp' operation ('conv1_i', guitar_effects.cpp:157) [184]  (6.41 ns)
+	'fadd' operation ('x', guitar_effects.cpp:105) [148]  (7.26 ns)
 
- <State 71>: 6.41ns
+ <State 71>: 7.26ns
 The critical path consists of the following:
-	'sitofp' operation ('conv1_i', guitar_effects.cpp:157) [184]  (6.41 ns)
+	'fadd' operation ('x', guitar_effects.cpp:105) [148]  (7.26 ns)
 
- <State 72>: 7.26ns
+ <State 72>: 2.88ns
 The critical path consists of the following:
-	'fadd' operation ('x', guitar_effects.cpp:157) [189]  (7.26 ns)
+	'add' operation ('sh', r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:346) [156]  (1.92 ns)
+	'select' operation ('ush') [160]  (0.968 ns)
 
- <State 73>: 7.26ns
+ <State 73>: 4.42ns
 The critical path consists of the following:
-	'fadd' operation ('x', guitar_effects.cpp:157) [189]  (7.26 ns)
+	'lshr' operation ('r.V') [163]  (0 ns)
+	'select' operation ('val') [168]  (4.42 ns)
 
- <State 74>: 7.26ns
+ <State 74>: 3.25ns
 The critical path consists of the following:
-	'fadd' operation ('x', guitar_effects.cpp:157) [189]  (7.26 ns)
+	'sub' operation ('result.V') [169]  (2.55 ns)
+	'select' operation ('result.V', r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:59) [170]  (0.698 ns)
 
- <State 75>: 7.26ns
+ <State 75>: 6.5ns
 The critical path consists of the following:
-	'fadd' operation ('x', guitar_effects.cpp:157) [189]  (7.26 ns)
+	'phi' operation ('tmp.data.V') with incoming values : ('tmp.data.V') ('result.V', r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:59) [174]  (0 ns)
+	'call' operation ('call_ret', guitar_effects.cpp:76) to 'compression' [179]  (6.5 ns)
 
- <State 76>: 7.26ns
+ <State 76>: 6.55ns
 The critical path consists of the following:
-	'fadd' operation ('x', guitar_effects.cpp:157) [189]  (7.26 ns)
+	'call' operation ('call_ret', guitar_effects.cpp:76) to 'compression' [179]  (4.96 ns)
+	'store' operation ('store_ln77', guitar_effects.cpp:77) of variable 'current_level', guitar_effects.cpp:76 on local variable 'current_level' [182]  (1.59 ns)
 
- <State 77>: 2.88ns
+ <State 77>: 3.25ns
 The critical path consists of the following:
-	'sub' operation ('sub_ln1512_2') [199]  (1.92 ns)
-	'select' operation ('ush') [201]  (0.968 ns)
+	'load' operation ('delay_buffer_load', guitar_effects.cpp:167) on array 'delay_buffer', guitar_effects.cpp:56 [191]  (3.25 ns)
 
- <State 78>: 4.42ns
+ <State 78>: 3.25ns
 The critical path consists of the following:
-	'lshr' operation ('r.V') [204]  (0 ns)
-	'select' operation ('val') [209]  (4.42 ns)
+	'load' operation ('delay_buffer_load', guitar_effects.cpp:167) on array 'delay_buffer', guitar_effects.cpp:56 [191]  (3.25 ns)
 
- <State 79>: 6.14ns
+ <State 79>: 6.41ns
 The critical path consists of the following:
-	'sub' operation ('result.V') [210]  (2.08 ns)
-	'select' operation ('result.V', r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:59) [211]  (0.805 ns)
-	'store' operation ('store_ln160', guitar_effects.cpp:160) of variable 'result.V', r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:59 on array 'delay_buffer', guitar_effects.cpp:52 [212]  (3.25 ns)
+	'sitofp' operation ('conv1_i', guitar_effects.cpp:167) [192]  (6.41 ns)
 
- <State 80>: 0ns
+ <State 80>: 6.41ns
 The critical path consists of the following:
+	'sitofp' operation ('conv1_i', guitar_effects.cpp:167) [192]  (6.41 ns)
+
+ <State 81>: 6.41ns
+The critical path consists of the following:
+	'sitofp' operation ('conv1_i', guitar_effects.cpp:167) [192]  (6.41 ns)
+
+ <State 82>: 6.41ns
+The critical path consists of the following:
+	'sitofp' operation ('conv1_i', guitar_effects.cpp:167) [192]  (6.41 ns)
+
+ <State 83>: 6.41ns
+The critical path consists of the following:
+	'sitofp' operation ('conv_i1', guitar_effects.cpp:167) [190]  (6.41 ns)
+
+ <State 84>: 6.41ns
+The critical path consists of the following:
+	'sitofp' operation ('conv_i1', guitar_effects.cpp:167) [190]  (6.41 ns)
+
+ <State 85>: 6.41ns
+The critical path consists of the following:
+	'sitofp' operation ('conv_i1', guitar_effects.cpp:167) [190]  (6.41 ns)
+
+ <State 86>: 6.41ns
+The critical path consists of the following:
+	'sitofp' operation ('conv_i1', guitar_effects.cpp:167) [190]  (6.41 ns)
+
+ <State 87>: 6.41ns
+The critical path consists of the following:
+	'sitofp' operation ('conv_i1', guitar_effects.cpp:167) [190]  (6.41 ns)
+
+ <State 88>: 6.41ns
+The critical path consists of the following:
+	'sitofp' operation ('conv_i1', guitar_effects.cpp:167) [190]  (6.41 ns)
+
+ <State 89>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('x', guitar_effects.cpp:167) [194]  (7.26 ns)
+
+ <State 90>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('x', guitar_effects.cpp:167) [194]  (7.26 ns)
+
+ <State 91>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('x', guitar_effects.cpp:167) [194]  (7.26 ns)
+
+ <State 92>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('x', guitar_effects.cpp:167) [194]  (7.26 ns)
+
+ <State 93>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('x', guitar_effects.cpp:167) [194]  (7.26 ns)
+
+ <State 94>: 2.88ns
+The critical path consists of the following:
+	'add' operation ('sh', r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:346) [202]  (1.92 ns)
+	'select' operation ('ush') [206]  (0.968 ns)
+
+ <State 95>: 4.42ns
+The critical path consists of the following:
+	'lshr' operation ('r.V') [209]  (0 ns)
+	'select' operation ('val') [214]  (4.42 ns)
+
+ <State 96>: 6.5ns
+The critical path consists of the following:
+	'sub' operation ('result.V') [215]  (2.55 ns)
+	'select' operation ('result.V', r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:59) [216]  (0.698 ns)
+	'store' operation ('store_ln170', guitar_effects.cpp:170) of variable 'result.V', r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:59 on array 'delay_buffer', guitar_effects.cpp:56 [217]  (3.25 ns)
+
+ <State 97>: 4.84ns
+The critical path consists of the following:
+	'phi' operation ('empty_32', guitar_effects.cpp:80) with incoming values : ('p_load', guitar_effects.cpp:70) ('add_ln70', guitar_effects.cpp:70) ('add_ln75', guitar_effects.cpp:75) ('add_ln80', guitar_effects.cpp:80) [220]  (0 ns)
+	'add' operation ('add_ln85', guitar_effects.cpp:85) [222]  (2.55 ns)
+	'select' operation ('select_ln83', guitar_effects.cpp:83) [223]  (0.698 ns)
+	'store' operation ('store_ln63', guitar_effects.cpp:63) of variable 'select_ln83', guitar_effects.cpp:83 on local variable 'empty' [227]  (1.59 ns)
 
 
 ============================================================
@@ -1004,6 +1151,23 @@ N/A
 	State 78
 	State 79
 	State 80
+	State 81
+	State 82
+	State 83
+	State 84
+	State 85
+	State 86
+	State 87
+	State 88
+	State 89
+	State 90
+	State 91
+	State 92
+	State 93
+	State 94
+	State 95
+	State 96
+	State 97
 
 
 ============================================================

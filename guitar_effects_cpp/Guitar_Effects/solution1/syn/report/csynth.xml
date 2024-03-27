@@ -29,26 +29,26 @@
             <Interval-max>undef</Interval-max>
         </SummaryOfOverallLatency>
         <SummaryOfLoopLatency>
-            <VITIS_LOOP_59_2>
+            <VITIS_LOOP_63_2>
                 <TripCount>undef</TripCount>
                 <Latency>undef</Latency>
                 <AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
                 <IterationLatency>
                     <range>
                         <min>5</min>
-                        <max>73</max>
+                        <max>90</max>
                     </range>
                 </IterationLatency>
                 <InstanceList/>
-            </VITIS_LOOP_59_2>
+            </VITIS_LOOP_63_2>
         </SummaryOfLoopLatency>
     </PerformanceEstimates>
     <AreaEstimates>
         <Resources>
-            <BRAM_18K>65</BRAM_18K>
+            <BRAM_18K>129</BRAM_18K>
             <DSP>5</DSP>
-            <FF>2086</FF>
-            <LUT>4883</LUT>
+            <FF>3076</FF>
+            <LUT>6757</LUT>
             <URAM>0</URAM>
         </Resources>
         <AvailableResources>
@@ -63,7 +63,7 @@
         <RtlPorts>
             <name>s_axi_control_r_AWVALID</name>
             <Object>control_r</Object>
-            <Type>pointer</Type>
+            <Type>scalar</Type>
             <IOProtocol>s_axi</IOProtocol>
             <Dir>in</Dir>
             <Bits>1</Bits>
@@ -74,7 +74,7 @@
         <RtlPorts>
             <name>s_axi_control_r_AWREADY</name>
             <Object>control_r</Object>
-            <Type>pointer</Type>
+            <Type>scalar</Type>
             <IOProtocol>s_axi</IOProtocol>
             <Dir>out</Dir>
             <Bits>1</Bits>
@@ -85,7 +85,7 @@
         <RtlPorts>
             <name>s_axi_control_r_AWADDR</name>
             <Object>control_r</Object>
-            <Type>pointer</Type>
+            <Type>scalar</Type>
             <IOProtocol>s_axi</IOProtocol>
             <Dir>in</Dir>
             <Bits>7</Bits>
@@ -96,7 +96,7 @@
         <RtlPorts>
             <name>s_axi_control_r_WVALID</name>
             <Object>control_r</Object>
-            <Type>pointer</Type>
+            <Type>scalar</Type>
             <IOProtocol>s_axi</IOProtocol>
             <Dir>in</Dir>
             <Bits>1</Bits>
@@ -107,7 +107,7 @@
         <RtlPorts>
             <name>s_axi_control_r_WREADY</name>
             <Object>control_r</Object>
-            <Type>pointer</Type>
+            <Type>scalar</Type>
             <IOProtocol>s_axi</IOProtocol>
             <Dir>out</Dir>
             <Bits>1</Bits>
@@ -118,7 +118,7 @@
         <RtlPorts>
             <name>s_axi_control_r_WDATA</name>
             <Object>control_r</Object>
-            <Type>pointer</Type>
+            <Type>scalar</Type>
             <IOProtocol>s_axi</IOProtocol>
             <Dir>in</Dir>
             <Bits>32</Bits>
@@ -129,7 +129,7 @@
         <RtlPorts>
             <name>s_axi_control_r_WSTRB</name>
             <Object>control_r</Object>
-            <Type>pointer</Type>
+            <Type>scalar</Type>
             <IOProtocol>s_axi</IOProtocol>
             <Dir>in</Dir>
             <Bits>4</Bits>
@@ -140,7 +140,7 @@
         <RtlPorts>
             <name>s_axi_control_r_ARVALID</name>
             <Object>control_r</Object>
-            <Type>pointer</Type>
+            <Type>scalar</Type>
             <IOProtocol>s_axi</IOProtocol>
             <Dir>in</Dir>
             <Bits>1</Bits>
@@ -151,7 +151,7 @@
         <RtlPorts>
             <name>s_axi_control_r_ARREADY</name>
             <Object>control_r</Object>
-            <Type>pointer</Type>
+            <Type>scalar</Type>
             <IOProtocol>s_axi</IOProtocol>
             <Dir>out</Dir>
             <Bits>1</Bits>
@@ -162,7 +162,7 @@
         <RtlPorts>
             <name>s_axi_control_r_ARADDR</name>
             <Object>control_r</Object>
-            <Type>pointer</Type>
+            <Type>scalar</Type>
             <IOProtocol>s_axi</IOProtocol>
             <Dir>in</Dir>
             <Bits>7</Bits>
@@ -173,7 +173,7 @@
         <RtlPorts>
             <name>s_axi_control_r_RVALID</name>
             <Object>control_r</Object>
-            <Type>pointer</Type>
+            <Type>scalar</Type>
             <IOProtocol>s_axi</IOProtocol>
             <Dir>out</Dir>
             <Bits>1</Bits>
@@ -184,7 +184,7 @@
         <RtlPorts>
             <name>s_axi_control_r_RREADY</name>
             <Object>control_r</Object>
-            <Type>pointer</Type>
+            <Type>scalar</Type>
             <IOProtocol>s_axi</IOProtocol>
             <Dir>in</Dir>
             <Bits>1</Bits>
@@ -195,7 +195,7 @@
         <RtlPorts>
             <name>s_axi_control_r_RDATA</name>
             <Object>control_r</Object>
-            <Type>pointer</Type>
+            <Type>scalar</Type>
             <IOProtocol>s_axi</IOProtocol>
             <Dir>out</Dir>
             <Bits>32</Bits>
@@ -206,7 +206,7 @@
         <RtlPorts>
             <name>s_axi_control_r_RRESP</name>
             <Object>control_r</Object>
-            <Type>pointer</Type>
+            <Type>scalar</Type>
             <IOProtocol>s_axi</IOProtocol>
             <Dir>out</Dir>
             <Bits>2</Bits>
@@ -217,7 +217,7 @@
         <RtlPorts>
             <name>s_axi_control_r_BVALID</name>
             <Object>control_r</Object>
-            <Type>pointer</Type>
+            <Type>scalar</Type>
             <IOProtocol>s_axi</IOProtocol>
             <Dir>out</Dir>
             <Bits>1</Bits>
@@ -228,7 +228,7 @@
         <RtlPorts>
             <name>s_axi_control_r_BREADY</name>
             <Object>control_r</Object>
-            <Type>pointer</Type>
+            <Type>scalar</Type>
             <IOProtocol>s_axi</IOProtocol>
             <Dir>in</Dir>
             <Bits>1</Bits>
@@ -239,7 +239,7 @@
         <RtlPorts>
             <name>s_axi_control_r_BRESP</name>
             <Object>control_r</Object>
-            <Type>pointer</Type>
+            <Type>scalar</Type>
             <IOProtocol>s_axi</IOProtocol>
             <Dir>out</Dir>
             <Bits>2</Bits>
@@ -252,7 +252,7 @@
             <Object>guitar_effects</Object>
             <Type>return value</Type>
             <Scope/>
-            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOProtocol>ap_ctrl_none</IOProtocol>
             <IOConfig/>
             <Dir>in</Dir>
             <Bits>1</Bits>
@@ -263,53 +263,9 @@
             <Object>guitar_effects</Object>
             <Type>return value</Type>
             <Scope/>
-            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOProtocol>ap_ctrl_none</IOProtocol>
             <IOConfig/>
             <Dir>in</Dir>
-            <Bits>1</Bits>
-            <Attribute>control</Attribute>
-        </RtlPorts>
-        <RtlPorts>
-            <name>ap_start</name>
-            <Object>guitar_effects</Object>
-            <Type>return value</Type>
-            <Scope/>
-            <IOProtocol>ap_ctrl_hs</IOProtocol>
-            <IOConfig/>
-            <Dir>in</Dir>
-            <Bits>1</Bits>
-            <Attribute>control</Attribute>
-        </RtlPorts>
-        <RtlPorts>
-            <name>ap_done</name>
-            <Object>guitar_effects</Object>
-            <Type>return value</Type>
-            <Scope/>
-            <IOProtocol>ap_ctrl_hs</IOProtocol>
-            <IOConfig/>
-            <Dir>out</Dir>
-            <Bits>1</Bits>
-            <Attribute>control</Attribute>
-        </RtlPorts>
-        <RtlPorts>
-            <name>ap_idle</name>
-            <Object>guitar_effects</Object>
-            <Type>return value</Type>
-            <Scope/>
-            <IOProtocol>ap_ctrl_hs</IOProtocol>
-            <IOConfig/>
-            <Dir>out</Dir>
-            <Bits>1</Bits>
-            <Attribute>control</Attribute>
-        </RtlPorts>
-        <RtlPorts>
-            <name>ap_ready</name>
-            <Object>guitar_effects</Object>
-            <Type>return value</Type>
-            <Scope/>
-            <IOProtocol>ap_ctrl_hs</IOProtocol>
-            <IOConfig/>
-            <Dir>out</Dir>
             <Bits>1</Bits>
             <Attribute>control</Attribute>
         </RtlPorts>
@@ -321,7 +277,7 @@
             <IOProtocol>axis</IOProtocol>
             <IOConfig>register, both mode</IOConfig>
             <Dir>in</Dir>
-            <Bits>16</Bits>
+            <Bits>32</Bits>
             <Attribute>data</Attribute>
             <CType>int</CType>
         </RtlPorts>
@@ -369,7 +325,7 @@
             <IOProtocol>axis</IOProtocol>
             <IOConfig>register, both mode</IOConfig>
             <Dir>in</Dir>
-            <Bits>2</Bits>
+            <Bits>4</Bits>
             <Attribute>data</Attribute>
             <CType>int</CType>
         </RtlPorts>
@@ -381,7 +337,7 @@
             <IOProtocol>axis</IOProtocol>
             <IOConfig>register, both mode</IOConfig>
             <Dir>in</Dir>
-            <Bits>2</Bits>
+            <Bits>4</Bits>
             <Attribute>data</Attribute>
             <CType>int</CType>
         </RtlPorts>
@@ -429,7 +385,7 @@
             <IOProtocol>axis</IOProtocol>
             <IOConfig>register, both mode</IOConfig>
             <Dir>out</Dir>
-            <Bits>16</Bits>
+            <Bits>32</Bits>
             <Attribute>data</Attribute>
             <CType>int</CType>
         </RtlPorts>
@@ -477,7 +433,7 @@
             <IOProtocol>axis</IOProtocol>
             <IOConfig>register, both mode</IOConfig>
             <Dir>out</Dir>
-            <Bits>2</Bits>
+            <Bits>4</Bits>
             <Attribute>data</Attribute>
             <CType>int</CType>
         </RtlPorts>
@@ -489,7 +445,7 @@
             <IOProtocol>axis</IOProtocol>
             <IOConfig>register, both mode</IOConfig>
             <Dir>out</Dir>
-            <Bits>2</Bits>
+            <Bits>4</Bits>
             <Attribute>data</Attribute>
             <CType>int</CType>
         </RtlPorts>
@@ -535,21 +491,21 @@
             <ModuleName>guitar_effects</ModuleName>
             <InstancesList>
                 <Instance>
-                    <InstName>grp_guitar_effects_Pipeline_2_fu_296</InstName>
+                    <InstName>grp_guitar_effects_Pipeline_2_fu_359</InstName>
                     <ModuleName>guitar_effects_Pipeline_2</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>296</ID>
-                    <BindInstances>empty_23_fu_56_p2</BindInstances>
+                    <ID>359</ID>
+                    <BindInstances>empty_25_fu_56_p2</BindInstances>
                 </Instance>
                 <Instance>
-                    <InstName>grp_compression_fu_301</InstName>
+                    <InstName>grp_compression_fu_364</InstName>
                     <ModuleName>compression</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>301</ID>
-                    <BindInstances>abs_in_fu_152_p2 add_ln346_3_fu_257_p2 sub_ln1512_3_fu_271_p2 result_V_16_fu_350_p2 fdiv_32ns_32ns_32_16_no_dsp_1_U3 add_ln346_fu_407_p2 sub_ln1512_fu_421_p2 result_V_12_fu_500_p2</BindInstances>
+                    <ID>364</ID>
+                    <BindInstances>sub_ln120_fu_150_p2 add_ln346_3_fu_237_p2 sub_ln1512_3_fu_251_p2 result_V_16_fu_330_p2 fdiv_32ns_32ns_32_16_no_dsp_1_U3 add_ln346_fu_383_p2 sub_ln1512_fu_397_p2 result_V_12_fu_476_p2</BindInstances>
                 </Instance>
             </InstancesList>
-            <BindInstances>fmul_32ns_32ns_32_4_max_dsp_1_U17 negative_threshold_fu_395_p2 grp_fu_374_p0 add_ln97_fu_447_p2 fmul_32ns_32ns_32_4_max_dsp_1_U17 faddfsub_32ns_32ns_32_5_full_dsp_1_U16 add_ln346_1_fu_491_p2 sub_ln1512_1_fu_505_p2 result_V_5_fu_584_p2 sub_ln95_fu_452_p2 fmul_32ns_32ns_32_4_max_dsp_1_U17 faddfsub_32ns_32ns_32_5_full_dsp_1_U16 add_ln346_fu_629_p2 sub_ln1512_fu_643_p2 result_V_2_fu_722_p2 fmul_32ns_32ns_32_4_max_dsp_1_U17 faddfsub_32ns_32ns_32_5_full_dsp_1_U16 add_ln346_2_fu_790_p2 sub_ln1512_2_fu_804_p2 result_V_8_fu_883_p2 compression_buffer_U</BindInstances>
+            <BindInstances>delay_buffer_U negative_threshold_fu_453_p2 grp_fu_447_p0 add_ln70_fu_498_p2 add_ln107_fu_514_p2 fmul_32ns_32ns_32_4_max_dsp_1_U17 faddfsub_32ns_32ns_32_5_full_dsp_1_U16 add_ln346_1_fu_554_p2 sub_ln1512_1_fu_568_p2 result_V_5_fu_647_p2 sub_ln105_fu_519_p2 fmul_32ns_32ns_32_4_max_dsp_1_U17 faddfsub_32ns_32ns_32_5_full_dsp_1_U16 add_ln346_fu_688_p2 sub_ln1512_fu_702_p2 result_V_2_fu_781_p2 add_ln75_fu_796_p2 add_ln80_fu_938_p2 fmul_32ns_32ns_32_4_max_dsp_1_U17 faddfsub_32ns_32ns_32_5_full_dsp_1_U16 add_ln346_2_fu_845_p2 sub_ln1512_2_fu_859_p2 result_V_8_fu_944_p2 add_ln85_fu_957_p2 compression_buffer_U</BindInstances>
         </TopModule>
     </RTLDesignHierarchy>
     <ModuleInformation>
@@ -607,7 +563,7 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="empty_23_fu_56_p2" SOURCE="" URAM="0" VARIABLE="empty_23"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="empty_25_fu_56_p2" SOURCE="" URAM="0" VARIABLE="empty_25"/>
             </BindNodes>
         </Module>
         <Module>
@@ -616,27 +572,27 @@
                 <SummaryOfTimingAnalysis>
                     <TargetClockPeriod>10.00</TargetClockPeriod>
                     <ClockUncertainty>2.70</ClockUncertainty>
-                    <EstimatedClockPeriod>6.413</EstimatedClockPeriod>
+                    <EstimatedClockPeriod>6.504</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
                     <Best-caseLatency>1</Best-caseLatency>
-                    <Average-caseLatency>16</Average-caseLatency>
-                    <Worst-caseLatency>32</Worst-caseLatency>
+                    <Average-caseLatency>20</Average-caseLatency>
+                    <Worst-caseLatency>48</Worst-caseLatency>
                     <Best-caseRealTimeLatency>10.000 ns</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>0.160 us</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>0.320 us</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>1 ~ 32</PipelineInitiationInterval>
+                    <Average-caseRealTimeLatency>0.200 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.480 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>1 ~ 48</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
             </PerformanceEstimates>
             <AreaEstimates>
                 <Resources>
-                    <FF>557</FF>
+                    <FF>861</FF>
                     <AVAIL_FF>106400</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>1488</LUT>
+                    <LUT>2123</LUT>
                     <AVAIL_LUT>53200</AVAIL_LUT>
-                    <UTIL_LUT>2</UTIL_LUT>
+                    <UTIL_LUT>3</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
                     <AVAIL_BRAM>280</AVAIL_BRAM>
                     <UTIL_BRAM>0</UTIL_BRAM>
@@ -649,20 +605,20 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="abs_in_fu_152_p2" SOURCE="guitar_effects.cpp:110" URAM="0" VARIABLE="abs_in"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln346_3_fu_257_p2" SOURCE="r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:346" URAM="0" VARIABLE="add_ln346_3"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln1512_3_fu_271_p2" SOURCE="r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_base.h:1512" URAM="0" VARIABLE="sub_ln1512_3"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="result_V_16_fu_350_p2" SOURCE="r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_base.h:813" URAM="0" VARIABLE="result_V_16"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fdiv" DSP="0" ID="" IMPL="fabric" LATENCY="15" LOOP="" OPTYPE="fdiv" PRAGMA="" RTLNAME="fdiv_32ns_32ns_32_16_no_dsp_1_U3" SOURCE="guitar_effects.cpp:131" URAM="0" VARIABLE="compression_factor"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln346_fu_407_p2" SOURCE="r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:346" URAM="0" VARIABLE="add_ln346"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln1512_fu_421_p2" SOURCE="r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_base.h:1512" URAM="0" VARIABLE="sub_ln1512"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="result_V_12_fu_500_p2" SOURCE="r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_base.h:813" URAM="0" VARIABLE="result_V_12"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln120_fu_150_p2" SOURCE="guitar_effects.cpp:120" URAM="0" VARIABLE="sub_ln120"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln346_3_fu_237_p2" SOURCE="r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:346" URAM="0" VARIABLE="add_ln346_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln1512_3_fu_251_p2" SOURCE="r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_base.h:1512" URAM="0" VARIABLE="sub_ln1512_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="result_V_16_fu_330_p2" SOURCE="r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_base.h:813" URAM="0" VARIABLE="result_V_16"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fdiv" DSP="0" ID="" IMPL="fabric" LATENCY="15" LOOP="" OPTYPE="fdiv" PRAGMA="" RTLNAME="fdiv_32ns_32ns_32_16_no_dsp_1_U3" SOURCE="guitar_effects.cpp:141" URAM="0" VARIABLE="compression_factor"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln346_fu_383_p2" SOURCE="r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:346" URAM="0" VARIABLE="add_ln346"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln1512_fu_397_p2" SOURCE="r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_base.h:1512" URAM="0" VARIABLE="sub_ln1512"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="result_V_12_fu_476_p2" SOURCE="r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_base.h:813" URAM="0" VARIABLE="result_V_12"/>
             </BindNodes>
         </Module>
         <Module>
             <Name>guitar_effects</Name>
             <Loops>
-                <VITIS_LOOP_59_2/>
+                <VITIS_LOOP_63_2/>
             </Loops>
             <PerformanceEstimates>
                 <SummaryOfTimingAnalysis>
@@ -681,65 +637,69 @@
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
-                    <VITIS_LOOP_59_2>
-                        <Name>VITIS_LOOP_59_2</Name>
+                    <VITIS_LOOP_63_2>
+                        <Name>VITIS_LOOP_63_2</Name>
                         <TripCount>undef</TripCount>
                         <Latency>undef</Latency>
                         <AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
                         <IterationLatency>
                             <range>
                                 <min>5</min>
-                                <max>73</max>
+                                <max>90</max>
                             </range>
                         </IterationLatency>
-                        <PipelineDepth>5 ~ 73</PipelineDepth>
+                        <PipelineDepth>5 ~ 90</PipelineDepth>
                         <PipelineType>no</PipelineType>
                         <InstanceList>
-                            <Instance>grp_compression_fu_301</Instance>
+                            <Instance>grp_compression_fu_364</Instance>
                         </InstanceList>
-                    </VITIS_LOOP_59_2>
+                    </VITIS_LOOP_63_2>
                 </SummaryOfLoopLatency>
             </PerformanceEstimates>
             <AreaEstimates>
                 <Resources>
-                    <BRAM_18K>65</BRAM_18K>
+                    <BRAM_18K>129</BRAM_18K>
                     <AVAIL_BRAM>280</AVAIL_BRAM>
-                    <UTIL_BRAM>23</UTIL_BRAM>
+                    <UTIL_BRAM>46</UTIL_BRAM>
                     <DSP>5</DSP>
                     <AVAIL_DSP>220</AVAIL_DSP>
                     <UTIL_DSP>2</UTIL_DSP>
-                    <FF>2086</FF>
+                    <FF>3076</FF>
                     <AVAIL_FF>106400</AVAIL_FF>
-                    <UTIL_FF>1</UTIL_FF>
-                    <LUT>4883</LUT>
+                    <UTIL_FF>2</UTIL_FF>
+                    <LUT>6757</LUT>
                     <AVAIL_LUT>53200</AVAIL_LUT>
-                    <UTIL_LUT>9</UTIL_LUT>
+                    <UTIL_LUT>12</UTIL_LUT>
                     <URAM>0</URAM>
                     <AVAIL_URAM>0</AVAIL_URAM>
                     <UTIL_URAM>0</UTIL_URAM>
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="storage" BRAM="64" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U17" SOURCE="guitar_effects.cpp:52" URAM="0" VARIABLE="delay_buffer"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="negative_threshold_fu_395_p2" SOURCE="" URAM="0" VARIABLE="negative_threshold"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="grp_fu_374_p0" SOURCE="" URAM="0" VARIABLE="sub_i122"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_59_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln97_fu_447_p2" SOURCE="guitar_effects.cpp:97" URAM="0" VARIABLE="add_ln97"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_59_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U17" SOURCE="guitar_effects.cpp:97" URAM="0" VARIABLE="mul14_i"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fsub" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_59_2" OPTYPE="fsub" PRAGMA="" RTLNAME="faddfsub_32ns_32ns_32_5_full_dsp_1_U16" SOURCE="guitar_effects.cpp:97" URAM="0" VARIABLE="dc_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_59_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln346_1_fu_491_p2" SOURCE="r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:346" URAM="0" VARIABLE="add_ln346_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_59_2" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln1512_1_fu_505_p2" SOURCE="r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_base.h:1512" URAM="0" VARIABLE="sub_ln1512_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_59_2" OPTYPE="sub" PRAGMA="" RTLNAME="result_V_5_fu_584_p2" SOURCE="r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_base.h:813" URAM="0" VARIABLE="result_V_5"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_59_2" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln95_fu_452_p2" SOURCE="guitar_effects.cpp:95" URAM="0" VARIABLE="sub_ln95"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_59_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U17" SOURCE="guitar_effects.cpp:95" URAM="0" VARIABLE="mul_i"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fsub" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_59_2" OPTYPE="fsub" PRAGMA="" RTLNAME="faddfsub_32ns_32ns_32_5_full_dsp_1_U16" SOURCE="guitar_effects.cpp:95" URAM="0" VARIABLE="dc"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_59_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln346_fu_629_p2" SOURCE="r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:346" URAM="0" VARIABLE="add_ln346"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_59_2" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln1512_fu_643_p2" SOURCE="r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_base.h:1512" URAM="0" VARIABLE="sub_ln1512"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_59_2" OPTYPE="sub" PRAGMA="" RTLNAME="result_V_2_fu_722_p2" SOURCE="r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_base.h:813" URAM="0" VARIABLE="result_V_2"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_59_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U17" SOURCE="guitar_effects.cpp:157" URAM="0" VARIABLE="mul_i1"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fsub" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_59_2" OPTYPE="fsub" PRAGMA="" RTLNAME="faddfsub_32ns_32ns_32_5_full_dsp_1_U16" SOURCE="guitar_effects.cpp:157" URAM="0" VARIABLE="dc_2"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_59_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln346_2_fu_790_p2" SOURCE="r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:346" URAM="0" VARIABLE="add_ln346_2"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_59_2" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln1512_2_fu_804_p2" SOURCE="r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_base.h:1512" URAM="0" VARIABLE="sub_ln1512_2"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_59_2" OPTYPE="sub" PRAGMA="" RTLNAME="result_V_8_fu_883_p2" SOURCE="r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_base.h:813" URAM="0" VARIABLE="result_V_8"/>
+                <BindNode BINDTYPE="storage" BRAM="128" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="delay_buffer_U" SOURCE="guitar_effects.cpp:56" URAM="0" VARIABLE="delay_buffer"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="negative_threshold_fu_453_p2" SOURCE="guitar_effects.cpp:15" URAM="0" VARIABLE="negative_threshold"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="grp_fu_447_p0" SOURCE="guitar_effects.cpp:15" URAM="0" VARIABLE="sub_i135"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_63_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln70_fu_498_p2" SOURCE="guitar_effects.cpp:70" URAM="0" VARIABLE="add_ln70"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_63_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln107_fu_514_p2" SOURCE="guitar_effects.cpp:107" URAM="0" VARIABLE="add_ln107"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_63_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U17" SOURCE="guitar_effects.cpp:107" URAM="0" VARIABLE="mul8_i"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fsub" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_63_2" OPTYPE="fsub" PRAGMA="" RTLNAME="faddfsub_32ns_32ns_32_5_full_dsp_1_U16" SOURCE="guitar_effects.cpp:107" URAM="0" VARIABLE="dc_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_63_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln346_1_fu_554_p2" SOURCE="r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:346" URAM="0" VARIABLE="add_ln346_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_63_2" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln1512_1_fu_568_p2" SOURCE="r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_base.h:1512" URAM="0" VARIABLE="sub_ln1512_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_63_2" OPTYPE="sub" PRAGMA="" RTLNAME="result_V_5_fu_647_p2" SOURCE="r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_base.h:813" URAM="0" VARIABLE="result_V_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_63_2" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln105_fu_519_p2" SOURCE="guitar_effects.cpp:105" URAM="0" VARIABLE="sub_ln105"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_63_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U17" SOURCE="guitar_effects.cpp:105" URAM="0" VARIABLE="mul_i"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fsub" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_63_2" OPTYPE="fsub" PRAGMA="" RTLNAME="faddfsub_32ns_32ns_32_5_full_dsp_1_U16" SOURCE="guitar_effects.cpp:105" URAM="0" VARIABLE="dc"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_63_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln346_fu_688_p2" SOURCE="r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:346" URAM="0" VARIABLE="add_ln346"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_63_2" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln1512_fu_702_p2" SOURCE="r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_base.h:1512" URAM="0" VARIABLE="sub_ln1512"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_63_2" OPTYPE="sub" PRAGMA="" RTLNAME="result_V_2_fu_781_p2" SOURCE="r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_base.h:813" URAM="0" VARIABLE="result_V_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_63_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln75_fu_796_p2" SOURCE="guitar_effects.cpp:75" URAM="0" VARIABLE="add_ln75"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_63_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln80_fu_938_p2" SOURCE="guitar_effects.cpp:80" URAM="0" VARIABLE="add_ln80"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_63_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U17" SOURCE="guitar_effects.cpp:167" URAM="0" VARIABLE="mul_i1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fsub" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_63_2" OPTYPE="fsub" PRAGMA="" RTLNAME="faddfsub_32ns_32ns_32_5_full_dsp_1_U16" SOURCE="guitar_effects.cpp:167" URAM="0" VARIABLE="dc_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_63_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln346_2_fu_845_p2" SOURCE="r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:346" URAM="0" VARIABLE="add_ln346_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_63_2" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln1512_2_fu_859_p2" SOURCE="r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_base.h:1512" URAM="0" VARIABLE="sub_ln1512_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_63_2" OPTYPE="sub" PRAGMA="" RTLNAME="result_V_8_fu_944_p2" SOURCE="r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_base.h:813" URAM="0" VARIABLE="result_V_8"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_63_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln85_fu_957_p2" SOURCE="guitar_effects.cpp:85" URAM="0" VARIABLE="add_ln85"/>
                 <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="compression_buffer_U" SOURCE="" URAM="0" VARIABLE="compression_buffer"/>
             </BindNodes>
         </Module>
@@ -783,52 +743,58 @@
         <config_export output="C:/Users/du.kad/Desktop/EECE4632FinalProject/guitar_effects_cpp"/>
     </UserConfigCommands>
     <Args>
-        <Arg ArgName="INPUT" index="0" direction="in" srcType="stream&lt;hls::axis&lt;ap_int&lt;16&gt;, 2, 5, 6&gt;, 0&gt;&amp;" srcSize="64">
+        <Arg ArgName="INPUT" index="0" direction="in" srcType="stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2, 5, 6&gt;, 0&gt;&amp;" srcSize="96">
             <hwRefs>
                 <hwRef type="interface" interface="INPUT_r" name="" usage="data" direction="in"/>
             </hwRefs>
         </Arg>
-        <Arg ArgName="OUTPUT" index="1" direction="out" srcType="stream&lt;hls::axis&lt;ap_int&lt;16&gt;, 2, 5, 6&gt;, 0&gt;&amp;" srcSize="64">
+        <Arg ArgName="OUTPUT" index="1" direction="out" srcType="stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2, 5, 6&gt;, 0&gt;&amp;" srcSize="96">
             <hwRefs>
                 <hwRef type="interface" interface="OUTPUT_r" name="" usage="data" direction="out"/>
             </hwRefs>
         </Arg>
-        <Arg ArgName="control" index="2" direction="in" srcType="char&amp;" srcSize="8">
+        <Arg ArgName="axilite_out" index="2" direction="out" srcType="int&amp;" srcSize="32">
+            <hwRefs>
+                <hwRef type="register" interface="s_axi_control_r" name="axilite_out" usage="data" direction="out"/>
+                <hwRef type="register" interface="s_axi_control_r" name="axilite_out_ctrl" usage="control" direction="out"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="control" index="3" direction="in" srcType="char" srcSize="8">
             <hwRefs>
                 <hwRef type="register" interface="s_axi_control_r" name="control" usage="data" direction="in"/>
             </hwRefs>
         </Arg>
-        <Arg ArgName="distortion_threshold" index="3" direction="in" srcType="short&amp;" srcSize="16">
+        <Arg ArgName="distortion_threshold" index="4" direction="in" srcType="int" srcSize="32">
             <hwRefs>
                 <hwRef type="register" interface="s_axi_control_r" name="distortion_threshold" usage="data" direction="in"/>
             </hwRefs>
         </Arg>
-        <Arg ArgName="distortion_clip_factor" index="4" direction="in" srcType="float&amp;" srcSize="32">
+        <Arg ArgName="distortion_clip_factor" index="5" direction="in" srcType="float" srcSize="32">
             <hwRefs>
                 <hwRef type="register" interface="s_axi_control_r" name="distortion_clip_factor" usage="data" direction="in"/>
             </hwRefs>
         </Arg>
-        <Arg ArgName="compression_min_threshold" index="5" direction="in" srcType="short&amp;" srcSize="16">
+        <Arg ArgName="compression_min_threshold" index="6" direction="in" srcType="int" srcSize="32">
             <hwRefs>
                 <hwRef type="register" interface="s_axi_control_r" name="compression_min_threshold" usage="data" direction="in"/>
             </hwRefs>
         </Arg>
-        <Arg ArgName="compression_max_threshold" index="6" direction="in" srcType="short&amp;" srcSize="16">
+        <Arg ArgName="compression_max_threshold" index="7" direction="in" srcType="int" srcSize="32">
             <hwRefs>
                 <hwRef type="register" interface="s_axi_control_r" name="compression_max_threshold" usage="data" direction="in"/>
             </hwRefs>
         </Arg>
-        <Arg ArgName="compression_zero_threshold" index="7" direction="in" srcType="short&amp;" srcSize="16">
+        <Arg ArgName="compression_zero_threshold" index="8" direction="in" srcType="int" srcSize="32">
             <hwRefs>
                 <hwRef type="register" interface="s_axi_control_r" name="compression_zero_threshold" usage="data" direction="in"/>
             </hwRefs>
         </Arg>
-        <Arg ArgName="delay_mult" index="8" direction="in" srcType="float&amp;" srcSize="32">
+        <Arg ArgName="delay_mult" index="9" direction="in" srcType="float" srcSize="32">
             <hwRefs>
                 <hwRef type="register" interface="s_axi_control_r" name="delay_mult" usage="data" direction="in"/>
             </hwRefs>
         </Arg>
-        <Arg ArgName="delay_samples" index="9" direction="in" srcType="int&amp;" srcSize="32">
+        <Arg ArgName="delay_samples" index="10" direction="in" srcType="int" srcSize="32">
             <hwRefs>
                 <hwRef type="register" interface="s_axi_control_r" name="delay_samples" usage="data" direction="in"/>
             </hwRefs>
@@ -856,61 +822,69 @@
                 <port>s_axi_control_r_WVALID</port>
             </ports>
             <registers>
-                <register offset="0x10" name="control" access="W" description="Data signal of control" range="32">
+                <register offset="0x10" name="axilite_out" access="R" description="Data signal of axilite_out" range="32">
+                    <fields>
+                        <field offset="0" width="32" name="axilite_out" access="R" description="Bit 31 to 0 of axilite_out"/>
+                    </fields>
+                </register>
+                <register offset="0x14" name="axilite_out_ctrl" access="R" description="Control signal of axilite_out" range="32">
+                    <fields>
+                        <field offset="0" width="1" name="axilite_out_ap_vld" access="R" description="Control signal axilite_out_ap_vld"/>
+                        <field offset="1" width="31" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x20" name="control" access="W" description="Data signal of control" range="32">
                     <fields>
                         <field offset="0" width="8" name="control" access="W" description="Bit 7 to 0 of control"/>
                         <field offset="8" width="24" name="RESERVED" access="R" description="Reserved.  0s on read."/>
                     </fields>
                 </register>
-                <register offset="0x18" name="distortion_threshold" access="W" description="Data signal of distortion_threshold" range="32">
+                <register offset="0x28" name="distortion_threshold" access="W" description="Data signal of distortion_threshold" range="32">
                     <fields>
-                        <field offset="0" width="16" name="distortion_threshold" access="W" description="Bit 15 to 0 of distortion_threshold"/>
-                        <field offset="16" width="16" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                        <field offset="0" width="32" name="distortion_threshold" access="W" description="Bit 31 to 0 of distortion_threshold"/>
                     </fields>
                 </register>
-                <register offset="0x20" name="distortion_clip_factor" access="W" description="Data signal of distortion_clip_factor" range="32">
+                <register offset="0x30" name="distortion_clip_factor" access="W" description="Data signal of distortion_clip_factor" range="32">
                     <fields>
                         <field offset="0" width="32" name="distortion_clip_factor" access="W" description="Bit 31 to 0 of distortion_clip_factor"/>
                     </fields>
                 </register>
-                <register offset="0x28" name="compression_min_threshold" access="W" description="Data signal of compression_min_threshold" range="32">
+                <register offset="0x38" name="compression_min_threshold" access="W" description="Data signal of compression_min_threshold" range="32">
                     <fields>
-                        <field offset="0" width="16" name="compression_min_threshold" access="W" description="Bit 15 to 0 of compression_min_threshold"/>
-                        <field offset="16" width="16" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                        <field offset="0" width="32" name="compression_min_threshold" access="W" description="Bit 31 to 0 of compression_min_threshold"/>
                     </fields>
                 </register>
-                <register offset="0x30" name="compression_max_threshold" access="W" description="Data signal of compression_max_threshold" range="32">
+                <register offset="0x40" name="compression_max_threshold" access="W" description="Data signal of compression_max_threshold" range="32">
                     <fields>
-                        <field offset="0" width="16" name="compression_max_threshold" access="W" description="Bit 15 to 0 of compression_max_threshold"/>
-                        <field offset="16" width="16" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                        <field offset="0" width="32" name="compression_max_threshold" access="W" description="Bit 31 to 0 of compression_max_threshold"/>
                     </fields>
                 </register>
-                <register offset="0x38" name="compression_zero_threshold" access="W" description="Data signal of compression_zero_threshold" range="32">
+                <register offset="0x48" name="compression_zero_threshold" access="W" description="Data signal of compression_zero_threshold" range="32">
                     <fields>
-                        <field offset="0" width="16" name="compression_zero_threshold" access="W" description="Bit 15 to 0 of compression_zero_threshold"/>
-                        <field offset="16" width="16" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                        <field offset="0" width="32" name="compression_zero_threshold" access="W" description="Bit 31 to 0 of compression_zero_threshold"/>
                     </fields>
                 </register>
-                <register offset="0x40" name="delay_mult" access="W" description="Data signal of delay_mult" range="32">
+                <register offset="0x50" name="delay_mult" access="W" description="Data signal of delay_mult" range="32">
                     <fields>
                         <field offset="0" width="32" name="delay_mult" access="W" description="Bit 31 to 0 of delay_mult"/>
                     </fields>
                 </register>
-                <register offset="0x48" name="delay_samples" access="W" description="Data signal of delay_samples" range="32">
+                <register offset="0x58" name="delay_samples" access="W" description="Data signal of delay_samples" range="32">
                     <fields>
                         <field offset="0" width="32" name="delay_samples" access="W" description="Bit 31 to 0 of delay_samples"/>
                     </fields>
                 </register>
             </registers>
             <constraints>
-                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="16" argName="control"/>
-                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="24" argName="distortion_threshold"/>
-                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="32" argName="distortion_clip_factor"/>
-                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="40" argName="compression_min_threshold"/>
-                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="48" argName="compression_max_threshold"/>
-                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="56" argName="compression_zero_threshold"/>
-                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="64" argName="delay_mult"/>
-                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="72" argName="delay_samples"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="16" argName="axilite_out"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="32" argName="control"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="40" argName="distortion_threshold"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="48" argName="distortion_clip_factor"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="56" argName="compression_min_threshold"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="64" argName="compression_max_threshold"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="72" argName="compression_zero_threshold"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="80" argName="delay_mult"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="88" argName="delay_samples"/>
             </constraints>
         </Interface>
         <Interface InterfaceName="ap_clk" type="clock" busTypeName="clock" mode="slave">
@@ -936,21 +910,7 @@
                 <port>ap_rst_n</port>
             </ports>
         </Interface>
-        <Interface InterfaceName="ap_ctrl" type="ap_ctrl" busTypeName="acc_handshake" mode="slave">
-            <portMaps>
-                <portMap portMapName="ap_start">start</portMap>
-                <portMap portMapName="ap_done">done</portMap>
-                <portMap portMapName="ap_idle">idle</portMap>
-                <portMap portMapName="ap_ready">ready</portMap>
-            </portMaps>
-            <ports>
-                <port>ap_done</port>
-                <port>ap_idle</port>
-                <port>ap_ready</port>
-                <port>ap_start</port>
-            </ports>
-        </Interface>
-        <Interface InterfaceName="INPUT_r" type="axi4stream" busTypeName="axis" mode="slave" dataWidth="16" portPrefix="INPUT_r_">
+        <Interface InterfaceName="INPUT_r" type="axi4stream" busTypeName="axis" mode="slave" dataWidth="32" portPrefix="INPUT_r_">
             <ports>
                 <port>INPUT_r_TDATA</port>
                 <port>INPUT_r_TDEST</port>
@@ -966,7 +926,7 @@
                 <constraint constraint_type="pragma interface" mode="axis" register_option="0" register_mode="both" argName="INPUT"/>
             </constraints>
         </Interface>
-        <Interface InterfaceName="OUTPUT_r" type="axi4stream" busTypeName="axis" mode="master" dataWidth="16" portPrefix="OUTPUT_r_">
+        <Interface InterfaceName="OUTPUT_r" type="axi4stream" busTypeName="axis" mode="master" dataWidth="32" portPrefix="OUTPUT_r_">
             <ports>
                 <port>OUTPUT_r_TDATA</port>
                 <port>OUTPUT_r_TDEST</port>
@@ -993,22 +953,24 @@
             </item>
             <item name="S_AXILITE Registers">
                 <table isCollapsed="0">
-                    <keys size="6">Interface, Register, Offset, Width, Access, Description</keys>
-                    <column name="s_axi_control_r">control, 0x10, 32, W, Data signal of control, </column>
-                    <column name="s_axi_control_r">distortion_threshold, 0x18, 32, W, Data signal of distortion_threshold, </column>
-                    <column name="s_axi_control_r">distortion_clip_factor, 0x20, 32, W, Data signal of distortion_clip_factor, </column>
-                    <column name="s_axi_control_r">compression_min_threshold, 0x28, 32, W, Data signal of compression_min_threshold, </column>
-                    <column name="s_axi_control_r">compression_max_threshold, 0x30, 32, W, Data signal of compression_max_threshold, </column>
-                    <column name="s_axi_control_r">compression_zero_threshold, 0x38, 32, W, Data signal of compression_zero_threshold, </column>
-                    <column name="s_axi_control_r">delay_mult, 0x40, 32, W, Data signal of delay_mult, </column>
-                    <column name="s_axi_control_r">delay_samples, 0x48, 32, W, Data signal of delay_samples, </column>
+                    <keys size="7">Interface, Register, Offset, Width, Access, Description, Bit Fields</keys>
+                    <column name="s_axi_control_r">axilite_out, 0x10, 32, R, Data signal of axilite_out, </column>
+                    <column name="s_axi_control_r">axilite_out_ctrl, 0x14, 32, R, Control signal of axilite_out, 0=axilite_out_ap_vld</column>
+                    <column name="s_axi_control_r">control, 0x20, 32, W, Data signal of control, </column>
+                    <column name="s_axi_control_r">distortion_threshold, 0x28, 32, W, Data signal of distortion_threshold, </column>
+                    <column name="s_axi_control_r">distortion_clip_factor, 0x30, 32, W, Data signal of distortion_clip_factor, </column>
+                    <column name="s_axi_control_r">compression_min_threshold, 0x38, 32, W, Data signal of compression_min_threshold, </column>
+                    <column name="s_axi_control_r">compression_max_threshold, 0x40, 32, W, Data signal of compression_max_threshold, </column>
+                    <column name="s_axi_control_r">compression_zero_threshold, 0x48, 32, W, Data signal of compression_zero_threshold, </column>
+                    <column name="s_axi_control_r">delay_mult, 0x50, 32, W, Data signal of delay_mult, </column>
+                    <column name="s_axi_control_r">delay_samples, 0x58, 32, W, Data signal of delay_samples, </column>
                 </table>
             </item>
             <item name="AXIS">
                 <table isCollapsed="0">
                     <keys size="11">Interface, Register Mode, TDATA, TDEST, TID, TKEEP, TLAST, TREADY, TSTRB, TUSER, TVALID</keys>
-                    <column name="INPUT_r">both, 16, 6, 5, 2, 1, 1, 2, 2, 1, </column>
-                    <column name="OUTPUT_r">both, 16, 6, 5, 2, 1, 1, 2, 2, 1, </column>
+                    <column name="INPUT_r">both, 32, 6, 5, 4, 1, 1, 4, 2, 1, </column>
+                    <column name="OUTPUT_r">both, 32, 6, 5, 4, 1, 1, 4, 2, 1, </column>
                 </table>
             </item>
             <item name="TOP LEVEL CONTROL">
@@ -1016,7 +978,7 @@
                     <keys size="3">Interface, Type, Ports</keys>
                     <column name="ap_clk">clock, ap_clk, </column>
                     <column name="ap_rst_n">reset, ap_rst_n, </column>
-                    <column name="ap_ctrl">ap_ctrl_hs, ap_done ap_idle ap_ready ap_start, </column>
+                    <column name="ap_ctrl">ap_ctrl_none, , </column>
                 </table>
             </item>
         </section>
@@ -1026,16 +988,17 @@
             <item name="Top Function Arguments">
                 <table isCollapsed="1">
                     <keys size="3">Argument, Direction, Datatype</keys>
-                    <column name="INPUT">in, stream&lt;hls::axis&lt;ap_int&lt;16&gt; 2 5 6&gt; 0&gt;&amp;</column>
-                    <column name="OUTPUT">out, stream&lt;hls::axis&lt;ap_int&lt;16&gt; 2 5 6&gt; 0&gt;&amp;</column>
-                    <column name="control">in, char&amp;</column>
-                    <column name="distortion_threshold">in, short&amp;</column>
-                    <column name="distortion_clip_factor">in, float&amp;</column>
-                    <column name="compression_min_threshold">in, short&amp;</column>
-                    <column name="compression_max_threshold">in, short&amp;</column>
-                    <column name="compression_zero_threshold">in, short&amp;</column>
-                    <column name="delay_mult">in, float&amp;</column>
-                    <column name="delay_samples">in, int&amp;</column>
+                    <column name="INPUT">in, stream&lt;hls::axis&lt;ap_int&lt;32&gt; 2 5 6&gt; 0&gt;&amp;</column>
+                    <column name="OUTPUT">out, stream&lt;hls::axis&lt;ap_int&lt;32&gt; 2 5 6&gt; 0&gt;&amp;</column>
+                    <column name="axilite_out">out, int&amp;</column>
+                    <column name="control">in, char</column>
+                    <column name="distortion_threshold">in, int</column>
+                    <column name="distortion_clip_factor">in, float</column>
+                    <column name="compression_min_threshold">in, int</column>
+                    <column name="compression_max_threshold">in, int</column>
+                    <column name="compression_zero_threshold">in, int</column>
+                    <column name="delay_mult">in, float</column>
+                    <column name="delay_samples">in, int</column>
                 </table>
             </item>
             <item name="SW-to-HW Mapping">
@@ -1043,14 +1006,16 @@
                     <keys size="4">Argument, HW Interface, HW Type, HW Info</keys>
                     <column name="INPUT">INPUT_r, interface, , </column>
                     <column name="OUTPUT">OUTPUT_r, interface, , </column>
-                    <column name="control">s_axi_control_r, register, name=control offset=0x10 range=32, </column>
-                    <column name="distortion_threshold">s_axi_control_r, register, name=distortion_threshold offset=0x18 range=32, </column>
-                    <column name="distortion_clip_factor">s_axi_control_r, register, name=distortion_clip_factor offset=0x20 range=32, </column>
-                    <column name="compression_min_threshold">s_axi_control_r, register, name=compression_min_threshold offset=0x28 range=32, </column>
-                    <column name="compression_max_threshold">s_axi_control_r, register, name=compression_max_threshold offset=0x30 range=32, </column>
-                    <column name="compression_zero_threshold">s_axi_control_r, register, name=compression_zero_threshold offset=0x38 range=32, </column>
-                    <column name="delay_mult">s_axi_control_r, register, name=delay_mult offset=0x40 range=32, </column>
-                    <column name="delay_samples">s_axi_control_r, register, name=delay_samples offset=0x48 range=32, </column>
+                    <column name="axilite_out">s_axi_control_r, register, name=axilite_out offset=0x10 range=32, </column>
+                    <column name="axilite_out">s_axi_control_r, register, name=axilite_out_ctrl offset=0x14 range=32, </column>
+                    <column name="control">s_axi_control_r, register, name=control offset=0x20 range=32, </column>
+                    <column name="distortion_threshold">s_axi_control_r, register, name=distortion_threshold offset=0x28 range=32, </column>
+                    <column name="distortion_clip_factor">s_axi_control_r, register, name=distortion_clip_factor offset=0x30 range=32, </column>
+                    <column name="compression_min_threshold">s_axi_control_r, register, name=compression_min_threshold offset=0x38 range=32, </column>
+                    <column name="compression_max_threshold">s_axi_control_r, register, name=compression_max_threshold offset=0x40 range=32, </column>
+                    <column name="compression_zero_threshold">s_axi_control_r, register, name=compression_zero_threshold offset=0x48 range=32, </column>
+                    <column name="delay_mult">s_axi_control_r, register, name=delay_mult offset=0x50 range=32, </column>
+                    <column name="delay_samples">s_axi_control_r, register, name=delay_samples offset=0x58 range=32, </column>
                 </table>
             </item>
         </section>
@@ -1059,16 +1024,18 @@
         <section name="M_AXI Burst Information" level="0" HEADER_NOTE="Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings."/>
     </ReportBurst>
     <PragmaReport>
-        <Pragma type="interface" location="guitar_effects.cpp:28" status="valid" parentFunction="guitar_effects" variable="INPUT" isDirective="0" options="axis port=INPUT"/>
-        <Pragma type="interface" location="guitar_effects.cpp:29" status="valid" parentFunction="guitar_effects" variable="OUTPUT" isDirective="0" options="axis port=OUTPUT"/>
-        <Pragma type="interface" location="guitar_effects.cpp:30" status="valid" parentFunction="guitar_effects" variable="control" isDirective="0" options="s_axilite port=control"/>
-        <Pragma type="interface" location="guitar_effects.cpp:31" status="valid" parentFunction="guitar_effects" variable="distortion_threshold" isDirective="0" options="s_axilite port=distortion_threshold"/>
-        <Pragma type="interface" location="guitar_effects.cpp:32" status="valid" parentFunction="guitar_effects" variable="distortion_clip_factor" isDirective="0" options="s_axilite port=distortion_clip_factor"/>
-        <Pragma type="interface" location="guitar_effects.cpp:33" status="valid" parentFunction="guitar_effects" variable="compression_min_threshold" isDirective="0" options="s_axilite port=compression_min_threshold"/>
-        <Pragma type="interface" location="guitar_effects.cpp:34" status="valid" parentFunction="guitar_effects" variable="compression_max_threshold" isDirective="0" options="s_axilite port=compression_max_threshold"/>
-        <Pragma type="interface" location="guitar_effects.cpp:35" status="valid" parentFunction="guitar_effects" variable="compression_zero_threshold" isDirective="0" options="s_axilite port=compression_zero_threshold"/>
-        <Pragma type="interface" location="guitar_effects.cpp:36" status="valid" parentFunction="guitar_effects" variable="delay_mult" isDirective="0" options="s_axilite port=delay_mult"/>
-        <Pragma type="interface" location="guitar_effects.cpp:37" status="valid" parentFunction="guitar_effects" variable="delay_samples" isDirective="0" options="s_axilite port=delay_samples"/>
+        <Pragma type="interface" location="guitar_effects.cpp:29" status="valid" parentFunction="guitar_effects" variable="INPUT" isDirective="0" options="axis port=INPUT"/>
+        <Pragma type="interface" location="guitar_effects.cpp:30" status="valid" parentFunction="guitar_effects" variable="OUTPUT" isDirective="0" options="axis port=OUTPUT"/>
+        <Pragma type="interface" location="guitar_effects.cpp:31" status="valid" parentFunction="guitar_effects" variable="control" isDirective="0" options="s_axilite port=control"/>
+        <Pragma type="interface" location="guitar_effects.cpp:32" status="valid" parentFunction="guitar_effects" variable="distortion_threshold" isDirective="0" options="s_axilite port=distortion_threshold"/>
+        <Pragma type="interface" location="guitar_effects.cpp:33" status="valid" parentFunction="guitar_effects" variable="distortion_clip_factor" isDirective="0" options="s_axilite port=distortion_clip_factor"/>
+        <Pragma type="interface" location="guitar_effects.cpp:34" status="valid" parentFunction="guitar_effects" variable="compression_min_threshold" isDirective="0" options="s_axilite port=compression_min_threshold"/>
+        <Pragma type="interface" location="guitar_effects.cpp:35" status="valid" parentFunction="guitar_effects" variable="compression_max_threshold" isDirective="0" options="s_axilite port=compression_max_threshold"/>
+        <Pragma type="interface" location="guitar_effects.cpp:36" status="valid" parentFunction="guitar_effects" variable="compression_zero_threshold" isDirective="0" options="s_axilite port=compression_zero_threshold"/>
+        <Pragma type="interface" location="guitar_effects.cpp:37" status="valid" parentFunction="guitar_effects" variable="delay_mult" isDirective="0" options="s_axilite port=delay_mult"/>
+        <Pragma type="interface" location="guitar_effects.cpp:38" status="valid" parentFunction="guitar_effects" variable="delay_samples" isDirective="0" options="s_axilite port=delay_samples"/>
+        <Pragma type="interface" location="guitar_effects.cpp:39" status="valid" parentFunction="guitar_effects" variable="axilite_out" isDirective="0" options="s_axilite port=axilite_out"/>
+        <Pragma type="interface" location="guitar_effects.cpp:40" status="valid" parentFunction="guitar_effects" variable="return" isDirective="0" options="ap_ctrl_none port=return"/>
     </PragmaReport>
 </profile>
 

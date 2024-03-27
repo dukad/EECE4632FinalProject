@@ -19,6 +19,26 @@ int XGuitar_effects_CfgInitialize(XGuitar_effects *InstancePtr, XGuitar_effects_
 }
 #endif
 
+u32 XGuitar_effects_Get_axilite_out(XGuitar_effects *InstancePtr) {
+    u32 Data;
+
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    Data = XGuitar_effects_ReadReg(InstancePtr->Control_r_BaseAddress, XGUITAR_EFFECTS_CONTROL_R_ADDR_AXILITE_OUT_DATA);
+    return Data;
+}
+
+u32 XGuitar_effects_Get_axilite_out_vld(XGuitar_effects *InstancePtr) {
+    u32 Data;
+
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    Data = XGuitar_effects_ReadReg(InstancePtr->Control_r_BaseAddress, XGUITAR_EFFECTS_CONTROL_R_ADDR_AXILITE_OUT_CTRL);
+    return Data & 0x1;
+}
+
 void XGuitar_effects_Set_control(XGuitar_effects *InstancePtr, u32 Data) {
     Xil_AssertVoid(InstancePtr != NULL);
     Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);

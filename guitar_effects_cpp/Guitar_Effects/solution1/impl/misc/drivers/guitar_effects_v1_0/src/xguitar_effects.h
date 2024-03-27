@@ -82,6 +82,8 @@ int XGuitar_effects_Release(XGuitar_effects *InstancePtr);
 #endif
 
 
+u32 XGuitar_effects_Get_axilite_out(XGuitar_effects *InstancePtr);
+u32 XGuitar_effects_Get_axilite_out_vld(XGuitar_effects *InstancePtr);
 void XGuitar_effects_Set_control(XGuitar_effects *InstancePtr, u32 Data);
 u32 XGuitar_effects_Get_control(XGuitar_effects *InstancePtr);
 void XGuitar_effects_Set_distortion_threshold(XGuitar_effects *InstancePtr, u32 Data);

@@ -6,7 +6,7 @@
 `timescale 1 ns / 1 ps
 module guitar_effects_compression_buffer_RAM_AUTO_0R0W (address0, ce0, d0, we0,  reset,clk);
 
-parameter DataWidth = 16;
+parameter DataWidth = 32;
 parameter AddressWidth = 9;
 parameter AddressRange = 441;
 

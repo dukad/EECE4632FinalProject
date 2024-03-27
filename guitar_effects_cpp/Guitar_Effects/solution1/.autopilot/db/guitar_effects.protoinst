@@ -3,17 +3,7 @@
 	"modules": {
 		"guitar_effects": {
 			"proto_instances": {
-				"/AESL_inst_guitar_effects_activity": {
-					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
-					"ports": {
-						"AP_CLK": { "actual": "ap_clk"},
-						"AP_DONE": { "actual": "ap_done"},
-						"AP_READY": { "actual": "ap_ready"},
-						"AP_RESET": { "actual": "ap_rst_n"},
-						"AP_START": { "actual": "ap_start"}
-					}
-				},
-				"grp_compression_fu_301/grp_compression_fu_301_activity": {
+				"grp_compression_fu_364/grp_compression_fu_364_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
@@ -23,7 +13,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_guitar_effects_Pipeline_2_fu_296/grp_guitar_effects_Pipeline_2_fu_296_activity": {
+				"grp_guitar_effects_Pipeline_2_fu_359/grp_guitar_effects_Pipeline_2_fu_359_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
