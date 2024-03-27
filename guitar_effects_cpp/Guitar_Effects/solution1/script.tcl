@@ -10,8 +10,9 @@ add_files guitar_effects.h
 open_solution "solution1" -flow_target vivado
 set_part {xc7z020clg400-1}
 create_clock -period 10 -name default
+config_export -format ip_catalog -output C:/Users/du.kad/Desktop/EECE4632FinalProject/guitar_effects_cpp -rtl verilog
 #source "./Guitar_Effects/solution1/directives.tcl"
 #csim_design
 csynth_design
 #cosim_design
-export_design -format ip_catalog
+export_design -rtl verilog -format ip_catalog -output C:/Users/du.kad/Desktop/EECE4632FinalProject/guitar_effects_cpp

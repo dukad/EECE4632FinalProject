@@ -13,7 +13,17 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_guitar_effects_Pipeline_1_fu_257/grp_guitar_effects_Pipeline_1_fu_257_activity": {
+				"grp_compression_fu_301/grp_compression_fu_301_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_guitar_effects_Pipeline_2_fu_296/grp_guitar_effects_Pipeline_2_fu_296_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},

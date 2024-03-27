@@ -6,7 +6,7 @@
 `timescale 1ns/1ps
 module guitar_effects_control_r_s_axi
 #(parameter
-    C_S_AXI_ADDR_WIDTH = 6,
+    C_S_AXI_ADDR_WIDTH = 7,
     C_S_AXI_DATA_WIDTH = 32
 )(
     input  wire                          ACLK,
@@ -34,7 +34,9 @@ module guitar_effects_control_r_s_axi
     output wire [31:0]                   distortion_clip_factor,
     output wire [15:0]                   compression_min_threshold,
     output wire [15:0]                   compression_max_threshold,
-    output wire [15:0]                   compression_zero_threshold
+    output wire [15:0]                   compression_zero_threshold,
+    output wire [31:0]                   delay_mult,
+    output wire [31:0]                   delay_samples
 );
 //------------------------Address Info-------------------
 // 0x00 : reserved
@@ -64,22 +66,32 @@ module guitar_effects_control_r_s_axi
 //        bit 15~0 - compression_zero_threshold[15:0] (Read/Write)
 //        others   - reserved
 // 0x3c : reserved
+// 0x40 : Data signal of delay_mult
+//        bit 31~0 - delay_mult[31:0] (Read/Write)
+// 0x44 : reserved
+// 0x48 : Data signal of delay_samples
+//        bit 31~0 - delay_samples[31:0] (Read/Write)
+// 0x4c : reserved
 // (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
 //------------------------Parameter----------------------
 localparam
-    ADDR_CONTROL_DATA_0                    = 6'h10,
-    ADDR_CONTROL_CTRL                      = 6'h14,
-    ADDR_DISTORTION_THRESHOLD_DATA_0       = 6'h18,
-    ADDR_DISTORTION_THRESHOLD_CTRL         = 6'h1c,
-    ADDR_DISTORTION_CLIP_FACTOR_DATA_0     = 6'h20,
-    ADDR_DISTORTION_CLIP_FACTOR_CTRL       = 6'h24,
-    ADDR_COMPRESSION_MIN_THRESHOLD_DATA_0  = 6'h28,
-    ADDR_COMPRESSION_MIN_THRESHOLD_CTRL    = 6'h2c,
-    ADDR_COMPRESSION_MAX_THRESHOLD_DATA_0  = 6'h30,
-    ADDR_COMPRESSION_MAX_THRESHOLD_CTRL    = 6'h34,
-    ADDR_COMPRESSION_ZERO_THRESHOLD_DATA_0 = 6'h38,
-    ADDR_COMPRESSION_ZERO_THRESHOLD_CTRL   = 6'h3c,
+    ADDR_CONTROL_DATA_0                    = 7'h10,
+    ADDR_CONTROL_CTRL                      = 7'h14,
+    ADDR_DISTORTION_THRESHOLD_DATA_0       = 7'h18,
+    ADDR_DISTORTION_THRESHOLD_CTRL         = 7'h1c,
+    ADDR_DISTORTION_CLIP_FACTOR_DATA_0     = 7'h20,
+    ADDR_DISTORTION_CLIP_FACTOR_CTRL       = 7'h24,
+    ADDR_COMPRESSION_MIN_THRESHOLD_DATA_0  = 7'h28,
+    ADDR_COMPRESSION_MIN_THRESHOLD_CTRL    = 7'h2c,
+    ADDR_COMPRESSION_MAX_THRESHOLD_DATA_0  = 7'h30,
+    ADDR_COMPRESSION_MAX_THRESHOLD_CTRL    = 7'h34,
+    ADDR_COMPRESSION_ZERO_THRESHOLD_DATA_0 = 7'h38,
+    ADDR_COMPRESSION_ZERO_THRESHOLD_CTRL   = 7'h3c,
+    ADDR_DELAY_MULT_DATA_0                 = 7'h40,
+    ADDR_DELAY_MULT_CTRL                   = 7'h44,
+    ADDR_DELAY_SAMPLES_DATA_0              = 7'h48,
+    ADDR_DELAY_SAMPLES_CTRL                = 7'h4c,
     WRIDLE                                 = 2'd0,
     WRDATA                                 = 2'd1,
     WRRESP                                 = 2'd2,
@@ -87,7 +99,7 @@ localparam
     RDIDLE                                 = 2'd0,
     RDDATA                                 = 2'd1,
     RDRESET                                = 2'd2,
-    ADDR_BITS                = 6;
+    ADDR_BITS                = 7;
 
 //------------------------Local signal-------------------
     reg  [1:0]                    wstate = WRRESET;
@@ -108,6 +120,8 @@ localparam
     reg  [15:0]                   int_compression_min_threshold = 'b0;
     reg  [15:0]                   int_compression_max_threshold = 'b0;
     reg  [15:0]                   int_compression_zero_threshold = 'b0;
+    reg  [31:0]                   int_delay_mult = 'b0;
+    reg  [31:0]                   int_delay_samples = 'b0;
 
 //------------------------Instantiation------------------
 
@@ -218,6 +232,12 @@ always @(posedge ACLK) begin
                 ADDR_COMPRESSION_ZERO_THRESHOLD_DATA_0: begin
                     rdata <= int_compression_zero_threshold[15:0];
                 end
+                ADDR_DELAY_MULT_DATA_0: begin
+                    rdata <= int_delay_mult[31:0];
+                end
+                ADDR_DELAY_SAMPLES_DATA_0: begin
+                    rdata <= int_delay_samples[31:0];
+                end
             endcase
         end
     end
@@ -231,6 +251,8 @@ assign distortion_clip_factor     = int_distortion_clip_factor;
 assign compression_min_threshold  = int_compression_min_threshold;
 assign compression_max_threshold  = int_compression_max_threshold;
 assign compression_zero_threshold = int_compression_zero_threshold;
+assign delay_mult                 = int_delay_mult;
+assign delay_samples              = int_delay_samples;
 // int_control[7:0]
 always @(posedge ACLK) begin
     if (ARESET)
@@ -288,6 +310,26 @@ always @(posedge ACLK) begin
     else if (ACLK_EN) begin
         if (w_hs && waddr == ADDR_COMPRESSION_ZERO_THRESHOLD_DATA_0)
             int_compression_zero_threshold[15:0] <= (WDATA[31:0] & wmask) | (int_compression_zero_threshold[15:0] & ~wmask);
+    end
+end
+
+// int_delay_mult[31:0]
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_delay_mult[31:0] <= 0;
+    else if (ACLK_EN) begin
+        if (w_hs && waddr == ADDR_DELAY_MULT_DATA_0)
+            int_delay_mult[31:0] <= (WDATA[31:0] & wmask) | (int_delay_mult[31:0] & ~wmask);
+    end
+end
+
+// int_delay_samples[31:0]
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_delay_samples[31:0] <= 0;
+    else if (ACLK_EN) begin
+        if (w_hs && waddr == ADDR_DELAY_SAMPLES_DATA_0)
+            int_delay_samples[31:0] <= (WDATA[31:0] & wmask) | (int_delay_samples[31:0] & ~wmask);
     end
 end
 

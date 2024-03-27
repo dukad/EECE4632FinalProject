@@ -9,7 +9,7 @@ use IEEE.NUMERIC_STD.all;
 
 entity guitar_effects_control_r_s_axi is
 generic (
-    C_S_AXI_ADDR_WIDTH    : INTEGER := 6;
+    C_S_AXI_ADDR_WIDTH    : INTEGER := 7;
     C_S_AXI_DATA_WIDTH    : INTEGER := 32);
 port (
     ACLK                  :in   STD_LOGIC;
@@ -37,7 +37,9 @@ port (
     distortion_clip_factor :out  STD_LOGIC_VECTOR(31 downto 0);
     compression_min_threshold :out  STD_LOGIC_VECTOR(15 downto 0);
     compression_max_threshold :out  STD_LOGIC_VECTOR(15 downto 0);
-    compression_zero_threshold :out  STD_LOGIC_VECTOR(15 downto 0)
+    compression_zero_threshold :out  STD_LOGIC_VECTOR(15 downto 0);
+    delay_mult            :out  STD_LOGIC_VECTOR(31 downto 0);
+    delay_samples         :out  STD_LOGIC_VECTOR(31 downto 0)
 );
 end entity guitar_effects_control_r_s_axi;
 
@@ -69,6 +71,12 @@ end entity guitar_effects_control_r_s_axi;
 --        bit 15~0 - compression_zero_threshold[15:0] (Read/Write)
 --        others   - reserved
 -- 0x3c : reserved
+-- 0x40 : Data signal of delay_mult
+--        bit 31~0 - delay_mult[31:0] (Read/Write)
+-- 0x44 : reserved
+-- 0x48 : Data signal of delay_samples
+--        bit 31~0 - delay_samples[31:0] (Read/Write)
+-- 0x4c : reserved
 -- (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
 architecture behave of guitar_effects_control_r_s_axi is
@@ -88,7 +96,11 @@ architecture behave of guitar_effects_control_r_s_axi is
     constant ADDR_COMPRESSION_MAX_THRESHOLD_CTRL    : INTEGER := 16#34#;
     constant ADDR_COMPRESSION_ZERO_THRESHOLD_DATA_0 : INTEGER := 16#38#;
     constant ADDR_COMPRESSION_ZERO_THRESHOLD_CTRL   : INTEGER := 16#3c#;
-    constant ADDR_BITS         : INTEGER := 6;
+    constant ADDR_DELAY_MULT_DATA_0                 : INTEGER := 16#40#;
+    constant ADDR_DELAY_MULT_CTRL                   : INTEGER := 16#44#;
+    constant ADDR_DELAY_SAMPLES_DATA_0              : INTEGER := 16#48#;
+    constant ADDR_DELAY_SAMPLES_CTRL                : INTEGER := 16#4c#;
+    constant ADDR_BITS         : INTEGER := 7;
 
     signal waddr               : UNSIGNED(ADDR_BITS-1 downto 0);
     signal wmask               : UNSIGNED(C_S_AXI_DATA_WIDTH-1 downto 0);
@@ -108,6 +120,8 @@ architecture behave of guitar_effects_control_r_s_axi is
     signal int_compression_min_threshold : UNSIGNED(15 downto 0) := (others => '0');
     signal int_compression_max_threshold : UNSIGNED(15 downto 0) := (others => '0');
     signal int_compression_zero_threshold : UNSIGNED(15 downto 0) := (others => '0');
+    signal int_delay_mult      : UNSIGNED(31 downto 0) := (others => '0');
+    signal int_delay_samples   : UNSIGNED(31 downto 0) := (others => '0');
 
 
 begin
@@ -235,6 +249,10 @@ begin
                         rdata_data <= RESIZE(int_compression_max_threshold(15 downto 0), 32);
                     when ADDR_COMPRESSION_ZERO_THRESHOLD_DATA_0 =>
                         rdata_data <= RESIZE(int_compression_zero_threshold(15 downto 0), 32);
+                    when ADDR_DELAY_MULT_DATA_0 =>
+                        rdata_data <= RESIZE(int_delay_mult(31 downto 0), 32);
+                    when ADDR_DELAY_SAMPLES_DATA_0 =>
+                        rdata_data <= RESIZE(int_delay_samples(31 downto 0), 32);
                     when others =>
                         NULL;
                     end case;
@@ -250,6 +268,8 @@ begin
     compression_min_threshold <= STD_LOGIC_VECTOR(int_compression_min_threshold);
     compression_max_threshold <= STD_LOGIC_VECTOR(int_compression_max_threshold);
     compression_zero_threshold <= STD_LOGIC_VECTOR(int_compression_zero_threshold);
+    delay_mult           <= STD_LOGIC_VECTOR(int_delay_mult);
+    delay_samples        <= STD_LOGIC_VECTOR(int_delay_samples);
 
     process (ACLK)
     begin
@@ -312,6 +332,28 @@ begin
             if (ACLK_EN = '1') then
                 if (w_hs = '1' and waddr = ADDR_COMPRESSION_ZERO_THRESHOLD_DATA_0) then
                     int_compression_zero_threshold(15 downto 0) <= (UNSIGNED(WDATA(15 downto 0)) and wmask(15 downto 0)) or ((not wmask(15 downto 0)) and int_compression_zero_threshold(15 downto 0));
+                end if;
+            end if;
+        end if;
+    end process;
+
+    process (ACLK)
+    begin
+        if (ACLK'event and ACLK = '1') then
+            if (ACLK_EN = '1') then
+                if (w_hs = '1' and waddr = ADDR_DELAY_MULT_DATA_0) then
+                    int_delay_mult(31 downto 0) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_delay_mult(31 downto 0));
+                end if;
+            end if;
+        end if;
+    end process;
+
+    process (ACLK)
+    begin
+        if (ACLK'event and ACLK = '1') then
+            if (ACLK_EN = '1') then
+                if (w_hs = '1' and waddr = ADDR_DELAY_SAMPLES_DATA_0) then
+                    int_delay_samples(31 downto 0) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_delay_samples(31 downto 0));
                 end if;
             end if;
         end if;

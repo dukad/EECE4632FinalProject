@@ -50,6 +50,22 @@ compression_zero_threshold {
 	offset 56
 	offset_end 63
 }
+delay_mult { 
+	dir I
+	width 32
+	depth 1
+	mode ap_none
+	offset 64
+	offset_end 71
+}
+delay_samples { 
+	dir I
+	width 32
+	depth 1
+	mode ap_none
+	offset 72
+	offset_end 79
+}
 }
 dict set axilite_register_dict control_r $port_control_r
 

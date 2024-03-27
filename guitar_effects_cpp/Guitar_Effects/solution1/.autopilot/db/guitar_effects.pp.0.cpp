@@ -6443,7 +6443,7 @@ __attribute__((sdx_kernel("guitar_effects", 0))) void guitar_effects (
     short& compression_zero_threshold,
     float& delay_mult,
     int& delay_samples) {
-#line 14 "C:/Users/du.kad/Desktop/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/csynth.tcl"
+#line 15 "C:/Users/du.kad/Desktop/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/csynth.tcl"
 #pragma HLSDIRECTIVE TOP name=guitar_effects
 # 25 "guitar_effects.cpp"
 
@@ -6457,7 +6457,8 @@ __attribute__((sdx_kernel("guitar_effects", 0))) void guitar_effects (
 #pragma HLS INTERFACE s_axilite port=compression_min_threshold
 #pragma HLS INTERFACE s_axilite port=compression_max_threshold
 #pragma HLS INTERFACE s_axilite port=compression_zero_threshold
-
+#pragma HLS INTERFACE s_axilite port=delay_mult
+#pragma HLS INTERFACE s_axilite port=delay_samples
 
 
 
@@ -6466,6 +6467,10 @@ __attribute__((sdx_kernel("guitar_effects", 0))) void guitar_effects (
     short compression_buffer[441] = {0};
     short compression_buffer_index = 0;
     short lpf_coefficients[441] = {0};
+    float filter_value = 3.0 / 441;
+    VITIS_LOOP_47_1: for (int i = 0; i < 441; i++) {
+     lpf_coefficients[i] = filter_value;
+    }
 
 
     short delay_buffer[44100] = {0};
@@ -6475,7 +6480,7 @@ __attribute__((sdx_kernel("guitar_effects", 0))) void guitar_effects (
     short tmp_short;
 
 
-    VITIS_LOOP_54_1: while(1) {
+    VITIS_LOOP_59_2: while(1) {
         INPUT.read(tmp);
         tmp_short = tmp.data.to_int();
 
@@ -6511,9 +6516,9 @@ short distortion(short input, int threshold, float clip_factor) {
     short result;
     short negative_threshold = -threshold;
     if (input > threshold) {
-        result = (input - threshold) * clip_factor + threshold;
+        result = static_cast<short>((input - threshold) * clip_factor + threshold);
     } else if (input < negative_threshold) {
-        result = (input + threshold) * clip_factor - threshold;
+        result = static_cast<short>((input + threshold) * clip_factor - threshold);
     } else {
         result = input;
     }
@@ -6534,7 +6539,7 @@ short compression(short input, short min_threshold, short max_threshold, short z
     compression_buffer_index = (compression_buffer_index + 1) % 441;
 
 
-    VITIS_LOOP_113_1: for (int i = 0; i < 441; i++) {
+    LPF_Loop : for (int i = 0; i < 441; i++) {
 
         int coeff_index = (compression_buffer_index + i) % 441;
         current_level += values_buffer[coeff_index] * lpf_coefficients[i];
@@ -6547,16 +6552,16 @@ short compression(short input, short min_threshold, short max_threshold, short z
     if (current_level > max_threshold) {
      if (current_level > 0) {
 
-      compression_factor = max_threshold / current_level;
-      output = input * compression_factor;
+      compression_factor = static_cast<float>(max_threshold) / current_level;
+      output = static_cast<short>(input * compression_factor);
      } else {
       output = input;
      }
 
     } else if ((current_level < min_threshold) && (current_level > zero_threshold)) {
      if (current_level > 0) {
-      compression_factor = min_threshold / current_level;
-      output = input * compression_factor;
+      compression_factor = static_cast<short>(min_threshold) / current_level;
+      output = static_cast<short>(input * compression_factor);
      } else {
       output = input;
      }
@@ -6573,7 +6578,7 @@ short compression(short input, short min_threshold, short max_threshold, short z
 short delay(short input, short delay_samples, float delay_mult, short delay_buffer[44100], short delay_buffer_index) {
 
     short output;
-    output = input + (delay_buffer[(delay_buffer_index - delay_samples) % 44100]*delay_mult);
+    output = static_cast<short>(input + (delay_buffer[(delay_buffer_index - delay_samples) % 44100]*delay_mult));
 
 
     delay_buffer[delay_buffer_index] = output;

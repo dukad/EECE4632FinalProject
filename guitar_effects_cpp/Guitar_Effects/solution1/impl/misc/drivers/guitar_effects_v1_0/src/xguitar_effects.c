@@ -121,3 +121,37 @@ u32 XGuitar_effects_Get_compression_zero_threshold(XGuitar_effects *InstancePtr)
     return Data;
 }
 
+void XGuitar_effects_Set_delay_mult(XGuitar_effects *InstancePtr, u32 Data) {
+    Xil_AssertVoid(InstancePtr != NULL);
+    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    XGuitar_effects_WriteReg(InstancePtr->Control_r_BaseAddress, XGUITAR_EFFECTS_CONTROL_R_ADDR_DELAY_MULT_DATA, Data);
+}
+
+u32 XGuitar_effects_Get_delay_mult(XGuitar_effects *InstancePtr) {
+    u32 Data;
+
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    Data = XGuitar_effects_ReadReg(InstancePtr->Control_r_BaseAddress, XGUITAR_EFFECTS_CONTROL_R_ADDR_DELAY_MULT_DATA);
+    return Data;
+}
+
+void XGuitar_effects_Set_delay_samples(XGuitar_effects *InstancePtr, u32 Data) {
+    Xil_AssertVoid(InstancePtr != NULL);
+    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    XGuitar_effects_WriteReg(InstancePtr->Control_r_BaseAddress, XGUITAR_EFFECTS_CONTROL_R_ADDR_DELAY_SAMPLES_DATA, Data);
+}
+
+u32 XGuitar_effects_Get_delay_samples(XGuitar_effects *InstancePtr) {
+    u32 Data;
+
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    Data = XGuitar_effects_ReadReg(InstancePtr->Control_r_BaseAddress, XGUITAR_EFFECTS_CONTROL_R_ADDR_DELAY_SAMPLES_DATA);
+    return Data;
+}
+

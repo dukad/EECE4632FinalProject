@@ -30,11 +30,11 @@ set C_modelArgList {
 	{ control int 8 regular {axi_slave 0}  }
 	{ distortion_threshold int 16 regular {axi_slave 0}  }
 	{ distortion_clip_factor int 32 regular {axi_slave 0}  }
-	{ compression_min_threshold int 16 unused {axi_slave 0}  }
-	{ compression_max_threshold int 16 unused {axi_slave 0}  }
-	{ compression_zero_threshold int 16 unused {axi_slave 0}  }
-	{ delay_mult int 32 regular {pointer 0}  }
-	{ delay_samples int 32 regular {pointer 0}  }
+	{ compression_min_threshold int 16 regular {axi_slave 0}  }
+	{ compression_max_threshold int 16 regular {axi_slave 0}  }
+	{ compression_zero_threshold int 16 regular {axi_slave 0}  }
+	{ delay_mult int 32 regular {axi_slave 0}  }
+	{ delay_samples int 32 regular {axi_slave 0}  }
 }
 set C_modelArgMapList {[ 
 	{ "Name" : "INPUT_r_V_data_V", "interface" : "axis", "bitwidth" : 16, "direction" : "READONLY"} , 
@@ -57,10 +57,10 @@ set C_modelArgMapList {[
  	{ "Name" : "compression_min_threshold", "interface" : "axi_slave", "bundle":"control_r","type":"ap_none","bitwidth" : 16, "direction" : "READONLY", "offset" : {"in":40}, "offset_end" : {"in":47}} , 
  	{ "Name" : "compression_max_threshold", "interface" : "axi_slave", "bundle":"control_r","type":"ap_none","bitwidth" : 16, "direction" : "READONLY", "offset" : {"in":48}, "offset_end" : {"in":55}} , 
  	{ "Name" : "compression_zero_threshold", "interface" : "axi_slave", "bundle":"control_r","type":"ap_none","bitwidth" : 16, "direction" : "READONLY", "offset" : {"in":56}, "offset_end" : {"in":63}} , 
- 	{ "Name" : "delay_mult", "interface" : "wire", "bitwidth" : 32, "direction" : "READONLY"} , 
- 	{ "Name" : "delay_samples", "interface" : "wire", "bitwidth" : 32, "direction" : "READONLY"} ]}
+ 	{ "Name" : "delay_mult", "interface" : "axi_slave", "bundle":"control_r","type":"ap_none","bitwidth" : 32, "direction" : "READONLY", "offset" : {"in":64}, "offset_end" : {"in":71}} , 
+ 	{ "Name" : "delay_samples", "interface" : "axi_slave", "bundle":"control_r","type":"ap_none","bitwidth" : 32, "direction" : "READONLY", "offset" : {"in":72}, "offset_end" : {"in":79}} ]}
 # RTL Port declarations: 
-set portNum 43
+set portNum 41
 set portList { 
 	{ ap_clk sc_in sc_logic 1 clock -1 } 
 	{ ap_rst_n sc_in sc_logic 1 reset -1 active_low_sync } 
@@ -86,18 +86,16 @@ set portList {
 	{ OUTPUT_r_TLAST sc_out sc_lv 1 signal 11 } 
 	{ OUTPUT_r_TID sc_out sc_lv 5 signal 12 } 
 	{ OUTPUT_r_TDEST sc_out sc_lv 6 signal 13 } 
-	{ delay_mult sc_in sc_lv 32 signal 20 } 
-	{ delay_samples sc_in sc_lv 32 signal 21 } 
 	{ s_axi_control_r_AWVALID sc_in sc_logic 1 signal -1 } 
 	{ s_axi_control_r_AWREADY sc_out sc_logic 1 signal -1 } 
-	{ s_axi_control_r_AWADDR sc_in sc_lv 6 signal -1 } 
+	{ s_axi_control_r_AWADDR sc_in sc_lv 7 signal -1 } 
 	{ s_axi_control_r_WVALID sc_in sc_logic 1 signal -1 } 
 	{ s_axi_control_r_WREADY sc_out sc_logic 1 signal -1 } 
 	{ s_axi_control_r_WDATA sc_in sc_lv 32 signal -1 } 
 	{ s_axi_control_r_WSTRB sc_in sc_lv 4 signal -1 } 
 	{ s_axi_control_r_ARVALID sc_in sc_logic 1 signal -1 } 
 	{ s_axi_control_r_ARREADY sc_out sc_logic 1 signal -1 } 
-	{ s_axi_control_r_ARADDR sc_in sc_lv 6 signal -1 } 
+	{ s_axi_control_r_ARADDR sc_in sc_lv 7 signal -1 } 
 	{ s_axi_control_r_RVALID sc_out sc_logic 1 signal -1 } 
 	{ s_axi_control_r_RREADY sc_in sc_logic 1 signal -1 } 
 	{ s_axi_control_r_RDATA sc_out sc_lv 32 signal -1 } 
@@ -107,14 +105,14 @@ set portList {
 	{ s_axi_control_r_BRESP sc_out sc_lv 2 signal -1 } 
 }
 set NewPortList {[ 
-	{ "name": "s_axi_control_r_AWADDR", "direction": "in", "datatype": "sc_lv", "bitwidth":6, "type": "signal", "bundle":{"name": "control_r", "role": "AWADDR" },"address":[{"name":"control","role":"data","value":"16"},{"name":"distortion_threshold","role":"data","value":"24"},{"name":"distortion_clip_factor","role":"data","value":"32"},{"name":"compression_min_threshold","role":"data","value":"40"},{"name":"compression_max_threshold","role":"data","value":"48"},{"name":"compression_zero_threshold","role":"data","value":"56"}] },
+	{ "name": "s_axi_control_r_AWADDR", "direction": "in", "datatype": "sc_lv", "bitwidth":7, "type": "signal", "bundle":{"name": "control_r", "role": "AWADDR" },"address":[{"name":"control","role":"data","value":"16"},{"name":"distortion_threshold","role":"data","value":"24"},{"name":"distortion_clip_factor","role":"data","value":"32"},{"name":"compression_min_threshold","role":"data","value":"40"},{"name":"compression_max_threshold","role":"data","value":"48"},{"name":"compression_zero_threshold","role":"data","value":"56"},{"name":"delay_mult","role":"data","value":"64"},{"name":"delay_samples","role":"data","value":"72"}] },
 	{ "name": "s_axi_control_r_AWVALID", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "control_r", "role": "AWVALID" } },
 	{ "name": "s_axi_control_r_AWREADY", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "control_r", "role": "AWREADY" } },
 	{ "name": "s_axi_control_r_WVALID", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "control_r", "role": "WVALID" } },
 	{ "name": "s_axi_control_r_WREADY", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "control_r", "role": "WREADY" } },
 	{ "name": "s_axi_control_r_WDATA", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "control_r", "role": "WDATA" } },
 	{ "name": "s_axi_control_r_WSTRB", "direction": "in", "datatype": "sc_lv", "bitwidth":4, "type": "signal", "bundle":{"name": "control_r", "role": "WSTRB" } },
-	{ "name": "s_axi_control_r_ARADDR", "direction": "in", "datatype": "sc_lv", "bitwidth":6, "type": "signal", "bundle":{"name": "control_r", "role": "ARADDR" },"address":[] },
+	{ "name": "s_axi_control_r_ARADDR", "direction": "in", "datatype": "sc_lv", "bitwidth":7, "type": "signal", "bundle":{"name": "control_r", "role": "ARADDR" },"address":[] },
 	{ "name": "s_axi_control_r_ARVALID", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "control_r", "role": "ARVALID" } },
 	{ "name": "s_axi_control_r_ARREADY", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "control_r", "role": "ARREADY" } },
 	{ "name": "s_axi_control_r_RVALID", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "control_r", "role": "RVALID" } },
@@ -147,12 +145,10 @@ set NewPortList {[
  	{ "name": "OUTPUT_r_TUSER", "direction": "out", "datatype": "sc_lv", "bitwidth":2, "type": "signal", "bundle":{"name": "OUTPUT_r_V_user_V", "role": "default" }} , 
  	{ "name": "OUTPUT_r_TLAST", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "OUTPUT_r_V_last_V", "role": "default" }} , 
  	{ "name": "OUTPUT_r_TID", "direction": "out", "datatype": "sc_lv", "bitwidth":5, "type": "signal", "bundle":{"name": "OUTPUT_r_V_id_V", "role": "default" }} , 
- 	{ "name": "OUTPUT_r_TDEST", "direction": "out", "datatype": "sc_lv", "bitwidth":6, "type": "signal", "bundle":{"name": "OUTPUT_r_V_dest_V", "role": "default" }} , 
- 	{ "name": "delay_mult", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "delay_mult", "role": "default" }} , 
- 	{ "name": "delay_samples", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "delay_samples", "role": "default" }}  ]}
+ 	{ "name": "OUTPUT_r_TDEST", "direction": "out", "datatype": "sc_lv", "bitwidth":6, "type": "signal", "bundle":{"name": "OUTPUT_r_V_dest_V", "role": "default" }}  ]}
 
 set RtlHierarchyInfo {[
-	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22"],
+	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2", "3", "5", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28"],
 		"CDFG" : "guitar_effects",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
@@ -192,13 +188,17 @@ set RtlHierarchyInfo {[
 			{"Name" : "compression_max_threshold", "Type" : "None", "Direction" : "I"},
 			{"Name" : "compression_zero_threshold", "Type" : "None", "Direction" : "I"},
 			{"Name" : "delay_mult", "Type" : "None", "Direction" : "I"},
-			{"Name" : "delay_samples", "Type" : "None", "Direction" : "I"}],
+			{"Name" : "delay_samples", "Type" : "None", "Direction" : "I"},
+			{"Name" : "compression_buffer", "Type" : "Memory", "Direction" : "O",
+				"SubConnect" : [
+					{"ID" : "5", "SubInstance" : "grp_compression_fu_301", "Port" : "values_buffer", "Inst_start_state" : "59", "Inst_end_state" : "60"}]}],
 		"Loop" : [
-			{"Name" : "VITIS_LOOP_54_1", "PipelineType" : "no",
-				"LoopDec" : {"FSMBitwidth" : "77", "FirstState" : "ap_ST_fsm_state22", "LastState" : ["ap_ST_fsm_state77"], "QuitState" : ["ap_ST_fsm_state22"], "PreState" : ["ap_ST_fsm_state21"], "PostState" : ["ap_ST_fsm_state1"], "OneDepthLoop" : "0", "OneStateBlock": ""}}]},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.delay_buffer_U", "Parent" : "0"},
-	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_guitar_effects_Pipeline_1_fu_257", "Parent" : "0", "Child" : ["3"],
-		"CDFG" : "guitar_effects_Pipeline_1",
+			{"Name" : "VITIS_LOOP_59_2", "PipelineType" : "no",
+				"LoopDec" : {"FSMBitwidth" : "80", "FirstState" : "ap_ST_fsm_state22", "LastState" : ["ap_ST_fsm_state80"], "QuitState" : ["ap_ST_fsm_state22"], "PreState" : ["ap_ST_fsm_state21"], "PostState" : ["ap_ST_fsm_state1"], "OneDepthLoop" : "0", "OneStateBlock": ""}}]},
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.compression_buffer_U", "Parent" : "0"},
+	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.delay_buffer_U", "Parent" : "0"},
+	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_guitar_effects_Pipeline_2_fu_296", "Parent" : "0", "Child" : ["4"],
+		"CDFG" : "guitar_effects_Pipeline_2",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
@@ -215,26 +215,51 @@ set RtlHierarchyInfo {[
 			{"Name" : "delay_buffer", "Type" : "Memory", "Direction" : "O"}],
 		"Loop" : [
 			{"Name" : "Loop 1", "PipelineType" : "NotSupport"}]},
-	{"ID" : "3", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_guitar_effects_Pipeline_1_fu_257.flow_control_loop_pipe_sequential_init_U", "Parent" : "2"},
-	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.control_r_s_axi_U", "Parent" : "0"},
-	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.faddfsub_32ns_32ns_32_5_full_dsp_1_U2", "Parent" : "0"},
-	{"ID" : "6", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.fmul_32ns_32ns_32_4_max_dsp_1_U3", "Parent" : "0"},
-	{"ID" : "7", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.sitofp_32s_32_6_no_dsp_1_U4", "Parent" : "0"},
-	{"ID" : "8", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.srem_17ns_17ns_17_21_seq_1_U5", "Parent" : "0"},
-	{"ID" : "9", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_INPUT_r_V_data_V_U", "Parent" : "0"},
-	{"ID" : "10", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_INPUT_r_V_keep_V_U", "Parent" : "0"},
-	{"ID" : "11", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_INPUT_r_V_strb_V_U", "Parent" : "0"},
-	{"ID" : "12", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_INPUT_r_V_user_V_U", "Parent" : "0"},
-	{"ID" : "13", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_INPUT_r_V_last_V_U", "Parent" : "0"},
-	{"ID" : "14", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_INPUT_r_V_id_V_U", "Parent" : "0"},
-	{"ID" : "15", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_INPUT_r_V_dest_V_U", "Parent" : "0"},
-	{"ID" : "16", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_OUTPUT_r_V_data_V_U", "Parent" : "0"},
-	{"ID" : "17", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_OUTPUT_r_V_keep_V_U", "Parent" : "0"},
-	{"ID" : "18", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_OUTPUT_r_V_strb_V_U", "Parent" : "0"},
-	{"ID" : "19", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_OUTPUT_r_V_user_V_U", "Parent" : "0"},
-	{"ID" : "20", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_OUTPUT_r_V_last_V_U", "Parent" : "0"},
-	{"ID" : "21", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_OUTPUT_r_V_id_V_U", "Parent" : "0"},
-	{"ID" : "22", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_OUTPUT_r_V_dest_V_U", "Parent" : "0"}]}
+	{"ID" : "4", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_guitar_effects_Pipeline_2_fu_296.flow_control_loop_pipe_sequential_init_U", "Parent" : "3"},
+	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_compression_fu_301", "Parent" : "0", "Child" : ["6", "7", "8", "9"],
+		"CDFG" : "compression",
+		"Protocol" : "ap_ctrl_hs",
+		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
+		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"II" : "0",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "1", "EstimateLatencyMax" : "32",
+		"Combinational" : "0",
+		"Datapath" : "0",
+		"ClockEnable" : "0",
+		"HasSubDataflow" : "0",
+		"InDataflowNetwork" : "0",
+		"HasNonBlockingOperation" : "0",
+		"IsBlackBox" : "0",
+		"Port" : [
+			{"Name" : "input_r", "Type" : "None", "Direction" : "I"},
+			{"Name" : "min_threshold", "Type" : "None", "Direction" : "I"},
+			{"Name" : "max_threshold", "Type" : "None", "Direction" : "I"},
+			{"Name" : "zero_threshold", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_level_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "values_buffer", "Type" : "Memory", "Direction" : "O"}]},
+	{"ID" : "6", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_compression_fu_301.fdiv_32ns_32ns_32_16_no_dsp_1_U3", "Parent" : "5"},
+	{"ID" : "7", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_compression_fu_301.sitofp_32s_32_6_no_dsp_1_U4", "Parent" : "5"},
+	{"ID" : "8", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_compression_fu_301.sitofp_32s_32_6_no_dsp_1_U5", "Parent" : "5"},
+	{"ID" : "9", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_compression_fu_301.sdiv_16ns_16s_16_20_seq_1_U6", "Parent" : "5"},
+	{"ID" : "10", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.control_r_s_axi_U", "Parent" : "0"},
+	{"ID" : "11", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.faddfsub_32ns_32ns_32_5_full_dsp_1_U16", "Parent" : "0"},
+	{"ID" : "12", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.fmul_32ns_32ns_32_4_max_dsp_1_U17", "Parent" : "0"},
+	{"ID" : "13", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.sitofp_32s_32_6_no_dsp_1_U18", "Parent" : "0"},
+	{"ID" : "14", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.srem_17ns_17ns_17_21_seq_1_U19", "Parent" : "0"},
+	{"ID" : "15", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_INPUT_r_V_data_V_U", "Parent" : "0"},
+	{"ID" : "16", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_INPUT_r_V_keep_V_U", "Parent" : "0"},
+	{"ID" : "17", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_INPUT_r_V_strb_V_U", "Parent" : "0"},
+	{"ID" : "18", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_INPUT_r_V_user_V_U", "Parent" : "0"},
+	{"ID" : "19", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_INPUT_r_V_last_V_U", "Parent" : "0"},
+	{"ID" : "20", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_INPUT_r_V_id_V_U", "Parent" : "0"},
+	{"ID" : "21", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_INPUT_r_V_dest_V_U", "Parent" : "0"},
+	{"ID" : "22", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_OUTPUT_r_V_data_V_U", "Parent" : "0"},
+	{"ID" : "23", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_OUTPUT_r_V_keep_V_U", "Parent" : "0"},
+	{"ID" : "24", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_OUTPUT_r_V_strb_V_U", "Parent" : "0"},
+	{"ID" : "25", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_OUTPUT_r_V_user_V_U", "Parent" : "0"},
+	{"ID" : "26", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_OUTPUT_r_V_last_V_U", "Parent" : "0"},
+	{"ID" : "27", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_OUTPUT_r_V_id_V_U", "Parent" : "0"},
+	{"ID" : "28", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_OUTPUT_r_V_dest_V_U", "Parent" : "0"}]}
 
 
 set ArgLastReadFirstWriteLatency {
@@ -246,23 +271,31 @@ set ArgLastReadFirstWriteLatency {
 		INPUT_r_V_last_V {Type I LastRead 21 FirstWrite -1}
 		INPUT_r_V_id_V {Type I LastRead 21 FirstWrite -1}
 		INPUT_r_V_dest_V {Type I LastRead 21 FirstWrite -1}
-		OUTPUT_r_V_data_V {Type O LastRead -1 FirstWrite 58}
-		OUTPUT_r_V_keep_V {Type O LastRead -1 FirstWrite 58}
-		OUTPUT_r_V_strb_V {Type O LastRead -1 FirstWrite 58}
-		OUTPUT_r_V_user_V {Type O LastRead -1 FirstWrite 58}
-		OUTPUT_r_V_last_V {Type O LastRead -1 FirstWrite 58}
-		OUTPUT_r_V_id_V {Type O LastRead -1 FirstWrite 58}
-		OUTPUT_r_V_dest_V {Type O LastRead -1 FirstWrite 58}
-		control {Type I LastRead 14 FirstWrite -1}
-		distortion_threshold {Type I LastRead 14 FirstWrite -1}
-		distortion_clip_factor {Type I LastRead 14 FirstWrite -1}
-		compression_min_threshold {Type I LastRead -1 FirstWrite -1}
-		compression_max_threshold {Type I LastRead -1 FirstWrite -1}
-		compression_zero_threshold {Type I LastRead -1 FirstWrite -1}
-		delay_mult {Type I LastRead 20 FirstWrite -1}
-		delay_samples {Type I LastRead 0 FirstWrite -1}}
-	guitar_effects_Pipeline_1 {
-		delay_buffer {Type O LastRead -1 FirstWrite 0}}}
+		OUTPUT_r_V_data_V {Type O LastRead -1 FirstWrite 60}
+		OUTPUT_r_V_keep_V {Type O LastRead -1 FirstWrite 60}
+		OUTPUT_r_V_strb_V {Type O LastRead -1 FirstWrite 60}
+		OUTPUT_r_V_user_V {Type O LastRead -1 FirstWrite 60}
+		OUTPUT_r_V_last_V {Type O LastRead -1 FirstWrite 60}
+		OUTPUT_r_V_id_V {Type O LastRead -1 FirstWrite 60}
+		OUTPUT_r_V_dest_V {Type O LastRead -1 FirstWrite 60}
+		control {Type I LastRead 0 FirstWrite -1}
+		distortion_threshold {Type I LastRead 0 FirstWrite -1}
+		distortion_clip_factor {Type I LastRead 0 FirstWrite -1}
+		compression_min_threshold {Type I LastRead 0 FirstWrite -1}
+		compression_max_threshold {Type I LastRead 0 FirstWrite -1}
+		compression_zero_threshold {Type I LastRead 0 FirstWrite -1}
+		delay_mult {Type I LastRead 0 FirstWrite -1}
+		delay_samples {Type I LastRead 0 FirstWrite -1}
+		compression_buffer {Type O LastRead -1 FirstWrite -1}}
+	guitar_effects_Pipeline_2 {
+		delay_buffer {Type O LastRead -1 FirstWrite 0}}
+	compression {
+		input_r {Type I LastRead 0 FirstWrite -1}
+		min_threshold {Type I LastRead 0 FirstWrite -1}
+		max_threshold {Type I LastRead 0 FirstWrite -1}
+		zero_threshold {Type I LastRead 0 FirstWrite -1}
+		current_level_read {Type I LastRead 0 FirstWrite -1}
+		values_buffer {Type O LastRead -1 FirstWrite 0}}}
 
 set hasDtUnsupportedChannel 0
 
@@ -289,8 +322,6 @@ set Spec2ImplPortList {
 	OUTPUT_r_V_last_V { axis {  { OUTPUT_r_TLAST out_data 1 1 } } }
 	OUTPUT_r_V_id_V { axis {  { OUTPUT_r_TID out_data 1 5 } } }
 	OUTPUT_r_V_dest_V { axis {  { OUTPUT_r_TVALID out_vld 1 1 }  { OUTPUT_r_TREADY out_acc 0 1 }  { OUTPUT_r_TDEST out_data 1 6 } } }
-	delay_mult { ap_none {  { delay_mult in_data 0 32 } } }
-	delay_samples { ap_none {  { delay_samples in_data 0 32 } } }
 }
 
 set maxi_interface_dict [dict create]

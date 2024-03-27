@@ -42,13 +42,13 @@
         </hw>
       </arg>
       <arg id="8" access_type="r" src_name="delay_mult" src_type="float&amp;" src_isptr="1" src_bitwidth="32" src_size_or_depth="1">
-        <hw hw_usage="data" hw_interface="Register" hw_name="delay_mult" hw_bitwidth="32" hw_size_or_depth="1" hw_kernel_support="false">
-          <constraint constraint_type="pragma interface" mode="ap_none" register_option="0"/>
+        <hw hw_usage="data" hw_interface="S_AXILite" hw_name="control_r" hw_bitwidth="32" hw_size_or_depth="1" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="64"/>
         </hw>
       </arg>
       <arg id="9" access_type="r" src_name="delay_samples" src_type="int&amp;" src_isptr="1" src_bitwidth="32" src_size_or_depth="1">
-        <hw hw_usage="data" hw_interface="Register" hw_name="delay_samples" hw_bitwidth="32" hw_size_or_depth="1" hw_kernel_support="false">
-          <constraint constraint_type="pragma interface" mode="ap_none" register_option="0"/>
+        <hw hw_usage="data" hw_interface="S_AXILite" hw_name="control_r" hw_bitwidth="32" hw_size_or_depth="1" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="72"/>
         </hw>
       </arg>
     </args>

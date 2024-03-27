@@ -33,7 +33,8 @@ void guitar_effects (
     #pragma HLS INTERFACE s_axilite port=compression_min_threshold
     #pragma HLS INTERFACE s_axilite port=compression_max_threshold
     #pragma HLS INTERFACE s_axilite port=compression_zero_threshold
-
+#pragma HLS INTERFACE s_axilite port=delay_mult
+#pragma HLS INTERFACE s_axilite port=delay_samples
 
     // declare all necessary variables
 
@@ -42,6 +43,10 @@ void guitar_effects (
     short compression_buffer[LPF_FILTER_LENGTH] = {0};
     short compression_buffer_index = 0;
     short lpf_coefficients[LPF_FILTER_LENGTH] = {0};
+    float filter_value = 3.0 / LPF_FILTER_LENGTH;
+    for (int i = 0; i < LPF_FILTER_LENGTH; i++) {
+    	lpf_coefficients[i] = filter_value;
+    }
     
     //delay vars
     short delay_buffer[DELAY_BUFFER_SIZE] = {0};
@@ -87,9 +92,9 @@ short distortion(short input, int threshold, float clip_factor) {
     short result;
     short negative_threshold = -threshold;
     if (input > threshold) {
-        result = (input - threshold) * clip_factor + threshold;
+        result = static_cast<short>((input - threshold) * clip_factor + threshold);
     } else if (input < negative_threshold) {
-        result = (input + threshold) * clip_factor - threshold;
+        result = static_cast<short>((input + threshold) * clip_factor - threshold);
     } else {
         result = input;
     }
@@ -123,16 +128,16 @@ short compression(short input, short min_threshold, short max_threshold, short z
     if (current_level > max_threshold) {
     	if (current_level > 0) {
     		//realistically this will always be the case because max threshold will always be > 0
-    		compression_factor = max_threshold / current_level;
-    		output = input * compression_factor;
+    		compression_factor = static_cast<float>(max_threshold) / current_level;
+    		output = static_cast<short>(input * compression_factor);
     	} else {
     		output = input;
     	}
 
     } else if ((current_level < min_threshold) && (current_level > zero_threshold))  {
     	if (current_level > 0) {
-    		compression_factor = min_threshold / current_level;
-    		output = input * compression_factor;
+    		compression_factor = static_cast<short>(min_threshold) / current_level;
+    		output = static_cast<short>(input * compression_factor);
     	} else {
     		output = input;
     	}
@@ -149,7 +154,7 @@ short compression(short input, short min_threshold, short max_threshold, short z
 short delay(short input, short delay_samples, float delay_mult, short delay_buffer[DELAY_BUFFER_SIZE], short delay_buffer_index) {
     // add delayed output to input signal
     short output;
-    output = input + (delay_buffer[(delay_buffer_index - delay_samples) % DELAY_BUFFER_SIZE]*delay_mult); // add a previous sample to the input
+    output = static_cast<short>(input + (delay_buffer[(delay_buffer_index - delay_samples) % DELAY_BUFFER_SIZE]*delay_mult)); // add a previous sample to the input
     
     //store output in the buffer and update index
     delay_buffer[delay_buffer_index] = output;

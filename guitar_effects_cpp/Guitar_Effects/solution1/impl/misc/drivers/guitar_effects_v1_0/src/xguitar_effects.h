@@ -94,6 +94,10 @@ void XGuitar_effects_Set_compression_max_threshold(XGuitar_effects *InstancePtr,
 u32 XGuitar_effects_Get_compression_max_threshold(XGuitar_effects *InstancePtr);
 void XGuitar_effects_Set_compression_zero_threshold(XGuitar_effects *InstancePtr, u32 Data);
 u32 XGuitar_effects_Get_compression_zero_threshold(XGuitar_effects *InstancePtr);
+void XGuitar_effects_Set_delay_mult(XGuitar_effects *InstancePtr, u32 Data);
+u32 XGuitar_effects_Get_delay_mult(XGuitar_effects *InstancePtr);
+void XGuitar_effects_Set_delay_samples(XGuitar_effects *InstancePtr, u32 Data);
+u32 XGuitar_effects_Get_delay_samples(XGuitar_effects *InstancePtr);
 
 #ifdef __cplusplus
 }

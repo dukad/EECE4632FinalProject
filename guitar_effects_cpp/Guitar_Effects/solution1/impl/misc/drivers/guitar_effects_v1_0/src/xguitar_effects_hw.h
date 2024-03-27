@@ -31,6 +31,12 @@
 //        bit 15~0 - compression_zero_threshold[15:0] (Read/Write)
 //        others   - reserved
 // 0x3c : reserved
+// 0x40 : Data signal of delay_mult
+//        bit 31~0 - delay_mult[31:0] (Read/Write)
+// 0x44 : reserved
+// 0x48 : Data signal of delay_samples
+//        bit 31~0 - delay_samples[31:0] (Read/Write)
+// 0x4c : reserved
 // (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
 #define XGUITAR_EFFECTS_CONTROL_R_ADDR_CONTROL_DATA                    0x10
@@ -45,4 +51,8 @@
 #define XGUITAR_EFFECTS_CONTROL_R_BITS_COMPRESSION_MAX_THRESHOLD_DATA  16
 #define XGUITAR_EFFECTS_CONTROL_R_ADDR_COMPRESSION_ZERO_THRESHOLD_DATA 0x38
 #define XGUITAR_EFFECTS_CONTROL_R_BITS_COMPRESSION_ZERO_THRESHOLD_DATA 16
+#define XGUITAR_EFFECTS_CONTROL_R_ADDR_DELAY_MULT_DATA                 0x40
+#define XGUITAR_EFFECTS_CONTROL_R_BITS_DELAY_MULT_DATA                 32
+#define XGUITAR_EFFECTS_CONTROL_R_ADDR_DELAY_SAMPLES_DATA              0x48
+#define XGUITAR_EFFECTS_CONTROL_R_BITS_DELAY_SAMPLES_DATA              32
 
