@@ -1,0 +1,32 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.16629",
+   "Default View_TopLeft":"-110,-644",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+#  -string -flagsOSRD
+preplace port DDR -pg 1 -lvl 6 -x 1930 -y -150 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 6 -x 1930 -y -130 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 3 -x 890 -y -100 -defaultsOSRD
+preplace inst ps7_0_axi_periph -pg 1 -lvl 5 -x 1750 -y -270 -defaultsOSRD
+preplace inst rst_ps7_0_100M -pg 1 -lvl 4 -x 1280 -y -250 -defaultsOSRD
+preplace inst guitar_effects_0 -pg 1 -lvl 2 -x 510 -y -380 -defaultsOSRD
+preplace inst axi_dma_0 -pg 1 -lvl 1 -x 150 -y -450 -defaultsOSRD
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 5 -40 -580 320 -210 680 -210 1090 -360 1460
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 3 1 1110 -270n
+preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 0 5 -20 -330 340 -270 690 -370 N -370 1450
+preplace netloc processing_system7_0_DDR 1 3 3 NJ -150 1460 -130 1900
+preplace netloc processing_system7_0_FIXED_IO 1 3 3 NJ -130 1450 -120 1910
+preplace netloc processing_system7_0_M_AXI_GP0 1 3 2 1100J -350 N
+preplace netloc ps7_0_axi_periph_M00_AXI 1 1 5 340 -480 NJ -480 NJ -480 NJ -480 1900
+preplace netloc ps7_0_axi_periph_M01_AXI 1 0 6 -30 -570 NJ -570 NJ -570 NJ -570 NJ -570 1910
+preplace netloc axi_dma_0_M_AXIS_MM2S 1 1 1 330 -470n
+preplace netloc guitar_effects_0_OUTPUT_r 1 0 3 -30 -280 N -280 680
+levelinfo -pg 1 -60 150 510 890 1280 1750 1930
+pagesize -pg 1 -db -bbox -sgen -60 -610 2050 200
+"
+}
+{
+   "da_axi4_cnt":"3",
+   "da_ps7_cnt":"1"
+}

@@ -1,0 +1,280 @@
+
+
+================================================================
+== Vitis HLS Report for 'guitar_effects'
+================================================================
+* Date:           Wed Mar 27 15:08:51 2024
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
+* Project:        Guitar_Effects
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.256 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +--------------------------------------+---------------------------+---------+---------+-----------+----------+-------+-------+---------+
+        |                                      |                           |  Latency (cycles) |  Latency (absolute)  |    Interval   | Pipeline|
+        |               Instance               |           Module          |   min   |   max   |    min    |    max   |  min  |  max  |   Type  |
+        +--------------------------------------+---------------------------+---------+---------+-----------+----------+-------+-------+---------+
+        |grp_guitar_effects_Pipeline_2_fu_296  |guitar_effects_Pipeline_2  |    44102|    44102|   0.441 ms|  0.441 ms|  44102|  44102|       no|
+        |grp_compression_fu_301                |compression                |        1|       32|  10.000 ns|  0.320 us|      1|     32|       no|
+        +--------------------------------------+---------------------------+---------+---------+-----------+----------+-------+-------+---------+
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_59_2  |        ?|        ?|    5 ~ 73|          -|          -|     ?|        no|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|   1478|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        0|    5|    1383|   2768|    -|
+|Memory           |       65|    -|       0|      0|    0|
+|Multiplexer      |        -|    -|       -|    637|    -|
+|Register         |        -|    -|     703|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |       65|    5|    2086|   4883|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |       23|    2|       1|      9|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +----------------------------------------+------------------------------------+---------+----+-----+------+-----+
+    |                Instance                |               Module               | BRAM_18K| DSP|  FF |  LUT | URAM|
+    +----------------------------------------+------------------------------------+---------+----+-----+------+-----+
+    |grp_compression_fu_301                  |compression                         |        0|   0|  557|  1488|    0|
+    |control_r_s_axi_U                       |control_r_s_axi                     |        0|   0|  246|   376|    0|
+    |faddfsub_32ns_32ns_32_5_full_dsp_1_U16  |faddfsub_32ns_32ns_32_5_full_dsp_1  |        0|   2|  205|   390|    0|
+    |fmul_32ns_32ns_32_4_max_dsp_1_U17       |fmul_32ns_32ns_32_4_max_dsp_1       |        0|   3|  143|   321|    0|
+    |grp_guitar_effects_Pipeline_2_fu_296    |guitar_effects_Pipeline_2           |        0|   0|   18|    63|    0|
+    |sitofp_32s_32_6_no_dsp_1_U18            |sitofp_32s_32_6_no_dsp_1            |        0|   0|    0|     0|    0|
+    |srem_17ns_17ns_17_21_seq_1_U19          |srem_17ns_17ns_17_21_seq_1          |        0|   0|  214|   130|    0|
+    +----------------------------------------+------------------------------------+---------+----+-----+------+-----+
+    |Total                                   |                                    |        0|   5| 1383|  2768|    0|
+    +----------------------------------------+------------------------------------+---------+----+-----+------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    +----------------------+----------------------------------+---------+---+----+-----+-------+-----+------+-------------+
+    |        Memory        |              Module              | BRAM_18K| FF| LUT| URAM| Words | Bits| Banks| W*Bits*Banks|
+    +----------------------+----------------------------------+---------+---+----+-----+-------+-----+------+-------------+
+    |compression_buffer_U  |compression_buffer_RAM_AUTO_0R0W  |        1|  0|   0|    0|    441|   16|     1|         7056|
+    |delay_buffer_U        |delay_buffer_RAM_AUTO_1R1W        |       64|  0|   0|    0|  44100|   16|     1|       705600|
+    +----------------------+----------------------------------+---------+---+----+-----+-------+-----+------+-------------+
+    |Total                 |                                  |       65|  0|   0|    0|  44541|   32|     2|       712656|
+    +----------------------+----------------------------------+---------+---+----+-----+-------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+----+---+-----+------------+------------+
+    |           Variable Name          | Operation| DSP| FF| LUT | Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+----+---+-----+------------+------------+
+    |add_ln346_1_fu_491_p2             |         +|   0|  0|   14|           9|           8|
+    |add_ln346_2_fu_790_p2             |         +|   0|  0|   14|           9|           8|
+    |add_ln346_fu_629_p2               |         +|   0|  0|   14|           9|           8|
+    |add_ln97_fu_447_p2                |         +|   0|  0|   24|          17|          17|
+    |grp_fu_374_p0                     |         -|   0|  0|   24|           1|          17|
+    |negative_threshold_fu_395_p2      |         -|   0|  0|   23|           1|          16|
+    |result_V_2_fu_722_p2              |         -|   0|  0|   23|           1|          16|
+    |result_V_5_fu_584_p2              |         -|   0|  0|   23|           1|          16|
+    |result_V_8_fu_883_p2              |         -|   0|  0|   23|           1|          16|
+    |sub_ln1512_1_fu_505_p2            |         -|   0|  0|   15|           7|           8|
+    |sub_ln1512_2_fu_804_p2            |         -|   0|  0|   15|           7|           8|
+    |sub_ln1512_fu_643_p2              |         -|   0|  0|   15|           7|           8|
+    |sub_ln95_fu_452_p2                |         -|   0|  0|   24|          17|          17|
+    |ap_block_state60_on_subcall_done  |       and|   0|  0|    2|           1|           1|
+    |icmp_ln94_fu_437_p2               |      icmp|   0|  0|   13|          16|          16|
+    |icmp_ln96_fu_442_p2               |      icmp|   0|  0|   13|          16|          16|
+    |r_V_2_fu_543_p2                   |      lshr|   0|  0|  179|          63|          63|
+    |r_V_4_fu_842_p2                   |      lshr|   0|  0|  179|          63|          63|
+    |r_V_fu_681_p2                     |      lshr|   0|  0|  179|          63|          63|
+    |ap_block_state80                  |        or|   0|  0|    2|           1|           1|
+    |result_V_10_fu_888_p3             |    select|   0|  0|   16|           1|          16|
+    |result_V_9_fu_589_p3              |    select|   0|  0|   16|           1|          16|
+    |result_V_fu_727_p3                |    select|   0|  0|   16|           1|          16|
+    |ush_1_fu_515_p3                   |    select|   0|  0|    9|           1|           9|
+    |ush_2_fu_814_p3                   |    select|   0|  0|    9|           1|           9|
+    |ush_fu_653_p3                     |    select|   0|  0|    9|           1|           9|
+    |val_1_fu_577_p3                   |    select|   0|  0|   16|           1|          16|
+    |val_2_fu_876_p3                   |    select|   0|  0|   16|           1|          16|
+    |val_fu_715_p3                     |    select|   0|  0|   16|           1|          16|
+    |r_V_1_fu_687_p2                   |       shl|   0|  0|  179|          63|          63|
+    |r_V_3_fu_549_p2                   |       shl|   0|  0|  179|          63|          63|
+    |r_V_5_fu_848_p2                   |       shl|   0|  0|  179|          63|          63|
+    +----------------------------------+----------+----+---+-----+------------+------------+
+    |Total                             |          |   0|  0| 1478|         508|         698|
+    +----------------------------------+----------+----+---+-----+------------+------------+
+
+    * Multiplexer: 
+    +------------------------+-----+-----------+-----+-----------+
+    |          Name          | LUT | Input Size| Bits| Total Bits|
+    +------------------------+-----+-----------+-----+-----------+
+    |INPUT_r_TDATA_blk_n     |    9|          2|    1|          2|
+    |OUTPUT_r_TDATA_blk_n    |    9|          2|    1|          2|
+    |ap_NS_fsm               |  409|         81|    1|         81|
+    |current_level_1_fu_154  |    9|          2|   16|         32|
+    |delay_buffer_address0   |   20|          4|   16|         64|
+    |delay_buffer_ce0        |   14|          3|    1|          3|
+    |delay_buffer_d0         |   14|          3|   16|         48|
+    |delay_buffer_we0        |   14|          3|    1|          3|
+    |grp_fu_313_opcode       |   14|          3|    2|          6|
+    |grp_fu_313_p0           |   14|          3|   32|         96|
+    |grp_fu_313_p1           |   14|          3|   32|         96|
+    |grp_fu_317_ce           |    9|          2|    1|          2|
+    |grp_fu_317_p0           |   14|          3|   32|         96|
+    |grp_fu_317_p1           |   20|          4|   32|        128|
+    |grp_fu_321_p0           |   31|          6|   32|        192|
+    |tmp_short_3_reg_285     |    9|          2|   16|         32|
+    |tmp_short_reg_271       |   14|          3|   16|         48|
+    +------------------------+-----+-----------+-----+-----------+
+    |Total                   |  637|        129|  248|        931|
+    +------------------------+-----+-----------+-----+-----------+
+
+    * Register: 
+    +---------------------------------------------------+----+----+-----+-----------+
+    |                        Name                       | FF | LUT| Bits| Const Bits|
+    +---------------------------------------------------+----+----+-----+-----------+
+    |add_ln97_reg_1027                                  |  17|   0|   17|          0|
+    |ap_CS_fsm                                          |  80|   0|   80|          0|
+    |clip_factor_assign_reg_959                         |  32|   0|   32|          0|
+    |compression_max_threshold_read_reg_924             |  16|   0|   16|          0|
+    |compression_min_threshold_read_reg_919             |  16|   0|   16|          0|
+    |compression_zero_threshold_read_reg_929            |  16|   0|   16|          0|
+    |conv5_i_reg_974                                    |  32|   0|   32|          0|
+    |current_level_1_fu_154                             |  16|   0|   16|          0|
+    |delay_buffer_addr_1_reg_979                        |  16|   0|   16|          0|
+    |delay_buffer_load_reg_1112                         |  16|   0|   16|          0|
+    |delay_mult_assign_reg_938                          |  32|   0|   32|          0|
+    |distortion_clip_factor_read_reg_914                |  32|   0|   32|          0|
+    |distortion_threshold_load_cast_reg_953             |  17|   0|   17|          0|
+    |distortion_threshold_read_reg_906                  |  16|   0|   16|          0|
+    |grp_compression_fu_301_ap_start_reg                |   1|   0|    1|          0|
+    |grp_guitar_effects_Pipeline_2_fu_296_ap_start_reg  |   1|   0|    1|          0|
+    |isNeg_1_reg_1052                                   |   1|   0|    1|          0|
+    |isNeg_2_reg_1137                                   |   1|   0|    1|          0|
+    |isNeg_reg_1088                                     |   1|   0|    1|          0|
+    |negative_threshold_reg_969                         |  16|   0|   16|          0|
+    |p_Result_1_reg_1083                                |  23|   0|   23|          0|
+    |p_Result_2_reg_1042                                |   1|   0|    1|          0|
+    |p_Result_3_reg_1047                                |  23|   0|   23|          0|
+    |p_Result_4_reg_1127                                |   1|   0|    1|          0|
+    |p_Result_5_reg_1132                                |  23|   0|   23|          0|
+    |p_Result_s_reg_1078                                |   1|   0|    1|          0|
+    |reg_324                                            |  32|   0|   32|          0|
+    |reg_330                                            |  32|   0|   32|          0|
+    |reg_336                                            |  32|   0|   32|          0|
+    |sub_ln95_reg_1032                                  |  17|   0|   17|          0|
+    |tmp_2_reg_934                                      |   1|   0|    1|          0|
+    |tmp_data_V_reg_984                                 |  16|   0|   16|          0|
+    |tmp_dest_V_reg_1016                                |   6|   0|    6|          0|
+    |tmp_id_V_reg_1011                                  |   5|   0|    5|          0|
+    |tmp_keep_V_reg_991                                 |   2|   0|    2|          0|
+    |tmp_last_V_reg_1006                                |   1|   0|    1|          0|
+    |tmp_reg_902                                        |   1|   0|    1|          0|
+    |tmp_short_3_reg_285                                |  16|   0|   16|          0|
+    |tmp_short_reg_271                                  |  16|   0|   16|          0|
+    |tmp_strb_V_reg_996                                 |   2|   0|    2|          0|
+    |tmp_user_V_reg_1001                                |   2|   0|    2|          0|
+    |ush_1_reg_1057                                     |   9|   0|    9|          0|
+    |ush_2_reg_1142                                     |   9|   0|    9|          0|
+    |ush_reg_1093                                       |   9|   0|    9|          0|
+    |val_1_reg_1062                                     |  16|   0|   16|          0|
+    |val_2_reg_1147                                     |  16|   0|   16|          0|
+    |val_reg_1098                                       |  16|   0|   16|          0|
+    +---------------------------------------------------+----+----+-----+-----------+
+    |Total                                              | 703|   0|  703|          0|
+    +---------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------------+-----+-----+------------+-------------------+--------------+
+|        RTL Ports        | Dir | Bits|  Protocol  |   Source Object   |    C Type    |
++-------------------------+-----+-----+------------+-------------------+--------------+
+|s_axi_control_r_AWVALID  |   in|    1|       s_axi|          control_r|       pointer|
+|s_axi_control_r_AWREADY  |  out|    1|       s_axi|          control_r|       pointer|
+|s_axi_control_r_AWADDR   |   in|    7|       s_axi|          control_r|       pointer|
+|s_axi_control_r_WVALID   |   in|    1|       s_axi|          control_r|       pointer|
+|s_axi_control_r_WREADY   |  out|    1|       s_axi|          control_r|       pointer|
+|s_axi_control_r_WDATA    |   in|   32|       s_axi|          control_r|       pointer|
+|s_axi_control_r_WSTRB    |   in|    4|       s_axi|          control_r|       pointer|
+|s_axi_control_r_ARVALID  |   in|    1|       s_axi|          control_r|       pointer|
+|s_axi_control_r_ARREADY  |  out|    1|       s_axi|          control_r|       pointer|
+|s_axi_control_r_ARADDR   |   in|    7|       s_axi|          control_r|       pointer|
+|s_axi_control_r_RVALID   |  out|    1|       s_axi|          control_r|       pointer|
+|s_axi_control_r_RREADY   |   in|    1|       s_axi|          control_r|       pointer|
+|s_axi_control_r_RDATA    |  out|   32|       s_axi|          control_r|       pointer|
+|s_axi_control_r_RRESP    |  out|    2|       s_axi|          control_r|       pointer|
+|s_axi_control_r_BVALID   |  out|    1|       s_axi|          control_r|       pointer|
+|s_axi_control_r_BREADY   |   in|    1|       s_axi|          control_r|       pointer|
+|s_axi_control_r_BRESP    |  out|    2|       s_axi|          control_r|       pointer|
+|ap_clk                   |   in|    1|  ap_ctrl_hs|     guitar_effects|  return value|
+|ap_rst_n                 |   in|    1|  ap_ctrl_hs|     guitar_effects|  return value|
+|ap_start                 |   in|    1|  ap_ctrl_hs|     guitar_effects|  return value|
+|ap_done                  |  out|    1|  ap_ctrl_hs|     guitar_effects|  return value|
+|ap_idle                  |  out|    1|  ap_ctrl_hs|     guitar_effects|  return value|
+|ap_ready                 |  out|    1|  ap_ctrl_hs|     guitar_effects|  return value|
+|INPUT_r_TDATA            |   in|   16|        axis|   INPUT_r_V_data_V|       pointer|
+|INPUT_r_TVALID           |   in|    1|        axis|   INPUT_r_V_dest_V|       pointer|
+|INPUT_r_TREADY           |  out|    1|        axis|   INPUT_r_V_dest_V|       pointer|
+|INPUT_r_TDEST            |   in|    6|        axis|   INPUT_r_V_dest_V|       pointer|
+|INPUT_r_TKEEP            |   in|    2|        axis|   INPUT_r_V_keep_V|       pointer|
+|INPUT_r_TSTRB            |   in|    2|        axis|   INPUT_r_V_strb_V|       pointer|
+|INPUT_r_TUSER            |   in|    2|        axis|   INPUT_r_V_user_V|       pointer|
+|INPUT_r_TLAST            |   in|    1|        axis|   INPUT_r_V_last_V|       pointer|
+|INPUT_r_TID              |   in|    5|        axis|     INPUT_r_V_id_V|       pointer|
+|OUTPUT_r_TDATA           |  out|   16|        axis|  OUTPUT_r_V_data_V|       pointer|
+|OUTPUT_r_TVALID          |  out|    1|        axis|  OUTPUT_r_V_dest_V|       pointer|
+|OUTPUT_r_TREADY          |   in|    1|        axis|  OUTPUT_r_V_dest_V|       pointer|
+|OUTPUT_r_TDEST           |  out|    6|        axis|  OUTPUT_r_V_dest_V|       pointer|
+|OUTPUT_r_TKEEP           |  out|    2|        axis|  OUTPUT_r_V_keep_V|       pointer|
+|OUTPUT_r_TSTRB           |  out|    2|        axis|  OUTPUT_r_V_strb_V|       pointer|
+|OUTPUT_r_TUSER           |  out|    2|        axis|  OUTPUT_r_V_user_V|       pointer|
+|OUTPUT_r_TLAST           |  out|    1|        axis|  OUTPUT_r_V_last_V|       pointer|
+|OUTPUT_r_TID             |  out|    5|        axis|    OUTPUT_r_V_id_V|       pointer|
++-------------------------+-----+-----+------------+-------------------+--------------+
+
