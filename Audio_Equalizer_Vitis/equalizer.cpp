@@ -1,7 +1,7 @@
 
 
-#include "hls_stream.h"
-#include "ap_axis_sdata.h"
+#include <hls_stream.h>
+#include <ap_axi_sdata.h>
 
 #define LOWER_FREQ_BOUND 1000
 #define UPPER_FREQ_BOUND 3000
@@ -9,8 +9,12 @@
 #define N2 33
 #define N3 33
 
-void fir(hls::stream< ap_axis<16,2,5,6> > &SIGNAL_IN,
-    hls::stream< ap_axis<16,2,5,6> > &SIGNAL_OUT,
+typedef int data_t;
+typedef int coef_t;
+typedef int acc_t;
+
+void equalizer(hls::stream< ap_axis<32,2,5,6> > &SIGNAL_IN,
+    hls::stream< ap_axis<32,2,5,6> > &SIGNAL_OUT,
     coef_t lowpass_coefs[N1],
     coef_t bandpass_coefs[N2],
     coef_t highpass_coefs[N3]){
@@ -24,30 +28,34 @@ void fir(hls::stream< ap_axis<16,2,5,6> > &SIGNAL_IN,
     acc_t accumulate;
     data_t data;
     int i;
+    ap_axis<32,2,5,6> tmp;
 
-    acc = 0;
+    SIGNAL_IN.read(tmp);
+
+    accumulate = 0;
     Lowpass_Shift_Accumulate_Loop:
     for (i = N1 - 1; i >= 0; i--){
         lowpass_shift_reg[i] = lowpass_shift_reg[i - 1];
         accumulate += lowpass_shift_reg[i] * lowpass_coefs[i];
     }
 
-    acc = 0;
+    accumulate = 0;
     Bandpass_Shift_Accumulate_Loop:
     for (i = N2 - 1; i >= 0; i--){
         bandpass_shift_reg[i] = bandpass_shift_reg[i - 1];
         accumulate += bandpass_shift_reg[i] * bandpass_coefs[i];
     }
 
-    acc = 0;
+    accumulate = 0;
     Highpass_Shift_Accumulate_Loop:
     for (i = N3 - 1; i >= 0; i--){
         highpass_shift_reg[i] = highpass_shift_reg[i - 1];
         accumulate += highpass_shift_reg[i] * highpass_coefs[i];
     }
 
-    // Do we define 3 separate input and output ports?
-    // Do we use an if else statement?
+    SIGNAL_OUT.write(tmp);
+
+
 }
 
 /* Put three for loops in parallel, one for each of the filters

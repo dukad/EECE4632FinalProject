@@ -1,0 +1,1396 @@
+<profile>
+    <ReportVersion>
+        <Version>2022.1</Version>
+    </ReportVersion>
+    <UserAssignments>
+        <unit>ns</unit>
+        <ProductFamily>zynq</ProductFamily>
+        <Part>xc7z020-clg400-1</Part>
+        <TopModelName>equalizer</TopModelName>
+        <TargetClockPeriod>10.00</TargetClockPeriod>
+        <ClockUncertainty>2.70</ClockUncertainty>
+        <FlowTarget>vivado</FlowTarget>
+    </UserAssignments>
+    <PerformanceEstimates>
+        <PipelineType>no</PipelineType>
+        <SummaryOfTimingAnalysis>
+            <unit>ns</unit>
+            <EstimatedClockPeriod>6.508</EstimatedClockPeriod>
+        </SummaryOfTimingAnalysis>
+        <SummaryOfOverallLatency>
+            <unit>clock cycles</unit>
+            <Best-caseLatency>36</Best-caseLatency>
+            <Average-caseLatency>36</Average-caseLatency>
+            <Worst-caseLatency>36</Worst-caseLatency>
+            <Best-caseRealTimeLatency>0.360 us</Best-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>0.360 us</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>0.360 us</Worst-caseRealTimeLatency>
+            <Interval-min>37</Interval-min>
+            <Interval-max>37</Interval-max>
+        </SummaryOfOverallLatency>
+    </PerformanceEstimates>
+    <AreaEstimates>
+        <Resources>
+            <BRAM_18K>3</BRAM_18K>
+            <FF>56</FF>
+            <LUT>194</LUT>
+            <URAM>0</URAM>
+            <DSP>0</DSP>
+        </Resources>
+        <AvailableResources>
+            <BRAM_18K>280</BRAM_18K>
+            <DSP>220</DSP>
+            <FF>106400</FF>
+            <LUT>53200</LUT>
+            <URAM>0</URAM>
+        </AvailableResources>
+    </AreaEstimates>
+    <InterfaceSummary>
+        <RtlPorts>
+            <name>ap_clk</name>
+            <Object>equalizer</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_rst_n</name>
+            <Object>equalizer</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_start</name>
+            <Object>equalizer</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_done</name>
+            <Object>equalizer</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_idle</name>
+            <Object>equalizer</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_ready</name>
+            <Object>equalizer</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>SIGNAL_IN_TDATA</name>
+            <Object>SIGNAL_IN_V_data_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>SIGNAL_IN_TVALID</name>
+            <Object>SIGNAL_IN_V_dest_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>SIGNAL_IN_TREADY</name>
+            <Object>SIGNAL_IN_V_dest_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>SIGNAL_IN_TDEST</name>
+            <Object>SIGNAL_IN_V_dest_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>6</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>SIGNAL_IN_TKEEP</name>
+            <Object>SIGNAL_IN_V_keep_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>4</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>SIGNAL_IN_TSTRB</name>
+            <Object>SIGNAL_IN_V_strb_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>4</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>SIGNAL_IN_TUSER</name>
+            <Object>SIGNAL_IN_V_user_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>2</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>SIGNAL_IN_TLAST</name>
+            <Object>SIGNAL_IN_V_last_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>SIGNAL_IN_TID</name>
+            <Object>SIGNAL_IN_V_id_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>5</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>SIGNAL_OUT_TDATA</name>
+            <Object>SIGNAL_OUT_V_data_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>SIGNAL_OUT_TVALID</name>
+            <Object>SIGNAL_OUT_V_dest_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>SIGNAL_OUT_TREADY</name>
+            <Object>SIGNAL_OUT_V_dest_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>SIGNAL_OUT_TDEST</name>
+            <Object>SIGNAL_OUT_V_dest_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>6</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>SIGNAL_OUT_TKEEP</name>
+            <Object>SIGNAL_OUT_V_keep_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>4</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>SIGNAL_OUT_TSTRB</name>
+            <Object>SIGNAL_OUT_V_strb_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>4</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>SIGNAL_OUT_TUSER</name>
+            <Object>SIGNAL_OUT_V_user_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>2</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>SIGNAL_OUT_TLAST</name>
+            <Object>SIGNAL_OUT_V_last_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>SIGNAL_OUT_TID</name>
+            <Object>SIGNAL_OUT_V_id_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>5</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>lowpass_coefs_address0</name>
+            <Object>lowpass_coefs</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>6</Bits>
+            <Attribute>address</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>lowpass_coefs_ce0</name>
+            <Object>lowpass_coefs</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>lowpass_coefs_we0</name>
+            <Object>lowpass_coefs</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>lowpass_coefs_d0</name>
+            <Object>lowpass_coefs</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>lowpass_coefs_q0</name>
+            <Object>lowpass_coefs</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>lowpass_coefs_address1</name>
+            <Object>lowpass_coefs</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>6</Bits>
+            <Attribute>address</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>lowpass_coefs_ce1</name>
+            <Object>lowpass_coefs</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>lowpass_coefs_we1</name>
+            <Object>lowpass_coefs</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>lowpass_coefs_d1</name>
+            <Object>lowpass_coefs</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>lowpass_coefs_q1</name>
+            <Object>lowpass_coefs</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>bandpass_coefs_address0</name>
+            <Object>bandpass_coefs</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>6</Bits>
+            <Attribute>address</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>bandpass_coefs_ce0</name>
+            <Object>bandpass_coefs</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>bandpass_coefs_we0</name>
+            <Object>bandpass_coefs</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>bandpass_coefs_d0</name>
+            <Object>bandpass_coefs</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>bandpass_coefs_q0</name>
+            <Object>bandpass_coefs</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>bandpass_coefs_address1</name>
+            <Object>bandpass_coefs</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>6</Bits>
+            <Attribute>address</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>bandpass_coefs_ce1</name>
+            <Object>bandpass_coefs</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>bandpass_coefs_we1</name>
+            <Object>bandpass_coefs</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>bandpass_coefs_d1</name>
+            <Object>bandpass_coefs</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>bandpass_coefs_q1</name>
+            <Object>bandpass_coefs</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>highpass_coefs_address0</name>
+            <Object>highpass_coefs</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>6</Bits>
+            <Attribute>address</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>highpass_coefs_ce0</name>
+            <Object>highpass_coefs</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>highpass_coefs_we0</name>
+            <Object>highpass_coefs</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>highpass_coefs_d0</name>
+            <Object>highpass_coefs</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>highpass_coefs_q0</name>
+            <Object>highpass_coefs</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>highpass_coefs_address1</name>
+            <Object>highpass_coefs</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>6</Bits>
+            <Attribute>address</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>highpass_coefs_ce1</name>
+            <Object>highpass_coefs</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>highpass_coefs_we1</name>
+            <Object>highpass_coefs</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>highpass_coefs_d1</name>
+            <Object>highpass_coefs</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>highpass_coefs_q1</name>
+            <Object>highpass_coefs</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+    </InterfaceSummary>
+    <RTLDesignHierarchy>
+        <TopModule MAX_DEPTH="3">
+            <ModuleName>equalizer</ModuleName>
+            <InstancesList>
+                <Instance>
+                    <InstName>grp_equalizer_Pipeline_Lowpass_Shift_Accumulate_Loop_fu_115</InstName>
+                    <ModuleName>equalizer_Pipeline_Lowpass_Shift_Accumulate_Loop</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>115</ID>
+                    <BindInstances>add_ln37_fu_76_p2 lowpass_shift_reg_U</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_equalizer_Pipeline_Bandpass_Shift_Accumulate_Loop_fu_121</InstName>
+                    <ModuleName>equalizer_Pipeline_Bandpass_Shift_Accumulate_Loop</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>121</ID>
+                    <BindInstances>add_ln44_fu_76_p2 bandpass_shift_reg_U</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_equalizer_Pipeline_Highpass_Shift_Accumulate_Loop_fu_127</InstName>
+                    <ModuleName>equalizer_Pipeline_Highpass_Shift_Accumulate_Loop</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>127</ID>
+                    <BindInstances>add_ln51_fu_76_p2 highpass_shift_reg_U</BindInstances>
+                </Instance>
+            </InstancesList>
+        </TopModule>
+    </RTLDesignHierarchy>
+    <ModuleInformation>
+        <Module>
+            <Name>equalizer_Pipeline_Lowpass_Shift_Accumulate_Loop</Name>
+            <Loops>
+                <Lowpass_Shift_Accumulate_Loop/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>6.508</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>35</Best-caseLatency>
+                    <Average-caseLatency>35</Average-caseLatency>
+                    <Worst-caseLatency>35</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.350 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.350 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.350 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>35</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <Lowpass_Shift_Accumulate_Loop>
+                        <Name>Lowpass_Shift_Accumulate_Loop</Name>
+                        <TripCount>33</TripCount>
+                        <Latency>33</Latency>
+                        <AbsoluteTimeLatency>0.330 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>2</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </Lowpass_Shift_Accumulate_Loop>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <BRAM_18K>1</BRAM_18K>
+                    <AVAIL_BRAM>280</AVAIL_BRAM>
+                    <UTIL_BRAM>~0</UTIL_BRAM>
+                    <FF>17</FF>
+                    <AVAIL_FF>106400</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>52</LUT>
+                    <AVAIL_LUT>53200</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>220</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Lowpass_Shift_Accumulate_Loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln37_fu_76_p2" SOURCE="equalizer.cpp:37" URAM="0" VARIABLE="add_ln37"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="lowpass_shift_reg_U" SOURCE="" URAM="0" VARIABLE="lowpass_shift_reg"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>equalizer_Pipeline_Bandpass_Shift_Accumulate_Loop</Name>
+            <Loops>
+                <Bandpass_Shift_Accumulate_Loop/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>6.508</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>35</Best-caseLatency>
+                    <Average-caseLatency>35</Average-caseLatency>
+                    <Worst-caseLatency>35</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.350 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.350 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.350 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>35</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <Bandpass_Shift_Accumulate_Loop>
+                        <Name>Bandpass_Shift_Accumulate_Loop</Name>
+                        <TripCount>33</TripCount>
+                        <Latency>33</Latency>
+                        <AbsoluteTimeLatency>0.330 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>2</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </Bandpass_Shift_Accumulate_Loop>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <BRAM_18K>1</BRAM_18K>
+                    <AVAIL_BRAM>280</AVAIL_BRAM>
+                    <UTIL_BRAM>~0</UTIL_BRAM>
+                    <FF>17</FF>
+                    <AVAIL_FF>106400</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>52</LUT>
+                    <AVAIL_LUT>53200</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>220</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Bandpass_Shift_Accumulate_Loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln44_fu_76_p2" SOURCE="equalizer.cpp:44" URAM="0" VARIABLE="add_ln44"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="bandpass_shift_reg_U" SOURCE="" URAM="0" VARIABLE="bandpass_shift_reg"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>equalizer_Pipeline_Highpass_Shift_Accumulate_Loop</Name>
+            <Loops>
+                <Highpass_Shift_Accumulate_Loop/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>6.508</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>35</Best-caseLatency>
+                    <Average-caseLatency>35</Average-caseLatency>
+                    <Worst-caseLatency>35</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.350 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.350 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.350 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>35</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <Highpass_Shift_Accumulate_Loop>
+                        <Name>Highpass_Shift_Accumulate_Loop</Name>
+                        <TripCount>33</TripCount>
+                        <Latency>33</Latency>
+                        <AbsoluteTimeLatency>0.330 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>2</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </Highpass_Shift_Accumulate_Loop>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <BRAM_18K>1</BRAM_18K>
+                    <AVAIL_BRAM>280</AVAIL_BRAM>
+                    <UTIL_BRAM>~0</UTIL_BRAM>
+                    <FF>17</FF>
+                    <AVAIL_FF>106400</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>52</LUT>
+                    <AVAIL_LUT>53200</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>220</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Highpass_Shift_Accumulate_Loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln51_fu_76_p2" SOURCE="equalizer.cpp:51" URAM="0" VARIABLE="add_ln51"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="highpass_shift_reg_U" SOURCE="" URAM="0" VARIABLE="highpass_shift_reg"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>equalizer</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>6.508</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>36</Best-caseLatency>
+                    <Average-caseLatency>36</Average-caseLatency>
+                    <Worst-caseLatency>36</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.360 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.360 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.360 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>37</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <BRAM_18K>3</BRAM_18K>
+                    <AVAIL_BRAM>280</AVAIL_BRAM>
+                    <UTIL_BRAM>1</UTIL_BRAM>
+                    <FF>56</FF>
+                    <AVAIL_FF>106400</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>194</LUT>
+                    <AVAIL_LUT>53200</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>220</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                </Resources>
+            </AreaEstimates>
+        </Module>
+    </ModuleInformation>
+    <FIFOInformation/>
+    <UserConfigCommands>
+        <config_op>
+            <ENTRY impl="all mul" latency="-1 mul" op="mul" precision="mul standard"/>
+            <ENTRY impl="all add" latency="-1 add" op="add" precision="add standard"/>
+            <ENTRY impl="all sub" latency="-1 sub" op="sub" precision="sub standard"/>
+            <ENTRY impl="all fadd" latency="-1 fadd" op="fadd" precision="fadd standard"/>
+            <ENTRY impl="all fsub" latency="-1 fsub" op="fsub" precision="fsub standard"/>
+            <ENTRY impl="all fdiv" latency="-1 fdiv" op="fdiv" precision="fdiv standard"/>
+            <ENTRY impl="all fexp" latency="-1 fexp" op="fexp" precision="fexp standard"/>
+            <ENTRY impl="all flog" latency="-1 flog" op="flog" precision="flog standard"/>
+            <ENTRY impl="all fmul" latency="-1 fmul" op="fmul" precision="fmul standard"/>
+            <ENTRY impl="all frsqrt" latency="-1 frsqrt" op="frsqrt" precision="frsqrt standard"/>
+            <ENTRY impl="all frecip" latency="-1 frecip" op="frecip" precision="frecip standard"/>
+            <ENTRY impl="all fsqrt" latency="-1 fsqrt" op="fsqrt" precision="fsqrt standard"/>
+            <ENTRY impl="all dadd" latency="-1 dadd" op="dadd" precision="dadd standard"/>
+            <ENTRY impl="all dsub" latency="-1 dsub" op="dsub" precision="dsub standard"/>
+            <ENTRY impl="all ddiv" latency="-1 ddiv" op="ddiv" precision="ddiv standard"/>
+            <ENTRY impl="all dexp" latency="-1 dexp" op="dexp" precision="dexp standard"/>
+            <ENTRY impl="all dlog" latency="-1 dlog" op="dlog" precision="dlog standard"/>
+            <ENTRY impl="all dmul" latency="-1 dmul" op="dmul" precision="dmul standard"/>
+            <ENTRY impl="all drsqrt" latency="-1 drsqrt" op="drsqrt" precision="drsqrt standard"/>
+            <ENTRY impl="all drecip" latency="-1 drecip" op="drecip" precision="drecip standard"/>
+            <ENTRY impl="all dsqrt" latency="-1 dsqrt" op="dsqrt" precision="dsqrt standard"/>
+            <ENTRY impl="all hadd" latency="-1 hadd" op="hadd" precision="hadd standard"/>
+            <ENTRY impl="all hsub" latency="-1 hsub" op="hsub" precision="hsub standard"/>
+            <ENTRY impl="all hdiv" latency="-1 hdiv" op="hdiv" precision="hdiv standard"/>
+            <ENTRY impl="all hmul" latency="-1 hmul" op="hmul" precision="hmul standard"/>
+            <ENTRY impl="all hsqrt" latency="-1 hsqrt" op="hsqrt" precision="hsqrt standard"/>
+            <ENTRY impl="all facc" latency="-1 facc" op="facc" precision="facc standard"/>
+            <ENTRY impl="all fmacc" latency="-1 fmacc" op="fmacc" precision="fmacc standard"/>
+            <ENTRY impl="all fmadd" latency="-1 fmadd" op="fmadd" precision="fmadd standard"/>
+        </config_op>
+        <config_storage>
+            <ENTRY auto_srl_max_bits="1024 fifo" auto_srl_max_depth="2 fifo" impl="autosrl fifo" type="fifo"/>
+        </config_storage>
+    </UserConfigCommands>
+    <Args>
+        <Arg ArgName="SIGNAL_IN" index="0" direction="in" srcType="stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2, 5, 6&gt;, 0&gt;&amp;" srcSize="96">
+            <hwRefs>
+                <hwRef type="interface" interface="SIGNAL_IN" name="" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="SIGNAL_OUT" index="1" direction="out" srcType="stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2, 5, 6&gt;, 0&gt;&amp;" srcSize="96">
+            <hwRefs>
+                <hwRef type="interface" interface="SIGNAL_OUT" name="" usage="data" direction="out"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="lowpass_coefs" index="2" direction="unused" srcType="int*" srcSize="32">
+            <hwRefs>
+                <hwRef type="port" interface="lowpass_coefs_address0" name="lowpass_coefs_address0" usage="address" direction="out"/>
+                <hwRef type="port" interface="lowpass_coefs_ce0" name="lowpass_coefs_ce0" usage="control" direction="out"/>
+                <hwRef type="port" interface="lowpass_coefs_we0" name="lowpass_coefs_we0" usage="control" direction="out"/>
+                <hwRef type="port" interface="lowpass_coefs_d0" name="lowpass_coefs_d0" usage="data" direction="out"/>
+                <hwRef type="port" interface="lowpass_coefs_q0" name="lowpass_coefs_q0" usage="data" direction="in"/>
+                <hwRef type="port" interface="lowpass_coefs_address1" name="lowpass_coefs_address1" usage="address" direction="out"/>
+                <hwRef type="port" interface="lowpass_coefs_ce1" name="lowpass_coefs_ce1" usage="control" direction="out"/>
+                <hwRef type="port" interface="lowpass_coefs_we1" name="lowpass_coefs_we1" usage="control" direction="out"/>
+                <hwRef type="port" interface="lowpass_coefs_d1" name="lowpass_coefs_d1" usage="data" direction="out"/>
+                <hwRef type="port" interface="lowpass_coefs_q1" name="lowpass_coefs_q1" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="bandpass_coefs" index="3" direction="unused" srcType="int*" srcSize="32">
+            <hwRefs>
+                <hwRef type="port" interface="bandpass_coefs_address0" name="bandpass_coefs_address0" usage="address" direction="out"/>
+                <hwRef type="port" interface="bandpass_coefs_ce0" name="bandpass_coefs_ce0" usage="control" direction="out"/>
+                <hwRef type="port" interface="bandpass_coefs_we0" name="bandpass_coefs_we0" usage="control" direction="out"/>
+                <hwRef type="port" interface="bandpass_coefs_d0" name="bandpass_coefs_d0" usage="data" direction="out"/>
+                <hwRef type="port" interface="bandpass_coefs_q0" name="bandpass_coefs_q0" usage="data" direction="in"/>
+                <hwRef type="port" interface="bandpass_coefs_address1" name="bandpass_coefs_address1" usage="address" direction="out"/>
+                <hwRef type="port" interface="bandpass_coefs_ce1" name="bandpass_coefs_ce1" usage="control" direction="out"/>
+                <hwRef type="port" interface="bandpass_coefs_we1" name="bandpass_coefs_we1" usage="control" direction="out"/>
+                <hwRef type="port" interface="bandpass_coefs_d1" name="bandpass_coefs_d1" usage="data" direction="out"/>
+                <hwRef type="port" interface="bandpass_coefs_q1" name="bandpass_coefs_q1" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="highpass_coefs" index="4" direction="unused" srcType="int*" srcSize="32">
+            <hwRefs>
+                <hwRef type="port" interface="highpass_coefs_address0" name="highpass_coefs_address0" usage="address" direction="out"/>
+                <hwRef type="port" interface="highpass_coefs_ce0" name="highpass_coefs_ce0" usage="control" direction="out"/>
+                <hwRef type="port" interface="highpass_coefs_we0" name="highpass_coefs_we0" usage="control" direction="out"/>
+                <hwRef type="port" interface="highpass_coefs_d0" name="highpass_coefs_d0" usage="data" direction="out"/>
+                <hwRef type="port" interface="highpass_coefs_q0" name="highpass_coefs_q0" usage="data" direction="in"/>
+                <hwRef type="port" interface="highpass_coefs_address1" name="highpass_coefs_address1" usage="address" direction="out"/>
+                <hwRef type="port" interface="highpass_coefs_ce1" name="highpass_coefs_ce1" usage="control" direction="out"/>
+                <hwRef type="port" interface="highpass_coefs_we1" name="highpass_coefs_we1" usage="control" direction="out"/>
+                <hwRef type="port" interface="highpass_coefs_d1" name="highpass_coefs_d1" usage="data" direction="out"/>
+                <hwRef type="port" interface="highpass_coefs_q1" name="highpass_coefs_q1" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+    </Args>
+    <Interfaces>
+        <Interface InterfaceName="ap_clk" type="clock" busTypeName="clock" mode="slave">
+            <busParams>
+                <busParam busParamName="ASSOCIATED_BUSIF">SIGNAL_IN:SIGNAL_OUT</busParam>
+                <busParam busParamName="ASSOCIATED_RESET">ap_rst_n</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_clk">CLK</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_clk</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="ap_rst_n" type="reset" busTypeName="reset" mode="slave">
+            <busParams>
+                <busParam busParamName="POLARITY">ACTIVE_LOW</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_rst_n">RST</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_rst_n</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="ap_ctrl" type="ap_ctrl" busTypeName="acc_handshake" mode="slave">
+            <portMaps>
+                <portMap portMapName="ap_start">start</portMap>
+                <portMap portMapName="ap_done">done</portMap>
+                <portMap portMapName="ap_idle">idle</portMap>
+                <portMap portMapName="ap_ready">ready</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_done</port>
+                <port>ap_idle</port>
+                <port>ap_ready</port>
+                <port>ap_start</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="SIGNAL_IN" type="axi4stream" busTypeName="axis" mode="slave" dataWidth="32" portPrefix="SIGNAL_IN_">
+            <ports>
+                <port>SIGNAL_IN_TDATA</port>
+                <port>SIGNAL_IN_TDEST</port>
+                <port>SIGNAL_IN_TID</port>
+                <port>SIGNAL_IN_TKEEP</port>
+                <port>SIGNAL_IN_TLAST</port>
+                <port>SIGNAL_IN_TREADY</port>
+                <port>SIGNAL_IN_TSTRB</port>
+                <port>SIGNAL_IN_TUSER</port>
+                <port>SIGNAL_IN_TVALID</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="axis" register_option="0" register_mode="both" argName="SIGNAL_IN"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="SIGNAL_OUT" type="axi4stream" busTypeName="axis" mode="master" dataWidth="32" portPrefix="SIGNAL_OUT_">
+            <ports>
+                <port>SIGNAL_OUT_TDATA</port>
+                <port>SIGNAL_OUT_TDEST</port>
+                <port>SIGNAL_OUT_TID</port>
+                <port>SIGNAL_OUT_TKEEP</port>
+                <port>SIGNAL_OUT_TLAST</port>
+                <port>SIGNAL_OUT_TREADY</port>
+                <port>SIGNAL_OUT_TSTRB</port>
+                <port>SIGNAL_OUT_TUSER</port>
+                <port>SIGNAL_OUT_TVALID</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="axis" register_option="0" register_mode="both" argName="SIGNAL_OUT"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="lowpass_coefs_address0" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="6">
+            <portMaps>
+                <portMap portMapName="lowpass_coefs_address0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>lowpass_coefs_address0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="lowpass_coefs"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="lowpass_coefs_d0" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="32">
+            <portMaps>
+                <portMap portMapName="lowpass_coefs_d0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>lowpass_coefs_d0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="lowpass_coefs"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="lowpass_coefs_q0" type="data" busTypeName="data" protocol="ap_memory" mode="slave" dataWidth="32">
+            <portMaps>
+                <portMap portMapName="lowpass_coefs_q0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>lowpass_coefs_q0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="lowpass_coefs"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="lowpass_coefs_address1" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="6">
+            <portMaps>
+                <portMap portMapName="lowpass_coefs_address1">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>lowpass_coefs_address1</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="lowpass_coefs"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="lowpass_coefs_d1" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="32">
+            <portMaps>
+                <portMap portMapName="lowpass_coefs_d1">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>lowpass_coefs_d1</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="lowpass_coefs"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="lowpass_coefs_q1" type="data" busTypeName="data" protocol="ap_memory" mode="slave" dataWidth="32">
+            <portMaps>
+                <portMap portMapName="lowpass_coefs_q1">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>lowpass_coefs_q1</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="lowpass_coefs"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="bandpass_coefs_address0" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="6">
+            <portMaps>
+                <portMap portMapName="bandpass_coefs_address0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>bandpass_coefs_address0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="bandpass_coefs"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="bandpass_coefs_d0" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="32">
+            <portMaps>
+                <portMap portMapName="bandpass_coefs_d0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>bandpass_coefs_d0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="bandpass_coefs"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="bandpass_coefs_q0" type="data" busTypeName="data" protocol="ap_memory" mode="slave" dataWidth="32">
+            <portMaps>
+                <portMap portMapName="bandpass_coefs_q0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>bandpass_coefs_q0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="bandpass_coefs"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="bandpass_coefs_address1" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="6">
+            <portMaps>
+                <portMap portMapName="bandpass_coefs_address1">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>bandpass_coefs_address1</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="bandpass_coefs"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="bandpass_coefs_d1" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="32">
+            <portMaps>
+                <portMap portMapName="bandpass_coefs_d1">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>bandpass_coefs_d1</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="bandpass_coefs"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="bandpass_coefs_q1" type="data" busTypeName="data" protocol="ap_memory" mode="slave" dataWidth="32">
+            <portMaps>
+                <portMap portMapName="bandpass_coefs_q1">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>bandpass_coefs_q1</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="bandpass_coefs"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="highpass_coefs_address0" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="6">
+            <portMaps>
+                <portMap portMapName="highpass_coefs_address0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>highpass_coefs_address0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="highpass_coefs"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="highpass_coefs_d0" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="32">
+            <portMaps>
+                <portMap portMapName="highpass_coefs_d0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>highpass_coefs_d0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="highpass_coefs"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="highpass_coefs_q0" type="data" busTypeName="data" protocol="ap_memory" mode="slave" dataWidth="32">
+            <portMaps>
+                <portMap portMapName="highpass_coefs_q0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>highpass_coefs_q0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="highpass_coefs"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="highpass_coefs_address1" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="6">
+            <portMaps>
+                <portMap portMapName="highpass_coefs_address1">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>highpass_coefs_address1</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="highpass_coefs"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="highpass_coefs_d1" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="32">
+            <portMaps>
+                <portMap portMapName="highpass_coefs_d1">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>highpass_coefs_d1</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="highpass_coefs"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="highpass_coefs_q1" type="data" busTypeName="data" protocol="ap_memory" mode="slave" dataWidth="32">
+            <portMaps>
+                <portMap portMapName="highpass_coefs_q1">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>highpass_coefs_q1</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="highpass_coefs"/>
+            </constraints>
+        </Interface>
+    </Interfaces>
+    <ReportHWInterface>
+        <section name="HW Interfaces" level="0">
+            <item name="AXIS">
+                <table isCollapsed="0">
+                    <keys size="11">Interface, Register Mode, TDATA, TDEST, TID, TKEEP, TLAST, TREADY, TSTRB, TUSER, TVALID</keys>
+                    <column name="SIGNAL_IN">both, 32, 6, 5, 4, 1, 1, 4, 2, 1, </column>
+                    <column name="SIGNAL_OUT">both, 32, 6, 5, 4, 1, 1, 4, 2, 1, </column>
+                </table>
+            </item>
+            <item name="AP_MEMORY">
+                <table isCollapsed="0">
+                    <keys size="2">Interface, Bitwidth</keys>
+                    <column name="bandpass_coefs_address0">6, , </column>
+                    <column name="bandpass_coefs_address1">6, , </column>
+                    <column name="bandpass_coefs_d0">32, , </column>
+                    <column name="bandpass_coefs_d1">32, , </column>
+                    <column name="bandpass_coefs_q0">32, , </column>
+                    <column name="bandpass_coefs_q1">32, , </column>
+                    <column name="highpass_coefs_address0">6, , </column>
+                    <column name="highpass_coefs_address1">6, , </column>
+                    <column name="highpass_coefs_d0">32, , </column>
+                    <column name="highpass_coefs_d1">32, , </column>
+                    <column name="highpass_coefs_q0">32, , </column>
+                    <column name="highpass_coefs_q1">32, , </column>
+                    <column name="lowpass_coefs_address0">6, , </column>
+                    <column name="lowpass_coefs_address1">6, , </column>
+                    <column name="lowpass_coefs_d0">32, , </column>
+                    <column name="lowpass_coefs_d1">32, , </column>
+                    <column name="lowpass_coefs_q0">32, , </column>
+                    <column name="lowpass_coefs_q1">32, , </column>
+                </table>
+            </item>
+            <item name="TOP LEVEL CONTROL">
+                <table isCollapsed="0">
+                    <keys size="3">Interface, Type, Ports</keys>
+                    <column name="ap_clk">clock, ap_clk, </column>
+                    <column name="ap_rst_n">reset, ap_rst_n, </column>
+                    <column name="ap_ctrl">ap_ctrl_hs, ap_done ap_idle ap_ready ap_start, </column>
+                </table>
+            </item>
+        </section>
+    </ReportHWInterface>
+    <ReportSWInterface>
+        <section name="SW I/O Information" level="0">
+            <item name="Top Function Arguments">
+                <table isCollapsed="1">
+                    <keys size="3">Argument, Direction, Datatype</keys>
+                    <column name="SIGNAL_IN">in, stream&lt;hls::axis&lt;ap_int&lt;32&gt; 2 5 6&gt; 0&gt;&amp;</column>
+                    <column name="SIGNAL_OUT">out, stream&lt;hls::axis&lt;ap_int&lt;32&gt; 2 5 6&gt; 0&gt;&amp;</column>
+                    <column name="lowpass_coefs">unused, int*</column>
+                    <column name="bandpass_coefs">unused, int*</column>
+                    <column name="highpass_coefs">unused, int*</column>
+                </table>
+            </item>
+            <item name="SW-to-HW Mapping">
+                <table isCollapsed="1">
+                    <keys size="4">Argument, HW Interface, HW Type, HW Usage</keys>
+                    <column name="SIGNAL_IN">SIGNAL_IN, interface, , </column>
+                    <column name="SIGNAL_OUT">SIGNAL_OUT, interface, , </column>
+                    <column name="lowpass_coefs">lowpass_coefs_address0, port, offset, </column>
+                    <column name="lowpass_coefs">lowpass_coefs_ce0, port, , </column>
+                    <column name="lowpass_coefs">lowpass_coefs_we0, port, , </column>
+                    <column name="lowpass_coefs">lowpass_coefs_d0, port, , </column>
+                    <column name="lowpass_coefs">lowpass_coefs_q0, port, , </column>
+                    <column name="lowpass_coefs">lowpass_coefs_address1, port, offset, </column>
+                    <column name="lowpass_coefs">lowpass_coefs_ce1, port, , </column>
+                    <column name="lowpass_coefs">lowpass_coefs_we1, port, , </column>
+                    <column name="lowpass_coefs">lowpass_coefs_d1, port, , </column>
+                    <column name="lowpass_coefs">lowpass_coefs_q1, port, , </column>
+                    <column name="bandpass_coefs">bandpass_coefs_address0, port, offset, </column>
+                    <column name="bandpass_coefs">bandpass_coefs_ce0, port, , </column>
+                    <column name="bandpass_coefs">bandpass_coefs_we0, port, , </column>
+                    <column name="bandpass_coefs">bandpass_coefs_d0, port, , </column>
+                    <column name="bandpass_coefs">bandpass_coefs_q0, port, , </column>
+                    <column name="bandpass_coefs">bandpass_coefs_address1, port, offset, </column>
+                    <column name="bandpass_coefs">bandpass_coefs_ce1, port, , </column>
+                    <column name="bandpass_coefs">bandpass_coefs_we1, port, , </column>
+                    <column name="bandpass_coefs">bandpass_coefs_d1, port, , </column>
+                    <column name="bandpass_coefs">bandpass_coefs_q1, port, , </column>
+                    <column name="highpass_coefs">highpass_coefs_address0, port, offset, </column>
+                    <column name="highpass_coefs">highpass_coefs_ce0, port, , </column>
+                    <column name="highpass_coefs">highpass_coefs_we0, port, , </column>
+                    <column name="highpass_coefs">highpass_coefs_d0, port, , </column>
+                    <column name="highpass_coefs">highpass_coefs_q0, port, , </column>
+                    <column name="highpass_coefs">highpass_coefs_address1, port, offset, </column>
+                    <column name="highpass_coefs">highpass_coefs_ce1, port, , </column>
+                    <column name="highpass_coefs">highpass_coefs_we1, port, , </column>
+                    <column name="highpass_coefs">highpass_coefs_d1, port, , </column>
+                    <column name="highpass_coefs">highpass_coefs_q1, port, , </column>
+                </table>
+            </item>
+        </section>
+    </ReportSWInterface>
+    <ReportBurst>
+        <section name="M_AXI Burst Information" level="0" HEADER_NOTE="Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings."/>
+    </ReportBurst>
+    <PragmaReport>
+        <Pragma type="interface" location="equalizer.cpp:21" status="valid" parentFunction="equalizer" variable="SIGNAL_IN" isDirective="0" options="axis port=SIGNAL_IN"/>
+        <Pragma type="interface" location="equalizer.cpp:22" status="valid" parentFunction="equalizer" variable="SIGNAL_OUT" isDirective="0" options="axis port=SIGNAL_OUT"/>
+    </PragmaReport>
+</profile>
+

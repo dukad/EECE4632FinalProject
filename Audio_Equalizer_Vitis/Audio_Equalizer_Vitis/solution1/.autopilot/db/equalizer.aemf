@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1711571866445">
+  <ports id="1" name="SIGNAL_IN_V_data_V" type="PortType" originalName="SIGNAL_IN" coreId="1953391988" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="2" name="SIGNAL_IN_V_keep_V" type="PortType" originalName="SIGNAL_IN" coreId="1953391988" bitwidth="4">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="3" name="SIGNAL_IN_V_strb_V" type="PortType" originalName="SIGNAL_IN" coreId="779379573" bitwidth="4">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="4" name="SIGNAL_IN_V_user_V" type="PortType" originalName="SIGNAL_IN" coreId="85" bitwidth="2">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="5" name="SIGNAL_IN_V_last_V" type="PortType" originalName="SIGNAL_IN" coreId="1953708602" bitwidth="1">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="6" name="SIGNAL_IN_V_id_V" type="PortType" originalName="SIGNAL_IN" coreId="1768713801" bitwidth="5">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="7" name="SIGNAL_IN_V_dest_V" type="PortType" originalName="SIGNAL_IN" coreId="1953391988" bitwidth="6">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="8" name="SIGNAL_OUT_V_data_V" type="PortType" originalName="SIGNAL_OUT" coreId="1953391988" bitwidth="32" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="9" name="SIGNAL_OUT_V_keep_V" type="PortType" originalName="SIGNAL_OUT" coreId="1528853351" bitwidth="4" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="10" name="SIGNAL_OUT_V_strb_V" type="PortType" originalName="SIGNAL_OUT" coreId="1953391988" bitwidth="4" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="11" name="SIGNAL_OUT_V_user_V" type="PortType" originalName="SIGNAL_OUT" coreId="1869903201" bitwidth="2" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="12" name="SIGNAL_OUT_V_last_V" type="PortType" originalName="SIGNAL_OUT" coreId="1953391988" bitwidth="1" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="13" name="SIGNAL_OUT_V_id_V" type="PortType" originalName="SIGNAL_OUT" coreId="1214215017" bitwidth="5" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="14" name="SIGNAL_OUT_V_dest_V" type="PortType" originalName="SIGNAL_OUT" coreId="1953391988" bitwidth="6" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="15" name="lowpass_coefs" type="PortType" coreId="12213952" bitwidth="32" direction="DirEnd" iftype="IfTypeRegister" arraysize="33"/>
+  <ports id="16" name="bandpass_coefs" type="PortType" coreId="1768713801" bitwidth="32" direction="DirEnd" iftype="IfTypeRegister" arraysize="33"/>
+  <ports id="17" name="highpass_coefs" type="PortType" coreId="0" bitwidth="32" direction="DirEnd" iftype="IfTypeRegister" arraysize="33"/>
+  <edges id="60" source_obj="//@ports.0" sink_obj="//@blocks.0/@node_objs.0"/>
+  <edges id="61" source_obj="//@ports.1" sink_obj="//@blocks.0/@node_objs.0"/>
+  <edges id="62" source_obj="//@ports.2" sink_obj="//@blocks.0/@node_objs.0"/>
+  <edges id="63" source_obj="//@ports.3" sink_obj="//@blocks.0/@node_objs.0"/>
+  <edges id="64" source_obj="//@ports.4" sink_obj="//@blocks.0/@node_objs.0"/>
+  <edges id="65" source_obj="//@ports.5" sink_obj="//@blocks.0/@node_objs.0"/>
+  <edges id="66" source_obj="//@ports.6" sink_obj="//@blocks.0/@node_objs.0"/>
+  <edges id="67" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="68" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="69" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.3"/>
+  <edges id="70" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.4"/>
+  <edges id="71" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.5"/>
+  <edges id="72" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.6"/>
+  <edges id="73" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="82" source_obj="//@blocks.0/@node_objs.11" sink_obj="//@ports.7"/>
+  <edges id="83" source_obj="//@blocks.0/@node_objs.11" sink_obj="//@ports.8"/>
+  <edges id="84" source_obj="//@blocks.0/@node_objs.11" sink_obj="//@ports.9"/>
+  <edges id="85" source_obj="//@blocks.0/@node_objs.11" sink_obj="//@ports.10"/>
+  <edges id="86" source_obj="//@blocks.0/@node_objs.11" sink_obj="//@ports.11"/>
+  <edges id="87" source_obj="//@blocks.0/@node_objs.11" sink_obj="//@ports.12"/>
+  <edges id="88" source_obj="//@blocks.0/@node_objs.11" sink_obj="//@ports.13"/>
+  <edges id="89" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="90" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="91" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="92" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="93" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="94" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="95" source_obj="//@blocks.0/@node_objs.7" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="96" sink_obj="//@blocks.0/@node_objs.8"/>
+  <edges id="97" sink_obj="//@blocks.0/@node_objs.9"/>
+  <edges id="98" sink_obj="//@blocks.0/@node_objs.10"/>
+  <blocks id="57" name="equalizer" type="BlockType">
+    <node_objs xsi:type="cdfg:CdfgNode" id="44" name="empty" lineNumber="283" fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h" fileDirectory=".." coreName="axis" implIndex="axi4stream" control="no" opType="adapter" coreId="115" contextFuncName="read" bitwidth="54" opcode="read" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h" linenumber="283" fileDirectory="C:\EECE4632FinalProject\Audio_Equalizer_Vitis" functionName="read"/>
+      <dataInputObjs>SIGNAL_IN_V_data_V</dataInputObjs>
+      <dataInputObjs>SIGNAL_IN_V_keep_V</dataInputObjs>
+      <dataInputObjs>SIGNAL_IN_V_strb_V</dataInputObjs>
+      <dataInputObjs>SIGNAL_IN_V_user_V</dataInputObjs>
+      <dataInputObjs>SIGNAL_IN_V_last_V</dataInputObjs>
+      <dataInputObjs>SIGNAL_IN_V_id_V</dataInputObjs>
+      <dataInputObjs>SIGNAL_IN_V_dest_V</dataInputObjs>
+      <dataOutputObjs>extractvalue</dataOutputObjs>
+      <dataOutputObjs>extractvalue</dataOutputObjs>
+      <dataOutputObjs>extractvalue</dataOutputObjs>
+      <dataOutputObjs>extractvalue</dataOutputObjs>
+      <dataOutputObjs>extractvalue</dataOutputObjs>
+      <dataOutputObjs>extractvalue</dataOutputObjs>
+      <dataOutputObjs>extractvalue</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="45" name="tmp_data_V" lineNumber="283" originalName="tmp.data.V" fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h" fileDirectory=".." coreId="1601200444" contextFuncName="read" bitwidth="32" opcode="extractvalue" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h" linenumber="283" fileDirectory="C:\EECE4632FinalProject\Audio_Equalizer_Vitis" functionName="read"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="46" name="tmp_keep_V" lineNumber="283" originalName="tmp.keep.V" fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h" fileDirectory=".." coreId="1601332595" contextFuncName="read" bitwidth="4" opcode="extractvalue" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h" linenumber="283" fileDirectory="C:\EECE4632FinalProject\Audio_Equalizer_Vitis" functionName="read"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="47" name="tmp_strb_V" lineNumber="283" originalName="tmp.strb.V" fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h" fileDirectory=".." coreId="82" contextFuncName="read" bitwidth="4" opcode="extractvalue" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h" linenumber="283" fileDirectory="C:\EECE4632FinalProject\Audio_Equalizer_Vitis" functionName="read"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="48" name="tmp_user_V" lineNumber="283" originalName="tmp.user.V" fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h" fileDirectory=".." coreId="5195342" contextFuncName="read" bitwidth="2" opcode="extractvalue" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h" linenumber="283" fileDirectory="C:\EECE4632FinalProject\Audio_Equalizer_Vitis" functionName="read"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="49" name="tmp_last_V" lineNumber="283" originalName="tmp.last.V" fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h" fileDirectory=".." coreId="1397508130" contextFuncName="read" bitwidth="1" opcode="extractvalue" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h" linenumber="283" fileDirectory="C:\EECE4632FinalProject\Audio_Equalizer_Vitis" functionName="read"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="50" name="tmp_id_V" lineNumber="283" originalName="tmp.id.V" fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h" fileDirectory=".." coreId="1931503470" contextFuncName="read" bitwidth="5" opcode="extractvalue" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h" linenumber="283" fileDirectory="C:\EECE4632FinalProject\Audio_Equalizer_Vitis" functionName="read"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="51" name="tmp_dest_V" lineNumber="283" originalName="tmp.dest.V" fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h" fileDirectory=".." coreId="1819619872" contextFuncName="read" bitwidth="6" opcode="extractvalue" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h" linenumber="283" fileDirectory="C:\EECE4632FinalProject\Audio_Equalizer_Vitis" functionName="read"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="52" name="_ln0" rtlName="grp_equalizer_Pipeline_Lowpass_Shift_Accumulate_Loop_fu_115" coreId="1007225406" opcode="call" nodeLatency="1" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <constName>equalizer_Pipeline_Lowpass_Shift_Accumulate_Loop</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="53" name="_ln0" rtlName="grp_equalizer_Pipeline_Bandpass_Shift_Accumulate_Loop_fu_121" coreId="795766637" opcode="call" nodeLatency="1" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+      <constName>equalizer_Pipeline_Bandpass_Shift_Accumulate_Loop</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="54" name="_ln0" rtlName="grp_equalizer_Pipeline_Highpass_Shift_Accumulate_Loop_fu_127" coreId="1869377390" opcode="call" nodeLatency="1" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <constName>equalizer_Pipeline_Highpass_Shift_Accumulate_Loop</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="55" name="SIGNAL_OUT_V_data_V_write_ln304" lineNumber="304" fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h" fileDirectory=".." coreName="axis" implIndex="axi4stream" control="no" opType="adapter" coreId="115" contextFuncName="write" opcode="write" nodeLatency="1" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h" linenumber="304" fileDirectory="C:\EECE4632FinalProject\Audio_Equalizer_Vitis" functionName="write"/>
+      <dataInputObjs>extractvalue</dataInputObjs>
+      <dataInputObjs>extractvalue</dataInputObjs>
+      <dataInputObjs>extractvalue</dataInputObjs>
+      <dataInputObjs>extractvalue</dataInputObjs>
+      <dataInputObjs>extractvalue</dataInputObjs>
+      <dataInputObjs>extractvalue</dataInputObjs>
+      <dataInputObjs>extractvalue</dataInputObjs>
+      <dataOutputObjs>SIGNAL_OUT_V_data_V</dataOutputObjs>
+      <dataOutputObjs>SIGNAL_OUT_V_keep_V</dataOutputObjs>
+      <dataOutputObjs>SIGNAL_OUT_V_strb_V</dataOutputObjs>
+      <dataOutputObjs>SIGNAL_OUT_V_user_V</dataOutputObjs>
+      <dataOutputObjs>SIGNAL_OUT_V_last_V</dataOutputObjs>
+      <dataOutputObjs>SIGNAL_OUT_V_id_V</dataOutputObjs>
+      <dataOutputObjs>SIGNAL_OUT_V_dest_V</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="56" name="_ln59" lineNumber="59" fileName="equalizer.cpp" fileDirectory=".." coreId="1126186546" contextFuncName="equalizer" opcode="ret" nodeLabel="1.0" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="equalizer.cpp" linenumber="59" fileDirectory="C:\EECE4632FinalProject\Audio_Equalizer_Vitis" functionName="equalizer"/>
+    </node_objs>
+    <fileValidLineNumbers fileName="equalizer.cpp">
+      <validLinenumbers>59</validLinenumbers>
+    </fileValidLineNumbers>
+    <fileValidLineNumbers fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h">
+      <validLinenumbers>283</validLinenumbers>
+      <validLinenumbers>304</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <regnodes realName="tmp_strb_V_reg_178">
+    <nodeIds>47</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_dest_V_reg_198">
+    <nodeIds>51</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_last_V_reg_188">
+    <nodeIds>49</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_user_V_reg_183">
+    <nodeIds>48</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_data_V_reg_168">
+    <nodeIds>45</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_keep_V_reg_173">
+    <nodeIds>46</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_id_V_reg_193">
+    <nodeIds>50</nodeIds>
+  </regnodes>
+  <expressionNodes realName="tmp_dest_V_fu_163">
+    <nodeIds>51</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_id_V_fu_158">
+    <nodeIds>50</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_last_V_fu_153">
+    <nodeIds>49</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_user_V_fu_148">
+    <nodeIds>48</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_keep_V_fu_138">
+    <nodeIds>46</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_strb_V_fu_143">
+    <nodeIds>47</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_data_V_fu_133">
+    <nodeIds>45</nodeIds>
+  </expressionNodes>
+  <moduleNodes realName="grp_equalizer_Pipeline_Lowpass_Shift_Accumulate_Loop_fu_115">
+    <nodeIds>52</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_equalizer_Pipeline_Highpass_Shift_Accumulate_Loop_fu_127">
+    <nodeIds>54</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_equalizer_Pipeline_Bandpass_Shift_Accumulate_Loop_fu_121">
+    <nodeIds>53</nodeIds>
+  </moduleNodes>
+  <ioNodes realName="grp_write_fu_90">
+    <nodeIds>55</nodeIds>
+  </ioNodes>
+  <ioNodes realName="empty_read_fu_72">
+    <nodeIds>44</nodeIds>
+  </ioNodes>
+  <memoryPorts dataString="bandpass_shift_reg" portID="100">
+    <nodeIds>53</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="highpass_shift_reg" portID="100">
+    <nodeIds>54</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="lowpass_shift_reg" portID="100">
+    <nodeIds>52</nodeIds>
+  </memoryPorts>
+  <ioPorts name="SIGNAL_IN_V_data_V">
+    <contents name="read">
+      <nodeIds>44</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="SIGNAL_IN_V_dest_V">
+    <contents name="read">
+      <nodeIds>44</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="SIGNAL_IN_V_id_V">
+    <contents name="read">
+      <nodeIds>44</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="SIGNAL_IN_V_keep_V">
+    <contents name="read">
+      <nodeIds>44</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="SIGNAL_IN_V_last_V">
+    <contents name="read">
+      <nodeIds>44</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="SIGNAL_IN_V_strb_V">
+    <contents name="read">
+      <nodeIds>44</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="SIGNAL_IN_V_user_V">
+    <contents name="read">
+      <nodeIds>44</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="SIGNAL_OUT_V_data_V">
+    <contents name="write">
+      <nodeIds>55</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="SIGNAL_OUT_V_dest_V">
+    <contents name="write">
+      <nodeIds>55</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="SIGNAL_OUT_V_id_V">
+    <contents name="write">
+      <nodeIds>55</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="SIGNAL_OUT_V_keep_V">
+    <contents name="write">
+      <nodeIds>55</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="SIGNAL_OUT_V_last_V">
+    <contents name="write">
+      <nodeIds>55</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="SIGNAL_OUT_V_strb_V">
+    <contents name="write">
+      <nodeIds>55</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="SIGNAL_OUT_V_user_V">
+    <contents name="write">
+      <nodeIds>55</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="44" stage="1" latency="1"/>
+      <operations id="45" stage="1" latency="1"/>
+      <operations id="46" stage="1" latency="1"/>
+      <operations id="47" stage="1" latency="1"/>
+      <operations id="48" stage="1" latency="1"/>
+      <operations id="49" stage="1" latency="1"/>
+      <operations id="50" stage="1" latency="1"/>
+      <operations id="51" stage="1" latency="1"/>
+      <operations id="52" stage="2" latency="2"/>
+      <operations id="53" stage="2" latency="2"/>
+      <operations id="54" stage="2" latency="2"/>
+      <operations id="55" stage="2" latency="2"/>
+    </states>
+    <states id="2">
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="30" stage="1" latency="1"/>
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="32" stage="1" latency="1"/>
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="34" stage="1" latency="1"/>
+      <operations id="35" stage="1" latency="1"/>
+      <operations id="36" stage="1" latency="1"/>
+      <operations id="37" stage="1" latency="1"/>
+      <operations id="38" stage="1" latency="1"/>
+      <operations id="39" stage="1" latency="1"/>
+      <operations id="40" stage="1" latency="1"/>
+      <operations id="41" stage="1" latency="1"/>
+      <operations id="42" stage="1" latency="1"/>
+      <operations id="43" stage="1" latency="1"/>
+      <operations id="52" stage="1" latency="2"/>
+      <operations id="53" stage="1" latency="2"/>
+      <operations id="54" stage="1" latency="2"/>
+      <operations id="55" stage="1" latency="2"/>
+      <operations id="56" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="equalizer" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="36" mMaxLatency="36">
+      <basicBlocks>57</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

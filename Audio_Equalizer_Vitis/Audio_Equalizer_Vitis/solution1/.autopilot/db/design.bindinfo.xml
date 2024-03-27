@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BindInfo>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op add" ID="" IMPL="fabric" LATENCY="0" OPTYPE="add" PRAGMA="" RTLNAME="add_ln37_fu_76_p2" SOURCE="equalizer.cpp:37" VARIABLE="add_ln37" MODULE="equalizer_Pipeline_Lowpass_Shift_Accumulate_Loop" LOOP="Lowpass_Shift_Accumulate_Loop" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="storage" DISPLAY="bind_storage ram_s2p" ID="" IMPL="auto" LATENCY="1" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="lowpass_shift_reg_U" SOURCE="" VARIABLE="lowpass_shift_reg" MODULE="equalizer_Pipeline_Lowpass_Shift_Accumulate_Loop" LOOP="" BUNDLEDNAME="" DSP="0" BRAM="1" URAM="0"/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op add" ID="" IMPL="fabric" LATENCY="0" OPTYPE="add" PRAGMA="" RTLNAME="add_ln44_fu_76_p2" SOURCE="equalizer.cpp:44" VARIABLE="add_ln44" MODULE="equalizer_Pipeline_Bandpass_Shift_Accumulate_Loop" LOOP="Bandpass_Shift_Accumulate_Loop" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="storage" DISPLAY="bind_storage ram_s2p" ID="" IMPL="auto" LATENCY="1" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="bandpass_shift_reg_U" SOURCE="" VARIABLE="bandpass_shift_reg" MODULE="equalizer_Pipeline_Bandpass_Shift_Accumulate_Loop" LOOP="" BUNDLEDNAME="" DSP="0" BRAM="1" URAM="0"/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op add" ID="" IMPL="fabric" LATENCY="0" OPTYPE="add" PRAGMA="" RTLNAME="add_ln51_fu_76_p2" SOURCE="equalizer.cpp:51" VARIABLE="add_ln51" MODULE="equalizer_Pipeline_Highpass_Shift_Accumulate_Loop" LOOP="Highpass_Shift_Accumulate_Loop" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="storage" DISPLAY="bind_storage ram_s2p" ID="" IMPL="auto" LATENCY="1" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="highpass_shift_reg_U" SOURCE="" VARIABLE="highpass_shift_reg" MODULE="equalizer_Pipeline_Highpass_Shift_Accumulate_Loop" LOOP="" BUNDLEDNAME="" DSP="0" BRAM="1" URAM="0"/>
+</BindInfo>
