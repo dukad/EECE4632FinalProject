@@ -13,7 +13,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_equalizer_Pipeline_Bandpass_Shift_Accumulate_Loop_fu_121/grp_equalizer_Pipeline_Bandpass_Shift_Accumulate_Loop_fu_121_activity": {
+				"grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264/grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
@@ -23,7 +23,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_equalizer_Pipeline_Highpass_Shift_Accumulate_Loop_fu_127/grp_equalizer_Pipeline_Highpass_Shift_Accumulate_Loop_fu_127_activity": {
+				"grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243/grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
@@ -33,7 +33,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_equalizer_Pipeline_Lowpass_Shift_Accumulate_Loop_fu_115/grp_equalizer_Pipeline_Lowpass_Shift_Accumulate_Loop_fu_115_activity": {
+				"grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254/grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},

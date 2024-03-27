@@ -6431,49 +6431,73 @@ typedef int acc_t;
 
 __attribute__((sdx_kernel("equalizer", 0))) void equalizer(hls::stream< ap_axis<32,2,5,6> > &SIGNAL_IN,
     hls::stream< ap_axis<32,2,5,6> > &SIGNAL_OUT,
-    coef_t lowpass_coefs[33],
-    coef_t bandpass_coefs[33],
-    coef_t highpass_coefs[33]){
+    coef_t lowfreq_coefs[33],
+    coef_t midfreq_coefs[33],
+    coef_t highfreq_coefs[33]){
 #line 14 "C:/EECE4632FinalProject/Audio_Equalizer_Vitis/Audio_Equalizer_Vitis/solution1/csynth.tcl"
 #pragma HLSDIRECTIVE TOP name=equalizer
 # 20 "equalizer.cpp"
 
 #pragma HLS INTERFACE axis port=SIGNAL_IN
 #pragma HLS INTERFACE axis port=SIGNAL_OUT
+#pragma HLS INTERFACE m_axi depth=33 port=lowfreq_coefs
+#pragma HLS INTERFACE m_axi depth=33 port=midfreq_coefs
+#pragma HLS INTERFACE m_axi depth=33 port=highfreq_coefs
+#pragma HLS INTERFACE ap_ctrl_non port=return
 
- static data_t lowpass_shift_reg[33];
-    static data_t bandpass_shift_reg[33];
-    static data_t highpass_shift_reg[33];
+ static data_t lowfreq_shift_reg[33];
+    static data_t midfreq_shift_reg[33];
+    static data_t highfreq_shift_reg[33];
 
-    acc_t accumulate;
+    acc_t lowfreq_accumulate;
+    acc_t midfreq_accumulate;
+    acc_t highfreq_accumulate;
     data_t data;
     int i;
     ap_axis<32,2,5,6> tmp;
 
     SIGNAL_IN.read(tmp);
 
-    accumulate = 0;
-    Lowpass_Shift_Accumulate_Loop:
-    for (i = 33 - 1; i >= 0; i--){
-        lowpass_shift_reg[i] = lowpass_shift_reg[i - 1];
-        accumulate += lowpass_shift_reg[i] * lowpass_coefs[i];
-    }
 
-    accumulate = 0;
-    Bandpass_Shift_Accumulate_Loop:
-    for (i = 33 - 1; i >= 0; i--){
-        bandpass_shift_reg[i] = bandpass_shift_reg[i - 1];
-        accumulate += bandpass_shift_reg[i] * bandpass_coefs[i];
-    }
+    lowfreq_accumulate = 0;
+    Lowfreq_Shift_Accumulate_Loop:
+ for (i = 33 - 1; i >= 0; i--){
+  lowfreq_shift_reg[i] = lowfreq_shift_reg[i - 1];
+  lowfreq_accumulate += lowfreq_shift_reg[i] * lowfreq_coefs[i];
+ }
 
-    accumulate = 0;
-    Highpass_Shift_Accumulate_Loop:
-    for (i = 33 - 1; i >= 0; i--){
-        highpass_shift_reg[i] = highpass_shift_reg[i - 1];
-        accumulate += highpass_shift_reg[i] * highpass_coefs[i];
-    }
+ lowfreq_accumulate += tmp.data.to_int() * lowfreq_coefs[0];
+ lowfreq_shift_reg[0] = tmp.data.to_int();
 
-    SIGNAL_OUT.write(tmp);
+ midfreq_accumulate = 0;
+ Midfreq_Shift_Accumulate_Loop:
+ for (i = 33 - 1; i >= 0; i--){
+  midfreq_shift_reg[i] = midfreq_shift_reg[i - 1];
+  midfreq_accumulate += midfreq_shift_reg[i] * midfreq_coefs[i];
+ }
 
+ midfreq_accumulate += lowfreq_accumulate * midfreq_coefs[0];
+ midfreq_shift_reg[0] = lowfreq_accumulate;
 
+ highfreq_accumulate = 0;
+ Highfreq_Shift_Accumulate_Loop:
+ for (i = 33 -1; i >= 0; i--){
+  highfreq_shift_reg[i] = highfreq_shift_reg[i - 1];
+  highfreq_accumulate += highfreq_shift_reg[i] * highfreq_coefs[i];
+ }
+
+ highfreq_accumulate += highfreq_accumulate * highfreq_coefs[0];
+ highfreq_shift_reg[0] = midfreq_accumulate;
+
+ ap_axis<32,2,5,6> output;
+
+ output.data = highfreq_accumulate;
+ output.keep = tmp.keep;
+ output.strb = tmp.strb;
+ output.last = tmp.last;
+ output.dest = tmp.dest;
+ output.id = tmp.id;
+ output.user = tmp.user;
+
+ SIGNAL_OUT.write(output);
 }

@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'equalizer'" level="0">
-<item name = "Date">Wed Mar 27 16:37:45 2024
+<item name = "Date">Wed Mar 27 17:45:55 2024
 </item>
 <item name = "Version">2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)</item>
 <item name = "Project">Audio_Equalizer_Vitis</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 6.508 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 7.300 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">36, 36, 0.360 us, 0.360 us, 37, 37, no</column>
+<column name="">168, 168, 1.680 us, 1.680 us, 169, 169, no</column>
 </table>
 </item>
 <item name = "Detail">

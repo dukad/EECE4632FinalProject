@@ -1,14 +1,17 @@
 set SynModuleInfo {
-  {SRCNAME equalizer_Pipeline_Lowpass_Shift_Accumulate_Loop MODELNAME equalizer_Pipeline_Lowpass_Shift_Accumulate_Loop RTLNAME equalizer_equalizer_Pipeline_Lowpass_Shift_Accumulate_Loop
+  {SRCNAME equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop MODELNAME equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop RTLNAME equalizer_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop
     SUBMODULES {
-      {MODELNAME equalizer_equalizer_Pipeline_Lowpass_Shift_Accumulate_Loop_lowpass_shift_reg_RAM_AUTO_1bkb RTLNAME equalizer_equalizer_Pipeline_Lowpass_Shift_Accumulate_Loop_lowpass_shift_reg_RAM_AUTO_1bkb BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
       {MODELNAME equalizer_flow_control_loop_pipe_sequential_init RTLNAME equalizer_flow_control_loop_pipe_sequential_init BINDTYPE interface TYPE internal_upc_flow_control INSTNAME equalizer_flow_control_loop_pipe_sequential_init_U}
     }
   }
-  {SRCNAME equalizer_Pipeline_Bandpass_Shift_Accumulate_Loop MODELNAME equalizer_Pipeline_Bandpass_Shift_Accumulate_Loop RTLNAME equalizer_equalizer_Pipeline_Bandpass_Shift_Accumulate_Loop}
-  {SRCNAME equalizer_Pipeline_Highpass_Shift_Accumulate_Loop MODELNAME equalizer_Pipeline_Highpass_Shift_Accumulate_Loop RTLNAME equalizer_equalizer_Pipeline_Highpass_Shift_Accumulate_Loop}
+  {SRCNAME equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop MODELNAME equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop RTLNAME equalizer_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop}
+  {SRCNAME equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop MODELNAME equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop RTLNAME equalizer_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop}
   {SRCNAME equalizer MODELNAME equalizer RTLNAME equalizer IS_TOP 1
     SUBMODULES {
+      {MODELNAME equalizer_mul_32s_32s_32_2_1 RTLNAME equalizer_mul_32s_32s_32_2_1 BINDTYPE op TYPE mul IMPL auto LATENCY 1 ALLOW_PRAGMA 1}
+      {MODELNAME equalizer_lowfreq_shift_reg_RAM_AUTO_1R1W RTLNAME equalizer_lowfreq_shift_reg_RAM_AUTO_1R1W BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
+      {MODELNAME equalizer_gmem_m_axi RTLNAME equalizer_gmem_m_axi BINDTYPE interface TYPE adapter IMPL m_axi}
+      {MODELNAME equalizer_control_s_axi RTLNAME equalizer_control_s_axi BINDTYPE interface TYPE interface_s_axilite}
       {MODELNAME equalizer_regslice_both RTLNAME equalizer_regslice_both BINDTYPE interface TYPE interface_regslice INSTNAME equalizer_regslice_both_U}
     }
   }

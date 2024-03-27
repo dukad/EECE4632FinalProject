@@ -25,7 +25,7 @@ target triple = "fpga64-xilinx-none"
 %"struct.ssdm_int<6, false>" = type { i6 }
 
 ; Function Attrs: noinline
-define void @apatb_equalizer_ir(%"class.hls::stream<hls::axis<ap_int<32>, 2, 5, 6>, 0>"* noalias nonnull dereferenceable(12) %SIGNAL_IN, %"class.hls::stream<hls::axis<ap_int<32>, 2, 5, 6>, 0>"* noalias nonnull dereferenceable(12) %SIGNAL_OUT, i32* noalias nocapture nonnull readonly "fpga.decayed.dim.hint"="33" %lowpass_coefs, i32* noalias nocapture nonnull readonly "fpga.decayed.dim.hint"="33" %bandpass_coefs, i32* noalias nocapture nonnull readonly "fpga.decayed.dim.hint"="33" %highpass_coefs) local_unnamed_addr #0 {
+define void @apatb_equalizer_ir(%"class.hls::stream<hls::axis<ap_int<32>, 2, 5, 6>, 0>"* noalias nonnull dereferenceable(12) %SIGNAL_IN, %"class.hls::stream<hls::axis<ap_int<32>, 2, 5, 6>, 0>"* noalias nonnull dereferenceable(12) %SIGNAL_OUT, i32* noalias nocapture nonnull readonly "fpga.decayed.dim.hint"="33" %lowfreq_coefs, i32* noalias nocapture nonnull readonly "fpga.decayed.dim.hint"="33" %midfreq_coefs, i32* noalias nocapture nonnull readonly "fpga.decayed.dim.hint"="33" %highfreq_coefs) local_unnamed_addr #0 {
 entry:
   %SIGNAL_IN_copy.data = alloca i32
   %SIGNAL_IN_copy.keep = alloca i4
@@ -41,18 +41,18 @@ entry:
   %SIGNAL_OUT_copy.last = alloca i1
   %SIGNAL_OUT_copy.id = alloca i5
   %SIGNAL_OUT_copy.dest = alloca i6
-  %lowpass_coefs_copy = alloca [33 x i32], align 512
-  %bandpass_coefs_copy = alloca [33 x i32], align 512
-  %highpass_coefs_copy = alloca [33 x i32], align 512
-  %0 = bitcast i32* %lowpass_coefs to [33 x i32]*
-  %1 = bitcast i32* %bandpass_coefs to [33 x i32]*
-  %2 = bitcast i32* %highpass_coefs to [33 x i32]*
-  call fastcc void @copy_in(%"class.hls::stream<hls::axis<ap_int<32>, 2, 5, 6>, 0>"* nonnull %SIGNAL_IN, i32* %SIGNAL_IN_copy.data, i4* %SIGNAL_IN_copy.keep, i4* %SIGNAL_IN_copy.strb, i2* %SIGNAL_IN_copy.user, i1* %SIGNAL_IN_copy.last, i5* %SIGNAL_IN_copy.id, i6* %SIGNAL_IN_copy.dest, %"class.hls::stream<hls::axis<ap_int<32>, 2, 5, 6>, 0>"* nonnull %SIGNAL_OUT, i32* %SIGNAL_OUT_copy.data, i4* %SIGNAL_OUT_copy.keep, i4* %SIGNAL_OUT_copy.strb, i2* %SIGNAL_OUT_copy.user, i1* %SIGNAL_OUT_copy.last, i5* %SIGNAL_OUT_copy.id, i6* %SIGNAL_OUT_copy.dest, [33 x i32]* nonnull %0, [33 x i32]* nonnull align 512 %lowpass_coefs_copy, [33 x i32]* nonnull %1, [33 x i32]* nonnull align 512 %bandpass_coefs_copy, [33 x i32]* nonnull %2, [33 x i32]* nonnull align 512 %highpass_coefs_copy)
-  %3 = getelementptr inbounds [33 x i32], [33 x i32]* %lowpass_coefs_copy, i32 0, i32 0
-  %4 = getelementptr inbounds [33 x i32], [33 x i32]* %bandpass_coefs_copy, i32 0, i32 0
-  %5 = getelementptr inbounds [33 x i32], [33 x i32]* %highpass_coefs_copy, i32 0, i32 0
+  %lowfreq_coefs_copy = alloca [33 x i32], align 512
+  %midfreq_coefs_copy = alloca [33 x i32], align 512
+  %highfreq_coefs_copy = alloca [33 x i32], align 512
+  %0 = bitcast i32* %lowfreq_coefs to [33 x i32]*
+  %1 = bitcast i32* %midfreq_coefs to [33 x i32]*
+  %2 = bitcast i32* %highfreq_coefs to [33 x i32]*
+  call fastcc void @copy_in(%"class.hls::stream<hls::axis<ap_int<32>, 2, 5, 6>, 0>"* nonnull %SIGNAL_IN, i32* %SIGNAL_IN_copy.data, i4* %SIGNAL_IN_copy.keep, i4* %SIGNAL_IN_copy.strb, i2* %SIGNAL_IN_copy.user, i1* %SIGNAL_IN_copy.last, i5* %SIGNAL_IN_copy.id, i6* %SIGNAL_IN_copy.dest, %"class.hls::stream<hls::axis<ap_int<32>, 2, 5, 6>, 0>"* nonnull %SIGNAL_OUT, i32* %SIGNAL_OUT_copy.data, i4* %SIGNAL_OUT_copy.keep, i4* %SIGNAL_OUT_copy.strb, i2* %SIGNAL_OUT_copy.user, i1* %SIGNAL_OUT_copy.last, i5* %SIGNAL_OUT_copy.id, i6* %SIGNAL_OUT_copy.dest, [33 x i32]* nonnull %0, [33 x i32]* nonnull align 512 %lowfreq_coefs_copy, [33 x i32]* nonnull %1, [33 x i32]* nonnull align 512 %midfreq_coefs_copy, [33 x i32]* nonnull %2, [33 x i32]* nonnull align 512 %highfreq_coefs_copy)
+  %3 = getelementptr inbounds [33 x i32], [33 x i32]* %lowfreq_coefs_copy, i32 0, i32 0
+  %4 = getelementptr inbounds [33 x i32], [33 x i32]* %midfreq_coefs_copy, i32 0, i32 0
+  %5 = getelementptr inbounds [33 x i32], [33 x i32]* %highfreq_coefs_copy, i32 0, i32 0
   call void @apatb_equalizer_hw(i32* %SIGNAL_IN_copy.data, i4* %SIGNAL_IN_copy.keep, i4* %SIGNAL_IN_copy.strb, i2* %SIGNAL_IN_copy.user, i1* %SIGNAL_IN_copy.last, i5* %SIGNAL_IN_copy.id, i6* %SIGNAL_IN_copy.dest, i32* %SIGNAL_OUT_copy.data, i4* %SIGNAL_OUT_copy.keep, i4* %SIGNAL_OUT_copy.strb, i2* %SIGNAL_OUT_copy.user, i1* %SIGNAL_OUT_copy.last, i5* %SIGNAL_OUT_copy.id, i6* %SIGNAL_OUT_copy.dest, i32* %3, i32* %4, i32* %5)
-  call void @copy_back(%"class.hls::stream<hls::axis<ap_int<32>, 2, 5, 6>, 0>"* %SIGNAL_IN, i32* %SIGNAL_IN_copy.data, i4* %SIGNAL_IN_copy.keep, i4* %SIGNAL_IN_copy.strb, i2* %SIGNAL_IN_copy.user, i1* %SIGNAL_IN_copy.last, i5* %SIGNAL_IN_copy.id, i6* %SIGNAL_IN_copy.dest, %"class.hls::stream<hls::axis<ap_int<32>, 2, 5, 6>, 0>"* %SIGNAL_OUT, i32* %SIGNAL_OUT_copy.data, i4* %SIGNAL_OUT_copy.keep, i4* %SIGNAL_OUT_copy.strb, i2* %SIGNAL_OUT_copy.user, i1* %SIGNAL_OUT_copy.last, i5* %SIGNAL_OUT_copy.id, i6* %SIGNAL_OUT_copy.dest, [33 x i32]* %0, [33 x i32]* %lowpass_coefs_copy, [33 x i32]* %1, [33 x i32]* %bandpass_coefs_copy, [33 x i32]* %2, [33 x i32]* %highpass_coefs_copy)
+  call void @copy_back(%"class.hls::stream<hls::axis<ap_int<32>, 2, 5, 6>, 0>"* %SIGNAL_IN, i32* %SIGNAL_IN_copy.data, i4* %SIGNAL_IN_copy.keep, i4* %SIGNAL_IN_copy.strb, i2* %SIGNAL_IN_copy.user, i1* %SIGNAL_IN_copy.last, i5* %SIGNAL_IN_copy.id, i6* %SIGNAL_IN_copy.dest, %"class.hls::stream<hls::axis<ap_int<32>, 2, 5, 6>, 0>"* %SIGNAL_OUT, i32* %SIGNAL_OUT_copy.data, i4* %SIGNAL_OUT_copy.keep, i4* %SIGNAL_OUT_copy.strb, i2* %SIGNAL_OUT_copy.user, i1* %SIGNAL_OUT_copy.last, i5* %SIGNAL_OUT_copy.id, i6* %SIGNAL_OUT_copy.dest, [33 x i32]* %0, [33 x i32]* %lowfreq_coefs_copy, [33 x i32]* %1, [33 x i32]* %midfreq_coefs_copy, [33 x i32]* %2, [33 x i32]* %highfreq_coefs_copy)
   ret void
 }
 

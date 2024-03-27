@@ -1,4 +1,7 @@
 <xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_INVALID" msg_id="207-5552" msg_severity="WARNING" msg_loc="equalizer.cpp:26:23" msg_body="unexpected pragma parameter 'ap_ctrl_non'">
+        <args ClangWarningOption="invalid-hls-pragmas"/>
+    </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_ref.h:724:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="and_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
@@ -119,6 +122,18 @@
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="equalizer.cpp:22:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="equalizer" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=SIGNAL_OUT" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="equalizer.cpp:23:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="equalizer" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=33 port=lowfreq_coefs" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="equalizer.cpp:24:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="equalizer" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=33 port=midfreq_coefs" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="equalizer.cpp:25:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="equalizer" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=33 port=highfreq_coefs" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="equalizer.cpp:26:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="equalizer" ARG_PragmaIsValid="0" ARG_PragmaOptions="ap_ctrl_non port" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
     <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h:283:50" msg_body="Inlining function 'hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;::get_user_ptr()' into 'hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;, 0&gt;::read(hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;&amp;)'">
         <args Callee="hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;::get_user_ptr()" Caller="hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;, 0&gt;::read(hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;&amp;)"/>
     </msg>
@@ -136,6 +151,12 @@
     </msg>
     <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h:284:23" msg_body="Inlining function 'hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;::get_id_ptr()' into 'hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;, 0&gt;::read(hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;&amp;)'">
         <args Callee="hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;::get_id_ptr()" Caller="hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;, 0&gt;::read(hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;&amp;)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:260:67" msg_body="Inlining function 'ssdm_int&lt;32, true&gt;::ssdm_int(int)' into 'ap_int_base&lt;32, true&gt;::ap_int_base(int)'">
+        <args Callee="ssdm_int&lt;32, true&gt;::ssdm_int(int)" Caller="ap_int_base&lt;32, true&gt;::ap_int_base(int)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int.h:179:57" msg_body="Inlining function 'ap_int_base&lt;32, true&gt;::ap_int_base(int)' into 'ap_int&lt;32&gt;::ap_int(int)'">
+        <args Callee="ap_int_base&lt;32, true&gt;::ap_int_base(int)" Caller="ap_int&lt;32&gt;::ap_int(int)"/>
     </msg>
     <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h:304:51" msg_body="Inlining function 'hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;::get_user_ptr()' into 'hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;, 0&gt;::write(hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt; const&amp;)'">
         <args Callee="hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;::get_user_ptr()" Caller="hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;, 0&gt;::write(hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt; const&amp;)"/>
@@ -155,15 +176,21 @@
     <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h:305:24" msg_body="Inlining function 'hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;::get_id_ptr()' into 'hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;, 0&gt;::write(hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt; const&amp;)'">
         <args Callee="hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;::get_id_ptr()" Caller="hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;, 0&gt;::write(hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt; const&amp;)"/>
     </msg>
-    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="equalizer.cpp:33:15" msg_body="Inlining function 'hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;, 0&gt;::read(hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;&amp;)' into 'equalizer(hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;, 0&gt;&amp;, int*, int*, int*)'">
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="equalizer.cpp:39:15" msg_body="Inlining function 'hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;, 0&gt;::read(hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;&amp;)' into 'equalizer(hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;, 0&gt;&amp;, int*, int*, int*)'">
         <args Callee="hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;, 0&gt;::read(hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;&amp;)" Caller="equalizer(hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;, 0&gt;&amp;, int*, int*, int*)"/>
     </msg>
-    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="equalizer.cpp:56:16" msg_body="Inlining function 'hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;, 0&gt;::write(hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt; const&amp;)' into 'equalizer(hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;, 0&gt;&amp;, int*, int*, int*)'">
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="equalizer.cpp:82:13" msg_body="Inlining function 'hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;, 0&gt;::write(hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt; const&amp;)' into 'equalizer(hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;, 0&gt;&amp;, int*, int*, int*)'">
         <args Callee="hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;, 0&gt;::write(hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt; const&amp;)" Caller="equalizer(hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;, 0&gt;&amp;, int*, int*, int*)"/>
     </msg>
-    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="equalizer.cpp:38:32" msg_body="The program may have out of bound array access"/>
-    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="equalizer.cpp:45:33" msg_body="The program may have out of bound array access"/>
-    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="equalizer.cpp:52:33" msg_body="The program may have out of bound array access"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="equalizer.cpp:50:34" msg_body="Inlining function 'ap_int_base&lt;32, true&gt;::to_int() const' into 'equalizer(hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;, 0&gt;&amp;, int*, int*, int*)'">
+        <args Callee="ap_int_base&lt;32, true&gt;::to_int() const" Caller="equalizer(hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;, 0&gt;&amp;, int*, int*, int*)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="equalizer.cpp:49:33" msg_body="Inlining function 'ap_int_base&lt;32, true&gt;::to_int() const' into 'equalizer(hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;, 0&gt;&amp;, int*, int*, int*)'">
+        <args Callee="ap_int_base&lt;32, true&gt;::to_int() const" Caller="equalizer(hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;, 0&gt;&amp;, int*, int*, int*)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="equalizer.cpp:45:26" msg_body="The program may have out of bound array access"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="equalizer.cpp:55:26" msg_body="The program may have out of bound array access"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="equalizer.cpp:65:27" msg_body="The program may have out of bound array access"/>
     <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h:283:5" msg_body="Inlining function '_llvm.fpga.unpack.none.s_struct.ap_int&lt;32&gt;s.i32' into 'equalizer(hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;, 0&gt;&amp;, int*, int*, int*)'">
         <args Callee="_llvm.fpga.unpack.none.s_struct.ap_int&lt;32&gt;s.i32" Caller="equalizer(hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;, 0&gt;&amp;, int*, int*, int*)"/>
     </msg>

@@ -208,8 +208,8 @@ set structIsPacked "0"
 set DataType [list "ap_axiu<32, 0, 0, 0>" "struct ap_axis" $structMem 1 0 $structParameter $structArgument $NameSpace $structIsPacked]
 set Port [list $PortName $Interface $DataType $Pointer $Dims $Const $Volatile $ArrayOpt]
 lappend PortList $Port
-set PortName "lowpass_coefs"
-set BitWidth "32"
+set PortName "lowfreq_coefs"
+set BitWidth "64"
 set ArrayOpt ""
 set Const "0"
 set Volatile "1"
@@ -220,8 +220,8 @@ set Interface "wire"
 set DataType "void"
 set Port [list $PortName $Interface $DataType $Pointer $Dims $Const    $Volatile $ArrayOpt]
 lappend PortList $Port
-set PortName "bandpass_coefs"
-set BitWidth "32"
+set PortName "midfreq_coefs"
+set BitWidth "64"
 set ArrayOpt ""
 set Const "0"
 set Volatile "1"
@@ -232,8 +232,8 @@ set Interface "wire"
 set DataType "void"
 set Port [list $PortName $Interface $DataType $Pointer $Dims $Const    $Volatile $ArrayOpt]
 lappend PortList $Port
-set PortName "highpass_coefs"
-set BitWidth "32"
+set PortName "highfreq_coefs"
+set BitWidth "64"
 set ArrayOpt ""
 set Const "0"
 set Volatile "1"

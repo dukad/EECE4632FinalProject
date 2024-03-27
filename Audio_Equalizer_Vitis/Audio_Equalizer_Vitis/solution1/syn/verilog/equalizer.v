@@ -7,7 +7,7 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="equalizer_equalizer,hls_ip_2022_1,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020-clg400-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=6.508000,HLS_SYN_LAT=36,HLS_SYN_TPT=none,HLS_SYN_MEM=3,HLS_SYN_DSP=0,HLS_SYN_FF=56,HLS_SYN_LUT=194,HLS_VERSION=2022_1}" *)
+(* CORE_GENERATION_INFO="equalizer_equalizer,hls_ip_2022_1,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020-clg400-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=7.300000,HLS_SYN_LAT=168,HLS_SYN_TPT=none,HLS_SYN_MEM=3,HLS_SYN_DSP=0,HLS_SYN_FF=3226,HLS_SYN_LUT=3325,HLS_VERSION=2022_1}" *)
 
 module equalizer (
         ap_clk,
@@ -16,6 +16,51 @@ module equalizer (
         ap_done,
         ap_idle,
         ap_ready,
+        m_axi_gmem_AWVALID,
+        m_axi_gmem_AWREADY,
+        m_axi_gmem_AWADDR,
+        m_axi_gmem_AWID,
+        m_axi_gmem_AWLEN,
+        m_axi_gmem_AWSIZE,
+        m_axi_gmem_AWBURST,
+        m_axi_gmem_AWLOCK,
+        m_axi_gmem_AWCACHE,
+        m_axi_gmem_AWPROT,
+        m_axi_gmem_AWQOS,
+        m_axi_gmem_AWREGION,
+        m_axi_gmem_AWUSER,
+        m_axi_gmem_WVALID,
+        m_axi_gmem_WREADY,
+        m_axi_gmem_WDATA,
+        m_axi_gmem_WSTRB,
+        m_axi_gmem_WLAST,
+        m_axi_gmem_WID,
+        m_axi_gmem_WUSER,
+        m_axi_gmem_ARVALID,
+        m_axi_gmem_ARREADY,
+        m_axi_gmem_ARADDR,
+        m_axi_gmem_ARID,
+        m_axi_gmem_ARLEN,
+        m_axi_gmem_ARSIZE,
+        m_axi_gmem_ARBURST,
+        m_axi_gmem_ARLOCK,
+        m_axi_gmem_ARCACHE,
+        m_axi_gmem_ARPROT,
+        m_axi_gmem_ARQOS,
+        m_axi_gmem_ARREGION,
+        m_axi_gmem_ARUSER,
+        m_axi_gmem_RVALID,
+        m_axi_gmem_RREADY,
+        m_axi_gmem_RDATA,
+        m_axi_gmem_RLAST,
+        m_axi_gmem_RID,
+        m_axi_gmem_RUSER,
+        m_axi_gmem_RRESP,
+        m_axi_gmem_BVALID,
+        m_axi_gmem_BREADY,
+        m_axi_gmem_BRESP,
+        m_axi_gmem_BID,
+        m_axi_gmem_BUSER,
         SIGNAL_IN_TDATA,
         SIGNAL_IN_TVALID,
         SIGNAL_IN_TREADY,
@@ -34,40 +79,79 @@ module equalizer (
         SIGNAL_OUT_TLAST,
         SIGNAL_OUT_TID,
         SIGNAL_OUT_TDEST,
-        lowpass_coefs_address0,
-        lowpass_coefs_ce0,
-        lowpass_coefs_we0,
-        lowpass_coefs_d0,
-        lowpass_coefs_q0,
-        lowpass_coefs_address1,
-        lowpass_coefs_ce1,
-        lowpass_coefs_we1,
-        lowpass_coefs_d1,
-        lowpass_coefs_q1,
-        bandpass_coefs_address0,
-        bandpass_coefs_ce0,
-        bandpass_coefs_we0,
-        bandpass_coefs_d0,
-        bandpass_coefs_q0,
-        bandpass_coefs_address1,
-        bandpass_coefs_ce1,
-        bandpass_coefs_we1,
-        bandpass_coefs_d1,
-        bandpass_coefs_q1,
-        highpass_coefs_address0,
-        highpass_coefs_ce0,
-        highpass_coefs_we0,
-        highpass_coefs_d0,
-        highpass_coefs_q0,
-        highpass_coefs_address1,
-        highpass_coefs_ce1,
-        highpass_coefs_we1,
-        highpass_coefs_d1,
-        highpass_coefs_q1
+        s_axi_control_AWVALID,
+        s_axi_control_AWREADY,
+        s_axi_control_AWADDR,
+        s_axi_control_WVALID,
+        s_axi_control_WREADY,
+        s_axi_control_WDATA,
+        s_axi_control_WSTRB,
+        s_axi_control_ARVALID,
+        s_axi_control_ARREADY,
+        s_axi_control_ARADDR,
+        s_axi_control_RVALID,
+        s_axi_control_RREADY,
+        s_axi_control_RDATA,
+        s_axi_control_RRESP,
+        s_axi_control_BVALID,
+        s_axi_control_BREADY,
+        s_axi_control_BRESP
 );
 
-parameter    ap_ST_fsm_state1 = 2'd1;
-parameter    ap_ST_fsm_state2 = 2'd2;
+parameter    ap_ST_fsm_state1 = 34'd1;
+parameter    ap_ST_fsm_state2 = 34'd2;
+parameter    ap_ST_fsm_state3 = 34'd4;
+parameter    ap_ST_fsm_state4 = 34'd8;
+parameter    ap_ST_fsm_state5 = 34'd16;
+parameter    ap_ST_fsm_state6 = 34'd32;
+parameter    ap_ST_fsm_state7 = 34'd64;
+parameter    ap_ST_fsm_state8 = 34'd128;
+parameter    ap_ST_fsm_state9 = 34'd256;
+parameter    ap_ST_fsm_state10 = 34'd512;
+parameter    ap_ST_fsm_state11 = 34'd1024;
+parameter    ap_ST_fsm_state12 = 34'd2048;
+parameter    ap_ST_fsm_state13 = 34'd4096;
+parameter    ap_ST_fsm_state14 = 34'd8192;
+parameter    ap_ST_fsm_state15 = 34'd16384;
+parameter    ap_ST_fsm_state16 = 34'd32768;
+parameter    ap_ST_fsm_state17 = 34'd65536;
+parameter    ap_ST_fsm_state18 = 34'd131072;
+parameter    ap_ST_fsm_state19 = 34'd262144;
+parameter    ap_ST_fsm_state20 = 34'd524288;
+parameter    ap_ST_fsm_state21 = 34'd1048576;
+parameter    ap_ST_fsm_state22 = 34'd2097152;
+parameter    ap_ST_fsm_state23 = 34'd4194304;
+parameter    ap_ST_fsm_state24 = 34'd8388608;
+parameter    ap_ST_fsm_state25 = 34'd16777216;
+parameter    ap_ST_fsm_state26 = 34'd33554432;
+parameter    ap_ST_fsm_state27 = 34'd67108864;
+parameter    ap_ST_fsm_state28 = 34'd134217728;
+parameter    ap_ST_fsm_state29 = 34'd268435456;
+parameter    ap_ST_fsm_state30 = 34'd536870912;
+parameter    ap_ST_fsm_state31 = 34'd1073741824;
+parameter    ap_ST_fsm_state32 = 34'd2147483648;
+parameter    ap_ST_fsm_state33 = 34'd4294967296;
+parameter    ap_ST_fsm_state34 = 34'd8589934592;
+parameter    C_S_AXI_CONTROL_DATA_WIDTH = 32;
+parameter    C_S_AXI_CONTROL_ADDR_WIDTH = 6;
+parameter    C_S_AXI_DATA_WIDTH = 32;
+parameter    C_M_AXI_GMEM_ID_WIDTH = 1;
+parameter    C_M_AXI_GMEM_ADDR_WIDTH = 64;
+parameter    C_M_AXI_GMEM_DATA_WIDTH = 32;
+parameter    C_M_AXI_GMEM_AWUSER_WIDTH = 1;
+parameter    C_M_AXI_GMEM_ARUSER_WIDTH = 1;
+parameter    C_M_AXI_GMEM_WUSER_WIDTH = 1;
+parameter    C_M_AXI_GMEM_RUSER_WIDTH = 1;
+parameter    C_M_AXI_GMEM_BUSER_WIDTH = 1;
+parameter    C_M_AXI_GMEM_USER_VALUE = 0;
+parameter    C_M_AXI_GMEM_PROT_VALUE = 0;
+parameter    C_M_AXI_GMEM_CACHE_VALUE = 3;
+parameter    C_M_AXI_DATA_WIDTH = 32;
+
+parameter C_S_AXI_CONTROL_WSTRB_WIDTH = (32 / 8);
+parameter C_S_AXI_WSTRB_WIDTH = (32 / 8);
+parameter C_M_AXI_GMEM_WSTRB_WIDTH = (32 / 8);
+parameter C_M_AXI_WSTRB_WIDTH = (32 / 8);
 
 input   ap_clk;
 input   ap_rst_n;
@@ -75,6 +159,51 @@ input   ap_start;
 output   ap_done;
 output   ap_idle;
 output   ap_ready;
+output   m_axi_gmem_AWVALID;
+input   m_axi_gmem_AWREADY;
+output  [C_M_AXI_GMEM_ADDR_WIDTH - 1:0] m_axi_gmem_AWADDR;
+output  [C_M_AXI_GMEM_ID_WIDTH - 1:0] m_axi_gmem_AWID;
+output  [7:0] m_axi_gmem_AWLEN;
+output  [2:0] m_axi_gmem_AWSIZE;
+output  [1:0] m_axi_gmem_AWBURST;
+output  [1:0] m_axi_gmem_AWLOCK;
+output  [3:0] m_axi_gmem_AWCACHE;
+output  [2:0] m_axi_gmem_AWPROT;
+output  [3:0] m_axi_gmem_AWQOS;
+output  [3:0] m_axi_gmem_AWREGION;
+output  [C_M_AXI_GMEM_AWUSER_WIDTH - 1:0] m_axi_gmem_AWUSER;
+output   m_axi_gmem_WVALID;
+input   m_axi_gmem_WREADY;
+output  [C_M_AXI_GMEM_DATA_WIDTH - 1:0] m_axi_gmem_WDATA;
+output  [C_M_AXI_GMEM_WSTRB_WIDTH - 1:0] m_axi_gmem_WSTRB;
+output   m_axi_gmem_WLAST;
+output  [C_M_AXI_GMEM_ID_WIDTH - 1:0] m_axi_gmem_WID;
+output  [C_M_AXI_GMEM_WUSER_WIDTH - 1:0] m_axi_gmem_WUSER;
+output   m_axi_gmem_ARVALID;
+input   m_axi_gmem_ARREADY;
+output  [C_M_AXI_GMEM_ADDR_WIDTH - 1:0] m_axi_gmem_ARADDR;
+output  [C_M_AXI_GMEM_ID_WIDTH - 1:0] m_axi_gmem_ARID;
+output  [7:0] m_axi_gmem_ARLEN;
+output  [2:0] m_axi_gmem_ARSIZE;
+output  [1:0] m_axi_gmem_ARBURST;
+output  [1:0] m_axi_gmem_ARLOCK;
+output  [3:0] m_axi_gmem_ARCACHE;
+output  [2:0] m_axi_gmem_ARPROT;
+output  [3:0] m_axi_gmem_ARQOS;
+output  [3:0] m_axi_gmem_ARREGION;
+output  [C_M_AXI_GMEM_ARUSER_WIDTH - 1:0] m_axi_gmem_ARUSER;
+input   m_axi_gmem_RVALID;
+output   m_axi_gmem_RREADY;
+input  [C_M_AXI_GMEM_DATA_WIDTH - 1:0] m_axi_gmem_RDATA;
+input   m_axi_gmem_RLAST;
+input  [C_M_AXI_GMEM_ID_WIDTH - 1:0] m_axi_gmem_RID;
+input  [C_M_AXI_GMEM_RUSER_WIDTH - 1:0] m_axi_gmem_RUSER;
+input  [1:0] m_axi_gmem_RRESP;
+input   m_axi_gmem_BVALID;
+output   m_axi_gmem_BREADY;
+input  [1:0] m_axi_gmem_BRESP;
+input  [C_M_AXI_GMEM_ID_WIDTH - 1:0] m_axi_gmem_BID;
+input  [C_M_AXI_GMEM_BUSER_WIDTH - 1:0] m_axi_gmem_BUSER;
 input  [31:0] SIGNAL_IN_TDATA;
 input   SIGNAL_IN_TVALID;
 output   SIGNAL_IN_TREADY;
@@ -93,72 +222,299 @@ output  [1:0] SIGNAL_OUT_TUSER;
 output  [0:0] SIGNAL_OUT_TLAST;
 output  [4:0] SIGNAL_OUT_TID;
 output  [5:0] SIGNAL_OUT_TDEST;
-output  [5:0] lowpass_coefs_address0;
-output   lowpass_coefs_ce0;
-output   lowpass_coefs_we0;
-output  [31:0] lowpass_coefs_d0;
-input  [31:0] lowpass_coefs_q0;
-output  [5:0] lowpass_coefs_address1;
-output   lowpass_coefs_ce1;
-output   lowpass_coefs_we1;
-output  [31:0] lowpass_coefs_d1;
-input  [31:0] lowpass_coefs_q1;
-output  [5:0] bandpass_coefs_address0;
-output   bandpass_coefs_ce0;
-output   bandpass_coefs_we0;
-output  [31:0] bandpass_coefs_d0;
-input  [31:0] bandpass_coefs_q0;
-output  [5:0] bandpass_coefs_address1;
-output   bandpass_coefs_ce1;
-output   bandpass_coefs_we1;
-output  [31:0] bandpass_coefs_d1;
-input  [31:0] bandpass_coefs_q1;
-output  [5:0] highpass_coefs_address0;
-output   highpass_coefs_ce0;
-output   highpass_coefs_we0;
-output  [31:0] highpass_coefs_d0;
-input  [31:0] highpass_coefs_q0;
-output  [5:0] highpass_coefs_address1;
-output   highpass_coefs_ce1;
-output   highpass_coefs_we1;
-output  [31:0] highpass_coefs_d1;
-input  [31:0] highpass_coefs_q1;
+input   s_axi_control_AWVALID;
+output   s_axi_control_AWREADY;
+input  [C_S_AXI_CONTROL_ADDR_WIDTH - 1:0] s_axi_control_AWADDR;
+input   s_axi_control_WVALID;
+output   s_axi_control_WREADY;
+input  [C_S_AXI_CONTROL_DATA_WIDTH - 1:0] s_axi_control_WDATA;
+input  [C_S_AXI_CONTROL_WSTRB_WIDTH - 1:0] s_axi_control_WSTRB;
+input   s_axi_control_ARVALID;
+output   s_axi_control_ARREADY;
+input  [C_S_AXI_CONTROL_ADDR_WIDTH - 1:0] s_axi_control_ARADDR;
+output   s_axi_control_RVALID;
+input   s_axi_control_RREADY;
+output  [C_S_AXI_CONTROL_DATA_WIDTH - 1:0] s_axi_control_RDATA;
+output  [1:0] s_axi_control_RRESP;
+output   s_axi_control_BVALID;
+input   s_axi_control_BREADY;
+output  [1:0] s_axi_control_BRESP;
 
 reg ap_done;
 reg ap_idle;
 reg ap_ready;
 
  reg    ap_rst_n_inv;
-(* fsm_encoding = "none" *) reg   [1:0] ap_CS_fsm;
+(* fsm_encoding = "none" *) reg   [33:0] ap_CS_fsm;
 wire    ap_CS_fsm_state1;
+wire   [63:0] lowfreq_coefs;
+wire   [63:0] midfreq_coefs;
+wire   [63:0] highfreq_coefs;
+reg   [5:0] lowfreq_shift_reg_address0;
+reg    lowfreq_shift_reg_ce0;
+reg    lowfreq_shift_reg_we0;
+reg   [31:0] lowfreq_shift_reg_d0;
+wire   [31:0] lowfreq_shift_reg_q1;
+reg   [5:0] midfreq_shift_reg_address0;
+reg    midfreq_shift_reg_ce0;
+reg    midfreq_shift_reg_we0;
+reg   [31:0] midfreq_shift_reg_d0;
+wire   [31:0] midfreq_shift_reg_q1;
+reg   [5:0] highfreq_shift_reg_address0;
+reg    highfreq_shift_reg_ce0;
+reg    highfreq_shift_reg_we0;
+reg   [31:0] highfreq_shift_reg_d0;
+wire   [31:0] highfreq_shift_reg_q1;
+reg    gmem_blk_n_AR;
+wire    ap_CS_fsm_state3;
+reg    gmem_blk_n_R;
+wire    ap_CS_fsm_state10;
+wire    ap_CS_fsm_state13;
+wire    ap_CS_fsm_state20;
+wire    ap_CS_fsm_state23;
+wire    ap_CS_fsm_state30;
 reg    SIGNAL_IN_TDATA_blk_n;
 reg    SIGNAL_OUT_TDATA_blk_n;
+wire    ap_CS_fsm_state33;
+wire    ap_CS_fsm_state34;
+reg   [63:0] highfreq_coefs_read_reg_401;
+reg   [63:0] midfreq_coefs_read_reg_406;
+reg   [63:0] lowfreq_coefs_read_reg_411;
+reg  signed [31:0] tmp_data_V_reg_434;
+reg   [3:0] tmp_keep_V_reg_440;
+reg   [3:0] tmp_strb_V_reg_445;
+reg   [1:0] tmp_user_V_reg_450;
+reg   [0:0] tmp_last_V_reg_455;
+reg   [4:0] tmp_id_V_reg_460;
+reg   [5:0] tmp_dest_V_reg_465;
+reg   [63:0] gmem_addr_reg_470;
+reg   [63:0] gmem_addr_1_reg_476;
+reg   [63:0] gmem_addr_2_reg_482;
+reg  signed [31:0] gmem_addr_read_reg_488;
+wire   [31:0] grp_fu_362_p2;
+reg   [31:0] mul_ln49_reg_493;
+wire    ap_CS_fsm_state12;
+wire  signed [31:0] lowfreq_accumulate_fu_369_p2;
+reg  signed [31:0] lowfreq_accumulate_reg_498;
+reg  signed [31:0] gmem_addr_1_read_reg_503;
+wire   [31:0] grp_fu_375_p2;
+reg   [31:0] mul_ln59_reg_508;
+wire    ap_CS_fsm_state22;
+reg  signed [31:0] gmem_addr_2_read_reg_513;
+wire   [31:0] grp_fu_391_p2;
+reg   [31:0] mul_ln69_reg_521;
+wire    ap_CS_fsm_state32;
+wire    grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_ap_start;
+wire    grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_ap_done;
+wire    grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_ap_idle;
+wire    grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_ap_ready;
+wire    grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_m_axi_gmem_AWVALID;
+wire   [63:0] grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_m_axi_gmem_AWADDR;
+wire   [0:0] grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_m_axi_gmem_AWID;
+wire   [31:0] grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_m_axi_gmem_AWLEN;
+wire   [2:0] grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_m_axi_gmem_AWSIZE;
+wire   [1:0] grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_m_axi_gmem_AWBURST;
+wire   [1:0] grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_m_axi_gmem_AWLOCK;
+wire   [3:0] grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_m_axi_gmem_AWCACHE;
+wire   [2:0] grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_m_axi_gmem_AWPROT;
+wire   [3:0] grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_m_axi_gmem_AWQOS;
+wire   [3:0] grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_m_axi_gmem_AWREGION;
+wire   [0:0] grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_m_axi_gmem_AWUSER;
+wire    grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_m_axi_gmem_WVALID;
+wire   [31:0] grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_m_axi_gmem_WDATA;
+wire   [3:0] grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_m_axi_gmem_WSTRB;
+wire    grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_m_axi_gmem_WLAST;
+wire   [0:0] grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_m_axi_gmem_WID;
+wire   [0:0] grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_m_axi_gmem_WUSER;
+wire    grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_m_axi_gmem_ARVALID;
+wire   [63:0] grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_m_axi_gmem_ARADDR;
+wire   [0:0] grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_m_axi_gmem_ARID;
+wire   [31:0] grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_m_axi_gmem_ARLEN;
+wire   [2:0] grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_m_axi_gmem_ARSIZE;
+wire   [1:0] grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_m_axi_gmem_ARBURST;
+wire   [1:0] grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_m_axi_gmem_ARLOCK;
+wire   [3:0] grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_m_axi_gmem_ARCACHE;
+wire   [2:0] grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_m_axi_gmem_ARPROT;
+wire   [3:0] grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_m_axi_gmem_ARQOS;
+wire   [3:0] grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_m_axi_gmem_ARREGION;
+wire   [0:0] grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_m_axi_gmem_ARUSER;
+wire    grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_m_axi_gmem_RREADY;
+wire    grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_m_axi_gmem_BREADY;
+wire   [31:0] grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_lowfreq_accumulate_out;
+wire    grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_lowfreq_accumulate_out_ap_vld;
+wire   [5:0] grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_lowfreq_shift_reg_address0;
+wire    grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_lowfreq_shift_reg_ce0;
+wire    grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_lowfreq_shift_reg_we0;
+wire   [31:0] grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_lowfreq_shift_reg_d0;
+wire   [5:0] grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_lowfreq_shift_reg_address1;
+wire    grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_lowfreq_shift_reg_ce1;
+wire  signed [31:0] grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_grp_fu_391_p_din0;
+wire  signed [31:0] grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_grp_fu_391_p_din1;
+wire    grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_grp_fu_391_p_ce;
+wire    grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_ap_start;
+wire    grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_ap_done;
+wire    grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_ap_idle;
+wire    grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_ap_ready;
+wire    grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_m_axi_gmem_AWVALID;
+wire   [63:0] grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_m_axi_gmem_AWADDR;
+wire   [0:0] grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_m_axi_gmem_AWID;
+wire   [31:0] grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_m_axi_gmem_AWLEN;
+wire   [2:0] grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_m_axi_gmem_AWSIZE;
+wire   [1:0] grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_m_axi_gmem_AWBURST;
+wire   [1:0] grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_m_axi_gmem_AWLOCK;
+wire   [3:0] grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_m_axi_gmem_AWCACHE;
+wire   [2:0] grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_m_axi_gmem_AWPROT;
+wire   [3:0] grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_m_axi_gmem_AWQOS;
+wire   [3:0] grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_m_axi_gmem_AWREGION;
+wire   [0:0] grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_m_axi_gmem_AWUSER;
+wire    grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_m_axi_gmem_WVALID;
+wire   [31:0] grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_m_axi_gmem_WDATA;
+wire   [3:0] grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_m_axi_gmem_WSTRB;
+wire    grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_m_axi_gmem_WLAST;
+wire   [0:0] grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_m_axi_gmem_WID;
+wire   [0:0] grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_m_axi_gmem_WUSER;
+wire    grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_m_axi_gmem_ARVALID;
+wire   [63:0] grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_m_axi_gmem_ARADDR;
+wire   [0:0] grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_m_axi_gmem_ARID;
+wire   [31:0] grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_m_axi_gmem_ARLEN;
+wire   [2:0] grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_m_axi_gmem_ARSIZE;
+wire   [1:0] grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_m_axi_gmem_ARBURST;
+wire   [1:0] grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_m_axi_gmem_ARLOCK;
+wire   [3:0] grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_m_axi_gmem_ARCACHE;
+wire   [2:0] grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_m_axi_gmem_ARPROT;
+wire   [3:0] grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_m_axi_gmem_ARQOS;
+wire   [3:0] grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_m_axi_gmem_ARREGION;
+wire   [0:0] grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_m_axi_gmem_ARUSER;
+wire    grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_m_axi_gmem_RREADY;
+wire    grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_m_axi_gmem_BREADY;
+wire   [31:0] grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_midfreq_accumulate_out;
+wire    grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_midfreq_accumulate_out_ap_vld;
+wire   [5:0] grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_midfreq_shift_reg_address0;
+wire    grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_midfreq_shift_reg_ce0;
+wire    grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_midfreq_shift_reg_we0;
+wire   [31:0] grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_midfreq_shift_reg_d0;
+wire   [5:0] grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_midfreq_shift_reg_address1;
+wire    grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_midfreq_shift_reg_ce1;
+wire  signed [31:0] grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_grp_fu_391_p_din0;
+wire  signed [31:0] grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_grp_fu_391_p_din1;
+wire    grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_grp_fu_391_p_ce;
+wire    grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_ap_start;
+wire    grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_ap_done;
+wire    grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_ap_idle;
+wire    grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_ap_ready;
+wire    grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_m_axi_gmem_AWVALID;
+wire   [63:0] grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_m_axi_gmem_AWADDR;
+wire   [0:0] grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_m_axi_gmem_AWID;
+wire   [31:0] grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_m_axi_gmem_AWLEN;
+wire   [2:0] grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_m_axi_gmem_AWSIZE;
+wire   [1:0] grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_m_axi_gmem_AWBURST;
+wire   [1:0] grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_m_axi_gmem_AWLOCK;
+wire   [3:0] grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_m_axi_gmem_AWCACHE;
+wire   [2:0] grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_m_axi_gmem_AWPROT;
+wire   [3:0] grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_m_axi_gmem_AWQOS;
+wire   [3:0] grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_m_axi_gmem_AWREGION;
+wire   [0:0] grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_m_axi_gmem_AWUSER;
+wire    grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_m_axi_gmem_WVALID;
+wire   [31:0] grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_m_axi_gmem_WDATA;
+wire   [3:0] grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_m_axi_gmem_WSTRB;
+wire    grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_m_axi_gmem_WLAST;
+wire   [0:0] grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_m_axi_gmem_WID;
+wire   [0:0] grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_m_axi_gmem_WUSER;
+wire    grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_m_axi_gmem_ARVALID;
+wire   [63:0] grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_m_axi_gmem_ARADDR;
+wire   [0:0] grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_m_axi_gmem_ARID;
+wire   [31:0] grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_m_axi_gmem_ARLEN;
+wire   [2:0] grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_m_axi_gmem_ARSIZE;
+wire   [1:0] grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_m_axi_gmem_ARBURST;
+wire   [1:0] grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_m_axi_gmem_ARLOCK;
+wire   [3:0] grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_m_axi_gmem_ARCACHE;
+wire   [2:0] grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_m_axi_gmem_ARPROT;
+wire   [3:0] grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_m_axi_gmem_ARQOS;
+wire   [3:0] grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_m_axi_gmem_ARREGION;
+wire   [0:0] grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_m_axi_gmem_ARUSER;
+wire    grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_m_axi_gmem_RREADY;
+wire    grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_m_axi_gmem_BREADY;
+wire   [31:0] grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_highfreq_accumulate_out;
+wire    grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_highfreq_accumulate_out_ap_vld;
+wire   [5:0] grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_highfreq_shift_reg_address0;
+wire    grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_highfreq_shift_reg_ce0;
+wire    grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_highfreq_shift_reg_we0;
+wire   [31:0] grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_highfreq_shift_reg_d0;
+wire   [5:0] grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_highfreq_shift_reg_address1;
+wire    grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_highfreq_shift_reg_ce1;
+wire  signed [31:0] grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_grp_fu_391_p_din0;
+wire  signed [31:0] grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_grp_fu_391_p_din1;
+wire    grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_grp_fu_391_p_ce;
+wire    gmem_AWREADY;
+wire    gmem_WREADY;
+reg    gmem_ARVALID;
+wire    gmem_ARREADY;
+reg   [63:0] gmem_ARADDR;
+reg   [31:0] gmem_ARLEN;
+wire    gmem_RVALID;
+reg    gmem_RREADY;
+wire   [31:0] gmem_RDATA;
+wire   [8:0] gmem_RFIFONUM;
+wire    gmem_BVALID;
+reg    grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_ap_start_reg;
+reg    ap_block_state1_ignore_call39;
 wire    ap_CS_fsm_state2;
-wire    grp_equalizer_Pipeline_Lowpass_Shift_Accumulate_Loop_fu_115_ap_start;
-wire    grp_equalizer_Pipeline_Lowpass_Shift_Accumulate_Loop_fu_115_ap_done;
-wire    grp_equalizer_Pipeline_Lowpass_Shift_Accumulate_Loop_fu_115_ap_idle;
-wire    grp_equalizer_Pipeline_Lowpass_Shift_Accumulate_Loop_fu_115_ap_ready;
-wire    grp_equalizer_Pipeline_Bandpass_Shift_Accumulate_Loop_fu_121_ap_start;
-wire    grp_equalizer_Pipeline_Bandpass_Shift_Accumulate_Loop_fu_121_ap_done;
-wire    grp_equalizer_Pipeline_Bandpass_Shift_Accumulate_Loop_fu_121_ap_idle;
-wire    grp_equalizer_Pipeline_Bandpass_Shift_Accumulate_Loop_fu_121_ap_ready;
-wire    grp_equalizer_Pipeline_Highpass_Shift_Accumulate_Loop_fu_127_ap_start;
-wire    grp_equalizer_Pipeline_Highpass_Shift_Accumulate_Loop_fu_127_ap_done;
-wire    grp_equalizer_Pipeline_Highpass_Shift_Accumulate_Loop_fu_127_ap_idle;
-wire    grp_equalizer_Pipeline_Highpass_Shift_Accumulate_Loop_fu_127_ap_ready;
-reg    grp_equalizer_Pipeline_Lowpass_Shift_Accumulate_Loop_fu_115_ap_start_reg;
-reg    ap_block_state1_ignore_call31;
-reg    grp_equalizer_Pipeline_Bandpass_Shift_Accumulate_Loop_fu_121_ap_start_reg;
-reg    ap_block_state1_ignore_call32;
-reg    grp_equalizer_Pipeline_Highpass_Shift_Accumulate_Loop_fu_127_ap_start_reg;
-reg    ap_block_state1_ignore_call33;
+reg    grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_ap_start_reg;
+wire    ap_CS_fsm_state11;
+reg    grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_ap_start_reg;
+wire    ap_CS_fsm_state21;
+wire  signed [63:0] sext_ln49_fu_312_p1;
+wire  signed [63:0] sext_ln59_fu_332_p1;
+wire  signed [63:0] sext_ln69_fu_352_p1;
+wire    ap_CS_fsm_state31;
 reg    ap_block_state1;
+wire   [31:0] midfreq_accumulate_fu_382_p2;
+wire   [61:0] trunc_ln1_fu_302_p4;
+wire   [61:0] trunc_ln3_fu_322_p4;
+wire   [61:0] trunc_ln5_fu_342_p4;
+reg  signed [31:0] grp_fu_391_p0;
+reg  signed [31:0] grp_fu_391_p1;
+wire  signed [31:0] highfreq_accumulate_fu_396_p1;
+reg    grp_fu_362_ce;
+reg    grp_fu_375_ce;
+reg    grp_fu_391_ce;
 wire    regslice_both_SIGNAL_OUT_V_data_V_U_apdone_blk;
-reg    ap_block_state2;
-reg    ap_block_state2_on_subcall_done;
-reg   [1:0] ap_NS_fsm;
+reg    ap_block_state34;
+reg   [33:0] ap_NS_fsm;
 reg    ap_ST_fsm_state1_blk;
 reg    ap_ST_fsm_state2_blk;
+reg    ap_ST_fsm_state3_blk;
+wire    ap_ST_fsm_state4_blk;
+wire    ap_ST_fsm_state5_blk;
+wire    ap_ST_fsm_state6_blk;
+wire    ap_ST_fsm_state7_blk;
+wire    ap_ST_fsm_state8_blk;
+wire    ap_ST_fsm_state9_blk;
+reg    ap_ST_fsm_state10_blk;
+wire    ap_ST_fsm_state11_blk;
+reg    ap_ST_fsm_state12_blk;
+reg    ap_ST_fsm_state13_blk;
+wire    ap_ST_fsm_state14_blk;
+wire    ap_ST_fsm_state15_blk;
+wire    ap_ST_fsm_state16_blk;
+wire    ap_ST_fsm_state17_blk;
+wire    ap_ST_fsm_state18_blk;
+wire    ap_ST_fsm_state19_blk;
+reg    ap_ST_fsm_state20_blk;
+wire    ap_ST_fsm_state21_blk;
+reg    ap_ST_fsm_state22_blk;
+reg    ap_ST_fsm_state23_blk;
+wire    ap_ST_fsm_state24_blk;
+wire    ap_ST_fsm_state25_blk;
+wire    ap_ST_fsm_state26_blk;
+wire    ap_ST_fsm_state27_blk;
+wire    ap_ST_fsm_state28_blk;
+wire    ap_ST_fsm_state29_blk;
+reg    ap_ST_fsm_state30_blk;
+wire    ap_ST_fsm_state31_blk;
+wire    ap_ST_fsm_state32_blk;
+reg    ap_ST_fsm_state33_blk;
+reg    ap_ST_fsm_state34_blk;
 wire    regslice_both_SIGNAL_IN_V_data_V_U_apdone_blk;
 wire   [31:0] SIGNAL_IN_TDATA_int_regslice;
 wire    SIGNAL_IN_TVALID_int_regslice;
@@ -188,6 +544,7 @@ wire    regslice_both_SIGNAL_IN_V_dest_V_U_apdone_blk;
 wire   [5:0] SIGNAL_IN_TDEST_int_regslice;
 wire    regslice_both_SIGNAL_IN_V_dest_V_U_vld_out;
 wire    regslice_both_SIGNAL_IN_V_dest_V_U_ack_in;
+wire   [31:0] SIGNAL_OUT_TDATA_int_regslice;
 reg    SIGNAL_OUT_TVALID_int_regslice;
 wire    SIGNAL_OUT_TREADY_int_regslice;
 wire    regslice_both_SIGNAL_OUT_V_data_V_U_vld_out;
@@ -213,37 +570,429 @@ wire    ap_ce_reg;
 
 // power-on initialization
 initial begin
-#0 ap_CS_fsm = 2'd1;
-#0 grp_equalizer_Pipeline_Lowpass_Shift_Accumulate_Loop_fu_115_ap_start_reg = 1'b0;
-#0 grp_equalizer_Pipeline_Bandpass_Shift_Accumulate_Loop_fu_121_ap_start_reg = 1'b0;
-#0 grp_equalizer_Pipeline_Highpass_Shift_Accumulate_Loop_fu_127_ap_start_reg = 1'b0;
+#0 ap_CS_fsm = 34'd1;
+#0 grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_ap_start_reg = 1'b0;
+#0 grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_ap_start_reg = 1'b0;
+#0 grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_ap_start_reg = 1'b0;
 end
 
-equalizer_equalizer_Pipeline_Lowpass_Shift_Accumulate_Loop grp_equalizer_Pipeline_Lowpass_Shift_Accumulate_Loop_fu_115(
-    .ap_clk(ap_clk),
-    .ap_rst(ap_rst_n_inv),
-    .ap_start(grp_equalizer_Pipeline_Lowpass_Shift_Accumulate_Loop_fu_115_ap_start),
-    .ap_done(grp_equalizer_Pipeline_Lowpass_Shift_Accumulate_Loop_fu_115_ap_done),
-    .ap_idle(grp_equalizer_Pipeline_Lowpass_Shift_Accumulate_Loop_fu_115_ap_idle),
-    .ap_ready(grp_equalizer_Pipeline_Lowpass_Shift_Accumulate_Loop_fu_115_ap_ready)
+equalizer_lowfreq_shift_reg_RAM_AUTO_1R1W #(
+    .DataWidth( 32 ),
+    .AddressRange( 33 ),
+    .AddressWidth( 6 ))
+lowfreq_shift_reg_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(lowfreq_shift_reg_address0),
+    .ce0(lowfreq_shift_reg_ce0),
+    .we0(lowfreq_shift_reg_we0),
+    .d0(lowfreq_shift_reg_d0),
+    .address1(grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_lowfreq_shift_reg_address1),
+    .ce1(grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_lowfreq_shift_reg_ce1),
+    .q1(lowfreq_shift_reg_q1)
 );
 
-equalizer_equalizer_Pipeline_Bandpass_Shift_Accumulate_Loop grp_equalizer_Pipeline_Bandpass_Shift_Accumulate_Loop_fu_121(
-    .ap_clk(ap_clk),
-    .ap_rst(ap_rst_n_inv),
-    .ap_start(grp_equalizer_Pipeline_Bandpass_Shift_Accumulate_Loop_fu_121_ap_start),
-    .ap_done(grp_equalizer_Pipeline_Bandpass_Shift_Accumulate_Loop_fu_121_ap_done),
-    .ap_idle(grp_equalizer_Pipeline_Bandpass_Shift_Accumulate_Loop_fu_121_ap_idle),
-    .ap_ready(grp_equalizer_Pipeline_Bandpass_Shift_Accumulate_Loop_fu_121_ap_ready)
+equalizer_lowfreq_shift_reg_RAM_AUTO_1R1W #(
+    .DataWidth( 32 ),
+    .AddressRange( 33 ),
+    .AddressWidth( 6 ))
+midfreq_shift_reg_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(midfreq_shift_reg_address0),
+    .ce0(midfreq_shift_reg_ce0),
+    .we0(midfreq_shift_reg_we0),
+    .d0(midfreq_shift_reg_d0),
+    .address1(grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_midfreq_shift_reg_address1),
+    .ce1(grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_midfreq_shift_reg_ce1),
+    .q1(midfreq_shift_reg_q1)
 );
 
-equalizer_equalizer_Pipeline_Highpass_Shift_Accumulate_Loop grp_equalizer_Pipeline_Highpass_Shift_Accumulate_Loop_fu_127(
+equalizer_lowfreq_shift_reg_RAM_AUTO_1R1W #(
+    .DataWidth( 32 ),
+    .AddressRange( 33 ),
+    .AddressWidth( 6 ))
+highfreq_shift_reg_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(highfreq_shift_reg_address0),
+    .ce0(highfreq_shift_reg_ce0),
+    .we0(highfreq_shift_reg_we0),
+    .d0(highfreq_shift_reg_d0),
+    .address1(grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_highfreq_shift_reg_address1),
+    .ce1(grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_highfreq_shift_reg_ce1),
+    .q1(highfreq_shift_reg_q1)
+);
+
+equalizer_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
-    .ap_start(grp_equalizer_Pipeline_Highpass_Shift_Accumulate_Loop_fu_127_ap_start),
-    .ap_done(grp_equalizer_Pipeline_Highpass_Shift_Accumulate_Loop_fu_127_ap_done),
-    .ap_idle(grp_equalizer_Pipeline_Highpass_Shift_Accumulate_Loop_fu_127_ap_idle),
-    .ap_ready(grp_equalizer_Pipeline_Highpass_Shift_Accumulate_Loop_fu_127_ap_ready)
+    .ap_start(grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_ap_start),
+    .ap_done(grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_ap_done),
+    .ap_idle(grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_ap_idle),
+    .ap_ready(grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_ap_ready),
+    .m_axi_gmem_AWVALID(grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_m_axi_gmem_AWVALID),
+    .m_axi_gmem_AWREADY(1'b0),
+    .m_axi_gmem_AWADDR(grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_m_axi_gmem_AWADDR),
+    .m_axi_gmem_AWID(grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_m_axi_gmem_AWID),
+    .m_axi_gmem_AWLEN(grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_m_axi_gmem_AWLEN),
+    .m_axi_gmem_AWSIZE(grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_m_axi_gmem_AWSIZE),
+    .m_axi_gmem_AWBURST(grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_m_axi_gmem_AWBURST),
+    .m_axi_gmem_AWLOCK(grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_m_axi_gmem_AWLOCK),
+    .m_axi_gmem_AWCACHE(grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_m_axi_gmem_AWCACHE),
+    .m_axi_gmem_AWPROT(grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_m_axi_gmem_AWPROT),
+    .m_axi_gmem_AWQOS(grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_m_axi_gmem_AWQOS),
+    .m_axi_gmem_AWREGION(grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_m_axi_gmem_AWREGION),
+    .m_axi_gmem_AWUSER(grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_m_axi_gmem_AWUSER),
+    .m_axi_gmem_WVALID(grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_m_axi_gmem_WVALID),
+    .m_axi_gmem_WREADY(1'b0),
+    .m_axi_gmem_WDATA(grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_m_axi_gmem_WDATA),
+    .m_axi_gmem_WSTRB(grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_m_axi_gmem_WSTRB),
+    .m_axi_gmem_WLAST(grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_m_axi_gmem_WLAST),
+    .m_axi_gmem_WID(grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_m_axi_gmem_WID),
+    .m_axi_gmem_WUSER(grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_m_axi_gmem_WUSER),
+    .m_axi_gmem_ARVALID(grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_m_axi_gmem_ARVALID),
+    .m_axi_gmem_ARREADY(gmem_ARREADY),
+    .m_axi_gmem_ARADDR(grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_m_axi_gmem_ARADDR),
+    .m_axi_gmem_ARID(grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_m_axi_gmem_ARID),
+    .m_axi_gmem_ARLEN(grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_m_axi_gmem_ARLEN),
+    .m_axi_gmem_ARSIZE(grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_m_axi_gmem_ARSIZE),
+    .m_axi_gmem_ARBURST(grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_m_axi_gmem_ARBURST),
+    .m_axi_gmem_ARLOCK(grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_m_axi_gmem_ARLOCK),
+    .m_axi_gmem_ARCACHE(grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_m_axi_gmem_ARCACHE),
+    .m_axi_gmem_ARPROT(grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_m_axi_gmem_ARPROT),
+    .m_axi_gmem_ARQOS(grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_m_axi_gmem_ARQOS),
+    .m_axi_gmem_ARREGION(grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_m_axi_gmem_ARREGION),
+    .m_axi_gmem_ARUSER(grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_m_axi_gmem_ARUSER),
+    .m_axi_gmem_RVALID(gmem_RVALID),
+    .m_axi_gmem_RREADY(grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_m_axi_gmem_RREADY),
+    .m_axi_gmem_RDATA(gmem_RDATA),
+    .m_axi_gmem_RLAST(1'b0),
+    .m_axi_gmem_RID(1'd0),
+    .m_axi_gmem_RFIFONUM(gmem_RFIFONUM),
+    .m_axi_gmem_RUSER(1'd0),
+    .m_axi_gmem_RRESP(2'd0),
+    .m_axi_gmem_BVALID(1'b0),
+    .m_axi_gmem_BREADY(grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_m_axi_gmem_BREADY),
+    .m_axi_gmem_BRESP(2'd0),
+    .m_axi_gmem_BID(1'd0),
+    .m_axi_gmem_BUSER(1'd0),
+    .lowfreq_coefs(lowfreq_coefs_read_reg_411),
+    .lowfreq_accumulate_out(grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_lowfreq_accumulate_out),
+    .lowfreq_accumulate_out_ap_vld(grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_lowfreq_accumulate_out_ap_vld),
+    .lowfreq_shift_reg_address0(grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_lowfreq_shift_reg_address0),
+    .lowfreq_shift_reg_ce0(grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_lowfreq_shift_reg_ce0),
+    .lowfreq_shift_reg_we0(grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_lowfreq_shift_reg_we0),
+    .lowfreq_shift_reg_d0(grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_lowfreq_shift_reg_d0),
+    .lowfreq_shift_reg_address1(grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_lowfreq_shift_reg_address1),
+    .lowfreq_shift_reg_ce1(grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_lowfreq_shift_reg_ce1),
+    .lowfreq_shift_reg_q1(lowfreq_shift_reg_q1),
+    .grp_fu_391_p_din0(grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_grp_fu_391_p_din0),
+    .grp_fu_391_p_din1(grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_grp_fu_391_p_din1),
+    .grp_fu_391_p_dout0(grp_fu_391_p2),
+    .grp_fu_391_p_ce(grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_grp_fu_391_p_ce)
+);
+
+equalizer_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254(
+    .ap_clk(ap_clk),
+    .ap_rst(ap_rst_n_inv),
+    .ap_start(grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_ap_start),
+    .ap_done(grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_ap_done),
+    .ap_idle(grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_ap_idle),
+    .ap_ready(grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_ap_ready),
+    .m_axi_gmem_AWVALID(grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_m_axi_gmem_AWVALID),
+    .m_axi_gmem_AWREADY(1'b0),
+    .m_axi_gmem_AWADDR(grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_m_axi_gmem_AWADDR),
+    .m_axi_gmem_AWID(grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_m_axi_gmem_AWID),
+    .m_axi_gmem_AWLEN(grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_m_axi_gmem_AWLEN),
+    .m_axi_gmem_AWSIZE(grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_m_axi_gmem_AWSIZE),
+    .m_axi_gmem_AWBURST(grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_m_axi_gmem_AWBURST),
+    .m_axi_gmem_AWLOCK(grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_m_axi_gmem_AWLOCK),
+    .m_axi_gmem_AWCACHE(grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_m_axi_gmem_AWCACHE),
+    .m_axi_gmem_AWPROT(grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_m_axi_gmem_AWPROT),
+    .m_axi_gmem_AWQOS(grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_m_axi_gmem_AWQOS),
+    .m_axi_gmem_AWREGION(grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_m_axi_gmem_AWREGION),
+    .m_axi_gmem_AWUSER(grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_m_axi_gmem_AWUSER),
+    .m_axi_gmem_WVALID(grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_m_axi_gmem_WVALID),
+    .m_axi_gmem_WREADY(1'b0),
+    .m_axi_gmem_WDATA(grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_m_axi_gmem_WDATA),
+    .m_axi_gmem_WSTRB(grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_m_axi_gmem_WSTRB),
+    .m_axi_gmem_WLAST(grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_m_axi_gmem_WLAST),
+    .m_axi_gmem_WID(grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_m_axi_gmem_WID),
+    .m_axi_gmem_WUSER(grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_m_axi_gmem_WUSER),
+    .m_axi_gmem_ARVALID(grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_m_axi_gmem_ARVALID),
+    .m_axi_gmem_ARREADY(gmem_ARREADY),
+    .m_axi_gmem_ARADDR(grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_m_axi_gmem_ARADDR),
+    .m_axi_gmem_ARID(grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_m_axi_gmem_ARID),
+    .m_axi_gmem_ARLEN(grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_m_axi_gmem_ARLEN),
+    .m_axi_gmem_ARSIZE(grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_m_axi_gmem_ARSIZE),
+    .m_axi_gmem_ARBURST(grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_m_axi_gmem_ARBURST),
+    .m_axi_gmem_ARLOCK(grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_m_axi_gmem_ARLOCK),
+    .m_axi_gmem_ARCACHE(grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_m_axi_gmem_ARCACHE),
+    .m_axi_gmem_ARPROT(grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_m_axi_gmem_ARPROT),
+    .m_axi_gmem_ARQOS(grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_m_axi_gmem_ARQOS),
+    .m_axi_gmem_ARREGION(grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_m_axi_gmem_ARREGION),
+    .m_axi_gmem_ARUSER(grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_m_axi_gmem_ARUSER),
+    .m_axi_gmem_RVALID(gmem_RVALID),
+    .m_axi_gmem_RREADY(grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_m_axi_gmem_RREADY),
+    .m_axi_gmem_RDATA(gmem_RDATA),
+    .m_axi_gmem_RLAST(1'b0),
+    .m_axi_gmem_RID(1'd0),
+    .m_axi_gmem_RFIFONUM(gmem_RFIFONUM),
+    .m_axi_gmem_RUSER(1'd0),
+    .m_axi_gmem_RRESP(2'd0),
+    .m_axi_gmem_BVALID(1'b0),
+    .m_axi_gmem_BREADY(grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_m_axi_gmem_BREADY),
+    .m_axi_gmem_BRESP(2'd0),
+    .m_axi_gmem_BID(1'd0),
+    .m_axi_gmem_BUSER(1'd0),
+    .midfreq_coefs(midfreq_coefs_read_reg_406),
+    .midfreq_accumulate_out(grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_midfreq_accumulate_out),
+    .midfreq_accumulate_out_ap_vld(grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_midfreq_accumulate_out_ap_vld),
+    .midfreq_shift_reg_address0(grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_midfreq_shift_reg_address0),
+    .midfreq_shift_reg_ce0(grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_midfreq_shift_reg_ce0),
+    .midfreq_shift_reg_we0(grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_midfreq_shift_reg_we0),
+    .midfreq_shift_reg_d0(grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_midfreq_shift_reg_d0),
+    .midfreq_shift_reg_address1(grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_midfreq_shift_reg_address1),
+    .midfreq_shift_reg_ce1(grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_midfreq_shift_reg_ce1),
+    .midfreq_shift_reg_q1(midfreq_shift_reg_q1),
+    .grp_fu_391_p_din0(grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_grp_fu_391_p_din0),
+    .grp_fu_391_p_din1(grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_grp_fu_391_p_din1),
+    .grp_fu_391_p_dout0(grp_fu_391_p2),
+    .grp_fu_391_p_ce(grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_grp_fu_391_p_ce)
+);
+
+equalizer_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264(
+    .ap_clk(ap_clk),
+    .ap_rst(ap_rst_n_inv),
+    .ap_start(grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_ap_start),
+    .ap_done(grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_ap_done),
+    .ap_idle(grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_ap_idle),
+    .ap_ready(grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_ap_ready),
+    .m_axi_gmem_AWVALID(grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_m_axi_gmem_AWVALID),
+    .m_axi_gmem_AWREADY(1'b0),
+    .m_axi_gmem_AWADDR(grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_m_axi_gmem_AWADDR),
+    .m_axi_gmem_AWID(grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_m_axi_gmem_AWID),
+    .m_axi_gmem_AWLEN(grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_m_axi_gmem_AWLEN),
+    .m_axi_gmem_AWSIZE(grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_m_axi_gmem_AWSIZE),
+    .m_axi_gmem_AWBURST(grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_m_axi_gmem_AWBURST),
+    .m_axi_gmem_AWLOCK(grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_m_axi_gmem_AWLOCK),
+    .m_axi_gmem_AWCACHE(grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_m_axi_gmem_AWCACHE),
+    .m_axi_gmem_AWPROT(grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_m_axi_gmem_AWPROT),
+    .m_axi_gmem_AWQOS(grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_m_axi_gmem_AWQOS),
+    .m_axi_gmem_AWREGION(grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_m_axi_gmem_AWREGION),
+    .m_axi_gmem_AWUSER(grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_m_axi_gmem_AWUSER),
+    .m_axi_gmem_WVALID(grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_m_axi_gmem_WVALID),
+    .m_axi_gmem_WREADY(1'b0),
+    .m_axi_gmem_WDATA(grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_m_axi_gmem_WDATA),
+    .m_axi_gmem_WSTRB(grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_m_axi_gmem_WSTRB),
+    .m_axi_gmem_WLAST(grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_m_axi_gmem_WLAST),
+    .m_axi_gmem_WID(grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_m_axi_gmem_WID),
+    .m_axi_gmem_WUSER(grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_m_axi_gmem_WUSER),
+    .m_axi_gmem_ARVALID(grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_m_axi_gmem_ARVALID),
+    .m_axi_gmem_ARREADY(gmem_ARREADY),
+    .m_axi_gmem_ARADDR(grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_m_axi_gmem_ARADDR),
+    .m_axi_gmem_ARID(grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_m_axi_gmem_ARID),
+    .m_axi_gmem_ARLEN(grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_m_axi_gmem_ARLEN),
+    .m_axi_gmem_ARSIZE(grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_m_axi_gmem_ARSIZE),
+    .m_axi_gmem_ARBURST(grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_m_axi_gmem_ARBURST),
+    .m_axi_gmem_ARLOCK(grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_m_axi_gmem_ARLOCK),
+    .m_axi_gmem_ARCACHE(grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_m_axi_gmem_ARCACHE),
+    .m_axi_gmem_ARPROT(grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_m_axi_gmem_ARPROT),
+    .m_axi_gmem_ARQOS(grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_m_axi_gmem_ARQOS),
+    .m_axi_gmem_ARREGION(grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_m_axi_gmem_ARREGION),
+    .m_axi_gmem_ARUSER(grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_m_axi_gmem_ARUSER),
+    .m_axi_gmem_RVALID(gmem_RVALID),
+    .m_axi_gmem_RREADY(grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_m_axi_gmem_RREADY),
+    .m_axi_gmem_RDATA(gmem_RDATA),
+    .m_axi_gmem_RLAST(1'b0),
+    .m_axi_gmem_RID(1'd0),
+    .m_axi_gmem_RFIFONUM(gmem_RFIFONUM),
+    .m_axi_gmem_RUSER(1'd0),
+    .m_axi_gmem_RRESP(2'd0),
+    .m_axi_gmem_BVALID(1'b0),
+    .m_axi_gmem_BREADY(grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_m_axi_gmem_BREADY),
+    .m_axi_gmem_BRESP(2'd0),
+    .m_axi_gmem_BID(1'd0),
+    .m_axi_gmem_BUSER(1'd0),
+    .highfreq_coefs(highfreq_coefs_read_reg_401),
+    .highfreq_accumulate_out(grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_highfreq_accumulate_out),
+    .highfreq_accumulate_out_ap_vld(grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_highfreq_accumulate_out_ap_vld),
+    .highfreq_shift_reg_address0(grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_highfreq_shift_reg_address0),
+    .highfreq_shift_reg_ce0(grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_highfreq_shift_reg_ce0),
+    .highfreq_shift_reg_we0(grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_highfreq_shift_reg_we0),
+    .highfreq_shift_reg_d0(grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_highfreq_shift_reg_d0),
+    .highfreq_shift_reg_address1(grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_highfreq_shift_reg_address1),
+    .highfreq_shift_reg_ce1(grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_highfreq_shift_reg_ce1),
+    .highfreq_shift_reg_q1(highfreq_shift_reg_q1),
+    .grp_fu_391_p_din0(grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_grp_fu_391_p_din0),
+    .grp_fu_391_p_din1(grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_grp_fu_391_p_din1),
+    .grp_fu_391_p_dout0(grp_fu_391_p2),
+    .grp_fu_391_p_ce(grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_grp_fu_391_p_ce)
+);
+
+equalizer_control_s_axi #(
+    .C_S_AXI_ADDR_WIDTH( C_S_AXI_CONTROL_ADDR_WIDTH ),
+    .C_S_AXI_DATA_WIDTH( C_S_AXI_CONTROL_DATA_WIDTH ))
+control_s_axi_U(
+    .AWVALID(s_axi_control_AWVALID),
+    .AWREADY(s_axi_control_AWREADY),
+    .AWADDR(s_axi_control_AWADDR),
+    .WVALID(s_axi_control_WVALID),
+    .WREADY(s_axi_control_WREADY),
+    .WDATA(s_axi_control_WDATA),
+    .WSTRB(s_axi_control_WSTRB),
+    .ARVALID(s_axi_control_ARVALID),
+    .ARREADY(s_axi_control_ARREADY),
+    .ARADDR(s_axi_control_ARADDR),
+    .RVALID(s_axi_control_RVALID),
+    .RREADY(s_axi_control_RREADY),
+    .RDATA(s_axi_control_RDATA),
+    .RRESP(s_axi_control_RRESP),
+    .BVALID(s_axi_control_BVALID),
+    .BREADY(s_axi_control_BREADY),
+    .BRESP(s_axi_control_BRESP),
+    .ACLK(ap_clk),
+    .ARESET(ap_rst_n_inv),
+    .ACLK_EN(1'b1),
+    .lowfreq_coefs(lowfreq_coefs),
+    .midfreq_coefs(midfreq_coefs),
+    .highfreq_coefs(highfreq_coefs)
+);
+
+equalizer_gmem_m_axi #(
+    .CONSERVATIVE( 1 ),
+    .USER_MAXREQS( 5 ),
+    .NUM_READ_OUTSTANDING( 16 ),
+    .NUM_WRITE_OUTSTANDING( 16 ),
+    .MAX_READ_BURST_LENGTH( 16 ),
+    .MAX_WRITE_BURST_LENGTH( 16 ),
+    .USER_RFIFONUM_WIDTH( 9 ),
+    .C_M_AXI_ID_WIDTH( C_M_AXI_GMEM_ID_WIDTH ),
+    .C_M_AXI_ADDR_WIDTH( C_M_AXI_GMEM_ADDR_WIDTH ),
+    .C_M_AXI_DATA_WIDTH( C_M_AXI_GMEM_DATA_WIDTH ),
+    .C_M_AXI_AWUSER_WIDTH( C_M_AXI_GMEM_AWUSER_WIDTH ),
+    .C_M_AXI_ARUSER_WIDTH( C_M_AXI_GMEM_ARUSER_WIDTH ),
+    .C_M_AXI_WUSER_WIDTH( C_M_AXI_GMEM_WUSER_WIDTH ),
+    .C_M_AXI_RUSER_WIDTH( C_M_AXI_GMEM_RUSER_WIDTH ),
+    .C_M_AXI_BUSER_WIDTH( C_M_AXI_GMEM_BUSER_WIDTH ),
+    .C_USER_VALUE( C_M_AXI_GMEM_USER_VALUE ),
+    .C_PROT_VALUE( C_M_AXI_GMEM_PROT_VALUE ),
+    .C_CACHE_VALUE( C_M_AXI_GMEM_CACHE_VALUE ),
+    .USER_DW( 32 ),
+    .USER_AW( 64 ))
+gmem_m_axi_U(
+    .AWVALID(m_axi_gmem_AWVALID),
+    .AWREADY(m_axi_gmem_AWREADY),
+    .AWADDR(m_axi_gmem_AWADDR),
+    .AWID(m_axi_gmem_AWID),
+    .AWLEN(m_axi_gmem_AWLEN),
+    .AWSIZE(m_axi_gmem_AWSIZE),
+    .AWBURST(m_axi_gmem_AWBURST),
+    .AWLOCK(m_axi_gmem_AWLOCK),
+    .AWCACHE(m_axi_gmem_AWCACHE),
+    .AWPROT(m_axi_gmem_AWPROT),
+    .AWQOS(m_axi_gmem_AWQOS),
+    .AWREGION(m_axi_gmem_AWREGION),
+    .AWUSER(m_axi_gmem_AWUSER),
+    .WVALID(m_axi_gmem_WVALID),
+    .WREADY(m_axi_gmem_WREADY),
+    .WDATA(m_axi_gmem_WDATA),
+    .WSTRB(m_axi_gmem_WSTRB),
+    .WLAST(m_axi_gmem_WLAST),
+    .WID(m_axi_gmem_WID),
+    .WUSER(m_axi_gmem_WUSER),
+    .ARVALID(m_axi_gmem_ARVALID),
+    .ARREADY(m_axi_gmem_ARREADY),
+    .ARADDR(m_axi_gmem_ARADDR),
+    .ARID(m_axi_gmem_ARID),
+    .ARLEN(m_axi_gmem_ARLEN),
+    .ARSIZE(m_axi_gmem_ARSIZE),
+    .ARBURST(m_axi_gmem_ARBURST),
+    .ARLOCK(m_axi_gmem_ARLOCK),
+    .ARCACHE(m_axi_gmem_ARCACHE),
+    .ARPROT(m_axi_gmem_ARPROT),
+    .ARQOS(m_axi_gmem_ARQOS),
+    .ARREGION(m_axi_gmem_ARREGION),
+    .ARUSER(m_axi_gmem_ARUSER),
+    .RVALID(m_axi_gmem_RVALID),
+    .RREADY(m_axi_gmem_RREADY),
+    .RDATA(m_axi_gmem_RDATA),
+    .RLAST(m_axi_gmem_RLAST),
+    .RID(m_axi_gmem_RID),
+    .RUSER(m_axi_gmem_RUSER),
+    .RRESP(m_axi_gmem_RRESP),
+    .BVALID(m_axi_gmem_BVALID),
+    .BREADY(m_axi_gmem_BREADY),
+    .BRESP(m_axi_gmem_BRESP),
+    .BID(m_axi_gmem_BID),
+    .BUSER(m_axi_gmem_BUSER),
+    .ACLK(ap_clk),
+    .ARESET(ap_rst_n_inv),
+    .ACLK_EN(1'b1),
+    .I_ARVALID(gmem_ARVALID),
+    .I_ARREADY(gmem_ARREADY),
+    .I_ARADDR(gmem_ARADDR),
+    .I_ARLEN(gmem_ARLEN),
+    .I_RVALID(gmem_RVALID),
+    .I_RREADY(gmem_RREADY),
+    .I_RDATA(gmem_RDATA),
+    .I_RFIFONUM(gmem_RFIFONUM),
+    .I_AWVALID(1'b0),
+    .I_AWREADY(gmem_AWREADY),
+    .I_AWADDR(64'd0),
+    .I_AWLEN(32'd0),
+    .I_WVALID(1'b0),
+    .I_WREADY(gmem_WREADY),
+    .I_WDATA(32'd0),
+    .I_WSTRB(4'd0),
+    .I_BVALID(gmem_BVALID),
+    .I_BREADY(1'b0)
+);
+
+equalizer_mul_32s_32s_32_2_1 #(
+    .ID( 1 ),
+    .NUM_STAGE( 2 ),
+    .din0_WIDTH( 32 ),
+    .din1_WIDTH( 32 ),
+    .dout_WIDTH( 32 ))
+mul_32s_32s_32_2_1_U16(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .din0(gmem_addr_read_reg_488),
+    .din1(tmp_data_V_reg_434),
+    .ce(grp_fu_362_ce),
+    .dout(grp_fu_362_p2)
+);
+
+equalizer_mul_32s_32s_32_2_1 #(
+    .ID( 1 ),
+    .NUM_STAGE( 2 ),
+    .din0_WIDTH( 32 ),
+    .din1_WIDTH( 32 ),
+    .dout_WIDTH( 32 ))
+mul_32s_32s_32_2_1_U17(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .din0(gmem_addr_1_read_reg_503),
+    .din1(lowfreq_accumulate_reg_498),
+    .ce(grp_fu_375_ce),
+    .dout(grp_fu_375_p2)
+);
+
+equalizer_mul_32s_32s_32_2_1 #(
+    .ID( 1 ),
+    .NUM_STAGE( 2 ),
+    .din0_WIDTH( 32 ),
+    .din1_WIDTH( 32 ),
+    .dout_WIDTH( 32 ))
+mul_32s_32s_32_2_1_U18(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .din0(grp_fu_391_p0),
+    .din1(grp_fu_391_p1),
+    .ce(grp_fu_391_ce),
+    .dout(grp_fu_391_p2)
 );
 
 equalizer_regslice_both #(
@@ -349,7 +1098,7 @@ equalizer_regslice_both #(
 regslice_both_SIGNAL_OUT_V_data_V_U(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
-    .data_in(SIGNAL_IN_TDATA_int_regslice),
+    .data_in(SIGNAL_OUT_TDATA_int_regslice),
     .vld_in(SIGNAL_OUT_TVALID_int_regslice),
     .ack_in(SIGNAL_OUT_TREADY_int_regslice),
     .data_out(SIGNAL_OUT_TDATA),
@@ -363,7 +1112,7 @@ equalizer_regslice_both #(
 regslice_both_SIGNAL_OUT_V_keep_V_U(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
-    .data_in(SIGNAL_IN_TKEEP_int_regslice),
+    .data_in(tmp_keep_V_reg_440),
     .vld_in(SIGNAL_OUT_TVALID_int_regslice),
     .ack_in(regslice_both_SIGNAL_OUT_V_keep_V_U_ack_in_dummy),
     .data_out(SIGNAL_OUT_TKEEP),
@@ -377,7 +1126,7 @@ equalizer_regslice_both #(
 regslice_both_SIGNAL_OUT_V_strb_V_U(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
-    .data_in(SIGNAL_IN_TSTRB_int_regslice),
+    .data_in(tmp_strb_V_reg_445),
     .vld_in(SIGNAL_OUT_TVALID_int_regslice),
     .ack_in(regslice_both_SIGNAL_OUT_V_strb_V_U_ack_in_dummy),
     .data_out(SIGNAL_OUT_TSTRB),
@@ -391,7 +1140,7 @@ equalizer_regslice_both #(
 regslice_both_SIGNAL_OUT_V_user_V_U(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
-    .data_in(SIGNAL_IN_TUSER_int_regslice),
+    .data_in(tmp_user_V_reg_450),
     .vld_in(SIGNAL_OUT_TVALID_int_regslice),
     .ack_in(regslice_both_SIGNAL_OUT_V_user_V_U_ack_in_dummy),
     .data_out(SIGNAL_OUT_TUSER),
@@ -405,7 +1154,7 @@ equalizer_regslice_both #(
 regslice_both_SIGNAL_OUT_V_last_V_U(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
-    .data_in(SIGNAL_IN_TLAST_int_regslice),
+    .data_in(tmp_last_V_reg_455),
     .vld_in(SIGNAL_OUT_TVALID_int_regslice),
     .ack_in(regslice_both_SIGNAL_OUT_V_last_V_U_ack_in_dummy),
     .data_out(SIGNAL_OUT_TLAST),
@@ -419,7 +1168,7 @@ equalizer_regslice_both #(
 regslice_both_SIGNAL_OUT_V_id_V_U(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
-    .data_in(SIGNAL_IN_TID_int_regslice),
+    .data_in(tmp_id_V_reg_460),
     .vld_in(SIGNAL_OUT_TVALID_int_regslice),
     .ack_in(regslice_both_SIGNAL_OUT_V_id_V_U_ack_in_dummy),
     .data_out(SIGNAL_OUT_TID),
@@ -433,7 +1182,7 @@ equalizer_regslice_both #(
 regslice_both_SIGNAL_OUT_V_dest_V_U(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
-    .data_in(SIGNAL_IN_TDEST_int_regslice),
+    .data_in(tmp_dest_V_reg_465),
     .vld_in(SIGNAL_OUT_TVALID_int_regslice),
     .ack_in(regslice_both_SIGNAL_OUT_V_dest_V_U_ack_in_dummy),
     .data_out(SIGNAL_OUT_TDEST),
@@ -452,37 +1201,92 @@ end
 
 always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
-        grp_equalizer_Pipeline_Bandpass_Shift_Accumulate_Loop_fu_121_ap_start_reg <= 1'b0;
+        grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_ap_start_reg <= 1'b0;
     end else begin
-        if ((~((ap_start == 1'b0) | (1'b0 == SIGNAL_OUT_TREADY_int_regslice) | (1'b0 == SIGNAL_IN_TVALID_int_regslice)) & (1'b1 == ap_CS_fsm_state1))) begin
-            grp_equalizer_Pipeline_Bandpass_Shift_Accumulate_Loop_fu_121_ap_start_reg <= 1'b1;
-        end else if ((grp_equalizer_Pipeline_Bandpass_Shift_Accumulate_Loop_fu_121_ap_ready == 1'b1)) begin
-            grp_equalizer_Pipeline_Bandpass_Shift_Accumulate_Loop_fu_121_ap_start_reg <= 1'b0;
+        if ((1'b1 == ap_CS_fsm_state21)) begin
+            grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_ap_start_reg <= 1'b1;
+        end else if ((grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_ap_ready == 1'b1)) begin
+            grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_ap_start_reg <= 1'b0;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
-        grp_equalizer_Pipeline_Highpass_Shift_Accumulate_Loop_fu_127_ap_start_reg <= 1'b0;
+        grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_ap_start_reg <= 1'b0;
     end else begin
-        if ((~((ap_start == 1'b0) | (1'b0 == SIGNAL_OUT_TREADY_int_regslice) | (1'b0 == SIGNAL_IN_TVALID_int_regslice)) & (1'b1 == ap_CS_fsm_state1))) begin
-            grp_equalizer_Pipeline_Highpass_Shift_Accumulate_Loop_fu_127_ap_start_reg <= 1'b1;
-        end else if ((grp_equalizer_Pipeline_Highpass_Shift_Accumulate_Loop_fu_127_ap_ready == 1'b1)) begin
-            grp_equalizer_Pipeline_Highpass_Shift_Accumulate_Loop_fu_127_ap_start_reg <= 1'b0;
+        if ((~((ap_start == 1'b0) | (1'b0 == SIGNAL_IN_TVALID_int_regslice)) & (1'b1 == ap_CS_fsm_state1))) begin
+            grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_ap_start_reg <= 1'b1;
+        end else if ((grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_ap_ready == 1'b1)) begin
+            grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_ap_start_reg <= 1'b0;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
-        grp_equalizer_Pipeline_Lowpass_Shift_Accumulate_Loop_fu_115_ap_start_reg <= 1'b0;
+        grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_ap_start_reg <= 1'b0;
     end else begin
-        if ((~((ap_start == 1'b0) | (1'b0 == SIGNAL_OUT_TREADY_int_regslice) | (1'b0 == SIGNAL_IN_TVALID_int_regslice)) & (1'b1 == ap_CS_fsm_state1))) begin
-            grp_equalizer_Pipeline_Lowpass_Shift_Accumulate_Loop_fu_115_ap_start_reg <= 1'b1;
-        end else if ((grp_equalizer_Pipeline_Lowpass_Shift_Accumulate_Loop_fu_115_ap_ready == 1'b1)) begin
-            grp_equalizer_Pipeline_Lowpass_Shift_Accumulate_Loop_fu_115_ap_start_reg <= 1'b0;
+        if ((1'b1 == ap_CS_fsm_state11)) begin
+            grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_ap_start_reg <= 1'b1;
+        end else if ((grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_ap_ready == 1'b1)) begin
+            grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_ap_start_reg <= 1'b0;
         end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((1'b1 == ap_CS_fsm_state20)) begin
+        gmem_addr_1_read_reg_503 <= gmem_RDATA;
+        lowfreq_accumulate_reg_498 <= lowfreq_accumulate_fu_369_p2;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((1'b1 == ap_CS_fsm_state1)) begin
+        gmem_addr_1_reg_476 <= sext_ln59_fu_332_p1;
+        gmem_addr_2_reg_482 <= sext_ln69_fu_352_p1;
+        gmem_addr_reg_470 <= sext_ln49_fu_312_p1;
+        highfreq_coefs_read_reg_401 <= highfreq_coefs;
+        lowfreq_coefs_read_reg_411 <= lowfreq_coefs;
+        midfreq_coefs_read_reg_406 <= midfreq_coefs;
+        tmp_data_V_reg_434 <= SIGNAL_IN_TDATA_int_regslice;
+        tmp_dest_V_reg_465 <= SIGNAL_IN_TDEST_int_regslice;
+        tmp_id_V_reg_460 <= SIGNAL_IN_TID_int_regslice;
+        tmp_keep_V_reg_440 <= SIGNAL_IN_TKEEP_int_regslice;
+        tmp_last_V_reg_455 <= SIGNAL_IN_TLAST_int_regslice;
+        tmp_strb_V_reg_445 <= SIGNAL_IN_TSTRB_int_regslice;
+        tmp_user_V_reg_450 <= SIGNAL_IN_TUSER_int_regslice;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((1'b1 == ap_CS_fsm_state30)) begin
+        gmem_addr_2_read_reg_513 <= gmem_RDATA;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((1'b1 == ap_CS_fsm_state10)) begin
+        gmem_addr_read_reg_488 <= gmem_RDATA;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((1'b1 == ap_CS_fsm_state12)) begin
+        mul_ln49_reg_493 <= grp_fu_362_p2;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((1'b1 == ap_CS_fsm_state22)) begin
+        mul_ln59_reg_508 <= grp_fu_375_p2;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((1'b1 == ap_CS_fsm_state32)) begin
+        mul_ln69_reg_521 <= grp_fu_391_p2;
     end
 end
 
@@ -495,7 +1299,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((~((ap_start == 1'b0) | (1'b0 == SIGNAL_OUT_TREADY_int_regslice) | (1'b0 == SIGNAL_IN_TVALID_int_regslice)) & (1'b1 == ap_CS_fsm_state1))) begin
+    if ((~((ap_start == 1'b0) | (1'b0 == SIGNAL_IN_TVALID_int_regslice)) & (1'b1 == ap_CS_fsm_state1))) begin
         SIGNAL_IN_TREADY_int_regslice = 1'b1;
     end else begin
         SIGNAL_IN_TREADY_int_regslice = 1'b0;
@@ -503,7 +1307,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state2) | ((ap_start == 1'b1) & (1'b1 == ap_CS_fsm_state1)))) begin
+    if (((1'b1 == ap_CS_fsm_state34) | (1'b1 == ap_CS_fsm_state33))) begin
         SIGNAL_OUT_TDATA_blk_n = SIGNAL_OUT_TREADY_int_regslice;
     end else begin
         SIGNAL_OUT_TDATA_blk_n = 1'b1;
@@ -511,7 +1315,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((~((ap_start == 1'b0) | (1'b0 == SIGNAL_OUT_TREADY_int_regslice) | (1'b0 == SIGNAL_IN_TVALID_int_regslice)) & (1'b1 == ap_CS_fsm_state1))) begin
+    if (((1'b1 == ap_CS_fsm_state33) & (1'b1 == SIGNAL_OUT_TREADY_int_regslice))) begin
         SIGNAL_OUT_TVALID_int_regslice = 1'b1;
     end else begin
         SIGNAL_OUT_TVALID_int_regslice = 1'b0;
@@ -519,7 +1323,45 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((ap_start == 1'b0) | (1'b0 == SIGNAL_OUT_TREADY_int_regslice) | (1'b0 == SIGNAL_IN_TVALID_int_regslice))) begin
+    if ((gmem_RVALID == 1'b0)) begin
+        ap_ST_fsm_state10_blk = 1'b1;
+    end else begin
+        ap_ST_fsm_state10_blk = 1'b0;
+    end
+end
+
+assign ap_ST_fsm_state11_blk = 1'b0;
+
+always @ (*) begin
+    if ((grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_ap_done == 1'b0)) begin
+        ap_ST_fsm_state12_blk = 1'b1;
+    end else begin
+        ap_ST_fsm_state12_blk = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((gmem_ARREADY == 1'b0)) begin
+        ap_ST_fsm_state13_blk = 1'b1;
+    end else begin
+        ap_ST_fsm_state13_blk = 1'b0;
+    end
+end
+
+assign ap_ST_fsm_state14_blk = 1'b0;
+
+assign ap_ST_fsm_state15_blk = 1'b0;
+
+assign ap_ST_fsm_state16_blk = 1'b0;
+
+assign ap_ST_fsm_state17_blk = 1'b0;
+
+assign ap_ST_fsm_state18_blk = 1'b0;
+
+assign ap_ST_fsm_state19_blk = 1'b0;
+
+always @ (*) begin
+    if (((ap_start == 1'b0) | (1'b0 == SIGNAL_IN_TVALID_int_regslice))) begin
         ap_ST_fsm_state1_blk = 1'b1;
     end else begin
         ap_ST_fsm_state1_blk = 1'b0;
@@ -527,7 +1369,45 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == SIGNAL_OUT_TREADY_int_regslice) | (regslice_both_SIGNAL_OUT_V_data_V_U_apdone_blk == 1'b1) | (1'b1 == ap_block_state2_on_subcall_done))) begin
+    if ((gmem_RVALID == 1'b0)) begin
+        ap_ST_fsm_state20_blk = 1'b1;
+    end else begin
+        ap_ST_fsm_state20_blk = 1'b0;
+    end
+end
+
+assign ap_ST_fsm_state21_blk = 1'b0;
+
+always @ (*) begin
+    if ((grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_ap_done == 1'b0)) begin
+        ap_ST_fsm_state22_blk = 1'b1;
+    end else begin
+        ap_ST_fsm_state22_blk = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((gmem_ARREADY == 1'b0)) begin
+        ap_ST_fsm_state23_blk = 1'b1;
+    end else begin
+        ap_ST_fsm_state23_blk = 1'b0;
+    end
+end
+
+assign ap_ST_fsm_state24_blk = 1'b0;
+
+assign ap_ST_fsm_state25_blk = 1'b0;
+
+assign ap_ST_fsm_state26_blk = 1'b0;
+
+assign ap_ST_fsm_state27_blk = 1'b0;
+
+assign ap_ST_fsm_state28_blk = 1'b0;
+
+assign ap_ST_fsm_state29_blk = 1'b0;
+
+always @ (*) begin
+    if ((grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_ap_done == 1'b0)) begin
         ap_ST_fsm_state2_blk = 1'b1;
     end else begin
         ap_ST_fsm_state2_blk = 1'b0;
@@ -535,7 +1415,55 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((~((1'b0 == SIGNAL_OUT_TREADY_int_regslice) | (regslice_both_SIGNAL_OUT_V_data_V_U_apdone_blk == 1'b1) | (1'b1 == ap_block_state2_on_subcall_done)) & (1'b1 == ap_CS_fsm_state2))) begin
+    if ((gmem_RVALID == 1'b0)) begin
+        ap_ST_fsm_state30_blk = 1'b1;
+    end else begin
+        ap_ST_fsm_state30_blk = 1'b0;
+    end
+end
+
+assign ap_ST_fsm_state31_blk = 1'b0;
+
+assign ap_ST_fsm_state32_blk = 1'b0;
+
+always @ (*) begin
+    if ((1'b0 == SIGNAL_OUT_TREADY_int_regslice)) begin
+        ap_ST_fsm_state33_blk = 1'b1;
+    end else begin
+        ap_ST_fsm_state33_blk = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((regslice_both_SIGNAL_OUT_V_data_V_U_apdone_blk == 1'b1) | (1'b0 == SIGNAL_OUT_TREADY_int_regslice))) begin
+        ap_ST_fsm_state34_blk = 1'b1;
+    end else begin
+        ap_ST_fsm_state34_blk = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((gmem_ARREADY == 1'b0)) begin
+        ap_ST_fsm_state3_blk = 1'b1;
+    end else begin
+        ap_ST_fsm_state3_blk = 1'b0;
+    end
+end
+
+assign ap_ST_fsm_state4_blk = 1'b0;
+
+assign ap_ST_fsm_state5_blk = 1'b0;
+
+assign ap_ST_fsm_state6_blk = 1'b0;
+
+assign ap_ST_fsm_state7_blk = 1'b0;
+
+assign ap_ST_fsm_state8_blk = 1'b0;
+
+assign ap_ST_fsm_state9_blk = 1'b0;
+
+always @ (*) begin
+    if ((~((regslice_both_SIGNAL_OUT_V_data_V_U_apdone_blk == 1'b1) | (1'b0 == SIGNAL_OUT_TREADY_int_regslice)) & (1'b1 == ap_CS_fsm_state34))) begin
         ap_done = 1'b1;
     end else begin
         ap_done = 1'b0;
@@ -551,7 +1479,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((~((1'b0 == SIGNAL_OUT_TREADY_int_regslice) | (regslice_both_SIGNAL_OUT_V_data_V_U_apdone_blk == 1'b1) | (1'b1 == ap_block_state2_on_subcall_done)) & (1'b1 == ap_CS_fsm_state2))) begin
+    if ((~((regslice_both_SIGNAL_OUT_V_data_V_U_apdone_blk == 1'b1) | (1'b0 == SIGNAL_OUT_TREADY_int_regslice)) & (1'b1 == ap_CS_fsm_state34))) begin
         ap_ready = 1'b1;
     end else begin
         ap_ready = 1'b0;
@@ -559,19 +1487,407 @@ always @ (*) begin
 end
 
 always @ (*) begin
+    if (((gmem_ARREADY == 1'b1) & (1'b1 == ap_CS_fsm_state23))) begin
+        gmem_ARADDR = gmem_addr_2_reg_482;
+    end else if (((gmem_ARREADY == 1'b1) & (1'b1 == ap_CS_fsm_state13))) begin
+        gmem_ARADDR = gmem_addr_1_reg_476;
+    end else if (((gmem_ARREADY == 1'b1) & (1'b1 == ap_CS_fsm_state3))) begin
+        gmem_ARADDR = gmem_addr_reg_470;
+    end else if (((1'b1 == ap_CS_fsm_state21) | (1'b1 == ap_CS_fsm_state22))) begin
+        gmem_ARADDR = grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_m_axi_gmem_ARADDR;
+    end else if (((1'b1 == ap_CS_fsm_state11) | (1'b1 == ap_CS_fsm_state12))) begin
+        gmem_ARADDR = grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_m_axi_gmem_ARADDR;
+    end else if (((1'b1 == ap_CS_fsm_state2) | (1'b1 == ap_CS_fsm_state1))) begin
+        gmem_ARADDR = grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_m_axi_gmem_ARADDR;
+    end else begin
+        gmem_ARADDR = 'bx;
+    end
+end
+
+always @ (*) begin
+    if ((((gmem_ARREADY == 1'b1) & (1'b1 == ap_CS_fsm_state23)) | ((gmem_ARREADY == 1'b1) & (1'b1 == ap_CS_fsm_state13)) | ((gmem_ARREADY == 1'b1) & (1'b1 == ap_CS_fsm_state3)))) begin
+        gmem_ARLEN = 32'd1;
+    end else if (((1'b1 == ap_CS_fsm_state21) | (1'b1 == ap_CS_fsm_state22))) begin
+        gmem_ARLEN = grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_m_axi_gmem_ARLEN;
+    end else if (((1'b1 == ap_CS_fsm_state11) | (1'b1 == ap_CS_fsm_state12))) begin
+        gmem_ARLEN = grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_m_axi_gmem_ARLEN;
+    end else if (((1'b1 == ap_CS_fsm_state2) | (1'b1 == ap_CS_fsm_state1))) begin
+        gmem_ARLEN = grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_m_axi_gmem_ARLEN;
+    end else begin
+        gmem_ARLEN = 'bx;
+    end
+end
+
+always @ (*) begin
+    if ((((gmem_ARREADY == 1'b1) & (1'b1 == ap_CS_fsm_state23)) | ((gmem_ARREADY == 1'b1) & (1'b1 == ap_CS_fsm_state13)) | ((gmem_ARREADY == 1'b1) & (1'b1 == ap_CS_fsm_state3)))) begin
+        gmem_ARVALID = 1'b1;
+    end else if (((1'b1 == ap_CS_fsm_state21) | (1'b1 == ap_CS_fsm_state22))) begin
+        gmem_ARVALID = grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_m_axi_gmem_ARVALID;
+    end else if (((1'b1 == ap_CS_fsm_state11) | (1'b1 == ap_CS_fsm_state12))) begin
+        gmem_ARVALID = grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_m_axi_gmem_ARVALID;
+    end else if (((1'b1 == ap_CS_fsm_state2) | (1'b1 == ap_CS_fsm_state1))) begin
+        gmem_ARVALID = grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_m_axi_gmem_ARVALID;
+    end else begin
+        gmem_ARVALID = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((((gmem_RVALID == 1'b1) & (1'b1 == ap_CS_fsm_state30)) | ((gmem_RVALID == 1'b1) & (1'b1 == ap_CS_fsm_state20)) | ((gmem_RVALID == 1'b1) & (1'b1 == ap_CS_fsm_state10)))) begin
+        gmem_RREADY = 1'b1;
+    end else if (((1'b1 == ap_CS_fsm_state21) | (1'b1 == ap_CS_fsm_state22))) begin
+        gmem_RREADY = grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_m_axi_gmem_RREADY;
+    end else if (((1'b1 == ap_CS_fsm_state11) | (1'b1 == ap_CS_fsm_state12))) begin
+        gmem_RREADY = grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_m_axi_gmem_RREADY;
+    end else if (((1'b1 == ap_CS_fsm_state2) | (1'b1 == ap_CS_fsm_state1))) begin
+        gmem_RREADY = grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_m_axi_gmem_RREADY;
+    end else begin
+        gmem_RREADY = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state23) | (1'b1 == ap_CS_fsm_state13) | (1'b1 == ap_CS_fsm_state3))) begin
+        gmem_blk_n_AR = m_axi_gmem_ARREADY;
+    end else begin
+        gmem_blk_n_AR = 1'b1;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state30) | (1'b1 == ap_CS_fsm_state20) | (1'b1 == ap_CS_fsm_state10))) begin
+        gmem_blk_n_R = m_axi_gmem_RVALID;
+    end else begin
+        gmem_blk_n_R = 1'b1;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state11) | ((grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state12)))) begin
+        grp_fu_362_ce = 1'b1;
+    end else begin
+        grp_fu_362_ce = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state21) | ((grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state22)))) begin
+        grp_fu_375_ce = 1'b1;
+    end else begin
+        grp_fu_375_ce = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state22)) begin
+        grp_fu_391_ce = grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_grp_fu_391_p_ce;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        grp_fu_391_ce = grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_grp_fu_391_p_ce;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        grp_fu_391_ce = grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_grp_fu_391_p_ce;
+    end else begin
+        grp_fu_391_ce = 1'b1;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state22)) begin
+        grp_fu_391_p0 = grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_grp_fu_391_p_din0;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        grp_fu_391_p0 = grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_grp_fu_391_p_din0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        grp_fu_391_p0 = grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_grp_fu_391_p_din0;
+    end else if ((1'b1 == ap_CS_fsm_state31)) begin
+        grp_fu_391_p0 = gmem_addr_2_read_reg_513;
+    end else begin
+        grp_fu_391_p0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state22)) begin
+        grp_fu_391_p1 = grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_grp_fu_391_p_din1;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        grp_fu_391_p1 = grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_grp_fu_391_p_din1;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        grp_fu_391_p1 = grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_grp_fu_391_p_din1;
+    end else if ((1'b1 == ap_CS_fsm_state31)) begin
+        grp_fu_391_p1 = grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_highfreq_accumulate_out;
+    end else begin
+        grp_fu_391_p1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state23)) begin
+        highfreq_shift_reg_address0 = 6'd0;
+    end else if ((1'b1 == ap_CS_fsm_state22)) begin
+        highfreq_shift_reg_address0 = grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_highfreq_shift_reg_address0;
+    end else begin
+        highfreq_shift_reg_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((gmem_ARREADY == 1'b1) & (1'b1 == ap_CS_fsm_state23))) begin
+        highfreq_shift_reg_ce0 = 1'b1;
+    end else if ((1'b1 == ap_CS_fsm_state22)) begin
+        highfreq_shift_reg_ce0 = grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_highfreq_shift_reg_ce0;
+    end else begin
+        highfreq_shift_reg_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state23)) begin
+        highfreq_shift_reg_d0 = midfreq_accumulate_fu_382_p2;
+    end else if ((1'b1 == ap_CS_fsm_state22)) begin
+        highfreq_shift_reg_d0 = grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_highfreq_shift_reg_d0;
+    end else begin
+        highfreq_shift_reg_d0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((gmem_ARREADY == 1'b1) & (1'b1 == ap_CS_fsm_state23))) begin
+        highfreq_shift_reg_we0 = 1'b1;
+    end else if ((1'b1 == ap_CS_fsm_state22)) begin
+        highfreq_shift_reg_we0 = grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_highfreq_shift_reg_we0;
+    end else begin
+        highfreq_shift_reg_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state3)) begin
+        lowfreq_shift_reg_address0 = 6'd0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        lowfreq_shift_reg_address0 = grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_lowfreq_shift_reg_address0;
+    end else begin
+        lowfreq_shift_reg_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((gmem_ARREADY == 1'b1) & (1'b1 == ap_CS_fsm_state3))) begin
+        lowfreq_shift_reg_ce0 = 1'b1;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        lowfreq_shift_reg_ce0 = grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_lowfreq_shift_reg_ce0;
+    end else begin
+        lowfreq_shift_reg_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state3)) begin
+        lowfreq_shift_reg_d0 = tmp_data_V_reg_434;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        lowfreq_shift_reg_d0 = grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_lowfreq_shift_reg_d0;
+    end else begin
+        lowfreq_shift_reg_d0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((gmem_ARREADY == 1'b1) & (1'b1 == ap_CS_fsm_state3))) begin
+        lowfreq_shift_reg_we0 = 1'b1;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        lowfreq_shift_reg_we0 = grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_lowfreq_shift_reg_we0;
+    end else begin
+        lowfreq_shift_reg_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state20)) begin
+        midfreq_shift_reg_address0 = 6'd0;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        midfreq_shift_reg_address0 = grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_midfreq_shift_reg_address0;
+    end else begin
+        midfreq_shift_reg_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((gmem_RVALID == 1'b1) & (1'b1 == ap_CS_fsm_state20))) begin
+        midfreq_shift_reg_ce0 = 1'b1;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        midfreq_shift_reg_ce0 = grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_midfreq_shift_reg_ce0;
+    end else begin
+        midfreq_shift_reg_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state20)) begin
+        midfreq_shift_reg_d0 = lowfreq_accumulate_fu_369_p2;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        midfreq_shift_reg_d0 = grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_midfreq_shift_reg_d0;
+    end else begin
+        midfreq_shift_reg_d0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((gmem_RVALID == 1'b1) & (1'b1 == ap_CS_fsm_state20))) begin
+        midfreq_shift_reg_we0 = 1'b1;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        midfreq_shift_reg_we0 = grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_midfreq_shift_reg_we0;
+    end else begin
+        midfreq_shift_reg_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
     case (ap_CS_fsm)
         ap_ST_fsm_state1 : begin
-            if ((~((ap_start == 1'b0) | (1'b0 == SIGNAL_OUT_TREADY_int_regslice) | (1'b0 == SIGNAL_IN_TVALID_int_regslice)) & (1'b1 == ap_CS_fsm_state1))) begin
+            if ((~((ap_start == 1'b0) | (1'b0 == SIGNAL_IN_TVALID_int_regslice)) & (1'b1 == ap_CS_fsm_state1))) begin
                 ap_NS_fsm = ap_ST_fsm_state2;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state1;
             end
         end
         ap_ST_fsm_state2 : begin
-            if ((~((1'b0 == SIGNAL_OUT_TREADY_int_regslice) | (regslice_both_SIGNAL_OUT_V_data_V_U_apdone_blk == 1'b1) | (1'b1 == ap_block_state2_on_subcall_done)) & (1'b1 == ap_CS_fsm_state2))) begin
-                ap_NS_fsm = ap_ST_fsm_state1;
+            if (((grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state2))) begin
+                ap_NS_fsm = ap_ST_fsm_state3;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state2;
+            end
+        end
+        ap_ST_fsm_state3 : begin
+            if (((gmem_ARREADY == 1'b1) & (1'b1 == ap_CS_fsm_state3))) begin
+                ap_NS_fsm = ap_ST_fsm_state4;
+            end else begin
+                ap_NS_fsm = ap_ST_fsm_state3;
+            end
+        end
+        ap_ST_fsm_state4 : begin
+            ap_NS_fsm = ap_ST_fsm_state5;
+        end
+        ap_ST_fsm_state5 : begin
+            ap_NS_fsm = ap_ST_fsm_state6;
+        end
+        ap_ST_fsm_state6 : begin
+            ap_NS_fsm = ap_ST_fsm_state7;
+        end
+        ap_ST_fsm_state7 : begin
+            ap_NS_fsm = ap_ST_fsm_state8;
+        end
+        ap_ST_fsm_state8 : begin
+            ap_NS_fsm = ap_ST_fsm_state9;
+        end
+        ap_ST_fsm_state9 : begin
+            ap_NS_fsm = ap_ST_fsm_state10;
+        end
+        ap_ST_fsm_state10 : begin
+            if (((gmem_RVALID == 1'b1) & (1'b1 == ap_CS_fsm_state10))) begin
+                ap_NS_fsm = ap_ST_fsm_state11;
+            end else begin
+                ap_NS_fsm = ap_ST_fsm_state10;
+            end
+        end
+        ap_ST_fsm_state11 : begin
+            ap_NS_fsm = ap_ST_fsm_state12;
+        end
+        ap_ST_fsm_state12 : begin
+            if (((grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state12))) begin
+                ap_NS_fsm = ap_ST_fsm_state13;
+            end else begin
+                ap_NS_fsm = ap_ST_fsm_state12;
+            end
+        end
+        ap_ST_fsm_state13 : begin
+            if (((gmem_ARREADY == 1'b1) & (1'b1 == ap_CS_fsm_state13))) begin
+                ap_NS_fsm = ap_ST_fsm_state14;
+            end else begin
+                ap_NS_fsm = ap_ST_fsm_state13;
+            end
+        end
+        ap_ST_fsm_state14 : begin
+            ap_NS_fsm = ap_ST_fsm_state15;
+        end
+        ap_ST_fsm_state15 : begin
+            ap_NS_fsm = ap_ST_fsm_state16;
+        end
+        ap_ST_fsm_state16 : begin
+            ap_NS_fsm = ap_ST_fsm_state17;
+        end
+        ap_ST_fsm_state17 : begin
+            ap_NS_fsm = ap_ST_fsm_state18;
+        end
+        ap_ST_fsm_state18 : begin
+            ap_NS_fsm = ap_ST_fsm_state19;
+        end
+        ap_ST_fsm_state19 : begin
+            ap_NS_fsm = ap_ST_fsm_state20;
+        end
+        ap_ST_fsm_state20 : begin
+            if (((gmem_RVALID == 1'b1) & (1'b1 == ap_CS_fsm_state20))) begin
+                ap_NS_fsm = ap_ST_fsm_state21;
+            end else begin
+                ap_NS_fsm = ap_ST_fsm_state20;
+            end
+        end
+        ap_ST_fsm_state21 : begin
+            ap_NS_fsm = ap_ST_fsm_state22;
+        end
+        ap_ST_fsm_state22 : begin
+            if (((grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state22))) begin
+                ap_NS_fsm = ap_ST_fsm_state23;
+            end else begin
+                ap_NS_fsm = ap_ST_fsm_state22;
+            end
+        end
+        ap_ST_fsm_state23 : begin
+            if (((gmem_ARREADY == 1'b1) & (1'b1 == ap_CS_fsm_state23))) begin
+                ap_NS_fsm = ap_ST_fsm_state24;
+            end else begin
+                ap_NS_fsm = ap_ST_fsm_state23;
+            end
+        end
+        ap_ST_fsm_state24 : begin
+            ap_NS_fsm = ap_ST_fsm_state25;
+        end
+        ap_ST_fsm_state25 : begin
+            ap_NS_fsm = ap_ST_fsm_state26;
+        end
+        ap_ST_fsm_state26 : begin
+            ap_NS_fsm = ap_ST_fsm_state27;
+        end
+        ap_ST_fsm_state27 : begin
+            ap_NS_fsm = ap_ST_fsm_state28;
+        end
+        ap_ST_fsm_state28 : begin
+            ap_NS_fsm = ap_ST_fsm_state29;
+        end
+        ap_ST_fsm_state29 : begin
+            ap_NS_fsm = ap_ST_fsm_state30;
+        end
+        ap_ST_fsm_state30 : begin
+            if (((gmem_RVALID == 1'b1) & (1'b1 == ap_CS_fsm_state30))) begin
+                ap_NS_fsm = ap_ST_fsm_state31;
+            end else begin
+                ap_NS_fsm = ap_ST_fsm_state30;
+            end
+        end
+        ap_ST_fsm_state31 : begin
+            ap_NS_fsm = ap_ST_fsm_state32;
+        end
+        ap_ST_fsm_state32 : begin
+            ap_NS_fsm = ap_ST_fsm_state33;
+        end
+        ap_ST_fsm_state33 : begin
+            if (((1'b1 == ap_CS_fsm_state33) & (1'b1 == SIGNAL_OUT_TREADY_int_regslice))) begin
+                ap_NS_fsm = ap_ST_fsm_state34;
+            end else begin
+                ap_NS_fsm = ap_ST_fsm_state33;
+            end
+        end
+        ap_ST_fsm_state34 : begin
+            if ((~((regslice_both_SIGNAL_OUT_V_data_V_U_apdone_blk == 1'b1) | (1'b0 == SIGNAL_OUT_TREADY_int_regslice)) & (1'b1 == ap_CS_fsm_state34))) begin
+                ap_NS_fsm = ap_ST_fsm_state1;
+            end else begin
+                ap_NS_fsm = ap_ST_fsm_state34;
             end
         end
         default : begin
@@ -582,92 +1898,80 @@ end
 
 assign SIGNAL_IN_TREADY = regslice_both_SIGNAL_IN_V_data_V_U_ack_in;
 
+assign SIGNAL_OUT_TDATA_int_regslice = ($signed(mul_ln69_reg_521) + $signed(highfreq_accumulate_fu_396_p1));
+
 assign SIGNAL_OUT_TVALID = regslice_both_SIGNAL_OUT_V_data_V_U_vld_out;
 
 assign ap_CS_fsm_state1 = ap_CS_fsm[32'd0];
 
+assign ap_CS_fsm_state10 = ap_CS_fsm[32'd9];
+
+assign ap_CS_fsm_state11 = ap_CS_fsm[32'd10];
+
+assign ap_CS_fsm_state12 = ap_CS_fsm[32'd11];
+
+assign ap_CS_fsm_state13 = ap_CS_fsm[32'd12];
+
 assign ap_CS_fsm_state2 = ap_CS_fsm[32'd1];
 
+assign ap_CS_fsm_state20 = ap_CS_fsm[32'd19];
+
+assign ap_CS_fsm_state21 = ap_CS_fsm[32'd20];
+
+assign ap_CS_fsm_state22 = ap_CS_fsm[32'd21];
+
+assign ap_CS_fsm_state23 = ap_CS_fsm[32'd22];
+
+assign ap_CS_fsm_state3 = ap_CS_fsm[32'd2];
+
+assign ap_CS_fsm_state30 = ap_CS_fsm[32'd29];
+
+assign ap_CS_fsm_state31 = ap_CS_fsm[32'd30];
+
+assign ap_CS_fsm_state32 = ap_CS_fsm[32'd31];
+
+assign ap_CS_fsm_state33 = ap_CS_fsm[32'd32];
+
+assign ap_CS_fsm_state34 = ap_CS_fsm[32'd33];
+
 always @ (*) begin
-    ap_block_state1 = ((ap_start == 1'b0) | (1'b0 == SIGNAL_OUT_TREADY_int_regslice) | (1'b0 == SIGNAL_IN_TVALID_int_regslice));
+    ap_block_state1 = ((ap_start == 1'b0) | (1'b0 == SIGNAL_IN_TVALID_int_regslice));
 end
 
 always @ (*) begin
-    ap_block_state1_ignore_call31 = ((ap_start == 1'b0) | (1'b0 == SIGNAL_OUT_TREADY_int_regslice) | (1'b0 == SIGNAL_IN_TVALID_int_regslice));
+    ap_block_state1_ignore_call39 = ((ap_start == 1'b0) | (1'b0 == SIGNAL_IN_TVALID_int_regslice));
 end
 
 always @ (*) begin
-    ap_block_state1_ignore_call32 = ((ap_start == 1'b0) | (1'b0 == SIGNAL_OUT_TREADY_int_regslice) | (1'b0 == SIGNAL_IN_TVALID_int_regslice));
-end
-
-always @ (*) begin
-    ap_block_state1_ignore_call33 = ((ap_start == 1'b0) | (1'b0 == SIGNAL_OUT_TREADY_int_regslice) | (1'b0 == SIGNAL_IN_TVALID_int_regslice));
-end
-
-always @ (*) begin
-    ap_block_state2 = ((1'b0 == SIGNAL_OUT_TREADY_int_regslice) | (regslice_both_SIGNAL_OUT_V_data_V_U_apdone_blk == 1'b1));
-end
-
-always @ (*) begin
-    ap_block_state2_on_subcall_done = ((grp_equalizer_Pipeline_Highpass_Shift_Accumulate_Loop_fu_127_ap_done == 1'b0) | (grp_equalizer_Pipeline_Bandpass_Shift_Accumulate_Loop_fu_121_ap_done == 1'b0) | (grp_equalizer_Pipeline_Lowpass_Shift_Accumulate_Loop_fu_115_ap_done == 1'b0));
+    ap_block_state34 = ((regslice_both_SIGNAL_OUT_V_data_V_U_apdone_blk == 1'b1) | (1'b0 == SIGNAL_OUT_TREADY_int_regslice));
 end
 
 always @ (*) begin
     ap_rst_n_inv = ~ap_rst_n;
 end
 
-assign bandpass_coefs_address0 = 6'd0;
+assign grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_ap_start = grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_ap_start_reg;
 
-assign bandpass_coefs_address1 = 6'd0;
+assign grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_ap_start = grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_ap_start_reg;
 
-assign bandpass_coefs_ce0 = 1'b0;
+assign grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_ap_start = grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_ap_start_reg;
 
-assign bandpass_coefs_ce1 = 1'b0;
+assign highfreq_accumulate_fu_396_p1 = grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_highfreq_accumulate_out;
 
-assign bandpass_coefs_d0 = 32'd0;
+assign lowfreq_accumulate_fu_369_p2 = (mul_ln49_reg_493 + grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_lowfreq_accumulate_out);
 
-assign bandpass_coefs_d1 = 32'd0;
+assign midfreq_accumulate_fu_382_p2 = (mul_ln59_reg_508 + grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_midfreq_accumulate_out);
 
-assign bandpass_coefs_we0 = 1'b0;
+assign sext_ln49_fu_312_p1 = $signed(trunc_ln1_fu_302_p4);
 
-assign bandpass_coefs_we1 = 1'b0;
+assign sext_ln59_fu_332_p1 = $signed(trunc_ln3_fu_322_p4);
 
-assign grp_equalizer_Pipeline_Bandpass_Shift_Accumulate_Loop_fu_121_ap_start = grp_equalizer_Pipeline_Bandpass_Shift_Accumulate_Loop_fu_121_ap_start_reg;
+assign sext_ln69_fu_352_p1 = $signed(trunc_ln5_fu_342_p4);
 
-assign grp_equalizer_Pipeline_Highpass_Shift_Accumulate_Loop_fu_127_ap_start = grp_equalizer_Pipeline_Highpass_Shift_Accumulate_Loop_fu_127_ap_start_reg;
+assign trunc_ln1_fu_302_p4 = {{lowfreq_coefs[63:2]}};
 
-assign grp_equalizer_Pipeline_Lowpass_Shift_Accumulate_Loop_fu_115_ap_start = grp_equalizer_Pipeline_Lowpass_Shift_Accumulate_Loop_fu_115_ap_start_reg;
+assign trunc_ln3_fu_322_p4 = {{midfreq_coefs[63:2]}};
 
-assign highpass_coefs_address0 = 6'd0;
-
-assign highpass_coefs_address1 = 6'd0;
-
-assign highpass_coefs_ce0 = 1'b0;
-
-assign highpass_coefs_ce1 = 1'b0;
-
-assign highpass_coefs_d0 = 32'd0;
-
-assign highpass_coefs_d1 = 32'd0;
-
-assign highpass_coefs_we0 = 1'b0;
-
-assign highpass_coefs_we1 = 1'b0;
-
-assign lowpass_coefs_address0 = 6'd0;
-
-assign lowpass_coefs_address1 = 6'd0;
-
-assign lowpass_coefs_ce0 = 1'b0;
-
-assign lowpass_coefs_ce1 = 1'b0;
-
-assign lowpass_coefs_d0 = 32'd0;
-
-assign lowpass_coefs_d1 = 32'd0;
-
-assign lowpass_coefs_we0 = 1'b0;
-
-assign lowpass_coefs_we1 = 1'b0;
+assign trunc_ln5_fu_342_p4 = {{highfreq_coefs[63:2]}};
 
 endmodule //equalizer
