@@ -134,5 +134,5 @@ short delay(short input, short delay_samples, float delay_mult, short delay_buff
     delay_buffer[delay_buffer_index] = output;
     delay_buffer_index = (delay_buffer_index + 1) % DELAY_BUFFER_SIZE; // cycle if needed
 
-    return output
+    return output;
 }
