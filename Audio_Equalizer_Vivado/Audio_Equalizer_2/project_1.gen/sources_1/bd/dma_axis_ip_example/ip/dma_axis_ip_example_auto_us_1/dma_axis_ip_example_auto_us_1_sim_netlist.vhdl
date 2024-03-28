@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
 -- Date        : Wed Mar 27 20:37:55 2024
 -- Host        : WFXA4BB6DB88619 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               c:/EECE4632FinalProject/Audio_Equalizer_Vivado/Audio_Equalizer_2/project_1.gen/sources_1/bd/dma_axis_ip_example/ip/dma_axis_ip_example_auto_us_1/dma_axis_ip_example_auto_us_1_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top dma_axis_ip_example_auto_us_1 -prefix
+--               dma_axis_ip_example_auto_us_1_ dma_axis_ip_example_auto_us_1_sim_netlist.vhdl
 -- Design      : dma_axis_ip_example_auto_us_1
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -48,8 +48,6 @@ entity dma_axis_ip_example_auto_us_1_axi_dwidth_converter_v2_1_26_r_upsizer is
     D : in STD_LOGIC_VECTOR ( 2 downto 0 );
     \current_word_1_reg[2]_2\ : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of dma_axis_ip_example_auto_us_1_axi_dwidth_converter_v2_1_26_r_upsizer : entity is "axi_dwidth_converter_v2_1_26_r_upsizer";
 end dma_axis_ip_example_auto_us_1_axi_dwidth_converter_v2_1_26_r_upsizer;
 
 architecture STRUCTURE of dma_axis_ip_example_auto_us_1_axi_dwidth_converter_v2_1_26_r_upsizer is
@@ -1537,8 +1535,6 @@ entity dma_axis_ip_example_auto_us_1_axi_register_slice_v2_1_26_axic_register_sl
     s_axi_arvalid : in STD_LOGIC;
     D : in STD_LOGIC_VECTOR ( 92 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of dma_axis_ip_example_auto_us_1_axi_register_slice_v2_1_26_axic_register_slice : entity is "axi_register_slice_v2_1_26_axic_register_slice";
 end dma_axis_ip_example_auto_us_1_axi_register_slice_v2_1_26_axic_register_slice;
 
 architecture STRUCTURE of dma_axis_ip_example_auto_us_1_axi_register_slice_v2_1_26_axic_register_slice is
@@ -5363,8 +5359,6 @@ entity dma_axis_ip_example_auto_us_1_generic_baseblocks_v2_1_0_command_fifo is
     m_axi_arready : in STD_LOGIC;
     \in\ : in STD_LOGIC_VECTOR ( 27 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of dma_axis_ip_example_auto_us_1_generic_baseblocks_v2_1_0_command_fifo : entity is "generic_baseblocks_v2_1_0_command_fifo";
 end dma_axis_ip_example_auto_us_1_generic_baseblocks_v2_1_0_command_fifo;
 
 architecture STRUCTURE of dma_axis_ip_example_auto_us_1_generic_baseblocks_v2_1_0_command_fifo is
@@ -6629,8 +6623,6 @@ entity dma_axis_ip_example_auto_us_1_axi_dwidth_converter_v2_1_26_a_upsizer is
     m_axi_arready : in STD_LOGIC;
     \in\ : in STD_LOGIC_VECTOR ( 27 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of dma_axis_ip_example_auto_us_1_axi_dwidth_converter_v2_1_26_a_upsizer : entity is "axi_dwidth_converter_v2_1_26_a_upsizer";
 end dma_axis_ip_example_auto_us_1_axi_dwidth_converter_v2_1_26_a_upsizer;
 
 architecture STRUCTURE of dma_axis_ip_example_auto_us_1_axi_dwidth_converter_v2_1_26_a_upsizer is
@@ -6705,8 +6697,6 @@ entity dma_axis_ip_example_auto_us_1_axi_register_slice_v2_1_26_axi_register_sli
     s_ready_i_reg_0 : in STD_LOGIC;
     E : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of dma_axis_ip_example_auto_us_1_axi_register_slice_v2_1_26_axi_register_slice : entity is "axi_register_slice_v2_1_26_axi_register_slice";
 end dma_axis_ip_example_auto_us_1_axi_register_slice_v2_1_26_axi_register_slice;
 
 architecture STRUCTURE of dma_axis_ip_example_auto_us_1_axi_register_slice_v2_1_26_axi_register_slice is
@@ -6802,8 +6792,6 @@ entity dma_axis_ip_example_auto_us_1_axi_dwidth_converter_v2_1_26_axi_upsizer is
     m_axi_arready : in STD_LOGIC;
     m_axi_rvalid : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of dma_axis_ip_example_auto_us_1_axi_dwidth_converter_v2_1_26_axi_upsizer : entity is "axi_dwidth_converter_v2_1_26_axi_upsizer";
 end dma_axis_ip_example_auto_us_1_axi_dwidth_converter_v2_1_26_axi_upsizer;
 
 architecture STRUCTURE of dma_axis_ip_example_auto_us_1_axi_dwidth_converter_v2_1_26_axi_upsizer is
@@ -7344,8 +7332,6 @@ entity dma_axis_ip_example_auto_us_1_axi_dwidth_converter_v2_1_26_top is
   attribute C_S_AXI_ID_WIDTH of dma_axis_ip_example_auto_us_1_axi_dwidth_converter_v2_1_26_top : entity is 1;
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of dma_axis_ip_example_auto_us_1_axi_dwidth_converter_v2_1_26_top : entity is "yes";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of dma_axis_ip_example_auto_us_1_axi_dwidth_converter_v2_1_26_top : entity is "axi_dwidth_converter_v2_1_26_top";
   attribute P_AXI3 : integer;
   attribute P_AXI3 of dma_axis_ip_example_auto_us_1_axi_dwidth_converter_v2_1_26_top : entity is 1;
   attribute P_AXI4 : integer;

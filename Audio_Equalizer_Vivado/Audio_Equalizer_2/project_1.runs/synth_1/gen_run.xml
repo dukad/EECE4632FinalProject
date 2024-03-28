@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1711586136">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1711589354" LaunchIncrCheckpoint="$PPRDIR/../../../Users/meall.a/AppData/Roaming/Xilinx/Vivado/myproj/project_1.srcs/utils_1/imports/synth_1/dma_axis_ip_example_wrapper.dcp">
   <File Type="PA-TCL" Name="dma_axis_ip_example_wrapper.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="dma_axis_ip_example_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="dma_axis_ip_example_wrapper_reports.tcl"/>
@@ -25,6 +25,12 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PPRDIR/../../lowpass.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="dma_axis_ip_example_wrapper"/>
@@ -39,6 +45,14 @@
   </FileSet>
   <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
     <Filter Type="Utils"/>
+    <File Path="$PPRDIR/../../../Users/meall.a/AppData/Roaming/Xilinx/Vivado/myproj/project_1.srcs/utils_1/imports/synth_1/dma_axis_ip_example_wrapper.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
@@ -49,15 +63,15 @@
     </StratHandle>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="dma_axis_ip_example_auto_us_1"/>
   <BlockFileSet Type="BlockSrcs" Name="dma_axis_ip_example_xbar_0"/>
   <BlockFileSet Type="BlockSrcs" Name="dma_axis_ip_example_xbar_1"/>
   <BlockFileSet Type="BlockSrcs" Name="dma_axis_ip_example_axi_dma_0"/>
   <BlockFileSet Type="BlockSrcs" Name="dma_axis_ip_example_equalizer_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="dma_axis_ip_example_auto_us_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="dma_axis_ip_example_auto_pc_3"/>
   <BlockFileSet Type="BlockSrcs" Name="dma_axis_ip_example_rst_ps7_0_100M_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="dma_axis_ip_example_blk_mem_gen_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="dma_axis_ip_example_processing_system7_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="dma_axis_ip_example_auto_pc_1"/>
   <BlockFileSet Type="BlockSrcs" Name="dma_axis_ip_example_auto_pc_2"/>
-  <BlockFileSet Type="BlockSrcs" Name="dma_axis_ip_example_auto_pc_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="dma_axis_ip_example_axi_bram_ctrl_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="dma_axis_ip_example_auto_pc_4"/>
 </GenRun>

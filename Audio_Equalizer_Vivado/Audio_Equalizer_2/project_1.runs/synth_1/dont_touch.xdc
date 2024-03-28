@@ -31,6 +31,12 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==dma_axis_ip
 # IP: bd/dma_axis_ip_example/ip/dma_axis_ip_example_equalizer_0_0/dma_axis_ip_example_equalizer_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==dma_axis_ip_example_equalizer_0_0 || ORIG_REF_NAME==dma_axis_ip_example_equalizer_0_0} -quiet] -quiet
 
+# IP: bd/dma_axis_ip_example/ip/dma_axis_ip_example_axi_bram_ctrl_0_0/dma_axis_ip_example_axi_bram_ctrl_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==dma_axis_ip_example_axi_bram_ctrl_0_0 || ORIG_REF_NAME==dma_axis_ip_example_axi_bram_ctrl_0_0} -quiet] -quiet
+
+# IP: bd/dma_axis_ip_example/ip/dma_axis_ip_example_blk_mem_gen_0_0/dma_axis_ip_example_blk_mem_gen_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==dma_axis_ip_example_blk_mem_gen_0_0 || ORIG_REF_NAME==dma_axis_ip_example_blk_mem_gen_0_0} -quiet] -quiet
+
 # IP: bd/dma_axis_ip_example/ip/dma_axis_ip_example_auto_us_0/dma_axis_ip_example_auto_us_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==dma_axis_ip_example_auto_us_0 || ORIG_REF_NAME==dma_axis_ip_example_auto_us_0} -quiet] -quiet
 
@@ -43,7 +49,13 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==dma_axis_ip
 # IP: bd/dma_axis_ip_example/ip/dma_axis_ip_example_auto_pc_1/dma_axis_ip_example_auto_pc_1.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==dma_axis_ip_example_auto_pc_1 || ORIG_REF_NAME==dma_axis_ip_example_auto_pc_1} -quiet] -quiet
 
+# IP: bd/dma_axis_ip_example/ip/dma_axis_ip_example_auto_pc_4/dma_axis_ip_example_auto_pc_4.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==dma_axis_ip_example_auto_pc_4 || ORIG_REF_NAME==dma_axis_ip_example_auto_pc_4} -quiet] -quiet
+
 # IP: bd/dma_axis_ip_example/ip/dma_axis_ip_example_auto_pc_2/dma_axis_ip_example_auto_pc_2.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==dma_axis_ip_example_auto_pc_2 || ORIG_REF_NAME==dma_axis_ip_example_auto_pc_2} -quiet] -quiet
+
+# IP: bd/dma_axis_ip_example/ip/dma_axis_ip_example_auto_pc_3/dma_axis_ip_example_auto_pc_3.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==dma_axis_ip_example_auto_pc_3 || ORIG_REF_NAME==dma_axis_ip_example_auto_pc_3} -quiet] -quiet
 
 # XDC: c:/EECE4632FinalProject/Audio_Equalizer_Vivado/Audio_Equalizer_2/project_1.gen/sources_1/bd/dma_axis_ip_example/dma_axis_ip_example_ooc.xdc

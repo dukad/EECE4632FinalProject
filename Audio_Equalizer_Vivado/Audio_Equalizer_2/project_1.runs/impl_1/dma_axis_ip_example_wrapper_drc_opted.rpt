@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-| Date         : Wed Mar 27 20:39:31 2024
+| Date         : Wed Mar 27 21:32:14 2024
 | Host         : WFXA4BB6DB88619 running 64-bit major release  (build 9200)
 | Command      : report_drc -file dma_axis_ip_example_wrapper_drc_opted.rpt -pb dma_axis_ip_example_wrapper_drc_opted.pb -rpx dma_axis_ip_example_wrapper_drc_opted.rpx
 | Design       : dma_axis_ip_example_wrapper

@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-| Date             : Wed Mar 27 20:40:40 2024
+| Date             : Wed Mar 27 21:33:25 2024
 | Host             : WFXA4BB6DB88619 running 64-bit major release  (build 9200)
 | Command          : report_power -file dma_axis_ip_example_wrapper_power_routed.rpt -pb dma_axis_ip_example_wrapper_power_summary_routed.pb -rpx dma_axis_ip_example_wrapper_power_routed.rpx
 | Design           : dma_axis_ip_example_wrapper
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.441        |
+| Total On-Chip Power (W)  | 1.449        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.305        |
+| Dynamic (W)              | 1.313        |
 | Device Static (W)        | 0.136        |
 | Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 68.4         |
-| Junction Temperature (C) | 41.6         |
+| Max Ambient (C)          | 68.3         |
+| Junction Temperature (C) | 41.7         |
 | Confidence Level         | Medium       |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,21 +52,21 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.022 |        3 |       --- |             --- |
-| Slice Logic              |     0.005 |    12766 |       --- |             --- |
-|   LUT as Logic           |     0.004 |     4010 |     53200 |            7.54 |
-|   CARRY4                 |    <0.001 |      254 |     13300 |            1.91 |
-|   Register               |    <0.001 |     6270 |    106400 |            5.89 |
-|   LUT as Shift Register  |    <0.001 |      289 |     17400 |            1.66 |
-|   F7/F8 Muxes            |    <0.001 |       67 |     53200 |            0.13 |
+| Clocks                   |     0.023 |        3 |       --- |             --- |
+| Slice Logic              |     0.008 |    13683 |       --- |             --- |
+|   LUT as Logic           |     0.006 |     4477 |     53200 |            8.42 |
+|   CARRY4                 |    <0.001 |      263 |     13300 |            1.98 |
+|   Register               |    <0.001 |     6553 |    106400 |            6.16 |
+|   LUT as Shift Register  |    <0.001 |      307 |     17400 |            1.76 |
+|   F7/F8 Muxes            |    <0.001 |       68 |     53200 |            0.13 |
 |   LUT as Distributed RAM |    <0.001 |       20 |     17400 |            0.11 |
-|   Others                 |     0.000 |      512 |       --- |             --- |
-| Signals                  |     0.007 |     9843 |       --- |             --- |
-| Block RAM                |     0.004 |      4.5 |       140 |            3.21 |
+|   Others                 |     0.000 |      557 |       --- |             --- |
+| Signals                  |     0.010 |    10514 |       --- |             --- |
+| Block RAM                |     0.005 |      6.5 |       140 |            4.64 |
 | DSPs                     |     0.001 |        9 |       220 |            4.09 |
 | PS7                      |     1.266 |        1 |       --- |             --- |
 | Static Power             |     0.136 |          |           |                 |
-| Total                    |     1.441 |          |           |                 |
+| Total                    |     1.449 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -76,7 +76,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.053 |       0.039 |      0.013 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.060 |       0.047 |      0.014 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.014 |       0.000 |      0.014 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -152,20 +152,26 @@ Table of Contents
 +-----------------------------+-----------+
 | Name                        | Power (W) |
 +-----------------------------+-----------+
-| dma_axis_ip_example_wrapper |     1.305 |
-|   dma_axis_ip_example_i     |     1.305 |
-|     axi_dma                 |     0.008 |
-|       U0                    |     0.008 |
+| dma_axis_ip_example_wrapper |     1.313 |
+|   dma_axis_ip_example_i     |     1.313 |
+|     axi_bram_ctrl_0         |     0.001 |
+|       U0                    |     0.001 |
+|     axi_dma                 |     0.010 |
+|       U0                    |     0.010 |
 |     axi_mem_intercon        |     0.005 |
 |       m00_couplers          |     0.001 |
 |       s01_couplers          |     0.001 |
 |       xbar                  |     0.001 |
+|     blk_mem_gen_0           |     0.002 |
+|       U0                    |     0.002 |
 |     equalizer               |     0.020 |
 |       inst                  |     0.020 |
-|     processing_system7_0    |     1.268 |
-|       inst                  |     1.268 |
-|     ps7_0_axi_periph        |     0.004 |
-|       s00_couplers          |     0.003 |
+|     processing_system7_0    |     1.267 |
+|       inst                  |     1.267 |
+|     ps7_0_axi_periph        |     0.007 |
+|       m00_couplers          |     0.003 |
+|       m01_couplers          |     0.003 |
+|       xbar                  |     0.001 |
 +-----------------------------+-----------+
 
 

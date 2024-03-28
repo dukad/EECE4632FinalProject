@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Wed Mar 27 21:30:33 2024
+# Process ID: 27548
+# Current directory: C:/EECE4632FinalProject/Audio_Equalizer_Vivado/Audio_Equalizer_2/project_1.runs/dma_axis_ip_example_auto_pc_3_synth_1
+# Command line: vivado.exe -log dma_axis_ip_example_auto_pc_3.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source dma_axis_ip_example_auto_pc_3.tcl
+# Log file: C:/EECE4632FinalProject/Audio_Equalizer_Vivado/Audio_Equalizer_2/project_1.runs/dma_axis_ip_example_auto_pc_3_synth_1/dma_axis_ip_example_auto_pc_3.vds
+# Journal file: C:/EECE4632FinalProject/Audio_Equalizer_Vivado/Audio_Equalizer_2/project_1.runs/dma_axis_ip_example_auto_pc_3_synth_1\vivado.jou
+# Running On: WFXA4BB6DB88619, OS: Windows, CPU Frequency: 2904 MHz, CPU Physical cores: 8, Host memory: 16881 MB
+#-----------------------------------------------------------
+source dma_axis_ip_example_auto_pc_3.tcl -notrace

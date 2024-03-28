@@ -1,10 +1,10 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-// Date        : Wed Mar 27 20:37:08 2024
+// Date        : Wed Mar 27 20:37:07 2024
 // Host        : WFXA4BB6DB88619 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               c:/EECE4632FinalProject/Audio_Equalizer_Vivado/Audio_Equalizer_2/project_1.gen/sources_1/bd/dma_axis_ip_example/ip/dma_axis_ip_example_auto_pc_1/dma_axis_ip_example_auto_pc_1_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top dma_axis_ip_example_auto_pc_1 -prefix
+//               dma_axis_ip_example_auto_pc_1_ dma_axis_ip_example_auto_pc_1_stub.v
 // Design      : dma_axis_ip_example_auto_pc_1
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg400-1

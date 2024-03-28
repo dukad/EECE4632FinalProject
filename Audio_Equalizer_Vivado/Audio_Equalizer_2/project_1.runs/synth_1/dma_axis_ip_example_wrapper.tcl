@@ -70,6 +70,8 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 4
+set_msg_config -id {Common 17-41} -limit 10000000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg400-1
 
@@ -88,6 +90,7 @@ set_property ip_output_repo c:/EECE4632FinalProject/Audio_Equalizer_Vivado/Audio
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
+add_files c:/EECE4632FinalProject/lowpass.coe
 read_verilog -library xil_defaultlib c:/EECE4632FinalProject/Audio_Equalizer_Vivado/Audio_Equalizer_2/project_1.gen/sources_1/bd/dma_axis_ip_example/hdl/dma_axis_ip_example_wrapper.v
 add_files C:/EECE4632FinalProject/Audio_Equalizer_Vivado/Audio_Equalizer_2/project_1.srcs/sources_1/bd/dma_axis_ip_example/dma_axis_ip_example.bd
 set_property used_in_implementation false [get_files -all c:/EECE4632FinalProject/Audio_Equalizer_Vivado/Audio_Equalizer_2/project_1.gen/sources_1/bd/dma_axis_ip_example/ip/dma_axis_ip_example_axi_dma_0/dma_axis_ip_example_axi_dma_0.xdc]
@@ -100,6 +103,8 @@ set_property used_in_implementation false [get_files -all c:/EECE4632FinalProjec
 set_property used_in_implementation false [get_files -all c:/EECE4632FinalProject/Audio_Equalizer_Vivado/Audio_Equalizer_2/project_1.gen/sources_1/bd/dma_axis_ip_example/ip/dma_axis_ip_example_xbar_0/dma_axis_ip_example_xbar_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/EECE4632FinalProject/Audio_Equalizer_Vivado/Audio_Equalizer_2/project_1.gen/sources_1/bd/dma_axis_ip_example/ip/dma_axis_ip_example_xbar_1/dma_axis_ip_example_xbar_1_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/EECE4632FinalProject/Audio_Equalizer_Vivado/Audio_Equalizer_2/project_1.gen/sources_1/bd/dma_axis_ip_example/ip/dma_axis_ip_example_equalizer_0_0/constraints/equalizer_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/EECE4632FinalProject/Audio_Equalizer_Vivado/Audio_Equalizer_2/project_1.gen/sources_1/bd/dma_axis_ip_example/ip/dma_axis_ip_example_axi_bram_ctrl_0_0/dma_axis_ip_example_axi_bram_ctrl_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/EECE4632FinalProject/Audio_Equalizer_Vivado/Audio_Equalizer_2/project_1.gen/sources_1/bd/dma_axis_ip_example/ip/dma_axis_ip_example_blk_mem_gen_0_0/dma_axis_ip_example_blk_mem_gen_0_0_ooc.xdc]
 set_property used_in_synthesis false [get_files -all c:/EECE4632FinalProject/Audio_Equalizer_Vivado/Audio_Equalizer_2/project_1.gen/sources_1/bd/dma_axis_ip_example/ip/dma_axis_ip_example_auto_us_0/dma_axis_ip_example_auto_us_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all c:/EECE4632FinalProject/Audio_Equalizer_Vivado/Audio_Equalizer_2/project_1.gen/sources_1/bd/dma_axis_ip_example/ip/dma_axis_ip_example_auto_us_0/dma_axis_ip_example_auto_us_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all c:/EECE4632FinalProject/Audio_Equalizer_Vivado/Audio_Equalizer_2/project_1.gen/sources_1/bd/dma_axis_ip_example/ip/dma_axis_ip_example_auto_us_0/dma_axis_ip_example_auto_us_0_ooc.xdc]
@@ -108,7 +113,9 @@ set_property used_in_implementation false [get_files -all c:/EECE4632FinalProjec
 set_property used_in_implementation false [get_files -all c:/EECE4632FinalProject/Audio_Equalizer_Vivado/Audio_Equalizer_2/project_1.gen/sources_1/bd/dma_axis_ip_example/ip/dma_axis_ip_example_auto_us_1/dma_axis_ip_example_auto_us_1_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/EECE4632FinalProject/Audio_Equalizer_Vivado/Audio_Equalizer_2/project_1.gen/sources_1/bd/dma_axis_ip_example/ip/dma_axis_ip_example_auto_pc_0/dma_axis_ip_example_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/EECE4632FinalProject/Audio_Equalizer_Vivado/Audio_Equalizer_2/project_1.gen/sources_1/bd/dma_axis_ip_example/ip/dma_axis_ip_example_auto_pc_1/dma_axis_ip_example_auto_pc_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/EECE4632FinalProject/Audio_Equalizer_Vivado/Audio_Equalizer_2/project_1.gen/sources_1/bd/dma_axis_ip_example/ip/dma_axis_ip_example_auto_pc_4/dma_axis_ip_example_auto_pc_4_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/EECE4632FinalProject/Audio_Equalizer_Vivado/Audio_Equalizer_2/project_1.gen/sources_1/bd/dma_axis_ip_example/ip/dma_axis_ip_example_auto_pc_2/dma_axis_ip_example_auto_pc_2_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/EECE4632FinalProject/Audio_Equalizer_Vivado/Audio_Equalizer_2/project_1.gen/sources_1/bd/dma_axis_ip_example/ip/dma_axis_ip_example_auto_pc_3/dma_axis_ip_example_auto_pc_3_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/EECE4632FinalProject/Audio_Equalizer_Vivado/Audio_Equalizer_2/project_1.gen/sources_1/bd/dma_axis_ip_example/dma_axis_ip_example_ooc.xdc]
 
 OPTRACE "Adding files" END { }
@@ -123,6 +130,8 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
+
+read_checkpoint -auto_incremental -incremental C:/Users/meall.a/AppData/Roaming/Xilinx/Vivado/myproj/project_1.srcs/utils_1/imports/synth_1/dma_axis_ip_example_wrapper.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

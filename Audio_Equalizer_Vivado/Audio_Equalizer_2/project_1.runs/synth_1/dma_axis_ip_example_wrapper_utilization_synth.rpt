@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-| Date         : Wed Mar 27 20:38:44 2024
+| Date         : Wed Mar 27 21:31:23 2024
 | Host         : WFXA4BB6DB88619 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file dma_axis_ip_example_wrapper_utilization_synth.rpt -pb dma_axis_ip_example_wrapper_utilization_synth.pb
 | Design       : dma_axis_ip_example_wrapper
@@ -181,9 +181,13 @@ Table of Contents
 | dma_axis_ip_example_rst_ps7_0_100M_0       |    1 |
 | dma_axis_ip_example_processing_system7_0_0 |    1 |
 | dma_axis_ip_example_equalizer_0_0          |    1 |
+| dma_axis_ip_example_blk_mem_gen_0_0        |    1 |
 | dma_axis_ip_example_axi_dma_0              |    1 |
+| dma_axis_ip_example_axi_bram_ctrl_0_0      |    1 |
 | dma_axis_ip_example_auto_us_1              |    1 |
 | dma_axis_ip_example_auto_us_0              |    1 |
+| dma_axis_ip_example_auto_pc_4              |    1 |
+| dma_axis_ip_example_auto_pc_3              |    1 |
 | dma_axis_ip_example_auto_pc_2              |    1 |
 | dma_axis_ip_example_auto_pc_1              |    1 |
 | dma_axis_ip_example_auto_pc_0              |    1 |

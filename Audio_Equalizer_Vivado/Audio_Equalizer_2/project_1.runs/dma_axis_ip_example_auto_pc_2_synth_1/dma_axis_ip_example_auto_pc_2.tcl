@@ -70,6 +70,8 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "dma_axis_ip_example_auto_pc_2_synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 4
+set_msg_config -id {Common 17-41} -limit 10000000
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 OPTRACE "Creating in-memory project" START { }

@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
 -- Date        : Wed Mar 27 20:37:56 2024
 -- Host        : WFXA4BB6DB88619 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               c:/EECE4632FinalProject/Audio_Equalizer_Vivado/Audio_Equalizer_2/project_1.gen/sources_1/bd/dma_axis_ip_example/ip/dma_axis_ip_example_auto_us_0/dma_axis_ip_example_auto_us_0_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top dma_axis_ip_example_auto_us_0 -prefix
+--               dma_axis_ip_example_auto_us_0_ dma_axis_ip_example_auto_us_0_stub.vhdl
 -- Design      : dma_axis_ip_example_auto_us_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg400-1
