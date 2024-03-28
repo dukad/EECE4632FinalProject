@@ -1,15 +1,15 @@
 INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2022.1/bin/unwrapped/win64.o/vitis_hls.exe'
-INFO: [HLS 200-10] For user 'meall.a' on host 'wfxa4bb6db88619' (Windows NT_amd64 version 6.2) on Thu Mar 28 14:29:49 -0400 2024
+INFO: [HLS 200-10] For user 'meall.a' on host 'wfxa4bb6db88619' (Windows NT_amd64 version 6.2) on Thu Mar 28 17:22:16 -0400 2024
 INFO: [HLS 200-10] In directory 'C:/EECE4632FinalProject/Audio_Equalizer_Vitis'
 Sourcing Tcl script 'C:/EECE4632FinalProject/Audio_Equalizer_Vitis/Audio_Equalizer_Vitis/solution1/export.tcl'
 INFO: [HLS 200-1510] Running: source C:/EECE4632FinalProject/Audio_Equalizer_Vitis/Audio_Equalizer_Vitis/solution1/export.tcl
 INFO: [HLS 200-1510] Running: open_project Audio_Equalizer_Vitis 
 INFO: [HLS 200-10] Opening project 'C:/EECE4632FinalProject/Audio_Equalizer_Vitis/Audio_Equalizer_Vitis'.
 INFO: [HLS 200-1510] Running: set_top equalizer 
-INFO: [HLS 200-1510] Running: add_files equalizer.cpp 
-INFO: [HLS 200-10] Adding design file 'equalizer.cpp' to the project
 INFO: [HLS 200-1510] Running: add_files equalizer.h 
 INFO: [HLS 200-10] Adding design file 'equalizer.h' to the project
+INFO: [HLS 200-1510] Running: add_files equalizer.cpp 
+INFO: [HLS 200-10] Adding design file 'equalizer.cpp' to the project
 INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
 INFO: [HLS 200-10] Opening solution 'C:/EECE4632FinalProject/Audio_Equalizer_Vitis/Audio_Equalizer_Vitis/solution1'.
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
@@ -35,7 +35,7 @@ source run_ippack.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.1/data/ip'.
-INFO: [Common 17-206] Exiting Vivado at Thu Mar 28 14:30:03 2024...
+INFO: [Common 17-206] Exiting Vivado at Thu Mar 28 17:22:28 2024...
 INFO: [HLS 200-802] Generated output file Audio_Equalizer_Vitis/solution1/impl/export.zip
-INFO: [HLS 200-111] Finished Command export_design CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 11.77 seconds; current allocated memory: 0.000 MB.
-INFO: [HLS 200-112] Total CPU user time: 4 seconds. Total CPU system time: 2 seconds. Total elapsed time: 14.47 seconds; peak allocated memory: 1.447 GB.
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 9.821 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 4 seconds. Total CPU system time: 2 seconds. Total elapsed time: 12.529 seconds; peak allocated memory: 1.442 GB.

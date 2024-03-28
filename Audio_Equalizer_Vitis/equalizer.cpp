@@ -5,29 +5,37 @@
 
 //#define LOWER_FREQ_BOUND 1000
 //#define UPPER_FREQ_BOUND 3000
-//#define N1 33
-//#define N2 33
-//#define N3 33
 
-//typedef int data_t;
-//typedef int coef_t;
-//typedef int acc_t;
+
+#define N1 33
+#define N2 33
+#define N3 33
+
+typedef int data_t;
+typedef int coef_t;
+typedef int acc_t;
 
 void equalizer(hls::stream< ap_axis<32,2,5,6> > &SIGNAL_IN,
-    hls::stream< ap_axis<32,2,5,6> > &SIGNAL_OUT){
+    hls::stream< ap_axis<32,2,5,6> > &SIGNAL_OUT,
+	coef_t lowfreq_coefs[N1],
+	coef_t midfreq_coefs[N2],
+	coef_t highfreq_coefs[N3]){
+#pragma HLS INTERFACE m_axi depth=33 port=lowfreq_coefs
+#pragma HLS INTERFACE m_axi depth=33 port=midfreq_coefs
+#pragma HLS INTERFACE m_axi depth=33 port=highfreq_coefs
 #pragma HLS INTERFACE axis port=SIGNAL_IN
 #pragma HLS INTERFACE axis port=SIGNAL_OUT
+#pragma hls interface s_axilite port=return
 
 	ap_axis<32,2,5,6> tmp;
 	SIGNAL_IN.read(tmp);
 	SIGNAL_OUT.write(tmp);
 
 
+
 //    coef_t lowfreq_coefs[N1],
 //    coef_t midfreq_coefs[N2],
 //    coef_t highfreq_coefs[N3]){
-//#pragma HLS INTERFACE axis port=SIGNAL_IN
-//#pragma HLS INTERFACE axis port=SIGNAL_OUT
 //#pragma HLS INTERFACE m_axi depth=33 port=lowfreq_coefs
 //#pragma HLS INTERFACE m_axi depth=33 port=midfreq_coefs
 //#pragma HLS INTERFACE m_axi depth=33 port=highfreq_coefs

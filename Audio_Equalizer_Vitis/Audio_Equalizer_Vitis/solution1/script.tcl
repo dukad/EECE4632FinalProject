@@ -5,8 +5,8 @@
 ############################################################
 open_project Audio_Equalizer_Vitis
 set_top equalizer
-add_files equalizer.cpp
 add_files equalizer.h
+add_files equalizer.cpp
 open_solution "solution1" -flow_target vivado
 set_part {xc7z020-clg400-1}
 create_clock -period 10 -name default
