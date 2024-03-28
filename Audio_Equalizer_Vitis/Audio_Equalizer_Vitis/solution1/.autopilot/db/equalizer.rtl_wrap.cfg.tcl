@@ -208,42 +208,6 @@ set structIsPacked "0"
 set DataType [list "ap_axiu<32, 0, 0, 0>" "struct ap_axis" $structMem 1 0 $structParameter $structArgument $NameSpace $structIsPacked]
 set Port [list $PortName $Interface $DataType $Pointer $Dims $Const $Volatile $ArrayOpt]
 lappend PortList $Port
-set PortName "lowfreq_coefs"
-set BitWidth "64"
-set ArrayOpt ""
-set Const "0"
-set Volatile "1"
-set Pointer "1"
-set Reference "0"
-set Dims [list 0]
-set Interface "wire"
-set DataType "void"
-set Port [list $PortName $Interface $DataType $Pointer $Dims $Const    $Volatile $ArrayOpt]
-lappend PortList $Port
-set PortName "midfreq_coefs"
-set BitWidth "64"
-set ArrayOpt ""
-set Const "0"
-set Volatile "1"
-set Pointer "1"
-set Reference "0"
-set Dims [list 0]
-set Interface "wire"
-set DataType "void"
-set Port [list $PortName $Interface $DataType $Pointer $Dims $Const    $Volatile $ArrayOpt]
-lappend PortList $Port
-set PortName "highfreq_coefs"
-set BitWidth "64"
-set ArrayOpt ""
-set Const "0"
-set Volatile "1"
-set Pointer "1"
-set Reference "0"
-set Dims [list 0]
-set Interface "wire"
-set DataType "void"
-set Port [list $PortName $Interface $DataType $Pointer $Dims $Const    $Volatile $ArrayOpt]
-lappend PortList $Port
 set globalAPint "" 
 set returnAPInt "" 
 set hasCPPAPInt 0 

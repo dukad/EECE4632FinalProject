@@ -12,36 +12,6 @@
 						"AP_RESET": { "actual": "ap_rst_n"},
 						"AP_START": { "actual": "ap_start"}
 					}
-				},
-				"grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264/grp_equalizer_Pipeline_Highfreq_Shift_Accumulate_Loop_fu_264_activity": {
-					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
-					"ports": {
-						"AP_CLK": { "actual": "ap_clk"},
-						"AP_DONE": { "actual": "ap_done"},
-						"AP_READY": { "actual": "ap_ready"},
-						"AP_RESET": { "actual": "ap_rst"},
-						"AP_START": { "actual": "ap_start"}
-					}
-				},
-				"grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243/grp_equalizer_Pipeline_Lowfreq_Shift_Accumulate_Loop_fu_243_activity": {
-					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
-					"ports": {
-						"AP_CLK": { "actual": "ap_clk"},
-						"AP_DONE": { "actual": "ap_done"},
-						"AP_READY": { "actual": "ap_ready"},
-						"AP_RESET": { "actual": "ap_rst"},
-						"AP_START": { "actual": "ap_start"}
-					}
-				},
-				"grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254/grp_equalizer_Pipeline_Midfreq_Shift_Accumulate_Loop_fu_254_activity": {
-					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
-					"ports": {
-						"AP_CLK": { "actual": "ap_clk"},
-						"AP_DONE": { "actual": "ap_done"},
-						"AP_READY": { "actual": "ap_ready"},
-						"AP_RESET": { "actual": "ap_rst"},
-						"AP_START": { "actual": "ap_start"}
-					}
 				}
 			}
 		}

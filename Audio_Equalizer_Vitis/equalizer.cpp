@@ -3,83 +3,91 @@
 #include <hls_stream.h>
 #include <ap_axi_sdata.h>
 
-#define LOWER_FREQ_BOUND 1000
-#define UPPER_FREQ_BOUND 3000
-#define N1 33
-#define N2 33
-#define N3 33
+//#define LOWER_FREQ_BOUND 1000
+//#define UPPER_FREQ_BOUND 3000
+//#define N1 33
+//#define N2 33
+//#define N3 33
 
-typedef int data_t;
-typedef int coef_t;
-typedef int acc_t;
+//typedef int data_t;
+//typedef int coef_t;
+//typedef int acc_t;
 
 void equalizer(hls::stream< ap_axis<32,2,5,6> > &SIGNAL_IN,
-    hls::stream< ap_axis<32,2,5,6> > &SIGNAL_OUT,
-    coef_t lowfreq_coefs[N1],
-    coef_t midfreq_coefs[N2],
-    coef_t highfreq_coefs[N3]){
+    hls::stream< ap_axis<32,2,5,6> > &SIGNAL_OUT){
 #pragma HLS INTERFACE axis port=SIGNAL_IN
 #pragma HLS INTERFACE axis port=SIGNAL_OUT
-#pragma HLS INTERFACE m_axi depth=33 port=lowfreq_coefs
-#pragma HLS INTERFACE m_axi depth=33 port=midfreq_coefs
-#pragma HLS INTERFACE m_axi depth=33 port=highfreq_coefs
-#pragma HLS INTERFACE ap_ctrl_non port=return
 
-    static data_t lowfreq_shift_reg[N1];
-    static data_t midfreq_shift_reg[N2];
-    static data_t highfreq_shift_reg[N3];
+	ap_axis<32,2,5,6> tmp;
+	SIGNAL_IN.read(tmp);
+	SIGNAL_OUT.write(tmp);
 
-    acc_t lowfreq_accumulate;
-    acc_t midfreq_accumulate;
-    acc_t highfreq_accumulate;
-    data_t data;
-    int i;
-    ap_axis<32,2,5,6> tmp;
 
-    SIGNAL_IN.read(tmp);
-
-    // Generate band reject
-    lowfreq_accumulate = 0;
-    Lowfreq_Shift_Accumulate_Loop:
-	for (i = N1 - 1; i >= 0; i--){
-		lowfreq_shift_reg[i] = lowfreq_shift_reg[i - 1];
-		lowfreq_accumulate += lowfreq_shift_reg[i] * lowfreq_coefs[i];
-	}
-
-	lowfreq_accumulate += tmp.data.to_int() * lowfreq_coefs[0];
-	lowfreq_shift_reg[0] = tmp.data.to_int();
-
-	midfreq_accumulate = 0;
-	Midfreq_Shift_Accumulate_Loop:
-	for (i = N2 - 1; i >= 0; i--){
-		midfreq_shift_reg[i] = midfreq_shift_reg[i - 1];
-		midfreq_accumulate += midfreq_shift_reg[i] * midfreq_coefs[i];
-	}
-
-	midfreq_accumulate += lowfreq_accumulate * midfreq_coefs[0];
-	midfreq_shift_reg[0] = lowfreq_accumulate;
-
-	highfreq_accumulate = 0;
-	Highfreq_Shift_Accumulate_Loop:
-	for (i = N3 -1; i >= 0; i--){
-		highfreq_shift_reg[i] = highfreq_shift_reg[i - 1];
-		highfreq_accumulate += highfreq_shift_reg[i] * highfreq_coefs[i];
-	}
-
-	highfreq_accumulate += highfreq_accumulate * highfreq_coefs[0];
-	highfreq_shift_reg[0] = midfreq_accumulate;
-
-	ap_axis<32,2,5,6> output;
-
-	output.data = highfreq_accumulate;
-	output.keep = tmp.keep;
-	output.strb = tmp.strb;
-	output.last = tmp.last;
-	output.dest = tmp.dest;
-	output.id = tmp.id;
-	output.user = tmp.user;
-
-	SIGNAL_OUT.write(output);
+//    coef_t lowfreq_coefs[N1],
+//    coef_t midfreq_coefs[N2],
+//    coef_t highfreq_coefs[N3]){
+//#pragma HLS INTERFACE axis port=SIGNAL_IN
+//#pragma HLS INTERFACE axis port=SIGNAL_OUT
+//#pragma HLS INTERFACE m_axi depth=33 port=lowfreq_coefs
+//#pragma HLS INTERFACE m_axi depth=33 port=midfreq_coefs
+//#pragma HLS INTERFACE m_axi depth=33 port=highfreq_coefs
+//#pragma HLS INTERFACE ap_ctrl_non port=return
+//
+//    static data_t lowfreq_shift_reg[N1];
+//    static data_t midfreq_shift_reg[N2];
+//    static data_t highfreq_shift_reg[N3];
+//
+//    acc_t lowfreq_accumulate;
+//    acc_t midfreq_accumulate;
+//    acc_t highfreq_accumulate;
+//    data_t data;
+//    int i;
+//    ap_axis<32,2,5,6> tmp;
+//
+//    SIGNAL_IN.read(tmp);
+//
+//    // Generate band reject
+//    lowfreq_accumulate = 0;
+//    Lowfreq_Shift_Accumulate_Loop:
+//	for (i = N1 - 1; i >= 0; i--){
+//		lowfreq_shift_reg[i] = lowfreq_shift_reg[i - 1];
+//		lowfreq_accumulate += lowfreq_shift_reg[i] * lowfreq_coefs[i];
+//	}
+//
+//	lowfreq_accumulate += tmp.data.to_int() * lowfreq_coefs[0];
+//	lowfreq_shift_reg[0] = tmp.data.to_int();
+//
+//	midfreq_accumulate = 0;
+//	Midfreq_Shift_Accumulate_Loop:
+//	for (i = N2 - 1; i >= 0; i--){
+//		midfreq_shift_reg[i] = midfreq_shift_reg[i - 1];
+//		midfreq_accumulate += midfreq_shift_reg[i] * midfreq_coefs[i];
+//	}
+//
+//	midfreq_accumulate += lowfreq_accumulate * midfreq_coefs[0];
+//	midfreq_shift_reg[0] = lowfreq_accumulate;
+//
+//	highfreq_accumulate = 0;
+//	Highfreq_Shift_Accumulate_Loop:
+//	for (i = N3 -1; i >= 0; i--){
+//		highfreq_shift_reg[i] = highfreq_shift_reg[i - 1];
+//		highfreq_accumulate += highfreq_shift_reg[i] * highfreq_coefs[i];
+//	}
+//
+//	highfreq_accumulate += highfreq_accumulate * highfreq_coefs[0];
+//	highfreq_shift_reg[0] = midfreq_accumulate;
+//
+//	ap_axis<32,2,5,6> output;
+//
+//	output.data = highfreq_accumulate;
+//	output.keep = tmp.keep;
+//	output.strb = tmp.strb;
+//	output.last = tmp.last;
+//	output.dest = tmp.dest;
+//	output.id = tmp.id;
+//	output.user = tmp.user;
+//
+//	SIGNAL_OUT.write(output);
 }
 
 //    accumulate = 0;

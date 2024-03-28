@@ -12,11 +12,7 @@
   <warningLogs>
     <logs>
       <synLog>
-        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="Audio_Equalizer_Vitis" solutionName="solution1" date="2024-03-27T17:45:56.460-0400" type="Warning"/>
-        <logs message="WARNING: [HLS 214-167] The program may have out of bound array access (equalizer.cpp:65:27)" projectName="Audio_Equalizer_Vitis" solutionName="solution1" date="2024-03-27T17:45:54.510-0400" type="Warning"/>
-        <logs message="WARNING: [HLS 214-167] The program may have out of bound array access (equalizer.cpp:55:26)" projectName="Audio_Equalizer_Vitis" solutionName="solution1" date="2024-03-27T17:45:54.502-0400" type="Warning"/>
-        <logs message="WARNING: [HLS 214-167] The program may have out of bound array access (equalizer.cpp:45:26)" projectName="Audio_Equalizer_Vitis" solutionName="solution1" date="2024-03-27T17:45:54.483-0400" type="Warning"/>
-        <logs message="WARNING: [HLS 207-5552] unexpected pragma parameter 'ap_ctrl_non' (equalizer.cpp:26:23)" projectName="Audio_Equalizer_Vitis" solutionName="solution1" date="2024-03-27T17:45:50.931-0400" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="Audio_Equalizer_Vitis" solutionName="solution1" date="2024-03-28T14:29:36.101-0400" type="Warning"/>
       </synLog>
       <simLog/>
       <mgLog/>

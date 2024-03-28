@@ -74,14 +74,6 @@ using namespace sc_dt;
 #define WRAPC_STREAM_EGRESS_STATUS_SIGNAL_OUT_V_id_V "../tv/stream_size/stream_egress_status_SIGNAL_OUT_V_id_V.dat"
 #define WRAPC_STREAM_SIZE_OUT_SIGNAL_OUT_V_dest_V "../tv/stream_size/stream_size_out_SIGNAL_OUT_V_dest_V.dat"
 #define WRAPC_STREAM_EGRESS_STATUS_SIGNAL_OUT_V_dest_V "../tv/stream_size/stream_egress_status_SIGNAL_OUT_V_dest_V.dat"
-#define AUTOTB_TVIN_lowfreq_coefs "../tv/cdatafile/c.equalizer.autotvin_lowfreq_coefs.dat"
-#define AUTOTB_TVOUT_lowfreq_coefs "../tv/cdatafile/c.equalizer.autotvout_lowfreq_coefs.dat"
-#define AUTOTB_TVIN_midfreq_coefs "../tv/cdatafile/c.equalizer.autotvin_midfreq_coefs.dat"
-#define AUTOTB_TVOUT_midfreq_coefs "../tv/cdatafile/c.equalizer.autotvout_midfreq_coefs.dat"
-#define AUTOTB_TVIN_highfreq_coefs "../tv/cdatafile/c.equalizer.autotvin_highfreq_coefs.dat"
-#define AUTOTB_TVOUT_highfreq_coefs "../tv/cdatafile/c.equalizer.autotvout_highfreq_coefs.dat"
-#define AUTOTB_TVIN_gmem "../tv/cdatafile/c.equalizer.autotvin_gmem.dat"
-#define AUTOTB_TVOUT_gmem "../tv/cdatafile/c.equalizer.autotvout_gmem.dat"
 
 #define INTER_TCL "../tv/cdatafile/ref.tcl"
 
@@ -100,10 +92,6 @@ using namespace sc_dt;
 #define AUTOTB_TVOUT_PC_SIGNAL_OUT_V_last_V "../tv/rtldatafile/rtl.equalizer.autotvout_SIGNAL_OUT_V_last_V.dat"
 #define AUTOTB_TVOUT_PC_SIGNAL_OUT_V_id_V "../tv/rtldatafile/rtl.equalizer.autotvout_SIGNAL_OUT_V_id_V.dat"
 #define AUTOTB_TVOUT_PC_SIGNAL_OUT_V_dest_V "../tv/rtldatafile/rtl.equalizer.autotvout_SIGNAL_OUT_V_dest_V.dat"
-#define AUTOTB_TVOUT_PC_lowfreq_coefs "../tv/rtldatafile/rtl.equalizer.autotvout_lowfreq_coefs.dat"
-#define AUTOTB_TVOUT_PC_midfreq_coefs "../tv/rtldatafile/rtl.equalizer.autotvout_midfreq_coefs.dat"
-#define AUTOTB_TVOUT_PC_highfreq_coefs "../tv/rtldatafile/rtl.equalizer.autotvout_highfreq_coefs.dat"
-#define AUTOTB_TVOUT_PC_gmem "../tv/rtldatafile/rtl.equalizer.autotvout_gmem.dat"
 
 
 static const bool little_endian()
@@ -347,10 +335,6 @@ INTER_TCL_FILE(const char* name) {
   SIGNAL_OUT_V_last_V_depth = 0;
   SIGNAL_OUT_V_id_V_depth = 0;
   SIGNAL_OUT_V_dest_V_depth = 0;
-  lowfreq_coefs_depth = 0;
-  midfreq_coefs_depth = 0;
-  highfreq_coefs_depth = 0;
-  gmem_depth = 0;
   trans_num =0;
 }
 ~INTER_TCL_FILE() {
@@ -382,10 +366,6 @@ string get_depth_list () {
   total_list << "{SIGNAL_OUT_V_last_V " << SIGNAL_OUT_V_last_V_depth << "}\n";
   total_list << "{SIGNAL_OUT_V_id_V " << SIGNAL_OUT_V_id_V_depth << "}\n";
   total_list << "{SIGNAL_OUT_V_dest_V " << SIGNAL_OUT_V_dest_V_depth << "}\n";
-  total_list << "{lowfreq_coefs " << lowfreq_coefs_depth << "}\n";
-  total_list << "{midfreq_coefs " << midfreq_coefs_depth << "}\n";
-  total_list << "{highfreq_coefs " << highfreq_coefs_depth << "}\n";
-  total_list << "{gmem " << gmem_depth << "}\n";
   return total_list.str();
 }
 void set_num (int num , int* class_num) {
@@ -409,10 +389,6 @@ void set_string(std::string list, std::string* class_list) {
     int SIGNAL_OUT_V_last_V_depth;
     int SIGNAL_OUT_V_id_V_depth;
     int SIGNAL_OUT_V_dest_V_depth;
-    int lowfreq_coefs_depth;
-    int midfreq_coefs_depth;
-    int highfreq_coefs_depth;
-    int gmem_depth;
     int trans_num;
   private:
     ofstream mFile;
@@ -420,9 +396,9 @@ void set_string(std::string list, std::string* class_list) {
 };
 
 
-extern "C" void equalizer_hw_stub_wrapper(volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *);
+extern "C" void equalizer_hw_stub_wrapper(volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *);
 
-extern "C" void apatb_equalizer_hw(volatile void * __xlx_apatb_param_SIGNAL_IN_V_data_V, volatile void * __xlx_apatb_param_SIGNAL_IN_V_keep_V, volatile void * __xlx_apatb_param_SIGNAL_IN_V_strb_V, volatile void * __xlx_apatb_param_SIGNAL_IN_V_user_V, volatile void * __xlx_apatb_param_SIGNAL_IN_V_last_V, volatile void * __xlx_apatb_param_SIGNAL_IN_V_id_V, volatile void * __xlx_apatb_param_SIGNAL_IN_V_dest_V, volatile void * __xlx_apatb_param_SIGNAL_OUT_V_data_V, volatile void * __xlx_apatb_param_SIGNAL_OUT_V_keep_V, volatile void * __xlx_apatb_param_SIGNAL_OUT_V_strb_V, volatile void * __xlx_apatb_param_SIGNAL_OUT_V_user_V, volatile void * __xlx_apatb_param_SIGNAL_OUT_V_last_V, volatile void * __xlx_apatb_param_SIGNAL_OUT_V_id_V, volatile void * __xlx_apatb_param_SIGNAL_OUT_V_dest_V, volatile void * __xlx_apatb_param_lowfreq_coefs, volatile void * __xlx_apatb_param_midfreq_coefs, volatile void * __xlx_apatb_param_highfreq_coefs) {
+extern "C" void apatb_equalizer_hw(volatile void * __xlx_apatb_param_SIGNAL_IN_V_data_V, volatile void * __xlx_apatb_param_SIGNAL_IN_V_keep_V, volatile void * __xlx_apatb_param_SIGNAL_IN_V_strb_V, volatile void * __xlx_apatb_param_SIGNAL_IN_V_user_V, volatile void * __xlx_apatb_param_SIGNAL_IN_V_last_V, volatile void * __xlx_apatb_param_SIGNAL_IN_V_id_V, volatile void * __xlx_apatb_param_SIGNAL_IN_V_dest_V, volatile void * __xlx_apatb_param_SIGNAL_OUT_V_data_V, volatile void * __xlx_apatb_param_SIGNAL_OUT_V_keep_V, volatile void * __xlx_apatb_param_SIGNAL_OUT_V_strb_V, volatile void * __xlx_apatb_param_SIGNAL_OUT_V_user_V, volatile void * __xlx_apatb_param_SIGNAL_OUT_V_last_V, volatile void * __xlx_apatb_param_SIGNAL_OUT_V_id_V, volatile void * __xlx_apatb_param_SIGNAL_OUT_V_dest_V) {
   refine_signal_handler();
   fstream wrapc_switch_file_token;
   wrapc_switch_file_token.open(".hls_cosim_wrapc_switch.log");
@@ -892,9 +868,6 @@ aesl_fh.touch(WRAPC_STREAM_EGRESS_STATUS_SIGNAL_OUT_V_id_V);
 aesl_fh.touch(WRAPC_STREAM_SIZE_OUT_SIGNAL_OUT_V_dest_V);
 aesl_fh.touch(WRAPC_STREAM_EGRESS_STATUS_SIGNAL_OUT_V_dest_V);
 CodeState = DUMP_INPUTS;
-unsigned __xlx_offset_byte_param_lowfreq_coefs = 0;
-unsigned __xlx_offset_byte_param_midfreq_coefs = 0;
-unsigned __xlx_offset_byte_param_highfreq_coefs = 0;
 // data
 std::vector<int> __xlx_apatb_param_SIGNAL_IN_V_data_V_stream_buf;
 {
@@ -967,92 +940,8 @@ std::vector<char> __xlx_apatb_param_SIGNAL_OUT_V_last_V_stream_buf;
 std::vector<char> __xlx_apatb_param_SIGNAL_OUT_V_id_V_stream_buf;
 // dest
 std::vector<char> __xlx_apatb_param_SIGNAL_OUT_V_dest_V_stream_buf;
-#ifdef USE_BINARY_TV_FILE
-{
-aesl_fh.touch(AUTOTB_TVIN_gmem, 'b');
-transaction<32> tr(99);
-__xlx_offset_byte_param_lowfreq_coefs = 0*4;
-if (__xlx_apatb_param_lowfreq_coefs) {
-  tr.import<4>((char*)__xlx_apatb_param_lowfreq_coefs, 33, 0);
-}
-__xlx_offset_byte_param_midfreq_coefs = 33*4;
-if (__xlx_apatb_param_midfreq_coefs) {
-  tr.import<4>((char*)__xlx_apatb_param_midfreq_coefs, 33, 0);
-}
-__xlx_offset_byte_param_highfreq_coefs = 66*4;
-if (__xlx_apatb_param_highfreq_coefs) {
-  tr.import<4>((char*)__xlx_apatb_param_highfreq_coefs, 33, 0);
-}
-aesl_fh.write(AUTOTB_TVIN_gmem, tr.p, tr.tbytes);
-tcl_file.set_num(99, &tcl_file.gmem_depth);
-}
-#else
-aesl_fh.touch(AUTOTB_TVIN_gmem);
-{
-aesl_fh.write(AUTOTB_TVIN_gmem, begin_str(AESL_transaction));
-__xlx_offset_byte_param_lowfreq_coefs = 0*4;
-if (__xlx_apatb_param_lowfreq_coefs) {
-for (size_t i = 0; i < 33; ++i) {
-unsigned char *pos = (unsigned char*)__xlx_apatb_param_lowfreq_coefs + i * 4;
-std::string s = formatData(pos, 32);
-aesl_fh.write(AUTOTB_TVIN_gmem, s);
-}
-}
-__xlx_offset_byte_param_midfreq_coefs = 33*4;
-if (__xlx_apatb_param_midfreq_coefs) {
-for (size_t i = 0; i < 33; ++i) {
-unsigned char *pos = (unsigned char*)__xlx_apatb_param_midfreq_coefs + i * 4;
-std::string s = formatData(pos, 32);
-aesl_fh.write(AUTOTB_TVIN_gmem, s);
-}
-}
-__xlx_offset_byte_param_highfreq_coefs = 66*4;
-if (__xlx_apatb_param_highfreq_coefs) {
-for (size_t i = 0; i < 33; ++i) {
-unsigned char *pos = (unsigned char*)__xlx_apatb_param_highfreq_coefs + i * 4;
-std::string s = formatData(pos, 32);
-aesl_fh.write(AUTOTB_TVIN_gmem, s);
-}
-}
-tcl_file.set_num(99, &tcl_file.gmem_depth);
-aesl_fh.write(AUTOTB_TVIN_gmem, end_str());
-}
-#endif
-// print lowfreq_coefs Transactions
-{
-aesl_fh.write(AUTOTB_TVIN_lowfreq_coefs, begin_str(AESL_transaction));
-{
-auto *pos = (unsigned char*)&__xlx_offset_byte_param_lowfreq_coefs;
-aesl_fh.write(AUTOTB_TVIN_lowfreq_coefs, formatData(pos, 32));
-}
-  tcl_file.set_num(1, &tcl_file.lowfreq_coefs_depth);
-aesl_fh.write(AUTOTB_TVIN_lowfreq_coefs, end_str());
-}
-
-// print midfreq_coefs Transactions
-{
-aesl_fh.write(AUTOTB_TVIN_midfreq_coefs, begin_str(AESL_transaction));
-{
-auto *pos = (unsigned char*)&__xlx_offset_byte_param_midfreq_coefs;
-aesl_fh.write(AUTOTB_TVIN_midfreq_coefs, formatData(pos, 32));
-}
-  tcl_file.set_num(1, &tcl_file.midfreq_coefs_depth);
-aesl_fh.write(AUTOTB_TVIN_midfreq_coefs, end_str());
-}
-
-// print highfreq_coefs Transactions
-{
-aesl_fh.write(AUTOTB_TVIN_highfreq_coefs, begin_str(AESL_transaction));
-{
-auto *pos = (unsigned char*)&__xlx_offset_byte_param_highfreq_coefs;
-aesl_fh.write(AUTOTB_TVIN_highfreq_coefs, formatData(pos, 32));
-}
-  tcl_file.set_num(1, &tcl_file.highfreq_coefs_depth);
-aesl_fh.write(AUTOTB_TVIN_highfreq_coefs, end_str());
-}
-
 CodeState = CALL_C_DUT;
-equalizer_hw_stub_wrapper(__xlx_apatb_param_SIGNAL_IN_V_data_V, __xlx_apatb_param_SIGNAL_IN_V_keep_V, __xlx_apatb_param_SIGNAL_IN_V_strb_V, __xlx_apatb_param_SIGNAL_IN_V_user_V, __xlx_apatb_param_SIGNAL_IN_V_last_V, __xlx_apatb_param_SIGNAL_IN_V_id_V, __xlx_apatb_param_SIGNAL_IN_V_dest_V, __xlx_apatb_param_SIGNAL_OUT_V_data_V, __xlx_apatb_param_SIGNAL_OUT_V_keep_V, __xlx_apatb_param_SIGNAL_OUT_V_strb_V, __xlx_apatb_param_SIGNAL_OUT_V_user_V, __xlx_apatb_param_SIGNAL_OUT_V_last_V, __xlx_apatb_param_SIGNAL_OUT_V_id_V, __xlx_apatb_param_SIGNAL_OUT_V_dest_V, __xlx_apatb_param_lowfreq_coefs, __xlx_apatb_param_midfreq_coefs, __xlx_apatb_param_highfreq_coefs);
+equalizer_hw_stub_wrapper(__xlx_apatb_param_SIGNAL_IN_V_data_V, __xlx_apatb_param_SIGNAL_IN_V_keep_V, __xlx_apatb_param_SIGNAL_IN_V_strb_V, __xlx_apatb_param_SIGNAL_IN_V_user_V, __xlx_apatb_param_SIGNAL_IN_V_last_V, __xlx_apatb_param_SIGNAL_IN_V_id_V, __xlx_apatb_param_SIGNAL_IN_V_dest_V, __xlx_apatb_param_SIGNAL_OUT_V_data_V, __xlx_apatb_param_SIGNAL_OUT_V_keep_V, __xlx_apatb_param_SIGNAL_OUT_V_strb_V, __xlx_apatb_param_SIGNAL_OUT_V_user_V, __xlx_apatb_param_SIGNAL_OUT_V_last_V, __xlx_apatb_param_SIGNAL_OUT_V_id_V, __xlx_apatb_param_SIGNAL_OUT_V_dest_V);
 CodeState = DUMP_OUTPUTS;
 long __xlx_apatb_param_SIGNAL_IN_stream_buf_final_size = __xlx_apatb_param_SIGNAL_IN_stream_buf_size - ((hls::stream<int>*)__xlx_apatb_param_SIGNAL_IN_V_data_V)->size();
 aesl_fh.write(AUTOTB_TVIN_SIGNAL_IN_V_data_V, begin_str(AESL_transaction));

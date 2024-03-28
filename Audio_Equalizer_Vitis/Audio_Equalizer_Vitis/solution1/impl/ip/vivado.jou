@@ -2,8 +2,8 @@
 # Vivado v2022.1 (64-bit)
 # SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
 # IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
-# Start of session at: Wed Mar 27 17:56:05 2024
-# Process ID: 16236
+# Start of session at: Thu Mar 28 14:29:54 2024
+# Process ID: 24140
 # Current directory: C:/EECE4632FinalProject/Audio_Equalizer_Vitis/Audio_Equalizer_Vitis/solution1/impl/ip
 # Command line: vivado.exe -notrace -mode batch -source run_ippack.tcl
 # Log file: C:/EECE4632FinalProject/Audio_Equalizer_Vitis/Audio_Equalizer_Vitis/solution1/impl/ip/vivado.log

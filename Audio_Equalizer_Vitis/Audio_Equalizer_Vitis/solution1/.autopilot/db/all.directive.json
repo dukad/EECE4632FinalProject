@@ -1,12 +1,13 @@
 {"sourceFile": [{
       "name": "",
-      "directive": [{
+      "directive": [
+        {
           "functionName": "equalizer",
           "label": "",
           "functionLabel": "",
           "id": "1",
-          "sourceFile": "C:\/EECE4632FinalProject\/Audio_Equalizer_Vitis\/Audio_Equalizer_Vitis\/solution1\/csynth.tcl",
-          "sourceLine": "14",
+          "sourceFile": "C:\/EECE4632FinalProject\/Audio_Equalizer_Vitis\/Audio_Equalizer_Vitis\/solution1\/directives.tcl",
+          "sourceLine": "6",
           "pragma": {
             "name": "TOP",
             "option": [{
@@ -14,5 +15,21 @@
                 "value": "equalizer"
               }]
           }
-        }]
+        },
+        {
+          "functionName": "equalizer",
+          "label": "",
+          "functionLabel": "",
+          "id": "2",
+          "sourceFile": "C:\/EECE4632FinalProject\/Audio_Equalizer_Vitis\/Audio_Equalizer_Vitis\/solution1\/csynth.tcl",
+          "sourceLine": "15",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "equalizer"
+              }]
+          }
+        }
+      ]
     }]}
