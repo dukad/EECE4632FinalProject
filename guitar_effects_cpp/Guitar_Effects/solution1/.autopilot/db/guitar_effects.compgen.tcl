@@ -12,19 +12,25 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 }
 
 
-set name guitar_effects_srem_17ns_17ns_17_21_seq_1
+set name guitar_effects_sitofp_32ns_32_6_no_dsp_1
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {srem} IMPL {auto_seq} LATENCY 20 ALLOW_PRAGMA 1
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {sitofp} IMPL {auto} LATENCY 5 ALLOW_PRAGMA 1
+}
+
+
+set name guitar_effects_srem_32ns_17ns_16_36_seq_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {srem} IMPL {auto_seq} LATENCY 35 ALLOW_PRAGMA 1
 }
 
 
 # Memory (RAM/ROM)  definition:
-set ID 23
+set ID 24
 set hasByteEnable 0
 set MemName guitar_effects_compression_buffer_RAM_AUTO_0R0W
 set CoreName ap_simcore_mem
 set PortList { 0 3 }
-set DataWd 16
+set DataWd 32
 set AddrRange 441
 set AddrWd 9
 set impl_style auto
@@ -98,12 +104,12 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_RAM] == "::AESL_LIB_VIRTEX::xil_gen_RA
 
 
 # Memory (RAM/ROM)  definition:
-set ID 24
+set ID 25
 set hasByteEnable 0
 set MemName guitar_effects_delay_buffer_RAM_AUTO_1R1W
 set CoreName ap_simcore_mem
 set PortList { 2 3 }
-set DataWd 16
+set DataWd 32
 set AddrRange 44100
 set AddrWd 16
 set impl_style auto
@@ -185,55 +191,47 @@ if {${::AESL::PGuard_autoexp_gen}} {
 
 set axilite_register_dict [dict create]
 set port_control_r {
+axilite_out { 
+	dir O
+	width 32
+	depth 1
+	mode ap_vld
+	offset 16
+	offset_end 23
+}
 control { 
 	dir I
 	width 8
 	depth 1
 	mode ap_none
-	offset 16
-	offset_end 23
+	offset 32
+	offset_end 39
 }
 distortion_threshold { 
 	dir I
-	width 16
+	width 32
 	depth 1
 	mode ap_none
-	offset 24
-	offset_end 31
+	offset 40
+	offset_end 47
 }
 distortion_clip_factor { 
 	dir I
 	width 32
 	depth 1
 	mode ap_none
-	offset 32
-	offset_end 39
-}
-compression_min_threshold { 
-	dir I
-	width 16
-	depth 1
-	mode ap_none
-	offset 40
-	offset_end 47
-}
-compression_max_threshold { 
-	dir I
-	width 16
-	depth 1
-	mode ap_none
 	offset 48
 	offset_end 55
 }
-compression_zero_threshold { 
+compression_min_threshold { 
 	dir I
-	width 16
+	width 32
 	depth 1
 	mode ap_none
 	offset 56
 	offset_end 63
 }
-delay_mult { 
+compression_max_threshold { 
 	dir I
 	width 32
 	depth 1
@@ -241,13 +239,29 @@ delay_mult {
 	offset 64
 	offset_end 71
 }
-delay_samples { 
+compression_zero_threshold { 
 	dir I
 	width 32
 	depth 1
 	mode ap_none
 	offset 72
 	offset_end 79
+}
+delay_mult { 
+	dir I
+	width 32
+	depth 1
+	mode ap_none
+	offset 80
+	offset_end 87
+}
+delay_samples { 
+	dir I
+	width 32
+	depth 1
+	mode ap_none
+	offset 88
+	offset_end 95
 }
 }
 dict set axilite_register_dict control_r $port_control_r
@@ -257,7 +271,7 @@ dict set axilite_register_dict control_r $port_control_r
 if {${::AESL::PGuard_simmodel_gen}} {
 	if {[info proc ::AESL_LIB_XILADAPTER::s_axilite_gen] == "::AESL_LIB_XILADAPTER::s_axilite_gen"} {
 		eval "::AESL_LIB_XILADAPTER::s_axilite_gen { \
-			id 25 \
+			id 26 \
 			corename guitar_effects_control_r_axilite \
 			name guitar_effects_control_r_s_axi \
 			ports {$port_control_r} \
@@ -281,14 +295,14 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 26 \
+    id 27 \
     name INPUT_r_V_data_V \
     reset_level 0 \
     sync_rst true \
     corename {INPUT_r} \
     metadata {  } \
     op interface \
-    ports { INPUT_r_TDATA { I 16 vector } } \
+    ports { INPUT_r_TDATA { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'INPUT_r_V_data_V'"
@@ -300,14 +314,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 27 \
+    id 28 \
     name INPUT_r_V_keep_V \
     reset_level 0 \
     sync_rst true \
     corename {INPUT_r} \
     metadata {  } \
     op interface \
-    ports { INPUT_r_TKEEP { I 2 vector } } \
+    ports { INPUT_r_TKEEP { I 4 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'INPUT_r_V_keep_V'"
@@ -319,14 +333,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 28 \
+    id 29 \
     name INPUT_r_V_strb_V \
     reset_level 0 \
     sync_rst true \
     corename {INPUT_r} \
     metadata {  } \
     op interface \
-    ports { INPUT_r_TSTRB { I 2 vector } } \
+    ports { INPUT_r_TSTRB { I 4 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'INPUT_r_V_strb_V'"
@@ -338,7 +352,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 29 \
+    id 30 \
     name INPUT_r_V_user_V \
     reset_level 0 \
     sync_rst true \
@@ -357,7 +371,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 30 \
+    id 31 \
     name INPUT_r_V_last_V \
     reset_level 0 \
     sync_rst true \
@@ -376,7 +390,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 31 \
+    id 32 \
     name INPUT_r_V_id_V \
     reset_level 0 \
     sync_rst true \
@@ -395,7 +409,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 32 \
+    id 33 \
     name INPUT_r_V_dest_V \
     reset_level 0 \
     sync_rst true \
@@ -414,14 +428,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 33 \
+    id 34 \
     name OUTPUT_r_V_data_V \
     reset_level 0 \
     sync_rst true \
     corename {OUTPUT_r} \
     metadata {  } \
     op interface \
-    ports { OUTPUT_r_TDATA { O 16 vector } } \
+    ports { OUTPUT_r_TDATA { O 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'OUTPUT_r_V_data_V'"
@@ -433,14 +447,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 34 \
+    id 35 \
     name OUTPUT_r_V_keep_V \
     reset_level 0 \
     sync_rst true \
     corename {OUTPUT_r} \
     metadata {  } \
     op interface \
-    ports { OUTPUT_r_TKEEP { O 2 vector } } \
+    ports { OUTPUT_r_TKEEP { O 4 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'OUTPUT_r_V_keep_V'"
@@ -452,14 +466,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 35 \
+    id 36 \
     name OUTPUT_r_V_strb_V \
     reset_level 0 \
     sync_rst true \
     corename {OUTPUT_r} \
     metadata {  } \
     op interface \
-    ports { OUTPUT_r_TSTRB { O 2 vector } } \
+    ports { OUTPUT_r_TSTRB { O 4 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'OUTPUT_r_V_strb_V'"
@@ -471,7 +485,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 36 \
+    id 37 \
     name OUTPUT_r_V_user_V \
     reset_level 0 \
     sync_rst true \
@@ -490,7 +504,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 37 \
+    id 38 \
     name OUTPUT_r_V_last_V \
     reset_level 0 \
     sync_rst true \
@@ -509,7 +523,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 38 \
+    id 39 \
     name OUTPUT_r_V_id_V \
     reset_level 0 \
     sync_rst true \
@@ -528,7 +542,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 39 \
+    id 40 \
     name OUTPUT_r_V_dest_V \
     reset_level 0 \
     sync_rst true \
@@ -543,20 +557,6 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 }
 
 
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id -1 \
-    name ap_ctrl \
-    type ap_ctrl \
-    reset_level 0 \
-    sync_rst true \
-    corename ap_ctrl \
-    op interface \
-    ports { ap_start { I 1 bit } ap_ready { O 1 bit } ap_done { O 1 bit } ap_idle { O 1 bit } } \
-} "
-}
-
 
 # Adapter definition:
 set PortName ap_clk
@@ -564,7 +564,7 @@ set DataWd 1
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc cg_default_interface_gen_clock] == "cg_default_interface_gen_clock"} {
 eval "cg_default_interface_gen_clock { \
-    id -2 \
+    id -1 \
     name ${PortName} \
     reset_level 0 \
     sync_rst true \
@@ -584,7 +584,7 @@ set DataWd 1
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc cg_default_interface_gen_reset] == "cg_default_interface_gen_reset"} {
 eval "cg_default_interface_gen_reset { \
-    id -3 \
+    id -2 \
     name ${PortName} \
     reset_level 0 \
     sync_rst true \
@@ -604,29 +604,6 @@ if {${::AESL::PGuard_autoexp_gen}} {
     cg_default_interface_gen_dc_end
     cg_default_interface_gen_bundle_end
     AESL_LIB_XILADAPTER::native_axis_end
-}
-
-
-# RegSlice definition:
-set ID 40
-set RegSliceName guitar_effects_regslice_both
-set RegSliceInstName guitar_effects_regslice_both_U
-set CoreName ap_simcore_guitar_effects_regslice_both
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler $RegSliceName BINDTYPE interface TYPE interface_regslice INSTNAME $RegSliceInstName
-}
-
-
-if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
-if {[info proc ::AESL_LIB_VIRTEX::xil_gen_regSlice] == "::AESL_LIB_VIRTEX::xil_gen_regSlice"} {
-eval "::AESL_LIB_VIRTEX::xil_gen_regSlice { \
-    name ${RegSliceName} \
-    prefix guitar_effects_ \
-    sliceTypeList 0\
-}"
-} else {
-puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_regSlice, check your platform lib"
-}
 }
 
 
@@ -908,6 +885,29 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_regSlice, check you
 
 # RegSlice definition:
 set ID 53
+set RegSliceName guitar_effects_regslice_both
+set RegSliceInstName guitar_effects_regslice_both_U
+set CoreName ap_simcore_guitar_effects_regslice_both
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $RegSliceName BINDTYPE interface TYPE interface_regslice INSTNAME $RegSliceInstName
+}
+
+
+if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
+if {[info proc ::AESL_LIB_VIRTEX::xil_gen_regSlice] == "::AESL_LIB_VIRTEX::xil_gen_regSlice"} {
+eval "::AESL_LIB_VIRTEX::xil_gen_regSlice { \
+    name ${RegSliceName} \
+    prefix guitar_effects_ \
+    sliceTypeList 0\
+}"
+} else {
+puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_regSlice, check your platform lib"
+}
+}
+
+
+# RegSlice definition:
+set ID 54
 set RegSliceName guitar_effects_regslice_both
 set RegSliceInstName guitar_effects_regslice_both_U
 set CoreName ap_simcore_guitar_effects_regslice_both

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="equalizer" xd:componentRef="equalizer" xd:initiationInterval="169" xd:clockPeriod="10" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:controlReg xd:name="control" xd:interfaceRef="ap_ctrl" xd:busTypeRef="acc_handshake" xd:type="acc_handshake"/>
+  <xd:arg xd:name="SIGNAL_IN" xd:originalName="SIGNAL_IN" xd:direction="in" xd:interfaceRef="SIGNAL_IN" xd:busTypeRef="axis" xd:dataWidth="32"/>
+  <xd:arg xd:name="SIGNAL_OUT" xd:originalName="SIGNAL_OUT" xd:direction="out" xd:interfaceRef="SIGNAL_OUT" xd:busTypeRef="axis" xd:dataWidth="32"/>
+  <xd:arg xd:name="*(lowfreq_coefs)" xd:originalName="lowfreq_coefs" xd:direction="inout" xd:interfaceRef="m_axi_gmem" xd:busTypeRef="aximm" xd:dataWidth="32" xd:bufferDirection="in"/>
+  <xd:arg xd:name="lowfreq_coefs" xd:originalName="lowfreq_coefs" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:offset="0x10" xd:dataWidth="32" xd:aximmInterfaceRef="m_axi_gmem"/>
+  <xd:arg xd:name="*(midfreq_coefs)" xd:originalName="midfreq_coefs" xd:direction="inout" xd:interfaceRef="m_axi_gmem" xd:busTypeRef="aximm" xd:dataWidth="32" xd:bufferDirection="in"/>
+  <xd:arg xd:name="midfreq_coefs" xd:originalName="midfreq_coefs" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:offset="0x1C" xd:dataWidth="32" xd:aximmInterfaceRef="m_axi_gmem"/>
+  <xd:arg xd:name="*(highfreq_coefs)" xd:originalName="highfreq_coefs" xd:direction="inout" xd:interfaceRef="m_axi_gmem" xd:busTypeRef="aximm" xd:dataWidth="32" xd:bufferDirection="in"/>
+  <xd:arg xd:name="highfreq_coefs" xd:originalName="highfreq_coefs" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:offset="0x28" xd:dataWidth="32" xd:aximmInterfaceRef="m_axi_gmem"/>
+  <xd:latencyEstimates xd:best-case="168" xd:worst-case="168" xd:average-case="168"/>
+  <xd:resourceEstimates xd:LUT="3325" xd:FF="3226" xd:BRAM="0" xd:DSP="9"/>
+</xd:acceleratorMap>

@@ -5,7 +5,7 @@ set rawDecl ""
 set globalVariable ""
 set PortList ""
 set PortName "INPUT_r"
-set BitWidth "64"
+set BitWidth "96"
 set ArrayOpt ""
 set Const "0"
 set Volatile "0"
@@ -15,7 +15,7 @@ set Dims [list 0]
 set Interface [list AP_STREAM 0]
 set structMem ""
 set PortName0 "data"
-set BitWidth0 "16"
+set BitWidth0 "32"
 set ArrayOpt0 ""
 set Const0 "0"
 set Volatile0 "0"
@@ -23,11 +23,11 @@ set Pointer0 "0"
 set Reference0 "0"
 set Dims0 [list 0]
 set Interface0 "wire"
-set DataType0 "[list ap_uint 16]"
+set DataType0 "[list ap_uint 32]"
 set Port0 [list $PortName0 $Interface0 $DataType0 $Pointer0 $Dims0 $Const0 $Volatile0 $ArrayOpt0]
 lappend structMem $Port0
 set PortName0 "keep"
-set BitWidth0 "2"
+set BitWidth0 "4"
 set ArrayOpt0 ""
 set Const0 "0"
 set Volatile0 "0"
@@ -35,11 +35,11 @@ set Pointer0 "0"
 set Reference0 "0"
 set Dims0 [list 0]
 set Interface0 "wire"
-set DataType0 "[list ap_uint 2]"
+set DataType0 "[list ap_uint 4]"
 set Port0 [list $PortName0 $Interface0 $DataType0 $Pointer0 $Dims0 $Const0 $Volatile0 $ArrayOpt0]
 lappend structMem $Port0
 set PortName0 "strb"
-set BitWidth0 "2"
+set BitWidth0 "4"
 set ArrayOpt0 ""
 set Const0 "0"
 set Volatile0 "0"
@@ -47,7 +47,7 @@ set Pointer0 "0"
 set Reference0 "0"
 set Dims0 [list 0]
 set Interface0 "wire"
-set DataType0 "[list ap_uint 2]"
+set DataType0 "[list ap_uint 4]"
 set Port0 [list $PortName0 $Interface0 $DataType0 $Pointer0 $Dims0 $Const0 $Volatile0 $ArrayOpt0]
 lappend structMem $Port0
 set PortName0 "user"
@@ -107,7 +107,7 @@ set DataType [list "ap_axiu<32, 0, 0, 0>" "struct ap_axis" $structMem 1 0 $struc
 set Port [list $PortName $Interface $DataType $Pointer $Dims $Const $Volatile $ArrayOpt]
 lappend PortList $Port
 set PortName "OUTPUT_r"
-set BitWidth "64"
+set BitWidth "96"
 set ArrayOpt ""
 set Const "0"
 set Volatile "0"
@@ -117,7 +117,7 @@ set Dims [list 0]
 set Interface [list AP_STREAM 0]
 set structMem ""
 set PortName0 "data"
-set BitWidth0 "16"
+set BitWidth0 "32"
 set ArrayOpt0 ""
 set Const0 "0"
 set Volatile0 "0"
@@ -125,11 +125,11 @@ set Pointer0 "0"
 set Reference0 "0"
 set Dims0 [list 0]
 set Interface0 "wire"
-set DataType0 "[list ap_uint 16]"
+set DataType0 "[list ap_uint 32]"
 set Port0 [list $PortName0 $Interface0 $DataType0 $Pointer0 $Dims0 $Const0 $Volatile0 $ArrayOpt0]
 lappend structMem $Port0
 set PortName0 "keep"
-set BitWidth0 "2"
+set BitWidth0 "4"
 set ArrayOpt0 ""
 set Const0 "0"
 set Volatile0 "0"
@@ -137,11 +137,11 @@ set Pointer0 "0"
 set Reference0 "0"
 set Dims0 [list 0]
 set Interface0 "wire"
-set DataType0 "[list ap_uint 2]"
+set DataType0 "[list ap_uint 4]"
 set Port0 [list $PortName0 $Interface0 $DataType0 $Pointer0 $Dims0 $Const0 $Volatile0 $ArrayOpt0]
 lappend structMem $Port0
 set PortName0 "strb"
-set BitWidth0 "2"
+set BitWidth0 "4"
 set ArrayOpt0 ""
 set Const0 "0"
 set Volatile0 "0"
@@ -149,7 +149,7 @@ set Pointer0 "0"
 set Reference0 "0"
 set Dims0 [list 0]
 set Interface0 "wire"
-set DataType0 "[list ap_uint 2]"
+set DataType0 "[list ap_uint 4]"
 set Port0 [list $PortName0 $Interface0 $DataType0 $Pointer0 $Dims0 $Const0 $Volatile0 $ArrayOpt0]
 lappend structMem $Port0
 set PortName0 "user"
@@ -208,8 +208,8 @@ set structIsPacked "0"
 set DataType [list "ap_axiu<32, 0, 0, 0>" "struct ap_axis" $structMem 1 0 $structParameter $structArgument $NameSpace $structIsPacked]
 set Port [list $PortName $Interface $DataType $Pointer $Dims $Const $Volatile $ArrayOpt]
 lappend PortList $Port
-set PortName "control"
-set BitWidth "8"
+set PortName "axilite_out"
+set BitWidth "32"
 set ArrayOpt ""
 set Const "0"
 set Volatile "1"
@@ -220,88 +220,100 @@ set Interface "wire"
 set DataType "void"
 set Port [list $PortName $Interface $DataType $Pointer $Dims $Const    $Volatile $ArrayOpt]
 lappend PortList $Port
-set PortName "distortion_threshold"
-set BitWidth "16"
+set PortName "control"
+set BitWidth "8"
 set ArrayOpt ""
 set Const "0"
-set Volatile "1"
-set Pointer "1"
+set Volatile "0"
+set Pointer "0"
 set Reference "0"
 set Dims [list 0]
 set Interface "wire"
-set DataType "void"
+set DataType "char"
+set Port [list $PortName $Interface $DataType $Pointer $Dims $Const    $Volatile $ArrayOpt]
+lappend PortList $Port
+set PortName "distortion_threshold"
+set BitWidth "32"
+set ArrayOpt ""
+set Const "0"
+set Volatile "0"
+set Pointer "0"
+set Reference "0"
+set Dims [list 0]
+set Interface "wire"
+set DataType "int"
 set Port [list $PortName $Interface $DataType $Pointer $Dims $Const    $Volatile $ArrayOpt]
 lappend PortList $Port
 set PortName "distortion_clip_factor"
 set BitWidth "32"
 set ArrayOpt ""
 set Const "0"
-set Volatile "1"
-set Pointer "1"
+set Volatile "0"
+set Pointer "0"
 set Reference "0"
 set Dims [list 0]
 set Interface "wire"
-set DataType "void"
+set DataType "float"
 set Port [list $PortName $Interface $DataType $Pointer $Dims $Const    $Volatile $ArrayOpt]
 lappend PortList $Port
 set PortName "compression_min_threshold"
-set BitWidth "16"
+set BitWidth "32"
 set ArrayOpt ""
 set Const "0"
-set Volatile "1"
-set Pointer "1"
+set Volatile "0"
+set Pointer "0"
 set Reference "0"
 set Dims [list 0]
 set Interface "wire"
-set DataType "void"
+set DataType "int"
 set Port [list $PortName $Interface $DataType $Pointer $Dims $Const    $Volatile $ArrayOpt]
 lappend PortList $Port
 set PortName "compression_max_threshold"
-set BitWidth "16"
+set BitWidth "32"
 set ArrayOpt ""
 set Const "0"
-set Volatile "1"
-set Pointer "1"
+set Volatile "0"
+set Pointer "0"
 set Reference "0"
 set Dims [list 0]
 set Interface "wire"
-set DataType "void"
+set DataType "int"
 set Port [list $PortName $Interface $DataType $Pointer $Dims $Const    $Volatile $ArrayOpt]
 lappend PortList $Port
 set PortName "compression_zero_threshold"
-set BitWidth "16"
+set BitWidth "32"
 set ArrayOpt ""
 set Const "0"
-set Volatile "1"
-set Pointer "1"
+set Volatile "0"
+set Pointer "0"
 set Reference "0"
 set Dims [list 0]
 set Interface "wire"
-set DataType "void"
+set DataType "int"
 set Port [list $PortName $Interface $DataType $Pointer $Dims $Const    $Volatile $ArrayOpt]
 lappend PortList $Port
 set PortName "delay_mult"
 set BitWidth "32"
 set ArrayOpt ""
 set Const "0"
-set Volatile "1"
-set Pointer "1"
+set Volatile "0"
+set Pointer "0"
 set Reference "0"
 set Dims [list 0]
 set Interface "wire"
-set DataType "void"
+set DataType "float"
 set Port [list $PortName $Interface $DataType $Pointer $Dims $Const    $Volatile $ArrayOpt]
 lappend PortList $Port
 set PortName "delay_samples"
 set BitWidth "32"
 set ArrayOpt ""
 set Const "0"
-set Volatile "1"
-set Pointer "1"
+set Volatile "0"
+set Pointer "0"
 set Reference "0"
 set Dims [list 0]
 set Interface "wire"
-set DataType "void"
+set DataType "int"
 set Port [list $PortName $Interface $DataType $Pointer $Dims $Const    $Volatile $ArrayOpt]
 lappend PortList $Port
 set globalAPint "" 

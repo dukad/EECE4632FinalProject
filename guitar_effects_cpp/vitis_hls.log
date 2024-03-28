@@ -1,5 +1,5 @@
 INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2022.1/bin/unwrapped/win64.o/vitis_hls.exe'
-INFO: [HLS 200-10] For user 'du.kad' on host 'wfxb07b250a366d' (Windows NT_amd64 version 6.2) on Wed Mar 27 15:09:07 -0400 2024
+INFO: [HLS 200-10] For user 'du.kad' on host 'wfxb07b250a366d' (Windows NT_amd64 version 6.2) on Wed Mar 27 19:53:53 -0400 2024
 INFO: [HLS 200-10] In directory 'C:/Users/du.kad/Desktop/EECE4632FinalProject/guitar_effects_cpp'
 Sourcing Tcl script 'C:/Users/du.kad/Desktop/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/export.tcl'
 INFO: [HLS 200-1510] Running: source C:/Users/du.kad/Desktop/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/export.tcl
@@ -34,7 +34,6 @@ INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
 source run_ippack.tcl -notrace
 INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
 Current project path is 'C:/Users/du.kad/Desktop/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/impl/ip'
-create_project: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1636.949 ; gain = 0.000
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.1/data/ip'.
@@ -47,13 +46,13 @@ INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'guitar_effects_fd
 WARNING: [IP_Flow 19-4832] The IP name 'guitar_effects_fmul_32ns_32ns_32_4_max_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
 INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'guitar_effects_fmul_32ns_32ns_32_4_max_dsp_1_ip'...
 INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'guitar_effects_fmul_32ns_32ns_32_4_max_dsp_1_ip'...
-WARNING: [IP_Flow 19-4832] The IP name 'guitar_effects_sitofp_32s_32_6_no_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'guitar_effects_sitofp_32s_32_6_no_dsp_1_ip'...
-INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'guitar_effects_sitofp_32s_32_6_no_dsp_1_ip'...
+WARNING: [IP_Flow 19-4832] The IP name 'guitar_effects_sitofp_32ns_32_6_no_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'guitar_effects_sitofp_32ns_32_6_no_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'guitar_effects_sitofp_32ns_32_6_no_dsp_1_ip'...
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.1/data/ip'.
-INFO: [Common 17-206] Exiting Vivado at Wed Mar 27 15:09:35 2024...
+INFO: [Common 17-206] Exiting Vivado at Wed Mar 27 19:54:18 2024...
 INFO: [HLS 200-802] Generated output file export.zip
-INFO: [HLS 200-111] Finished Command export_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 25.86 seconds; current allocated memory: 0.000 MB.
-INFO: [HLS 200-112] Total CPU user time: 4 seconds. Total CPU system time: 1 seconds. Total elapsed time: 28.529 seconds; peak allocated memory: 1.448 GB.
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 22.762 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 4 seconds. Total CPU system time: 2 seconds. Total elapsed time: 25.371 seconds; peak allocated memory: 1.454 GB.

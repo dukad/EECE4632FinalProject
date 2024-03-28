@@ -6,7 +6,7 @@
 `timescale 1 ns / 1 ps
 module guitar_effects_delay_buffer_RAM_AUTO_1R1W (address0, ce0, d0, we0, q0,  reset,clk);
 
-parameter DataWidth = 16;
+parameter DataWidth = 32;
 parameter AddressWidth = 16;
 parameter AddressRange = 44100;
 

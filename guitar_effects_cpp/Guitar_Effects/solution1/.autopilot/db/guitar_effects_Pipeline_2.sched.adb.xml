@@ -109,10 +109,10 @@ memset.loop:2 %exitcond1 = icmp_eq  i16 %p_load, i16 44100
 
 <Node id="9" bw="32" op_0_bw="32" op_1_bw="64" op_2_bw="64" op_3_bw="64">
 <![CDATA[
-memset.loop:3 %empty_22 = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 44100, i64 44100, i64 44100
+memset.loop:3 %empty_24 = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 44100, i64 44100, i64 44100
 
 ]]></Node>
-<StgValue><ssdm name="empty_22"/></StgValue>
+<StgValue><ssdm name="empty_24"/></StgValue>
 </operation>
 
 <operation id="11" st_id="1" stage="1" lat="1">
@@ -124,10 +124,10 @@ memset.loop:3 %empty_22 = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64
 
 <Node id="10" bw="16" op_0_bw="16" op_1_bw="16">
 <![CDATA[
-memset.loop:4 %empty_23 = add i16 %p_load, i16 1
+memset.loop:4 %empty_25 = add i16 %p_load, i16 1
 
 ]]></Node>
-<StgValue><ssdm name="empty_23"/></StgValue>
+<StgValue><ssdm name="empty_25"/></StgValue>
 </operation>
 
 <operation id="12" st_id="1" stage="1" lat="1">
@@ -139,7 +139,7 @@ memset.loop:4 %empty_23 = add i16 %p_load, i16 1
 
 <Node id="11" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
 <![CDATA[
-memset.loop:5 %br_ln0 = br i1 %exitcond1, void %memset.loop.split, void %VITIS_LOOP_59_2.exitStub
+memset.loop:5 %br_ln0 = br i1 %exitcond1, void %memset.loop.split, void %split.exitStub
 
 ]]></Node>
 <StgValue><ssdm name="br_ln0"/></StgValue>
@@ -155,10 +155,10 @@ memset.loop:5 %br_ln0 = br i1 %exitcond1, void %memset.loop.split, void %VITIS_L
 
 <Node id="13" bw="64" op_0_bw="16">
 <![CDATA[
-memset.loop.split:0 %p_cast3 = zext i16 %p_load
+memset.loop.split:0 %p_cast4 = zext i16 %p_load
 
 ]]></Node>
-<StgValue><ssdm name="p_cast3"/></StgValue>
+<StgValue><ssdm name="p_cast4"/></StgValue>
 </operation>
 
 <operation id="14" st_id="1" stage="1" lat="1">
@@ -169,9 +169,9 @@ memset.loop.split:0 %p_cast3 = zext i16 %p_load
 </and_exp></or_exp>
 </condition>
 
-<Node id="14" bw="16" op_0_bw="16" op_1_bw="64" op_2_bw="64">
+<Node id="14" bw="16" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-memset.loop.split:1 %delay_buffer_addr = getelementptr i16 %delay_buffer, i64 0, i64 %p_cast3
+memset.loop.split:1 %delay_buffer_addr = getelementptr i32 %delay_buffer, i64 0, i64 %p_cast4
 
 ]]></Node>
 <StgValue><ssdm name="delay_buffer_addr"/></StgValue>
@@ -185,9 +185,9 @@ memset.loop.split:1 %delay_buffer_addr = getelementptr i16 %delay_buffer, i64 0,
 </and_exp></or_exp>
 </condition>
 
-<Node id="15" bw="0" op_0_bw="16" op_1_bw="16">
+<Node id="15" bw="0" op_0_bw="32" op_1_bw="16">
 <![CDATA[
-memset.loop.split:2 %store_ln0 = store i16 0, i16 %delay_buffer_addr
+memset.loop.split:2 %store_ln0 = store i32 0, i16 %delay_buffer_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln0"/></StgValue>
@@ -203,7 +203,7 @@ memset.loop.split:2 %store_ln0 = store i16 0, i16 %delay_buffer_addr
 
 <Node id="16" bw="0" op_0_bw="16" op_1_bw="16" op_2_bw="0" op_3_bw="0">
 <![CDATA[
-memset.loop.split:3 %store_ln0 = store i16 %empty_23, i16 %empty
+memset.loop.split:3 %store_ln0 = store i16 %empty_25, i16 %empty
 
 ]]></Node>
 <StgValue><ssdm name="store_ln0"/></StgValue>
@@ -235,7 +235,7 @@ memset.loop.split:4 %br_ln0 = br void %memset.loop
 
 <Node id="19" bw="0">
 <![CDATA[
-VITIS_LOOP_59_2.exitStub:0 %ret_ln0 = ret
+split.exitStub:0 %ret_ln0 = ret
 
 ]]></Node>
 <StgValue><ssdm name="ret_ln0"/></StgValue>

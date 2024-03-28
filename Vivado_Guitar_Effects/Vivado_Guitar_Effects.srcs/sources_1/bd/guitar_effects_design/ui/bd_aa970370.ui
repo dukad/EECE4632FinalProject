@@ -1,32 +1,38 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"1.16629",
-   "Default View_TopLeft":"-110,-644",
+   "Default View_ScaleFactor":"0.438261",
+   "Default View_TopLeft":"-634,-89",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
 #  -string -flagsOSRD
-preplace port DDR -pg 1 -lvl 6 -x 1930 -y -150 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -lvl 6 -x 1930 -y -130 -defaultsOSRD
-preplace inst processing_system7_0 -pg 1 -lvl 3 -x 890 -y -100 -defaultsOSRD
-preplace inst ps7_0_axi_periph -pg 1 -lvl 5 -x 1750 -y -270 -defaultsOSRD
-preplace inst rst_ps7_0_100M -pg 1 -lvl 4 -x 1280 -y -250 -defaultsOSRD
-preplace inst guitar_effects_0 -pg 1 -lvl 2 -x 510 -y -380 -defaultsOSRD
-preplace inst axi_dma_0 -pg 1 -lvl 1 -x 150 -y -450 -defaultsOSRD
-preplace netloc processing_system7_0_FCLK_CLK0 1 0 5 -40 -580 320 -210 680 -210 1090 -360 1460
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 3 1 1110 -270n
-preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 0 5 -20 -330 340 -270 690 -370 N -370 1450
-preplace netloc processing_system7_0_DDR 1 3 3 NJ -150 1460 -130 1900
-preplace netloc processing_system7_0_FIXED_IO 1 3 3 NJ -130 1450 -120 1910
-preplace netloc processing_system7_0_M_AXI_GP0 1 3 2 1100J -350 N
-preplace netloc ps7_0_axi_periph_M00_AXI 1 1 5 340 -480 NJ -480 NJ -480 NJ -480 1900
-preplace netloc ps7_0_axi_periph_M01_AXI 1 0 6 -30 -570 NJ -570 NJ -570 NJ -570 NJ -570 1910
-preplace netloc axi_dma_0_M_AXIS_MM2S 1 1 1 330 -470n
-preplace netloc guitar_effects_0_OUTPUT_r 1 0 3 -30 -280 N -280 680
-levelinfo -pg 1 -60 150 510 890 1280 1750 1930
-pagesize -pg 1 -db -bbox -sgen -60 -610 2050 200
+preplace port DDR -pg 1 -lvl 5 -x 1610 -y 20 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 5 -x 1610 -y 40 -defaultsOSRD
+preplace inst axi_dma -pg 1 -lvl 2 -x 640 -y 120 -defaultsOSRD
+preplace inst axi_mem_intercon -pg 1 -lvl 2 -x 640 -y 340 -defaultsOSRD
+preplace inst axi_mem_intercon_1 -pg 1 -lvl 2 -x 640 -y 560 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 2 -x 640 -y 780 -defaultsOSRD
+preplace inst ps7_0_axi_periph -pg 1 -lvl 4 -x 1430 -y 910 -defaultsOSRD
+preplace inst rst_ps7_0_100M -pg 1 -lvl 3 -x 1090 -y 960 -defaultsOSRD
+preplace inst guitar_effects_0 -pg 1 -lvl 1 -x -30 -y 20 -defaultsOSRD
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 4 -210 110 150 920 890 850 1270
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 2 1 880 830n
+preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 0 4 -200 120 140 910 910J 860 1260
+preplace netloc axi_dma_M_AXI_MM2S 1 1 2 180 -10 880
+preplace netloc axi_dma_M_AXI_S2MM 1 1 2 190 0 870
+preplace netloc axi_mem_intercon_1_M00_AXI 1 1 2 190 900 870
+preplace netloc axi_mem_intercon_M00_AXI 1 1 2 160 -20 890
+preplace netloc processing_system7_0_DDR 1 2 3 910 20 NJ 20 NJ
+preplace netloc processing_system7_0_FIXED_IO 1 2 3 920 40 NJ 40 NJ
+preplace netloc processing_system7_0_M_AXI_GP0 1 2 2 NJ 790 1270
+preplace netloc ps7_0_axi_periph_M00_AXI 1 1 4 170 -30 NJ -30 NJ -30 1580
+preplace netloc ps7_0_axi_periph_M01_AXI 1 0 5 -210 -80 NJ -80 NJ -80 NJ -80 1590
+preplace netloc guitar_effects_0_OUTPUT_r 1 1 1 150 20n
+preplace netloc axi_dma_M_AXIS_MM2S 1 0 3 -200 -70 N -70 900
+levelinfo -pg 1 -230 -30 640 1090 1430 1610
+pagesize -pg 1 -db -bbox -sgen -230 -250 1730 1060
 "
 }
 {
-   "da_axi4_cnt":"3",
+   "da_axi4_cnt":"17",
    "da_ps7_cnt":"1"
 }
