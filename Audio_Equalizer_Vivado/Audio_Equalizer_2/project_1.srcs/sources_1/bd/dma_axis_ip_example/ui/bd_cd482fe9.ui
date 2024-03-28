@@ -1,0 +1,38 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.909723",
+   "Default View_TopLeft":"-529,187",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+#  -string -flagsOSRD
+preplace port DDR -pg 1 -lvl 5 -x 1560 -y 20 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 5 -x 1560 -y 40 -defaultsOSRD
+preplace inst axi_dma -pg 1 -lvl 2 -x 570 -y 120 -defaultsOSRD
+preplace inst axi_mem_intercon -pg 1 -lvl 2 -x 570 -y 370 -defaultsOSRD
+preplace inst axi_mem_intercon_1 -pg 1 -lvl 2 -x 570 -y 620 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 2 -x 570 -y 840 -defaultsOSRD
+preplace inst ps7_0_axi_periph -pg 1 -lvl 4 -x 1380 -y 910 -defaultsOSRD
+preplace inst rst_ps7_0_100M -pg 1 -lvl 3 -x 1040 -y 960 -defaultsOSRD
+preplace inst equalizer -pg 1 -lvl 1 -x 110 -y 510 -defaultsOSRD
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 4 -60 410 300 980 840 860 1220
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 2 1 820 890n
+preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 0 4 -60 610 310 1080 NJ 1080 1230
+preplace netloc axi_dma_M_AXI_MM2S 1 1 2 330 -10 810
+preplace netloc axi_dma_M_AXI_S2MM 1 1 2 340 0 800
+preplace netloc axi_mem_intercon_1_M00_AXI 1 1 2 340 970 800
+preplace netloc axi_mem_intercon_M00_AXI 1 1 2 330 960 810
+preplace netloc processing_system7_0_DDR 1 2 3 830 20 NJ 20 NJ
+preplace netloc processing_system7_0_FIXED_IO 1 2 3 840 40 NJ 40 NJ
+preplace netloc processing_system7_0_M_AXI_GP0 1 2 2 NJ 850 1210
+preplace netloc ps7_0_axi_periph_M00_AXI 1 1 4 320 1070 NJ 1070 NJ 1070 1540
+preplace netloc equalizer_0_m_axi_gmem 1 1 1 290 300n
+preplace netloc ps7_0_axi_periph_M01_AXI 1 0 5 -80 1060 NJ 1060 NJ 1060 NJ 1060 1530
+preplace netloc equalizer_0_SIGNAL_OUT 1 1 1 280 90n
+preplace netloc axi_dma_M_AXIS_MM2S 1 0 3 -70 -20 N -20 820
+levelinfo -pg 1 -100 110 570 1040 1380 1560
+pagesize -pg 1 -db -bbox -sgen -100 -30 1680 1110
+"
+}
+{
+   "da_axi4_cnt":"2"
+}
