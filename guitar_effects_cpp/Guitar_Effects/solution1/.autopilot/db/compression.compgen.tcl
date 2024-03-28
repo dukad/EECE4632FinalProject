@@ -6,15 +6,15 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 }
 
 
-set name guitar_effects_sitofp_32s_32_6_no_dsp_1
+set name guitar_effects_sitofp_32ns_32_6_no_dsp_1
 if {${::AESL::PGuard_rtl_comp_handler}} {
 	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {sitofp} IMPL {auto} LATENCY 5 ALLOW_PRAGMA 1
 }
 
 
-set name guitar_effects_sdiv_16ns_16s_16_20_seq_1
+set name guitar_effects_sdiv_32ns_32ns_32_36_seq_1
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {sdiv} IMPL {auto_seq} LATENCY 19 ALLOW_PRAGMA 1
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {sdiv} IMPL {auto_seq} LATENCY 35 ALLOW_PRAGMA 1
 }
 
 
@@ -36,7 +36,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir O \
     corename values_buffer \
     op interface \
-    ports { values_buffer_address0 { O 9 vector } values_buffer_ce0 { O 1 bit } values_buffer_we0 { O 1 bit } values_buffer_d0 { O 16 vector } } \
+    ports { values_buffer_address0 { O 9 vector } values_buffer_ce0 { O 1 bit } values_buffer_we0 { O 1 bit } values_buffer_d0 { O 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'values_buffer'"
@@ -55,7 +55,7 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_input_r \
     op interface \
-    ports { input_r { I 16 vector } } \
+    ports { input_r { I 32 vector } } \
 } "
 }
 
@@ -70,7 +70,7 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_min_threshold \
     op interface \
-    ports { min_threshold { I 16 vector } } \
+    ports { min_threshold { I 32 vector } } \
 } "
 }
 
@@ -85,7 +85,7 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_max_threshold \
     op interface \
-    ports { max_threshold { I 16 vector } } \
+    ports { max_threshold { I 32 vector } } \
 } "
 }
 
@@ -100,7 +100,7 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_zero_threshold \
     op interface \
-    ports { zero_threshold { I 16 vector } } \
+    ports { zero_threshold { I 32 vector } } \
 } "
 }
 
@@ -115,7 +115,7 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_current_level_read \
     op interface \
-    ports { current_level_read { I 16 vector } } \
+    ports { current_level_read { I 32 vector } } \
 } "
 }
 

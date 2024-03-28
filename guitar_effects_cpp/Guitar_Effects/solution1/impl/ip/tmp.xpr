@@ -6,7 +6,7 @@
 <Project Version="7" Minor="60" Path="C:/Users/du.kad/Desktop/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/impl/ip/tmp.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="749ff915cb954609aaec23302ab13372"/>
+    <Option Name="Id" Val="b99a5e9260ae4ef29cd6ad91805e679f"/>
     <Option Name="Part" Val="xc7z020clg400-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -108,7 +108,7 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/ip/guitar_effects_sitofp_32s_32_6_no_dsp_1_ip/guitar_effects_sitofp_32s_32_6_no_dsp_1_ip.xci">
+      <File Path="$PSRCDIR/sources_1/ip/guitar_effects_sitofp_32ns_32_6_no_dsp_1_ip/guitar_effects_sitofp_32ns_32_6_no_dsp_1_ip.xci">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>

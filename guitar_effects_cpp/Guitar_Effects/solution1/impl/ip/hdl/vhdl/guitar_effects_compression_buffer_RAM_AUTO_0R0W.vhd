@@ -11,7 +11,7 @@ use ieee.std_logic_unsigned.all;
 entity guitar_effects_compression_buffer_RAM_AUTO_0R0W is 
     generic(
             MEM_TYPE    : string := "auto"; 
-            DataWidth     : integer := 16; 
+            DataWidth     : integer := 32; 
             AddressWidth     : integer := 9; 
             AddressRange    : integer := 441
     ); 

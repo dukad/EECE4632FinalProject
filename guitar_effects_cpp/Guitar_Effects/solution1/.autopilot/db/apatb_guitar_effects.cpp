@@ -74,6 +74,8 @@ using namespace sc_dt;
 #define WRAPC_STREAM_EGRESS_STATUS_OUTPUT_r_V_id_V "../tv/stream_size/stream_egress_status_OUTPUT_r_V_id_V.dat"
 #define WRAPC_STREAM_SIZE_OUT_OUTPUT_r_V_dest_V "../tv/stream_size/stream_size_out_OUTPUT_r_V_dest_V.dat"
 #define WRAPC_STREAM_EGRESS_STATUS_OUTPUT_r_V_dest_V "../tv/stream_size/stream_egress_status_OUTPUT_r_V_dest_V.dat"
+#define AUTOTB_TVIN_axilite_out "../tv/cdatafile/c.guitar_effects.autotvin_axilite_out.dat"
+#define AUTOTB_TVOUT_axilite_out "../tv/cdatafile/c.guitar_effects.autotvout_axilite_out.dat"
 #define AUTOTB_TVIN_control "../tv/cdatafile/c.guitar_effects.autotvin_control.dat"
 #define AUTOTB_TVOUT_control "../tv/cdatafile/c.guitar_effects.autotvout_control.dat"
 #define AUTOTB_TVIN_distortion_threshold "../tv/cdatafile/c.guitar_effects.autotvin_distortion_threshold.dat"
@@ -108,6 +110,7 @@ using namespace sc_dt;
 #define AUTOTB_TVOUT_PC_OUTPUT_r_V_last_V "../tv/rtldatafile/rtl.guitar_effects.autotvout_OUTPUT_r_V_last_V.dat"
 #define AUTOTB_TVOUT_PC_OUTPUT_r_V_id_V "../tv/rtldatafile/rtl.guitar_effects.autotvout_OUTPUT_r_V_id_V.dat"
 #define AUTOTB_TVOUT_PC_OUTPUT_r_V_dest_V "../tv/rtldatafile/rtl.guitar_effects.autotvout_OUTPUT_r_V_dest_V.dat"
+#define AUTOTB_TVOUT_PC_axilite_out "../tv/rtldatafile/rtl.guitar_effects.autotvout_axilite_out.dat"
 #define AUTOTB_TVOUT_PC_control "../tv/rtldatafile/rtl.guitar_effects.autotvout_control.dat"
 #define AUTOTB_TVOUT_PC_distortion_threshold "../tv/rtldatafile/rtl.guitar_effects.autotvout_distortion_threshold.dat"
 #define AUTOTB_TVOUT_PC_distortion_clip_factor "../tv/rtldatafile/rtl.guitar_effects.autotvout_distortion_clip_factor.dat"
@@ -359,6 +362,7 @@ INTER_TCL_FILE(const char* name) {
   OUTPUT_r_V_last_V_depth = 0;
   OUTPUT_r_V_id_V_depth = 0;
   OUTPUT_r_V_dest_V_depth = 0;
+  axilite_out_depth = 0;
   control_depth = 0;
   distortion_threshold_depth = 0;
   distortion_clip_factor_depth = 0;
@@ -398,6 +402,7 @@ string get_depth_list () {
   total_list << "{OUTPUT_r_V_last_V " << OUTPUT_r_V_last_V_depth << "}\n";
   total_list << "{OUTPUT_r_V_id_V " << OUTPUT_r_V_id_V_depth << "}\n";
   total_list << "{OUTPUT_r_V_dest_V " << OUTPUT_r_V_dest_V_depth << "}\n";
+  total_list << "{axilite_out " << axilite_out_depth << "}\n";
   total_list << "{control " << control_depth << "}\n";
   total_list << "{distortion_threshold " << distortion_threshold_depth << "}\n";
   total_list << "{distortion_clip_factor " << distortion_clip_factor_depth << "}\n";
@@ -429,6 +434,7 @@ void set_string(std::string list, std::string* class_list) {
     int OUTPUT_r_V_last_V_depth;
     int OUTPUT_r_V_id_V_depth;
     int OUTPUT_r_V_dest_V_depth;
+    int axilite_out_depth;
     int control_depth;
     int distortion_threshold_depth;
     int distortion_clip_factor_depth;
@@ -444,9 +450,9 @@ void set_string(std::string list, std::string* class_list) {
 };
 
 
-extern "C" void guitar_effects_hw_stub_wrapper(volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *);
+extern "C" void guitar_effects_hw_stub_wrapper(volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, char, int, float, int, int, int, float, int);
 
-extern "C" void apatb_guitar_effects_hw(volatile void * __xlx_apatb_param_INPUT_V_data_V, volatile void * __xlx_apatb_param_INPUT_V_keep_V, volatile void * __xlx_apatb_param_INPUT_V_strb_V, volatile void * __xlx_apatb_param_INPUT_V_user_V, volatile void * __xlx_apatb_param_INPUT_V_last_V, volatile void * __xlx_apatb_param_INPUT_V_id_V, volatile void * __xlx_apatb_param_INPUT_V_dest_V, volatile void * __xlx_apatb_param_OUTPUT_V_data_V, volatile void * __xlx_apatb_param_OUTPUT_V_keep_V, volatile void * __xlx_apatb_param_OUTPUT_V_strb_V, volatile void * __xlx_apatb_param_OUTPUT_V_user_V, volatile void * __xlx_apatb_param_OUTPUT_V_last_V, volatile void * __xlx_apatb_param_OUTPUT_V_id_V, volatile void * __xlx_apatb_param_OUTPUT_V_dest_V, volatile void * __xlx_apatb_param_control, volatile void * __xlx_apatb_param_distortion_threshold, volatile void * __xlx_apatb_param_distortion_clip_factor, volatile void * __xlx_apatb_param_compression_min_threshold, volatile void * __xlx_apatb_param_compression_max_threshold, volatile void * __xlx_apatb_param_compression_zero_threshold, volatile void * __xlx_apatb_param_delay_mult, volatile void * __xlx_apatb_param_delay_samples) {
+extern "C" void apatb_guitar_effects_hw(volatile void * __xlx_apatb_param_INPUT_V_data_V, volatile void * __xlx_apatb_param_INPUT_V_keep_V, volatile void * __xlx_apatb_param_INPUT_V_strb_V, volatile void * __xlx_apatb_param_INPUT_V_user_V, volatile void * __xlx_apatb_param_INPUT_V_last_V, volatile void * __xlx_apatb_param_INPUT_V_id_V, volatile void * __xlx_apatb_param_INPUT_V_dest_V, volatile void * __xlx_apatb_param_OUTPUT_V_data_V, volatile void * __xlx_apatb_param_OUTPUT_V_keep_V, volatile void * __xlx_apatb_param_OUTPUT_V_strb_V, volatile void * __xlx_apatb_param_OUTPUT_V_user_V, volatile void * __xlx_apatb_param_OUTPUT_V_last_V, volatile void * __xlx_apatb_param_OUTPUT_V_id_V, volatile void * __xlx_apatb_param_OUTPUT_V_dest_V, volatile void * __xlx_apatb_param_axilite_out, char __xlx_apatb_param_control, int __xlx_apatb_param_distortion_threshold, float __xlx_apatb_param_distortion_clip_factor, int __xlx_apatb_param_compression_min_threshold, int __xlx_apatb_param_compression_max_threshold, int __xlx_apatb_param_compression_zero_threshold, float __xlx_apatb_param_delay_mult, int __xlx_apatb_param_delay_samples) {
   refine_signal_handler();
   fstream wrapc_switch_file_token;
   wrapc_switch_file_token.open(".hls_cosim_wrapc_switch.log");
@@ -490,7 +496,7 @@ long __xlx_apatb_param_INPUT_r_stream_buf_final_size;
       } // end file is good
     } // end post check logic bolck
   for (long i = 0; i < __xlx_apatb_param_INPUT_r_stream_buf_final_size; ++i) {
-((hls::stream<short>*)__xlx_apatb_param_INPUT_V_data_V)->read();
+((hls::stream<int>*)__xlx_apatb_param_INPUT_V_data_V)->read();
 ((hls::stream<char>*)__xlx_apatb_param_INPUT_V_keep_V)->read();
 ((hls::stream<char>*)__xlx_apatb_param_INPUT_V_strb_V)->read();
 ((hls::stream<char>*)__xlx_apatb_param_INPUT_V_user_V)->read();
@@ -500,7 +506,7 @@ long __xlx_apatb_param_INPUT_r_stream_buf_final_size;
 }
 {unsigned xlx_stream_OUTPUT_r_size = 0;
 
-          std::vector<sc_bv<16> > OUTPUT_r_V_data_V_pc_buffer_Copy;
+          std::vector<sc_bv<32> > OUTPUT_r_V_data_V_pc_buffer_Copy;
 {
       static ifstream rtl_tv_out_file;
       if (!rtl_tv_out_file.is_open()) {
@@ -520,7 +526,7 @@ long __xlx_apatb_param_INPUT_r_stream_buf_final_size;
           exit(1);
         }
         if (atoi(AESL_num.c_str()) == AESL_transaction_pc) {
-          std::vector<sc_bv<16> > OUTPUT_r_V_data_V_pc_buffer;
+          std::vector<sc_bv<32> > OUTPUT_r_V_data_V_pc_buffer;
           int i = 0;
           bool has_unknown_value = false;
           rtl_tv_out_file >> AESL_token; //data
@@ -551,7 +557,7 @@ OUTPUT_r_V_data_V_pc_buffer_Copy=OUTPUT_r_V_data_V_pc_buffer;
       } // end file is good
     } // end post check logic bolck
   
-          std::vector<sc_bv<16> > OUTPUT_r_V_keep_V_pc_buffer_Copy;
+          std::vector<sc_bv<32> > OUTPUT_r_V_keep_V_pc_buffer_Copy;
 {
       static ifstream rtl_tv_out_file;
       if (!rtl_tv_out_file.is_open()) {
@@ -571,7 +577,7 @@ OUTPUT_r_V_data_V_pc_buffer_Copy=OUTPUT_r_V_data_V_pc_buffer;
           exit(1);
         }
         if (atoi(AESL_num.c_str()) == AESL_transaction_pc) {
-          std::vector<sc_bv<16> > OUTPUT_r_V_keep_V_pc_buffer;
+          std::vector<sc_bv<32> > OUTPUT_r_V_keep_V_pc_buffer;
           int i = 0;
           bool has_unknown_value = false;
           rtl_tv_out_file >> AESL_token; //data
@@ -602,7 +608,7 @@ OUTPUT_r_V_keep_V_pc_buffer_Copy=OUTPUT_r_V_keep_V_pc_buffer;
       } // end file is good
     } // end post check logic bolck
   
-          std::vector<sc_bv<16> > OUTPUT_r_V_strb_V_pc_buffer_Copy;
+          std::vector<sc_bv<32> > OUTPUT_r_V_strb_V_pc_buffer_Copy;
 {
       static ifstream rtl_tv_out_file;
       if (!rtl_tv_out_file.is_open()) {
@@ -622,7 +628,7 @@ OUTPUT_r_V_keep_V_pc_buffer_Copy=OUTPUT_r_V_keep_V_pc_buffer;
           exit(1);
         }
         if (atoi(AESL_num.c_str()) == AESL_transaction_pc) {
-          std::vector<sc_bv<16> > OUTPUT_r_V_strb_V_pc_buffer;
+          std::vector<sc_bv<32> > OUTPUT_r_V_strb_V_pc_buffer;
           int i = 0;
           bool has_unknown_value = false;
           rtl_tv_out_file >> AESL_token; //data
@@ -653,7 +659,7 @@ OUTPUT_r_V_strb_V_pc_buffer_Copy=OUTPUT_r_V_strb_V_pc_buffer;
       } // end file is good
     } // end post check logic bolck
   
-          std::vector<sc_bv<16> > OUTPUT_r_V_user_V_pc_buffer_Copy;
+          std::vector<sc_bv<32> > OUTPUT_r_V_user_V_pc_buffer_Copy;
 {
       static ifstream rtl_tv_out_file;
       if (!rtl_tv_out_file.is_open()) {
@@ -673,7 +679,7 @@ OUTPUT_r_V_strb_V_pc_buffer_Copy=OUTPUT_r_V_strb_V_pc_buffer;
           exit(1);
         }
         if (atoi(AESL_num.c_str()) == AESL_transaction_pc) {
-          std::vector<sc_bv<16> > OUTPUT_r_V_user_V_pc_buffer;
+          std::vector<sc_bv<32> > OUTPUT_r_V_user_V_pc_buffer;
           int i = 0;
           bool has_unknown_value = false;
           rtl_tv_out_file >> AESL_token; //data
@@ -704,7 +710,7 @@ OUTPUT_r_V_user_V_pc_buffer_Copy=OUTPUT_r_V_user_V_pc_buffer;
       } // end file is good
     } // end post check logic bolck
   
-          std::vector<sc_bv<16> > OUTPUT_r_V_last_V_pc_buffer_Copy;
+          std::vector<sc_bv<32> > OUTPUT_r_V_last_V_pc_buffer_Copy;
 {
       static ifstream rtl_tv_out_file;
       if (!rtl_tv_out_file.is_open()) {
@@ -724,7 +730,7 @@ OUTPUT_r_V_user_V_pc_buffer_Copy=OUTPUT_r_V_user_V_pc_buffer;
           exit(1);
         }
         if (atoi(AESL_num.c_str()) == AESL_transaction_pc) {
-          std::vector<sc_bv<16> > OUTPUT_r_V_last_V_pc_buffer;
+          std::vector<sc_bv<32> > OUTPUT_r_V_last_V_pc_buffer;
           int i = 0;
           bool has_unknown_value = false;
           rtl_tv_out_file >> AESL_token; //data
@@ -755,7 +761,7 @@ OUTPUT_r_V_last_V_pc_buffer_Copy=OUTPUT_r_V_last_V_pc_buffer;
       } // end file is good
     } // end post check logic bolck
   
-          std::vector<sc_bv<16> > OUTPUT_r_V_id_V_pc_buffer_Copy;
+          std::vector<sc_bv<32> > OUTPUT_r_V_id_V_pc_buffer_Copy;
 {
       static ifstream rtl_tv_out_file;
       if (!rtl_tv_out_file.is_open()) {
@@ -775,7 +781,7 @@ OUTPUT_r_V_last_V_pc_buffer_Copy=OUTPUT_r_V_last_V_pc_buffer;
           exit(1);
         }
         if (atoi(AESL_num.c_str()) == AESL_transaction_pc) {
-          std::vector<sc_bv<16> > OUTPUT_r_V_id_V_pc_buffer;
+          std::vector<sc_bv<32> > OUTPUT_r_V_id_V_pc_buffer;
           int i = 0;
           bool has_unknown_value = false;
           rtl_tv_out_file >> AESL_token; //data
@@ -806,7 +812,7 @@ OUTPUT_r_V_id_V_pc_buffer_Copy=OUTPUT_r_V_id_V_pc_buffer;
       } // end file is good
     } // end post check logic bolck
   
-          std::vector<sc_bv<16> > OUTPUT_r_V_dest_V_pc_buffer_Copy;
+          std::vector<sc_bv<32> > OUTPUT_r_V_dest_V_pc_buffer_Copy;
 {
       static ifstream rtl_tv_out_file;
       if (!rtl_tv_out_file.is_open()) {
@@ -826,7 +832,7 @@ OUTPUT_r_V_id_V_pc_buffer_Copy=OUTPUT_r_V_id_V_pc_buffer;
           exit(1);
         }
         if (atoi(AESL_num.c_str()) == AESL_transaction_pc) {
-          std::vector<sc_bv<16> > OUTPUT_r_V_dest_V_pc_buffer;
+          std::vector<sc_bv<32> > OUTPUT_r_V_dest_V_pc_buffer;
           int i = 0;
           bool has_unknown_value = false;
           rtl_tv_out_file >> AESL_token; //data
@@ -857,9 +863,9 @@ OUTPUT_r_V_dest_V_pc_buffer_Copy=OUTPUT_r_V_dest_V_pc_buffer;
       } // end file is good
     } // end post check logic bolck
   for (int j = 0, e = xlx_stream_OUTPUT_r_size; j != e; ++j) {
-short xlx_stream_elt_data;
-((short*)&xlx_stream_elt_data)[0] = OUTPUT_r_V_data_V_pc_buffer_Copy[j].to_int64();
-((hls::stream<short>*)__xlx_apatb_param_OUTPUT_V_data_V)->write(xlx_stream_elt_data);
+int xlx_stream_elt_data;
+((int*)&xlx_stream_elt_data)[0] = OUTPUT_r_V_data_V_pc_buffer_Copy[j].to_int64();
+((hls::stream<int>*)__xlx_apatb_param_OUTPUT_V_data_V)->write(xlx_stream_elt_data);
 char xlx_stream_elt_keep;
 ((char*)&xlx_stream_elt_keep)[0] = OUTPUT_r_V_keep_V_pc_buffer_Copy[j].to_int64();
 ((hls::stream<char>*)__xlx_apatb_param_OUTPUT_V_keep_V)->write(xlx_stream_elt_keep);
@@ -879,7 +885,58 @@ char xlx_stream_elt_dest;
 ((char*)&xlx_stream_elt_dest)[0] = OUTPUT_r_V_dest_V_pc_buffer_Copy[j].to_int64();
 ((hls::stream<char>*)__xlx_apatb_param_OUTPUT_V_dest_V)->write(xlx_stream_elt_dest);
 }}
+{
+      static ifstream rtl_tv_out_file;
+      if (!rtl_tv_out_file.is_open()) {
+        rtl_tv_out_file.open(AUTOTB_TVOUT_PC_axilite_out);
+        if (rtl_tv_out_file.good()) {
+          rtl_tv_out_file >> AESL_token;
+          if (AESL_token != "[[[runtime]]]")
+            exit(1);
+        }
+      }
+  
+      if (rtl_tv_out_file.good()) {
+        rtl_tv_out_file >> AESL_token; 
+        rtl_tv_out_file >> AESL_num;  // transaction number
+        if (AESL_token != "[[transaction]]") {
+          cerr << "Unexpected token: " << AESL_token << endl;
+          exit(1);
+        }
+        if (atoi(AESL_num.c_str()) == AESL_transaction_pc) {
+          std::vector<sc_bv<32> > axilite_out_pc_buffer(1);
+          int i = 0;
+          bool has_unknown_value = false;
+          rtl_tv_out_file >> AESL_token; //data
+          while (AESL_token != "[[/transaction]]"){
 
+            has_unknown_value |= RTLOutputCheckAndReplacement(AESL_token);
+  
+            // push token into output port buffer
+            if (AESL_token != "") {
+              axilite_out_pc_buffer[i] = AESL_token.c_str();;
+              i++;
+            }
+  
+            rtl_tv_out_file >> AESL_token; //data or [[/transaction]]
+            if (AESL_token == "[[[/runtime]]]" || rtl_tv_out_file.eof())
+              exit(1);
+          }
+          if (has_unknown_value) {
+            cerr << "WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on port " 
+                 << "axilite_out" << ", possible cause: There are uninitialized variables in the C design."
+                 << endl; 
+          }
+  
+          if (i > 0) {((char*)__xlx_apatb_param_axilite_out)[0*4+0] = axilite_out_pc_buffer[0].range(7, 0).to_int64();
+((char*)__xlx_apatb_param_axilite_out)[0*4+1] = axilite_out_pc_buffer[0].range(15, 8).to_int64();
+((char*)__xlx_apatb_param_axilite_out)[0*4+2] = axilite_out_pc_buffer[0].range(23, 16).to_int64();
+((char*)__xlx_apatb_param_axilite_out)[0*4+3] = axilite_out_pc_buffer[0].range(31, 24).to_int64();
+}
+        } // end transaction
+      } // end file is good
+    } // end post check logic bolck
+  
     AESL_transaction_pc++;
     return ;
   }
@@ -917,14 +974,14 @@ aesl_fh.touch(WRAPC_STREAM_SIZE_OUT_OUTPUT_r_V_dest_V);
 aesl_fh.touch(WRAPC_STREAM_EGRESS_STATUS_OUTPUT_r_V_dest_V);
 CodeState = DUMP_INPUTS;
 // data
-std::vector<short> __xlx_apatb_param_INPUT_V_data_V_stream_buf;
+std::vector<int> __xlx_apatb_param_INPUT_V_data_V_stream_buf;
 {
-  while (!((hls::stream<short>*)__xlx_apatb_param_INPUT_V_data_V)->empty())
-    __xlx_apatb_param_INPUT_V_data_V_stream_buf.push_back(((hls::stream<short>*)__xlx_apatb_param_INPUT_V_data_V)->read());
+  while (!((hls::stream<int>*)__xlx_apatb_param_INPUT_V_data_V)->empty())
+    __xlx_apatb_param_INPUT_V_data_V_stream_buf.push_back(((hls::stream<int>*)__xlx_apatb_param_INPUT_V_data_V)->read());
   for (int i = 0; i < __xlx_apatb_param_INPUT_V_data_V_stream_buf.size(); ++i)
-    ((hls::stream<short>*)__xlx_apatb_param_INPUT_V_data_V)->write(__xlx_apatb_param_INPUT_V_data_V_stream_buf[i]);
+    ((hls::stream<int>*)__xlx_apatb_param_INPUT_V_data_V)->write(__xlx_apatb_param_INPUT_V_data_V_stream_buf[i]);
   }
-long __xlx_apatb_param_INPUT_r_stream_buf_size = ((hls::stream<short>*)__xlx_apatb_param_INPUT_V_data_V)->size();
+long __xlx_apatb_param_INPUT_r_stream_buf_size = ((hls::stream<int>*)__xlx_apatb_param_INPUT_V_data_V)->size();
 // keep
 std::vector<char> __xlx_apatb_param_INPUT_V_keep_V_stream_buf;
 {
@@ -974,8 +1031,8 @@ std::vector<char> __xlx_apatb_param_INPUT_V_dest_V_stream_buf;
     ((hls::stream<char>*)__xlx_apatb_param_INPUT_V_dest_V)->write(__xlx_apatb_param_INPUT_V_dest_V_stream_buf[i]);
   }
 // data
-std::vector<short> __xlx_apatb_param_OUTPUT_V_data_V_stream_buf;
-long __xlx_apatb_param_OUTPUT_r_stream_buf_size = ((hls::stream<short>*)__xlx_apatb_param_OUTPUT_V_data_V)->size();
+std::vector<int> __xlx_apatb_param_OUTPUT_V_data_V_stream_buf;
+long __xlx_apatb_param_OUTPUT_r_stream_buf_size = ((hls::stream<int>*)__xlx_apatb_param_OUTPUT_V_data_V)->size();
 // keep
 std::vector<char> __xlx_apatb_param_OUTPUT_V_keep_V_stream_buf;
 // strb
@@ -988,11 +1045,22 @@ std::vector<char> __xlx_apatb_param_OUTPUT_V_last_V_stream_buf;
 std::vector<char> __xlx_apatb_param_OUTPUT_V_id_V_stream_buf;
 // dest
 std::vector<char> __xlx_apatb_param_OUTPUT_V_dest_V_stream_buf;
+// print axilite_out Transactions
+{
+aesl_fh.write(AUTOTB_TVIN_axilite_out, begin_str(AESL_transaction));
+{
+auto *pos = (unsigned char*)__xlx_apatb_param_axilite_out;
+aesl_fh.write(AUTOTB_TVIN_axilite_out, formatData(pos, 32));
+}
+  tcl_file.set_num(1, &tcl_file.axilite_out_depth);
+aesl_fh.write(AUTOTB_TVIN_axilite_out, end_str());
+}
+
 // print control Transactions
 {
 aesl_fh.write(AUTOTB_TVIN_control, begin_str(AESL_transaction));
 {
-auto *pos = (unsigned char*)__xlx_apatb_param_control;
+auto *pos = (unsigned char*)&__xlx_apatb_param_control;
 aesl_fh.write(AUTOTB_TVIN_control, formatData(pos, 8));
 }
   tcl_file.set_num(1, &tcl_file.control_depth);
@@ -1003,8 +1071,8 @@ aesl_fh.write(AUTOTB_TVIN_control, end_str());
 {
 aesl_fh.write(AUTOTB_TVIN_distortion_threshold, begin_str(AESL_transaction));
 {
-auto *pos = (unsigned char*)__xlx_apatb_param_distortion_threshold;
-aesl_fh.write(AUTOTB_TVIN_distortion_threshold, formatData(pos, 16));
+auto *pos = (unsigned char*)&__xlx_apatb_param_distortion_threshold;
+aesl_fh.write(AUTOTB_TVIN_distortion_threshold, formatData(pos, 32));
 }
   tcl_file.set_num(1, &tcl_file.distortion_threshold_depth);
 aesl_fh.write(AUTOTB_TVIN_distortion_threshold, end_str());
@@ -1014,7 +1082,7 @@ aesl_fh.write(AUTOTB_TVIN_distortion_threshold, end_str());
 {
 aesl_fh.write(AUTOTB_TVIN_distortion_clip_factor, begin_str(AESL_transaction));
 {
-auto *pos = (unsigned char*)__xlx_apatb_param_distortion_clip_factor;
+auto *pos = (unsigned char*)&__xlx_apatb_param_distortion_clip_factor;
 aesl_fh.write(AUTOTB_TVIN_distortion_clip_factor, formatData(pos, 32));
 }
   tcl_file.set_num(1, &tcl_file.distortion_clip_factor_depth);
@@ -1025,8 +1093,8 @@ aesl_fh.write(AUTOTB_TVIN_distortion_clip_factor, end_str());
 {
 aesl_fh.write(AUTOTB_TVIN_compression_min_threshold, begin_str(AESL_transaction));
 {
-auto *pos = (unsigned char*)__xlx_apatb_param_compression_min_threshold;
-aesl_fh.write(AUTOTB_TVIN_compression_min_threshold, formatData(pos, 16));
+auto *pos = (unsigned char*)&__xlx_apatb_param_compression_min_threshold;
+aesl_fh.write(AUTOTB_TVIN_compression_min_threshold, formatData(pos, 32));
 }
   tcl_file.set_num(1, &tcl_file.compression_min_threshold_depth);
 aesl_fh.write(AUTOTB_TVIN_compression_min_threshold, end_str());
@@ -1036,8 +1104,8 @@ aesl_fh.write(AUTOTB_TVIN_compression_min_threshold, end_str());
 {
 aesl_fh.write(AUTOTB_TVIN_compression_max_threshold, begin_str(AESL_transaction));
 {
-auto *pos = (unsigned char*)__xlx_apatb_param_compression_max_threshold;
-aesl_fh.write(AUTOTB_TVIN_compression_max_threshold, formatData(pos, 16));
+auto *pos = (unsigned char*)&__xlx_apatb_param_compression_max_threshold;
+aesl_fh.write(AUTOTB_TVIN_compression_max_threshold, formatData(pos, 32));
 }
   tcl_file.set_num(1, &tcl_file.compression_max_threshold_depth);
 aesl_fh.write(AUTOTB_TVIN_compression_max_threshold, end_str());
@@ -1047,8 +1115,8 @@ aesl_fh.write(AUTOTB_TVIN_compression_max_threshold, end_str());
 {
 aesl_fh.write(AUTOTB_TVIN_compression_zero_threshold, begin_str(AESL_transaction));
 {
-auto *pos = (unsigned char*)__xlx_apatb_param_compression_zero_threshold;
-aesl_fh.write(AUTOTB_TVIN_compression_zero_threshold, formatData(pos, 16));
+auto *pos = (unsigned char*)&__xlx_apatb_param_compression_zero_threshold;
+aesl_fh.write(AUTOTB_TVIN_compression_zero_threshold, formatData(pos, 32));
 }
   tcl_file.set_num(1, &tcl_file.compression_zero_threshold_depth);
 aesl_fh.write(AUTOTB_TVIN_compression_zero_threshold, end_str());
@@ -1058,7 +1126,7 @@ aesl_fh.write(AUTOTB_TVIN_compression_zero_threshold, end_str());
 {
 aesl_fh.write(AUTOTB_TVIN_delay_mult, begin_str(AESL_transaction));
 {
-auto *pos = (unsigned char*)__xlx_apatb_param_delay_mult;
+auto *pos = (unsigned char*)&__xlx_apatb_param_delay_mult;
 aesl_fh.write(AUTOTB_TVIN_delay_mult, formatData(pos, 32));
 }
   tcl_file.set_num(1, &tcl_file.delay_mult_depth);
@@ -1069,7 +1137,7 @@ aesl_fh.write(AUTOTB_TVIN_delay_mult, end_str());
 {
 aesl_fh.write(AUTOTB_TVIN_delay_samples, begin_str(AESL_transaction));
 {
-auto *pos = (unsigned char*)__xlx_apatb_param_delay_samples;
+auto *pos = (unsigned char*)&__xlx_apatb_param_delay_samples;
 aesl_fh.write(AUTOTB_TVIN_delay_samples, formatData(pos, 32));
 }
   tcl_file.set_num(1, &tcl_file.delay_samples_depth);
@@ -1077,9 +1145,9 @@ aesl_fh.write(AUTOTB_TVIN_delay_samples, end_str());
 }
 
 CodeState = CALL_C_DUT;
-guitar_effects_hw_stub_wrapper(__xlx_apatb_param_INPUT_V_data_V, __xlx_apatb_param_INPUT_V_keep_V, __xlx_apatb_param_INPUT_V_strb_V, __xlx_apatb_param_INPUT_V_user_V, __xlx_apatb_param_INPUT_V_last_V, __xlx_apatb_param_INPUT_V_id_V, __xlx_apatb_param_INPUT_V_dest_V, __xlx_apatb_param_OUTPUT_V_data_V, __xlx_apatb_param_OUTPUT_V_keep_V, __xlx_apatb_param_OUTPUT_V_strb_V, __xlx_apatb_param_OUTPUT_V_user_V, __xlx_apatb_param_OUTPUT_V_last_V, __xlx_apatb_param_OUTPUT_V_id_V, __xlx_apatb_param_OUTPUT_V_dest_V, __xlx_apatb_param_control, __xlx_apatb_param_distortion_threshold, __xlx_apatb_param_distortion_clip_factor, __xlx_apatb_param_compression_min_threshold, __xlx_apatb_param_compression_max_threshold, __xlx_apatb_param_compression_zero_threshold, __xlx_apatb_param_delay_mult, __xlx_apatb_param_delay_samples);
+guitar_effects_hw_stub_wrapper(__xlx_apatb_param_INPUT_V_data_V, __xlx_apatb_param_INPUT_V_keep_V, __xlx_apatb_param_INPUT_V_strb_V, __xlx_apatb_param_INPUT_V_user_V, __xlx_apatb_param_INPUT_V_last_V, __xlx_apatb_param_INPUT_V_id_V, __xlx_apatb_param_INPUT_V_dest_V, __xlx_apatb_param_OUTPUT_V_data_V, __xlx_apatb_param_OUTPUT_V_keep_V, __xlx_apatb_param_OUTPUT_V_strb_V, __xlx_apatb_param_OUTPUT_V_user_V, __xlx_apatb_param_OUTPUT_V_last_V, __xlx_apatb_param_OUTPUT_V_id_V, __xlx_apatb_param_OUTPUT_V_dest_V, __xlx_apatb_param_axilite_out, __xlx_apatb_param_control, __xlx_apatb_param_distortion_threshold, __xlx_apatb_param_distortion_clip_factor, __xlx_apatb_param_compression_min_threshold, __xlx_apatb_param_compression_max_threshold, __xlx_apatb_param_compression_zero_threshold, __xlx_apatb_param_delay_mult, __xlx_apatb_param_delay_samples);
 CodeState = DUMP_OUTPUTS;
-long __xlx_apatb_param_INPUT_r_stream_buf_final_size = __xlx_apatb_param_INPUT_r_stream_buf_size - ((hls::stream<short>*)__xlx_apatb_param_INPUT_V_data_V)->size();
+long __xlx_apatb_param_INPUT_r_stream_buf_final_size = __xlx_apatb_param_INPUT_r_stream_buf_size - ((hls::stream<int>*)__xlx_apatb_param_INPUT_V_data_V)->size();
 aesl_fh.write(AUTOTB_TVIN_INPUT_r_V_data_V, begin_str(AESL_transaction));
 aesl_fh.write(AUTOTB_TVIN_INPUT_r_V_keep_V, begin_str(AESL_transaction));
 aesl_fh.write(AUTOTB_TVIN_INPUT_r_V_strb_V, begin_str(AESL_transaction));
@@ -1089,11 +1157,11 @@ aesl_fh.write(AUTOTB_TVIN_INPUT_r_V_id_V, begin_str(AESL_transaction));
 aesl_fh.write(AUTOTB_TVIN_INPUT_r_V_dest_V, begin_str(AESL_transaction));
 for (int i = 0; i < __xlx_apatb_param_INPUT_r_stream_buf_final_size; ++i) {
   std::string s;
-s = formatData((unsigned char*)(__xlx_apatb_param_INPUT_V_data_V_stream_buf.data()+i), 16);
+s = formatData((unsigned char*)(__xlx_apatb_param_INPUT_V_data_V_stream_buf.data()+i), 32);
 aesl_fh.write(AUTOTB_TVIN_INPUT_r_V_data_V, s);
-s = formatData((unsigned char*)(__xlx_apatb_param_INPUT_V_keep_V_stream_buf.data()+i), 2);
+s = formatData((unsigned char*)(__xlx_apatb_param_INPUT_V_keep_V_stream_buf.data()+i), 4);
 aesl_fh.write(AUTOTB_TVIN_INPUT_r_V_keep_V, s);
-s = formatData((unsigned char*)(__xlx_apatb_param_INPUT_V_strb_V_stream_buf.data()+i), 2);
+s = formatData((unsigned char*)(__xlx_apatb_param_INPUT_V_strb_V_stream_buf.data()+i), 4);
 aesl_fh.write(AUTOTB_TVIN_INPUT_r_V_strb_V, s);
 s = formatData((unsigned char*)(__xlx_apatb_param_INPUT_V_user_V_stream_buf.data()+i), 2);
 aesl_fh.write(AUTOTB_TVIN_INPUT_r_V_user_V, s);
@@ -1304,12 +1372,12 @@ aesl_fh.write(WRAPC_STREAM_SIZE_IN_INPUT_r_V_dest_V, end_str());
 }
 
 //********************** dump C output stream *******************
-long __xlx_apatb_param_OUTPUT_r_stream_buf_final_size = ((hls::stream<short>*)__xlx_apatb_param_OUTPUT_V_data_V)->size() - __xlx_apatb_param_OUTPUT_r_stream_buf_size;
+long __xlx_apatb_param_OUTPUT_r_stream_buf_final_size = ((hls::stream<int>*)__xlx_apatb_param_OUTPUT_V_data_V)->size() - __xlx_apatb_param_OUTPUT_r_stream_buf_size;
 {
-  while (!((hls::stream<short>*)__xlx_apatb_param_OUTPUT_V_data_V)->empty())
-    __xlx_apatb_param_OUTPUT_V_data_V_stream_buf.push_back(((hls::stream<short>*)__xlx_apatb_param_OUTPUT_V_data_V)->read());
+  while (!((hls::stream<int>*)__xlx_apatb_param_OUTPUT_V_data_V)->empty())
+    __xlx_apatb_param_OUTPUT_V_data_V_stream_buf.push_back(((hls::stream<int>*)__xlx_apatb_param_OUTPUT_V_data_V)->read());
   for (int i = 0; i < __xlx_apatb_param_OUTPUT_V_data_V_stream_buf.size(); ++i)
-    ((hls::stream<short>*)__xlx_apatb_param_OUTPUT_V_data_V)->write(__xlx_apatb_param_OUTPUT_V_data_V_stream_buf[i]);
+    ((hls::stream<int>*)__xlx_apatb_param_OUTPUT_V_data_V)->write(__xlx_apatb_param_OUTPUT_V_data_V_stream_buf[i]);
   }
 {
   while (!((hls::stream<char>*)__xlx_apatb_param_OUTPUT_V_keep_V)->empty())
@@ -1356,11 +1424,11 @@ aesl_fh.write(AUTOTB_TVOUT_OUTPUT_r_V_id_V, begin_str(AESL_transaction));
 aesl_fh.write(AUTOTB_TVOUT_OUTPUT_r_V_dest_V, begin_str(AESL_transaction));
 for (int i = 0; i < __xlx_apatb_param_OUTPUT_r_stream_buf_final_size; ++i) {
   std::string s;
-s = formatData((unsigned char*)(__xlx_apatb_param_OUTPUT_V_data_V_stream_buf.data()+__xlx_apatb_param_OUTPUT_r_stream_buf_size+i), 16);
+s = formatData((unsigned char*)(__xlx_apatb_param_OUTPUT_V_data_V_stream_buf.data()+__xlx_apatb_param_OUTPUT_r_stream_buf_size+i), 32);
 aesl_fh.write(AUTOTB_TVOUT_OUTPUT_r_V_data_V, s);
-s = formatData((unsigned char*)(__xlx_apatb_param_OUTPUT_V_keep_V_stream_buf.data()+__xlx_apatb_param_OUTPUT_r_stream_buf_size+i), 2);
+s = formatData((unsigned char*)(__xlx_apatb_param_OUTPUT_V_keep_V_stream_buf.data()+__xlx_apatb_param_OUTPUT_r_stream_buf_size+i), 4);
 aesl_fh.write(AUTOTB_TVOUT_OUTPUT_r_V_keep_V, s);
-s = formatData((unsigned char*)(__xlx_apatb_param_OUTPUT_V_strb_V_stream_buf.data()+__xlx_apatb_param_OUTPUT_r_stream_buf_size+i), 2);
+s = formatData((unsigned char*)(__xlx_apatb_param_OUTPUT_V_strb_V_stream_buf.data()+__xlx_apatb_param_OUTPUT_r_stream_buf_size+i), 4);
 aesl_fh.write(AUTOTB_TVOUT_OUTPUT_r_V_strb_V, s);
 s = formatData((unsigned char*)(__xlx_apatb_param_OUTPUT_V_user_V_stream_buf.data()+__xlx_apatb_param_OUTPUT_r_stream_buf_size+i), 2);
 aesl_fh.write(AUTOTB_TVOUT_OUTPUT_r_V_user_V, s);
@@ -1427,6 +1495,17 @@ sprintf(__xlx_sprintf_buffer.data(), "%d\n", __xlx_apatb_param_OUTPUT_r_stream_b
  aesl_fh.write(WRAPC_STREAM_SIZE_OUT_OUTPUT_r_V_dest_V, __xlx_sprintf_buffer.data());
 aesl_fh.write(WRAPC_STREAM_SIZE_OUT_OUTPUT_r_V_dest_V, end_str());
 }
+// print axilite_out Transactions
+{
+aesl_fh.write(AUTOTB_TVOUT_axilite_out, begin_str(AESL_transaction));
+{
+auto *pos = (unsigned char*)__xlx_apatb_param_axilite_out;
+aesl_fh.write(AUTOTB_TVOUT_axilite_out, formatData(pos, 32));
+}
+  tcl_file.set_num(1, &tcl_file.axilite_out_depth);
+aesl_fh.write(AUTOTB_TVOUT_axilite_out, end_str());
+}
+
 CodeState = DELETE_CHAR_BUFFERS;
 AESL_transaction++;
 tcl_file.set_num(AESL_transaction , &tcl_file.trans_num);

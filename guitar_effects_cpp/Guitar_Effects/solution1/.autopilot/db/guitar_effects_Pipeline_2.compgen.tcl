@@ -18,7 +18,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir O \
     corename delay_buffer \
     op interface \
-    ports { delay_buffer_address0 { O 16 vector } delay_buffer_ce0 { O 1 bit } delay_buffer_we0 { O 1 bit } delay_buffer_d0 { O 16 vector } } \
+    ports { delay_buffer_address0 { O 16 vector } delay_buffer_ce0 { O 1 bit } delay_buffer_we0 { O 1 bit } delay_buffer_d0 { O 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'delay_buffer'"
