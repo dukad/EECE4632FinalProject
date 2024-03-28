@@ -5,7 +5,7 @@
     <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1711589350"/>
     <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1711589350"/>
     <Generation Name="SIMULATION" State="GENERATED" Timestamp="1711589350"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1711589350"/>
+    <Generation Name="HW_HANDOFF" State="STALE" Timestamp="1711590489"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="synth\dma_axis_ip_example.v" Type="Verilog">
         <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>

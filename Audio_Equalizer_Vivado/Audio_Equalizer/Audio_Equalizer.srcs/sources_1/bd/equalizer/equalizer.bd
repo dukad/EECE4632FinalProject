@@ -11,7 +11,11 @@
     },
     "design_tree": {
       "processing_system7_0": "",
-      "equalizer": ""
+      "equalizer": "",
+      "ps7_0_axi_periph": {
+        "s00_couplers": {}
+      },
+      "rst_ps7_0_100M": ""
     },
     "interface_ports": {
       "DDR": {
@@ -1764,6 +1768,180 @@
             }
           }
         }
+      },
+      "ps7_0_axi_periph": {
+        "vlnv": "xilinx.com:ip:axi_interconnect:2.1",
+        "xci_path": "ip\\equalizer_ps7_0_axi_periph_0\\equalizer_ps7_0_axi_periph_0.xci",
+        "inst_hier_path": "ps7_0_axi_periph",
+        "xci_name": "equalizer_ps7_0_axi_periph_0",
+        "parameters": {
+          "NUM_MI": {
+            "value": "1"
+          }
+        },
+        "interface_ports": {
+          "S00_AXI": {
+            "mode": "Slave",
+            "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0"
+          },
+          "M00_AXI": {
+            "mode": "Master",
+            "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0"
+          }
+        },
+        "ports": {
+          "ACLK": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "ARESETN"
+              }
+            }
+          },
+          "ARESETN": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "S00_ACLK": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_BUSIF": {
+                "value": "S00_AXI"
+              },
+              "ASSOCIATED_RESET": {
+                "value": "S00_ARESETN"
+              }
+            }
+          },
+          "S00_ARESETN": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "M00_ACLK": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_BUSIF": {
+                "value": "M00_AXI"
+              },
+              "ASSOCIATED_RESET": {
+                "value": "M00_ARESETN"
+              }
+            }
+          },
+          "M00_ARESETN": {
+            "type": "rst",
+            "direction": "I"
+          }
+        },
+        "components": {
+          "s00_couplers": {
+            "interface_ports": {
+              "M_AXI": {
+                "mode": "Master",
+                "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
+                "vlnv": "xilinx.com:interface:aximm_rtl:1.0"
+              },
+              "S_AXI": {
+                "mode": "Slave",
+                "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
+                "vlnv": "xilinx.com:interface:aximm_rtl:1.0"
+              }
+            },
+            "ports": {
+              "M_ACLK": {
+                "type": "clk",
+                "direction": "I",
+                "parameters": {
+                  "ASSOCIATED_BUSIF": {
+                    "value": "M_AXI"
+                  },
+                  "ASSOCIATED_RESET": {
+                    "value": "M_ARESETN"
+                  }
+                }
+              },
+              "M_ARESETN": {
+                "type": "rst",
+                "direction": "I"
+              },
+              "S_ACLK": {
+                "type": "clk",
+                "direction": "I",
+                "parameters": {
+                  "ASSOCIATED_BUSIF": {
+                    "value": "S_AXI"
+                  },
+                  "ASSOCIATED_RESET": {
+                    "value": "S_ARESETN"
+                  }
+                }
+              },
+              "S_ARESETN": {
+                "type": "rst",
+                "direction": "I"
+              }
+            },
+            "interface_nets": {
+              "s00_couplers_to_s00_couplers": {
+                "interface_ports": [
+                  "S_AXI",
+                  "M_AXI"
+                ]
+              }
+            }
+          }
+        },
+        "interface_nets": {
+          "ps7_0_axi_periph_to_s00_couplers": {
+            "interface_ports": [
+              "S00_AXI",
+              "s00_couplers/S_AXI"
+            ]
+          },
+          "s00_couplers_to_ps7_0_axi_periph": {
+            "interface_ports": [
+              "M00_AXI",
+              "s00_couplers/M_AXI"
+            ]
+          }
+        },
+        "nets": {
+          "S00_ACLK_1": {
+            "ports": [
+              "S00_ACLK",
+              "s00_couplers/S_ACLK"
+            ]
+          },
+          "S00_ARESETN_1": {
+            "ports": [
+              "S00_ARESETN",
+              "s00_couplers/S_ARESETN"
+            ]
+          },
+          "ps7_0_axi_periph_ACLK_net": {
+            "ports": [
+              "M00_ACLK",
+              "s00_couplers/M_ACLK"
+            ]
+          },
+          "ps7_0_axi_periph_ARESETN_net": {
+            "ports": [
+              "M00_ARESETN",
+              "s00_couplers/M_ARESETN"
+            ]
+          }
+        }
+      },
+      "rst_ps7_0_100M": {
+        "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
+        "xci_name": "equalizer_rst_ps7_0_100M_0",
+        "xci_path": "ip\\equalizer_rst_ps7_0_100M_0\\equalizer_rst_ps7_0_100M_0.xci",
+        "inst_hier_path": "rst_ps7_0_100M"
       }
     },
     "interface_nets": {
@@ -1778,6 +1956,63 @@
           "FIXED_IO",
           "processing_system7_0/FIXED_IO"
         ]
+      },
+      "processing_system7_0_M_AXI_GP0": {
+        "interface_ports": [
+          "processing_system7_0/M_AXI_GP0",
+          "ps7_0_axi_periph/S00_AXI"
+        ]
+      },
+      "ps7_0_axi_periph_M00_AXI": {
+        "interface_ports": [
+          "ps7_0_axi_periph/M00_AXI",
+          "equalizer/s_axi_control"
+        ]
+      }
+    },
+    "nets": {
+      "processing_system7_0_FCLK_CLK0": {
+        "ports": [
+          "processing_system7_0/FCLK_CLK0",
+          "processing_system7_0/M_AXI_GP0_ACLK",
+          "ps7_0_axi_periph/S00_ACLK",
+          "rst_ps7_0_100M/slowest_sync_clk",
+          "equalizer/ap_clk",
+          "ps7_0_axi_periph/M00_ACLK",
+          "ps7_0_axi_periph/ACLK"
+        ]
+      },
+      "processing_system7_0_FCLK_RESET0_N": {
+        "ports": [
+          "processing_system7_0/FCLK_RESET0_N",
+          "rst_ps7_0_100M/ext_reset_in"
+        ]
+      },
+      "rst_ps7_0_100M_peripheral_aresetn": {
+        "ports": [
+          "rst_ps7_0_100M/peripheral_aresetn",
+          "ps7_0_axi_periph/S00_ARESETN",
+          "equalizer/ap_rst_n",
+          "ps7_0_axi_periph/M00_ARESETN",
+          "ps7_0_axi_periph/ARESETN"
+        ]
+      }
+    },
+    "addressing": {
+      "/processing_system7_0": {
+        "address_spaces": {
+          "Data": {
+            "segments": {
+              "SEG_equalizer_Reg": {
+                "address_block": "/equalizer/s_axi_control/Reg",
+                "offset": "0x40000000",
+                "range": "64K",
+                "offset_base_param": "C_S_AXI_CONTROL_BASEADDR",
+                "offset_high_param": "C_S_AXI_CONTROL_HIGHADDR"
+              }
+            }
+          }
+        }
       }
     }
   }

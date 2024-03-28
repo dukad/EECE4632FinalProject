@@ -3238,6 +3238,11 @@
         "xci_name": "dma_axis_ip_example_equalizer_0_0",
         "xci_path": "ip\\dma_axis_ip_example_equalizer_0_0\\dma_axis_ip_example_equalizer_0_0.xci",
         "inst_hier_path": "equalizer",
+        "parameters": {
+          "C_M_AXI_GMEM_ENABLE_USER_PORTS": {
+            "value": "false"
+          }
+        },
         "interface_ports": {
           "m_axi_gmem": {
             "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
