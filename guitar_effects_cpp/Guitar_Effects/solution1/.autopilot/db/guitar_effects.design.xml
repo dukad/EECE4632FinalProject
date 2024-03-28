@@ -5,16 +5,16 @@
 <ModuleName>guitar_effects</ModuleName>
 <InstancesList>
 <Instance>
-<InstName>grp_guitar_effects_Pipeline_2_fu_359</InstName>
+<InstName>grp_guitar_effects_Pipeline_2_fu_361</InstName>
 <ModuleName>guitar_effects_Pipeline_2</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>359</ID>
+<ID>361</ID>
 </Instance>
 <Instance>
-<InstName>grp_compression_fu_364</InstName>
+<InstName>grp_compression_fu_366</InstName>
 <ModuleName>compression</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>364</ID>
+<ID>366</ID>
 </Instance>
 </InstancesList>
 </TopModule>
@@ -316,7 +316,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_380_p_din0</name>
+<name>grp_fu_382_p_din0</name>
 <Object>compression</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -327,7 +327,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_380_p_din1</name>
+<name>grp_fu_382_p_din1</name>
 <Object>compression</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -338,7 +338,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_380_p_dout0</name>
+<name>grp_fu_382_p_dout0</name>
 <Object>compression</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -349,7 +349,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_380_p_ce</name>
+<name>grp_fu_382_p_ce</name>
 <Object>compression</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -360,7 +360,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_384_p_din0</name>
+<name>grp_fu_386_p_din0</name>
 <Object>compression</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -371,7 +371,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_384_p_dout0</name>
+<name>grp_fu_386_p_dout0</name>
 <Object>compression</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -382,7 +382,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_384_p_ce</name>
+<name>grp_fu_386_p_ce</name>
 <Object>compression</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -529,7 +529,7 @@
 <PipelineDepth>5 ~ 90</PipelineDepth>
 <PipelineType>no</PipelineType>
 <InstanceList>
-<Instance>grp_compression_fu_364</Instance>
+<Instance>grp_compression_fu_366</Instance>
 </InstanceList>
 </VITIS_LOOP_63_2>
 </SummaryOfLoopLatency>
@@ -542,10 +542,10 @@
 <DSP>5</DSP>
 <AVAIL_DSP>220</AVAIL_DSP>
 <UTIL_DSP>2</UTIL_DSP>
-<FF>3076</FF>
+<FF>3075</FF>
 <AVAIL_FF>106400</AVAIL_FF>
 <UTIL_FF>2</UTIL_FF>
-<LUT>6757</LUT>
+<LUT>6729</LUT>
 <AVAIL_LUT>53200</AVAIL_LUT>
 <UTIL_LUT>12</UTIL_LUT>
 <URAM>0</URAM>

@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-| Date         : Wed Mar 27 19:30:37 2024
+| Date         : Wed Mar 27 19:57:50 2024
 | Host         : WFXB07B250A366D running 64-bit major release  (build 9200)
 | Command      : report_utilization -file guitar_effects_design_wrapper_utilization_synth.rpt -pb guitar_effects_design_wrapper_utilization_synth.pb
 | Design       : guitar_effects_design_wrapper
@@ -179,7 +179,7 @@ Table of Contents
 | guitar_effects_design_xbar_1                 |    1 |
 | guitar_effects_design_rst_ps7_0_100M_1       |    1 |
 | guitar_effects_design_processing_system7_0_1 |    1 |
-| guitar_effects_design_guitar_effects_0_14    |    1 |
+| guitar_effects_design_guitar_effects_0_15    |    1 |
 | guitar_effects_design_axi_dma_1              |    1 |
 | guitar_effects_design_auto_us_0              |    1 |
 | guitar_effects_design_auto_pc_2              |    1 |

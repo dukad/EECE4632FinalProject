@@ -48,13 +48,13 @@ set portList {
 	{ values_buffer_d0 sc_out sc_lv 32 signal 5 } 
 	{ ap_return_0 sc_out sc_lv 32 signal -1 } 
 	{ ap_return_1 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_380_p_din0 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_380_p_din1 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_380_p_dout0 sc_in sc_lv 32 signal -1 } 
-	{ grp_fu_380_p_ce sc_out sc_logic 1 signal -1 } 
-	{ grp_fu_384_p_din0 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_384_p_dout0 sc_in sc_lv 32 signal -1 } 
-	{ grp_fu_384_p_ce sc_out sc_logic 1 signal -1 } 
+	{ grp_fu_382_p_din0 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_382_p_din1 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_382_p_dout0 sc_in sc_lv 32 signal -1 } 
+	{ grp_fu_382_p_ce sc_out sc_logic 1 signal -1 } 
+	{ grp_fu_386_p_din0 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_386_p_dout0 sc_in sc_lv 32 signal -1 } 
+	{ grp_fu_386_p_ce sc_out sc_logic 1 signal -1 } 
 }
 set NewPortList {[ 
 	{ "name": "ap_clk", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "clock", "bundle":{"name": "ap_clk", "role": "default" }} , 
@@ -74,13 +74,13 @@ set NewPortList {[
  	{ "name": "values_buffer_d0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "values_buffer", "role": "d0" }} , 
  	{ "name": "ap_return_0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "ap_return_0", "role": "default" }} , 
  	{ "name": "ap_return_1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "ap_return_1", "role": "default" }} , 
- 	{ "name": "grp_fu_380_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_380_p_din0", "role": "default" }} , 
- 	{ "name": "grp_fu_380_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_380_p_din1", "role": "default" }} , 
- 	{ "name": "grp_fu_380_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_380_p_dout0", "role": "default" }} , 
- 	{ "name": "grp_fu_380_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_380_p_ce", "role": "default" }} , 
- 	{ "name": "grp_fu_384_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_384_p_din0", "role": "default" }} , 
- 	{ "name": "grp_fu_384_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_384_p_dout0", "role": "default" }} , 
- 	{ "name": "grp_fu_384_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_384_p_ce", "role": "default" }}  ]}
+ 	{ "name": "grp_fu_382_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_382_p_din0", "role": "default" }} , 
+ 	{ "name": "grp_fu_382_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_382_p_din1", "role": "default" }} , 
+ 	{ "name": "grp_fu_382_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_382_p_dout0", "role": "default" }} , 
+ 	{ "name": "grp_fu_382_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_382_p_ce", "role": "default" }} , 
+ 	{ "name": "grp_fu_386_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_386_p_din0", "role": "default" }} , 
+ 	{ "name": "grp_fu_386_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_386_p_dout0", "role": "default" }} , 
+ 	{ "name": "grp_fu_386_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_386_p_ce", "role": "default" }}  ]}
 
 set RtlHierarchyInfo {[
 	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2", "3"],

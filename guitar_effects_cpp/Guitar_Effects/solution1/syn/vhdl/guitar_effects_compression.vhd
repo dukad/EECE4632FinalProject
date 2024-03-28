@@ -28,13 +28,13 @@ port (
     values_buffer_d0 : OUT STD_LOGIC_VECTOR (31 downto 0);
     ap_return_0 : OUT STD_LOGIC_VECTOR (31 downto 0);
     ap_return_1 : OUT STD_LOGIC_VECTOR (31 downto 0);
-    grp_fu_380_p_din0 : OUT STD_LOGIC_VECTOR (31 downto 0);
-    grp_fu_380_p_din1 : OUT STD_LOGIC_VECTOR (31 downto 0);
-    grp_fu_380_p_dout0 : IN STD_LOGIC_VECTOR (31 downto 0);
-    grp_fu_380_p_ce : OUT STD_LOGIC;
-    grp_fu_384_p_din0 : OUT STD_LOGIC_VECTOR (31 downto 0);
-    grp_fu_384_p_dout0 : IN STD_LOGIC_VECTOR (31 downto 0);
-    grp_fu_384_p_ce : OUT STD_LOGIC );
+    grp_fu_382_p_din0 : OUT STD_LOGIC_VECTOR (31 downto 0);
+    grp_fu_382_p_din1 : OUT STD_LOGIC_VECTOR (31 downto 0);
+    grp_fu_382_p_dout0 : IN STD_LOGIC_VECTOR (31 downto 0);
+    grp_fu_382_p_ce : OUT STD_LOGIC;
+    grp_fu_386_p_din0 : OUT STD_LOGIC_VECTOR (31 downto 0);
+    grp_fu_386_p_dout0 : IN STD_LOGIC_VECTOR (31 downto 0);
+    grp_fu_386_p_ce : OUT STD_LOGIC );
 end;
 
 
@@ -570,7 +570,7 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if (((ap_const_logic_1 = ap_CS_fsm_state70) or (ap_const_logic_1 = ap_CS_fsm_state54) or (ap_const_logic_1 = ap_CS_fsm_state42))) then
-                reg_125 <= grp_fu_384_p_dout0;
+                reg_125 <= grp_fu_386_p_dout0;
             end if;
         end if;
     end process;
@@ -586,7 +586,7 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if (((ap_const_logic_1 = ap_CS_fsm_state74) or (ap_const_logic_1 = ap_CS_fsm_state46))) then
-                reg_138 <= grp_fu_380_p_dout0;
+                reg_138 <= grp_fu_382_p_dout0;
             end if;
         end if;
     end process;
@@ -1014,11 +1014,11 @@ begin
         end if; 
     end process;
 
-    grp_fu_380_p_ce <= ap_const_logic_1;
-    grp_fu_380_p_din0 <= grp_fu_109_p0;
-    grp_fu_380_p_din1 <= grp_fu_109_p1;
-    grp_fu_384_p_ce <= ap_const_logic_1;
-    grp_fu_384_p_din0 <= grp_fu_117_p0;
+    grp_fu_382_p_ce <= ap_const_logic_1;
+    grp_fu_382_p_din0 <= grp_fu_109_p0;
+    grp_fu_382_p_din1 <= grp_fu_109_p1;
+    grp_fu_386_p_ce <= ap_const_logic_1;
+    grp_fu_386_p_din0 <= grp_fu_117_p0;
     icmp_ln138_fu_165_p2 <= "1" when (signed(current_level_read) > signed(max_threshold)) else "0";
     icmp_ln139_fu_171_p2 <= "1" when (signed(current_level_read) > signed(ap_const_lv32_0)) else "0";
     icmp_ln147_1_fu_183_p2 <= "1" when (signed(current_level_read) > signed(zero_threshold)) else "0";

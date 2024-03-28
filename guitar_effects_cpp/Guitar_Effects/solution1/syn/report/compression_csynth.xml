@@ -140,7 +140,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_380_p_din0</name>
+<name>grp_fu_382_p_din0</name>
 <Object>compression</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -151,7 +151,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_380_p_din1</name>
+<name>grp_fu_382_p_din1</name>
 <Object>compression</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -162,7 +162,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_380_p_dout0</name>
+<name>grp_fu_382_p_dout0</name>
 <Object>compression</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -173,7 +173,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_380_p_ce</name>
+<name>grp_fu_382_p_ce</name>
 <Object>compression</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -184,7 +184,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_384_p_din0</name>
+<name>grp_fu_386_p_din0</name>
 <Object>compression</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -195,7 +195,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_384_p_dout0</name>
+<name>grp_fu_386_p_dout0</name>
 <Object>compression</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -206,7 +206,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_384_p_ce</name>
+<name>grp_fu_386_p_ce</name>
 <Object>compression</Object>
 <Type>return value</Type>
 <Scope></Scope>

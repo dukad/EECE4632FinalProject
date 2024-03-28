@@ -67,22 +67,22 @@ void guitar_effects (
         // 4 effects, with bool states each in order distortion, compression, delay, wah
         // if the first bit is 1, apply distortion
         if (control & 0b1000) {
-        	axilite_out +=1 ;
+        	axilite_out = axilite_out | 0b1000;
             tmp_int = distortion(tmp_int, distortion_threshold, distortion_clip_factor);
         }
         if (control & 0b0100) {
             // apply compression function
-        	axilite_out +=1 ;
+        	axilite_out = axilite_out | 0b0100;
             tmp_int = compression(tmp_int, compression_min_threshold, compression_max_threshold, compression_zero_threshold, current_level, compression_buffer, compression_buffer_index, lpf_coefficients);
         }
         if (control & 0b0010) {
             //apply delay function
-        	axilite_out +=1 ;
+        	axilite_out = axilite_out | 0b0010;
             tmp_int = delay(tmp_int, delay_samples, delay_mult, delay_buffer, delay_buffer_index);
         }
         if (control & 0b0001) {
             //apply wah function
-        	axilite_out +=1 ;
+        	axilite_out = axilite_out | 0b0001;
         	tmp_int = tmp_int;
         }
 

@@ -1674,3 +1674,7 @@ synth_1: C:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Viva
 Run output will be captured here: C:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/impl_1/runme.log
 launch_runs: Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 3510.000 ; gain = 2.867
 WARNING: [IP_Flow 19-4318] IP-XACT file does not exist: c:/Users/du.kad/Desktop/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/impl/ip/component.xml. It will be created.
+update_ip_catalog -rebuild -scan_changes
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/du.kad/Desktop/EECE4632FinalProject/guitar_effects_cpp'.
+report_ip_status -name ip_status

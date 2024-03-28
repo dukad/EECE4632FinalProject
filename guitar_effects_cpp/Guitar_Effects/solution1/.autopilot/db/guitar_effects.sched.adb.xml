@@ -2601,7 +2601,7 @@ while.body:10 %br_ln69 = br i1 %tmp, void %if.end, void %if.then
 </operation>
 
 <operation id="222" st_id="38" stage="1" lat="1">
-<core>Adder</core>
+<core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
 <or_exp><and_exp><literal name="tmp" val="1"/>
@@ -2610,10 +2610,10 @@ while.body:10 %br_ln69 = br i1 %tmp, void %if.end, void %if.then
 
 <Node id="110" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-if.then:0 %add_ln70 = add i32 %p_load, i32 1
+if.then:0 %or_ln70 = or i32 %p_load, i32 8
 
 ]]></Node>
-<StgValue><ssdm name="add_ln70"/></StgValue>
+<StgValue><ssdm name="or_ln70"/></StgValue>
 </operation>
 
 <operation id="223" st_id="38" stage="1" lat="1">
@@ -3989,7 +3989,7 @@ if.then.i:26 %br_ln106 = br void %if.end
 
 <Node id="173" bw="32" op_0_bw="32" op_1_bw="0" op_2_bw="32" op_3_bw="0" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="0">
 <![CDATA[
-if.end:0 %empty_30 = phi i32 %add_ln70, void %if.then.i, i32 %add_ln70, void %if.then5.i, i32 %p_load, void %while.body, i32 %add_ln70, void %if.else.i
+if.end:0 %empty_30 = phi i32 %or_ln70, void %if.then.i, i32 %or_ln70, void %if.then5.i, i32 %p_load, void %while.body, i32 %or_ln70, void %if.else.i
 
 ]]></Node>
 <StgValue><ssdm name="empty_30"/></StgValue>
@@ -4061,7 +4061,7 @@ if.then6:2 %call_ret = call i64 @compression, i32 %tmp_int, i32 %compression_min
 <state id="76" st_id="76">
 
 <operation id="310" st_id="76" stage="1" lat="1">
-<core>Adder</core>
+<core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
@@ -4069,10 +4069,10 @@ if.then6:2 %call_ret = call i64 @compression, i32 %tmp_int, i32 %compression_min
 
 <Node id="178" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-if.then6:1 %add_ln75 = add i32 %empty_30, i32 1
+if.then6:1 %or_ln75 = or i32 %empty_30, i32 4
 
 ]]></Node>
-<StgValue><ssdm name="add_ln75"/></StgValue>
+<StgValue><ssdm name="or_ln75"/></StgValue>
 </operation>
 
 <operation id="311" st_id="76" stage="1" lat="2">
@@ -4162,7 +4162,7 @@ if.then6:6 %br_ln77 = br void %if.end10
 
 <Node id="185" bw="32" op_0_bw="32" op_1_bw="0" op_2_bw="32" op_3_bw="0">
 <![CDATA[
-if.end10:0 %empty_31 = phi i32 %add_ln75, void %if.then6, i32 %empty_30, void %if.end
+if.end10:0 %empty_31 = phi i32 %or_ln75, void %if.then6, i32 %empty_30, void %if.end
 
 ]]></Node>
 <StgValue><ssdm name="empty_31"/></StgValue>
@@ -4907,7 +4907,7 @@ if.then14:25 %val_2 = select i1 %isNeg_2, i32 %zext_ln818_2, i32 %tmp_7
 <state id="96" st_id="96">
 
 <operation id="362" st_id="96" stage="1" lat="1">
-<core>Adder</core>
+<core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
 <or_exp><and_exp><literal name="tmp_3" val="1"/>
@@ -4916,10 +4916,10 @@ if.then14:25 %val_2 = select i1 %isNeg_2, i32 %zext_ln818_2, i32 %tmp_7
 
 <Node id="189" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-if.then14:0 %add_ln80 = add i32 %empty_31, i32 1
+if.then14:0 %or_ln80 = or i32 %empty_31, i32 2
 
 ]]></Node>
-<StgValue><ssdm name="add_ln80"/></StgValue>
+<StgValue><ssdm name="or_ln80"/></StgValue>
 </operation>
 
 <operation id="363" st_id="96" stage="1" lat="1">
@@ -5029,14 +5029,14 @@ if.end18:4 %write_ln304 = write void @_ssdm_op_Write.axis.volatile.i32P0A.i4P0A.
 
 <Node id="220" bw="32" op_0_bw="32" op_1_bw="0" op_2_bw="32" op_3_bw="0">
 <![CDATA[
-if.end18:0 %empty_32 = phi i32 %add_ln80, void %if.then14, i32 %empty_31, void %if.end10
+if.end18:0 %empty_32 = phi i32 %or_ln80, void %if.then14, i32 %empty_31, void %if.end10
 
 ]]></Node>
 <StgValue><ssdm name="empty_32"/></StgValue>
 </operation>
 
 <operation id="370" st_id="97" stage="1" lat="1">
-<core>Adder</core>
+<core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
 <or_exp><and_exp><literal name="trunc_ln15" val="1"/>
@@ -5045,10 +5045,10 @@ if.end18:0 %empty_32 = phi i32 %add_ln80, void %if.then14, i32 %empty_31, void %
 
 <Node id="222" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-if.end18:2 %add_ln85 = add i32 %empty_32, i32 1
+if.end18:2 %or_ln85 = or i32 %empty_32, i32 1
 
 ]]></Node>
-<StgValue><ssdm name="add_ln85"/></StgValue>
+<StgValue><ssdm name="or_ln85"/></StgValue>
 </operation>
 
 <operation id="371" st_id="97" stage="1" lat="1">
@@ -5060,7 +5060,7 @@ if.end18:2 %add_ln85 = add i32 %empty_32, i32 1
 
 <Node id="223" bw="32" op_0_bw="1" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-if.end18:3 %select_ln83 = select i1 %trunc_ln15, i32 %add_ln85, i32 %empty_32
+if.end18:3 %select_ln83 = select i1 %trunc_ln15, i32 %or_ln85, i32 %empty_32
 
 ]]></Node>
 <StgValue><ssdm name="select_ln83"/></StgValue>

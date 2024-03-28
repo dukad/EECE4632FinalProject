@@ -3921,3 +3921,19 @@ selectButton(RDIResource.BaseDialog_OK, "OK"); // a
 // Run Command: PAResourceCommand.PACommandNames_REPORTS_WINDOW
 dismissDialog("Bitstream Generation Completed"); // ag
 // HMemoryUtils.trashcanNow. Engine heap size: 2,164 MB. GUI used memory: 201 MB. Current time: 3/27/24, 7:38:31 PM EDT
+// Elapsed time: 1144 seconds
+selectButton(PAResourceOtoP.PlanAheadTab_REFRESH_IP_CATALOG, "Refresh IP Catalog"); // g
+// TclEventType: CREATE_IP_CATALOG
+// TclEventType: IP_LOCK_CHANGE
+// Tcl Message: update_ip_catalog -rebuild -scan_changes 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: BDCELL_LOCK_CHANGE
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: RSB_BITABEN_IPREPODATA_REFRESH
+// TclEventType: BDCELL_LOCK_CHANGE
+// TclEventType: CREATE_IP_CATALOG
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/du.kad/Desktop/EECE4632FinalProject/guitar_effects_cpp'. 
+// TclEventType: IP_SUMMARY_RESULTS
+// Tcl Message: report_ip_status -name ip_status 
+dismissDialog("Refresh IP Catalog"); // bA

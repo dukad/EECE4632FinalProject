@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'compression'" level="0">
-<item name = "Date">Wed Mar 27 19:50:56 2024
+<item name = "Date">Wed Mar 27 19:53:44 2024
 </item>
 <item name = "Version">2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)</item>
 <item name = "Project">Guitar_Effects</item>
@@ -159,13 +159,13 @@
 <column name="ap_ready">out, 1, ap_ctrl_hs, compression, return value</column>
 <column name="ap_return_0">out, 32, ap_ctrl_hs, compression, return value</column>
 <column name="ap_return_1">out, 32, ap_ctrl_hs, compression, return value</column>
-<column name="grp_fu_380_p_din0">out, 32, ap_ctrl_hs, compression, return value</column>
-<column name="grp_fu_380_p_din1">out, 32, ap_ctrl_hs, compression, return value</column>
-<column name="grp_fu_380_p_dout0">in, 32, ap_ctrl_hs, compression, return value</column>
-<column name="grp_fu_380_p_ce">out, 1, ap_ctrl_hs, compression, return value</column>
-<column name="grp_fu_384_p_din0">out, 32, ap_ctrl_hs, compression, return value</column>
-<column name="grp_fu_384_p_dout0">in, 32, ap_ctrl_hs, compression, return value</column>
-<column name="grp_fu_384_p_ce">out, 1, ap_ctrl_hs, compression, return value</column>
+<column name="grp_fu_382_p_din0">out, 32, ap_ctrl_hs, compression, return value</column>
+<column name="grp_fu_382_p_din1">out, 32, ap_ctrl_hs, compression, return value</column>
+<column name="grp_fu_382_p_dout0">in, 32, ap_ctrl_hs, compression, return value</column>
+<column name="grp_fu_382_p_ce">out, 1, ap_ctrl_hs, compression, return value</column>
+<column name="grp_fu_386_p_din0">out, 32, ap_ctrl_hs, compression, return value</column>
+<column name="grp_fu_386_p_dout0">in, 32, ap_ctrl_hs, compression, return value</column>
+<column name="grp_fu_386_p_ce">out, 1, ap_ctrl_hs, compression, return value</column>
 <column name="input_r">in, 32, ap_none, input_r, scalar</column>
 <column name="min_threshold">in, 32, ap_none, min_threshold, scalar</column>
 <column name="max_threshold">in, 32, ap_none, max_threshold, scalar</column>

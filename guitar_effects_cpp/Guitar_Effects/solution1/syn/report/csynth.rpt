@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'guitar_effects'
 ================================================================
 + General Information: 
-    * Date:           Wed Mar 27 19:50:57 2024
+    * Date:           Wed Mar 27 19:53:45 2024
     * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
     * Project:        Guitar_Effects
     * Solution:       solution1 (Vivado IP Flow Target)
@@ -19,7 +19,7 @@
     |            Modules           | Issue|      | Latency |  Latency  | Iteration|         |  Trip |          |           |        |           |            |     |
     |            & Loops           | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count | Pipelined|   BRAM    |   DSP  |     FF    |     LUT    | URAM|
     +------------------------------+------+------+---------+-----------+----------+---------+-------+----------+-----------+--------+-----------+------------+-----+
-    |+ guitar_effects              |     -|  0.04|        -|          -|         -|        -|      -|        no|  129 (46%)|  5 (2%)|  3076 (2%)|  6757 (12%)|    -|
+    |+ guitar_effects              |     -|  0.04|        -|          -|         -|        -|      -|        no|  129 (46%)|  5 (2%)|  3075 (2%)|  6729 (12%)|    -|
     | + guitar_effects_Pipeline_2  |     -|  1.62|    44102|  4.410e+05|         -|    44102|      -|        no|          -|       -|   18 (~0%)|    63 (~0%)|    -|
     |  o Loop 1                    |     -|  7.30|    44100|  4.410e+05|         1|        1|  44100|       yes|          -|       -|          -|           -|    -|
     | o VITIS_LOOP_63_2            |     -|  7.30|        -|          -|        90|        -|      -|        no|          -|       -|          -|           -|    -|
@@ -124,29 +124,25 @@
 | Name                                     | DSP | Pragma | Variable           | Op   | Impl    | Latency |
 +------------------------------------------+-----+--------+--------------------+------+---------+---------+
 | + guitar_effects                         | 5   |        |                    |      |         |         |
-|   negative_threshold_fu_453_p2           | -   |        | negative_threshold | sub  | fabric  | 0       |
-|   grp_fu_447_p0                          | -   |        | sub_i135           | sub  | fabric  | 0       |
-|   add_ln70_fu_498_p2                     | -   |        | add_ln70           | add  | fabric  | 0       |
-|   add_ln107_fu_514_p2                    | -   |        | add_ln107          | add  | fabric  | 0       |
+|   negative_threshold_fu_455_p2           | -   |        | negative_threshold | sub  | fabric  | 0       |
+|   grp_fu_449_p0                          | -   |        | sub_i135           | sub  | fabric  | 0       |
+|   add_ln107_fu_516_p2                    | -   |        | add_ln107          | add  | fabric  | 0       |
 |   fmul_32ns_32ns_32_4_max_dsp_1_U17      | 3   |        | mul8_i             | fmul | maxdsp  | 3       |
 |   faddfsub_32ns_32ns_32_5_full_dsp_1_U16 | 2   |        | dc_1               | fsub | fulldsp | 4       |
-|   add_ln346_1_fu_554_p2                  | -   |        | add_ln346_1        | add  | fabric  | 0       |
-|   sub_ln1512_1_fu_568_p2                 | -   |        | sub_ln1512_1       | sub  | fabric  | 0       |
-|   result_V_5_fu_647_p2                   | -   |        | result_V_5         | sub  | fabric  | 0       |
-|   sub_ln105_fu_519_p2                    | -   |        | sub_ln105          | sub  | fabric  | 0       |
+|   add_ln346_1_fu_556_p2                  | -   |        | add_ln346_1        | add  | fabric  | 0       |
+|   sub_ln1512_1_fu_570_p2                 | -   |        | sub_ln1512_1       | sub  | fabric  | 0       |
+|   result_V_5_fu_649_p2                   | -   |        | result_V_5         | sub  | fabric  | 0       |
+|   sub_ln105_fu_521_p2                    | -   |        | sub_ln105          | sub  | fabric  | 0       |
 |   fmul_32ns_32ns_32_4_max_dsp_1_U17      | 3   |        | mul_i              | fmul | maxdsp  | 3       |
 |   faddfsub_32ns_32ns_32_5_full_dsp_1_U16 | 2   |        | dc                 | fsub | fulldsp | 4       |
-|   add_ln346_fu_688_p2                    | -   |        | add_ln346          | add  | fabric  | 0       |
-|   sub_ln1512_fu_702_p2                   | -   |        | sub_ln1512         | sub  | fabric  | 0       |
-|   result_V_2_fu_781_p2                   | -   |        | result_V_2         | sub  | fabric  | 0       |
-|   add_ln75_fu_796_p2                     | -   |        | add_ln75           | add  | fabric  | 0       |
-|   add_ln80_fu_938_p2                     | -   |        | add_ln80           | add  | fabric  | 0       |
+|   add_ln346_fu_690_p2                    | -   |        | add_ln346          | add  | fabric  | 0       |
+|   sub_ln1512_fu_704_p2                   | -   |        | sub_ln1512         | sub  | fabric  | 0       |
+|   result_V_2_fu_783_p2                   | -   |        | result_V_2         | sub  | fabric  | 0       |
 |   fmul_32ns_32ns_32_4_max_dsp_1_U17      | 3   |        | mul_i1             | fmul | maxdsp  | 3       |
 |   faddfsub_32ns_32ns_32_5_full_dsp_1_U16 | 2   |        | dc_2               | fsub | fulldsp | 4       |
-|   add_ln346_2_fu_845_p2                  | -   |        | add_ln346_2        | add  | fabric  | 0       |
-|   sub_ln1512_2_fu_859_p2                 | -   |        | sub_ln1512_2       | sub  | fabric  | 0       |
-|   result_V_8_fu_944_p2                   | -   |        | result_V_8         | sub  | fabric  | 0       |
-|   add_ln85_fu_957_p2                     | -   |        | add_ln85           | add  | fabric  | 0       |
+|   add_ln346_2_fu_847_p2                  | -   |        | add_ln346_2        | add  | fabric  | 0       |
+|   sub_ln1512_2_fu_861_p2                 | -   |        | sub_ln1512_2       | sub  | fabric  | 0       |
+|   result_V_8_fu_946_p2                   | -   |        | result_V_8         | sub  | fabric  | 0       |
 |  + guitar_effects_Pipeline_2             | 0   |        |                    |      |         |         |
 |    empty_25_fu_56_p2                     | -   |        | empty_25           | add  | fabric  | 0       |
 |  + compression                           | 0   |        |                    |      |         |         |

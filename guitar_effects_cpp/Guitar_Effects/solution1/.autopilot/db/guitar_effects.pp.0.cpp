@@ -6487,22 +6487,22 @@ __attribute__((sdx_kernel("guitar_effects", 0))) void guitar_effects (
 
 
         if (control & 0b1000) {
-         axilite_out +=1 ;
+         axilite_out = axilite_out | 0b1000;
             tmp_int = distortion(tmp_int, distortion_threshold, distortion_clip_factor);
         }
         if (control & 0b0100) {
 
-         axilite_out +=1 ;
+         axilite_out = axilite_out | 0b0100;
             tmp_int = compression(tmp_int, compression_min_threshold, compression_max_threshold, compression_zero_threshold, current_level, compression_buffer, compression_buffer_index, lpf_coefficients);
         }
         if (control & 0b0010) {
 
-         axilite_out +=1 ;
+         axilite_out = axilite_out | 0b0010;
             tmp_int = delay(tmp_int, delay_samples, delay_mult, delay_buffer, delay_buffer_index);
         }
         if (control & 0b0001) {
 
-         axilite_out +=1 ;
+         axilite_out = axilite_out | 0b0001;
          tmp_int = tmp_int;
         }
 

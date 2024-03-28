@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'guitar_effects'
 ================================================================
-* Date:           Wed Mar 27 19:50:55 2024
+* Date:           Wed Mar 27 19:53:43 2024
 
 * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
 * Project:        Guitar_Effects
@@ -363,7 +363,7 @@ ST_37 : Operation 209 [1/1] (0.00ns)   --->   "%delay_buffer_addr_1 = getelement
 ST_37 : Operation 210 [1/1] (0.00ns)   --->   "%br_ln63 = br void %while.body" [guitar_effects.cpp:63]   --->   Operation 210 'br' 'br_ln63' <Predicate = true> <Delay = 0.00>
 
 State 38 <SV = 37> <Delay = 4.18>
-ST_38 : Operation 211 [1/1] (0.00ns)   --->   "%p_load = load i32 %empty" [guitar_effects.cpp:70]   --->   Operation 211 'load' 'p_load' <Predicate = true> <Delay = 0.00>
+ST_38 : Operation 211 [1/1] (0.00ns)   --->   "%p_load = load i32 %empty"   --->   Operation 211 'load' 'p_load' <Predicate = true> <Delay = 0.00>
 ST_38 : Operation 212 [1/1] (0.00ns)   --->   "%specloopname_ln0 = specloopname void @_ssdm_op_SpecLoopName, void @empty_16"   --->   Operation 212 'specloopname' 'specloopname_ln0' <Predicate = true> <Delay = 0.00>
 ST_38 : Operation 213 [1/1] (0.00ns)   --->   "%empty_29 = read i54 @_ssdm_op_Read.axis.volatile.i32P0A.i4P0A.i4P0A.i2P0A.i1P0A.i5P0A.i6P0A, i32 %INPUT_r_V_data_V, i4 %INPUT_r_V_keep_V, i4 %INPUT_r_V_strb_V, i2 %INPUT_r_V_user_V, i1 %INPUT_r_V_last_V, i5 %INPUT_r_V_id_V, i6 %INPUT_r_V_dest_V"   --->   Operation 213 'read' 'empty_29' <Predicate = true> <Delay = 0.00> <CoreInst = "axis">   --->   Core 115 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
 ST_38 : Operation 214 [1/1] (0.00ns)   --->   "%tmp_data_V_1 = extractvalue i54 %empty_29"   --->   Operation 214 'extractvalue' 'tmp_data_V_1' <Predicate = true> <Delay = 0.00>
@@ -374,7 +374,7 @@ ST_38 : Operation 218 [1/1] (0.00ns)   --->   "%tmp_last_V = extractvalue i54 %e
 ST_38 : Operation 219 [1/1] (0.00ns)   --->   "%tmp_id_V = extractvalue i54 %empty_29"   --->   Operation 219 'extractvalue' 'tmp_id_V' <Predicate = true> <Delay = 0.00>
 ST_38 : Operation 220 [1/1] (0.00ns)   --->   "%tmp_dest_V = extractvalue i54 %empty_29"   --->   Operation 220 'extractvalue' 'tmp_dest_V' <Predicate = true> <Delay = 0.00>
 ST_38 : Operation 221 [1/1] (1.70ns)   --->   "%br_ln69 = br i1 %tmp, void %if.end, void %if.then" [guitar_effects.cpp:69]   --->   Operation 221 'br' 'br_ln69' <Predicate = true> <Delay = 1.70>
-ST_38 : Operation 222 [1/1] (2.55ns)   --->   "%add_ln70 = add i32 %p_load, i32 1" [guitar_effects.cpp:70]   --->   Operation 222 'add' 'add_ln70' <Predicate = (tmp)> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_38 : Operation 222 [1/1] (0.00ns)   --->   "%or_ln70 = or i32 %p_load, i32 8" [guitar_effects.cpp:70]   --->   Operation 222 'or' 'or_ln70' <Predicate = (tmp)> <Delay = 0.00>
 ST_38 : Operation 223 [1/1] (2.47ns)   --->   "%icmp_ln104 = icmp_sgt  i32 %tmp_data_V_1, i32 %distortion_threshold_read" [guitar_effects.cpp:104]   --->   Operation 223 'icmp' 'icmp_ln104' <Predicate = (tmp)> <Delay = 2.47> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 ST_38 : Operation 224 [1/1] (0.00ns)   --->   "%br_ln104 = br i1 %icmp_ln104, void %if.else.i, void %if.then.i" [guitar_effects.cpp:104]   --->   Operation 224 'br' 'br_ln104' <Predicate = (tmp)> <Delay = 0.00>
 ST_38 : Operation 225 [1/1] (2.47ns)   --->   "%icmp_ln106 = icmp_slt  i32 %tmp_data_V_1, i32 %negative_threshold" [guitar_effects.cpp:106]   --->   Operation 225 'icmp' 'icmp_ln106' <Predicate = (tmp & !icmp_ln104)> <Delay = 2.47> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
@@ -531,14 +531,14 @@ ST_74 : Operation 303 [1/1] (0.69ns)   --->   "%result_V = select i1 %p_Result_s
 ST_74 : Operation 304 [1/1] (1.70ns)   --->   "%br_ln106 = br void %if.end" [guitar_effects.cpp:106]   --->   Operation 304 'br' 'br_ln106' <Predicate = true> <Delay = 1.70>
 
 State 75 <SV = 56> <Delay = 6.50>
-ST_75 : Operation 305 [1/1] (0.00ns)   --->   "%empty_30 = phi i32 %add_ln70, void %if.then.i, i32 %add_ln70, void %if.then5.i, i32 %p_load, void %while.body, i32 %add_ln70, void %if.else.i" [guitar_effects.cpp:70]   --->   Operation 305 'phi' 'empty_30' <Predicate = true> <Delay = 0.00>
+ST_75 : Operation 305 [1/1] (0.00ns)   --->   "%empty_30 = phi i32 %or_ln70, void %if.then.i, i32 %or_ln70, void %if.then5.i, i32 %p_load, void %while.body, i32 %or_ln70, void %if.else.i" [guitar_effects.cpp:70]   --->   Operation 305 'phi' 'empty_30' <Predicate = true> <Delay = 0.00>
 ST_75 : Operation 306 [1/1] (0.00ns)   --->   "%tmp_int = phi i32 %result_V, void %if.then.i, i32 %result_V_9, void %if.then5.i, i32 %tmp_data_V_1, void %while.body, i32 %tmp_data_V_1, void %if.else.i"   --->   Operation 306 'phi' 'tmp_int' <Predicate = true> <Delay = 0.00>
 ST_75 : Operation 307 [1/1] (1.58ns)   --->   "%br_ln73 = br i1 %tmp_2, void %if.end10, void %if.then6" [guitar_effects.cpp:73]   --->   Operation 307 'br' 'br_ln73' <Predicate = true> <Delay = 1.58>
 ST_75 : Operation 308 [1/1] (0.00ns)   --->   "%current_level_1_load = load i32 %current_level_1" [guitar_effects.cpp:76]   --->   Operation 308 'load' 'current_level_1_load' <Predicate = (tmp_2)> <Delay = 0.00>
 ST_75 : Operation 309 [2/2] (6.50ns)   --->   "%call_ret = call i64 @compression, i32 %tmp_int, i32 %compression_min_threshold_read, i32 %compression_max_threshold_read, i32 %compression_zero_threshold_read, i32 %current_level_1_load, i32 %compression_buffer" [guitar_effects.cpp:76]   --->   Operation 309 'call' 'call_ret' <Predicate = (tmp_2)> <Delay = 6.50> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 76 <SV = 57> <Delay = 6.54>
-ST_76 : Operation 310 [1/1] (2.55ns)   --->   "%add_ln75 = add i32 %empty_30, i32 1" [guitar_effects.cpp:75]   --->   Operation 310 'add' 'add_ln75' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_76 : Operation 310 [1/1] (0.00ns)   --->   "%or_ln75 = or i32 %empty_30, i32 4" [guitar_effects.cpp:75]   --->   Operation 310 'or' 'or_ln75' <Predicate = true> <Delay = 0.00>
 ST_76 : Operation 311 [1/2] (4.95ns)   --->   "%call_ret = call i64 @compression, i32 %tmp_int, i32 %compression_min_threshold_read, i32 %compression_max_threshold_read, i32 %compression_zero_threshold_read, i32 %current_level_1_load, i32 %compression_buffer" [guitar_effects.cpp:76]   --->   Operation 311 'call' 'call_ret' <Predicate = true> <Delay = 4.95> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 ST_76 : Operation 312 [1/1] (0.00ns)   --->   "%tmp_int_2 = extractvalue i64 %call_ret" [guitar_effects.cpp:76]   --->   Operation 312 'extractvalue' 'tmp_int_2' <Predicate = true> <Delay = 0.00>
 ST_76 : Operation 313 [1/1] (0.00ns)   --->   "%current_level = extractvalue i64 %call_ret" [guitar_effects.cpp:76]   --->   Operation 313 'extractvalue' 'current_level' <Predicate = true> <Delay = 0.00>
@@ -546,7 +546,7 @@ ST_76 : Operation 314 [1/1] (1.58ns)   --->   "%store_ln77 = store i32 %current_
 ST_76 : Operation 315 [1/1] (1.58ns)   --->   "%br_ln77 = br void %if.end10" [guitar_effects.cpp:77]   --->   Operation 315 'br' 'br_ln77' <Predicate = true> <Delay = 1.58>
 
 State 77 <SV = 58> <Delay = 3.25>
-ST_77 : Operation 316 [1/1] (0.00ns)   --->   "%empty_31 = phi i32 %add_ln75, void %if.then6, i32 %empty_30, void %if.end" [guitar_effects.cpp:75]   --->   Operation 316 'phi' 'empty_31' <Predicate = true> <Delay = 0.00>
+ST_77 : Operation 316 [1/1] (0.00ns)   --->   "%empty_31 = phi i32 %or_ln75, void %if.then6, i32 %empty_30, void %if.end" [guitar_effects.cpp:75]   --->   Operation 316 'phi' 'empty_31' <Predicate = true> <Delay = 0.00>
 ST_77 : Operation 317 [1/1] (0.00ns)   --->   "%tmp_int_3 = phi i32 %tmp_int_2, void %if.then6, i32 %tmp_int, void %if.end"   --->   Operation 317 'phi' 'tmp_int_3' <Predicate = true> <Delay = 0.00>
 ST_77 : Operation 318 [1/1] (1.58ns)   --->   "%br_ln78 = br i1 %tmp_3, void %if.end18, void %if.then14" [guitar_effects.cpp:78]   --->   Operation 318 'br' 'br_ln78' <Predicate = true> <Delay = 1.58>
 ST_77 : Operation 319 [2/2] (3.25ns)   --->   "%delay_buffer_load = load i16 %delay_buffer_addr_1" [guitar_effects.cpp:167]   --->   Operation 319 'load' 'delay_buffer_load' <Predicate = (tmp_3)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 44100> <RAM>
@@ -630,7 +630,7 @@ ST_95 : Operation 360 [1/1] (0.00ns) (grouped into LUT with out node val_2)   --
 ST_95 : Operation 361 [1/1] (4.42ns) (out node of the LUT)   --->   "%val_2 = select i1 %isNeg_2, i32 %zext_ln818_2, i32 %tmp_7"   --->   Operation 361 'select' 'val_2' <Predicate = true> <Delay = 4.42> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 
 State 96 <SV = 77> <Delay = 6.50>
-ST_96 : Operation 362 [1/1] (2.55ns)   --->   "%add_ln80 = add i32 %empty_31, i32 1" [guitar_effects.cpp:80]   --->   Operation 362 'add' 'add_ln80' <Predicate = (tmp_3)> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_96 : Operation 362 [1/1] (0.00ns)   --->   "%or_ln80 = or i32 %empty_31, i32 2" [guitar_effects.cpp:80]   --->   Operation 362 'or' 'or_ln80' <Predicate = (tmp_3)> <Delay = 0.00>
 ST_96 : Operation 363 [1/1] (2.55ns)   --->   "%result_V_8 = sub i32 0, i32 %val_2"   --->   Operation 363 'sub' 'result_V_8' <Predicate = (tmp_3 & p_Result_4)> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_96 : Operation 364 [1/1] (0.69ns)   --->   "%result_V_10 = select i1 %p_Result_4, i32 %result_V_8, i32 %val_2" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:59]   --->   Operation 364 'select' 'result_V_10' <Predicate = (tmp_3)> <Delay = 0.69> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 ST_96 : Operation 365 [1/1] (3.25ns)   --->   "%store_ln170 = store i32 %result_V_10, i16 %delay_buffer_addr" [guitar_effects.cpp:170]   --->   Operation 365 'store' 'store_ln170' <Predicate = (tmp_3)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 44100> <RAM>
@@ -638,10 +638,10 @@ ST_96 : Operation 366 [1/1] (1.58ns)   --->   "%br_ln82 = br void %if.end18" [gu
 ST_96 : Operation 367 [1/1] (0.00ns)   --->   "%tmp_int_6 = phi i32 %result_V_10, void %if.then14, i32 %tmp_int_3, void %if.end10"   --->   Operation 367 'phi' 'tmp_int_6' <Predicate = true> <Delay = 0.00>
 ST_96 : Operation 368 [2/2] (0.00ns)   --->   "%write_ln304 = write void @_ssdm_op_Write.axis.volatile.i32P0A.i4P0A.i4P0A.i2P0A.i1P0A.i5P0A.i6P0A, i32 %OUTPUT_r_V_data_V, i4 %OUTPUT_r_V_keep_V, i4 %OUTPUT_r_V_strb_V, i2 %OUTPUT_r_V_user_V, i1 %OUTPUT_r_V_last_V, i5 %OUTPUT_r_V_id_V, i6 %OUTPUT_r_V_dest_V, i32 %tmp_int_6, i4 %tmp_keep_V, i4 %tmp_strb_V, i2 %tmp_user_V, i1 %tmp_last_V, i5 %tmp_id_V, i6 %tmp_dest_V"   --->   Operation 368 'write' 'write_ln304' <Predicate = true> <Delay = 0.00> <CoreInst = "axis">   --->   Core 115 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
 
-State 97 <SV = 78> <Delay = 4.83>
-ST_97 : Operation 369 [1/1] (0.00ns)   --->   "%empty_32 = phi i32 %add_ln80, void %if.then14, i32 %empty_31, void %if.end10" [guitar_effects.cpp:80]   --->   Operation 369 'phi' 'empty_32' <Predicate = true> <Delay = 0.00>
-ST_97 : Operation 370 [1/1] (2.55ns)   --->   "%add_ln85 = add i32 %empty_32, i32 1" [guitar_effects.cpp:85]   --->   Operation 370 'add' 'add_ln85' <Predicate = (trunc_ln15)> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_97 : Operation 371 [1/1] (0.69ns)   --->   "%select_ln83 = select i1 %trunc_ln15, i32 %add_ln85, i32 %empty_32" [guitar_effects.cpp:83]   --->   Operation 371 'select' 'select_ln83' <Predicate = true> <Delay = 0.69> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+State 97 <SV = 78> <Delay = 2.28>
+ST_97 : Operation 369 [1/1] (0.00ns)   --->   "%empty_32 = phi i32 %or_ln80, void %if.then14, i32 %empty_31, void %if.end10" [guitar_effects.cpp:80]   --->   Operation 369 'phi' 'empty_32' <Predicate = true> <Delay = 0.00>
+ST_97 : Operation 370 [1/1] (0.00ns) (grouped into LUT with out node select_ln83)   --->   "%or_ln85 = or i32 %empty_32, i32 1" [guitar_effects.cpp:85]   --->   Operation 370 'or' 'or_ln85' <Predicate = (trunc_ln15)> <Delay = 0.00>
+ST_97 : Operation 371 [1/1] (0.69ns) (out node of the LUT)   --->   "%select_ln83 = select i1 %trunc_ln15, i32 %or_ln85, i32 %empty_32" [guitar_effects.cpp:83]   --->   Operation 371 'select' 'select_ln83' <Predicate = true> <Delay = 0.69> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 ST_97 : Operation 372 [1/2] (0.00ns)   --->   "%write_ln304 = write void @_ssdm_op_Write.axis.volatile.i32P0A.i4P0A.i4P0A.i2P0A.i1P0A.i5P0A.i6P0A, i32 %OUTPUT_r_V_data_V, i4 %OUTPUT_r_V_keep_V, i4 %OUTPUT_r_V_strb_V, i2 %OUTPUT_r_V_user_V, i1 %OUTPUT_r_V_last_V, i5 %OUTPUT_r_V_id_V, i6 %OUTPUT_r_V_dest_V, i32 %tmp_int_6, i4 %tmp_keep_V, i4 %tmp_strb_V, i2 %tmp_user_V, i1 %tmp_last_V, i5 %tmp_id_V, i6 %tmp_dest_V"   --->   Operation 372 'write' 'write_ln304' <Predicate = true> <Delay = 0.00> <CoreInst = "axis">   --->   Core 115 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
 ST_97 : Operation 373 [1/1] (0.00ns)   --->   "%br_ln91 = br i1 %tmp_last_V, void %if.end29, void %if.then28" [guitar_effects.cpp:91]   --->   Operation 373 'br' 'br_ln91' <Predicate = true> <Delay = 0.00>
 ST_97 : Operation 374 [1/1] (1.58ns)   --->   "%store_ln63 = store i32 %select_ln83, i32 %empty" [guitar_effects.cpp:63]   --->   Operation 374 'store' 'store_ln63' <Predicate = (!tmp_last_V)> <Delay = 1.58>
@@ -809,7 +809,7 @@ The critical path consists of the following:
 The critical path consists of the following:
 	axis read operation ('empty_29') on port 'INPUT_r_V_data_V' [100]  (0 ns)
 	'icmp' operation ('icmp_ln106', guitar_effects.cpp:106) [114]  (2.47 ns)
-	multiplexor before 'phi' operation ('empty_30', guitar_effects.cpp:70) with incoming values : ('p_load', guitar_effects.cpp:70) ('add_ln70', guitar_effects.cpp:70) [173]  (1.71 ns)
+	multiplexor before 'phi' operation ('empty_30', guitar_effects.cpp:70) with incoming values : ('p_load') ('or_ln70', guitar_effects.cpp:70) [173]  (1.71 ns)
 
  <State 39>: 6.41ns
 The critical path consists of the following:
@@ -873,12 +873,12 @@ The critical path consists of the following:
 
  <State 54>: 2.88ns
 The critical path consists of the following:
-	'sub' operation ('sub_ln1512_1') [130]  (1.92 ns)
+	'add' operation ('sh', r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:346) [128]  (1.92 ns)
 	'select' operation ('ush') [132]  (0.968 ns)
 
  <State 55>: 4.42ns
 The critical path consists of the following:
-	'lshr' operation ('r.V') [135]  (0 ns)
+	'shl' operation ('r.V') [136]  (0 ns)
 	'select' operation ('val') [140]  (4.42 ns)
 
  <State 56>: 3.25ns
@@ -948,12 +948,12 @@ The critical path consists of the following:
 
  <State 72>: 2.88ns
 The critical path consists of the following:
-	'add' operation ('sh', r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:346) [156]  (1.92 ns)
+	'sub' operation ('sub_ln1512') [158]  (1.92 ns)
 	'select' operation ('ush') [160]  (0.968 ns)
 
  <State 73>: 4.42ns
 The critical path consists of the following:
-	'lshr' operation ('r.V') [163]  (0 ns)
+	'shl' operation ('r.V') [164]  (0 ns)
 	'select' operation ('val') [168]  (4.42 ns)
 
  <State 74>: 3.25ns
@@ -1041,12 +1041,12 @@ The critical path consists of the following:
 
  <State 94>: 2.88ns
 The critical path consists of the following:
-	'add' operation ('sh', r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:346) [202]  (1.92 ns)
+	'sub' operation ('sub_ln1512_2') [204]  (1.92 ns)
 	'select' operation ('ush') [206]  (0.968 ns)
 
  <State 95>: 4.42ns
 The critical path consists of the following:
-	'lshr' operation ('r.V') [209]  (0 ns)
+	'shl' operation ('r.V') [210]  (0 ns)
 	'select' operation ('val') [214]  (4.42 ns)
 
  <State 96>: 6.5ns
@@ -1055,10 +1055,9 @@ The critical path consists of the following:
 	'select' operation ('result.V', r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:59) [216]  (0.698 ns)
 	'store' operation ('store_ln170', guitar_effects.cpp:170) of variable 'result.V', r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:59 on array 'delay_buffer', guitar_effects.cpp:56 [217]  (3.25 ns)
 
- <State 97>: 4.84ns
+ <State 97>: 2.29ns
 The critical path consists of the following:
-	'phi' operation ('empty_32', guitar_effects.cpp:80) with incoming values : ('p_load', guitar_effects.cpp:70) ('add_ln70', guitar_effects.cpp:70) ('add_ln75', guitar_effects.cpp:75) ('add_ln80', guitar_effects.cpp:80) [220]  (0 ns)
-	'add' operation ('add_ln85', guitar_effects.cpp:85) [222]  (2.55 ns)
+	'phi' operation ('empty_32', guitar_effects.cpp:80) with incoming values : ('p_load') ('or_ln70', guitar_effects.cpp:70) ('or_ln75', guitar_effects.cpp:75) ('or_ln80', guitar_effects.cpp:80) [220]  (0 ns)
 	'select' operation ('select_ln83', guitar_effects.cpp:83) [223]  (0.698 ns)
 	'store' operation ('store_ln63', guitar_effects.cpp:63) of variable 'select_ln83', guitar_effects.cpp:83 on local variable 'empty' [227]  (1.59 ns)
 

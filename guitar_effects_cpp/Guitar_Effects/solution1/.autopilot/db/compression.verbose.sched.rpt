@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'compression'
 ================================================================
-* Date:           Wed Mar 27 19:50:54 2024
+* Date:           Wed Mar 27 19:53:42 2024
 
 * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
 * Project:        Guitar_Effects
@@ -658,7 +658,7 @@ The critical path consists of the following:
 
  <State 47>: 2.88ns
 The critical path consists of the following:
-	'sub' operation ('sub_ln1512_3') [40]  (1.92 ns)
+	'add' operation ('sh', r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:346) [38]  (1.92 ns)
 	'select' operation ('ush') [42]  (0.968 ns)
 
  <State 48>: 4.42ns
@@ -780,7 +780,7 @@ The critical path consists of the following:
 
  <State 76>: 4.42ns
 The critical path consists of the following:
-	'shl' operation ('r.V') [77]  (0 ns)
+	'lshr' operation ('r.V') [76]  (0 ns)
 	'select' operation ('val') [81]  (4.42 ns)
 
  <State 77>: 3.25ns

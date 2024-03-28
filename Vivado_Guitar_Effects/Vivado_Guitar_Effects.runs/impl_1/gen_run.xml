@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1711582108">
+<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1711583749">
   <File Type="ROUTE-PWR" Name="guitar_effects_design_wrapper_power_routed.rpt"/>
   <File Type="PA-TCL" Name="guitar_effects_design_wrapper.tcl"/>
   <File Type="BITSTR-MMI" Name="guitar_effects_design_wrapper.mmi"/>
@@ -151,8 +151,8 @@
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="guitar_effects_design_guitar_effects_0_15"/>
   <BlockFileSet Type="BlockSrcs" Name="guitar_effects_design_axi_dma_1"/>
   <BlockFileSet Type="BlockSrcs" Name="guitar_effects_design_processing_system7_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="guitar_effects_design_xbar_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="guitar_effects_design_guitar_effects_0_14"/>
 </GenRun>

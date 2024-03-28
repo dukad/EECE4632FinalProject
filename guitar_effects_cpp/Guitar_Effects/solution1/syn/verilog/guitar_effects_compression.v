@@ -25,13 +25,13 @@ module guitar_effects_compression (
         values_buffer_d0,
         ap_return_0,
         ap_return_1,
-        grp_fu_380_p_din0,
-        grp_fu_380_p_din1,
-        grp_fu_380_p_dout0,
-        grp_fu_380_p_ce,
-        grp_fu_384_p_din0,
-        grp_fu_384_p_dout0,
-        grp_fu_384_p_ce
+        grp_fu_382_p_din0,
+        grp_fu_382_p_din1,
+        grp_fu_382_p_dout0,
+        grp_fu_382_p_ce,
+        grp_fu_386_p_din0,
+        grp_fu_386_p_dout0,
+        grp_fu_386_p_ce
 );
 
 parameter    ap_ST_fsm_state1 = 77'd1;
@@ -129,13 +129,13 @@ output   values_buffer_we0;
 output  [31:0] values_buffer_d0;
 output  [31:0] ap_return_0;
 output  [31:0] ap_return_1;
-output  [31:0] grp_fu_380_p_din0;
-output  [31:0] grp_fu_380_p_din1;
-input  [31:0] grp_fu_380_p_dout0;
-output   grp_fu_380_p_ce;
-output  [31:0] grp_fu_384_p_din0;
-input  [31:0] grp_fu_384_p_dout0;
-output   grp_fu_384_p_ce;
+output  [31:0] grp_fu_382_p_din0;
+output  [31:0] grp_fu_382_p_din1;
+input  [31:0] grp_fu_382_p_dout0;
+output   grp_fu_382_p_ce;
+output  [31:0] grp_fu_386_p_din0;
+input  [31:0] grp_fu_386_p_dout0;
+output   grp_fu_386_p_ce;
 
 reg ap_done;
 reg ap_idle;
@@ -452,7 +452,7 @@ end
 
 always @ (posedge ap_clk) begin
     if (((1'b1 == ap_CS_fsm_state70) | (1'b1 == ap_CS_fsm_state54) | (1'b1 == ap_CS_fsm_state42))) begin
-        reg_125 <= grp_fu_384_p_dout0;
+        reg_125 <= grp_fu_386_p_dout0;
     end
 end
 
@@ -464,7 +464,7 @@ end
 
 always @ (posedge ap_clk) begin
     if (((1'b1 == ap_CS_fsm_state74) | (1'b1 == ap_CS_fsm_state46))) begin
-        reg_138 <= grp_fu_380_p_dout0;
+        reg_138 <= grp_fu_382_p_dout0;
     end
 end
 
@@ -1055,15 +1055,15 @@ assign data_V_3_fu_207_p1 = reg_138;
 
 assign data_V_fu_353_p1 = reg_138;
 
-assign grp_fu_380_p_ce = 1'b1;
+assign grp_fu_382_p_ce = 1'b1;
 
-assign grp_fu_380_p_din0 = grp_fu_109_p0;
+assign grp_fu_382_p_din0 = grp_fu_109_p0;
 
-assign grp_fu_380_p_din1 = grp_fu_109_p1;
+assign grp_fu_382_p_din1 = grp_fu_109_p1;
 
-assign grp_fu_384_p_ce = 1'b1;
+assign grp_fu_386_p_ce = 1'b1;
 
-assign grp_fu_384_p_din0 = grp_fu_117_p0;
+assign grp_fu_386_p_din0 = grp_fu_117_p0;
 
 assign icmp_ln138_fu_165_p2 = (($signed(current_level_read) > $signed(max_threshold)) ? 1'b1 : 1'b0);
 

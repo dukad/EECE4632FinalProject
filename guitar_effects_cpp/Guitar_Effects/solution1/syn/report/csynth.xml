@@ -47,8 +47,8 @@
         <Resources>
             <BRAM_18K>129</BRAM_18K>
             <DSP>5</DSP>
-            <FF>3076</FF>
-            <LUT>6757</LUT>
+            <FF>3075</FF>
+            <LUT>6729</LUT>
             <URAM>0</URAM>
         </Resources>
         <AvailableResources>
@@ -491,21 +491,21 @@
             <ModuleName>guitar_effects</ModuleName>
             <InstancesList>
                 <Instance>
-                    <InstName>grp_guitar_effects_Pipeline_2_fu_359</InstName>
+                    <InstName>grp_guitar_effects_Pipeline_2_fu_361</InstName>
                     <ModuleName>guitar_effects_Pipeline_2</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>359</ID>
+                    <ID>361</ID>
                     <BindInstances>empty_25_fu_56_p2</BindInstances>
                 </Instance>
                 <Instance>
-                    <InstName>grp_compression_fu_364</InstName>
+                    <InstName>grp_compression_fu_366</InstName>
                     <ModuleName>compression</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>364</ID>
+                    <ID>366</ID>
                     <BindInstances>sub_ln120_fu_150_p2 add_ln346_3_fu_237_p2 sub_ln1512_3_fu_251_p2 result_V_16_fu_330_p2 fdiv_32ns_32ns_32_16_no_dsp_1_U3 add_ln346_fu_383_p2 sub_ln1512_fu_397_p2 result_V_12_fu_476_p2</BindInstances>
                 </Instance>
             </InstancesList>
-            <BindInstances>delay_buffer_U negative_threshold_fu_453_p2 grp_fu_447_p0 add_ln70_fu_498_p2 add_ln107_fu_514_p2 fmul_32ns_32ns_32_4_max_dsp_1_U17 faddfsub_32ns_32ns_32_5_full_dsp_1_U16 add_ln346_1_fu_554_p2 sub_ln1512_1_fu_568_p2 result_V_5_fu_647_p2 sub_ln105_fu_519_p2 fmul_32ns_32ns_32_4_max_dsp_1_U17 faddfsub_32ns_32ns_32_5_full_dsp_1_U16 add_ln346_fu_688_p2 sub_ln1512_fu_702_p2 result_V_2_fu_781_p2 add_ln75_fu_796_p2 add_ln80_fu_938_p2 fmul_32ns_32ns_32_4_max_dsp_1_U17 faddfsub_32ns_32ns_32_5_full_dsp_1_U16 add_ln346_2_fu_845_p2 sub_ln1512_2_fu_859_p2 result_V_8_fu_944_p2 add_ln85_fu_957_p2 compression_buffer_U</BindInstances>
+            <BindInstances>delay_buffer_U negative_threshold_fu_455_p2 grp_fu_449_p0 add_ln107_fu_516_p2 fmul_32ns_32ns_32_4_max_dsp_1_U17 faddfsub_32ns_32ns_32_5_full_dsp_1_U16 add_ln346_1_fu_556_p2 sub_ln1512_1_fu_570_p2 result_V_5_fu_649_p2 sub_ln105_fu_521_p2 fmul_32ns_32ns_32_4_max_dsp_1_U17 faddfsub_32ns_32ns_32_5_full_dsp_1_U16 add_ln346_fu_690_p2 sub_ln1512_fu_704_p2 result_V_2_fu_783_p2 fmul_32ns_32ns_32_4_max_dsp_1_U17 faddfsub_32ns_32ns_32_5_full_dsp_1_U16 add_ln346_2_fu_847_p2 sub_ln1512_2_fu_861_p2 result_V_8_fu_946_p2 compression_buffer_U</BindInstances>
         </TopModule>
     </RTLDesignHierarchy>
     <ModuleInformation>
@@ -651,7 +651,7 @@
                         <PipelineDepth>5 ~ 90</PipelineDepth>
                         <PipelineType>no</PipelineType>
                         <InstanceList>
-                            <Instance>grp_compression_fu_364</Instance>
+                            <Instance>grp_compression_fu_366</Instance>
                         </InstanceList>
                     </VITIS_LOOP_63_2>
                 </SummaryOfLoopLatency>
@@ -664,10 +664,10 @@
                     <DSP>5</DSP>
                     <AVAIL_DSP>220</AVAIL_DSP>
                     <UTIL_DSP>2</UTIL_DSP>
-                    <FF>3076</FF>
+                    <FF>3075</FF>
                     <AVAIL_FF>106400</AVAIL_FF>
                     <UTIL_FF>2</UTIL_FF>
-                    <LUT>6757</LUT>
+                    <LUT>6729</LUT>
                     <AVAIL_LUT>53200</AVAIL_LUT>
                     <UTIL_LUT>12</UTIL_LUT>
                     <URAM>0</URAM>
@@ -677,29 +677,25 @@
             </AreaEstimates>
             <BindNodes>
                 <BindNode BINDTYPE="storage" BRAM="128" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="delay_buffer_U" SOURCE="guitar_effects.cpp:56" URAM="0" VARIABLE="delay_buffer"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="negative_threshold_fu_453_p2" SOURCE="guitar_effects.cpp:15" URAM="0" VARIABLE="negative_threshold"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="grp_fu_447_p0" SOURCE="guitar_effects.cpp:15" URAM="0" VARIABLE="sub_i135"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_63_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln70_fu_498_p2" SOURCE="guitar_effects.cpp:70" URAM="0" VARIABLE="add_ln70"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_63_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln107_fu_514_p2" SOURCE="guitar_effects.cpp:107" URAM="0" VARIABLE="add_ln107"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="negative_threshold_fu_455_p2" SOURCE="guitar_effects.cpp:15" URAM="0" VARIABLE="negative_threshold"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="grp_fu_449_p0" SOURCE="guitar_effects.cpp:15" URAM="0" VARIABLE="sub_i135"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_63_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln107_fu_516_p2" SOURCE="guitar_effects.cpp:107" URAM="0" VARIABLE="add_ln107"/>
                 <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_63_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U17" SOURCE="guitar_effects.cpp:107" URAM="0" VARIABLE="mul8_i"/>
                 <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fsub" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_63_2" OPTYPE="fsub" PRAGMA="" RTLNAME="faddfsub_32ns_32ns_32_5_full_dsp_1_U16" SOURCE="guitar_effects.cpp:107" URAM="0" VARIABLE="dc_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_63_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln346_1_fu_554_p2" SOURCE="r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:346" URAM="0" VARIABLE="add_ln346_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_63_2" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln1512_1_fu_568_p2" SOURCE="r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_base.h:1512" URAM="0" VARIABLE="sub_ln1512_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_63_2" OPTYPE="sub" PRAGMA="" RTLNAME="result_V_5_fu_647_p2" SOURCE="r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_base.h:813" URAM="0" VARIABLE="result_V_5"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_63_2" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln105_fu_519_p2" SOURCE="guitar_effects.cpp:105" URAM="0" VARIABLE="sub_ln105"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_63_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln346_1_fu_556_p2" SOURCE="r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:346" URAM="0" VARIABLE="add_ln346_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_63_2" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln1512_1_fu_570_p2" SOURCE="r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_base.h:1512" URAM="0" VARIABLE="sub_ln1512_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_63_2" OPTYPE="sub" PRAGMA="" RTLNAME="result_V_5_fu_649_p2" SOURCE="r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_base.h:813" URAM="0" VARIABLE="result_V_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_63_2" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln105_fu_521_p2" SOURCE="guitar_effects.cpp:105" URAM="0" VARIABLE="sub_ln105"/>
                 <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_63_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U17" SOURCE="guitar_effects.cpp:105" URAM="0" VARIABLE="mul_i"/>
                 <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fsub" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_63_2" OPTYPE="fsub" PRAGMA="" RTLNAME="faddfsub_32ns_32ns_32_5_full_dsp_1_U16" SOURCE="guitar_effects.cpp:105" URAM="0" VARIABLE="dc"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_63_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln346_fu_688_p2" SOURCE="r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:346" URAM="0" VARIABLE="add_ln346"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_63_2" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln1512_fu_702_p2" SOURCE="r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_base.h:1512" URAM="0" VARIABLE="sub_ln1512"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_63_2" OPTYPE="sub" PRAGMA="" RTLNAME="result_V_2_fu_781_p2" SOURCE="r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_base.h:813" URAM="0" VARIABLE="result_V_2"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_63_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln75_fu_796_p2" SOURCE="guitar_effects.cpp:75" URAM="0" VARIABLE="add_ln75"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_63_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln80_fu_938_p2" SOURCE="guitar_effects.cpp:80" URAM="0" VARIABLE="add_ln80"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_63_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln346_fu_690_p2" SOURCE="r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:346" URAM="0" VARIABLE="add_ln346"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_63_2" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln1512_fu_704_p2" SOURCE="r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_base.h:1512" URAM="0" VARIABLE="sub_ln1512"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_63_2" OPTYPE="sub" PRAGMA="" RTLNAME="result_V_2_fu_783_p2" SOURCE="r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_base.h:813" URAM="0" VARIABLE="result_V_2"/>
                 <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_63_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U17" SOURCE="guitar_effects.cpp:167" URAM="0" VARIABLE="mul_i1"/>
                 <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fsub" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="VITIS_LOOP_63_2" OPTYPE="fsub" PRAGMA="" RTLNAME="faddfsub_32ns_32ns_32_5_full_dsp_1_U16" SOURCE="guitar_effects.cpp:167" URAM="0" VARIABLE="dc_2"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_63_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln346_2_fu_845_p2" SOURCE="r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:346" URAM="0" VARIABLE="add_ln346_2"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_63_2" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln1512_2_fu_859_p2" SOURCE="r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_base.h:1512" URAM="0" VARIABLE="sub_ln1512_2"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_63_2" OPTYPE="sub" PRAGMA="" RTLNAME="result_V_8_fu_944_p2" SOURCE="r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_base.h:813" URAM="0" VARIABLE="result_V_8"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_63_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln85_fu_957_p2" SOURCE="guitar_effects.cpp:85" URAM="0" VARIABLE="add_ln85"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_63_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln346_2_fu_847_p2" SOURCE="r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:346" URAM="0" VARIABLE="add_ln346_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_63_2" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln1512_2_fu_861_p2" SOURCE="r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_base.h:1512" URAM="0" VARIABLE="sub_ln1512_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_63_2" OPTYPE="sub" PRAGMA="" RTLNAME="result_V_8_fu_946_p2" SOURCE="r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_base.h:813" URAM="0" VARIABLE="result_V_8"/>
                 <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="compression_buffer_U" SOURCE="" URAM="0" VARIABLE="compression_buffer"/>
             </BindNodes>
         </Module>
