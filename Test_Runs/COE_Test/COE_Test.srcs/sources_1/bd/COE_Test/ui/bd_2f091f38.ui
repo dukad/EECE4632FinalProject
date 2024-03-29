@@ -1,0 +1,41 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.722553",
+   "Default View_TopLeft":"464,-1085",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+#  -string -flagsOSRD
+preplace port DDR -pg 1 -lvl 6 -x 2660 -y -150 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 6 -x 2660 -y -130 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 1 -x 310 -y -100 -defaultsOSRD
+preplace inst rst_ps7_0_100M -pg 1 -lvl 2 -x 710 -y -250 -defaultsOSRD
+preplace inst axi_mem_intercon -pg 1 -lvl 3 -x 1410 -y -350 -defaultsOSRD
+preplace inst ps7_0_axi_periph -pg 1 -lvl 3 -x 1410 -y -20 -defaultsOSRD
+preplace inst axi_bram_ctrl_0 -pg 1 -lvl 4 -x 1810 -y -230 -defaultsOSRD
+preplace inst axi_dma_0 -pg 1 -lvl 4 -x 1810 -y -860 -defaultsOSRD
+preplace inst blk_mem_gen_0 -pg 1 -lvl 5 -x 2160 -y -230 -defaultsOSRD
+preplace inst equalizer_0 -pg 1 -lvl 2 -x 710 -y -640 -defaultsOSRD
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 4 20 10 520 -390 910 -500 1600
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 1 1 530 -270n
+preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 1 3 540 -380 880 -200 1590
+preplace netloc processing_system7_0_DDR 1 1 5 510J -140 900 -150 N -150 N -150 N
+preplace netloc processing_system7_0_FIXED_IO 1 1 5 NJ -130 930 -140 N -140 N -140 2290
+preplace netloc axi_dma_0_M_AXI_MM2S 1 2 3 920 -680 N -680 2000
+preplace netloc axi_mem_intercon_M00_AXI 1 0 4 20 -210 540J -150 890J -160 1560
+preplace netloc processing_system7_0_M_AXI_GP0 1 1 2 NJ -90 890
+preplace netloc ps7_0_axi_periph_M00_AXI 1 3 1 1570 -910n
+preplace netloc axi_dma_0_M_AXI_S2MM 1 2 3 930 -670 N -670 1990
+preplace netloc axi_bram_ctrl_0_BRAM_PORTA 1 4 1 NJ -230
+preplace netloc equalizer_0_m_axi_gmem 1 2 2 N -660 1580
+preplace netloc equalizer_0_SIGNAL_OUT 1 2 2 910 -890 N
+preplace netloc axi_dma_0_M_AXIS_MM2S 1 1 4 520 -730 N -730 N -730 1980
+levelinfo -pg 1 0 310 710 1410 1810 2160 2660
+pagesize -pg 1 -db -bbox -sgen 0 -980 2780 200
+"
+}
+{
+   "da_axi4_cnt":"6",
+   "da_bram_cntlr_cnt":"1",
+   "da_clkrst_cnt":"1",
+   "da_ps7_cnt":"1"
+}

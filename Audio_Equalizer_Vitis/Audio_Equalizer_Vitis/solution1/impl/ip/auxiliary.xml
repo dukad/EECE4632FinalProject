@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="equalizer" xd:componentRef="equalizer" xd:initiationInterval="2" xd:clockPeriod="10" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="equalizer" xd:componentRef="equalizer" xd:initiationInterval="x" xd:clockPeriod="40" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
   <xd:controlReg xd:name="control" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:type="generic_axi_lite" xd:offset="0x0"/>
   <xd:arg xd:name="SIGNAL_IN" xd:originalName="SIGNAL_IN" xd:direction="in" xd:interfaceRef="SIGNAL_IN" xd:busTypeRef="axis" xd:dataWidth="32"/>
   <xd:arg xd:name="SIGNAL_OUT" xd:originalName="SIGNAL_OUT" xd:direction="out" xd:interfaceRef="SIGNAL_OUT" xd:busTypeRef="axis" xd:dataWidth="32"/>
-  <xd:arg xd:name="*(lowfreq_coefs)" xd:originalName="lowfreq_coefs" xd:direction="inout" xd:interfaceRef="m_axi_gmem" xd:busTypeRef="aximm" xd:dataWidth="32" xd:bufferDirection="unused"/>
-  <xd:arg xd:name="lowfreq_coefs" xd:originalName="lowfreq_coefs" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:offset="0x10" xd:dataWidth="32" xd:aximmInterfaceRef="m_axi_gmem"/>
-  <xd:arg xd:name="*(midfreq_coefs)" xd:originalName="midfreq_coefs" xd:direction="inout" xd:interfaceRef="m_axi_gmem" xd:busTypeRef="aximm" xd:dataWidth="32" xd:bufferDirection="unused"/>
-  <xd:arg xd:name="midfreq_coefs" xd:originalName="midfreq_coefs" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:offset="0x1C" xd:dataWidth="32" xd:aximmInterfaceRef="m_axi_gmem"/>
-  <xd:arg xd:name="*(highfreq_coefs)" xd:originalName="highfreq_coefs" xd:direction="inout" xd:interfaceRef="m_axi_gmem" xd:busTypeRef="aximm" xd:dataWidth="32" xd:bufferDirection="unused"/>
-  <xd:arg xd:name="highfreq_coefs" xd:originalName="highfreq_coefs" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:offset="0x28" xd:dataWidth="32" xd:aximmInterfaceRef="m_axi_gmem"/>
-  <xd:latencyEstimates xd:best-case="1" xd:worst-case="1" xd:average-case="1"/>
-  <xd:resourceEstimates xd:LUT="460" xd:FF="248" xd:BRAM="0" xd:DSP="0"/>
+  <xd:arg xd:name="*(coefs)" xd:originalName="coefs" xd:direction="inout" xd:interfaceRef="m_axi_gmem" xd:busTypeRef="aximm" xd:dataWidth="32" xd:bufferDirection="in"/>
+  <xd:arg xd:name="coefs" xd:originalName="coefs" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:offset="0x10" xd:dataWidth="32" xd:aximmInterfaceRef="m_axi_gmem"/>
+  <xd:latencyEstimates xd:best-case="undef" xd:worst-case="undef" xd:average-case="undef"/>
+  <xd:resourceEstimates xd:LUT="5735" xd:FF="8899" xd:BRAM="0" xd:DSP="189"/>
 </xd:acceleratorMap>

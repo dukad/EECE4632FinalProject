@@ -208,46 +208,24 @@ unsigned int ap_apatb_SIGNAL_OUT_V_id_V_cap_bc;
 static AESL_RUNTIME_BC __xlx_SIGNAL_OUT_V_id_V_V_size_Reader("../tv/stream_size/stream_size_out_SIGNAL_OUT_V_id_V.dat");
 unsigned int ap_apatb_SIGNAL_OUT_V_dest_V_cap_bc;
 static AESL_RUNTIME_BC __xlx_SIGNAL_OUT_V_dest_V_V_size_Reader("../tv/stream_size/stream_size_out_SIGNAL_OUT_V_dest_V.dat");
-extern "C" void equalizer(int*, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, int, int, int);
-extern "C" void apatb_equalizer_hw(volatile void * __xlx_apatb_param_SIGNAL_IN_V_data_V, volatile void * __xlx_apatb_param_SIGNAL_IN_V_keep_V, volatile void * __xlx_apatb_param_SIGNAL_IN_V_strb_V, volatile void * __xlx_apatb_param_SIGNAL_IN_V_user_V, volatile void * __xlx_apatb_param_SIGNAL_IN_V_last_V, volatile void * __xlx_apatb_param_SIGNAL_IN_V_id_V, volatile void * __xlx_apatb_param_SIGNAL_IN_V_dest_V, volatile void * __xlx_apatb_param_SIGNAL_OUT_V_data_V, volatile void * __xlx_apatb_param_SIGNAL_OUT_V_keep_V, volatile void * __xlx_apatb_param_SIGNAL_OUT_V_strb_V, volatile void * __xlx_apatb_param_SIGNAL_OUT_V_user_V, volatile void * __xlx_apatb_param_SIGNAL_OUT_V_last_V, volatile void * __xlx_apatb_param_SIGNAL_OUT_V_id_V, volatile void * __xlx_apatb_param_SIGNAL_OUT_V_dest_V, volatile void * __xlx_apatb_param_lowfreq_coefs, volatile void * __xlx_apatb_param_midfreq_coefs, volatile void * __xlx_apatb_param_highfreq_coefs) {
-  // Collect __xlx_lowfreq_coefs_midfreq_coefs_highfreq_coefs__tmp_vec
-  vector<sc_bv<32> >__xlx_lowfreq_coefs_midfreq_coefs_highfreq_coefs__tmp_vec;
-  for (int j = 0, e = 33; j != e; ++j) {
+extern "C" void equalizer(int*, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, int);
+extern "C" void apatb_equalizer_hw(volatile void * __xlx_apatb_param_SIGNAL_IN_V_data_V, volatile void * __xlx_apatb_param_SIGNAL_IN_V_keep_V, volatile void * __xlx_apatb_param_SIGNAL_IN_V_strb_V, volatile void * __xlx_apatb_param_SIGNAL_IN_V_user_V, volatile void * __xlx_apatb_param_SIGNAL_IN_V_last_V, volatile void * __xlx_apatb_param_SIGNAL_IN_V_id_V, volatile void * __xlx_apatb_param_SIGNAL_IN_V_dest_V, volatile void * __xlx_apatb_param_SIGNAL_OUT_V_data_V, volatile void * __xlx_apatb_param_SIGNAL_OUT_V_keep_V, volatile void * __xlx_apatb_param_SIGNAL_OUT_V_strb_V, volatile void * __xlx_apatb_param_SIGNAL_OUT_V_user_V, volatile void * __xlx_apatb_param_SIGNAL_OUT_V_last_V, volatile void * __xlx_apatb_param_SIGNAL_OUT_V_id_V, volatile void * __xlx_apatb_param_SIGNAL_OUT_V_dest_V, volatile void * __xlx_apatb_param_coefs) {
+  // Collect __xlx_coefs__tmp_vec
+  vector<sc_bv<32> >__xlx_coefs__tmp_vec;
+  for (int j = 0, e = 63; j != e; ++j) {
     sc_bv<32> _xlx_tmp_sc;
-    _xlx_tmp_sc.range(7, 0) = ((char*)__xlx_apatb_param_lowfreq_coefs)[j*4+0];
-    _xlx_tmp_sc.range(15, 8) = ((char*)__xlx_apatb_param_lowfreq_coefs)[j*4+1];
-    _xlx_tmp_sc.range(23, 16) = ((char*)__xlx_apatb_param_lowfreq_coefs)[j*4+2];
-    _xlx_tmp_sc.range(31, 24) = ((char*)__xlx_apatb_param_lowfreq_coefs)[j*4+3];
-    __xlx_lowfreq_coefs_midfreq_coefs_highfreq_coefs__tmp_vec.push_back(_xlx_tmp_sc);
+    _xlx_tmp_sc.range(7, 0) = ((char*)__xlx_apatb_param_coefs)[j*4+0];
+    _xlx_tmp_sc.range(15, 8) = ((char*)__xlx_apatb_param_coefs)[j*4+1];
+    _xlx_tmp_sc.range(23, 16) = ((char*)__xlx_apatb_param_coefs)[j*4+2];
+    _xlx_tmp_sc.range(31, 24) = ((char*)__xlx_apatb_param_coefs)[j*4+3];
+    __xlx_coefs__tmp_vec.push_back(_xlx_tmp_sc);
   }
-  int __xlx_size_param_lowfreq_coefs = 33;
-  int __xlx_offset_param_lowfreq_coefs = 0;
-  int __xlx_offset_byte_param_lowfreq_coefs = 0*4;
-  for (int j = 0, e = 33; j != e; ++j) {
-    sc_bv<32> _xlx_tmp_sc;
-    _xlx_tmp_sc.range(7, 0) = ((char*)__xlx_apatb_param_midfreq_coefs)[j*4+0];
-    _xlx_tmp_sc.range(15, 8) = ((char*)__xlx_apatb_param_midfreq_coefs)[j*4+1];
-    _xlx_tmp_sc.range(23, 16) = ((char*)__xlx_apatb_param_midfreq_coefs)[j*4+2];
-    _xlx_tmp_sc.range(31, 24) = ((char*)__xlx_apatb_param_midfreq_coefs)[j*4+3];
-    __xlx_lowfreq_coefs_midfreq_coefs_highfreq_coefs__tmp_vec.push_back(_xlx_tmp_sc);
-  }
-  int __xlx_size_param_midfreq_coefs = 33;
-  int __xlx_offset_param_midfreq_coefs = 33;
-  int __xlx_offset_byte_param_midfreq_coefs = 33*4;
-  for (int j = 0, e = 33; j != e; ++j) {
-    sc_bv<32> _xlx_tmp_sc;
-    _xlx_tmp_sc.range(7, 0) = ((char*)__xlx_apatb_param_highfreq_coefs)[j*4+0];
-    _xlx_tmp_sc.range(15, 8) = ((char*)__xlx_apatb_param_highfreq_coefs)[j*4+1];
-    _xlx_tmp_sc.range(23, 16) = ((char*)__xlx_apatb_param_highfreq_coefs)[j*4+2];
-    _xlx_tmp_sc.range(31, 24) = ((char*)__xlx_apatb_param_highfreq_coefs)[j*4+3];
-    __xlx_lowfreq_coefs_midfreq_coefs_highfreq_coefs__tmp_vec.push_back(_xlx_tmp_sc);
-  }
-  int __xlx_size_param_highfreq_coefs = 33;
-  int __xlx_offset_param_highfreq_coefs = 66;
-  int __xlx_offset_byte_param_highfreq_coefs = 66*4;
-  int* __xlx_lowfreq_coefs_midfreq_coefs_highfreq_coefs__input_buffer= new int[__xlx_lowfreq_coefs_midfreq_coefs_highfreq_coefs__tmp_vec.size()];
-  for (int i = 0; i < __xlx_lowfreq_coefs_midfreq_coefs_highfreq_coefs__tmp_vec.size(); ++i) {
-    __xlx_lowfreq_coefs_midfreq_coefs_highfreq_coefs__input_buffer[i] = __xlx_lowfreq_coefs_midfreq_coefs_highfreq_coefs__tmp_vec[i].range(31, 0).to_uint64();
+  int __xlx_size_param_coefs = 63;
+  int __xlx_offset_param_coefs = 0;
+  int __xlx_offset_byte_param_coefs = 0*4;
+  int* __xlx_coefs__input_buffer= new int[__xlx_coefs__tmp_vec.size()];
+  for (int i = 0; i < __xlx_coefs__tmp_vec.size(); ++i) {
+    __xlx_coefs__input_buffer[i] = __xlx_coefs__tmp_vec[i].range(31, 0).to_uint64();
   }
 auto* sSIGNAL_IN_V_data_V = bcsim::createStream((hls::stream<int>*)__xlx_apatb_param_SIGNAL_IN_V_data_V);
 auto* sSIGNAL_IN_V_keep_V = bcsim::createStream((hls::stream<char>*)__xlx_apatb_param_SIGNAL_IN_V_keep_V);
@@ -285,39 +263,17 @@ auto* sSIGNAL_OUT_V_id_V = bcsim::createStream((hls::stream<char>*)__xlx_apatb_p
   char* __xlx_SIGNAL_OUT_V_dest_V_input_buffer= new char[ap_apatb_SIGNAL_OUT_V_dest_V_cap_bc];
 auto* sSIGNAL_OUT_V_dest_V = bcsim::createStream((hls::stream<char>*)__xlx_apatb_param_SIGNAL_OUT_V_dest_V);
   // DUT call
-  equalizer(__xlx_lowfreq_coefs_midfreq_coefs_highfreq_coefs__input_buffer, sSIGNAL_IN_V_data_V->data<int>(), sSIGNAL_IN_V_keep_V->data<char>(), sSIGNAL_IN_V_strb_V->data<char>(), sSIGNAL_IN_V_user_V->data<char>(), sSIGNAL_IN_V_last_V->data<char>(), sSIGNAL_IN_V_id_V->data<char>(), sSIGNAL_IN_V_dest_V->data<char>(), sSIGNAL_OUT_V_data_V->data<int>(), sSIGNAL_OUT_V_keep_V->data<char>(), sSIGNAL_OUT_V_strb_V->data<char>(), sSIGNAL_OUT_V_user_V->data<char>(), sSIGNAL_OUT_V_last_V->data<char>(), sSIGNAL_OUT_V_id_V->data<char>(), sSIGNAL_OUT_V_dest_V->data<char>(), __xlx_offset_byte_param_lowfreq_coefs, __xlx_offset_byte_param_midfreq_coefs, __xlx_offset_byte_param_highfreq_coefs);
-// print __xlx_apatb_param_lowfreq_coefs
-  sc_bv<32>*__xlx_lowfreq_coefs_output_buffer = new sc_bv<32>[__xlx_size_param_lowfreq_coefs];
-  for (int i = 0; i < __xlx_size_param_lowfreq_coefs; ++i) {
-    __xlx_lowfreq_coefs_output_buffer[i] = __xlx_lowfreq_coefs_midfreq_coefs_highfreq_coefs__input_buffer[i+__xlx_offset_param_lowfreq_coefs];
+  equalizer(__xlx_coefs__input_buffer, sSIGNAL_IN_V_data_V->data<int>(), sSIGNAL_IN_V_keep_V->data<char>(), sSIGNAL_IN_V_strb_V->data<char>(), sSIGNAL_IN_V_user_V->data<char>(), sSIGNAL_IN_V_last_V->data<char>(), sSIGNAL_IN_V_id_V->data<char>(), sSIGNAL_IN_V_dest_V->data<char>(), sSIGNAL_OUT_V_data_V->data<int>(), sSIGNAL_OUT_V_keep_V->data<char>(), sSIGNAL_OUT_V_strb_V->data<char>(), sSIGNAL_OUT_V_user_V->data<char>(), sSIGNAL_OUT_V_last_V->data<char>(), sSIGNAL_OUT_V_id_V->data<char>(), sSIGNAL_OUT_V_dest_V->data<char>(), __xlx_offset_byte_param_coefs);
+// print __xlx_apatb_param_coefs
+  sc_bv<32>*__xlx_coefs_output_buffer = new sc_bv<32>[__xlx_size_param_coefs];
+  for (int i = 0; i < __xlx_size_param_coefs; ++i) {
+    __xlx_coefs_output_buffer[i] = __xlx_coefs__input_buffer[i+__xlx_offset_param_coefs];
   }
-  for (int i = 0; i < __xlx_size_param_lowfreq_coefs; ++i) {
-    ((char*)__xlx_apatb_param_lowfreq_coefs)[i*4+0] = __xlx_lowfreq_coefs_output_buffer[i].range(7, 0).to_uint();
-    ((char*)__xlx_apatb_param_lowfreq_coefs)[i*4+1] = __xlx_lowfreq_coefs_output_buffer[i].range(15, 8).to_uint();
-    ((char*)__xlx_apatb_param_lowfreq_coefs)[i*4+2] = __xlx_lowfreq_coefs_output_buffer[i].range(23, 16).to_uint();
-    ((char*)__xlx_apatb_param_lowfreq_coefs)[i*4+3] = __xlx_lowfreq_coefs_output_buffer[i].range(31, 24).to_uint();
-  }
-// print __xlx_apatb_param_midfreq_coefs
-  sc_bv<32>*__xlx_midfreq_coefs_output_buffer = new sc_bv<32>[__xlx_size_param_midfreq_coefs];
-  for (int i = 0; i < __xlx_size_param_midfreq_coefs; ++i) {
-    __xlx_midfreq_coefs_output_buffer[i] = __xlx_lowfreq_coefs_midfreq_coefs_highfreq_coefs__input_buffer[i+__xlx_offset_param_midfreq_coefs];
-  }
-  for (int i = 0; i < __xlx_size_param_midfreq_coefs; ++i) {
-    ((char*)__xlx_apatb_param_midfreq_coefs)[i*4+0] = __xlx_midfreq_coefs_output_buffer[i].range(7, 0).to_uint();
-    ((char*)__xlx_apatb_param_midfreq_coefs)[i*4+1] = __xlx_midfreq_coefs_output_buffer[i].range(15, 8).to_uint();
-    ((char*)__xlx_apatb_param_midfreq_coefs)[i*4+2] = __xlx_midfreq_coefs_output_buffer[i].range(23, 16).to_uint();
-    ((char*)__xlx_apatb_param_midfreq_coefs)[i*4+3] = __xlx_midfreq_coefs_output_buffer[i].range(31, 24).to_uint();
-  }
-// print __xlx_apatb_param_highfreq_coefs
-  sc_bv<32>*__xlx_highfreq_coefs_output_buffer = new sc_bv<32>[__xlx_size_param_highfreq_coefs];
-  for (int i = 0; i < __xlx_size_param_highfreq_coefs; ++i) {
-    __xlx_highfreq_coefs_output_buffer[i] = __xlx_lowfreq_coefs_midfreq_coefs_highfreq_coefs__input_buffer[i+__xlx_offset_param_highfreq_coefs];
-  }
-  for (int i = 0; i < __xlx_size_param_highfreq_coefs; ++i) {
-    ((char*)__xlx_apatb_param_highfreq_coefs)[i*4+0] = __xlx_highfreq_coefs_output_buffer[i].range(7, 0).to_uint();
-    ((char*)__xlx_apatb_param_highfreq_coefs)[i*4+1] = __xlx_highfreq_coefs_output_buffer[i].range(15, 8).to_uint();
-    ((char*)__xlx_apatb_param_highfreq_coefs)[i*4+2] = __xlx_highfreq_coefs_output_buffer[i].range(23, 16).to_uint();
-    ((char*)__xlx_apatb_param_highfreq_coefs)[i*4+3] = __xlx_highfreq_coefs_output_buffer[i].range(31, 24).to_uint();
+  for (int i = 0; i < __xlx_size_param_coefs; ++i) {
+    ((char*)__xlx_apatb_param_coefs)[i*4+0] = __xlx_coefs_output_buffer[i].range(7, 0).to_uint();
+    ((char*)__xlx_apatb_param_coefs)[i*4+1] = __xlx_coefs_output_buffer[i].range(15, 8).to_uint();
+    ((char*)__xlx_apatb_param_coefs)[i*4+2] = __xlx_coefs_output_buffer[i].range(23, 16).to_uint();
+    ((char*)__xlx_apatb_param_coefs)[i*4+3] = __xlx_coefs_output_buffer[i].range(31, 24).to_uint();
   }
 sSIGNAL_IN_V_data_V->transfer((hls::stream<int>*)__xlx_apatb_param_SIGNAL_IN_V_data_V);
 sSIGNAL_IN_V_keep_V->transfer((hls::stream<char>*)__xlx_apatb_param_SIGNAL_IN_V_keep_V);

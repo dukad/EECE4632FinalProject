@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'equalizer'
 ================================================================
 + General Information: 
-    * Date:           Thu Mar 28 17:21:44 2024
+    * Date:           Thu Mar 28 20:01:59 2024
     * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
     * Project:        Audio_Equalizer_Vitis
     * Solution:       solution1 (Vivado IP Flow Target)
@@ -15,12 +15,14 @@
 + Performance & Resource Estimates: 
     
     PS: '+' for module; 'o' for loop; '*' for dataflow
-    +-------------+------+------+---------+--------+----------+---------+------+----------+------+----+-----------+-----------+-----+
-    |   Modules   | Issue|      | Latency | Latency| Iteration|         | Trip |          |      |    |           |           |     |
-    |   & Loops   | Type | Slack| (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined| BRAM | DSP|     FF    |    LUT    | URAM|
-    +-------------+------+------+---------+--------+----------+---------+------+----------+------+----+-----------+-----------+-----+
-    |+ equalizer  |     -|  7.30|        1|  10.000|         -|        2|     -|        no|     -|   -|  248 (~0%)|  460 (~0%)|    -|
-    +-------------+------+------+---------+--------+----------+---------+------+----------+------+----+-----------+-----------+-----+
+    +-----------------------------------+------+-------+---------+--------+----------+---------+------+----------+------+-----------+-----------+------------+-----+
+    |              Modules              | Issue|       | Latency | Latency| Iteration|         | Trip |          |      |           |           |            |     |
+    |              & Loops              | Type | Slack | (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined| BRAM |    DSP    |     FF    |     LUT    | URAM|
+    +-----------------------------------+------+-------+---------+--------+----------+---------+------+----------+------+-----------+-----------+------------+-----+
+    |+ equalizer                        |     -|   0.00|        -|       -|         -|        -|     -|        no|     -|  189 (85%)|  8899 (8%)|  5735 (10%)|    -|
+    | + equalizer_Pipeline_FILTER_LOOP  |     -|   0.65|        -|       -|         -|        -|     -|        no|     -|  189 (85%)|  3968 (3%)|   3859 (7%)|    -|
+    |  o FILTER_LOOP                    |     -|  29.20|        -|       -|         4|        1|     -|       yes|     -|          -|          -|           -|    -|
+    +-----------------------------------+------+-------+---------+--------+----------+---------+------+----------+------+-----------+-----------+------------+-----+
 
 
 ================================================================
@@ -38,31 +40,27 @@
 +---------------+------------+---------------+--------+----------+
 | Interface     | Data Width | Address Width | Offset | Register |
 +---------------+------------+---------------+--------+----------+
-| s_axi_control | 32         | 6             | 16     | 0        |
+| s_axi_control | 32         | 5             | 16     | 0        |
 +---------------+------------+---------------+--------+----------+
 
 * S_AXILITE Registers
-+---------------+------------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
-| Interface     | Register         | Offset | Width | Access | Description                      | Bit Fields                                                           |
-+---------------+------------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
-| s_axi_control | CTRL             | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
-| s_axi_control | GIER             | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
-| s_axi_control | IP_IER           | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
-| s_axi_control | IP_ISR           | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
-| s_axi_control | lowfreq_coefs_1  | 0x10   | 32    | W      | Data signal of lowfreq_coefs     |                                                                      |
-| s_axi_control | lowfreq_coefs_2  | 0x14   | 32    | W      | Data signal of lowfreq_coefs     |                                                                      |
-| s_axi_control | midfreq_coefs_1  | 0x1c   | 32    | W      | Data signal of midfreq_coefs     |                                                                      |
-| s_axi_control | midfreq_coefs_2  | 0x20   | 32    | W      | Data signal of midfreq_coefs     |                                                                      |
-| s_axi_control | highfreq_coefs_1 | 0x28   | 32    | W      | Data signal of highfreq_coefs    |                                                                      |
-| s_axi_control | highfreq_coefs_2 | 0x2c   | 32    | W      | Data signal of highfreq_coefs    |                                                                      |
-+---------------+------------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface     | Register | Offset | Width | Access | Description                      | Bit Fields                                                           |
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_control | CTRL     | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control | GIER     | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_control | IP_IER   | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_control | IP_ISR   | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
+| s_axi_control | coefs_1  | 0x10   | 32    | W      | Data signal of coefs             |                                                                      |
+| s_axi_control | coefs_2  | 0x14   | 32    | W      | Data signal of coefs             |                                                                      |
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
 
 * AXIS
 +------------+---------------+-------+-------+-----+-------+-------+--------+-------+-------+--------+
 | Interface  | Register Mode | TDATA | TDEST | TID | TKEEP | TLAST | TREADY | TSTRB | TUSER | TVALID |
 +------------+---------------+-------+-------+-----+-------+-------+--------+-------+-------+--------+
-| SIGNAL_IN  | both          | 32    | 6     | 5   | 4     | 1     | 1      | 4     | 2     | 1      |
-| SIGNAL_OUT | both          | 32    | 6     | 5   | 4     | 1     | 1      | 4     | 2     | 1      |
+| SIGNAL_IN  | both          | 32    | 1     | 1   | 4     | 1     | 1      | 4     | 1     | 1      |
+| SIGNAL_OUT | both          | 32    | 1     | 1   | 4     | 1     | 1      | 4     | 1     | 1      |
 +------------+---------------+-------+-------+-----+-------+-------+--------+-------+-------+--------+
 
 * TOP LEVEL CONTROL
@@ -80,32 +78,24 @@
 == SW I/O Information
 ================================================================
 * Top Function Arguments
-+----------------+-----------+--------------------------------------------+
-| Argument       | Direction | Datatype                                   |
-+----------------+-----------+--------------------------------------------+
-| SIGNAL_IN      | in        | stream<hls::axis<ap_int<32>, 2, 5, 6>, 0>& |
-| SIGNAL_OUT     | out       | stream<hls::axis<ap_int<32>, 2, 5, 6>, 0>& |
-| lowfreq_coefs  | unused    | int*                                       |
-| midfreq_coefs  | unused    | int*                                       |
-| highfreq_coefs | unused    | int*                                       |
-+----------------+-----------+--------------------------------------------+
++------------+-----------+--------------------------------------------+
+| Argument   | Direction | Datatype                                   |
++------------+-----------+--------------------------------------------+
+| SIGNAL_IN  | in        | stream<hls::axis<ap_int<32>, 1, 1, 1>, 0>& |
+| SIGNAL_OUT | out       | stream<hls::axis<ap_int<32>, 1, 1, 1>, 0>& |
+| coefs      | in        | int*                                       |
++------------+-----------+--------------------------------------------+
 
 * SW-to-HW Mapping
-+----------------+---------------+-----------+----------+--------------------------------------------+
-| Argument       | HW Interface  | HW Type   | HW Usage | HW Info                                    |
-+----------------+---------------+-----------+----------+--------------------------------------------+
-| SIGNAL_IN      | SIGNAL_IN     | interface |          |                                            |
-| SIGNAL_OUT     | SIGNAL_OUT    | interface |          |                                            |
-| lowfreq_coefs  | m_axi_gmem    | interface |          |                                            |
-| lowfreq_coefs  | s_axi_control | register  | offset   | name=lowfreq_coefs_1 offset=0x10 range=32  |
-| lowfreq_coefs  | s_axi_control | register  | offset   | name=lowfreq_coefs_2 offset=0x14 range=32  |
-| midfreq_coefs  | m_axi_gmem    | interface |          |                                            |
-| midfreq_coefs  | s_axi_control | register  | offset   | name=midfreq_coefs_1 offset=0x1c range=32  |
-| midfreq_coefs  | s_axi_control | register  | offset   | name=midfreq_coefs_2 offset=0x20 range=32  |
-| highfreq_coefs | m_axi_gmem    | interface |          |                                            |
-| highfreq_coefs | s_axi_control | register  | offset   | name=highfreq_coefs_1 offset=0x28 range=32 |
-| highfreq_coefs | s_axi_control | register  | offset   | name=highfreq_coefs_2 offset=0x2c range=32 |
-+----------------+---------------+-----------+----------+--------------------------------------------+
++------------+---------------+-----------+----------+-----------------------------------+
+| Argument   | HW Interface  | HW Type   | HW Usage | HW Info                           |
++------------+---------------+-----------+----------+-----------------------------------+
+| SIGNAL_IN  | SIGNAL_IN     | interface |          |                                   |
+| SIGNAL_OUT | SIGNAL_OUT    | interface |          |                                   |
+| coefs      | m_axi_gmem    | interface |          |                                   |
+| coefs      | s_axi_control | register  | offset   | name=coefs_1 offset=0x10 range=32 |
+| coefs      | s_axi_control | register  | offset   | name=coefs_2 offset=0x14 range=32 |
++------------+---------------+-----------+----------+-----------------------------------+
 
 
 ================================================================
@@ -118,7 +108,83 @@
 ================================================================
 == Bind Op Report
 ================================================================
-  No bind op info in design
++-----------------------------------+-----+--------+---------------------+-----+--------+---------+
+| Name                              | DSP | Pragma | Variable            | Op  | Impl   | Latency |
++-----------------------------------+-----+--------+---------------------+-----+--------+---------+
+| + equalizer                       | 189 |        |                     |     |        |         |
+|  + equalizer_Pipeline_FILTER_LOOP | 189 |        |                     |     |        |         |
+|    mul_32s_32s_32_1_1_U1          | 3   |        | lowfreq_accumulate  | mul | auto   | 0       |
+|    mul_32s_32s_32_1_1_U2          | 3   |        | mul_ln43            | mul | auto   | 0       |
+|    mul_32s_32s_32_1_1_U3          | 3   |        | mul_ln43_1          | mul | auto   | 0       |
+|    mul_32s_32s_32_1_1_U4          | 3   |        | mul_ln43_2          | mul | auto   | 0       |
+|    mul_32s_32s_32_1_1_U5          | 3   |        | mul_ln43_3          | mul | auto   | 0       |
+|    mul_32s_32s_32_1_1_U6          | 3   |        | mul_ln43_4          | mul | auto   | 0       |
+|    mul_32s_32s_32_1_1_U7          | 3   |        | mul_ln43_5          | mul | auto   | 0       |
+|    mul_32s_32s_32_1_1_U8          | 3   |        | mul_ln43_6          | mul | auto   | 0       |
+|    mul_32s_32s_32_1_1_U9          | 3   |        | mul_ln43_7          | mul | auto   | 0       |
+|    mul_32s_32s_32_1_1_U10         | 3   |        | mul_ln43_8          | mul | auto   | 0       |
+|    mul_32s_32s_32_1_1_U11         | 3   |        | mul_ln43_9          | mul | auto   | 0       |
+|    mul_32s_32s_32_1_1_U12         | 3   |        | mul_ln43_10         | mul | auto   | 0       |
+|    mul_32s_32s_32_1_1_U13         | 3   |        | mul_ln43_11         | mul | auto   | 0       |
+|    mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln43_12         | mul | auto   | 0       |
+|    mul_32s_32s_32_1_1_U15         | 3   |        | mul_ln43_13         | mul | auto   | 0       |
+|    mul_32s_32s_32_1_1_U16         | 3   |        | mul_ln43_14         | mul | auto   | 0       |
+|    mul_32s_32s_32_1_1_U17         | 3   |        | mul_ln43_15         | mul | auto   | 0       |
+|    mul_32s_32s_32_1_1_U18         | 3   |        | mul_ln43_16         | mul | auto   | 0       |
+|    mul_32s_32s_32_1_1_U19         | 3   |        | mul_ln43_17         | mul | auto   | 0       |
+|    mul_32s_32s_32_1_1_U20         | 3   |        | mul_ln43_18         | mul | auto   | 0       |
+|    mul_32s_32s_32_1_1_U21         | 3   |        | mul_ln46            | mul | auto   | 0       |
+|    add_ln46_4_fu_2370_p2          | -   |        | add_ln46_4          | add | fabric | 0       |
+|    add_ln46_13_fu_2406_p2         | -   |        | add_ln46_13         | add | fabric | 0       |
+|    mul_32s_32s_32_1_1_U22         | 3   |        | midfreq_accumulate  | mul | auto   | 0       |
+|    mul_32s_32s_32_1_1_U23         | 3   |        | mul_ln54            | mul | auto   | 0       |
+|    mul_32s_32s_32_1_1_U24         | 3   |        | mul_ln54_1          | mul | auto   | 0       |
+|    mul_32s_32s_32_1_1_U25         | 3   |        | mul_ln54_2          | mul | auto   | 0       |
+|    mul_32s_32s_32_1_1_U26         | 3   |        | mul_ln54_3          | mul | auto   | 0       |
+|    mul_32s_32s_32_1_1_U27         | 3   |        | mul_ln54_4          | mul | auto   | 0       |
+|    mul_32s_32s_32_1_1_U28         | 3   |        | mul_ln54_5          | mul | auto   | 0       |
+|    mul_32s_32s_32_1_1_U29         | 3   |        | mul_ln54_6          | mul | auto   | 0       |
+|    mul_32s_32s_32_1_1_U30         | 3   |        | mul_ln54_7          | mul | auto   | 0       |
+|    mul_32s_32s_32_1_1_U31         | 3   |        | mul_ln54_8          | mul | auto   | 0       |
+|    mul_32s_32s_32_1_1_U32         | 3   |        | mul_ln54_9          | mul | auto   | 0       |
+|    mul_32s_32s_32_1_1_U33         | 3   |        | mul_ln54_10         | mul | auto   | 0       |
+|    mul_32s_32s_32_1_1_U34         | 3   |        | mul_ln54_11         | mul | auto   | 0       |
+|    mul_32s_32s_32_1_1_U35         | 3   |        | mul_ln54_12         | mul | auto   | 0       |
+|    mul_32s_32s_32_1_1_U36         | 3   |        | mul_ln54_13         | mul | auto   | 0       |
+|    mul_32s_32s_32_1_1_U37         | 3   |        | mul_ln54_14         | mul | auto   | 0       |
+|    mul_32s_32s_32_1_1_U38         | 3   |        | mul_ln54_15         | mul | auto   | 0       |
+|    mul_32s_32s_32_1_1_U39         | 3   |        | mul_ln54_16         | mul | auto   | 0       |
+|    mul_32s_32s_32_1_1_U40         | 3   |        | mul_ln54_17         | mul | auto   | 0       |
+|    mul_32s_32s_32_1_1_U41         | 3   |        | mul_ln54_18         | mul | auto   | 0       |
+|    mul_32s_32s_32_1_1_U42         | 3   |        | mul_ln57            | mul | auto   | 0       |
+|    add_ln57_9_fu_2796_p2          | -   |        | add_ln57_9          | add | fabric | 0       |
+|    add_ln57_13_fu_2820_p2         | -   |        | add_ln57_13         | add | fabric | 0       |
+|    mul_32s_32s_32_1_1_U43         | 3   |        | highfreq_accumulate | mul | auto   | 0       |
+|    mul_32s_32s_32_1_1_U44         | 3   |        | mul_ln65            | mul | auto   | 0       |
+|    mul_32s_32s_32_1_1_U45         | 3   |        | mul_ln65_1          | mul | auto   | 0       |
+|    mul_32s_32s_32_1_1_U46         | 3   |        | mul_ln65_2          | mul | auto   | 0       |
+|    mul_32s_32s_32_1_1_U47         | 3   |        | mul_ln65_3          | mul | auto   | 0       |
+|    mul_32s_32s_32_1_1_U48         | 3   |        | mul_ln65_4          | mul | auto   | 0       |
+|    mul_32s_32s_32_1_1_U49         | 3   |        | mul_ln65_5          | mul | auto   | 0       |
+|    mul_32s_32s_32_1_1_U50         | 3   |        | mul_ln65_6          | mul | auto   | 0       |
+|    mul_32s_32s_32_1_1_U51         | 3   |        | mul_ln65_7          | mul | auto   | 0       |
+|    mul_32s_32s_32_1_1_U52         | 3   |        | mul_ln65_8          | mul | auto   | 0       |
+|    mul_32s_32s_32_1_1_U53         | 3   |        | mul_ln65_9          | mul | auto   | 0       |
+|    mul_32s_32s_32_1_1_U54         | 3   |        | mul_ln65_10         | mul | auto   | 0       |
+|    mul_32s_32s_32_1_1_U55         | 3   |        | mul_ln65_11         | mul | auto   | 0       |
+|    mul_32s_32s_32_1_1_U56         | 3   |        | mul_ln65_12         | mul | auto   | 0       |
+|    mul_32s_32s_32_1_1_U57         | 3   |        | mul_ln65_13         | mul | auto   | 0       |
+|    mul_32s_32s_32_1_1_U58         | 3   |        | mul_ln65_14         | mul | auto   | 0       |
+|    mul_32s_32s_32_1_1_U59         | 3   |        | mul_ln65_15         | mul | auto   | 0       |
+|    mul_32s_32s_32_1_1_U60         | 3   |        | mul_ln65_16         | mul | auto   | 0       |
+|    mul_32s_32s_32_1_1_U61         | 3   |        | mul_ln65_17         | mul | auto   | 0       |
+|    mul_32s_32s_32_1_1_U62         | 3   |        | mul_ln65_18         | mul | auto   | 0       |
+|    mul_32s_32s_32_1_1_U63         | 3   |        | mul_ln68            | mul | auto   | 0       |
+|    add_ln68_9_fu_3198_p2          | -   |        | add_ln68_9          | add | fabric | 0       |
+|    add_ln68_13_fu_3222_p2         | -   |        | add_ln68_13         | add | fabric | 0       |
+|    add_ln69_out                   | -   |        | add_ln69            | add | fabric | 0       |
++-----------------------------------+-----+--------+---------------------+-----+--------+---------+
+
 
 ================================================================
 == Bind Storage Report
@@ -128,16 +194,24 @@
 ================================================================
 == Pragma Report
 ================================================================
+* Pragmas with Warnings
++-----------------+-------------------------------+----------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Type            | Options                       | Location                                                             | Messages                                                                                                                                                                                                                                                    |
++-----------------+-------------------------------+----------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| array_partition | variable=coefs complete dim=1 | Audio_Equalizer_Vitis/solution1/directives.tcl:8 in equalizer, coefs | Ignored unsupported array_partition pragma on variable 'coefs_copy'. This can happen when applying a pragma on a function argument with mismatched array size w.r.t. its call site, or when providing a dim too deep on an array of insufficient dimension. |
++-----------------+-------------------------------+----------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
 * Valid Pragma Syntax
-+-----------+------------------------------------+-----------------------------------------------+
-| Type      | Options                            | Location                                      |
-+-----------+------------------------------------+-----------------------------------------------+
-| interface | m_axi depth=33 port=lowfreq_coefs  | equalizer.cpp:23 in equalizer, lowfreq_coefs  |
-| interface | m_axi depth=33 port=midfreq_coefs  | equalizer.cpp:24 in equalizer, midfreq_coefs  |
-| interface | m_axi depth=33 port=highfreq_coefs | equalizer.cpp:25 in equalizer, highfreq_coefs |
-| interface | axis port=SIGNAL_IN                | equalizer.cpp:26 in equalizer, SIGNAL_IN      |
-| interface | axis port=SIGNAL_OUT               | equalizer.cpp:27 in equalizer, SIGNAL_OUT     |
-| interface | s_axilite port=return              | equalizer.cpp:28 in equalizer, return         |
-+-----------+------------------------------------+-----------------------------------------------+
++-----------+---------------------------+-------------------------------------------+
+| Type      | Options                   | Location                                  |
++-----------+---------------------------+-------------------------------------------+
+| interface | m_axi depth=99 port=coefs | equalizer.cpp:17 in equalizer, coefs      |
+| interface | axis port=SIGNAL_IN       | equalizer.cpp:18 in equalizer, SIGNAL_IN  |
+| interface | axis port=SIGNAL_OUT      | equalizer.cpp:19 in equalizer, SIGNAL_OUT |
+| interface | s_axilite port=return     | equalizer.cpp:20 in equalizer, return     |
+| unroll    |                           | equalizer.cpp:41 in equalizer             |
+| unroll    |                           | equalizer.cpp:52 in equalizer             |
+| unroll    |                           | equalizer.cpp:63 in equalizer             |
++-----------+---------------------------+-------------------------------------------+
 
 

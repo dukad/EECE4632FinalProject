@@ -74,60 +74,22 @@ void XEqualizer_DisableAutoRestart(XEqualizer *InstancePtr) {
     XEqualizer_WriteReg(InstancePtr->Control_BaseAddress, XEQUALIZER_CONTROL_ADDR_AP_CTRL, 0);
 }
 
-void XEqualizer_Set_lowfreq_coefs(XEqualizer *InstancePtr, u64 Data) {
+void XEqualizer_Set_coefs(XEqualizer *InstancePtr, u64 Data) {
     Xil_AssertVoid(InstancePtr != NULL);
     Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
 
-    XEqualizer_WriteReg(InstancePtr->Control_BaseAddress, XEQUALIZER_CONTROL_ADDR_LOWFREQ_COEFS_DATA, (u32)(Data));
-    XEqualizer_WriteReg(InstancePtr->Control_BaseAddress, XEQUALIZER_CONTROL_ADDR_LOWFREQ_COEFS_DATA + 4, (u32)(Data >> 32));
+    XEqualizer_WriteReg(InstancePtr->Control_BaseAddress, XEQUALIZER_CONTROL_ADDR_COEFS_DATA, (u32)(Data));
+    XEqualizer_WriteReg(InstancePtr->Control_BaseAddress, XEQUALIZER_CONTROL_ADDR_COEFS_DATA + 4, (u32)(Data >> 32));
 }
 
-u64 XEqualizer_Get_lowfreq_coefs(XEqualizer *InstancePtr) {
+u64 XEqualizer_Get_coefs(XEqualizer *InstancePtr) {
     u64 Data;
 
     Xil_AssertNonvoid(InstancePtr != NULL);
     Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
 
-    Data = XEqualizer_ReadReg(InstancePtr->Control_BaseAddress, XEQUALIZER_CONTROL_ADDR_LOWFREQ_COEFS_DATA);
-    Data += (u64)XEqualizer_ReadReg(InstancePtr->Control_BaseAddress, XEQUALIZER_CONTROL_ADDR_LOWFREQ_COEFS_DATA + 4) << 32;
-    return Data;
-}
-
-void XEqualizer_Set_midfreq_coefs(XEqualizer *InstancePtr, u64 Data) {
-    Xil_AssertVoid(InstancePtr != NULL);
-    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
-
-    XEqualizer_WriteReg(InstancePtr->Control_BaseAddress, XEQUALIZER_CONTROL_ADDR_MIDFREQ_COEFS_DATA, (u32)(Data));
-    XEqualizer_WriteReg(InstancePtr->Control_BaseAddress, XEQUALIZER_CONTROL_ADDR_MIDFREQ_COEFS_DATA + 4, (u32)(Data >> 32));
-}
-
-u64 XEqualizer_Get_midfreq_coefs(XEqualizer *InstancePtr) {
-    u64 Data;
-
-    Xil_AssertNonvoid(InstancePtr != NULL);
-    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
-
-    Data = XEqualizer_ReadReg(InstancePtr->Control_BaseAddress, XEQUALIZER_CONTROL_ADDR_MIDFREQ_COEFS_DATA);
-    Data += (u64)XEqualizer_ReadReg(InstancePtr->Control_BaseAddress, XEQUALIZER_CONTROL_ADDR_MIDFREQ_COEFS_DATA + 4) << 32;
-    return Data;
-}
-
-void XEqualizer_Set_highfreq_coefs(XEqualizer *InstancePtr, u64 Data) {
-    Xil_AssertVoid(InstancePtr != NULL);
-    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
-
-    XEqualizer_WriteReg(InstancePtr->Control_BaseAddress, XEQUALIZER_CONTROL_ADDR_HIGHFREQ_COEFS_DATA, (u32)(Data));
-    XEqualizer_WriteReg(InstancePtr->Control_BaseAddress, XEQUALIZER_CONTROL_ADDR_HIGHFREQ_COEFS_DATA + 4, (u32)(Data >> 32));
-}
-
-u64 XEqualizer_Get_highfreq_coefs(XEqualizer *InstancePtr) {
-    u64 Data;
-
-    Xil_AssertNonvoid(InstancePtr != NULL);
-    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
-
-    Data = XEqualizer_ReadReg(InstancePtr->Control_BaseAddress, XEQUALIZER_CONTROL_ADDR_HIGHFREQ_COEFS_DATA);
-    Data += (u64)XEqualizer_ReadReg(InstancePtr->Control_BaseAddress, XEQUALIZER_CONTROL_ADDR_HIGHFREQ_COEFS_DATA + 4) << 32;
+    Data = XEqualizer_ReadReg(InstancePtr->Control_BaseAddress, XEQUALIZER_CONTROL_ADDR_COEFS_DATA);
+    Data += (u64)XEqualizer_ReadReg(InstancePtr->Control_BaseAddress, XEQUALIZER_CONTROL_ADDR_COEFS_DATA + 4) << 32;
     return Data;
 }
 

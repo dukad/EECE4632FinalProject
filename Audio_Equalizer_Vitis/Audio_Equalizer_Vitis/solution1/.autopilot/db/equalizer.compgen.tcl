@@ -1,5 +1,11 @@
 # This script segment is generated automatically by AutoPilot
 
+set name equalizer_gmem_m_axi
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {interface} TYPE {adapter} IMPL {m_axi}
+}
+
+
 # clear list
 if {${::AESL::PGuard_autoexp_gen}} {
     cg_default_interface_gen_dc_begin
@@ -9,29 +15,13 @@ if {${::AESL::PGuard_autoexp_gen}} {
 
 set axilite_register_dict [dict create]
 set port_control {
-lowfreq_coefs { 
+coefs { 
 	dir I
 	width 64
 	depth 1
 	mode ap_none
 	offset 16
 	offset_end 27
-}
-midfreq_coefs { 
-	dir I
-	width 64
-	depth 1
-	mode ap_none
-	offset 28
-	offset_end 39
-}
-highfreq_coefs { 
-	dir I
-	width 64
-	depth 1
-	mode ap_none
-	offset 40
-	offset_end 51
 }
 ap_start { }
 ap_done { }
@@ -47,7 +37,7 @@ dict set axilite_register_dict control $port_control
 if {${::AESL::PGuard_simmodel_gen}} {
 	if {[info proc ::AESL_LIB_XILADAPTER::s_axilite_gen] == "::AESL_LIB_XILADAPTER::s_axilite_gen"} {
 		eval "::AESL_LIB_XILADAPTER::s_axilite_gen { \
-			id 1 \
+			id 262 \
 			corename equalizer_control_axilite \
 			name equalizer_control_s_axi \
 			ports {$port_control} \
@@ -71,7 +61,7 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 2 \
+    id 264 \
     name SIGNAL_IN_V_data_V \
     reset_level 0 \
     sync_rst true \
@@ -90,7 +80,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 3 \
+    id 265 \
     name SIGNAL_IN_V_keep_V \
     reset_level 0 \
     sync_rst true \
@@ -109,7 +99,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 4 \
+    id 266 \
     name SIGNAL_IN_V_strb_V \
     reset_level 0 \
     sync_rst true \
@@ -128,14 +118,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 5 \
+    id 267 \
     name SIGNAL_IN_V_user_V \
     reset_level 0 \
     sync_rst true \
     corename {SIGNAL_IN} \
     metadata {  } \
     op interface \
-    ports { SIGNAL_IN_TUSER { I 2 vector } } \
+    ports { SIGNAL_IN_TUSER { I 1 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'SIGNAL_IN_V_user_V'"
@@ -147,7 +137,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 6 \
+    id 268 \
     name SIGNAL_IN_V_last_V \
     reset_level 0 \
     sync_rst true \
@@ -166,14 +156,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 7 \
+    id 269 \
     name SIGNAL_IN_V_id_V \
     reset_level 0 \
     sync_rst true \
     corename {SIGNAL_IN} \
     metadata {  } \
     op interface \
-    ports { SIGNAL_IN_TID { I 5 vector } } \
+    ports { SIGNAL_IN_TID { I 1 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'SIGNAL_IN_V_id_V'"
@@ -185,14 +175,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 8 \
+    id 270 \
     name SIGNAL_IN_V_dest_V \
     reset_level 0 \
     sync_rst true \
     corename {SIGNAL_IN} \
     metadata {  } \
     op interface \
-    ports { SIGNAL_IN_TVALID { I 1 bit } SIGNAL_IN_TREADY { O 1 bit } SIGNAL_IN_TDEST { I 6 vector } } \
+    ports { SIGNAL_IN_TVALID { I 1 bit } SIGNAL_IN_TREADY { O 1 bit } SIGNAL_IN_TDEST { I 1 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'SIGNAL_IN_V_dest_V'"
@@ -204,7 +194,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 9 \
+    id 271 \
     name SIGNAL_OUT_V_data_V \
     reset_level 0 \
     sync_rst true \
@@ -223,7 +213,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 10 \
+    id 272 \
     name SIGNAL_OUT_V_keep_V \
     reset_level 0 \
     sync_rst true \
@@ -242,7 +232,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 11 \
+    id 273 \
     name SIGNAL_OUT_V_strb_V \
     reset_level 0 \
     sync_rst true \
@@ -261,14 +251,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 12 \
+    id 274 \
     name SIGNAL_OUT_V_user_V \
     reset_level 0 \
     sync_rst true \
     corename {SIGNAL_OUT} \
     metadata {  } \
     op interface \
-    ports { SIGNAL_OUT_TUSER { O 2 vector } } \
+    ports { SIGNAL_OUT_TUSER { O 1 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'SIGNAL_OUT_V_user_V'"
@@ -280,7 +270,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 13 \
+    id 275 \
     name SIGNAL_OUT_V_last_V \
     reset_level 0 \
     sync_rst true \
@@ -299,14 +289,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 14 \
+    id 276 \
     name SIGNAL_OUT_V_id_V \
     reset_level 0 \
     sync_rst true \
     corename {SIGNAL_OUT} \
     metadata {  } \
     op interface \
-    ports { SIGNAL_OUT_TID { O 5 vector } } \
+    ports { SIGNAL_OUT_TID { O 1 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'SIGNAL_OUT_V_id_V'"
@@ -318,14 +308,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 15 \
+    id 277 \
     name SIGNAL_OUT_V_dest_V \
     reset_level 0 \
     sync_rst true \
     corename {SIGNAL_OUT} \
     metadata {  } \
     op interface \
-    ports { SIGNAL_OUT_TVALID { O 1 bit } SIGNAL_OUT_TREADY { I 1 bit } SIGNAL_OUT_TDEST { O 6 vector } } \
+    ports { SIGNAL_OUT_TVALID { O 1 bit } SIGNAL_OUT_TREADY { I 1 bit } SIGNAL_OUT_TDEST { O 1 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'SIGNAL_OUT_V_dest_V'"
@@ -384,7 +374,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 
 
 # RegSlice definition:
-set ID 16
+set ID 278
 set RegSliceName equalizer_regslice_both
 set RegSliceInstName equalizer_regslice_both_U
 set CoreName ap_simcore_equalizer_regslice_both
@@ -407,7 +397,7 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_regSlice, check you
 
 
 # RegSlice definition:
-set ID 17
+set ID 279
 set RegSliceName equalizer_regslice_both
 set RegSliceInstName equalizer_regslice_both_U
 set CoreName ap_simcore_equalizer_regslice_both
@@ -430,7 +420,7 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_regSlice, check you
 
 
 # RegSlice definition:
-set ID 18
+set ID 280
 set RegSliceName equalizer_regslice_both
 set RegSliceInstName equalizer_regslice_both_U
 set CoreName ap_simcore_equalizer_regslice_both
@@ -453,7 +443,7 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_regSlice, check you
 
 
 # RegSlice definition:
-set ID 19
+set ID 281
 set RegSliceName equalizer_regslice_both
 set RegSliceInstName equalizer_regslice_both_U
 set CoreName ap_simcore_equalizer_regslice_both
@@ -476,7 +466,7 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_regSlice, check you
 
 
 # RegSlice definition:
-set ID 20
+set ID 282
 set RegSliceName equalizer_regslice_both
 set RegSliceInstName equalizer_regslice_both_U
 set CoreName ap_simcore_equalizer_regslice_both
@@ -499,7 +489,7 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_regSlice, check you
 
 
 # RegSlice definition:
-set ID 21
+set ID 283
 set RegSliceName equalizer_regslice_both
 set RegSliceInstName equalizer_regslice_both_U
 set CoreName ap_simcore_equalizer_regslice_both
@@ -522,7 +512,7 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_regSlice, check you
 
 
 # RegSlice definition:
-set ID 22
+set ID 284
 set RegSliceName equalizer_regslice_both
 set RegSliceInstName equalizer_regslice_both_U
 set CoreName ap_simcore_equalizer_regslice_both
@@ -545,7 +535,7 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_regSlice, check you
 
 
 # RegSlice definition:
-set ID 23
+set ID 285
 set RegSliceName equalizer_regslice_both
 set RegSliceInstName equalizer_regslice_both_U
 set CoreName ap_simcore_equalizer_regslice_both
@@ -568,7 +558,7 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_regSlice, check you
 
 
 # RegSlice definition:
-set ID 24
+set ID 286
 set RegSliceName equalizer_regslice_both
 set RegSliceInstName equalizer_regslice_both_U
 set CoreName ap_simcore_equalizer_regslice_both
@@ -591,7 +581,7 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_regSlice, check you
 
 
 # RegSlice definition:
-set ID 25
+set ID 287
 set RegSliceName equalizer_regslice_both
 set RegSliceInstName equalizer_regslice_both_U
 set CoreName ap_simcore_equalizer_regslice_both
@@ -614,7 +604,7 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_regSlice, check you
 
 
 # RegSlice definition:
-set ID 26
+set ID 288
 set RegSliceName equalizer_regslice_both
 set RegSliceInstName equalizer_regslice_both_U
 set CoreName ap_simcore_equalizer_regslice_both
@@ -637,7 +627,7 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_regSlice, check you
 
 
 # RegSlice definition:
-set ID 27
+set ID 289
 set RegSliceName equalizer_regslice_both
 set RegSliceInstName equalizer_regslice_both_U
 set CoreName ap_simcore_equalizer_regslice_both
@@ -660,7 +650,7 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_regSlice, check you
 
 
 # RegSlice definition:
-set ID 28
+set ID 290
 set RegSliceName equalizer_regslice_both
 set RegSliceInstName equalizer_regslice_both_U
 set CoreName ap_simcore_equalizer_regslice_both
@@ -683,7 +673,7 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_regSlice, check you
 
 
 # RegSlice definition:
-set ID 29
+set ID 291
 set RegSliceName equalizer_regslice_both
 set RegSliceInstName equalizer_regslice_both_U
 set CoreName ap_simcore_equalizer_regslice_both

@@ -88,12 +88,8 @@ u32 XEqualizer_IsReady(XEqualizer *InstancePtr);
 void XEqualizer_EnableAutoRestart(XEqualizer *InstancePtr);
 void XEqualizer_DisableAutoRestart(XEqualizer *InstancePtr);
 
-void XEqualizer_Set_lowfreq_coefs(XEqualizer *InstancePtr, u64 Data);
-u64 XEqualizer_Get_lowfreq_coefs(XEqualizer *InstancePtr);
-void XEqualizer_Set_midfreq_coefs(XEqualizer *InstancePtr, u64 Data);
-u64 XEqualizer_Get_midfreq_coefs(XEqualizer *InstancePtr);
-void XEqualizer_Set_highfreq_coefs(XEqualizer *InstancePtr, u64 Data);
-u64 XEqualizer_Get_highfreq_coefs(XEqualizer *InstancePtr);
+void XEqualizer_Set_coefs(XEqualizer *InstancePtr, u64 Data);
+u64 XEqualizer_Get_coefs(XEqualizer *InstancePtr);
 
 void XEqualizer_InterruptGlobalEnable(XEqualizer *InstancePtr);
 void XEqualizer_InterruptGlobalDisable(XEqualizer *InstancePtr);

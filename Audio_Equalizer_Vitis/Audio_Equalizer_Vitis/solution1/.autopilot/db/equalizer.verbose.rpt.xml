@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'equalizer'" level="0">
-<item name = "Date">Thu Mar 28 17:21:44 2024
+<item name = "Date">Thu Mar 28 20:01:59 2024
 </item>
 <item name = "Version">2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)</item>
 <item name = "Project">Audio_Equalizer_Vitis</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 0 ns, 2.70 ns</column>
+<column name="ap_clk">40.00 ns, 29.200 ns, 10.80 ns</column>
 </table>
 </item>
 </section>
@@ -24,13 +24,14 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">1, 1, 10.000 ns, 10.000 ns, 2, 2, no</column>
+<column name="">?, ?, ?, ?, ?, ?, no</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_equalizer_Pipeline_FILTER_LOOP_fu_468">equalizer_Pipeline_FILTER_LOOP, ?, ?, ?, ?, ?, ?, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
@@ -47,21 +48,23 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
 <column name="DSP">-, -, -, -, -</column>
-<column name="Expression">-, -, 0, 4, -</column>
+<column name="Expression">-, -, 0, 2, -</column>
 <column name="FIFO">-, -, -, -, -</column>
-<column name="Instance">0, -, 246, 424, -</column>
+<column name="Instance">0, 189, 4792, 5345, -</column>
 <column name="Memory">-, -, -, -, -</column>
-<column name="Multiplexer">-, -, -, 32, -</column>
-<column name="Register">-, -, 2, -, -</column>
+<column name="Multiplexer">-, -, -, 388, -</column>
+<column name="Register">-, -, 4107, -, -</column>
 <specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
-<specialColumn name="Utilization (%)">0, 0, ~0, ~0, 0</specialColumn>
+<specialColumn name="Utilization (%)">0, 85, 8, 10, 0</specialColumn>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="control_s_axi_U">control_s_axi, 0, 0, 246, 424, 0</column>
+<column name="control_s_axi_U">control_s_axi, 0, 0, 106, 168, 0</column>
+<column name="grp_equalizer_Pipeline_FILTER_LOOP_fu_468">equalizer_Pipeline_FILTER_LOOP, 0, 189, 3968, 3859, 0</column>
+<column name="gmem_m_axi_U">gmem_m_axi, 0, 0, 718, 1318, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -78,20 +81,146 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="ap_block_state1">or, 0, 0, 2, 1, 1</column>
-<column name="ap_block_state2">or, 0, 0, 2, 1, 1</column>
+<column name="grp_equalizer_Pipeline_FILTER_LOOP_fu_468_SIGNAL_OUT_TREADY">and, 0, 0, 2, 1, 1</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
-<column name="SIGNAL_IN_TDATA_blk_n">9, 2, 1, 2</column>
-<column name="SIGNAL_OUT_TDATA_blk_n">9, 2, 1, 2</column>
-<column name="ap_NS_fsm">14, 3, 1, 3</column>
+<column name="SIGNAL_IN_TREADY_int_regslice">9, 2, 1, 2</column>
+<column name="ap_NS_fsm">361, 75, 1, 75</column>
+<column name="gmem_blk_n_AR">9, 2, 1, 2</column>
+<column name="gmem_blk_n_R">9, 2, 1, 2</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
-<column name="ap_CS_fsm">2, 0, 2, 0</column>
+<column name="add_ln69_loc_fu_210">32, 0, 32, 0</column>
+<column name="ap_CS_fsm">74, 0, 74, 0</column>
+<column name="gmem_addr_read_10_reg_1959">32, 0, 32, 0</column>
+<column name="gmem_addr_read_11_reg_1964">32, 0, 32, 0</column>
+<column name="gmem_addr_read_12_reg_1969">32, 0, 32, 0</column>
+<column name="gmem_addr_read_13_reg_1974">32, 0, 32, 0</column>
+<column name="gmem_addr_read_14_reg_1979">32, 0, 32, 0</column>
+<column name="gmem_addr_read_15_reg_1984">32, 0, 32, 0</column>
+<column name="gmem_addr_read_16_reg_1989">32, 0, 32, 0</column>
+<column name="gmem_addr_read_17_reg_1994">32, 0, 32, 0</column>
+<column name="gmem_addr_read_18_reg_1999">32, 0, 32, 0</column>
+<column name="gmem_addr_read_19_reg_2004">32, 0, 32, 0</column>
+<column name="gmem_addr_read_1_reg_1914">32, 0, 32, 0</column>
+<column name="gmem_addr_read_20_reg_2009">32, 0, 32, 0</column>
+<column name="gmem_addr_read_21_reg_2014">32, 0, 32, 0</column>
+<column name="gmem_addr_read_22_reg_2019">32, 0, 32, 0</column>
+<column name="gmem_addr_read_23_reg_2024">32, 0, 32, 0</column>
+<column name="gmem_addr_read_24_reg_2029">32, 0, 32, 0</column>
+<column name="gmem_addr_read_25_reg_2034">32, 0, 32, 0</column>
+<column name="gmem_addr_read_26_reg_2039">32, 0, 32, 0</column>
+<column name="gmem_addr_read_27_reg_2044">32, 0, 32, 0</column>
+<column name="gmem_addr_read_28_reg_2049">32, 0, 32, 0</column>
+<column name="gmem_addr_read_29_reg_2054">32, 0, 32, 0</column>
+<column name="gmem_addr_read_2_reg_1919">32, 0, 32, 0</column>
+<column name="gmem_addr_read_30_reg_2059">32, 0, 32, 0</column>
+<column name="gmem_addr_read_31_reg_2064">32, 0, 32, 0</column>
+<column name="gmem_addr_read_32_reg_2069">32, 0, 32, 0</column>
+<column name="gmem_addr_read_33_reg_2074">32, 0, 32, 0</column>
+<column name="gmem_addr_read_34_reg_2079">32, 0, 32, 0</column>
+<column name="gmem_addr_read_35_reg_2084">32, 0, 32, 0</column>
+<column name="gmem_addr_read_36_reg_2089">32, 0, 32, 0</column>
+<column name="gmem_addr_read_37_reg_2094">32, 0, 32, 0</column>
+<column name="gmem_addr_read_38_reg_2099">32, 0, 32, 0</column>
+<column name="gmem_addr_read_39_reg_2104">32, 0, 32, 0</column>
+<column name="gmem_addr_read_3_reg_1924">32, 0, 32, 0</column>
+<column name="gmem_addr_read_40_reg_2109">32, 0, 32, 0</column>
+<column name="gmem_addr_read_41_reg_2114">32, 0, 32, 0</column>
+<column name="gmem_addr_read_42_reg_2119">32, 0, 32, 0</column>
+<column name="gmem_addr_read_43_reg_2124">32, 0, 32, 0</column>
+<column name="gmem_addr_read_44_reg_2129">32, 0, 32, 0</column>
+<column name="gmem_addr_read_45_reg_2134">32, 0, 32, 0</column>
+<column name="gmem_addr_read_46_reg_2139">32, 0, 32, 0</column>
+<column name="gmem_addr_read_47_reg_2144">32, 0, 32, 0</column>
+<column name="gmem_addr_read_48_reg_2149">32, 0, 32, 0</column>
+<column name="gmem_addr_read_49_reg_2154">32, 0, 32, 0</column>
+<column name="gmem_addr_read_4_reg_1929">32, 0, 32, 0</column>
+<column name="gmem_addr_read_50_reg_2159">32, 0, 32, 0</column>
+<column name="gmem_addr_read_51_reg_2164">32, 0, 32, 0</column>
+<column name="gmem_addr_read_52_reg_2169">32, 0, 32, 0</column>
+<column name="gmem_addr_read_53_reg_2174">32, 0, 32, 0</column>
+<column name="gmem_addr_read_54_reg_2179">32, 0, 32, 0</column>
+<column name="gmem_addr_read_55_reg_2184">32, 0, 32, 0</column>
+<column name="gmem_addr_read_56_reg_2189">32, 0, 32, 0</column>
+<column name="gmem_addr_read_57_reg_2194">32, 0, 32, 0</column>
+<column name="gmem_addr_read_58_reg_2199">32, 0, 32, 0</column>
+<column name="gmem_addr_read_59_reg_2204">32, 0, 32, 0</column>
+<column name="gmem_addr_read_5_reg_1934">32, 0, 32, 0</column>
+<column name="gmem_addr_read_60_reg_2209">32, 0, 32, 0</column>
+<column name="gmem_addr_read_61_reg_2214">32, 0, 32, 0</column>
+<column name="gmem_addr_read_62_reg_2219">32, 0, 32, 0</column>
+<column name="gmem_addr_read_6_reg_1939">32, 0, 32, 0</column>
+<column name="gmem_addr_read_7_reg_1944">32, 0, 32, 0</column>
+<column name="gmem_addr_read_8_reg_1949">32, 0, 32, 0</column>
+<column name="gmem_addr_read_9_reg_1954">32, 0, 32, 0</column>
+<column name="gmem_addr_read_reg_1909">32, 0, 32, 0</column>
+<column name="gmem_addr_reg_1903">64, 0, 64, 0</column>
+<column name="grp_equalizer_Pipeline_FILTER_LOOP_fu_468_ap_start_reg">1, 0, 1, 0</column>
+<column name="highfreq_shift_reg_0">32, 0, 32, 0</column>
+<column name="highfreq_shift_reg_1">32, 0, 32, 0</column>
+<column name="highfreq_shift_reg_10">32, 0, 32, 0</column>
+<column name="highfreq_shift_reg_11">32, 0, 32, 0</column>
+<column name="highfreq_shift_reg_12">32, 0, 32, 0</column>
+<column name="highfreq_shift_reg_13">32, 0, 32, 0</column>
+<column name="highfreq_shift_reg_14">32, 0, 32, 0</column>
+<column name="highfreq_shift_reg_15">32, 0, 32, 0</column>
+<column name="highfreq_shift_reg_16">32, 0, 32, 0</column>
+<column name="highfreq_shift_reg_17">32, 0, 32, 0</column>
+<column name="highfreq_shift_reg_18">32, 0, 32, 0</column>
+<column name="highfreq_shift_reg_19">32, 0, 32, 0</column>
+<column name="highfreq_shift_reg_2">32, 0, 32, 0</column>
+<column name="highfreq_shift_reg_3">32, 0, 32, 0</column>
+<column name="highfreq_shift_reg_4">32, 0, 32, 0</column>
+<column name="highfreq_shift_reg_5">32, 0, 32, 0</column>
+<column name="highfreq_shift_reg_6">32, 0, 32, 0</column>
+<column name="highfreq_shift_reg_7">32, 0, 32, 0</column>
+<column name="highfreq_shift_reg_8">32, 0, 32, 0</column>
+<column name="highfreq_shift_reg_9">32, 0, 32, 0</column>
+<column name="lowfreq_shift_reg_0">32, 0, 32, 0</column>
+<column name="lowfreq_shift_reg_1">32, 0, 32, 0</column>
+<column name="lowfreq_shift_reg_10">32, 0, 32, 0</column>
+<column name="lowfreq_shift_reg_11">32, 0, 32, 0</column>
+<column name="lowfreq_shift_reg_12">32, 0, 32, 0</column>
+<column name="lowfreq_shift_reg_13">32, 0, 32, 0</column>
+<column name="lowfreq_shift_reg_14">32, 0, 32, 0</column>
+<column name="lowfreq_shift_reg_15">32, 0, 32, 0</column>
+<column name="lowfreq_shift_reg_16">32, 0, 32, 0</column>
+<column name="lowfreq_shift_reg_17">32, 0, 32, 0</column>
+<column name="lowfreq_shift_reg_18">32, 0, 32, 0</column>
+<column name="lowfreq_shift_reg_19">32, 0, 32, 0</column>
+<column name="lowfreq_shift_reg_2">32, 0, 32, 0</column>
+<column name="lowfreq_shift_reg_3">32, 0, 32, 0</column>
+<column name="lowfreq_shift_reg_4">32, 0, 32, 0</column>
+<column name="lowfreq_shift_reg_5">32, 0, 32, 0</column>
+<column name="lowfreq_shift_reg_6">32, 0, 32, 0</column>
+<column name="lowfreq_shift_reg_7">32, 0, 32, 0</column>
+<column name="lowfreq_shift_reg_8">32, 0, 32, 0</column>
+<column name="lowfreq_shift_reg_9">32, 0, 32, 0</column>
+<column name="midfreq_shift_reg_0">32, 0, 32, 0</column>
+<column name="midfreq_shift_reg_1">32, 0, 32, 0</column>
+<column name="midfreq_shift_reg_10">32, 0, 32, 0</column>
+<column name="midfreq_shift_reg_11">32, 0, 32, 0</column>
+<column name="midfreq_shift_reg_12">32, 0, 32, 0</column>
+<column name="midfreq_shift_reg_13">32, 0, 32, 0</column>
+<column name="midfreq_shift_reg_14">32, 0, 32, 0</column>
+<column name="midfreq_shift_reg_15">32, 0, 32, 0</column>
+<column name="midfreq_shift_reg_16">32, 0, 32, 0</column>
+<column name="midfreq_shift_reg_17">32, 0, 32, 0</column>
+<column name="midfreq_shift_reg_18">32, 0, 32, 0</column>
+<column name="midfreq_shift_reg_19">32, 0, 32, 0</column>
+<column name="midfreq_shift_reg_2">32, 0, 32, 0</column>
+<column name="midfreq_shift_reg_3">32, 0, 32, 0</column>
+<column name="midfreq_shift_reg_4">32, 0, 32, 0</column>
+<column name="midfreq_shift_reg_5">32, 0, 32, 0</column>
+<column name="midfreq_shift_reg_6">32, 0, 32, 0</column>
+<column name="midfreq_shift_reg_7">32, 0, 32, 0</column>
+<column name="midfreq_shift_reg_8">32, 0, 32, 0</column>
+<column name="midfreq_shift_reg_9">32, 0, 32, 0</column>
 </table>
 </item>
 </section>
@@ -103,14 +232,14 @@
 <keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
 <column name="s_axi_control_AWVALID">in, 1, s_axi, control, scalar</column>
 <column name="s_axi_control_AWREADY">out, 1, s_axi, control, scalar</column>
-<column name="s_axi_control_AWADDR">in, 6, s_axi, control, scalar</column>
+<column name="s_axi_control_AWADDR">in, 5, s_axi, control, scalar</column>
 <column name="s_axi_control_WVALID">in, 1, s_axi, control, scalar</column>
 <column name="s_axi_control_WREADY">out, 1, s_axi, control, scalar</column>
 <column name="s_axi_control_WDATA">in, 32, s_axi, control, scalar</column>
 <column name="s_axi_control_WSTRB">in, 4, s_axi, control, scalar</column>
 <column name="s_axi_control_ARVALID">in, 1, s_axi, control, scalar</column>
 <column name="s_axi_control_ARREADY">out, 1, s_axi, control, scalar</column>
-<column name="s_axi_control_ARADDR">in, 6, s_axi, control, scalar</column>
+<column name="s_axi_control_ARADDR">in, 5, s_axi, control, scalar</column>
 <column name="s_axi_control_RVALID">out, 1, s_axi, control, scalar</column>
 <column name="s_axi_control_RREADY">in, 1, s_axi, control, scalar</column>
 <column name="s_axi_control_RDATA">out, 32, s_axi, control, scalar</column>
@@ -169,21 +298,21 @@
 <column name="SIGNAL_IN_TDATA">in, 32, axis, SIGNAL_IN_V_data_V, pointer</column>
 <column name="SIGNAL_IN_TVALID">in, 1, axis, SIGNAL_IN_V_dest_V, pointer</column>
 <column name="SIGNAL_IN_TREADY">out, 1, axis, SIGNAL_IN_V_dest_V, pointer</column>
-<column name="SIGNAL_IN_TDEST">in, 6, axis, SIGNAL_IN_V_dest_V, pointer</column>
+<column name="SIGNAL_IN_TDEST">in, 1, axis, SIGNAL_IN_V_dest_V, pointer</column>
 <column name="SIGNAL_IN_TKEEP">in, 4, axis, SIGNAL_IN_V_keep_V, pointer</column>
 <column name="SIGNAL_IN_TSTRB">in, 4, axis, SIGNAL_IN_V_strb_V, pointer</column>
-<column name="SIGNAL_IN_TUSER">in, 2, axis, SIGNAL_IN_V_user_V, pointer</column>
+<column name="SIGNAL_IN_TUSER">in, 1, axis, SIGNAL_IN_V_user_V, pointer</column>
 <column name="SIGNAL_IN_TLAST">in, 1, axis, SIGNAL_IN_V_last_V, pointer</column>
-<column name="SIGNAL_IN_TID">in, 5, axis, SIGNAL_IN_V_id_V, pointer</column>
+<column name="SIGNAL_IN_TID">in, 1, axis, SIGNAL_IN_V_id_V, pointer</column>
 <column name="SIGNAL_OUT_TDATA">out, 32, axis, SIGNAL_OUT_V_data_V, pointer</column>
 <column name="SIGNAL_OUT_TVALID">out, 1, axis, SIGNAL_OUT_V_dest_V, pointer</column>
 <column name="SIGNAL_OUT_TREADY">in, 1, axis, SIGNAL_OUT_V_dest_V, pointer</column>
-<column name="SIGNAL_OUT_TDEST">out, 6, axis, SIGNAL_OUT_V_dest_V, pointer</column>
+<column name="SIGNAL_OUT_TDEST">out, 1, axis, SIGNAL_OUT_V_dest_V, pointer</column>
 <column name="SIGNAL_OUT_TKEEP">out, 4, axis, SIGNAL_OUT_V_keep_V, pointer</column>
 <column name="SIGNAL_OUT_TSTRB">out, 4, axis, SIGNAL_OUT_V_strb_V, pointer</column>
-<column name="SIGNAL_OUT_TUSER">out, 2, axis, SIGNAL_OUT_V_user_V, pointer</column>
+<column name="SIGNAL_OUT_TUSER">out, 1, axis, SIGNAL_OUT_V_user_V, pointer</column>
 <column name="SIGNAL_OUT_TLAST">out, 1, axis, SIGNAL_OUT_V_last_V, pointer</column>
-<column name="SIGNAL_OUT_TID">out, 5, axis, SIGNAL_OUT_V_id_V, pointer</column>
+<column name="SIGNAL_OUT_TID">out, 1, axis, SIGNAL_OUT_V_id_V, pointer</column>
 </table>
 </item>
 </section>

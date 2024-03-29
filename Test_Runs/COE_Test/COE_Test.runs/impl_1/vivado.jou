@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Thu Mar 28 18:49:54 2024
+# Process ID: 23424
+# Current directory: C:/EECE4632FinalProject/Test_Runs/COE_Test/COE_Test.runs/impl_1
+# Command line: vivado.exe -log COE_Test_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source COE_Test_wrapper.tcl -notrace
+# Log file: C:/EECE4632FinalProject/Test_Runs/COE_Test/COE_Test.runs/impl_1/COE_Test_wrapper.vdi
+# Journal file: C:/EECE4632FinalProject/Test_Runs/COE_Test/COE_Test.runs/impl_1\vivado.jou
+# Running On: WFXA4BB6DB88619, OS: Windows, CPU Frequency: 2904 MHz, CPU Physical cores: 8, Host memory: 16881 MB
+#-----------------------------------------------------------
+source COE_Test_wrapper.tcl -notrace

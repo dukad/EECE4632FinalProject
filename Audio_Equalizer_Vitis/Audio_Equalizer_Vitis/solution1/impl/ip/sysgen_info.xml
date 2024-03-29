@@ -93,12 +93,12 @@
       </RtlPort>
   </CTypeInfo>
   <DesignConstraint>
-    <clk_period>10</clk_period>
+    <clk_period>40</clk_period>
   </DesignConstraint>
   <Machine>64</Machine>
   <modelParameters>
     <combinational>0</combinational>
-    <latency>1</latency>
-    <II>2</II>
+    <latency>undef</latency>
+    <II>undef</II>
   </modelParameters>
 </AdditionalInfo>

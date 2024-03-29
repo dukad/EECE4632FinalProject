@@ -18,9 +18,59 @@
         },
         {
           "functionName": "equalizer",
-          "label": "",
+          "label": "lowfreq_shift_reg",
           "functionLabel": "",
           "id": "2",
+          "sourceFile": "C:\/EECE4632FinalProject\/Audio_Equalizer_Vitis\/Audio_Equalizer_Vitis\/solution1\/directives.tcl",
+          "sourceLine": "7",
+          "pragma": {
+            "name": "ARRAY_PARTITION",
+            "option": [
+              {
+                "name": "variable",
+                "value": "lowfreq_shift_reg"
+              },
+              {
+                "name": "complete",
+                "value": ""
+              },
+              {
+                "name": "dim",
+                "value": "1"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "equalizer",
+          "label": "",
+          "functionLabel": "",
+          "id": "3",
+          "sourceFile": "C:\/EECE4632FinalProject\/Audio_Equalizer_Vitis\/Audio_Equalizer_Vitis\/solution1\/directives.tcl",
+          "sourceLine": "8",
+          "pragma": {
+            "name": "ARRAY_PARTITION",
+            "option": [
+              {
+                "name": "variable",
+                "value": "coefs"
+              },
+              {
+                "name": "complete",
+                "value": ""
+              },
+              {
+                "name": "dim",
+                "value": "1"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "equalizer",
+          "label": "",
+          "functionLabel": "",
+          "id": "4",
           "sourceFile": "C:\/EECE4632FinalProject\/Audio_Equalizer_Vitis\/Audio_Equalizer_Vitis\/solution1\/csynth.tcl",
           "sourceLine": "15",
           "pragma": {

@@ -4,16 +4,17 @@ wire kernel_monitor_clock;
 assign kernel_monitor_reset = ~ap_rst_n;
 assign kernel_monitor_clock = ap_clk;
 wire [1:0] axis_block_sigs;
-wire [0:0] inst_idle_sigs;
+wire [1:0] inst_idle_sigs;
 wire [0:0] inst_block_sigs;
 wire kernel_block;
 
-assign axis_block_sigs[0] = ~SIGNAL_IN_TDATA_blk_n;
-assign axis_block_sigs[1] = ~SIGNAL_OUT_TDATA_blk_n;
+assign axis_block_sigs[0] = ~grp_equalizer_Pipeline_FILTER_LOOP_fu_468.SIGNAL_IN_TDATA_blk_n;
+assign axis_block_sigs[1] = ~grp_equalizer_Pipeline_FILTER_LOOP_fu_468.SIGNAL_OUT_TDATA_blk_n;
 
 assign inst_block_sigs[0] = 1'b0;
 
 assign inst_idle_sigs[0] = 1'b0;
+assign inst_idle_sigs[1] = grp_equalizer_Pipeline_FILTER_LOOP_fu_468.ap_idle;
 
 equalizer_hls_deadlock_idx0_monitor equalizer_hls_deadlock_idx0_monitor_U (
     .clock(kernel_monitor_clock),

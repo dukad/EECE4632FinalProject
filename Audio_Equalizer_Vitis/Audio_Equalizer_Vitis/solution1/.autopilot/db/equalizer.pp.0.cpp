@@ -157,8 +157,6 @@ extern "C" {
 }
 # 2 "<built-in>" 2
 # 1 "equalizer.cpp" 2
-
-
 # 1 "C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\\hls_stream.h" 1
 # 61 "C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\\hls_stream.h"
 # 1 "C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h" 1
@@ -290,7 +288,7 @@ class stream : public stream<__STREAM_T__, 0> {
 };
 }
 # 62 "C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\\hls_stream.h" 2
-# 4 "equalizer.cpp" 2
+# 2 "equalizer.cpp" 2
 # 1 "C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\\ap_axi_sdata.h" 1
 # 87 "C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\\ap_axi_sdata.h"
 # 1 "C:/Xilinx/Vitis_HLS/2022.1/tps/mingw/8.3.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\8.3.0\\include\\c++\\climits" 1 3
@@ -6417,34 +6415,101 @@ private:
 };
 
 }
-# 5 "equalizer.cpp" 2
-# 14 "equalizer.cpp"
+# 3 "equalizer.cpp" 2
+
+
+
+
+
+
+typedef ap_axis<32,1,1,1> AXI_STREAM;
 typedef int data_t;
 typedef int coef_t;
 typedef int acc_t;
 
-__attribute__((sdx_kernel("equalizer", 0))) void equalizer(hls::stream< ap_axis<32,2,5,6> > &SIGNAL_IN,
-    hls::stream< ap_axis<32,2,5,6> > &SIGNAL_OUT,
- coef_t lowfreq_coefs[33],
- coef_t midfreq_coefs[33],
- coef_t highfreq_coefs[33]){
+__attribute__((sdx_kernel("equalizer", 0))) void equalizer(hls::stream< AXI_STREAM > &SIGNAL_IN,
+    hls::stream< AXI_STREAM > &SIGNAL_OUT,
+ coef_t coefs[21 + 21 + 21]){
 #line 15 "C:/EECE4632FinalProject/Audio_Equalizer_Vitis/Audio_Equalizer_Vitis/solution1/csynth.tcl"
 #pragma HLSDIRECTIVE TOP name=equalizer
-# 22 "equalizer.cpp"
+# 16 "equalizer.cpp"
 
 #line 6 "C:/EECE4632FinalProject/Audio_Equalizer_Vitis/Audio_Equalizer_Vitis/solution1/directives.tcl"
 #pragma HLSDIRECTIVE TOP name=equalizer
-# 22 "equalizer.cpp"
+# 16 "equalizer.cpp"
 
-#pragma HLS INTERFACE m_axi depth=33 port=lowfreq_coefs
-#pragma HLS INTERFACE m_axi depth=33 port=midfreq_coefs
-#pragma HLS INTERFACE m_axi depth=33 port=highfreq_coefs
+#line 8 "C:/EECE4632FinalProject/Audio_Equalizer_Vitis/Audio_Equalizer_Vitis/solution1/directives.tcl"
+#pragma HLSDIRECTIVE ARRAY_PARTITION variable=coefs complete dim=1
+# 16 "equalizer.cpp"
+
+#pragma HLS INTERFACE m_axi depth=99 port=coefs
 #pragma HLS INTERFACE axis port=SIGNAL_IN
 #pragma HLS INTERFACE axis port=SIGNAL_OUT
 #pragma hls interface s_axilite port=return
 
- ap_axis<32,2,5,6> tmp;
- SIGNAL_IN.read(tmp);
- SIGNAL_OUT.write(tmp);
-# 99 "equalizer.cpp"
+ FILTER_LOOP:
+ while(1){
+  static data_t lowfreq_shift_reg[21];
+  static data_t midfreq_shift_reg[21];
+  static data_t highfreq_shift_reg[21];
+
+  acc_t lowfreq_accumulate;
+  acc_t midfreq_accumulate;
+  acc_t highfreq_accumulate;
+
+  data_t data;
+  int i;
+
+  AXI_STREAM tmp;
+  SIGNAL_IN.read(tmp);
+
+  lowfreq_accumulate = 0;
+  Lowfreq_Shift_Accumulate_Loop:
+  for (i = 21 - 1; i > 0; i--) {
+#pragma HLS UNROLL
+ lowfreq_shift_reg[i] = lowfreq_shift_reg[i - 1];
+   lowfreq_accumulate += lowfreq_shift_reg[i] * coefs[i];
+  }
+
+  lowfreq_accumulate += tmp.data.to_int() * coefs[0];
+  lowfreq_shift_reg[0] = tmp.data.to_int();
+
+  midfreq_accumulate = 0;
+  Midfreq_Shift_Accumulate_Loop:
+  for (i = 21 - 1; i > 0; i--) {
+#pragma HLS UNROLL
+ midfreq_shift_reg[i] = midfreq_shift_reg[i - 1];
+   midfreq_accumulate += midfreq_shift_reg[i] * coefs[i + 21];
+  }
+
+  midfreq_accumulate += lowfreq_accumulate * coefs[21];
+  midfreq_shift_reg[0] = lowfreq_accumulate;
+
+  highfreq_accumulate = 0;
+  Highfreq_Shift_Accumulate_Loop:
+  for (i = 21 - 1; i > 0; i--){
+#pragma HLS UNROLL
+ highfreq_shift_reg[i] = highfreq_shift_reg[i - 1];
+   highfreq_accumulate += highfreq_shift_reg[i] * coefs[i + 21 + 21];
+  }
+
+  highfreq_accumulate += midfreq_accumulate * coefs[21 + 21];
+  highfreq_shift_reg[0] += highfreq_accumulate;
+
+  AXI_STREAM output;
+
+  output.data = highfreq_accumulate;
+  output.keep = tmp.keep;
+  output.strb = tmp.strb;
+  output.last = tmp.last;
+  output.dest = tmp.dest;
+  output.id = tmp.id;
+  output.user = tmp.user;
+
+  SIGNAL_OUT.write(output);
+
+  if (tmp.last){
+   break;
+  }
+ }
 }

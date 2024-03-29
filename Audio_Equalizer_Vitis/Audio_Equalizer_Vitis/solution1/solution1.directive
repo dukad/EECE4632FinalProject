@@ -5,6 +5,20 @@
                 <option name="name" value="equalizer"/>
             </pragma>
         </directive>
+        <directive functionName="equalizer" label="lowfreq_shift_reg" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" positionalBoolean="4" value="lowfreq_shift_reg"/>
+                <option name="complete" value="" positionalBoolean="type"/>
+                <option name="dim" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="equalizer" label="" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" positionalBoolean="4" value="coefs"/>
+                <option name="complete" value="" positionalBoolean="type"/>
+                <option name="dim" value="1"/>
+            </pragma>
+        </directive>
     </sourceFile>
 </AutoPilot:ProjectResources>
 
