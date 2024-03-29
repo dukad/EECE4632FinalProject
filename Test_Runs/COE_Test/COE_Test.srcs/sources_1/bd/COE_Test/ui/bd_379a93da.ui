@@ -1,30 +1,30 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"0.865455",
-   "Default View_TopLeft":"-75,-83",
+   "Default View_ScaleFactor":"0.463786",
+   "Default View_TopLeft":"-13,-246",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
 #  -string -flagsOSRD
 preplace port S_AXI_LITE -pg 1 -lvl 0 -x 0 -y 60 -defaultsOSRD
 preplace port M_AXI_MM2S -pg 1 -lvl 4 -x 1450 -y 50 -defaultsOSRD
 preplace port M_AXI_S2MM -pg 1 -lvl 4 -x 1450 -y 70 -defaultsOSRD
-preplace port port-id_s_axi_aclk -pg 1 -lvl 0 -x 0 -y 330 -defaultsOSRD
-preplace port port-id_s_axi_aresetn -pg 1 -lvl 0 -x 0 -y 350 -defaultsOSRD
-preplace inst axi_dma_0 -pg 1 -lvl 2 -x 940 -y 110 -defaultsOSRD
-preplace inst blk_mem_gen_0 -pg 1 -lvl 3 -x 1260 -y 320 -defaultsOSRD
+preplace port port-id_m_axi_mm2s_aclk -pg 1 -lvl 0 -x 0 -y 180 -defaultsOSRD
+preplace port port-id_axi_resetn -pg 1 -lvl 0 -x 0 -y 200 -defaultsOSRD
 preplace inst axi_bram_ctrl_0 -pg 1 -lvl 2 -x 940 -y 320 -defaultsOSRD
+preplace inst axi_dma_0 -pg 1 -lvl 2 -x 940 -y 110 -defaultsOSRD
 preplace inst equalizer_0 -pg 1 -lvl 1 -x 560 -y 170 -defaultsOSRD
-preplace netloc processing_system7_0_FCLK_CLK0 1 0 2 20 270 750
-preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 0 2 30 280 760
+preplace inst blk_mem_gen_0 -pg 1 -lvl 3 -x 1260 -y 320 -defaultsOSRD
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 2 30 270 750
+preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 0 2 20 280 760
+preplace netloc equalizer_0_m_axi_gmem 1 1 1 740 150n
 preplace netloc axi_bram_ctrl_0_BRAM_PORTA 1 2 1 NJ 320
+preplace netloc axi_dma_0_M_AXIS_MM2S 1 0 3 40 260 770 240 1110
+preplace netloc equalizer_0_SIGNAL_OUT 1 1 1 730 80n
 preplace netloc ps7_0_axi_periph_M00_AXI 1 0 2 NJ 60 NJ
 preplace netloc axi_dma_0_M_AXI_MM2S 1 2 2 NJ 50 NJ
 preplace netloc axi_dma_0_M_AXI_S2MM 1 2 2 NJ 70 NJ
-preplace netloc equalizer_0_SIGNAL_OUT 1 1 1 730 80n
-preplace netloc axi_dma_0_M_AXIS_MM2S 1 0 3 40 260 770 240 1110
-preplace netloc equalizer_0_m_axi_gmem 1 1 1 740 150n
 levelinfo -pg 1 0 560 940 1260 1450
-pagesize -pg 1 -db -bbox -sgen -140 -160 1600 420
+pagesize -pg 1 -db -bbox -sgen -170 -160 1600 420
 "
 }
-
+0
