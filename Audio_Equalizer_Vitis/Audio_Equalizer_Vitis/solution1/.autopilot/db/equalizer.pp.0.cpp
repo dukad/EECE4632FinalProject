@@ -6418,22 +6418,33 @@ private:
 
 }
 # 5 "equalizer.cpp" 2
-# 16 "equalizer.cpp"
+# 14 "equalizer.cpp"
+typedef int data_t;
+typedef int coef_t;
+typedef int acc_t;
+
 __attribute__((sdx_kernel("equalizer", 0))) void equalizer(hls::stream< ap_axis<32,2,5,6> > &SIGNAL_IN,
-    hls::stream< ap_axis<32,2,5,6> > &SIGNAL_OUT){
+    hls::stream< ap_axis<32,2,5,6> > &SIGNAL_OUT,
+ coef_t lowfreq_coefs[33],
+ coef_t midfreq_coefs[33],
+ coef_t highfreq_coefs[33]){
 #line 15 "C:/EECE4632FinalProject/Audio_Equalizer_Vitis/Audio_Equalizer_Vitis/solution1/csynth.tcl"
 #pragma HLSDIRECTIVE TOP name=equalizer
-# 17 "equalizer.cpp"
+# 22 "equalizer.cpp"
 
 #line 6 "C:/EECE4632FinalProject/Audio_Equalizer_Vitis/Audio_Equalizer_Vitis/solution1/directives.tcl"
 #pragma HLSDIRECTIVE TOP name=equalizer
-# 17 "equalizer.cpp"
+# 22 "equalizer.cpp"
 
+#pragma HLS INTERFACE m_axi depth=33 port=lowfreq_coefs
+#pragma HLS INTERFACE m_axi depth=33 port=midfreq_coefs
+#pragma HLS INTERFACE m_axi depth=33 port=highfreq_coefs
 #pragma HLS INTERFACE axis port=SIGNAL_IN
 #pragma HLS INTERFACE axis port=SIGNAL_OUT
+#pragma hls interface s_axilite port=return
 
  ap_axis<32,2,5,6> tmp;
  SIGNAL_IN.read(tmp);
  SIGNAL_OUT.write(tmp);
-# 91 "equalizer.cpp"
+# 99 "equalizer.cpp"
 }

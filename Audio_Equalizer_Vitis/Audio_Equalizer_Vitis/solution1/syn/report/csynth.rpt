@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'equalizer'
 ================================================================
 + General Information: 
-    * Date:           Thu Mar 28 14:29:36 2024
+    * Date:           Thu Mar 28 17:21:44 2024
     * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
     * Project:        Audio_Equalizer_Vitis
     * Solution:       solution1 (Vivado IP Flow Target)
@@ -15,17 +15,48 @@
 + Performance & Resource Estimates: 
     
     PS: '+' for module; 'o' for loop; '*' for dataflow
-    +-------------+------+------+---------+--------+----------+---------+------+----------+------+----+---------+----------+-----+
-    |   Modules   | Issue|      | Latency | Latency| Iteration|         | Trip |          |      |    |         |          |     |
-    |   & Loops   | Type | Slack| (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined| BRAM | DSP|    FF   |    LUT   | URAM|
-    +-------------+------+------+---------+--------+----------+---------+------+----------+------+----+---------+----------+-----+
-    |+ equalizer  |     -|  7.30|        1|  10.000|         -|        2|     -|        no|     -|   -|  2 (~0%)|  36 (~0%)|    -|
-    +-------------+------+------+---------+--------+----------+---------+------+----------+------+----+---------+----------+-----+
+    +-------------+------+------+---------+--------+----------+---------+------+----------+------+----+-----------+-----------+-----+
+    |   Modules   | Issue|      | Latency | Latency| Iteration|         | Trip |          |      |    |           |           |     |
+    |   & Loops   | Type | Slack| (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined| BRAM | DSP|     FF    |    LUT    | URAM|
+    +-------------+------+------+---------+--------+----------+---------+------+----------+------+----+-----------+-----------+-----+
+    |+ equalizer  |     -|  7.30|        1|  10.000|         -|        2|     -|        no|     -|   -|  248 (~0%)|  460 (~0%)|    -|
+    +-------------+------+------+---------+--------+----------+---------+------+----------+------+----+-----------+-----------+-----+
 
 
 ================================================================
 == HW Interfaces
 ================================================================
+* M_AXI
++------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+| Interface  | Data Width | Address Width | Latency | Offset | Register | Max Widen | Max Read     | Max Write    | Num Read    | Num Write   |
+|            | (SW->HW)   |               |         |        |          | Bitwidth  | Burst Length | Burst Length | Outstanding | Outstanding |
++------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+| m_axi_gmem | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          |
++------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+
+* S_AXILITE Interfaces
++---------------+------------+---------------+--------+----------+
+| Interface     | Data Width | Address Width | Offset | Register |
++---------------+------------+---------------+--------+----------+
+| s_axi_control | 32         | 6             | 16     | 0        |
++---------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++---------------+------------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface     | Register         | Offset | Width | Access | Description                      | Bit Fields                                                           |
++---------------+------------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_control | CTRL             | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control | GIER             | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_control | IP_IER           | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_control | IP_ISR           | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
+| s_axi_control | lowfreq_coefs_1  | 0x10   | 32    | W      | Data signal of lowfreq_coefs     |                                                                      |
+| s_axi_control | lowfreq_coefs_2  | 0x14   | 32    | W      | Data signal of lowfreq_coefs     |                                                                      |
+| s_axi_control | midfreq_coefs_1  | 0x1c   | 32    | W      | Data signal of midfreq_coefs     |                                                                      |
+| s_axi_control | midfreq_coefs_2  | 0x20   | 32    | W      | Data signal of midfreq_coefs     |                                                                      |
+| s_axi_control | highfreq_coefs_1 | 0x28   | 32    | W      | Data signal of highfreq_coefs    |                                                                      |
+| s_axi_control | highfreq_coefs_2 | 0x2c   | 32    | W      | Data signal of highfreq_coefs    |                                                                      |
++---------------+------------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
 * AXIS
 +------------+---------------+-------+-------+-----+-------+-------+--------+-------+-------+--------+
 | Interface  | Register Mode | TDATA | TDEST | TID | TKEEP | TLAST | TREADY | TSTRB | TUSER | TVALID |
@@ -35,33 +66,46 @@
 +------------+---------------+-------+-------+-----+-------+-------+--------+-------+-------+--------+
 
 * TOP LEVEL CONTROL
-+-----------+------------+-----------------------------------+
-| Interface | Type       | Ports                             |
-+-----------+------------+-----------------------------------+
-| ap_clk    | clock      | ap_clk                            |
-| ap_rst_n  | reset      | ap_rst_n                          |
-| ap_ctrl   | ap_ctrl_hs | ap_done ap_idle ap_ready ap_start |
-+-----------+------------+-----------------------------------+
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
 
 
 ================================================================
 == SW I/O Information
 ================================================================
 * Top Function Arguments
-+------------+-----------+--------------------------------------------+
-| Argument   | Direction | Datatype                                   |
-+------------+-----------+--------------------------------------------+
-| SIGNAL_IN  | in        | stream<hls::axis<ap_int<32>, 2, 5, 6>, 0>& |
-| SIGNAL_OUT | out       | stream<hls::axis<ap_int<32>, 2, 5, 6>, 0>& |
-+------------+-----------+--------------------------------------------+
++----------------+-----------+--------------------------------------------+
+| Argument       | Direction | Datatype                                   |
++----------------+-----------+--------------------------------------------+
+| SIGNAL_IN      | in        | stream<hls::axis<ap_int<32>, 2, 5, 6>, 0>& |
+| SIGNAL_OUT     | out       | stream<hls::axis<ap_int<32>, 2, 5, 6>, 0>& |
+| lowfreq_coefs  | unused    | int*                                       |
+| midfreq_coefs  | unused    | int*                                       |
+| highfreq_coefs | unused    | int*                                       |
++----------------+-----------+--------------------------------------------+
 
 * SW-to-HW Mapping
-+------------+--------------+-----------+
-| Argument   | HW Interface | HW Type   |
-+------------+--------------+-----------+
-| SIGNAL_IN  | SIGNAL_IN    | interface |
-| SIGNAL_OUT | SIGNAL_OUT   | interface |
-+------------+--------------+-----------+
++----------------+---------------+-----------+----------+--------------------------------------------+
+| Argument       | HW Interface  | HW Type   | HW Usage | HW Info                                    |
++----------------+---------------+-----------+----------+--------------------------------------------+
+| SIGNAL_IN      | SIGNAL_IN     | interface |          |                                            |
+| SIGNAL_OUT     | SIGNAL_OUT    | interface |          |                                            |
+| lowfreq_coefs  | m_axi_gmem    | interface |          |                                            |
+| lowfreq_coefs  | s_axi_control | register  | offset   | name=lowfreq_coefs_1 offset=0x10 range=32  |
+| lowfreq_coefs  | s_axi_control | register  | offset   | name=lowfreq_coefs_2 offset=0x14 range=32  |
+| midfreq_coefs  | m_axi_gmem    | interface |          |                                            |
+| midfreq_coefs  | s_axi_control | register  | offset   | name=midfreq_coefs_1 offset=0x1c range=32  |
+| midfreq_coefs  | s_axi_control | register  | offset   | name=midfreq_coefs_2 offset=0x20 range=32  |
+| highfreq_coefs | m_axi_gmem    | interface |          |                                            |
+| highfreq_coefs | s_axi_control | register  | offset   | name=highfreq_coefs_1 offset=0x28 range=32 |
+| highfreq_coefs | s_axi_control | register  | offset   | name=highfreq_coefs_2 offset=0x2c range=32 |
++----------------+---------------+-----------+----------+--------------------------------------------+
 
 
 ================================================================
@@ -85,11 +129,15 @@
 == Pragma Report
 ================================================================
 * Valid Pragma Syntax
-+-----------+----------------------+-------------------------------------------+
-| Type      | Options              | Location                                  |
-+-----------+----------------------+-------------------------------------------+
-| interface | axis port=SIGNAL_IN  | equalizer.cpp:18 in equalizer, SIGNAL_IN  |
-| interface | axis port=SIGNAL_OUT | equalizer.cpp:19 in equalizer, SIGNAL_OUT |
-+-----------+----------------------+-------------------------------------------+
++-----------+------------------------------------+-----------------------------------------------+
+| Type      | Options                            | Location                                      |
++-----------+------------------------------------+-----------------------------------------------+
+| interface | m_axi depth=33 port=lowfreq_coefs  | equalizer.cpp:23 in equalizer, lowfreq_coefs  |
+| interface | m_axi depth=33 port=midfreq_coefs  | equalizer.cpp:24 in equalizer, midfreq_coefs  |
+| interface | m_axi depth=33 port=highfreq_coefs | equalizer.cpp:25 in equalizer, highfreq_coefs |
+| interface | axis port=SIGNAL_IN                | equalizer.cpp:26 in equalizer, SIGNAL_IN      |
+| interface | axis port=SIGNAL_OUT               | equalizer.cpp:27 in equalizer, SIGNAL_OUT     |
+| interface | s_axilite port=return              | equalizer.cpp:28 in equalizer, return         |
++-----------+------------------------------------+-----------------------------------------------+
 
 

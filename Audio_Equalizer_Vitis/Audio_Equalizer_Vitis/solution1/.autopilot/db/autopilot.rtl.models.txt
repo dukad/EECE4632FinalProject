@@ -1,3 +1,4 @@
+equalizer_control_s_axi
 equalizer_regslice_both
 equalizer_regslice_both
 equalizer_regslice_both
