@@ -12,5 +12,5 @@
   <xd:arg xd:name="delay_mult" xd:originalName="delay_mult" xd:direction="in" xd:interfaceRef="s_axi_control_r" xd:busTypeRef="axilite" xd:offset="0x50" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
   <xd:arg xd:name="delay_samples" xd:originalName="delay_samples" xd:direction="in" xd:interfaceRef="s_axi_control_r" xd:busTypeRef="axilite" xd:offset="0x58" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
   <xd:latencyEstimates xd:best-case="undef" xd:worst-case="undef" xd:average-case="undef"/>
-  <xd:resourceEstimates xd:LUT="6729" xd:FF="3075" xd:BRAM="0" xd:DSP="5"/>
+  <xd:resourceEstimates xd:LUT="5584" xd:FF="3222" xd:BRAM="0" xd:DSP="5"/>
 </xd:acceleratorMap>

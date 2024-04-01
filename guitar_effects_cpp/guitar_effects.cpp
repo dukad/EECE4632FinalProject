@@ -1,14 +1,17 @@
 //#include "guitar_effects.h"
 #include "hls_stream.h"
 #include "ap_axi_sdata.h"
+#include "ap_fixed.h"
 
 
 #define FRAME_RATE 88200
 #define LPF_FILTER_LENGTH 441
 #define DELAY_BUFFER_SIZE 44100
 
+typedef ap_fixed<1,8> mult_float;
+
 // function definitions
-int distortion(int input, int threshold, float clip_factor);
+int distortion(int input, int threshold, mult_float clip_factor);
 int compression(int input, int min_threshold, int max_threshold, int zero_threshold, int& current_level, int values_buffer[LPF_FILTER_LENGTH], int compression_buffer_index, int lpf_coefficients[LPF_FILTER_LENGTH]);
 int delay(int input, int delay_samples, float delay_mult, int delay_buffer[DELAY_BUFFER_SIZE], int delay_buffer_index);
 
@@ -18,7 +21,7 @@ void guitar_effects (
 	int &axilite_out,
     char control,
     int distortion_threshold,
-    float distortion_clip_factor,
+    mult_float distortion_clip_factor,
     int compression_min_threshold,
     int compression_max_threshold,
     int compression_zero_threshold,
@@ -57,6 +60,7 @@ void guitar_effects (
     int delay_buffer_index = 0;
 
     ap_axis<32,2,5,6> tmp;
+    ap_axis<32,2,5,6> tmp_out;
     int tmp_int;
     axilite_out = 0;
     // main loop to control all effects
@@ -86,25 +90,34 @@ void guitar_effects (
         	tmp_int = tmp_int;
         }
 
-        tmp.data = (tmp_int);
-        OUTPUT.write(tmp); // write tmp to output
-        if(tmp.last){    // if we are on the last sample, then break
-            break;    
-            }   
-        }  
+        tmp_out.data = (tmp_int);
+        tmp_out.keep = tmp.keep;
+        tmp_out.strb = tmp.strb;
+        tmp_out.last = 0;
+        tmp_out.dest = tmp.dest;
+        tmp_out.id = tmp.id;
+        tmp_out.user = tmp.user;
+
+        if(tmp.last){    // if we are on the last sample, then break out of the loop
+                    break;
+                    }
+        OUTPUT.write(tmp_out); //write output to output
+    }
+    tmp_out.last = 1;
+    OUTPUT.write(tmp_out); //write output to output
 
 
 }
 
 //distortion effect, returns array of ints not a vector
-int distortion(int input, int threshold, float clip_factor) {
+int distortion(int input, int threshold, mult_float clip_factor) {
     // linear operation, so just take one input int at a time
     int result;
     int negative_threshold = -threshold;
     if (input > threshold) {
-        result = (((input - threshold)*clip_factor) + threshold);
+        result = (((input - threshold)*clip_factor) + threshold).to_int();
     } else if (input < negative_threshold) {
-        result = (((input + threshold)*clip_factor) - threshold);
+        result = (((input + threshold)*clip_factor) - threshold).to_int();
     } else {
         result = input;
     }
@@ -138,16 +151,16 @@ int compression(int input, int min_threshold, int max_threshold, int zero_thresh
     if (current_level > max_threshold) {
     	if (current_level > 0) {
     		//realistically this will always be the case because max threshold will always be > 0
-    		compression_factor = static_cast<float>(max_threshold) / current_level;
-    		output = static_cast<int>(input * compression_factor);
+    		compression_factor = (max_threshold) / current_level;
+    		output = (input * compression_factor);
     	} else {
     		output = input;
     	}
 
     } else if ((current_level < min_threshold) && (current_level > zero_threshold))  {
     	if (current_level > 0) {
-    		compression_factor = static_cast<int>(min_threshold) / current_level;
-    		output = static_cast<int>(input * compression_factor);
+    		compression_factor = (min_threshold) / current_level;
+    		output = (input * compression_factor);
     	} else {
     		output = input;
     	}
@@ -164,7 +177,7 @@ int compression(int input, int min_threshold, int max_threshold, int zero_thresh
 int delay(int input, int delay_samples, float delay_mult, int delay_buffer[DELAY_BUFFER_SIZE], int delay_buffer_index) {
     // add delayed output to input signal
     int output;
-    output = static_cast<int>(input + (delay_buffer[(delay_buffer_index - delay_samples) % DELAY_BUFFER_SIZE]*delay_mult)); // add a previous sample to the input
+    output = (input + (delay_buffer[(delay_buffer_index - delay_samples) % DELAY_BUFFER_SIZE]*delay_mult)); // add a previous sample to the input
 
     //store output in the buffer and update index
     delay_buffer[delay_buffer_index] = output;

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
-    <originFiles name="guitar_effects.cpp" path="C:\Users\du.kad\Desktop\EECE4632FinalProject\guitar_effects_cpp\guitar_effects.cpp"/>
     <originFiles name="guitar_effects.h" path="C:\Users\du.kad\Desktop\EECE4632FinalProject\guitar_effects_cpp\guitar_effects.h"/>
+    <originFiles name="guitar_effects.cpp" path="C:\Users\du.kad\Desktop\EECE4632FinalProject\guitar_effects_cpp\guitar_effects.cpp"/>
   </source>
   <testbench/>
 </autopilotfilemapping:AutoPilotFileMapping>

@@ -574,14 +574,27 @@
           </spirit:reset>
           <spirit:field>
             <spirit:name>distortion_clip_factor</spirit:name>
-            <spirit:description>Bit 31 to 0 of distortion_clip_factor</spirit:description>
+            <spirit:description>Bit 0 to 0 of distortion_clip_factor</spirit:description>
             <spirit:bitOffset>0</spirit:bitOffset>
-            <spirit:bitWidth spirit:format="long">32</spirit:bitWidth>
+            <spirit:bitWidth spirit:format="long">1</spirit:bitWidth>
             <spirit:access>write-only</spirit:access>
             <spirit:writeValueConstraint>
               <spirit:minimum>0</spirit:minimum>
               <spirit:maximum>0</spirit:maximum>
             </spirit:writeValueConstraint>
+            <spirit:testable spirit:testConstraint="unconstrained">false</spirit:testable>
+          </spirit:field>
+          <spirit:field>
+            <spirit:name>RESERVED</spirit:name>
+            <spirit:description>Reserved.  0s on read.</spirit:description>
+            <spirit:bitOffset>1</spirit:bitOffset>
+            <spirit:bitWidth spirit:format="long">31</spirit:bitWidth>
+            <spirit:access>read-only</spirit:access>
+            <spirit:writeValueConstraint>
+              <spirit:minimum>0</spirit:minimum>
+              <spirit:maximum>0</spirit:maximum>
+            </spirit:writeValueConstraint>
+            <spirit:readAction>modify</spirit:readAction>
             <spirit:testable spirit:testConstraint="unconstrained">false</spirit:testable>
           </spirit:field>
         </spirit:register>
@@ -720,7 +733,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>23a4c091</spirit:value>
+            <spirit:value>9818a2a9</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -739,7 +752,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>d145a190</spirit:value>
+            <spirit:value>3e27c7e4</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -758,7 +771,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>d640c585</spirit:value>
+            <spirit:value>66dbddc5</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -777,7 +790,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>cab464a8</spirit:value>
+            <spirit:value>b450190b</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -791,7 +804,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>168ee1d8</spirit:value>
+            <spirit:value>9c43fa61</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1446,11 +1459,7 @@
     <spirit:fileSet>
       <spirit:name>xilinx_verilogsynthesis_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>hdl/ip/guitar_effects_faddfsub_32ns_32ns_32_5_full_dsp_1_ip.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/ip/guitar_effects_fdiv_32ns_32ns_32_16_no_dsp_1_ip.v</spirit:name>
+        <spirit:name>hdl/ip/guitar_effects_fadd_32ns_32ns_32_5_full_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -1487,11 +1496,7 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/guitar_effects_faddfsub_32ns_32ns_32_5_full_dsp_1.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/guitar_effects_fdiv_32ns_32ns_32_16_no_dsp_1.v</spirit:name>
+        <spirit:name>hdl/verilog/guitar_effects_fadd_32ns_32ns_32_5_full_dsp_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -1572,12 +1577,7 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/guitar_effects_faddfsub_32ns_32ns_32_5_full_dsp_1.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/guitar_effects_fdiv_32ns_32ns_32_16_no_dsp_1.v</spirit:name>
+        <spirit:name>hdl/verilog/guitar_effects_fadd_32ns_32ns_32_5_full_dsp_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -1632,12 +1632,7 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/guitar_effects_faddfsub_32ns_32ns_32_5_full_dsp_1_ip.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/ip/guitar_effects_fdiv_32ns_32ns_32_16_no_dsp_1_ip.v</spirit:name>
+        <spirit:name>hdl/ip/guitar_effects_fadd_32ns_32ns_32_5_full_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -1665,11 +1660,7 @@
     <spirit:fileSet>
       <spirit:name>xilinx_vhdlsynthesis_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>hdl/ip/guitar_effects_faddfsub_32ns_32ns_32_5_full_dsp_1_ip.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/ip/guitar_effects_fdiv_32ns_32ns_32_16_no_dsp_1_ip.v</spirit:name>
+        <spirit:name>hdl/ip/guitar_effects_fadd_32ns_32ns_32_5_full_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -1702,11 +1693,7 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/guitar_effects_faddfsub_32ns_32ns_32_5_full_dsp_1.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/guitar_effects_fdiv_32ns_32ns_32_16_no_dsp_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/guitar_effects_fadd_32ns_32ns_32_5_full_dsp_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -1740,7 +1727,7 @@
       <spirit:file>
         <spirit:name>hdl/vhdl/guitar_effects.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_97ede1c2</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_9c409eed</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -1776,12 +1763,7 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/guitar_effects_faddfsub_32ns_32ns_32_5_full_dsp_1.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/guitar_effects_fdiv_32ns_32ns_32_16_no_dsp_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/guitar_effects_fadd_32ns_32ns_32_5_full_dsp_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -1826,12 +1808,7 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/guitar_effects_faddfsub_32ns_32ns_32_5_full_dsp_1_ip.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/ip/guitar_effects_fdiv_32ns_32ns_32_16_no_dsp_1_ip.v</spirit:name>
+        <spirit:name>hdl/ip/guitar_effects_fadd_32ns_32ns_32_5_full_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -1960,8 +1937,8 @@
       </xilinx:taxonomies>
       <xilinx:displayName>Guitar_effects</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>2113488533</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2024-03-27T23:54:18Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>2113495531</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2024-04-01T20:31:19Z</xilinx:coreCreationDateTime>
       <xilinx:sdxKernelAttributes>
         <xilinx:sdx_kernel>true</xilinx:sdx_kernel>
         <xilinx:sdx_kernel_type>hls</xilinx:sdx_kernel_type>
@@ -1970,8 +1947,8 @@
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2022.1</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="dfe6cead"/>
-      <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="ff8042e2"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="2e057aa5"/>
+      <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="85ee3609"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="3ef3fc8f"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="a9a0f884"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="1ab3a595"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="8846af3e"/>

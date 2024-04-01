@@ -26,8 +26,8 @@
           <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="40"/>
         </hw>
       </arg>
-      <arg id="5" access_type="r" src_name="distortion_clip_factor" src_type="float" src_isptr="0" src_bitwidth="32" src_size_or_depth="1">
-        <hw hw_usage="data" hw_interface="S_AXILite" hw_name="control_r" hw_bitwidth="32" hw_size_or_depth="1" hw_kernel_support="true">
+      <arg id="5" access_type="r" src_name="distortion_clip_factor" src_type="ap_fixed&lt;1, 8, AP_TRN, AP_WRAP, 0&gt;" src_isptr="1" src_bitwidth="8" src_size_or_depth="1">
+        <hw hw_usage="data" hw_interface="S_AXILite" hw_name="control_r" hw_bitwidth="1" hw_size_or_depth="1" hw_kernel_support="true">
           <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="48"/>
         </hw>
       </arg>
