@@ -2,10 +2,10 @@
 -- Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
--- Date        : Mon Apr  1 15:28:01 2024
+-- Date        : Mon Apr  1 15:27:58 2024
 -- Host        : DESKTOP-G7JA666 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/ip/FIR_Test_auto_pc_0/FIR_Test_auto_pc_0_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top FIR_Test_auto_pc_0 -prefix
+--               FIR_Test_auto_pc_0_ FIR_Test_auto_pc_0_stub.vhdl
 -- Design      : FIR_Test_auto_pc_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg400-1

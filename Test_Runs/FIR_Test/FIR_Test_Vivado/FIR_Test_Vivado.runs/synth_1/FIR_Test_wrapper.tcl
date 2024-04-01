@@ -70,6 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 4
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg400-1
 
@@ -120,6 +121,8 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
+
+read_checkpoint -auto_incremental -incremental C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.srcs/utils_1/imports/synth_1/FIR_Test_wrapper.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

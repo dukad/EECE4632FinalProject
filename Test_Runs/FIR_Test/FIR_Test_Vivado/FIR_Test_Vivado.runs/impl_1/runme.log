@@ -12,7 +12,7 @@
     ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source FIR_Test_wrapper.tcl -notrace
-create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:13 . Memory (MB): peak = 566.652 ; gain = 182.066
+create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:13 . Memory (MB): peak = 566.652 ; gain = 183.355
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test'.
 WARNING: [IP_Flow 19-3656] If you move the project, the path for repository 'c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test' may become invalid. A better location for the repository would be in a path adjacent to the project. (Current project location is 'c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.runs/impl_1'.)
@@ -25,14 +25,14 @@ Design is defaulting to constrset: constrs_1
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Project 1-454] Reading design checkpoint 'c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/ip/FIR_Test_processing_system7_0_0/FIR_Test_processing_system7_0_0.dcp' for cell 'FIR_Test_i/processing_system7_0'
 INFO: [Project 1-454] Reading design checkpoint 'c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/ip/FIR_Test_rst_ps7_0_100M_0/FIR_Test_rst_ps7_0_100M_0.dcp' for cell 'FIR_Test_i/rst_ps7_0_100M'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/ip/FIR_Test_axi_bram_ctrl_0_0/FIR_Test_axi_bram_ctrl_0_0.dcp' for cell 'FIR_Test_i/FIR/axi_bram_ctrl_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/ip/FIR_Test_axi_dma_0_0/FIR_Test_axi_dma_0_0.dcp' for cell 'FIR_Test_i/FIR/axi_dma_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/ip/FIR_Test_blk_mem_gen_0_0/FIR_Test_blk_mem_gen_0_0.dcp' for cell 'FIR_Test_i/FIR/blk_mem_gen_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/ip/FIR_Test_filt_0_0/FIR_Test_filt_0_0.dcp' for cell 'FIR_Test_i/FIR/filt_0'
 INFO: [Project 1-454] Reading design checkpoint 'c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/ip/FIR_Test_xbar_0/FIR_Test_xbar_0.dcp' for cell 'FIR_Test_i/axi_mem_intercon/xbar'
 INFO: [Project 1-454] Reading design checkpoint 'c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/ip/FIR_Test_auto_pc_0/FIR_Test_auto_pc_0.dcp' for cell 'FIR_Test_i/axi_mem_intercon/m00_couplers/auto_pc'
-INFO: [Project 1-454] Reading design checkpoint 'c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/ip/FIR_Test_axi_bram_ctrl_0_0/FIR_Test_axi_bram_ctrl_0_0.dcp' for cell 'FIR_Test_i/firDMA/axi_bram_ctrl_0'
-INFO: [Project 1-454] Reading design checkpoint 'c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/ip/FIR_Test_axi_dma_0_0/FIR_Test_axi_dma_0_0.dcp' for cell 'FIR_Test_i/firDMA/axi_dma_0'
-INFO: [Project 1-454] Reading design checkpoint 'c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/ip/FIR_Test_blk_mem_gen_0_0/FIR_Test_blk_mem_gen_0_0.dcp' for cell 'FIR_Test_i/firDMA/blk_mem_gen_0'
-INFO: [Project 1-454] Reading design checkpoint 'c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/ip/FIR_Test_filt_0_0/FIR_Test_filt_0_0.dcp' for cell 'FIR_Test_i/firDMA/filt_0'
 INFO: [Project 1-454] Reading design checkpoint 'c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/ip/FIR_Test_auto_pc_1/FIR_Test_auto_pc_1.dcp' for cell 'FIR_Test_i/ps7_0_axi_periph/s00_couplers/auto_pc'
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.465 . Memory (MB): peak = 1067.027 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.467 . Memory (MB): peak = 1075.191 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 251 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2023.2
@@ -43,16 +43,16 @@ Parsing XDC File [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/T
 Finished Parsing XDC File [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/ip/FIR_Test_rst_ps7_0_100M_0/FIR_Test_rst_ps7_0_100M_0_board.xdc] for cell 'FIR_Test_i/rst_ps7_0_100M/U0'
 Parsing XDC File [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/ip/FIR_Test_rst_ps7_0_100M_0/FIR_Test_rst_ps7_0_100M_0.xdc] for cell 'FIR_Test_i/rst_ps7_0_100M/U0'
 Finished Parsing XDC File [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/ip/FIR_Test_rst_ps7_0_100M_0/FIR_Test_rst_ps7_0_100M_0.xdc] for cell 'FIR_Test_i/rst_ps7_0_100M/U0'
-Parsing XDC File [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/ip/FIR_Test_axi_dma_0_0/FIR_Test_axi_dma_0_0.xdc] for cell 'FIR_Test_i/firDMA/axi_dma_0/U0'
+Parsing XDC File [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/ip/FIR_Test_axi_dma_0_0/FIR_Test_axi_dma_0_0.xdc] for cell 'FIR_Test_i/FIR/axi_dma_0/U0'
 WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/ip/FIR_Test_axi_dma_0_0/FIR_Test_axi_dma_0_0.xdc:52]
 WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/ip/FIR_Test_axi_dma_0_0/FIR_Test_axi_dma_0_0.xdc:56]
 WARNING: [Vivado_Tcl 4-919] Waiver ID 'CDC-1' -from list should not be empty. [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/ip/FIR_Test_axi_dma_0_0/FIR_Test_axi_dma_0_0.xdc:61]
-Finished Parsing XDC File [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/ip/FIR_Test_axi_dma_0_0/FIR_Test_axi_dma_0_0.xdc] for cell 'FIR_Test_i/firDMA/axi_dma_0/U0'
-Parsing XDC File [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/ip/FIR_Test_axi_dma_0_0/FIR_Test_axi_dma_0_0_clocks.xdc] for cell 'FIR_Test_i/firDMA/axi_dma_0/U0'
-Finished Parsing XDC File [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/ip/FIR_Test_axi_dma_0_0/FIR_Test_axi_dma_0_0_clocks.xdc] for cell 'FIR_Test_i/firDMA/axi_dma_0/U0'
+Finished Parsing XDC File [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/ip/FIR_Test_axi_dma_0_0/FIR_Test_axi_dma_0_0.xdc] for cell 'FIR_Test_i/FIR/axi_dma_0/U0'
+Parsing XDC File [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/ip/FIR_Test_axi_dma_0_0/FIR_Test_axi_dma_0_0_clocks.xdc] for cell 'FIR_Test_i/FIR/axi_dma_0/U0'
+Finished Parsing XDC File [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/ip/FIR_Test_axi_dma_0_0/FIR_Test_axi_dma_0_0_clocks.xdc] for cell 'FIR_Test_i/FIR/axi_dma_0/U0'
 INFO: [Project 1-1714] 6 XPM XDC files have been applied to the design.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1777.805 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1774.781 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 5 instances were transformed.
   RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 4 instances
@@ -61,7 +61,7 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 The system cannot find the path specified.
 20 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
 link_design completed successfully
-link_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:43 . Memory (MB): peak = 1777.805 ; gain = 1178.004
+link_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:41 . Memory (MB): peak = 1774.781 ; gain = 1175.438
 Command: opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
@@ -72,89 +72,89 @@ INFO: [DRC 23-27] Running DRC with 2 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1777.805 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1774.781 ; gain = 0.000
 
 Starting Cache Timing Information Task
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Ending Cache Timing Information Task | Checksum: 21e7cd005
+Ending Cache Timing Information Task | Checksum: 159280d1e
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1777.805 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1774.781 ; gain = 0.000
 
 Starting Logic Optimization Task
 
 Phase 1 Initialization
 
 Phase 1.1 Core Generation And Design Setup
-Phase 1.1 Core Generation And Design Setup | Checksum: 21e7cd005
+Phase 1.1 Core Generation And Design Setup | Checksum: 159280d1e
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.044 . Memory (MB): peak = 2115.867 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 2114.852 ; gain = 0.000
 
 Phase 1.2 Setup Constraints And Sort Netlist
-Phase 1.2 Setup Constraints And Sort Netlist | Checksum: 21e7cd005
+Phase 1.2 Setup Constraints And Sort Netlist | Checksum: 159280d1e
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.062 . Memory (MB): peak = 2115.867 ; gain = 0.000
-Phase 1 Initialization | Checksum: 21e7cd005
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 2114.852 ; gain = 0.000
+Phase 1 Initialization | Checksum: 159280d1e
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.067 . Memory (MB): peak = 2115.867 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 2114.852 ; gain = 0.000
 
 Phase 2 Timer Update And Timing Data Collection
 
 Phase 2.1 Timer Update
-Phase 2.1 Timer Update | Checksum: 21e7cd005
+Phase 2.1 Timer Update | Checksum: 159280d1e
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.526 . Memory (MB): peak = 2115.867 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.464 . Memory (MB): peak = 2114.852 ; gain = 0.000
 
 Phase 2.2 Timing Data Collection
-Phase 2.2 Timing Data Collection | Checksum: 21e7cd005
+Phase 2.2 Timing Data Collection | Checksum: 159280d1e
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.616 . Memory (MB): peak = 2115.867 ; gain = 0.000
-Phase 2 Timer Update And Timing Data Collection | Checksum: 21e7cd005
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.506 . Memory (MB): peak = 2114.852 ; gain = 0.000
+Phase 2 Timer Update And Timing Data Collection | Checksum: 159280d1e
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.621 . Memory (MB): peak = 2115.867 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.511 . Memory (MB): peak = 2114.852 ; gain = 0.000
 
 Phase 3 Retarget
 INFO: [Opt 31-1566] Pulled 8 inverters resulting in an inversion of 79 pins
 INFO: [Opt 31-138] Pushed 5 inverter(s) to 10 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 3 Retarget | Checksum: 90822553
+Phase 3 Retarget | Checksum: 1634da1b3
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2115.867 ; gain = 0.000
-Retarget | Checksum: 90822553
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.933 . Memory (MB): peak = 2114.852 ; gain = 0.000
+Retarget | Checksum: 1634da1b3
 INFO: [Opt 31-389] Phase Retarget created 67 cells and removed 185 cells
 INFO: [Opt 31-1021] In phase Retarget, 27 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 4 Constant propagation
 INFO: [Opt 31-138] Pushed 1 inverter(s) to 1 load pin(s).
-Phase 4 Constant propagation | Checksum: 1582f1b3a
+Phase 4 Constant propagation | Checksum: 165ef249e
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 2115.867 ; gain = 0.000
-Constant propagation | Checksum: 1582f1b3a
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2114.852 ; gain = 0.000
+Constant propagation | Checksum: 165ef249e
 INFO: [Opt 31-389] Phase Constant propagation created 178 cells and removed 1228 cells
 INFO: [Opt 31-1021] In phase Constant propagation, 27 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 5 Sweep
-Phase 5 Sweep | Checksum: ef2c69aa
+Phase 5 Sweep | Checksum: f8270a99
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 2115.867 ; gain = 0.000
-Sweep | Checksum: ef2c69aa
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 2114.852 ; gain = 0.000
+Sweep | Checksum: f8270a99
 INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 859 cells
 INFO: [Opt 31-1021] In phase Sweep, 97 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 6 BUFG optimization
-Phase 6 BUFG optimization | Checksum: ef2c69aa
+Phase 6 BUFG optimization | Checksum: f8270a99
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2115.867 ; gain = 0.000
-BUFG optimization | Checksum: ef2c69aa
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 2114.852 ; gain = 0.000
+BUFG optimization | Checksum: f8270a99
 INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
 
 Phase 7 Shift Register Optimization
+WARNING: [Opt 31-1131] Can not pull register out from FIR_Test_i/FIR/filt_0/inst/gmem_m_axi_U/bus_read/fifo_burst/U_fifo_srl/mem_reg[14][0]_srl15 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from FIR_Test_i/FIR/filt_0/inst/gmem_m_axi_U/load_unit/fifo_rreq/U_fifo_srl/mem_reg[5][64]_srl6 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from FIR_Test_i/FIR/filt_0/inst/gmem_m_axi_U/load_unit/fifo_rreq/U_fifo_srl/mem_reg[5][65]_srl6 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from FIR_Test_i/FIR/filt_0/inst/gmem_m_axi_U/load_unit/fifo_rreq/U_fifo_srl/mem_reg[5][67]_srl6 due to none static srl address bits
 WARNING: [Opt 31-1131] Can not pull register out from FIR_Test_i/axi_mem_intercon/xbar/inst/gen_samd.crossbar_samd/gen_master_slots[0].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/gen_srls[0].gen_rep[0].srl_nx1/gen_primitive_shifter.gen_srls[0].srl_inst due to none static srl address bits
 WARNING: [Opt 31-1131] Can not pull register out from FIR_Test_i/axi_mem_intercon/xbar/inst/gen_samd.crossbar_samd/gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/gen_srls[0].gen_rep[0].srl_nx1/gen_primitive_shifter.gen_srls[0].srl_inst due to none static srl address bits
 WARNING: [Opt 31-1131] Can not pull register out from FIR_Test_i/axi_mem_intercon/xbar/inst/gen_samd.crossbar_samd/gen_slave_slots[1].gen_si_write.wdata_router_w/wrouter_aw_fifo/gen_srls[0].gen_rep[0].srl_nx1/gen_primitive_shifter.gen_srls[0].srl_inst due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from FIR_Test_i/firDMA/filt_0/inst/gmem_m_axi_U/bus_read/fifo_burst/U_fifo_srl/mem_reg[14][0]_srl15 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from FIR_Test_i/firDMA/filt_0/inst/gmem_m_axi_U/load_unit/fifo_rreq/U_fifo_srl/mem_reg[5][64]_srl6 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from FIR_Test_i/firDMA/filt_0/inst/gmem_m_axi_U/load_unit/fifo_rreq/U_fifo_srl/mem_reg[5][65]_srl6 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from FIR_Test_i/firDMA/filt_0/inst/gmem_m_axi_U/load_unit/fifo_rreq/U_fifo_srl/mem_reg[5][67]_srl6 due to none static srl address bits
 WARNING: [Opt 31-1131] Can not pull register out from FIR_Test_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][0]_srl32 due to none static srl address bits
 WARNING: [Opt 31-1131] Can not pull register out from FIR_Test_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][10]_srl32 due to none static srl address bits
 WARNING: [Opt 31-1131] Can not pull register out from FIR_Test_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][11]_srl32 due to none static srl address bits
@@ -218,70 +218,70 @@ WARNING: [Opt 31-1131] Can not pull register out from FIR_Test_i/ps7_0_axi_perip
 WARNING: [Opt 31-1131] Can not pull register out from FIR_Test_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.b_channel_0/bid_fifo_0/memory_reg[3][9]_srl4 due to none static srl address bits
 WARNING: [Opt 31-1131] Can not pull register out from FIR_Test_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.b_channel_0/bresp_fifo_0/memory_reg[3][0]_srl4 due to none static srl address bits
 WARNING: [Opt 31-1131] Can not pull register out from FIR_Test_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.b_channel_0/bresp_fifo_0/memory_reg[3][1]_srl4 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from FIR_Test_i/firDMA/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_ADDR_CNTL/GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3][11]_srl4 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from FIR_Test_i/firDMA/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_ADDR_CNTL/GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3][13]_srl4 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from FIR_Test_i/firDMA/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_ADDR_CNTL/GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3][19]_srl4 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from FIR_Test_i/firDMA/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_ADDR_CNTL/GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3][20]_srl4 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from FIR_Test_i/firDMA/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_ADDR_CNTL/GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3][21]_srl4 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from FIR_Test_i/firDMA/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_ADDR_CNTL/GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3][22]_srl4 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from FIR_Test_i/firDMA/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_ADDR_CNTL/GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3][23]_srl4 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from FIR_Test_i/firDMA/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_ADDR_CNTL/GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3][24]_srl4 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from FIR_Test_i/firDMA/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_ADDR_CNTL/GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3][25]_srl4 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from FIR_Test_i/firDMA/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_ADDR_CNTL/GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3][26]_srl4 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from FIR_Test_i/firDMA/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_ADDR_CNTL/GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3][27]_srl4 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from FIR_Test_i/firDMA/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_ADDR_CNTL/GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3][28]_srl4 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from FIR_Test_i/firDMA/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_ADDR_CNTL/GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3][29]_srl4 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from FIR_Test_i/firDMA/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_ADDR_CNTL/GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3][30]_srl4 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from FIR_Test_i/firDMA/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_ADDR_CNTL/GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3][31]_srl4 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from FIR_Test_i/firDMA/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_ADDR_CNTL/GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3][32]_srl4 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from FIR_Test_i/firDMA/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_ADDR_CNTL/GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3][33]_srl4 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from FIR_Test_i/firDMA/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_ADDR_CNTL/GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3][34]_srl4 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from FIR_Test_i/firDMA/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_ADDR_CNTL/GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3][35]_srl4 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from FIR_Test_i/firDMA/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_ADDR_CNTL/GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3][36]_srl4 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from FIR_Test_i/firDMA/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_ADDR_CNTL/GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3][37]_srl4 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from FIR_Test_i/firDMA/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_ADDR_CNTL/GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3][38]_srl4 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from FIR_Test_i/firDMA/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_ADDR_CNTL/GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3][39]_srl4 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from FIR_Test_i/firDMA/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_ADDR_CNTL/GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3][40]_srl4 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from FIR_Test_i/firDMA/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_ADDR_CNTL/GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3][41]_srl4 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from FIR_Test_i/firDMA/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_ADDR_CNTL/GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3][42]_srl4 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from FIR_Test_i/firDMA/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_ADDR_CNTL/GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3][43]_srl4 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from FIR_Test_i/firDMA/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_ADDR_CNTL/GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3][44]_srl4 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from FIR_Test_i/firDMA/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_ADDR_CNTL/GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3][45]_srl4 due to none static srl address bits
-WARNING: [Opt 31-1131] Can not pull register out from FIR_Test_i/firDMA/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_ADDR_CNTL/GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3][46]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from FIR_Test_i/FIR/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_ADDR_CNTL/GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3][11]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from FIR_Test_i/FIR/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_ADDR_CNTL/GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3][13]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from FIR_Test_i/FIR/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_ADDR_CNTL/GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3][19]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from FIR_Test_i/FIR/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_ADDR_CNTL/GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3][20]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from FIR_Test_i/FIR/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_ADDR_CNTL/GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3][21]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from FIR_Test_i/FIR/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_ADDR_CNTL/GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3][22]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from FIR_Test_i/FIR/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_ADDR_CNTL/GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3][23]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from FIR_Test_i/FIR/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_ADDR_CNTL/GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3][24]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from FIR_Test_i/FIR/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_ADDR_CNTL/GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3][25]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from FIR_Test_i/FIR/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_ADDR_CNTL/GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3][26]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from FIR_Test_i/FIR/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_ADDR_CNTL/GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3][27]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from FIR_Test_i/FIR/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_ADDR_CNTL/GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3][28]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from FIR_Test_i/FIR/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_ADDR_CNTL/GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3][29]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from FIR_Test_i/FIR/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_ADDR_CNTL/GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3][30]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from FIR_Test_i/FIR/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_ADDR_CNTL/GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3][31]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from FIR_Test_i/FIR/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_ADDR_CNTL/GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3][32]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from FIR_Test_i/FIR/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_ADDR_CNTL/GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3][33]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from FIR_Test_i/FIR/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_ADDR_CNTL/GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3][34]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from FIR_Test_i/FIR/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_ADDR_CNTL/GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3][35]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from FIR_Test_i/FIR/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_ADDR_CNTL/GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3][36]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from FIR_Test_i/FIR/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_ADDR_CNTL/GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3][37]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from FIR_Test_i/FIR/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_ADDR_CNTL/GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3][38]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from FIR_Test_i/FIR/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_ADDR_CNTL/GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3][39]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from FIR_Test_i/FIR/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_ADDR_CNTL/GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3][40]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from FIR_Test_i/FIR/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_ADDR_CNTL/GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3][41]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from FIR_Test_i/FIR/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_ADDR_CNTL/GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3][42]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from FIR_Test_i/FIR/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_ADDR_CNTL/GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3][43]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from FIR_Test_i/FIR/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_ADDR_CNTL/GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3][44]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from FIR_Test_i/FIR/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_ADDR_CNTL/GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3][45]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from FIR_Test_i/FIR/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_ADDR_CNTL/GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3][46]_srl4 due to none static srl address bits
 INFO: [Common 17-14] Message 'Opt 31-1131' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
-Phase 7 Shift Register Optimization | Checksum: ef2c69aa
+Phase 7 Shift Register Optimization | Checksum: f8270a99
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2115.867 ; gain = 0.000
-Shift Register Optimization | Checksum: ef2c69aa
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 2114.852 ; gain = 0.000
+Shift Register Optimization | Checksum: f8270a99
 INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
 
 Phase 8 Post Processing Netlist
-Phase 8 Post Processing Netlist | Checksum: b57a3fad
+Phase 8 Post Processing Netlist | Checksum: 13eec2c8e
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2115.867 ; gain = 0.000
-Post Processing Netlist | Checksum: b57a3fad
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 2114.852 ; gain = 0.000
+Post Processing Netlist | Checksum: 13eec2c8e
 INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
 INFO: [Opt 31-1021] In phase Post Processing Netlist, 33 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 9 Finalization
 
 Phase 9.1 Finalizing Design Cores and Updating Shapes
-Phase 9.1 Finalizing Design Cores and Updating Shapes | Checksum: d7aeffac
+Phase 9.1 Finalizing Design Cores and Updating Shapes | Checksum: 10ce5e70d
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 2115.867 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2114.852 ; gain = 0.000
 
 Phase 9.2 Verifying Netlist Connectivity
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 2115.867 ; gain = 0.000
-Phase 9.2 Verifying Netlist Connectivity | Checksum: d7aeffac
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 2114.852 ; gain = 0.000
+Phase 9.2 Verifying Netlist Connectivity | Checksum: 10ce5e70d
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 2115.867 ; gain = 0.000
-Phase 9 Finalization | Checksum: d7aeffac
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2114.852 ; gain = 0.000
+Phase 9 Finalization | Checksum: 10ce5e70d
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 2115.867 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2114.852 ; gain = 0.000
 Opt_design Change Summary
 =========================
 
@@ -298,11 +298,11 @@ Opt_design Change Summary
 -------------------------------------------------------------------------------------------------------------------------
 
 
-Ending Logic Optimization Task | Checksum: d7aeffac
+Ending Logic Optimization Task | Checksum: 10ce5e70d
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 2115.867 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2114.852 ; gain = 0.000
 INFO: [Constraints 18-11670] Building netlist checker database with flags, 0x8
-Done building netlist checker database: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 2115.867 ; gain = 0.000
+Done building netlist checker database: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 2114.852 ; gain = 0.000
 
 Starting Power Optimization Task
 INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
@@ -318,45 +318,44 @@ Starting PowerOpt Patch Enables Task
 INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 5 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
 INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
 Number of BRAM Ports augmented: 4 newly gated: 1 Total Ports: 10
-Ending PowerOpt Patch Enables Task | Checksum: db47e329
+Ending PowerOpt Patch Enables Task | Checksum: 1abda10a3
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.092 . Memory (MB): peak = 2275.637 ; gain = 0.000
-Ending Power Optimization Task | Checksum: db47e329
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.087 . Memory (MB): peak = 2270.328 ; gain = 0.000
+Ending Power Optimization Task | Checksum: 1abda10a3
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2275.637 ; gain = 159.770
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2270.328 ; gain = 155.477
 
 Starting Final Cleanup Task
-Ending Final Cleanup Task | Checksum: db47e329
+Ending Final Cleanup Task | Checksum: 1abda10a3
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 2275.637 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 2270.328 ; gain = 0.000
 
 Starting Netlist Obfuscation Task
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 2275.637 ; gain = 0.000
-Ending Netlist Obfuscation Task | Checksum: 8d538852
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 2270.328 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: 18375b943
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 2275.637 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 2270.328 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
 49 Infos, 105 Warnings, 0 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-opt_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:19 . Memory (MB): peak = 2275.637 ; gain = 497.832
+opt_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:17 . Memory (MB): peak = 2270.328 ; gain = 495.547
 INFO: [runtcl-4] Executing : report_drc -file FIR_Test_wrapper_drc_opted.rpt -pb FIR_Test_wrapper_drc_opted.pb -rpx FIR_Test_wrapper_drc_opted.rpx
 Command: report_drc -file FIR_Test_wrapper_drc_opted.rpt -pb FIR_Test_wrapper_drc_opted.pb -rpx FIR_Test_wrapper_drc_opted.rpx
 INFO: [IP_Flow 19-1839] IP Catalog is up to date.
 INFO: [DRC 23-27] Running DRC with 2 threads
 INFO: [Vivado_Tcl 2-168] The results of DRC are in file C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.runs/impl_1/FIR_Test_wrapper_drc_opted.rpt.
 report_drc completed successfully
-report_drc: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 2275.637 ; gain = 0.000
 INFO: [Timing 38-480] Writing timing data to binary archive.
-Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 2275.637 ; gain = 0.000
-Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2275.637 ; gain = 0.000
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.040 . Memory (MB): peak = 2270.328 ; gain = 0.000
+Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.073 . Memory (MB): peak = 2270.328 ; gain = 0.000
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2270.328 ; gain = 0.000
 Writing XDEF routing.
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.054 . Memory (MB): peak = 2275.637 ; gain = 0.000
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Wrote RouteStorage: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.068 . Memory (MB): peak = 2275.637 ; gain = 0.000
-Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2275.637 ; gain = 0.000
-Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 2275.637 ; gain = 0.000
-Write Physdb Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.145 . Memory (MB): peak = 2275.637 ; gain = 0.000
+Wrote RouteStorage: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.063 . Memory (MB): peak = 2270.328 ; gain = 0.000
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2270.328 ; gain = 0.000
+Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 2270.328 ; gain = 0.000
+Write Physdb Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.186 . Memory (MB): peak = 2270.328 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.runs/impl_1/FIR_Test_wrapper_opt.dcp' has been generated.
 Command: place_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
@@ -376,59 +375,59 @@ Starting Placer Task
 Phase 1 Placer Initialization
 
 Phase 1.1 Placer Initialization Netlist Sorting
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 2275.637 ; gain = 0.000
-Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 6d0ba7da
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 2270.328 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 11c1a0e8c
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 2275.637 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 2275.637 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 2270.328 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 2270.328 ; gain = 0.000
 
 Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: acc3893a
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: a74bb73b
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2275.637 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 2270.328 ; gain = 0.000
 
 Phase 1.3 Build Placer Netlist Model
-Phase 1.3 Build Placer Netlist Model | Checksum: 11b71c278
+Phase 1.3 Build Placer Netlist Model | Checksum: 114c81253
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 2275.637 ; gain = 0.000
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 2270.328 ; gain = 0.000
 
 Phase 1.4 Constrain Clocks/Macros
-Phase 1.4 Constrain Clocks/Macros | Checksum: 11b71c278
+Phase 1.4 Constrain Clocks/Macros | Checksum: 114c81253
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 2275.637 ; gain = 0.000
-Phase 1 Placer Initialization | Checksum: 11b71c278
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 2270.328 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: 114c81253
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 2275.637 ; gain = 0.000
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 2270.328 ; gain = 0.000
 
 Phase 2 Global Placement
 
 Phase 2.1 Floorplanning
-Phase 2.1 Floorplanning | Checksum: 1ac032f50
+Phase 2.1 Floorplanning | Checksum: e74461e4
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 2275.637 ; gain = 0.000
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 2270.328 ; gain = 0.000
 
 Phase 2.2 Update Timing before SLR Path Opt
-Phase 2.2 Update Timing before SLR Path Opt | Checksum: 1668bb156
+Phase 2.2 Update Timing before SLR Path Opt | Checksum: 1192a646f
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 2275.637 ; gain = 0.000
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 2270.328 ; gain = 0.000
 
 Phase 2.3 Post-Processing in Floorplanning
-Phase 2.3 Post-Processing in Floorplanning | Checksum: 1668bb156
+Phase 2.3 Post-Processing in Floorplanning | Checksum: 1192a646f
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 2275.637 ; gain = 0.000
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 2270.328 ; gain = 0.000
 
 Phase 2.4 Global Placement Core
 
 Phase 2.4.1 UpdateTiming Before Physical Synthesis
-Phase 2.4.1 UpdateTiming Before Physical Synthesis | Checksum: 19af8a2a2
+Phase 2.4.1 UpdateTiming Before Physical Synthesis | Checksum: 24d165e86
 
-Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 2275.637 ; gain = 0.000
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 2270.328 ; gain = 0.000
 
 Phase 2.4.2 Physical Synthesis In Placer
-INFO: [Physopt 32-1035] Found 0 LUTNM shape to break, 324 LUT instances to create LUTNM shape
+INFO: [Physopt 32-1035] Found 0 LUTNM shape to break, 326 LUT instances to create LUTNM shape
 INFO: [Physopt 32-1044] Break lutnm for timing: one critical 0, two critical 0, total 0, new lutff created 0
-INFO: [Physopt 32-1138] End 1 Pass. Optimized 131 nets or LUTs. Breaked 0 LUT, combined 131 existing LUTs and moved 0 existing LUT
+INFO: [Physopt 32-1138] End 1 Pass. Optimized 134 nets or LUTs. Breaked 0 LUT, combined 134 existing LUTs and moved 0 existing LUT
 INFO: [Physopt 32-65] No nets found for high-fanout optimization.
 INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
@@ -439,7 +438,7 @@ INFO: [Physopt 32-670] No setup violation found.  BRAM Register Optimization was
 INFO: [Physopt 32-670] No setup violation found.  URAM Register Optimization was not performed.
 INFO: [Physopt 32-949] No candidate nets found for dynamic/static region interface net replication
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 2275.637 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 2270.328 ; gain = 0.000
 
 Summary of Physical Synthesis Optimizations
 ============================================
@@ -448,7 +447,7 @@ Summary of Physical Synthesis Optimizations
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 |  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
-|  LUT Combining                                    |            0  |            131  |                   131  |           0  |           1  |  00:00:00  |
+|  LUT Combining                                    |            0  |            134  |                   134  |           0  |           1  |  00:00:00  |
 |  Retime                                           |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  DSP Register                                     |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
@@ -457,59 +456,59 @@ Summary of Physical Synthesis Optimizations
 |  BRAM Register                                    |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
 |  URAM Register                                    |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
 |  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
-|  Total                                            |            0  |            131  |                   131  |           0  |           4  |  00:00:00  |
+|  Total                                            |            0  |            134  |                   134  |           0  |           4  |  00:00:00  |
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-Phase 2.4.2 Physical Synthesis In Placer | Checksum: 1bf3de1a4
+Phase 2.4.2 Physical Synthesis In Placer | Checksum: 1517dcc0f
 
-Time (s): cpu = 00:00:11 ; elapsed = 00:00:17 . Memory (MB): peak = 2275.637 ; gain = 0.000
-Phase 2.4 Global Placement Core | Checksum: 18169ef7f
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 2270.328 ; gain = 0.000
+Phase 2.4 Global Placement Core | Checksum: 182ac3b09
 
-Time (s): cpu = 00:00:12 ; elapsed = 00:00:17 . Memory (MB): peak = 2275.637 ; gain = 0.000
-Phase 2 Global Placement | Checksum: 18169ef7f
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 2270.328 ; gain = 0.000
+Phase 2 Global Placement | Checksum: 182ac3b09
 
-Time (s): cpu = 00:00:12 ; elapsed = 00:00:17 . Memory (MB): peak = 2275.637 ; gain = 0.000
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 2270.328 ; gain = 0.000
 
 Phase 3 Detail Placement
 
 Phase 3.1 Commit Multi Column Macros
-Phase 3.1 Commit Multi Column Macros | Checksum: 138aa8250
+Phase 3.1 Commit Multi Column Macros | Checksum: 159e8773c
 
-Time (s): cpu = 00:00:12 ; elapsed = 00:00:18 . Memory (MB): peak = 2275.637 ; gain = 0.000
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:17 . Memory (MB): peak = 2270.328 ; gain = 0.000
 
 Phase 3.2 Commit Most Macros & LUTRAMs
-Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1c89045b0
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 10dfaa57c
 
-Time (s): cpu = 00:00:13 ; elapsed = 00:00:20 . Memory (MB): peak = 2275.637 ; gain = 0.000
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:19 . Memory (MB): peak = 2270.328 ; gain = 0.000
 
 Phase 3.3 Area Swap Optimization
-Phase 3.3 Area Swap Optimization | Checksum: 1c0db7143
+Phase 3.3 Area Swap Optimization | Checksum: 1a282502e
 
-Time (s): cpu = 00:00:13 ; elapsed = 00:00:20 . Memory (MB): peak = 2275.637 ; gain = 0.000
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:19 . Memory (MB): peak = 2270.328 ; gain = 0.000
 
 Phase 3.4 Pipeline Register Optimization
-Phase 3.4 Pipeline Register Optimization | Checksum: 188a18410
+Phase 3.4 Pipeline Register Optimization | Checksum: 18ae818d1
 
-Time (s): cpu = 00:00:13 ; elapsed = 00:00:20 . Memory (MB): peak = 2275.637 ; gain = 0.000
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:19 . Memory (MB): peak = 2270.328 ; gain = 0.000
 
 Phase 3.5 Small Shape Detail Placement
-Phase 3.5 Small Shape Detail Placement | Checksum: 1b5b808a3
+Phase 3.5 Small Shape Detail Placement | Checksum: e68c388b
 
-Time (s): cpu = 00:00:15 ; elapsed = 00:00:23 . Memory (MB): peak = 2275.637 ; gain = 0.000
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:22 . Memory (MB): peak = 2270.328 ; gain = 0.000
 
 Phase 3.6 Re-assign LUT pins
-Phase 3.6 Re-assign LUT pins | Checksum: 134324be4
+Phase 3.6 Re-assign LUT pins | Checksum: 89879f79
 
-Time (s): cpu = 00:00:16 ; elapsed = 00:00:24 . Memory (MB): peak = 2275.637 ; gain = 0.000
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:23 . Memory (MB): peak = 2270.328 ; gain = 0.000
 
 Phase 3.7 Pipeline Register Optimization
-Phase 3.7 Pipeline Register Optimization | Checksum: 141de3339
+Phase 3.7 Pipeline Register Optimization | Checksum: 12cb0637e
 
-Time (s): cpu = 00:00:16 ; elapsed = 00:00:24 . Memory (MB): peak = 2275.637 ; gain = 0.000
-Phase 3 Detail Placement | Checksum: 141de3339
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:23 . Memory (MB): peak = 2270.328 ; gain = 0.000
+Phase 3 Detail Placement | Checksum: 12cb0637e
 
-Time (s): cpu = 00:00:16 ; elapsed = 00:00:24 . Memory (MB): peak = 2275.637 ; gain = 0.000
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:23 . Memory (MB): peak = 2270.328 ; gain = 0.000
 
 Phase 4 Post Placement Optimization and Clean-Up
 
@@ -517,7 +516,7 @@ Phase 4.1 Post Commit Optimization
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Phase 4.1.1 Post Placement Optimization
-Post Placement Optimization Initialization | Checksum: 1a7ddc762
+Post Placement Optimization Initialization | Checksum: 116d1cc91
 
 Phase 4.1.1.1 BUFG Insertion
 
@@ -525,33 +524,33 @@ Starting Physical Synthesis Task
 
 Phase 1 Physical Synthesis Initialization
 INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=1.973 | TNS=0.000 |
-Phase 1 Physical Synthesis Initialization | Checksum: f10cf75f
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=2.142 | TNS=0.000 |
+Phase 1 Physical Synthesis Initialization | Checksum: 110f3e4b0
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.725 . Memory (MB): peak = 2275.637 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.766 . Memory (MB): peak = 2270.328 ; gain = 0.000
 INFO: [Place 46-56] BUFG insertion identified 0 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to netlist editing failed: 0.
-Ending Physical Synthesis Task | Checksum: f10cf75f
+Ending Physical Synthesis Task | Checksum: 110f3e4b0
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.957 . Memory (MB): peak = 2275.637 ; gain = 0.000
-Phase 4.1.1.1 BUFG Insertion | Checksum: 1a7ddc762
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.934 . Memory (MB): peak = 2270.328 ; gain = 0.000
+Phase 4.1.1.1 BUFG Insertion | Checksum: 116d1cc91
 
-Time (s): cpu = 00:00:18 ; elapsed = 00:00:29 . Memory (MB): peak = 2275.637 ; gain = 0.000
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:28 . Memory (MB): peak = 2270.328 ; gain = 0.000
 
 Phase 4.1.1.2 Post Placement Timing Optimization
-INFO: [Place 30-746] Post Placement Timing Summary WNS=1.973. For the most accurate timing information please run report_timing.
-Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: 1c5a4d6f4
+INFO: [Place 30-746] Post Placement Timing Summary WNS=2.142. For the most accurate timing information please run report_timing.
+Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: 1429f9521
 
-Time (s): cpu = 00:00:18 ; elapsed = 00:00:29 . Memory (MB): peak = 2275.637 ; gain = 0.000
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:28 . Memory (MB): peak = 2270.328 ; gain = 0.000
 
-Time (s): cpu = 00:00:18 ; elapsed = 00:00:29 . Memory (MB): peak = 2275.637 ; gain = 0.000
-Phase 4.1 Post Commit Optimization | Checksum: 1c5a4d6f4
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:28 . Memory (MB): peak = 2270.328 ; gain = 0.000
+Phase 4.1 Post Commit Optimization | Checksum: 1429f9521
 
-Time (s): cpu = 00:00:18 ; elapsed = 00:00:29 . Memory (MB): peak = 2275.637 ; gain = 0.000
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:28 . Memory (MB): peak = 2270.328 ; gain = 0.000
 
 Phase 4.2 Post Placement Cleanup
-Phase 4.2 Post Placement Cleanup | Checksum: 1c5a4d6f4
+Phase 4.2 Post Placement Cleanup | Checksum: 1429f9521
 
-Time (s): cpu = 00:00:18 ; elapsed = 00:00:29 . Memory (MB): peak = 2275.637 ; gain = 0.000
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:28 . Memory (MB): peak = 2270.328 ; gain = 0.000
 
 Phase 4.3 Placer Reporting
 
@@ -570,67 +569,67 @@ INFO: [Place 30-612] Post-Placement Estimated Congestion
 |       West|                1x1|                1x1|
 |___________|___________________|___________________|
 
-Phase 4.3.1 Print Estimated Congestion | Checksum: 1c5a4d6f4
+Phase 4.3.1 Print Estimated Congestion | Checksum: 1429f9521
 
-Time (s): cpu = 00:00:18 ; elapsed = 00:00:30 . Memory (MB): peak = 2275.637 ; gain = 0.000
-Phase 4.3 Placer Reporting | Checksum: 1c5a4d6f4
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:28 . Memory (MB): peak = 2270.328 ; gain = 0.000
+Phase 4.3 Placer Reporting | Checksum: 1429f9521
 
-Time (s): cpu = 00:00:18 ; elapsed = 00:00:30 . Memory (MB): peak = 2275.637 ; gain = 0.000
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:28 . Memory (MB): peak = 2270.328 ; gain = 0.000
 
 Phase 4.4 Final Placement Cleanup
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 2275.637 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 2270.328 ; gain = 0.000
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:30 . Memory (MB): peak = 2275.637 ; gain = 0.000
-Phase 4 Post Placement Optimization and Clean-Up | Checksum: 260cdae50
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:29 . Memory (MB): peak = 2270.328 ; gain = 0.000
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 1c43837a8
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:30 . Memory (MB): peak = 2275.637 ; gain = 0.000
-Ending Placer Task | Checksum: 16bedee43
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:29 . Memory (MB): peak = 2270.328 ; gain = 0.000
+Ending Placer Task | Checksum: 12b30dc80
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:30 . Memory (MB): peak = 2275.637 ; gain = 0.000
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:29 . Memory (MB): peak = 2270.328 ; gain = 0.000
 84 Infos, 105 Warnings, 0 Critical Warnings and 0 Errors encountered.
 place_design completed successfully
-place_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:32 . Memory (MB): peak = 2275.637 ; gain = 0.000
+place_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:31 . Memory (MB): peak = 2270.328 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_io -file FIR_Test_wrapper_io_placed.rpt
-report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.122 . Memory (MB): peak = 2275.637 ; gain = 0.000
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.124 . Memory (MB): peak = 2270.328 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_utilization -file FIR_Test_wrapper_utilization_placed.rpt -pb FIR_Test_wrapper_utilization_placed.pb
 INFO: [runtcl-4] Executing : report_control_sets -verbose -file FIR_Test_wrapper_control_sets_placed.rpt
-report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.048 . Memory (MB): peak = 2275.637 ; gain = 0.000
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.048 . Memory (MB): peak = 2270.328 ; gain = 0.000
 INFO: [Timing 38-480] Writing timing data to binary archive.
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.079 . Memory (MB): peak = 2275.637 ; gain = 0.000
-Wrote PlaceDB: Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2275.637 ; gain = 0.000
-Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2275.637 ; gain = 0.000
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.060 . Memory (MB): peak = 2270.328 ; gain = 0.000
+Wrote PlaceDB: Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2270.328 ; gain = 0.000
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2270.328 ; gain = 0.000
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Wrote RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.064 . Memory (MB): peak = 2275.637 ; gain = 0.000
-Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 2275.637 ; gain = 0.000
-Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 2275.637 ; gain = 0.000
-Write Physdb Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2275.637 ; gain = 0.000
+Wrote RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.070 . Memory (MB): peak = 2270.328 ; gain = 0.000
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 2270.328 ; gain = 0.000
+Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 2270.328 ; gain = 0.000
+Write Physdb Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2270.328 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.runs/impl_1/FIR_Test_wrapper_placed.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 2275.637 ; gain = 0.000
+write_checkpoint: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2270.328 ; gain = 0.000
 Command: phys_opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
 
 Starting Initial Update Timing Task
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 2275.637 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 2270.328 ; gain = 0.000
 INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.000 ns. Skipping all physical synthesis optimizations.
 INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
 INFO: [Common 17-83] Releasing license: Implementation
 93 Infos, 105 Warnings, 0 Critical Warnings and 0 Errors encountered.
 phys_opt_design completed successfully
 INFO: [Timing 38-480] Writing timing data to binary archive.
-Write ShapeDB Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.091 . Memory (MB): peak = 2275.637 ; gain = 0.000
-Wrote PlaceDB: Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 2275.637 ; gain = 0.000
-Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2275.637 ; gain = 0.000
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.070 . Memory (MB): peak = 2270.328 ; gain = 0.000
+Wrote PlaceDB: Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 2270.328 ; gain = 0.000
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2270.328 ; gain = 0.000
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Wrote RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.063 . Memory (MB): peak = 2275.637 ; gain = 0.000
-Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 2275.637 ; gain = 0.000
-Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 2275.637 ; gain = 0.000
-Write Physdb Complete: Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 2275.637 ; gain = 0.000
+Wrote RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.062 . Memory (MB): peak = 2270.328 ; gain = 0.000
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 2270.328 ; gain = 0.000
+Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 2270.328 ; gain = 0.000
+Write Physdb Complete: Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 2270.328 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.runs/impl_1/FIR_Test_wrapper_physopt.dcp' has been generated.
 Command: route_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
@@ -645,30 +644,30 @@ Starting Routing Task
 INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 8 CPUs
 
 Phase 1 Build RT Design
-Checksum: PlaceDB: c4a7c280 ConstDB: 0 ShapeSum: a7462bc3 RouteDB: 0
-Post Restoration Checksum: NetGraph: c48404b | NumContArr: fd689da2 | Constraints: c2a8fa9d | Timing: c2a8fa9d
-Phase 1 Build RT Design | Checksum: 28f02d327
+Checksum: PlaceDB: 62b02108 ConstDB: 0 ShapeSum: c880bb78 RouteDB: 0
+Post Restoration Checksum: NetGraph: f384aca3 | NumContArr: 7d74ca05 | Constraints: c2a8fa9d | Timing: c2a8fa9d
+Phase 1 Build RT Design | Checksum: 2f64b6be2
 
-Time (s): cpu = 00:00:32 ; elapsed = 00:00:50 . Memory (MB): peak = 2351.473 ; gain = 75.836
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:50 . Memory (MB): peak = 2355.965 ; gain = 85.637
 
 Phase 2 Router Initialization
 
 Phase 2.1 Fix Topology Constraints
-Phase 2.1 Fix Topology Constraints | Checksum: 28f02d327
+Phase 2.1 Fix Topology Constraints | Checksum: 2f64b6be2
 
-Time (s): cpu = 00:00:32 ; elapsed = 00:00:50 . Memory (MB): peak = 2351.473 ; gain = 75.836
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:51 . Memory (MB): peak = 2355.965 ; gain = 85.637
 
 Phase 2.2 Pre Route Cleanup
-Phase 2.2 Pre Route Cleanup | Checksum: 28f02d327
+Phase 2.2 Pre Route Cleanup | Checksum: 2f64b6be2
 
-Time (s): cpu = 00:00:32 ; elapsed = 00:00:50 . Memory (MB): peak = 2351.473 ; gain = 75.836
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:51 . Memory (MB): peak = 2355.965 ; gain = 85.637
  Number of Nodes with overlaps = 0
 
 Phase 2.3 Update Timing
-Phase 2.3 Update Timing | Checksum: 1a4cdde5c
+Phase 2.3 Update Timing | Checksum: 1f9276b12
 
-Time (s): cpu = 00:00:35 ; elapsed = 00:00:55 . Memory (MB): peak = 2404.453 ; gain = 128.816
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=2.106  | TNS=0.000  | WHS=-0.355 | THS=-133.877|
+Time (s): cpu = 00:00:36 ; elapsed = 00:00:55 . Memory (MB): peak = 2408.535 ; gain = 138.207
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=2.169  | TNS=0.000  | WHS=-0.346 | THS=-140.722|
 
 
 Router Utilization Summary
@@ -677,94 +676,91 @@ Router Utilization Summary
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
-  Number of Failed Nets               = 7620
+  Number of Failed Nets               = 7617
     (Failed Nets is the sum of unrouted and partially routed nets)
-  Number of Unrouted Nets             = 7620
+  Number of Unrouted Nets             = 7617
   Number of Partially Routed Nets     = 0
   Number of Node Overlaps             = 0
 
-Phase 2 Router Initialization | Checksum: 1dddbc2a8
+Phase 2 Router Initialization | Checksum: 272c15d65
 
-Time (s): cpu = 00:00:36 ; elapsed = 00:00:57 . Memory (MB): peak = 2451.668 ; gain = 176.031
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:57 . Memory (MB): peak = 2446.367 ; gain = 176.039
 
 Phase 3 Initial Routing
 
 Phase 3.1 Global Routing
-Phase 3.1 Global Routing | Checksum: 1dddbc2a8
+Phase 3.1 Global Routing | Checksum: 272c15d65
 
-Time (s): cpu = 00:00:36 ; elapsed = 00:00:57 . Memory (MB): peak = 2451.668 ; gain = 176.031
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:57 . Memory (MB): peak = 2446.367 ; gain = 176.039
 
 Phase 3.2 Initial Net Routing
-Phase 3.2 Initial Net Routing | Checksum: 293d75136
+Phase 3.2 Initial Net Routing | Checksum: 22d659783
 
-Time (s): cpu = 00:00:37 ; elapsed = 00:00:58 . Memory (MB): peak = 2451.668 ; gain = 176.031
-Phase 3 Initial Routing | Checksum: 293d75136
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:58 . Memory (MB): peak = 2446.367 ; gain = 176.039
+Phase 3 Initial Routing | Checksum: 22d659783
 
-Time (s): cpu = 00:00:37 ; elapsed = 00:00:58 . Memory (MB): peak = 2451.668 ; gain = 176.031
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:58 . Memory (MB): peak = 2446.367 ; gain = 176.039
 
 Phase 4 Rip-up And Reroute
 
 Phase 4.1 Global Iteration 0
- Number of Nodes with overlaps = 346
- Number of Nodes with overlaps = 11
- Number of Nodes with overlaps = 1
- Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 362
+ Number of Nodes with overlaps = 10
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.985  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.059  | TNS=0.000  | WHS=N/A    | THS=N/A    |
 
-Phase 4.1 Global Iteration 0 | Checksum: 23aecf30c
+Phase 4.1 Global Iteration 0 | Checksum: 21209ec0b
 
-Time (s): cpu = 00:00:39 ; elapsed = 00:01:01 . Memory (MB): peak = 2451.668 ; gain = 176.031
+Time (s): cpu = 00:00:40 ; elapsed = 00:01:01 . Memory (MB): peak = 2446.367 ; gain = 176.039
 
 Phase 4.2 Global Iteration 1
- Number of Nodes with overlaps = 4
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.985  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.059  | TNS=0.000  | WHS=N/A    | THS=N/A    |
 
-Phase 4.2 Global Iteration 1 | Checksum: 2b2bd8c21
+Phase 4.2 Global Iteration 1 | Checksum: 234231e0e
 
-Time (s): cpu = 00:00:39 ; elapsed = 00:01:02 . Memory (MB): peak = 2451.668 ; gain = 176.031
-Phase 4 Rip-up And Reroute | Checksum: 2b2bd8c21
+Time (s): cpu = 00:00:40 ; elapsed = 00:01:01 . Memory (MB): peak = 2446.367 ; gain = 176.039
+Phase 4 Rip-up And Reroute | Checksum: 234231e0e
 
-Time (s): cpu = 00:00:39 ; elapsed = 00:01:02 . Memory (MB): peak = 2451.668 ; gain = 176.031
+Time (s): cpu = 00:00:40 ; elapsed = 00:01:01 . Memory (MB): peak = 2446.367 ; gain = 176.039
 
 Phase 5 Delay and Skew Optimization
 
 Phase 5.1 Delay CleanUp
-Phase 5.1 Delay CleanUp | Checksum: 2b2bd8c21
+Phase 5.1 Delay CleanUp | Checksum: 234231e0e
 
-Time (s): cpu = 00:00:39 ; elapsed = 00:01:02 . Memory (MB): peak = 2451.668 ; gain = 176.031
+Time (s): cpu = 00:00:40 ; elapsed = 00:01:01 . Memory (MB): peak = 2446.367 ; gain = 176.039
 
 Phase 5.2 Clock Skew Optimization
-Phase 5.2 Clock Skew Optimization | Checksum: 2b2bd8c21
+Phase 5.2 Clock Skew Optimization | Checksum: 234231e0e
 
-Time (s): cpu = 00:00:39 ; elapsed = 00:01:02 . Memory (MB): peak = 2451.668 ; gain = 176.031
-Phase 5 Delay and Skew Optimization | Checksum: 2b2bd8c21
+Time (s): cpu = 00:00:40 ; elapsed = 00:01:01 . Memory (MB): peak = 2446.367 ; gain = 176.039
+Phase 5 Delay and Skew Optimization | Checksum: 234231e0e
 
-Time (s): cpu = 00:00:39 ; elapsed = 00:01:02 . Memory (MB): peak = 2451.668 ; gain = 176.031
+Time (s): cpu = 00:00:40 ; elapsed = 00:01:01 . Memory (MB): peak = 2446.367 ; gain = 176.039
 
 Phase 6 Post Hold Fix
 
 Phase 6.1 Hold Fix Iter
 
 Phase 6.1.1 Update Timing
-Phase 6.1.1 Update Timing | Checksum: 2515dda61
+Phase 6.1.1 Update Timing | Checksum: 16ebb5bce
 
-Time (s): cpu = 00:00:39 ; elapsed = 00:01:03 . Memory (MB): peak = 2451.668 ; gain = 176.031
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=2.016  | TNS=0.000  | WHS=0.016  | THS=0.000  |
+Time (s): cpu = 00:00:40 ; elapsed = 00:01:02 . Memory (MB): peak = 2446.367 ; gain = 176.039
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.090  | TNS=0.000  | WHS=0.027  | THS=0.000  |
 
-Phase 6.1 Hold Fix Iter | Checksum: 2d1ebfd39
+Phase 6.1 Hold Fix Iter | Checksum: 241a3a305
 
-Time (s): cpu = 00:00:39 ; elapsed = 00:01:03 . Memory (MB): peak = 2451.668 ; gain = 176.031
-Phase 6 Post Hold Fix | Checksum: 2d1ebfd39
+Time (s): cpu = 00:00:40 ; elapsed = 00:01:02 . Memory (MB): peak = 2446.367 ; gain = 176.039
+Phase 6 Post Hold Fix | Checksum: 241a3a305
 
-Time (s): cpu = 00:00:39 ; elapsed = 00:01:03 . Memory (MB): peak = 2451.668 ; gain = 176.031
+Time (s): cpu = 00:00:40 ; elapsed = 00:01:02 . Memory (MB): peak = 2446.367 ; gain = 176.039
 
 Phase 7 Route finalize
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 1.2477 %
-  Global Horizontal Routing Utilization  = 1.74155 %
+  Global Vertical Routing Utilization    = 1.22253 %
+  Global Horizontal Routing Utilization  = 1.79386 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
@@ -774,44 +770,44 @@ Router Utilization Summary
   Number of Partially Routed Nets     = 0
   Number of Node Overlaps             = 0
 
-Phase 7 Route finalize | Checksum: 2d1ebfd39
+Phase 7 Route finalize | Checksum: 241a3a305
 
-Time (s): cpu = 00:00:39 ; elapsed = 00:01:03 . Memory (MB): peak = 2451.668 ; gain = 176.031
+Time (s): cpu = 00:00:40 ; elapsed = 00:01:02 . Memory (MB): peak = 2446.367 ; gain = 176.039
 
 Phase 8 Verifying routed nets
 
  Verification completed successfully
-Phase 8 Verifying routed nets | Checksum: 2d1ebfd39
+Phase 8 Verifying routed nets | Checksum: 241a3a305
 
-Time (s): cpu = 00:00:39 ; elapsed = 00:01:03 . Memory (MB): peak = 2451.668 ; gain = 176.031
+Time (s): cpu = 00:00:40 ; elapsed = 00:01:02 . Memory (MB): peak = 2446.367 ; gain = 176.039
 
 Phase 9 Depositing Routes
-Phase 9 Depositing Routes | Checksum: 2f20c17c5
+Phase 9 Depositing Routes | Checksum: 20dc49e12
 
-Time (s): cpu = 00:00:39 ; elapsed = 00:01:03 . Memory (MB): peak = 2451.668 ; gain = 176.031
+Time (s): cpu = 00:00:41 ; elapsed = 00:01:03 . Memory (MB): peak = 2446.367 ; gain = 176.039
 
 Phase 10 Post Router Timing
-INFO: [Route 35-57] Estimated Timing Summary | WNS=2.016  | TNS=0.000  | WHS=0.016  | THS=0.000  |
+INFO: [Route 35-57] Estimated Timing Summary | WNS=1.090  | TNS=0.000  | WHS=0.027  | THS=0.000  |
 
 INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
-Phase 10 Post Router Timing | Checksum: 2f20c17c5
+Phase 10 Post Router Timing | Checksum: 20dc49e12
 
-Time (s): cpu = 00:00:39 ; elapsed = 00:01:04 . Memory (MB): peak = 2451.668 ; gain = 176.031
+Time (s): cpu = 00:00:41 ; elapsed = 00:01:04 . Memory (MB): peak = 2446.367 ; gain = 176.039
 INFO: [Route 35-16] Router Completed Successfully
 
 Phase 11 Post-Route Event Processing
-Phase 11 Post-Route Event Processing | Checksum: 22ca0c72c
+Phase 11 Post-Route Event Processing | Checksum: 246771e38
 
-Time (s): cpu = 00:00:40 ; elapsed = 00:01:05 . Memory (MB): peak = 2451.668 ; gain = 176.031
-Ending Routing Task | Checksum: 22ca0c72c
+Time (s): cpu = 00:00:41 ; elapsed = 00:01:04 . Memory (MB): peak = 2446.367 ; gain = 176.039
+Ending Routing Task | Checksum: 246771e38
 
-Time (s): cpu = 00:00:40 ; elapsed = 00:01:05 . Memory (MB): peak = 2451.668 ; gain = 176.031
+Time (s): cpu = 00:00:42 ; elapsed = 00:01:04 . Memory (MB): peak = 2446.367 ; gain = 176.039
 
 Routing Is Done.
 INFO: [Common 17-83] Releasing license: Implementation
 108 Infos, 105 Warnings, 0 Critical Warnings and 0 Errors encountered.
 route_design completed successfully
-route_design: Time (s): cpu = 00:00:43 ; elapsed = 00:01:08 . Memory (MB): peak = 2451.668 ; gain = 176.031
+route_design: Time (s): cpu = 00:00:45 ; elapsed = 00:01:07 . Memory (MB): peak = 2446.367 ; gain = 176.039
 INFO: [runtcl-4] Executing : report_drc -file FIR_Test_wrapper_drc_routed.rpt -pb FIR_Test_wrapper_drc_routed.pb -rpx FIR_Test_wrapper_drc_routed.rpx
 Command: report_drc -file FIR_Test_wrapper_drc_routed.rpt -pb FIR_Test_wrapper_drc_routed.pb -rpx FIR_Test_wrapper_drc_routed.rpx
 INFO: [IP_Flow 19-1839] IP Catalog is up to date.
@@ -824,7 +820,7 @@ INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [DRC 23-133] Running Methodology with 2 threads
 INFO: [Vivado_Tcl 2-1520] The results of Report Methodology are in file C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.runs/impl_1/FIR_Test_wrapper_methodology_drc_routed.rpt.
 report_methodology completed successfully
-report_methodology: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 2451.668 ; gain = 0.000
+report_methodology: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2446.367 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_power -file FIR_Test_wrapper_power_routed.rpt -pb FIR_Test_wrapper_power_summary_routed.pb -rpx FIR_Test_wrapper_power_routed.rpx
 Command: report_power -file FIR_Test_wrapper_power_routed.rpt -pb FIR_Test_wrapper_power_summary_routed.pb -rpx FIR_Test_wrapper_power_routed.rpx
 INFO: [Timing 38-35] Done setting XDC timing constraints.
@@ -846,76 +842,76 @@ INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file FIR_Test_w
 INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
 INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
 INFO: [Timing 38-480] Writing timing data to binary archive.
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.068 . Memory (MB): peak = 2451.668 ; gain = 0.000
-Wrote PlaceDB: Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 2451.668 ; gain = 0.000
-Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2451.668 ; gain = 0.000
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.060 . Memory (MB): peak = 2446.367 ; gain = 0.000
+Wrote PlaceDB: Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2446.367 ; gain = 0.000
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2446.367 ; gain = 0.000
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Wrote RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.218 . Memory (MB): peak = 2451.668 ; gain = 0.000
-Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 2451.668 ; gain = 0.000
-Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 2451.668 ; gain = 0.000
-Write Physdb Complete: Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2451.668 ; gain = 0.000
+Wrote RouteStorage: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.237 . Memory (MB): peak = 2446.367 ; gain = 0.000
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 2446.367 ; gain = 0.000
+Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 2446.367 ; gain = 0.000
+Write Physdb Complete: Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2446.367 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.runs/impl_1/FIR_Test_wrapper_routed.dcp' has been generated.
-INFO: [Memdata 28-167] Found XPM memory block FIR_Test_i/firDMA/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_XD_FIFO/NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to auto. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the FIR_Test_i/firDMA/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_XD_FIFO/NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst block.
-INFO: [Memdata 28-208] The XPM instance: <FIR_Test_i/firDMA/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst> is part of IP: <FIR_Test_i/firDMA/axi_dma_0>. This XPM instance will be excluded from the .mmi because updatemem is prohibited from making changes to an XPM that is part of an IP.
-INFO: [Memdata 28-208] The XPM instance: <FIR_Test_i/firDMA/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst> is part of IP: <FIR_Test_i/firDMA/axi_dma_0>. This XPM instance will be excluded from the .mmi because updatemem is prohibited from making changes to an XPM that is part of an IP.
+INFO: [Memdata 28-167] Found XPM memory block FIR_Test_i/FIR/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_XD_FIFO/NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to auto. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the FIR_Test_i/FIR/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_XD_FIFO/NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst block.
+INFO: [Memdata 28-208] The XPM instance: <FIR_Test_i/FIR/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst> is part of IP: <FIR_Test_i/FIR/axi_dma_0>. This XPM instance will be excluded from the .mmi because updatemem is prohibited from making changes to an XPM that is part of an IP.
+INFO: [Memdata 28-208] The XPM instance: <FIR_Test_i/FIR/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst> is part of IP: <FIR_Test_i/FIR/axi_dma_0>. This XPM instance will be excluded from the .mmi because updatemem is prohibited from making changes to an XPM that is part of an IP.
 Command: write_bitstream -force FIR_Test_wrapper.bit
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
 Running DRC as a precondition to command write_bitstream
 INFO: [IP_Flow 19-1839] IP Catalog is up to date.
 INFO: [DRC 23-27] Running DRC with 2 threads
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U1/tmp_product__0 output FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U1/tmp_product__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U10/tmp_product__0 output FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U10/tmp_product__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U11/tmp_product__0 output FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U11/tmp_product__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U2/tmp_product__0 output FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U2/tmp_product__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U3/tmp_product__0 output FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U3/tmp_product__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U4/tmp_product__0 output FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U4/tmp_product__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U5/tmp_product__0 output FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U5/tmp_product__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U6/tmp_product__0 output FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U6/tmp_product__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U7/tmp_product__0 output FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U7/tmp_product__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U8/tmp_product__0 output FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U8/tmp_product__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U9/tmp_product__0 output FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U9/tmp_product__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U1/buff0_reg multiplier stage FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U1/buff0_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U1/tmp_product multiplier stage FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U1/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U1/tmp_product__0 multiplier stage FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U1/tmp_product__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U10/buff0_reg multiplier stage FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U10/buff0_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U10/tmp_product multiplier stage FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U10/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U10/tmp_product__0 multiplier stage FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U10/tmp_product__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U11/buff0_reg multiplier stage FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U11/buff0_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U11/tmp_product multiplier stage FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U11/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U11/tmp_product__0 multiplier stage FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U11/tmp_product__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U2/buff0_reg multiplier stage FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U2/buff0_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U2/tmp_product multiplier stage FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U2/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U2/tmp_product__0 multiplier stage FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U2/tmp_product__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U3/buff0_reg multiplier stage FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U3/buff0_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U3/tmp_product multiplier stage FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U3/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U3/tmp_product__0 multiplier stage FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U3/tmp_product__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U4/buff0_reg multiplier stage FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U4/buff0_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U4/tmp_product multiplier stage FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U4/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U4/tmp_product__0 multiplier stage FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U4/tmp_product__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U5/buff0_reg multiplier stage FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U5/buff0_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U5/tmp_product multiplier stage FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U5/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U5/tmp_product__0 multiplier stage FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U5/tmp_product__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U6/buff0_reg multiplier stage FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U6/buff0_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U6/tmp_product multiplier stage FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U6/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U6/tmp_product__0 multiplier stage FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U6/tmp_product__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U7/buff0_reg multiplier stage FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U7/buff0_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U7/tmp_product multiplier stage FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U7/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U7/tmp_product__0 multiplier stage FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U7/tmp_product__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U8/buff0_reg multiplier stage FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U8/buff0_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U8/tmp_product multiplier stage FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U8/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U8/tmp_product__0 multiplier stage FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U8/tmp_product__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U9/buff0_reg multiplier stage FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U9/buff0_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U9/tmp_product multiplier stage FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U9/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U9/tmp_product__0 multiplier stage FIR_Test_i/firDMA/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U9/tmp_product__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC PDCN-1569] LUT equation term check: Used physical LUT pin 'A2' of cell FIR_Test_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin FIR_Test_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O6=(A6)+((~A6)*(~A5)*A3)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
-WARNING: [DRC PDCN-1569] LUT equation term check: Used physical LUT pin 'A4' of cell FIR_Test_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin FIR_Test_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O6=(A5)+((~A5)*(~A6)*A3)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
-WARNING: [DRC PDCN-1569] LUT equation term check: Used physical LUT pin 'A4' of cell FIR_Test_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin FIR_Test_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O6=(A5)+((~A5)*(~A6)*A2)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
-WARNING: [DRC RTSTAT-10] No routable loads: 33 net(s) have no routable loads. The problem bus(es) and/or net(s) are FIR_Test_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, FIR_Test_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, FIR_Test_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, FIR_Test_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg[2:0], FIR_Test_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg[2:0], FIR_Test_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg[2:0], FIR_Test_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg[2:0], FIR_Test_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg[2:0], FIR_Test_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg[2:0], FIR_Test_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb, FIR_Test_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb, FIR_Test_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb, FIR_Test_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_i, FIR_Test_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_i, FIR_Test_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_i... and (the first 15 of 21 listed).
-INFO: [DRC REQP-181] writefirst: Synchronous clocking is detected for BRAM (FIR_Test_i/firDMA/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg) in SDP mode with WRITE_FIRST write-mode. This is the preferred mode for best power characteristics, however it may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
-INFO: [DRC REQP-181] writefirst: Synchronous clocking is detected for BRAM (FIR_Test_i/firDMA/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg) in SDP mode with WRITE_FIRST write-mode. This is the preferred mode for best power characteristics, however it may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U1/tmp_product__0 output FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U1/tmp_product__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U10/tmp_product__0 output FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U10/tmp_product__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U11/tmp_product__0 output FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U11/tmp_product__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U2/tmp_product__0 output FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U2/tmp_product__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U3/tmp_product__0 output FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U3/tmp_product__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U4/tmp_product__0 output FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U4/tmp_product__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U5/tmp_product__0 output FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U5/tmp_product__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U6/tmp_product__0 output FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U6/tmp_product__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U7/tmp_product__0 output FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U7/tmp_product__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U8/tmp_product__0 output FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U8/tmp_product__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U9/tmp_product__0 output FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U9/tmp_product__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U1/buff0_reg multiplier stage FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U1/buff0_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U1/tmp_product multiplier stage FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U1/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U1/tmp_product__0 multiplier stage FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U1/tmp_product__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U10/buff0_reg multiplier stage FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U10/buff0_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U10/tmp_product multiplier stage FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U10/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U10/tmp_product__0 multiplier stage FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U10/tmp_product__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U11/buff0_reg multiplier stage FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U11/buff0_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U11/tmp_product multiplier stage FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U11/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U11/tmp_product__0 multiplier stage FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U11/tmp_product__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U2/buff0_reg multiplier stage FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U2/buff0_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U2/tmp_product multiplier stage FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U2/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U2/tmp_product__0 multiplier stage FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U2/tmp_product__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U3/buff0_reg multiplier stage FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U3/buff0_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U3/tmp_product multiplier stage FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U3/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U3/tmp_product__0 multiplier stage FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U3/tmp_product__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U4/buff0_reg multiplier stage FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U4/buff0_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U4/tmp_product multiplier stage FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U4/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U4/tmp_product__0 multiplier stage FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U4/tmp_product__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U5/buff0_reg multiplier stage FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U5/buff0_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U5/tmp_product multiplier stage FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U5/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U5/tmp_product__0 multiplier stage FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U5/tmp_product__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U6/buff0_reg multiplier stage FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U6/buff0_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U6/tmp_product multiplier stage FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U6/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U6/tmp_product__0 multiplier stage FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U6/tmp_product__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U7/buff0_reg multiplier stage FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U7/buff0_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U7/tmp_product multiplier stage FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U7/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U7/tmp_product__0 multiplier stage FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U7/tmp_product__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U8/buff0_reg multiplier stage FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U8/buff0_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U8/tmp_product multiplier stage FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U8/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U8/tmp_product__0 multiplier stage FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U8/tmp_product__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U9/buff0_reg multiplier stage FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U9/buff0_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U9/tmp_product multiplier stage FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U9/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U9/tmp_product__0 multiplier stage FIR_Test_i/FIR/filt_0/inst/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/mul_32s_32s_32_2_1_U9/tmp_product__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC PDCN-1569] LUT equation term check: Used physical LUT pin 'A2' of cell FIR_Test_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin FIR_Test_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O6=(A5)+((~A5)*(~A6)*A4)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+WARNING: [DRC PDCN-1569] LUT equation term check: Used physical LUT pin 'A2' of cell FIR_Test_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin FIR_Test_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O6=(A1)+((~A1)*(~A6)*A5)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+WARNING: [DRC PDCN-1569] LUT equation term check: Used physical LUT pin 'A3' of cell FIR_Test_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin FIR_Test_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O6=(A5)+((~A5)*(~A6)*A4)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+WARNING: [DRC RTSTAT-10] No routable loads: 33 net(s) have no routable loads. The problem bus(es) and/or net(s) are FIR_Test_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, FIR_Test_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, FIR_Test_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, FIR_Test_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg[2:0], FIR_Test_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg[2:0], FIR_Test_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg[2:0], FIR_Test_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg[2:0], FIR_Test_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg[2:0], FIR_Test_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg[2:0], FIR_Test_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb, FIR_Test_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb, FIR_Test_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb, FIR_Test_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_i, FIR_Test_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_i, FIR_Test_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_i... and (the first 15 of 21 listed).
+INFO: [DRC REQP-181] writefirst: Synchronous clocking is detected for BRAM (FIR_Test_i/FIR/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg) in SDP mode with WRITE_FIRST write-mode. This is the preferred mode for best power characteristics, however it may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+INFO: [DRC REQP-181] writefirst: Synchronous clocking is detected for BRAM (FIR_Test_i/FIR/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg) in SDP mode with WRITE_FIRST write-mode. This is the preferred mode for best power characteristics, however it may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
 INFO: [Vivado 12-3199] DRC finished with 0 Errors, 48 Warnings, 2 Advisories
 INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
 INFO: [Designutils 20-2272] Running write_bitstream with 2 threads.
@@ -931,5 +927,5 @@ INFO: [Project 1-1876] WebTalk data collection is mandatory when using a ULT dev
 INFO: [Common 17-83] Releasing license: Implementation
 19 Infos, 48 Warnings, 0 Critical Warnings and 0 Errors encountered.
 write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:21 ; elapsed = 00:00:29 . Memory (MB): peak = 2876.543 ; gain = 424.875
-INFO: [Common 17-206] Exiting Vivado at Mon Apr  1 15:35:48 2024...
+write_bitstream: Time (s): cpu = 00:00:21 ; elapsed = 00:00:29 . Memory (MB): peak = 2884.770 ; gain = 438.402
+INFO: [Common 17-206] Exiting Vivado at Mon Apr  1 16:01:59 2024...
