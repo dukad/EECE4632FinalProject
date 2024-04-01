@@ -7,9 +7,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==FIR_Test ||
 # IP: bd/FIR_Test/ip/FIR_Test_processing_system7_0_0/FIR_Test_processing_system7_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==FIR_Test_processing_system7_0_0 || ORIG_REF_NAME==FIR_Test_processing_system7_0_0} -quiet] -quiet
 
-# IP: bd/FIR_Test/ip/FIR_Test_filt_0_0/FIR_Test_filt_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==FIR_Test_filt_0_0 || ORIG_REF_NAME==FIR_Test_filt_0_0} -quiet] -quiet
-
 # IP: bd/FIR_Test/ip/FIR_Test_axi_bram_ctrl_0_0/FIR_Test_axi_bram_ctrl_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==FIR_Test_axi_bram_ctrl_0_0 || ORIG_REF_NAME==FIR_Test_axi_bram_ctrl_0_0} -quiet] -quiet
 
@@ -30,6 +27,9 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==FIR_Test_ps
 
 # IP: bd/FIR_Test/ip/FIR_Test_axi_dma_0_0/FIR_Test_axi_dma_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==FIR_Test_axi_dma_0_0 || ORIG_REF_NAME==FIR_Test_axi_dma_0_0} -quiet] -quiet
+
+# IP: bd/FIR_Test/ip/FIR_Test_filt_0_1/FIR_Test_filt_0_1.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==FIR_Test_filt_0_1 || ORIG_REF_NAME==FIR_Test_filt_0_1} -quiet] -quiet
 
 # IP: bd/FIR_Test/ip/FIR_Test_auto_pc_0/FIR_Test_auto_pc_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==FIR_Test_auto_pc_0 || ORIG_REF_NAME==FIR_Test_auto_pc_0} -quiet] -quiet

@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'filt_Pipeline_VITIS_LOOP_18_1'
 ================================================================
-* Date:           Mon Apr  1 14:56:38 2024
+* Date:           Mon Apr  1 16:12:00 2024
 
 * Version:        2023.2 (Build 4023990 on Oct 11 2023)
 * Project:        FIR_Test_Vitis
@@ -20,7 +20,7 @@
     +--------+----------+----------+------------+
     |  Clock |  Target  | Estimated| Uncertainty|
     +--------+----------+----------+------------+
-    |ap_clk  |  10.00 ns|  6.923 ns|     2.70 ns|
+    |ap_clk  |  10.00 ns|  5.580 ns|     2.70 ns|
     +--------+----------+----------+------------+
 
 + Latency: 
@@ -41,7 +41,7 @@
         |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
         |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
         +-------------------+---------+---------+----------+-----------+-----------+------+----------+
-        |- VITIS_LOOP_18_1  |        ?|        ?|         5|          1|          1|     ?|       yes|
+        |- VITIS_LOOP_18_1  |        ?|        ?|         6|          1|          1|     ?|       yes|
         +-------------------+---------+---------+----------+-----------+-----------+------+----------+
 
 ============================================================
@@ -67,15 +67,15 @@ HasImplIP: 0
 IsGatedGlobalClock: 0
 
 + Individual pipeline summary: 
-  * Pipeline-0: initiation interval (II) = 1, depth = 5
+  * Pipeline-0: initiation interval (II) = 1, depth = 6
 
 
 ============================================================
 + Verbose Summary: Schedule
 ============================================================
-* Number of FSM states : 5
+* Number of FSM states : 6
 * Pipeline : 1
-  Pipeline-0 : II = 1, D = 5, States = { 1 2 3 4 5 }
+  Pipeline-0 : II = 1, D = 6, States = { 1 2 3 4 5 6 }
 * Dataflow Pipeline: 0
 
 * FSM state transitions: 
@@ -83,101 +83,114 @@ IsGatedGlobalClock: 0
 2 --> 3 
 3 --> 4 
 4 --> 5 
-5 --> 
+5 --> 6 
+6 --> 
 
 * FSM state operations: 
 
-State 1 <SV = 0> <Delay = 6.91>
-ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%specaxissidechannel_ln0 = specaxissidechannel void @_ssdm_op_SpecAXISSideChannel, i32 %y_V_data_V, i4 %y_V_keep_V, i4 %y_V_strb_V, i1 %y_V_user_V, i1 %y_V_last_V, i1 %y_V_id_V, i1 %y_V_dest_V, void @empty_10"   --->   Operation 8 'specaxissidechannel' 'specaxissidechannel_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%specaxissidechannel_ln0 = specaxissidechannel void @_ssdm_op_SpecAXISSideChannel, i32 %x_V_data_V, i4 %x_V_keep_V, i4 %x_V_strb_V, i1 %x_V_user_V, i1 %x_V_last_V, i1 %x_V_id_V, i1 %x_V_dest_V, void @empty_11"   --->   Operation 9 'specaxissidechannel' 'specaxissidechannel_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %x_V_dest_V, i1 %x_V_id_V, i1 %x_V_last_V, i1 %x_V_user_V, i4 %x_V_strb_V, i4 %x_V_keep_V, i32 %x_V_data_V, void @empty_3, i32 0, i32 0, void @empty_4, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 10 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %y_V_dest_V, i1 %y_V_id_V, i1 %y_V_last_V, i1 %y_V_user_V, i4 %y_V_strb_V, i4 %y_V_keep_V, i32 %y_V_data_V, void @empty_3, i32 0, i32 0, void @empty_4, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 11 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%gmem_addr_read_11 = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %gmem_addr_read_2"   --->   Operation 12 'read' 'gmem_addr_read_11' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%gmem_addr_read_12 = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %gmem_addr_read_8"   --->   Operation 13 'read' 'gmem_addr_read_12' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%gmem_addr_read_14 = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %gmem_addr_read_9"   --->   Operation 14 'read' 'gmem_addr_read_14' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%gmem_addr_read_15 = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %gmem_addr_read_5"   --->   Operation 15 'read' 'gmem_addr_read_15' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%gmem_addr_read_16 = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %gmem_addr_read_6"   --->   Operation 16 'read' 'gmem_addr_read_16' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%gmem_addr_read_17 = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %gmem_addr_read_7"   --->   Operation 17 'read' 'gmem_addr_read_17' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%gmem_addr_read_18 = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %gmem_addr_read_4"   --->   Operation 18 'read' 'gmem_addr_read_18' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%gmem_addr_read_19 = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %gmem_addr_read_10"   --->   Operation 19 'read' 'gmem_addr_read_19' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%gmem_addr_read_13 = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %gmem_addr_read_1"   --->   Operation 20 'read' 'gmem_addr_read_13' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%gmem_addr_read_20 = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %gmem_addr_read_3"   --->   Operation 21 'read' 'gmem_addr_read_20' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%gmem_addr_read_21 = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %gmem_addr_read"   --->   Operation 22 'read' 'gmem_addr_read_21' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%br_ln0 = br void %Shift_Accum_Loop"   --->   Operation 23 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 24 [1/1] (1.00ns)   --->   "%empty = read i44 @_ssdm_op_Read.axis.volatile.i32P0A.i4P0A.i4P0A.i1P0A.i1P0A.i1P0A.i1P0A, i32 %x_V_data_V, i4 %x_V_keep_V, i4 %x_V_strb_V, i1 %x_V_user_V, i1 %x_V_last_V, i1 %x_V_id_V, i1 %x_V_dest_V" [filt.cpp:25]   --->   Operation 24 'read' 'empty' <Predicate = true> <Delay = 1.00> <CoreInst = "axis">   --->   Core 115 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
-ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%tmp1_data = extractvalue i44 %empty" [filt.cpp:25]   --->   Operation 25 'extractvalue' 'tmp1_data' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%tmp1_keep = extractvalue i44 %empty" [filt.cpp:25]   --->   Operation 26 'extractvalue' 'tmp1_keep' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%tmp1_strb = extractvalue i44 %empty" [filt.cpp:25]   --->   Operation 27 'extractvalue' 'tmp1_strb' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%tmp1_user = extractvalue i44 %empty" [filt.cpp:25]   --->   Operation 28 'extractvalue' 'tmp1_user' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%tmp1_last = extractvalue i44 %empty" [filt.cpp:25]   --->   Operation 29 'extractvalue' 'tmp1_last' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%tmp1_id = extractvalue i44 %empty" [filt.cpp:25]   --->   Operation 30 'extractvalue' 'tmp1_id' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%tmp1_dest = extractvalue i44 %empty" [filt.cpp:25]   --->   Operation 31 'extractvalue' 'tmp1_dest' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%filt_stream_int_stream_axis_0_shift_reg_6_load = load i32 %filt_stream_int_stream_axis_0_shift_reg_6" [filt.cpp:30]   --->   Operation 32 'load' 'filt_stream_int_stream_axis_0_shift_reg_6_load' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%filt_stream_int_stream_axis_0_shift_reg_7_load = load i32 %filt_stream_int_stream_axis_0_shift_reg_7" [filt.cpp:30]   --->   Operation 33 'load' 'filt_stream_int_stream_axis_0_shift_reg_7_load' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%filt_stream_int_stream_axis_0_shift_reg_8_load = load i32 %filt_stream_int_stream_axis_0_shift_reg_8" [filt.cpp:30]   --->   Operation 34 'load' 'filt_stream_int_stream_axis_0_shift_reg_8_load' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%filt_stream_int_stream_axis_0_shift_reg_9_load = load i32 %filt_stream_int_stream_axis_0_shift_reg_9" [filt.cpp:30]   --->   Operation 35 'load' 'filt_stream_int_stream_axis_0_shift_reg_9_load' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 36 [2/2] (6.91ns)   --->   "%mul_ln34_1 = mul i32 %filt_stream_int_stream_axis_0_shift_reg_7_load, i32 %gmem_addr_read_20" [filt.cpp:34]   --->   Operation 36 'mul' 'mul_ln34_1' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 37 [2/2] (6.91ns)   --->   "%mul_ln34_2 = mul i32 %filt_stream_int_stream_axis_0_shift_reg_9_load, i32 %gmem_addr_read_13" [filt.cpp:34]   --->   Operation 37 'mul' 'mul_ln34_2' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 38 [2/2] (6.91ns)   --->   "%mul_ln34_10 = mul i32 %filt_stream_int_stream_axis_0_shift_reg_8_load, i32 %gmem_addr_read_11" [filt.cpp:34]   --->   Operation 38 'mul' 'mul_ln34_10' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%store_ln30 = store i32 %filt_stream_int_stream_axis_0_shift_reg_7_load, i32 %filt_stream_int_stream_axis_0_shift_reg_6" [filt.cpp:30]   --->   Operation 39 'store' 'store_ln30' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%store_ln30 = store i32 %filt_stream_int_stream_axis_0_shift_reg_8_load, i32 %filt_stream_int_stream_axis_0_shift_reg_7" [filt.cpp:30]   --->   Operation 40 'store' 'store_ln30' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%store_ln30 = store i32 %filt_stream_int_stream_axis_0_shift_reg_9_load, i32 %filt_stream_int_stream_axis_0_shift_reg_8" [filt.cpp:30]   --->   Operation 41 'store' 'store_ln30' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%store_ln35 = store i32 %tmp1_data, i32 %filt_stream_int_stream_axis_0_shift_reg_9" [filt.cpp:35]   --->   Operation 42 'store' 'store_ln35' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%br_ln25 = br i1 %tmp1_last, void %cleanup.cont, void %while.end.exitStub" [filt.cpp:25]   --->   Operation 43 'br' 'br_ln25' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%specpipeline_ln18 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_0" [filt.cpp:18]   --->   Operation 44 'specpipeline' 'specpipeline_ln18' <Predicate = (!tmp1_last)> <Delay = 0.00>
-ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%specloopname_ln18 = specloopname void @_ssdm_op_SpecLoopName, void @empty_14" [filt.cpp:18]   --->   Operation 45 'specloopname' 'specloopname_ln18' <Predicate = (!tmp1_last)> <Delay = 0.00>
-ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%br_ln18 = br void %Shift_Accum_Loop" [filt.cpp:18]   --->   Operation 46 'br' 'br_ln18' <Predicate = (!tmp1_last)> <Delay = 0.00>
+State 1 <SV = 0> <Delay = 5.58>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%specaxissidechannel_ln0 = specaxissidechannel void @_ssdm_op_SpecAXISSideChannel, i16 %y_V_data_V, i2 %y_V_keep_V, i2 %y_V_strb_V, i1 %y_V_user_V, i1 %y_V_last_V, i1 %y_V_id_V, i1 %y_V_dest_V, void @empty_10"   --->   Operation 9 'specaxissidechannel' 'specaxissidechannel_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%specaxissidechannel_ln0 = specaxissidechannel void @_ssdm_op_SpecAXISSideChannel, i16 %x_V_data_V, i2 %x_V_keep_V, i2 %x_V_strb_V, i1 %x_V_user_V, i1 %x_V_last_V, i1 %x_V_id_V, i1 %x_V_dest_V, void @empty_11"   --->   Operation 10 'specaxissidechannel' 'specaxissidechannel_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %x_V_dest_V, i1 %x_V_id_V, i1 %x_V_last_V, i1 %x_V_user_V, i2 %x_V_strb_V, i2 %x_V_keep_V, i16 %x_V_data_V, void @empty_3, i32 0, i32 0, void @empty_4, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 11 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %y_V_dest_V, i1 %y_V_id_V, i1 %y_V_last_V, i1 %y_V_user_V, i2 %y_V_strb_V, i2 %y_V_keep_V, i16 %y_V_data_V, void @empty_3, i32 0, i32 0, void @empty_4, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 12 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%tmp = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %empty"   --->   Operation 13 'read' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%tmp_1 = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %empty_28"   --->   Operation 14 'read' 'tmp_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%tmp_2 = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %empty_27"   --->   Operation 15 'read' 'tmp_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%tmp_3 = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %empty_26"   --->   Operation 16 'read' 'tmp_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%tmp_4 = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %empty_25"   --->   Operation 17 'read' 'tmp_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%tmp_5 = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %empty_24"   --->   Operation 18 'read' 'tmp_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%tmp_6 = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %empty_23"   --->   Operation 19 'read' 'tmp_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%tmp_7 = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %empty_22"   --->   Operation 20 'read' 'tmp_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%tmp_8 = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %empty_21"   --->   Operation 21 'read' 'tmp_8' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%tmp_9 = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %empty_20"   --->   Operation 22 'read' 'tmp_9' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%tmp_10 = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %empty_19"   --->   Operation 23 'read' 'tmp_10' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%br_ln0 = br void %Shift_Accum_Loop"   --->   Operation 24 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (1.00ns)   --->   "%empty_29 = read i24 @_ssdm_op_Read.axis.volatile.i16P0A.i2P0A.i2P0A.i1P0A.i1P0A.i1P0A.i1P0A, i16 %x_V_data_V, i2 %x_V_keep_V, i2 %x_V_strb_V, i1 %x_V_user_V, i1 %x_V_last_V, i1 %x_V_id_V, i1 %x_V_dest_V" [filt.cpp:25]   --->   Operation 25 'read' 'empty_29' <Predicate = true> <Delay = 1.00> <CoreInst = "axis">   --->   Core 115 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%tmp1_data = extractvalue i24 %empty_29" [filt.cpp:25]   --->   Operation 26 'extractvalue' 'tmp1_data' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%tmp1_keep = extractvalue i24 %empty_29" [filt.cpp:25]   --->   Operation 27 'extractvalue' 'tmp1_keep' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%tmp1_strb = extractvalue i24 %empty_29" [filt.cpp:25]   --->   Operation 28 'extractvalue' 'tmp1_strb' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%tmp1_user = extractvalue i24 %empty_29" [filt.cpp:25]   --->   Operation 29 'extractvalue' 'tmp1_user' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%tmp1_last = extractvalue i24 %empty_29" [filt.cpp:25]   --->   Operation 30 'extractvalue' 'tmp1_last' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%tmp1_id = extractvalue i24 %empty_29" [filt.cpp:25]   --->   Operation 31 'extractvalue' 'tmp1_id' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%tmp1_dest = extractvalue i24 %empty_29" [filt.cpp:25]   --->   Operation 32 'extractvalue' 'tmp1_dest' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%filt_stream_int_stream_axis_0_shift_reg_2_load = load i16 %filt_stream_int_stream_axis_0_shift_reg_2" [filt.cpp:30]   --->   Operation 33 'load' 'filt_stream_int_stream_axis_0_shift_reg_2_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%filt_stream_int_stream_axis_0_shift_reg_3_load = load i16 %filt_stream_int_stream_axis_0_shift_reg_3" [filt.cpp:30]   --->   Operation 34 'load' 'filt_stream_int_stream_axis_0_shift_reg_3_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%filt_stream_int_stream_axis_0_shift_reg_4_load = load i16 %filt_stream_int_stream_axis_0_shift_reg_4" [filt.cpp:30]   --->   Operation 35 'load' 'filt_stream_int_stream_axis_0_shift_reg_4_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%filt_stream_int_stream_axis_0_shift_reg_5_load = load i16 %filt_stream_int_stream_axis_0_shift_reg_5" [filt.cpp:30]   --->   Operation 36 'load' 'filt_stream_int_stream_axis_0_shift_reg_5_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%filt_stream_int_stream_axis_0_shift_reg_6_load = load i16 %filt_stream_int_stream_axis_0_shift_reg_6" [filt.cpp:30]   --->   Operation 37 'load' 'filt_stream_int_stream_axis_0_shift_reg_6_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%filt_stream_int_stream_axis_0_shift_reg_7_load = load i16 %filt_stream_int_stream_axis_0_shift_reg_7" [filt.cpp:30]   --->   Operation 38 'load' 'filt_stream_int_stream_axis_0_shift_reg_7_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%filt_stream_int_stream_axis_0_shift_reg_8_load = load i16 %filt_stream_int_stream_axis_0_shift_reg_8" [filt.cpp:30]   --->   Operation 39 'load' 'filt_stream_int_stream_axis_0_shift_reg_8_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%filt_stream_int_stream_axis_0_shift_reg_9_load = load i16 %filt_stream_int_stream_axis_0_shift_reg_9" [filt.cpp:30]   --->   Operation 40 'load' 'filt_stream_int_stream_axis_0_shift_reg_9_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 41 [3/3] (1.05ns) (grouped into DSP with root node add_ln34)   --->   "%mul_ln34 = mul i16 %tmp_10, i16 %tmp1_data" [filt.cpp:34]   --->   Operation 41 'mul' 'mul_ln34' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 42 [3/3] (1.05ns) (grouped into DSP with root node add_ln34_6)   --->   "%mul_ln34_2 = mul i16 %filt_stream_int_stream_axis_0_shift_reg_9_load, i16 %tmp_8" [filt.cpp:34]   --->   Operation 42 'mul' 'mul_ln34_2' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 43 [3/3] (1.05ns) (grouped into DSP with root node add_ln34_4)   --->   "%mul_ln34_4 = mul i16 %filt_stream_int_stream_axis_0_shift_reg_6_load, i16 %tmp_6" [filt.cpp:34]   --->   Operation 43 'mul' 'mul_ln34_4' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 44 [3/3] (1.05ns) (grouped into DSP with root node add_ln34_1)   --->   "%mul_ln34_5 = mul i16 %filt_stream_int_stream_axis_0_shift_reg_3_load, i16 %tmp_5" [filt.cpp:34]   --->   Operation 44 'mul' 'mul_ln34_5' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 45 [1/1] (5.58ns)   --->   "%mul_ln34_7 = mul i16 %filt_stream_int_stream_axis_0_shift_reg_5_load, i16 %tmp_3" [filt.cpp:34]   --->   Operation 45 'mul' 'mul_ln34_7' <Predicate = true> <Delay = 5.58> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 5.58> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 46 [1/1] (5.58ns)   --->   "%mul_ln34_10 = mul i16 %filt_stream_int_stream_axis_0_shift_reg_8_load, i16 %tmp" [filt.cpp:34]   --->   Operation 46 'mul' 'mul_ln34_10' <Predicate = true> <Delay = 5.58> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 5.58> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%store_ln30 = store i16 %filt_stream_int_stream_axis_0_shift_reg_3_load, i16 %filt_stream_int_stream_axis_0_shift_reg_2" [filt.cpp:30]   --->   Operation 47 'store' 'store_ln30' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%store_ln30 = store i16 %filt_stream_int_stream_axis_0_shift_reg_4_load, i16 %filt_stream_int_stream_axis_0_shift_reg_3" [filt.cpp:30]   --->   Operation 48 'store' 'store_ln30' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%store_ln30 = store i16 %filt_stream_int_stream_axis_0_shift_reg_5_load, i16 %filt_stream_int_stream_axis_0_shift_reg_4" [filt.cpp:30]   --->   Operation 49 'store' 'store_ln30' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%store_ln30 = store i16 %filt_stream_int_stream_axis_0_shift_reg_6_load, i16 %filt_stream_int_stream_axis_0_shift_reg_5" [filt.cpp:30]   --->   Operation 50 'store' 'store_ln30' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "%store_ln30 = store i16 %filt_stream_int_stream_axis_0_shift_reg_7_load, i16 %filt_stream_int_stream_axis_0_shift_reg_6" [filt.cpp:30]   --->   Operation 51 'store' 'store_ln30' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%store_ln30 = store i16 %filt_stream_int_stream_axis_0_shift_reg_8_load, i16 %filt_stream_int_stream_axis_0_shift_reg_7" [filt.cpp:30]   --->   Operation 52 'store' 'store_ln30' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "%store_ln30 = store i16 %filt_stream_int_stream_axis_0_shift_reg_9_load, i16 %filt_stream_int_stream_axis_0_shift_reg_8" [filt.cpp:30]   --->   Operation 53 'store' 'store_ln30' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 54 [1/1] (0.00ns)   --->   "%store_ln35 = store i16 %tmp1_data, i16 %filt_stream_int_stream_axis_0_shift_reg_9" [filt.cpp:35]   --->   Operation 54 'store' 'store_ln35' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 55 [1/1] (0.00ns)   --->   "%br_ln25 = br i1 %tmp1_last, void %cleanup.cont, void %while.end.exitStub" [filt.cpp:25]   --->   Operation 55 'br' 'br_ln25' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 56 [1/1] (0.00ns)   --->   "%specpipeline_ln18 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_0" [filt.cpp:18]   --->   Operation 56 'specpipeline' 'specpipeline_ln18' <Predicate = (!tmp1_last)> <Delay = 0.00>
+ST_1 : Operation 57 [1/1] (0.00ns)   --->   "%specloopname_ln18 = specloopname void @_ssdm_op_SpecLoopName, void @empty_14" [filt.cpp:18]   --->   Operation 57 'specloopname' 'specloopname_ln18' <Predicate = (!tmp1_last)> <Delay = 0.00>
+ST_1 : Operation 58 [1/1] (0.00ns)   --->   "%br_ln18 = br void %Shift_Accum_Loop" [filt.cpp:18]   --->   Operation 58 'br' 'br_ln18' <Predicate = (!tmp1_last)> <Delay = 0.00>
 
-State 2 <SV = 1> <Delay = 6.91>
-ST_2 : Operation 47 [1/1] (0.00ns)   --->   "%filt_stream_int_stream_axis_0_shift_reg_load = load i32 %filt_stream_int_stream_axis_0_shift_reg" [filt.cpp:30]   --->   Operation 47 'load' 'filt_stream_int_stream_axis_0_shift_reg_load' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 48 [1/1] (0.00ns)   --->   "%filt_stream_int_stream_axis_0_shift_reg_1_load = load i32 %filt_stream_int_stream_axis_0_shift_reg_1" [filt.cpp:30]   --->   Operation 48 'load' 'filt_stream_int_stream_axis_0_shift_reg_1_load' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 49 [1/1] (0.00ns)   --->   "%filt_stream_int_stream_axis_0_shift_reg_2_load = load i32 %filt_stream_int_stream_axis_0_shift_reg_2" [filt.cpp:30]   --->   Operation 49 'load' 'filt_stream_int_stream_axis_0_shift_reg_2_load' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 50 [1/1] (0.00ns)   --->   "%filt_stream_int_stream_axis_0_shift_reg_3_load = load i32 %filt_stream_int_stream_axis_0_shift_reg_3" [filt.cpp:30]   --->   Operation 50 'load' 'filt_stream_int_stream_axis_0_shift_reg_3_load' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 51 [1/1] (0.00ns)   --->   "%filt_stream_int_stream_axis_0_shift_reg_4_load = load i32 %filt_stream_int_stream_axis_0_shift_reg_4" [filt.cpp:30]   --->   Operation 51 'load' 'filt_stream_int_stream_axis_0_shift_reg_4_load' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 52 [1/1] (0.00ns)   --->   "%filt_stream_int_stream_axis_0_shift_reg_5_load = load i32 %filt_stream_int_stream_axis_0_shift_reg_5" [filt.cpp:30]   --->   Operation 52 'load' 'filt_stream_int_stream_axis_0_shift_reg_5_load' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 53 [2/2] (6.91ns)   --->   "%mul_ln34 = mul i32 %tmp1_data, i32 %gmem_addr_read_21" [filt.cpp:34]   --->   Operation 53 'mul' 'mul_ln34' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 54 [1/2] (6.91ns)   --->   "%mul_ln34_1 = mul i32 %filt_stream_int_stream_axis_0_shift_reg_7_load, i32 %gmem_addr_read_20" [filt.cpp:34]   --->   Operation 54 'mul' 'mul_ln34_1' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 55 [1/2] (6.91ns)   --->   "%mul_ln34_2 = mul i32 %filt_stream_int_stream_axis_0_shift_reg_9_load, i32 %gmem_addr_read_13" [filt.cpp:34]   --->   Operation 55 'mul' 'mul_ln34_2' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 56 [2/2] (6.91ns)   --->   "%mul_ln34_3 = mul i32 %filt_stream_int_stream_axis_0_shift_reg_load, i32 %gmem_addr_read_19" [filt.cpp:34]   --->   Operation 56 'mul' 'mul_ln34_3' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 57 [2/2] (6.91ns)   --->   "%mul_ln34_4 = mul i32 %filt_stream_int_stream_axis_0_shift_reg_6_load, i32 %gmem_addr_read_18" [filt.cpp:34]   --->   Operation 57 'mul' 'mul_ln34_4' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 58 [2/2] (6.91ns)   --->   "%mul_ln34_5 = mul i32 %filt_stream_int_stream_axis_0_shift_reg_3_load, i32 %gmem_addr_read_17" [filt.cpp:34]   --->   Operation 58 'mul' 'mul_ln34_5' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 59 [2/2] (6.91ns)   --->   "%mul_ln34_6 = mul i32 %filt_stream_int_stream_axis_0_shift_reg_4_load, i32 %gmem_addr_read_16" [filt.cpp:34]   --->   Operation 59 'mul' 'mul_ln34_6' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 60 [2/2] (6.91ns)   --->   "%mul_ln34_7 = mul i32 %filt_stream_int_stream_axis_0_shift_reg_5_load, i32 %gmem_addr_read_15" [filt.cpp:34]   --->   Operation 60 'mul' 'mul_ln34_7' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 61 [2/2] (6.91ns)   --->   "%mul_ln34_8 = mul i32 %filt_stream_int_stream_axis_0_shift_reg_1_load, i32 %gmem_addr_read_14" [filt.cpp:34]   --->   Operation 61 'mul' 'mul_ln34_8' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 62 [2/2] (6.91ns)   --->   "%mul_ln34_9 = mul i32 %filt_stream_int_stream_axis_0_shift_reg_2_load, i32 %gmem_addr_read_12" [filt.cpp:34]   --->   Operation 62 'mul' 'mul_ln34_9' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 63 [1/2] (6.91ns)   --->   "%mul_ln34_10 = mul i32 %filt_stream_int_stream_axis_0_shift_reg_8_load, i32 %gmem_addr_read_11" [filt.cpp:34]   --->   Operation 63 'mul' 'mul_ln34_10' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 64 [1/1] (0.00ns)   --->   "%store_ln30 = store i32 %filt_stream_int_stream_axis_0_shift_reg_1_load, i32 %filt_stream_int_stream_axis_0_shift_reg" [filt.cpp:30]   --->   Operation 64 'store' 'store_ln30' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 65 [1/1] (0.00ns)   --->   "%store_ln30 = store i32 %filt_stream_int_stream_axis_0_shift_reg_2_load, i32 %filt_stream_int_stream_axis_0_shift_reg_1" [filt.cpp:30]   --->   Operation 65 'store' 'store_ln30' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 66 [1/1] (0.00ns)   --->   "%store_ln30 = store i32 %filt_stream_int_stream_axis_0_shift_reg_3_load, i32 %filt_stream_int_stream_axis_0_shift_reg_2" [filt.cpp:30]   --->   Operation 66 'store' 'store_ln30' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 67 [1/1] (0.00ns)   --->   "%store_ln30 = store i32 %filt_stream_int_stream_axis_0_shift_reg_4_load, i32 %filt_stream_int_stream_axis_0_shift_reg_3" [filt.cpp:30]   --->   Operation 67 'store' 'store_ln30' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 68 [1/1] (0.00ns)   --->   "%store_ln30 = store i32 %filt_stream_int_stream_axis_0_shift_reg_5_load, i32 %filt_stream_int_stream_axis_0_shift_reg_4" [filt.cpp:30]   --->   Operation 68 'store' 'store_ln30' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 69 [1/1] (0.00ns)   --->   "%store_ln30 = store i32 %filt_stream_int_stream_axis_0_shift_reg_6_load, i32 %filt_stream_int_stream_axis_0_shift_reg_5" [filt.cpp:30]   --->   Operation 69 'store' 'store_ln30' <Predicate = true> <Delay = 0.00>
+State 2 <SV = 1> <Delay = 5.58>
+ST_2 : Operation 59 [1/1] (0.00ns)   --->   "%filt_stream_int_stream_axis_0_shift_reg_load = load i16 %filt_stream_int_stream_axis_0_shift_reg" [filt.cpp:30]   --->   Operation 59 'load' 'filt_stream_int_stream_axis_0_shift_reg_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 60 [1/1] (0.00ns)   --->   "%filt_stream_int_stream_axis_0_shift_reg_1_load = load i16 %filt_stream_int_stream_axis_0_shift_reg_1" [filt.cpp:30]   --->   Operation 60 'load' 'filt_stream_int_stream_axis_0_shift_reg_1_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 61 [2/3] (1.05ns) (grouped into DSP with root node add_ln34)   --->   "%mul_ln34 = mul i16 %tmp_10, i16 %tmp1_data" [filt.cpp:34]   --->   Operation 61 'mul' 'mul_ln34' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 62 [3/3] (1.05ns) (grouped into DSP with root node add_ln34_7)   --->   "%mul_ln34_1 = mul i16 %filt_stream_int_stream_axis_0_shift_reg_7_load, i16 %tmp_9" [filt.cpp:34]   --->   Operation 62 'mul' 'mul_ln34_1' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 63 [2/3] (1.05ns) (grouped into DSP with root node add_ln34_6)   --->   "%mul_ln34_2 = mul i16 %filt_stream_int_stream_axis_0_shift_reg_9_load, i16 %tmp_8" [filt.cpp:34]   --->   Operation 63 'mul' 'mul_ln34_2' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 64 [1/1] (5.58ns)   --->   "%mul_ln34_3 = mul i16 %filt_stream_int_stream_axis_0_shift_reg_load, i16 %tmp_7" [filt.cpp:34]   --->   Operation 64 'mul' 'mul_ln34_3' <Predicate = true> <Delay = 5.58> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 5.58> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 65 [2/3] (1.05ns) (grouped into DSP with root node add_ln34_4)   --->   "%mul_ln34_4 = mul i16 %filt_stream_int_stream_axis_0_shift_reg_6_load, i16 %tmp_6" [filt.cpp:34]   --->   Operation 65 'mul' 'mul_ln34_4' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 66 [2/3] (1.05ns) (grouped into DSP with root node add_ln34_1)   --->   "%mul_ln34_5 = mul i16 %filt_stream_int_stream_axis_0_shift_reg_3_load, i16 %tmp_5" [filt.cpp:34]   --->   Operation 66 'mul' 'mul_ln34_5' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 67 [3/3] (1.05ns) (grouped into DSP with root node add_ln34_5)   --->   "%mul_ln34_6 = mul i16 %filt_stream_int_stream_axis_0_shift_reg_4_load, i16 %tmp_4" [filt.cpp:34]   --->   Operation 67 'mul' 'mul_ln34_6' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 68 [3/3] (1.05ns) (grouped into DSP with root node add_ln34_2)   --->   "%mul_ln34_8 = mul i16 %filt_stream_int_stream_axis_0_shift_reg_1_load, i16 %tmp_2" [filt.cpp:34]   --->   Operation 68 'mul' 'mul_ln34_8' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 69 [1/1] (5.58ns)   --->   "%mul_ln34_9 = mul i16 %filt_stream_int_stream_axis_0_shift_reg_2_load, i16 %tmp_1" [filt.cpp:34]   --->   Operation 69 'mul' 'mul_ln34_9' <Predicate = true> <Delay = 5.58> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 5.58> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 70 [1/1] (0.00ns)   --->   "%store_ln30 = store i16 %filt_stream_int_stream_axis_0_shift_reg_1_load, i16 %filt_stream_int_stream_axis_0_shift_reg" [filt.cpp:30]   --->   Operation 70 'store' 'store_ln30' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 71 [1/1] (0.00ns)   --->   "%store_ln30 = store i16 %filt_stream_int_stream_axis_0_shift_reg_2_load, i16 %filt_stream_int_stream_axis_0_shift_reg_1" [filt.cpp:30]   --->   Operation 71 'store' 'store_ln30' <Predicate = true> <Delay = 0.00>
 
-State 3 <SV = 2> <Delay = 6.91>
-ST_3 : Operation 70 [1/2] (6.91ns)   --->   "%mul_ln34 = mul i32 %tmp1_data, i32 %gmem_addr_read_21" [filt.cpp:34]   --->   Operation 70 'mul' 'mul_ln34' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 71 [1/2] (6.91ns)   --->   "%mul_ln34_3 = mul i32 %filt_stream_int_stream_axis_0_shift_reg_load, i32 %gmem_addr_read_19" [filt.cpp:34]   --->   Operation 71 'mul' 'mul_ln34_3' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 72 [1/2] (6.91ns)   --->   "%mul_ln34_4 = mul i32 %filt_stream_int_stream_axis_0_shift_reg_6_load, i32 %gmem_addr_read_18" [filt.cpp:34]   --->   Operation 72 'mul' 'mul_ln34_4' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 73 [1/2] (6.91ns)   --->   "%mul_ln34_5 = mul i32 %filt_stream_int_stream_axis_0_shift_reg_3_load, i32 %gmem_addr_read_17" [filt.cpp:34]   --->   Operation 73 'mul' 'mul_ln34_5' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 74 [1/2] (6.91ns)   --->   "%mul_ln34_6 = mul i32 %filt_stream_int_stream_axis_0_shift_reg_4_load, i32 %gmem_addr_read_16" [filt.cpp:34]   --->   Operation 74 'mul' 'mul_ln34_6' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 75 [1/2] (6.91ns)   --->   "%mul_ln34_7 = mul i32 %filt_stream_int_stream_axis_0_shift_reg_5_load, i32 %gmem_addr_read_15" [filt.cpp:34]   --->   Operation 75 'mul' 'mul_ln34_7' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 76 [1/2] (6.91ns)   --->   "%mul_ln34_8 = mul i32 %filt_stream_int_stream_axis_0_shift_reg_1_load, i32 %gmem_addr_read_14" [filt.cpp:34]   --->   Operation 76 'mul' 'mul_ln34_8' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 77 [1/2] (6.91ns)   --->   "%mul_ln34_9 = mul i32 %filt_stream_int_stream_axis_0_shift_reg_2_load, i32 %gmem_addr_read_12" [filt.cpp:34]   --->   Operation 77 'mul' 'mul_ln34_9' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 78 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln34_6 = add i32 %mul_ln34_10, i32 %mul_ln34_2" [filt.cpp:34]   --->   Operation 78 'add' 'add_ln34_6' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.18> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
-ST_3 : Operation 79 [1/1] (4.37ns) (root node of TernaryAdder)   --->   "%add_ln34_7 = add i32 %add_ln34_6, i32 %mul_ln34_1" [filt.cpp:34]   --->   Operation 79 'add' 'add_ln34_7' <Predicate = true> <Delay = 4.37> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.18> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+State 3 <SV = 2> <Delay = 2.10>
+ST_3 : Operation 72 [1/3] (0.00ns) (grouped into DSP with root node add_ln34)   --->   "%mul_ln34 = mul i16 %tmp_10, i16 %tmp1_data" [filt.cpp:34]   --->   Operation 72 'mul' 'mul_ln34' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 73 [2/3] (1.05ns) (grouped into DSP with root node add_ln34_7)   --->   "%mul_ln34_1 = mul i16 %filt_stream_int_stream_axis_0_shift_reg_7_load, i16 %tmp_9" [filt.cpp:34]   --->   Operation 73 'mul' 'mul_ln34_1' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 74 [1/3] (0.00ns) (grouped into DSP with root node add_ln34_6)   --->   "%mul_ln34_2 = mul i16 %filt_stream_int_stream_axis_0_shift_reg_9_load, i16 %tmp_8" [filt.cpp:34]   --->   Operation 74 'mul' 'mul_ln34_2' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 75 [1/3] (0.00ns) (grouped into DSP with root node add_ln34_4)   --->   "%mul_ln34_4 = mul i16 %filt_stream_int_stream_axis_0_shift_reg_6_load, i16 %tmp_6" [filt.cpp:34]   --->   Operation 75 'mul' 'mul_ln34_4' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 76 [1/3] (0.00ns) (grouped into DSP with root node add_ln34_1)   --->   "%mul_ln34_5 = mul i16 %filt_stream_int_stream_axis_0_shift_reg_3_load, i16 %tmp_5" [filt.cpp:34]   --->   Operation 76 'mul' 'mul_ln34_5' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 77 [2/3] (1.05ns) (grouped into DSP with root node add_ln34_5)   --->   "%mul_ln34_6 = mul i16 %filt_stream_int_stream_axis_0_shift_reg_4_load, i16 %tmp_4" [filt.cpp:34]   --->   Operation 77 'mul' 'mul_ln34_6' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 78 [2/3] (1.05ns) (grouped into DSP with root node add_ln34_2)   --->   "%mul_ln34_8 = mul i16 %filt_stream_int_stream_axis_0_shift_reg_1_load, i16 %tmp_2" [filt.cpp:34]   --->   Operation 78 'mul' 'mul_ln34_8' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 79 [2/2] (2.10ns) (root node of the DSP)   --->   "%add_ln34 = add i16 %mul_ln34_3, i16 %mul_ln34" [filt.cpp:34]   --->   Operation 79 'add' 'add_ln34' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 80 [2/2] (2.10ns) (root node of the DSP)   --->   "%add_ln34_1 = add i16 %mul_ln34_9, i16 %mul_ln34_5" [filt.cpp:34]   --->   Operation 80 'add' 'add_ln34_1' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 81 [2/2] (2.10ns) (root node of the DSP)   --->   "%add_ln34_4 = add i16 %mul_ln34_7, i16 %mul_ln34_4" [filt.cpp:34]   --->   Operation 81 'add' 'add_ln34_4' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 82 [2/2] (2.10ns) (root node of the DSP)   --->   "%add_ln34_6 = add i16 %mul_ln34_10, i16 %mul_ln34_2" [filt.cpp:34]   --->   Operation 82 'add' 'add_ln34_6' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
 
-State 4 <SV = 3> <Delay = 6.92>
-ST_4 : Operation 80 [1/1] (2.55ns)   --->   "%add_ln34 = add i32 %mul_ln34_3, i32 %mul_ln34" [filt.cpp:34]   --->   Operation 80 'add' 'add_ln34' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_4 : Operation 81 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln34_1 = add i32 %mul_ln34_9, i32 %mul_ln34_5" [filt.cpp:34]   --->   Operation 81 'add' 'add_ln34_1' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.18> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
-ST_4 : Operation 82 [1/1] (4.37ns) (root node of TernaryAdder)   --->   "%add_ln34_2 = add i32 %add_ln34_1, i32 %mul_ln34_8" [filt.cpp:34]   --->   Operation 82 'add' 'add_ln34_2' <Predicate = true> <Delay = 4.37> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.18> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
-ST_4 : Operation 83 [1/1] (2.55ns)   --->   "%add_ln34_4 = add i32 %mul_ln34_7, i32 %mul_ln34_4" [filt.cpp:34]   --->   Operation 83 'add' 'add_ln34_4' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_4 : Operation 84 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln34_5 = add i32 %add_ln34_4, i32 %mul_ln34_6" [filt.cpp:34]   --->   Operation 84 'add' 'add_ln34_5' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.18> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
-ST_4 : Operation 85 [1/1] (4.37ns) (root node of TernaryAdder)   --->   "%add_ln34_8 = add i32 %add_ln34_7, i32 %add_ln34_5" [filt.cpp:34]   --->   Operation 85 'add' 'add_ln34_8' <Predicate = true> <Delay = 4.37> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.18> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+State 4 <SV = 3> <Delay = 4.20>
+ST_4 : Operation 83 [1/3] (0.00ns) (grouped into DSP with root node add_ln34_7)   --->   "%mul_ln34_1 = mul i16 %filt_stream_int_stream_axis_0_shift_reg_7_load, i16 %tmp_9" [filt.cpp:34]   --->   Operation 83 'mul' 'mul_ln34_1' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 84 [1/3] (0.00ns) (grouped into DSP with root node add_ln34_5)   --->   "%mul_ln34_6 = mul i16 %filt_stream_int_stream_axis_0_shift_reg_4_load, i16 %tmp_4" [filt.cpp:34]   --->   Operation 84 'mul' 'mul_ln34_6' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 85 [1/3] (0.00ns) (grouped into DSP with root node add_ln34_2)   --->   "%mul_ln34_8 = mul i16 %filt_stream_int_stream_axis_0_shift_reg_1_load, i16 %tmp_2" [filt.cpp:34]   --->   Operation 85 'mul' 'mul_ln34_8' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 86 [1/2] (2.10ns) (root node of the DSP)   --->   "%add_ln34 = add i16 %mul_ln34_3, i16 %mul_ln34" [filt.cpp:34]   --->   Operation 86 'add' 'add_ln34' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 87 [1/2] (2.10ns) (root node of the DSP)   --->   "%add_ln34_1 = add i16 %mul_ln34_9, i16 %mul_ln34_5" [filt.cpp:34]   --->   Operation 87 'add' 'add_ln34_1' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 88 [2/2] (2.10ns) (root node of the DSP)   --->   "%add_ln34_2 = add i16 %add_ln34_1, i16 %mul_ln34_8" [filt.cpp:34]   --->   Operation 88 'add' 'add_ln34_2' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 89 [1/2] (2.10ns) (root node of the DSP)   --->   "%add_ln34_4 = add i16 %mul_ln34_7, i16 %mul_ln34_4" [filt.cpp:34]   --->   Operation 89 'add' 'add_ln34_4' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 90 [2/2] (2.10ns) (root node of the DSP)   --->   "%add_ln34_5 = add i16 %add_ln34_4, i16 %mul_ln34_6" [filt.cpp:34]   --->   Operation 90 'add' 'add_ln34_5' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 91 [1/2] (2.10ns) (root node of the DSP)   --->   "%add_ln34_6 = add i16 %mul_ln34_10, i16 %mul_ln34_2" [filt.cpp:34]   --->   Operation 91 'add' 'add_ln34_6' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 92 [2/2] (2.10ns) (root node of the DSP)   --->   "%add_ln34_7 = add i16 %add_ln34_6, i16 %mul_ln34_1" [filt.cpp:34]   --->   Operation 92 'add' 'add_ln34_7' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
 
-State 5 <SV = 4> <Delay = 5.37>
-ST_5 : Operation 86 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln34_3 = add i32 %add_ln34_2, i32 %add_ln34" [filt.cpp:34]   --->   Operation 86 'add' 'add_ln34_3' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.18> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
-ST_5 : Operation 87 [1/1] (4.37ns) (root node of TernaryAdder)   --->   "%acc = add i32 %add_ln34_8, i32 %add_ln34_3" [filt.cpp:34]   --->   Operation 87 'add' 'acc' <Predicate = true> <Delay = 4.37> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.18> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
-ST_5 : Operation 88 [1/1] (1.00ns)   --->   "%write_ln44 = write void @_ssdm_op_Write.axis.volatile.i32P0A.i4P0A.i4P0A.i1P0A.i1P0A.i1P0A.i1P0A, i32 %y_V_data_V, i4 %y_V_keep_V, i4 %y_V_strb_V, i1 %y_V_user_V, i1 %y_V_last_V, i1 %y_V_id_V, i1 %y_V_dest_V, i32 %acc, i4 %tmp1_keep, i4 %tmp1_strb, i1 %tmp1_user, i1 %tmp1_last, i1 %tmp1_id, i1 %tmp1_dest" [filt.cpp:44]   --->   Operation 88 'write' 'write_ln44' <Predicate = true> <Delay = 1.00> <CoreInst = "axis">   --->   Core 115 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
-ST_5 : Operation 89 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 89 'ret' 'ret_ln0' <Predicate = (tmp1_last)> <Delay = 0.00>
+State 5 <SV = 4> <Delay = 4.17>
+ST_5 : Operation 93 [1/2] (2.10ns) (root node of the DSP)   --->   "%add_ln34_2 = add i16 %add_ln34_1, i16 %mul_ln34_8" [filt.cpp:34]   --->   Operation 93 'add' 'add_ln34_2' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 94 [1/2] (2.10ns) (root node of the DSP)   --->   "%add_ln34_5 = add i16 %add_ln34_4, i16 %mul_ln34_6" [filt.cpp:34]   --->   Operation 94 'add' 'add_ln34_5' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 95 [1/2] (2.10ns) (root node of the DSP)   --->   "%add_ln34_7 = add i16 %add_ln34_6, i16 %mul_ln34_1" [filt.cpp:34]   --->   Operation 95 'add' 'add_ln34_7' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 96 [1/1] (2.07ns)   --->   "%add_ln34_8 = add i16 %add_ln34_7, i16 %add_ln34_5" [filt.cpp:34]   --->   Operation 96 'add' 'add_ln34_8' <Predicate = true> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 4.90>
+ST_6 : Operation 97 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln34_3 = add i16 %add_ln34_2, i16 %add_ln34" [filt.cpp:34]   --->   Operation 97 'add' 'add_ln34_3' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_6 : Operation 98 [1/1] (3.90ns) (root node of TernaryAdder)   --->   "%acc = add i16 %add_ln34_8, i16 %add_ln34_3" [filt.cpp:37]   --->   Operation 98 'add' 'acc' <Predicate = true> <Delay = 3.90> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_6 : Operation 99 [1/1] (1.00ns)   --->   "%write_ln44 = write void @_ssdm_op_Write.axis.volatile.i16P0A.i2P0A.i2P0A.i1P0A.i1P0A.i1P0A.i1P0A, i16 %y_V_data_V, i2 %y_V_keep_V, i2 %y_V_strb_V, i1 %y_V_user_V, i1 %y_V_last_V, i1 %y_V_id_V, i1 %y_V_dest_V, i16 %acc, i2 %tmp1_keep, i2 %tmp1_strb, i1 %tmp1_user, i1 %tmp1_last, i1 %tmp1_id, i1 %tmp1_dest" [filt.cpp:44]   --->   Operation 99 'write' 'write_ln44' <Predicate = true> <Delay = 1.00> <CoreInst = "axis">   --->   Core 115 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_6 : Operation 100 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 100 'ret' 'ret_ln0' <Predicate = (tmp1_last)> <Delay = 0.00>
 
 
 ============================================================
@@ -185,29 +198,35 @@ ST_5 : Operation 89 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 
 ============================================================
 Target clock period: 10.000ns, clock uncertainty: 2.700ns.
 
- <State 1>: 6.912ns
+ <State 1>: 5.580ns
 The critical path consists of the following:
-	wire read operation ('gmem_addr_read_20') on port 'gmem_addr_read_3' [49]  (0.000 ns)
-	'mul' operation 32 bit ('mul_ln34_1', filt.cpp:34) [72]  (6.912 ns)
+	wire read operation ('tmp_3') on port 'empty_26' [43]  (0.000 ns)
+	'mul' operation 16 bit ('mul_ln34_7', filt.cpp:34) [78]  (5.580 ns)
 
- <State 2>: 6.912ns
+ <State 2>: 5.580ns
 The critical path consists of the following:
-	'mul' operation 32 bit ('mul_ln34', filt.cpp:34) [71]  (6.912 ns)
+	'load' operation 16 bit ('filt_stream_int_stream_axis_0_shift_reg_load', filt.cpp:30) on static variable 'filt_stream_int_stream_axis_0_shift_reg' [61]  (0.000 ns)
+	'mul' operation 16 bit ('mul_ln34_3', filt.cpp:34) [74]  (5.580 ns)
 
- <State 3>: 6.912ns
+ <State 3>: 2.100ns
 The critical path consists of the following:
-	'mul' operation 32 bit ('mul_ln34', filt.cpp:34) [71]  (6.912 ns)
+	'mul' operation 16 bit of DSP[82] ('mul_ln34', filt.cpp:34) [71]  (0.000 ns)
+	'add' operation 16 bit of DSP[82] ('add_ln34', filt.cpp:34) [82]  (2.100 ns)
 
- <State 4>: 6.923ns
+ <State 4>: 4.200ns
 The critical path consists of the following:
-	'add' operation 32 bit ('add_ln34_4', filt.cpp:34) [86]  (2.552 ns)
-	'add' operation 32 bit ('add_ln34_5', filt.cpp:34) [87]  (0.000 ns)
-	'add' operation 32 bit ('add_ln34_8', filt.cpp:34) [90]  (4.371 ns)
+	'add' operation 16 bit of DSP[83] ('add_ln34_1', filt.cpp:34) [83]  (2.100 ns)
+	'add' operation 16 bit of DSP[84] ('add_ln34_2', filt.cpp:34) [84]  (2.100 ns)
 
- <State 5>: 5.371ns
+ <State 5>: 4.177ns
 The critical path consists of the following:
-	'add' operation 32 bit ('add_ln34_3', filt.cpp:34) [85]  (0.000 ns)
-	'add' operation 32 bit ('acc', filt.cpp:34) [91]  (4.371 ns)
+	'add' operation 16 bit of DSP[87] ('add_ln34_5', filt.cpp:34) [87]  (2.100 ns)
+	'add' operation 16 bit ('add_ln34_8', filt.cpp:34) [90]  (2.077 ns)
+
+ <State 6>: 4.903ns
+The critical path consists of the following:
+	'add' operation 16 bit ('add_ln34_3', filt.cpp:34) [85]  (0.000 ns)
+	'add' operation 16 bit ('acc', filt.cpp:37) [91]  (3.903 ns)
 	axis write operation ('write_ln44', filt.cpp:44) on port 'y_V_data_V' (filt.cpp:44) [102]  (1.000 ns)
 
 
@@ -224,6 +243,7 @@ N/A
 	State 3
 	State 4
 	State 5
+	State 6
 
 
 ============================================================

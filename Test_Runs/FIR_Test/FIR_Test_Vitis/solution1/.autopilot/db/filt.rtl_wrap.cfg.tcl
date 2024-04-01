@@ -5,7 +5,7 @@ set rawDecl ""
 set globalVariable ""
 set PortList ""
 set PortName "y"
-set BitWidth "96"
+set BitWidth "64"
 set ArrayOpt ""
 set Const "0"
 set Volatile "0"
@@ -15,7 +15,7 @@ set Dims [list 0]
 set Interface [list AP_STREAM 0]
 set structMem ""
 set PortName0 "data"
-set BitWidth0 "32"
+set BitWidth0 "16"
 set ArrayOpt0 ""
 set Const0 "0"
 set Volatile0 "0"
@@ -23,11 +23,11 @@ set Pointer0 "0"
 set Reference0 "0"
 set Dims0 [list 0]
 set Interface0 "wire"
-set DataType0 "[list ap_uint 32]"
+set DataType0 "[list ap_uint 16]"
 set Port0 [list $PortName0 $Interface0 $DataType0 $Pointer0 $Dims0 $Const0 $Volatile0 $ArrayOpt0]
 lappend structMem $Port0
 set PortName0 "keep"
-set BitWidth0 "4"
+set BitWidth0 "2"
 set ArrayOpt0 ""
 set Const0 "0"
 set Volatile0 "0"
@@ -35,11 +35,11 @@ set Pointer0 "0"
 set Reference0 "0"
 set Dims0 [list 0]
 set Interface0 "wire"
-set DataType0 "[list ap_uint 4]"
+set DataType0 "[list ap_uint 2]"
 set Port0 [list $PortName0 $Interface0 $DataType0 $Pointer0 $Dims0 $Const0 $Volatile0 $ArrayOpt0]
 lappend structMem $Port0
 set PortName0 "strb"
-set BitWidth0 "4"
+set BitWidth0 "2"
 set ArrayOpt0 ""
 set Const0 "0"
 set Volatile0 "0"
@@ -47,7 +47,7 @@ set Pointer0 "0"
 set Reference0 "0"
 set Dims0 [list 0]
 set Interface0 "wire"
-set DataType0 "[list ap_uint 4]"
+set DataType0 "[list ap_uint 2]"
 set Port0 [list $PortName0 $Interface0 $DataType0 $Pointer0 $Dims0 $Const0 $Volatile0 $ArrayOpt0]
 lappend structMem $Port0
 set PortName0 "user"
@@ -119,7 +119,7 @@ set DataType "void"
 set Port [list $PortName $Interface $DataType $Pointer $Dims $Const    $Volatile $ArrayOpt]
 lappend PortList $Port
 set PortName "x"
-set BitWidth "96"
+set BitWidth "64"
 set ArrayOpt ""
 set Const "0"
 set Volatile "0"
@@ -129,7 +129,7 @@ set Dims [list 0]
 set Interface [list AP_STREAM 0]
 set structMem ""
 set PortName0 "data"
-set BitWidth0 "32"
+set BitWidth0 "16"
 set ArrayOpt0 ""
 set Const0 "0"
 set Volatile0 "0"
@@ -137,11 +137,11 @@ set Pointer0 "0"
 set Reference0 "0"
 set Dims0 [list 0]
 set Interface0 "wire"
-set DataType0 "[list ap_uint 32]"
+set DataType0 "[list ap_uint 16]"
 set Port0 [list $PortName0 $Interface0 $DataType0 $Pointer0 $Dims0 $Const0 $Volatile0 $ArrayOpt0]
 lappend structMem $Port0
 set PortName0 "keep"
-set BitWidth0 "4"
+set BitWidth0 "2"
 set ArrayOpt0 ""
 set Const0 "0"
 set Volatile0 "0"
@@ -149,11 +149,11 @@ set Pointer0 "0"
 set Reference0 "0"
 set Dims0 [list 0]
 set Interface0 "wire"
-set DataType0 "[list ap_uint 4]"
+set DataType0 "[list ap_uint 2]"
 set Port0 [list $PortName0 $Interface0 $DataType0 $Pointer0 $Dims0 $Const0 $Volatile0 $ArrayOpt0]
 lappend structMem $Port0
 set PortName0 "strb"
-set BitWidth0 "4"
+set BitWidth0 "2"
 set ArrayOpt0 ""
 set Const0 "0"
 set Volatile0 "0"
@@ -161,7 +161,7 @@ set Pointer0 "0"
 set Reference0 "0"
 set Dims0 [list 0]
 set Interface0 "wire"
-set DataType0 "[list ap_uint 4]"
+set DataType0 "[list ap_uint 2]"
 set Port0 [list $PortName0 $Interface0 $DataType0 $Pointer0 $Dims0 $Const0 $Volatile0 $ArrayOpt0]
 lappend structMem $Port0
 set PortName0 "user"

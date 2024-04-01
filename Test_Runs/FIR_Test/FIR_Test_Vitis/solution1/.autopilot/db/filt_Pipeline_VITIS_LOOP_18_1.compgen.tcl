@@ -1,8 +1,67 @@
 # This script segment is generated automatically by AutoPilot
 
-set name filt_mul_32s_32s_32_2_1
+set name filt_mul_16s_16s_16_1_1
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {mul} IMPL {auto} LATENCY 1 ALLOW_PRAGMA 1
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {mul} IMPL {auto} LATENCY 0 ALLOW_PRAGMA 1
+}
+
+
+set id 5
+set name filt_mac_muladd_16s_16s_16ns_16_4_1
+set corename simcore_mac
+set op mac
+set stage_num 4
+set clk_width 1
+set clk_signed 0
+set reset_width 1
+set reset_signed 0
+set in0_width 16
+set in0_signed 1
+set in1_width 16
+set in1_signed 1
+set in2_width 16
+set in2_signed 0
+set ce_width 1
+set ce_signed 0
+set out_width 16
+set arg_lists {i0 {16 1 +} i1 {16 1 +} m {16 1 +} i2 {16 0 +} p {16 0 +} c_reg {1} rnd {0} acc {0} }
+set TrueReset 0
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {all} IMPL {dsp_slice} LATENCY 3 ALLOW_PRAGMA 1
+}
+
+
+set op mac
+set corename DSP48
+if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
+if {[info proc ::AESL_LIB_VIRTEX::xil_gen_dsp48] == "::AESL_LIB_VIRTEX::xil_gen_dsp48"} {
+eval "::AESL_LIB_VIRTEX::xil_gen_dsp48 { \
+    id ${id} \
+    name ${name} \
+    corename ${corename} \
+    op ${op} \
+    reset_level 1 \
+    sync_rst true \
+    true_reset ${TrueReset} \
+    stage_num ${stage_num} \
+    clk_width ${clk_width} \
+    clk_signed ${clk_signed} \
+    reset_width ${reset_width} \
+    reset_signed ${reset_signed} \
+    in0_width ${in0_width} \
+    in0_signed ${in0_signed} \
+    in1_width ${in1_width} \
+    in1_signed ${in1_signed} \
+    in2_width ${in2_width} \
+    in2_signed ${in2_signed} \
+    ce_width ${ce_width} \
+    ce_signed ${ce_signed} \
+    out_width ${out_width} \
+    arg_lists {${arg_lists}} \
+}"
+} else {
+puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_dsp48, check your platform lib"
+}
 }
 
 
@@ -17,14 +76,14 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 13 \
+    id 14 \
     name x_V_data_V \
     reset_level 1 \
     sync_rst true \
     corename {x} \
     metadata {  } \
     op interface \
-    ports { x_TVALID { I 1 bit } x_TDATA { I 32 vector } } \
+    ports { x_TVALID { I 1 bit } x_TDATA { I 16 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'x_V_data_V'"
@@ -36,14 +95,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 14 \
+    id 15 \
     name x_V_keep_V \
     reset_level 1 \
     sync_rst true \
     corename {x} \
     metadata {  } \
     op interface \
-    ports { x_TKEEP { I 4 vector } } \
+    ports { x_TKEEP { I 2 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'x_V_keep_V'"
@@ -55,14 +114,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 15 \
+    id 16 \
     name x_V_strb_V \
     reset_level 1 \
     sync_rst true \
     corename {x} \
     metadata {  } \
     op interface \
-    ports { x_TSTRB { I 4 vector } } \
+    ports { x_TSTRB { I 2 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'x_V_strb_V'"
@@ -74,7 +133,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 16 \
+    id 17 \
     name x_V_user_V \
     reset_level 1 \
     sync_rst true \
@@ -93,7 +152,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 17 \
+    id 18 \
     name x_V_last_V \
     reset_level 1 \
     sync_rst true \
@@ -112,7 +171,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 18 \
+    id 19 \
     name x_V_id_V \
     reset_level 1 \
     sync_rst true \
@@ -131,7 +190,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 19 \
+    id 20 \
     name x_V_dest_V \
     reset_level 1 \
     sync_rst true \
@@ -150,14 +209,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 31 \
+    id 32 \
     name y_V_data_V \
     reset_level 1 \
     sync_rst true \
     corename {y} \
     metadata {  } \
     op interface \
-    ports { y_TREADY { I 1 bit } y_TDATA { O 32 vector } } \
+    ports { y_TREADY { I 1 bit } y_TDATA { O 16 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'y_V_data_V'"
@@ -169,14 +228,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 32 \
+    id 33 \
     name y_V_keep_V \
     reset_level 1 \
     sync_rst true \
     corename {y} \
     metadata {  } \
     op interface \
-    ports { y_TKEEP { O 4 vector } } \
+    ports { y_TKEEP { O 2 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'y_V_keep_V'"
@@ -188,14 +247,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 33 \
+    id 34 \
     name y_V_strb_V \
     reset_level 1 \
     sync_rst true \
     corename {y} \
     metadata {  } \
     op interface \
-    ports { y_TSTRB { O 4 vector } } \
+    ports { y_TSTRB { O 2 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'y_V_strb_V'"
@@ -207,7 +266,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 34 \
+    id 35 \
     name y_V_user_V \
     reset_level 1 \
     sync_rst true \
@@ -226,7 +285,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 35 \
+    id 36 \
     name y_V_last_V \
     reset_level 1 \
     sync_rst true \
@@ -245,7 +304,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 36 \
+    id 37 \
     name y_V_id_V \
     reset_level 1 \
     sync_rst true \
@@ -264,7 +323,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 37 \
+    id 38 \
     name y_V_dest_V \
     reset_level 1 \
     sync_rst true \
@@ -282,30 +341,15 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 20 \
-    name gmem_addr_read \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_gmem_addr_read \
-    op interface \
-    ports { gmem_addr_read { I 32 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
     id 21 \
-    name gmem_addr_read_3 \
+    name empty_19 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_gmem_addr_read_3 \
+    corename dc_empty_19 \
     op interface \
-    ports { gmem_addr_read_3 { I 32 vector } } \
+    ports { empty_19 { I 16 vector } } \
 } "
 }
 
@@ -313,14 +357,14 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 22 \
-    name gmem_addr_read_1 \
+    name empty_20 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_gmem_addr_read_1 \
+    corename dc_empty_20 \
     op interface \
-    ports { gmem_addr_read_1 { I 32 vector } } \
+    ports { empty_20 { I 16 vector } } \
 } "
 }
 
@@ -328,14 +372,14 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 23 \
-    name gmem_addr_read_10 \
+    name empty_21 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_gmem_addr_read_10 \
+    corename dc_empty_21 \
     op interface \
-    ports { gmem_addr_read_10 { I 32 vector } } \
+    ports { empty_21 { I 16 vector } } \
 } "
 }
 
@@ -343,14 +387,14 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 24 \
-    name gmem_addr_read_4 \
+    name empty_22 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_gmem_addr_read_4 \
+    corename dc_empty_22 \
     op interface \
-    ports { gmem_addr_read_4 { I 32 vector } } \
+    ports { empty_22 { I 16 vector } } \
 } "
 }
 
@@ -358,14 +402,14 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 25 \
-    name gmem_addr_read_7 \
+    name empty_23 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_gmem_addr_read_7 \
+    corename dc_empty_23 \
     op interface \
-    ports { gmem_addr_read_7 { I 32 vector } } \
+    ports { empty_23 { I 16 vector } } \
 } "
 }
 
@@ -373,14 +417,14 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 26 \
-    name gmem_addr_read_6 \
+    name empty_24 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_gmem_addr_read_6 \
+    corename dc_empty_24 \
     op interface \
-    ports { gmem_addr_read_6 { I 32 vector } } \
+    ports { empty_24 { I 16 vector } } \
 } "
 }
 
@@ -388,14 +432,14 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 27 \
-    name gmem_addr_read_5 \
+    name empty_25 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_gmem_addr_read_5 \
+    corename dc_empty_25 \
     op interface \
-    ports { gmem_addr_read_5 { I 32 vector } } \
+    ports { empty_25 { I 16 vector } } \
 } "
 }
 
@@ -403,14 +447,14 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 28 \
-    name gmem_addr_read_9 \
+    name empty_26 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_gmem_addr_read_9 \
+    corename dc_empty_26 \
     op interface \
-    ports { gmem_addr_read_9 { I 32 vector } } \
+    ports { empty_26 { I 16 vector } } \
 } "
 }
 
@@ -418,14 +462,14 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 29 \
-    name gmem_addr_read_8 \
+    name empty_27 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_gmem_addr_read_8 \
+    corename dc_empty_27 \
     op interface \
-    ports { gmem_addr_read_8 { I 32 vector } } \
+    ports { empty_27 { I 16 vector } } \
 } "
 }
 
@@ -433,14 +477,29 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 30 \
-    name gmem_addr_read_2 \
+    name empty_28 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_gmem_addr_read_2 \
+    corename dc_empty_28 \
     op interface \
-    ports { gmem_addr_read_2 { I 32 vector } } \
+    ports { empty_28 { I 16 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 31 \
+    name empty \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_empty \
+    op interface \
+    ports { empty { I 16 vector } } \
 } "
 }
 

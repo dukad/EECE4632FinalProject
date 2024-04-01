@@ -7,7 +7,7 @@
     </downStreamTool>
     <synthesis askAgain="true"/>
     <config>
-        <config_export output="C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test" format="ip_catalog" rtl="verilog"/>
+        <config_export format="ip_catalog" output="C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test" rtl="verilog"/>
     </config>
     <UIConfigurations>
         <UIAutosynConf hideTrivialOp="true" isBasedOnBoard="false" isSolutionDirty="false" isStopAskAgain="false" showDetailDesignViewer="false">

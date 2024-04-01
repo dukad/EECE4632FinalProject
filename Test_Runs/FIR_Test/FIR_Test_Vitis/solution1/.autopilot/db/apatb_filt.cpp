@@ -1101,8 +1101,8 @@ void filt_hw_stub_wrapper(void*, void*, void*, void*, void*, void*, void*, void*
 extern "C"
 void apatb_filt_hw(void* __xlx_apatb_param_y_V_data_V, void* __xlx_apatb_param_y_V_keep_V, void* __xlx_apatb_param_y_V_strb_V, void* __xlx_apatb_param_y_V_user_V, void* __xlx_apatb_param_y_V_last_V, void* __xlx_apatb_param_y_V_id_V, void* __xlx_apatb_param_y_V_dest_V, void* __xlx_apatb_param_c, void* __xlx_apatb_param_x_V_data_V, void* __xlx_apatb_param_x_V_keep_V, void* __xlx_apatb_param_x_V_strb_V, void* __xlx_apatb_param_x_V_user_V, void* __xlx_apatb_param_x_V_last_V, void* __xlx_apatb_param_x_V_id_V, void* __xlx_apatb_param_x_V_dest_V)
 {
-  static hls::sim::Stream<hls::sim::Byte<4>> port0 {
-    .width = 32,
+  static hls::sim::Stream<hls::sim::Byte<2>> port0 {
+    .width = 16,
     .name = "y_V_data_V",
 #ifdef POST_CHECK
     .reader = new hls::sim::Reader(AUTOTB_TVOUT_PC_y_V_data_V),
@@ -1112,11 +1112,11 @@ void apatb_filt_hw(void* __xlx_apatb_param_y_V_data_V, void* __xlx_apatb_param_y
     .gwriter = new hls::sim::Writer(WRAPC_STREAM_EGRESS_STATUS_y_V_data_V),
 #endif
   };
-  port0.param = (hls::stream<hls::sim::Byte<4>>*)__xlx_apatb_param_y_V_data_V;
+  port0.param = (hls::stream<hls::sim::Byte<2>>*)__xlx_apatb_param_y_V_data_V;
   port0.hasWrite = true;
 
   static hls::sim::Stream<hls::sim::Byte<1>> port1 {
-    .width = 4,
+    .width = 2,
     .name = "y_V_keep_V",
 #ifdef POST_CHECK
     .reader = new hls::sim::Reader(AUTOTB_TVOUT_PC_y_V_keep_V),
@@ -1130,7 +1130,7 @@ void apatb_filt_hw(void* __xlx_apatb_param_y_V_data_V, void* __xlx_apatb_param_y
   port1.hasWrite = true;
 
   static hls::sim::Stream<hls::sim::Byte<1>> port2 {
-    .width = 4,
+    .width = 2,
     .name = "y_V_strb_V",
 #ifdef POST_CHECK
     .reader = new hls::sim::Reader(AUTOTB_TVOUT_PC_y_V_strb_V),
@@ -1211,8 +1211,8 @@ void apatb_filt_hw(void* __xlx_apatb_param_y_V_data_V, void* __xlx_apatb_param_y
   };
   port7.param = &__xlx_offset_byte_param_c;
 
-  static hls::sim::Stream<hls::sim::Byte<4>> port8 {
-    .width = 32,
+  static hls::sim::Stream<hls::sim::Byte<2>> port8 {
+    .width = 16,
     .name = "x_V_data_V",
 #ifdef POST_CHECK
     .reader = new hls::sim::Reader(WRAPC_STREAM_SIZE_IN_x_V_data_V),
@@ -1222,11 +1222,11 @@ void apatb_filt_hw(void* __xlx_apatb_param_y_V_data_V, void* __xlx_apatb_param_y
     .gwriter = new hls::sim::Writer(WRAPC_STREAM_INGRESS_STATUS_x_V_data_V),
 #endif
   };
-  port8.param = (hls::stream<hls::sim::Byte<4>>*)__xlx_apatb_param_x_V_data_V;
+  port8.param = (hls::stream<hls::sim::Byte<2>>*)__xlx_apatb_param_x_V_data_V;
   port8.hasWrite = false;
 
   static hls::sim::Stream<hls::sim::Byte<1>> port9 {
-    .width = 4,
+    .width = 2,
     .name = "x_V_keep_V",
 #ifdef POST_CHECK
     .reader = new hls::sim::Reader(WRAPC_STREAM_SIZE_IN_x_V_keep_V),
@@ -1240,7 +1240,7 @@ void apatb_filt_hw(void* __xlx_apatb_param_y_V_data_V, void* __xlx_apatb_param_y
   port9.hasWrite = false;
 
   static hls::sim::Stream<hls::sim::Byte<1>> port10 {
-    .width = 4,
+    .width = 2,
     .name = "x_V_strb_V",
 #ifdef POST_CHECK
     .reader = new hls::sim::Reader(WRAPC_STREAM_SIZE_IN_x_V_strb_V),

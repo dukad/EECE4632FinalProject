@@ -6,7 +6,7 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="filt_filt,hls_ip_2023_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020-clg400-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=7.300000,HLS_SYN_LAT=-1,HLS_SYN_TPT=none,HLS_SYN_MEM=4,HLS_SYN_DSP=0,HLS_SYN_FF=4455,HLS_SYN_LUT=2162,HLS_VERSION=2023_2}" *)
+(* CORE_GENERATION_INFO="filt_filt,hls_ip_2023_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020-clg400-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=7.300000,HLS_SYN_LAT=-1,HLS_SYN_TPT=none,HLS_SYN_MEM=4,HLS_SYN_DSP=0,HLS_SYN_FF=1966,HLS_SYN_LUT=1357,HLS_VERSION=2023_2}" *)
 
 module filt (
         ap_clk,
@@ -184,20 +184,20 @@ output   m_axi_gmem_BREADY;
 input  [1:0] m_axi_gmem_BRESP;
 input  [C_M_AXI_GMEM_ID_WIDTH - 1:0] m_axi_gmem_BID;
 input  [C_M_AXI_GMEM_BUSER_WIDTH - 1:0] m_axi_gmem_BUSER;
-output  [31:0] y_TDATA;
+output  [15:0] y_TDATA;
 output   y_TVALID;
 input   y_TREADY;
-output  [3:0] y_TKEEP;
-output  [3:0] y_TSTRB;
+output  [1:0] y_TKEEP;
+output  [1:0] y_TSTRB;
 output  [0:0] y_TUSER;
 output  [0:0] y_TLAST;
 output  [0:0] y_TID;
 output  [0:0] y_TDEST;
-input  [31:0] x_TDATA;
+input  [15:0] x_TDATA;
 input   x_TVALID;
 output   x_TREADY;
-input  [3:0] x_TKEEP;
-input  [3:0] x_TSTRB;
+input  [1:0] x_TKEEP;
+input  [1:0] x_TSTRB;
 input  [0:0] x_TUSER;
 input  [0:0] x_TLAST;
 input  [0:0] x_TID;
@@ -237,29 +237,40 @@ wire    ap_CS_fsm_state17;
 wire    ap_CS_fsm_state18;
 wire    ap_CS_fsm_state19;
 wire    ap_CS_fsm_state20;
-reg   [63:0] gmem_addr_reg_217;
+reg   [63:0] gmem_addr_reg_261;
 wire    ap_CS_fsm_state1;
-reg   [31:0] gmem_addr_read_reg_223;
-reg   [31:0] gmem_addr_read_1_reg_228;
-reg   [31:0] gmem_addr_read_2_reg_233;
-reg   [31:0] gmem_addr_read_3_reg_238;
-reg   [31:0] gmem_addr_read_4_reg_243;
-reg   [31:0] gmem_addr_read_5_reg_248;
-reg   [31:0] gmem_addr_read_6_reg_253;
-reg   [31:0] gmem_addr_read_7_reg_258;
-reg   [31:0] gmem_addr_read_8_reg_263;
-reg   [31:0] gmem_addr_read_9_reg_268;
-reg   [31:0] gmem_addr_read_10_reg_273;
+wire   [15:0] trunc_ln34_fu_217_p1;
+reg   [15:0] trunc_ln34_reg_267;
+wire   [15:0] trunc_ln34_2_fu_221_p1;
+reg   [15:0] trunc_ln34_2_reg_272;
+wire   [15:0] trunc_ln34_10_fu_225_p1;
+reg   [15:0] trunc_ln34_10_reg_277;
+wire   [15:0] trunc_ln34_1_fu_229_p1;
+reg   [15:0] trunc_ln34_1_reg_282;
+wire   [15:0] trunc_ln34_4_fu_233_p1;
+reg   [15:0] trunc_ln34_4_reg_287;
+wire   [15:0] trunc_ln34_7_fu_237_p1;
+reg   [15:0] trunc_ln34_7_reg_292;
+wire   [15:0] trunc_ln34_6_fu_241_p1;
+reg   [15:0] trunc_ln34_6_reg_297;
+wire   [15:0] trunc_ln34_5_fu_245_p1;
+reg   [15:0] trunc_ln34_5_reg_302;
+wire   [15:0] trunc_ln34_9_fu_249_p1;
+reg   [15:0] trunc_ln34_9_reg_307;
+wire   [15:0] trunc_ln34_8_fu_253_p1;
+reg   [15:0] trunc_ln34_8_reg_312;
+wire   [15:0] trunc_ln34_3_fu_257_p1;
+reg   [15:0] trunc_ln34_3_reg_317;
 wire    grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_ap_start;
 wire    grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_ap_done;
 wire    grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_ap_idle;
 wire    grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_ap_ready;
 wire    grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_y_TREADY;
 wire    grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_x_TREADY;
-wire   [31:0] grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_y_TDATA;
+wire   [15:0] grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_y_TDATA;
 wire    grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_y_TVALID;
-wire   [3:0] grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_y_TKEEP;
-wire   [3:0] grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_y_TSTRB;
+wire   [1:0] grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_y_TKEEP;
+wire   [1:0] grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_y_TSTRB;
 wire   [0:0] grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_y_TUSER;
 wire   [0:0] grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_y_TLAST;
 wire   [0:0] grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_y_TID;
@@ -326,16 +337,16 @@ wire    regslice_both_y_V_dest_V_U_apdone_blk;
 wire    regslice_both_y_V_dest_V_U_ack_in_dummy;
 wire    regslice_both_y_V_dest_V_U_vld_out;
 wire    regslice_both_x_V_data_V_U_apdone_blk;
-wire   [31:0] x_TDATA_int_regslice;
+wire   [15:0] x_TDATA_int_regslice;
 wire    x_TVALID_int_regslice;
 reg    x_TREADY_int_regslice;
 wire    regslice_both_x_V_data_V_U_ack_in;
 wire    regslice_both_x_V_keep_V_U_apdone_blk;
-wire   [3:0] x_TKEEP_int_regslice;
+wire   [1:0] x_TKEEP_int_regslice;
 wire    regslice_both_x_V_keep_V_U_vld_out;
 wire    regslice_both_x_V_keep_V_U_ack_in;
 wire    regslice_both_x_V_strb_V_U_apdone_blk;
-wire   [3:0] x_TSTRB_int_regslice;
+wire   [1:0] x_TSTRB_int_regslice;
 wire    regslice_both_x_V_strb_V_U_vld_out;
 wire    regslice_both_x_V_strb_V_U_ack_in;
 wire    regslice_both_x_V_user_V_U_apdone_blk;
@@ -379,17 +390,17 @@ filt_filt_Pipeline_VITIS_LOOP_18_1 grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134(
     .x_TLAST(x_TLAST_int_regslice),
     .x_TID(x_TID_int_regslice),
     .x_TDEST(x_TDEST_int_regslice),
-    .gmem_addr_read(gmem_addr_read_reg_223),
-    .gmem_addr_read_3(gmem_addr_read_3_reg_238),
-    .gmem_addr_read_1(gmem_addr_read_1_reg_228),
-    .gmem_addr_read_10(gmem_addr_read_10_reg_273),
-    .gmem_addr_read_4(gmem_addr_read_4_reg_243),
-    .gmem_addr_read_7(gmem_addr_read_7_reg_258),
-    .gmem_addr_read_6(gmem_addr_read_6_reg_253),
-    .gmem_addr_read_5(gmem_addr_read_5_reg_248),
-    .gmem_addr_read_9(gmem_addr_read_9_reg_268),
-    .gmem_addr_read_8(gmem_addr_read_8_reg_263),
-    .gmem_addr_read_2(gmem_addr_read_2_reg_233),
+    .empty_19(trunc_ln34_reg_267),
+    .empty_20(trunc_ln34_1_reg_282),
+    .empty_21(trunc_ln34_2_reg_272),
+    .empty_22(trunc_ln34_3_reg_317),
+    .empty_23(trunc_ln34_4_reg_287),
+    .empty_24(trunc_ln34_5_reg_302),
+    .empty_25(trunc_ln34_6_reg_297),
+    .empty_26(trunc_ln34_7_reg_292),
+    .empty_27(trunc_ln34_8_reg_312),
+    .empty_28(trunc_ln34_9_reg_307),
+    .empty(trunc_ln34_10_reg_277),
     .y_TDATA(grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_y_TDATA),
     .y_TVALID(grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_y_TVALID),
     .y_TKEEP(grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_y_TKEEP),
@@ -499,7 +510,7 @@ gmem_m_axi_U(
     .ACLK_EN(1'b1),
     .I_ARVALID(gmem_ARVALID),
     .I_ARREADY(gmem_ARREADY),
-    .I_ARADDR(gmem_addr_reg_217),
+    .I_ARADDR(gmem_addr_reg_261),
     .I_ARLEN(32'd11),
     .I_RVALID(gmem_RVALID),
     .I_RREADY(gmem_RREADY),
@@ -518,7 +529,7 @@ gmem_m_axi_U(
 );
 
 filt_regslice_both #(
-    .DataWidth( 32 ))
+    .DataWidth( 16 ))
 regslice_both_y_V_data_V_U(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
@@ -532,7 +543,7 @@ regslice_both_y_V_data_V_U(
 );
 
 filt_regslice_both #(
-    .DataWidth( 4 ))
+    .DataWidth( 2 ))
 regslice_both_y_V_keep_V_U(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
@@ -546,7 +557,7 @@ regslice_both_y_V_keep_V_U(
 );
 
 filt_regslice_both #(
-    .DataWidth( 4 ))
+    .DataWidth( 2 ))
 regslice_both_y_V_strb_V_U(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
@@ -616,7 +627,7 @@ regslice_both_y_V_dest_V_U(
 );
 
 filt_regslice_both #(
-    .DataWidth( 32 ))
+    .DataWidth( 16 ))
 regslice_both_x_V_data_V_U(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
@@ -630,7 +641,7 @@ regslice_both_x_V_data_V_U(
 );
 
 filt_regslice_both #(
-    .DataWidth( 4 ))
+    .DataWidth( 2 ))
 regslice_both_x_V_keep_V_U(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
@@ -644,7 +655,7 @@ regslice_both_x_V_keep_V_U(
 );
 
 filt_regslice_both #(
-    .DataWidth( 4 ))
+    .DataWidth( 2 ))
 regslice_both_x_V_strb_V_U(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
@@ -734,74 +745,74 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_CS_fsm_state20)) begin
-        gmem_addr_read_10_reg_273 <= gmem_RDATA;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_CS_fsm_state11)) begin
-        gmem_addr_read_1_reg_228 <= gmem_RDATA;
+    if ((1'b1 == ap_CS_fsm_state1)) begin
+        gmem_addr_reg_261 <= p_cast_cast_fu_207_p1;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state12)) begin
-        gmem_addr_read_2_reg_233 <= gmem_RDATA;
+        trunc_ln34_10_reg_277 <= trunc_ln34_10_fu_225_p1;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state13)) begin
-        gmem_addr_read_3_reg_238 <= gmem_RDATA;
+        trunc_ln34_1_reg_282 <= trunc_ln34_1_fu_229_p1;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((1'b1 == ap_CS_fsm_state11)) begin
+        trunc_ln34_2_reg_272 <= trunc_ln34_2_fu_221_p1;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((1'b1 == ap_CS_fsm_state20)) begin
+        trunc_ln34_3_reg_317 <= trunc_ln34_3_fu_257_p1;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state14)) begin
-        gmem_addr_read_4_reg_243 <= gmem_RDATA;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_CS_fsm_state15)) begin
-        gmem_addr_read_5_reg_248 <= gmem_RDATA;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_CS_fsm_state16)) begin
-        gmem_addr_read_6_reg_253 <= gmem_RDATA;
+        trunc_ln34_4_reg_287 <= trunc_ln34_4_fu_233_p1;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state17)) begin
-        gmem_addr_read_7_reg_258 <= gmem_RDATA;
+        trunc_ln34_5_reg_302 <= trunc_ln34_5_fu_245_p1;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_CS_fsm_state18)) begin
-        gmem_addr_read_8_reg_263 <= gmem_RDATA;
+    if ((1'b1 == ap_CS_fsm_state16)) begin
+        trunc_ln34_6_reg_297 <= trunc_ln34_6_fu_241_p1;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((1'b1 == ap_CS_fsm_state15)) begin
+        trunc_ln34_7_reg_292 <= trunc_ln34_7_fu_237_p1;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state19)) begin
-        gmem_addr_read_9_reg_268 <= gmem_RDATA;
+        trunc_ln34_8_reg_312 <= trunc_ln34_8_fu_253_p1;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((1'b1 == ap_CS_fsm_state18)) begin
+        trunc_ln34_9_reg_307 <= trunc_ln34_9_fu_249_p1;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state10)) begin
-        gmem_addr_read_reg_223 <= gmem_RDATA;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_CS_fsm_state1)) begin
-        gmem_addr_reg_217 <= p_cast_cast_fu_207_p1;
+        trunc_ln34_reg_267 <= trunc_ln34_fu_217_p1;
     end
 end
 
@@ -1089,7 +1100,7 @@ always @ (*) begin
             ap_NS_fsm = ap_ST_fsm_state22;
         end
         ap_ST_fsm_state22 : begin
-            if (((1'b1 == ap_CS_fsm_state22) & (grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_ap_done == 1'b1))) begin
+            if (((grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state22))) begin
                 ap_NS_fsm = ap_ST_fsm_state23;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state22;
@@ -1151,6 +1162,28 @@ assign grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_y_TREADY = (y_TREADY_int_regslic
 assign p_cast_cast_fu_207_p1 = $signed(p_cast_fu_197_p4);
 
 assign p_cast_fu_197_p4 = {{c[63:2]}};
+
+assign trunc_ln34_10_fu_225_p1 = gmem_RDATA[15:0];
+
+assign trunc_ln34_1_fu_229_p1 = gmem_RDATA[15:0];
+
+assign trunc_ln34_2_fu_221_p1 = gmem_RDATA[15:0];
+
+assign trunc_ln34_3_fu_257_p1 = gmem_RDATA[15:0];
+
+assign trunc_ln34_4_fu_233_p1 = gmem_RDATA[15:0];
+
+assign trunc_ln34_5_fu_245_p1 = gmem_RDATA[15:0];
+
+assign trunc_ln34_6_fu_241_p1 = gmem_RDATA[15:0];
+
+assign trunc_ln34_7_fu_237_p1 = gmem_RDATA[15:0];
+
+assign trunc_ln34_8_fu_253_p1 = gmem_RDATA[15:0];
+
+assign trunc_ln34_9_fu_249_p1 = gmem_RDATA[15:0];
+
+assign trunc_ln34_fu_217_p1 = gmem_RDATA[15:0];
 
 assign x_TREADY = regslice_both_x_V_data_V_U_ack_in;
 

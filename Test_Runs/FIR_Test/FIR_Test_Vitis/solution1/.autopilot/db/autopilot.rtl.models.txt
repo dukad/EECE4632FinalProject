@@ -1,4 +1,5 @@
-filt_mul_32s_32s_32_2_1
+filt_mul_16s_16s_16_1_1
+filt_mac_muladd_16s_16s_16ns_16_4_1
 filt_flow_control_loop_pipe_sequential_init
 filt_gmem_m_axi
 filt_control_s_axi

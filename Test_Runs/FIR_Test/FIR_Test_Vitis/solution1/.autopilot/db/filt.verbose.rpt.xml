@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'filt'" level="0">
-<item name = "Date">Mon Apr  1 14:56:42 2024
+<item name = "Date">Mon Apr  1 16:12:01 2024
 </item>
 <item name = "Version">2023.2 (Build 4023990 on Oct 11 2023)</item>
 <item name = "Project">FIR_Test_Vitis</item>
@@ -50,12 +50,12 @@
 <column name="DSP">-, -, -, -, -</column>
 <column name="Expression">-, -, 0, 2, -</column>
 <column name="FIFO">-, -, -, -, -</column>
-<column name="Instance">4, 33, 4015, 2020, -</column>
+<column name="Instance">4, 11, 1702, 1215, -</column>
 <column name="Memory">-, -, -, -, -</column>
 <column name="Multiplexer">-, -, -, 140, -</column>
-<column name="Register">-, -, 440, -, -</column>
+<column name="Register">-, -, 264, -, -</column>
 <specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
-<specialColumn name="Utilization (%)">1, 15, 4, 4, 0</specialColumn>
+<specialColumn name="Utilization (%)">1, 5, 1, 2, 0</specialColumn>
 </table>
 </item>
 <item name = "Detail">
@@ -63,7 +63,7 @@
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
 <column name="control_s_axi_U">control_s_axi, 0, 0, 100, 168, 0</column>
-<column name="grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134">filt_Pipeline_VITIS_LOOP_18_1, 0, 33, 3085, 1118, 0</column>
+<column name="grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134">filt_Pipeline_VITIS_LOOP_18_1, 0, 11, 772, 313, 0</column>
 <column name="gmem_m_axi_U">gmem_m_axi, 4, 0, 830, 734, 0</column>
 </table>
 </item>
@@ -95,19 +95,19 @@
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
 <column name="ap_CS_fsm">23, 0, 23, 0</column>
-<column name="gmem_addr_read_10_reg_273">32, 0, 32, 0</column>
-<column name="gmem_addr_read_1_reg_228">32, 0, 32, 0</column>
-<column name="gmem_addr_read_2_reg_233">32, 0, 32, 0</column>
-<column name="gmem_addr_read_3_reg_238">32, 0, 32, 0</column>
-<column name="gmem_addr_read_4_reg_243">32, 0, 32, 0</column>
-<column name="gmem_addr_read_5_reg_248">32, 0, 32, 0</column>
-<column name="gmem_addr_read_6_reg_253">32, 0, 32, 0</column>
-<column name="gmem_addr_read_7_reg_258">32, 0, 32, 0</column>
-<column name="gmem_addr_read_8_reg_263">32, 0, 32, 0</column>
-<column name="gmem_addr_read_9_reg_268">32, 0, 32, 0</column>
-<column name="gmem_addr_read_reg_223">32, 0, 32, 0</column>
-<column name="gmem_addr_reg_217">64, 0, 64, 0</column>
+<column name="gmem_addr_reg_261">64, 0, 64, 0</column>
 <column name="grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_ap_start_reg">1, 0, 1, 0</column>
+<column name="trunc_ln34_10_reg_277">16, 0, 16, 0</column>
+<column name="trunc_ln34_1_reg_282">16, 0, 16, 0</column>
+<column name="trunc_ln34_2_reg_272">16, 0, 16, 0</column>
+<column name="trunc_ln34_3_reg_317">16, 0, 16, 0</column>
+<column name="trunc_ln34_4_reg_287">16, 0, 16, 0</column>
+<column name="trunc_ln34_5_reg_302">16, 0, 16, 0</column>
+<column name="trunc_ln34_6_reg_297">16, 0, 16, 0</column>
+<column name="trunc_ln34_7_reg_292">16, 0, 16, 0</column>
+<column name="trunc_ln34_8_reg_312">16, 0, 16, 0</column>
+<column name="trunc_ln34_9_reg_307">16, 0, 16, 0</column>
+<column name="trunc_ln34_reg_267">16, 0, 16, 0</column>
 </table>
 </item>
 </section>
@@ -181,21 +181,21 @@
 <column name="m_axi_gmem_BRESP">in, 2, m_axi, gmem, pointer</column>
 <column name="m_axi_gmem_BID">in, 1, m_axi, gmem, pointer</column>
 <column name="m_axi_gmem_BUSER">in, 1, m_axi, gmem, pointer</column>
-<column name="y_TDATA">out, 32, axis, y_V_data_V, pointer</column>
+<column name="y_TDATA">out, 16, axis, y_V_data_V, pointer</column>
 <column name="y_TVALID">out, 1, axis, y_V_dest_V, pointer</column>
 <column name="y_TREADY">in, 1, axis, y_V_dest_V, pointer</column>
 <column name="y_TDEST">out, 1, axis, y_V_dest_V, pointer</column>
-<column name="y_TKEEP">out, 4, axis, y_V_keep_V, pointer</column>
-<column name="y_TSTRB">out, 4, axis, y_V_strb_V, pointer</column>
+<column name="y_TKEEP">out, 2, axis, y_V_keep_V, pointer</column>
+<column name="y_TSTRB">out, 2, axis, y_V_strb_V, pointer</column>
 <column name="y_TUSER">out, 1, axis, y_V_user_V, pointer</column>
 <column name="y_TLAST">out, 1, axis, y_V_last_V, pointer</column>
 <column name="y_TID">out, 1, axis, y_V_id_V, pointer</column>
-<column name="x_TDATA">in, 32, axis, x_V_data_V, pointer</column>
+<column name="x_TDATA">in, 16, axis, x_V_data_V, pointer</column>
 <column name="x_TVALID">in, 1, axis, x_V_dest_V, pointer</column>
 <column name="x_TREADY">out, 1, axis, x_V_dest_V, pointer</column>
 <column name="x_TDEST">in, 1, axis, x_V_dest_V, pointer</column>
-<column name="x_TKEEP">in, 4, axis, x_V_keep_V, pointer</column>
-<column name="x_TSTRB">in, 4, axis, x_V_strb_V, pointer</column>
+<column name="x_TKEEP">in, 2, axis, x_V_keep_V, pointer</column>
+<column name="x_TSTRB">in, 2, axis, x_V_strb_V, pointer</column>
 <column name="x_TUSER">in, 1, axis, x_V_user_V, pointer</column>
 <column name="x_TLAST">in, 1, axis, x_V_last_V, pointer</column>
 <column name="x_TID">in, 1, axis, x_V_id_V, pointer</column>

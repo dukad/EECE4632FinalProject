@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Apr  1 15:53:26 2024" VIVADOVERSION="2023.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Apr  1 16:22:31 2024" VIVADOVERSION="2023.2">
 
   <SYSTEMINFO ARCH="zynq" BOARD="tul.com.tw:pynq-z2:part0:1.0" DEVICE="7z020" NAME="FIR_Test" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -1642,7 +1642,7 @@
         <PARAMETER NAME="C_MICRO_DMA" VALUE="0"/>
         <PARAMETER NAME="C_MM2S_BURST_SIZE" VALUE="16"/>
         <PARAMETER NAME="C_M_AXIS_MM2S_CNTRL_TDATA_WIDTH" VALUE="32"/>
-        <PARAMETER NAME="C_M_AXIS_MM2S_TDATA_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="C_M_AXIS_MM2S_TDATA_WIDTH" VALUE="16"/>
         <PARAMETER NAME="C_M_AXI_MM2S_ADDR_WIDTH" VALUE="32"/>
         <PARAMETER NAME="C_M_AXI_MM2S_DATA_WIDTH" VALUE="32"/>
         <PARAMETER NAME="C_M_AXI_S2MM_ADDR_WIDTH" VALUE="32"/>
@@ -1657,7 +1657,7 @@
         <PARAMETER NAME="C_SG_LENGTH_WIDTH" VALUE="14"/>
         <PARAMETER NAME="C_SG_USE_STSAPP_LENGTH" VALUE="0"/>
         <PARAMETER NAME="C_S_AXIS_S2MM_STS_TDATA_WIDTH" VALUE="32"/>
-        <PARAMETER NAME="C_S_AXIS_S2MM_TDATA_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="C_S_AXIS_S2MM_TDATA_WIDTH" VALUE="16"/>
         <PARAMETER NAME="C_S_AXI_LITE_ADDR_WIDTH" VALUE="10"/>
         <PARAMETER NAME="C_S_AXI_LITE_DATA_WIDTH" VALUE="32"/>
         <PARAMETER NAME="Component_Name" VALUE="FIR_Test_axi_dma_0_0"/>
@@ -1674,14 +1674,14 @@
         <PARAMETER NAME="c_increase_throughput" VALUE="0"/>
         <PARAMETER NAME="c_m_axi_mm2s_data_width" VALUE="32"/>
         <PARAMETER NAME="c_m_axi_s2mm_data_width" VALUE="32"/>
-        <PARAMETER NAME="c_m_axis_mm2s_tdata_width" VALUE="32"/>
+        <PARAMETER NAME="c_m_axis_mm2s_tdata_width" VALUE="16"/>
         <PARAMETER NAME="c_micro_dma" VALUE="0"/>
         <PARAMETER NAME="c_mm2s_burst_size" VALUE="16"/>
         <PARAMETER NAME="c_num_mm2s_channels" VALUE="1"/>
         <PARAMETER NAME="c_num_s2mm_channels" VALUE="1"/>
         <PARAMETER NAME="c_prmry_is_aclk_async" VALUE="0"/>
         <PARAMETER NAME="c_s2mm_burst_size" VALUE="16"/>
-        <PARAMETER NAME="c_s_axis_s2mm_tdata_width" VALUE="32"/>
+        <PARAMETER NAME="c_s_axis_s2mm_tdata_width" VALUE="16"/>
         <PARAMETER NAME="c_sg_include_stscntrl_strm" VALUE="0"/>
         <PARAMETER NAME="c_sg_length_width" VALUE="14"/>
         <PARAMETER NAME="c_sg_use_stsapp_length" VALUE="0"/>
@@ -1851,12 +1851,12 @@
             <CONNECTION INSTANCE="axi_mem_intercon" PORT="S01_AXI_wvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="m_axis_mm2s_tdata" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_dma_0_m_axis_mm2s_tdata">
+        <PORT DIR="O" LEFT="15" NAME="m_axis_mm2s_tdata" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_dma_0_m_axis_mm2s_tdata">
           <CONNECTIONS>
             <CONNECTION INSTANCE="FIR_filt_0" PORT="x_TDATA"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="3" NAME="m_axis_mm2s_tkeep" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_dma_0_m_axis_mm2s_tkeep">
+        <PORT DIR="O" LEFT="1" NAME="m_axis_mm2s_tkeep" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_dma_0_m_axis_mm2s_tkeep">
           <CONNECTIONS>
             <CONNECTION INSTANCE="FIR_filt_0" PORT="x_TKEEP"/>
           </CONNECTIONS>
@@ -1965,12 +1965,12 @@
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M00_AXI_wvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="s_axis_s2mm_tdata" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_dma_0_s_axis_s2mm_tdata">
+        <PORT DIR="I" LEFT="15" NAME="s_axis_s2mm_tdata" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_dma_0_s_axis_s2mm_tdata">
           <CONNECTIONS>
             <CONNECTION INSTANCE="FIR_filt_0" PORT="y_TDATA"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="3" NAME="s_axis_s2mm_tkeep" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_dma_0_s_axis_s2mm_tkeep">
+        <PORT DIR="I" LEFT="1" NAME="s_axis_s2mm_tkeep" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_dma_0_s_axis_s2mm_tkeep">
           <CONNECTIONS>
             <CONNECTION INSTANCE="FIR_filt_0" PORT="y_TKEEP"/>
           </CONNECTIONS>
@@ -2153,7 +2153,7 @@
           <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
           <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
           <PARAMETER NAME="PHASE" VALUE="0.0"/>
-          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="4"/>
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="2"/>
           <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
           <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
           <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
@@ -2175,7 +2175,7 @@
           <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
           <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
           <PARAMETER NAME="PHASE" VALUE="0.0"/>
-          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="4"/>
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="2"/>
           <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
           <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
           <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
@@ -2399,7 +2399,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="2113495438" FULLNAME="/FIR/filt_0" HWVERSION="1.0" INSTANCE="FIR_filt_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="filt" VLNV="xilinx.com:hls:filt:1.0">
+    <MODULE COREREVISION="2113495512" FULLNAME="/FIR/filt_0" HWVERSION="1.0" INSTANCE="FIR_filt_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="filt" VLNV="xilinx.com:hls:filt:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="C_M_AXI_GMEM_ADDR_WIDTH" VALUE="64"/>
@@ -2417,7 +2417,7 @@
         <PARAMETER NAME="C_S_AXI_CONTROL_DATA_WIDTH" VALUE="32"/>
         <PARAMETER NAME="C_M_AXI_GMEM_ENABLE_ID_PORTS" VALUE="true"/>
         <PARAMETER NAME="C_M_AXI_GMEM_ENABLE_USER_PORTS" VALUE="false"/>
-        <PARAMETER NAME="Component_Name" VALUE="FIR_Test_filt_0_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="FIR_Test_filt_0_1"/>
         <PARAMETER NAME="II" VALUE="x"/>
         <PARAMETER NAME="clk_period" VALUE="10"/>
         <PARAMETER NAME="combinational" VALUE="0"/>
@@ -2628,12 +2628,12 @@
         <PORT DIR="O" NAME="s_axi_control_WREADY" SIGIS="undef"/>
         <PORT DIR="I" LEFT="3" NAME="s_axi_control_WSTRB" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="I" NAME="s_axi_control_WVALID" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="31" NAME="x_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_dma_0_m_axis_mm2s_tdata">
+        <PORT DIR="I" LEFT="15" NAME="x_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_dma_0_m_axis_mm2s_tdata">
           <CONNECTIONS>
             <CONNECTION INSTANCE="FIR_axi_dma_0" PORT="m_axis_mm2s_tdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="3" NAME="x_TKEEP" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_dma_0_m_axis_mm2s_tkeep">
+        <PORT DIR="I" LEFT="1" NAME="x_TKEEP" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_dma_0_m_axis_mm2s_tkeep">
           <CONNECTIONS>
             <CONNECTION INSTANCE="FIR_axi_dma_0" PORT="m_axis_mm2s_tkeep"/>
           </CONNECTIONS>
@@ -2653,12 +2653,12 @@
             <CONNECTION INSTANCE="FIR_axi_dma_0" PORT="m_axis_mm2s_tvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="y_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_dma_0_s_axis_s2mm_tdata">
+        <PORT DIR="O" LEFT="15" NAME="y_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_dma_0_s_axis_s2mm_tdata">
           <CONNECTIONS>
             <CONNECTION INSTANCE="FIR_axi_dma_0" PORT="s_axis_s2mm_tdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="3" NAME="y_TKEEP" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_dma_0_s_axis_s2mm_tkeep">
+        <PORT DIR="O" LEFT="1" NAME="y_TKEEP" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_dma_0_s_axis_s2mm_tkeep">
           <CONNECTIONS>
             <CONNECTION INSTANCE="FIR_axi_dma_0" PORT="s_axis_s2mm_tkeep"/>
           </CONNECTIONS>
@@ -2814,7 +2814,7 @@
           <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
           <PARAMETER NAME="LAYERED_METADATA"/>
           <PARAMETER NAME="PHASE" VALUE="0.0"/>
-          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="4"/>
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="2"/>
           <PARAMETER NAME="TDEST_WIDTH" VALUE="1"/>
           <PARAMETER NAME="TID_WIDTH" VALUE="1"/>
           <PARAMETER NAME="TUSER_WIDTH" VALUE="1"/>
@@ -2836,7 +2836,7 @@
           <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
           <PARAMETER NAME="LAYERED_METADATA"/>
           <PARAMETER NAME="PHASE" VALUE="0.0"/>
-          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="4"/>
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="2"/>
           <PARAMETER NAME="TDEST_WIDTH" VALUE="1"/>
           <PARAMETER NAME="TID_WIDTH" VALUE="1"/>
           <PARAMETER NAME="TUSER_WIDTH" VALUE="1"/>
@@ -4679,11 +4679,11 @@
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="S00_ACLK"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M00_ACLK"/>
             <CONNECTION INSTANCE="axi_mem_intercon" PORT="S01_ACLK"/>
-            <CONNECTION INSTANCE="FIR_filt_0" PORT="ap_clk"/>
             <CONNECTION INSTANCE="FIR_axi_dma_0" PORT="m_axi_mm2s_aclk"/>
             <CONNECTION INSTANCE="FIR_axi_dma_0" PORT="s_axi_lite_aclk"/>
             <CONNECTION INSTANCE="FIR_axi_dma_0" PORT="m_axi_s2mm_aclk"/>
             <CONNECTION INSTANCE="FIR_axi_bram_ctrl_0" PORT="s_axi_aclk"/>
+            <CONNECTION INSTANCE="FIR_filt_0" PORT="ap_clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="FCLK_RESET0_N" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="processing_system7_0_FCLK_RESET0_N">
@@ -6040,9 +6040,9 @@
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M00_ARESETN"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="ARESETN"/>
             <CONNECTION INSTANCE="axi_mem_intercon" PORT="S01_ARESETN"/>
-            <CONNECTION INSTANCE="FIR_filt_0" PORT="ap_rst_n"/>
             <CONNECTION INSTANCE="FIR_axi_dma_0" PORT="axi_resetn"/>
             <CONNECTION INSTANCE="FIR_axi_bram_ctrl_0" PORT="s_axi_aresetn"/>
+            <CONNECTION INSTANCE="FIR_filt_0" PORT="ap_rst_n"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="0" NAME="peripheral_reset" POLARITY="ACTIVE_HIGH" RIGHT="0" SIGIS="rst"/>

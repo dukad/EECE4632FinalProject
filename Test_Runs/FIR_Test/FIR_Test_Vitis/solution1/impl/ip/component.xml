@@ -707,7 +707,7 @@
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>TDATA_NUM_BYTES</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.Y.TDATA_NUM_BYTES">4</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.Y.TDATA_NUM_BYTES">2</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>TDEST_WIDTH</spirit:name>
@@ -809,7 +809,7 @@
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>TDATA_NUM_BYTES</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.X.TDATA_NUM_BYTES">4</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.X.TDATA_NUM_BYTES">2</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>TDEST_WIDTH</spirit:name>
@@ -930,7 +930,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>f15087ee</spirit:value>
+            <spirit:value>69dc0933</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -946,7 +946,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>6c2bac89</spirit:value>
+            <spirit:value>654c1384</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -962,7 +962,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>874a5f41</spirit:value>
+            <spirit:value>f77802ad</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -978,7 +978,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>e68d89ea</spirit:value>
+            <spirit:value>04d67ca9</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2147,7 +2147,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:left spirit:format="long">15</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -2181,7 +2181,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long">3</spirit:left>
+            <spirit:left spirit:format="long">1</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -2198,7 +2198,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long">3</spirit:left>
+            <spirit:left spirit:format="long">1</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -2292,7 +2292,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:left spirit:format="long">15</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -2329,7 +2329,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long">3</spirit:left>
+            <spirit:left spirit:format="long">1</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -2340,7 +2340,7 @@
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
-            <spirit:defaultValue spirit:format="long">15</spirit:defaultValue>
+            <spirit:defaultValue spirit:format="long">3</spirit:defaultValue>
           </spirit:driver>
         </spirit:wire>
       </spirit:port>
@@ -2349,7 +2349,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long">3</spirit:left>
+            <spirit:left spirit:format="long">1</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -2360,7 +2360,7 @@
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
-            <spirit:defaultValue spirit:format="long">15</spirit:defaultValue>
+            <spirit:defaultValue spirit:format="long">3</spirit:defaultValue>
           </spirit:driver>
         </spirit:wire>
       </spirit:port>
@@ -2577,7 +2577,11 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/filt_mul_32s_32s_32_2_1.v</spirit:name>
+        <spirit:name>hdl/verilog/filt_mac_muladd_16s_16s_16ns_16_4_1.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/filt_mul_16s_16s_16_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -2627,7 +2631,12 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/filt_mul_32s_32s_32_2_1.v</spirit:name>
+        <spirit:name>hdl/verilog/filt_mac_muladd_16s_16s_16ns_16_4_1.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/filt_mul_16s_16s_16_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -2666,7 +2675,11 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/filt_mul_32s_32s_32_2_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/filt_mac_muladd_16s_16s_16ns_16_4_1.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/vhdl/filt_mul_16s_16s_16_1_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -2676,7 +2689,7 @@
       <spirit:file>
         <spirit:name>hdl/vhdl/filt.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_452e9cfe</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_ad1ddfaf</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -2702,7 +2715,12 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/filt_mul_32s_32s_32_2_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/filt_mac_muladd_16s_16s_16ns_16_4_1.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/vhdl/filt_mul_16s_16s_16_1_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -2938,8 +2956,8 @@
       </xilinx:taxonomies>
       <xilinx:displayName>Filt</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>2113495438</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2024-04-01T18:58:56Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>2113495512</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2024-04-01T20:13:23Z</xilinx:coreCreationDateTime>
       <xilinx:sdxKernelAttributes>
         <xilinx:sdx_kernel>true</xilinx:sdx_kernel>
         <xilinx:sdx_kernel_type>hls</xilinx:sdx_kernel_type>
@@ -2947,11 +2965,11 @@
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2023.2</xilinx:xilinxVersion>
-      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="f2a39daa"/>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="9167c900"/>
       <xilinx:checksum xilinx:scope="addressSpaces" xilinx:value="2c1df7e3"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="48908a10"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="975467cc"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="170bff8b"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="45ff66eb"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="fc6c5b31"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="11da1394"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="ec09d020"/>
     </xilinx:packagingInfo>

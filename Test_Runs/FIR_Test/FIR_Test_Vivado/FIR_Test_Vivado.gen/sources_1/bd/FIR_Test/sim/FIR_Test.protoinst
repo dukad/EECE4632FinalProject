@@ -114,8 +114,8 @@
 					"ports": {
 						"ACLK": { "actual": "m_axi_mm2s_aclk"},
 						"ARESETN": { "actual": "mm2s_prmry_reset_out_n"},
-						"TDATA": { "actual": "m_axis_mm2s_tdata[31:0]"},
-						"TKEEP": { "actual": "m_axis_mm2s_tkeep[3:0]"},
+						"TDATA": { "actual": "m_axis_mm2s_tdata[15:0]"},
+						"TKEEP": { "actual": "m_axis_mm2s_tkeep[1:0]"},
 						"TLAST": { "actual": "m_axis_mm2s_tlast"},
 						"TREADY": { "actual": "m_axis_mm2s_tready"},
 						"TVALID": { "actual": "m_axis_mm2s_tvalid"}
@@ -169,8 +169,8 @@
 					"ports": {
 						"ACLK": { "actual": "m_axi_s2mm_aclk"},
 						"ARESETN": { "actual": "s2mm_prmry_reset_out_n"},
-						"TDATA": { "actual": "s_axis_s2mm_tdata[31:0]"},
-						"TKEEP": { "actual": "s_axis_s2mm_tkeep[3:0]"},
+						"TDATA": { "actual": "s_axis_s2mm_tdata[15:0]"},
+						"TKEEP": { "actual": "s_axis_s2mm_tkeep[1:0]"},
 						"TLAST": { "actual": "s_axis_s2mm_tlast"},
 						"TREADY": { "actual": "s_axis_s2mm_tready"},
 						"TVALID": { "actual": "s_axis_s2mm_tvalid"}
@@ -251,13 +251,13 @@
 					"ports": {
 						"ACLK": { "actual": "ap_clk"},
 						"ARESETN": { "actual": "ap_rst_n"},
-						"TDATA": { "actual": "x_TDATA[31:0]"},
+						"TDATA": { "actual": "x_TDATA[15:0]"},
 						"TDEST": { "actual": "x_TDEST[0:0]"},
 						"TID": { "actual": "x_TID[0:0]"},
-						"TKEEP": { "actual": "x_TKEEP[3:0]"},
+						"TKEEP": { "actual": "x_TKEEP[1:0]"},
 						"TLAST": { "actual": "x_TLAST[0:0]"},
 						"TREADY": { "actual": "x_TREADY"},
-						"TSTRB": { "actual": "x_TSTRB[3:0]"},
+						"TSTRB": { "actual": "x_TSTRB[1:0]"},
 						"TUSER": { "actual": "x_TUSER[0:0]"},
 						"TVALID": { "actual": "x_TVALID"}
 					}
@@ -267,13 +267,13 @@
 					"ports": {
 						"ACLK": { "actual": "ap_clk"},
 						"ARESETN": { "actual": "ap_rst_n"},
-						"TDATA": { "actual": "y_TDATA[31:0]"},
+						"TDATA": { "actual": "y_TDATA[15:0]"},
 						"TDEST": { "actual": "y_TDEST[0:0]"},
 						"TID": { "actual": "y_TID[0:0]"},
-						"TKEEP": { "actual": "y_TKEEP[3:0]"},
+						"TKEEP": { "actual": "y_TKEEP[1:0]"},
 						"TLAST": { "actual": "y_TLAST[0:0]"},
 						"TREADY": { "actual": "y_TREADY"},
-						"TSTRB": { "actual": "y_TSTRB[3:0]"},
+						"TSTRB": { "actual": "y_TSTRB[1:0]"},
 						"TUSER": { "actual": "y_TUSER[0:0]"},
 						"TVALID": { "actual": "y_TVALID"}
 					}

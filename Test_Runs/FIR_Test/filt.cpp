@@ -1,7 +1,7 @@
 #include <hls_stream.h>
 #include <ap_axi_sdata.h>
 
-typedef ap_axis<32,1,1,1> AXI_VAL;
+typedef ap_axis<16,1,1,1> AXI_VAL;
 typedef int data_t;
 typedef int	coef_t;
 typedef int	acc_t;

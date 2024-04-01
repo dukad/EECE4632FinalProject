@@ -9742,7 +9742,7 @@ private:
 }
 # 3 "filt.cpp" 2
 
-typedef ap_axis<32,1,1,1> AXI_VAL;
+typedef ap_axis<16,1,1,1> AXI_VAL;
 typedef int data_t;
 typedef int coef_t;
 typedef int acc_t;
@@ -9750,7 +9750,7 @@ typedef int acc_t;
 
 
 __attribute__((sdx_kernel("filt", 0))) void filt (hls::stream<AXI_VAL>& y, coef_t c[11], hls::stream<AXI_VAL>& x) {
-#line 14 "C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vitis/solution1/csynth.tcl"
+#line 15 "C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vitis/solution1/csynth.tcl"
 #pragma HLSDIRECTIVE TOP name=filt
 # 11 "filt.cpp"
 

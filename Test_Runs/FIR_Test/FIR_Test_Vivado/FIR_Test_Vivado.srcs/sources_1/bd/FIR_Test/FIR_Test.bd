@@ -28,9 +28,9 @@
       },
       "FIR": {
         "axi_bram_ctrl_0": "",
-        "filt_0": "",
         "blk_mem_gen_0": "",
-        "axi_dma_0": ""
+        "axi_dma_0": "",
+        "filt_0": ""
       }
     },
     "interface_ports": {
@@ -2602,33 +2602,6 @@
               }
             }
           },
-          "filt_0": {
-            "vlnv": "xilinx.com:hls:filt:1.0",
-            "ip_revision": "2113495438",
-            "xci_name": "FIR_Test_filt_0_0",
-            "xci_path": "ip\\FIR_Test_filt_0_0\\FIR_Test_filt_0_0.xci",
-            "inst_hier_path": "FIR/filt_0",
-            "interface_ports": {
-              "m_axi_gmem": {
-                "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
-                "mode": "Master",
-                "address_space_ref": "Data_m_axi_gmem",
-                "base_address": {
-                  "minimum": "0x00000000",
-                  "maximum": "0xFFFFFFFFFFFFFFFF",
-                  "width": "64"
-                }
-              }
-            },
-            "addressing": {
-              "address_spaces": {
-                "Data_m_axi_gmem": {
-                  "range": "16E",
-                  "width": "64"
-                }
-              }
-            }
-          },
           "blk_mem_gen_0": {
             "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
             "ip_revision": "7",
@@ -2656,6 +2629,9 @@
             "parameters": {
               "c_include_sg": {
                 "value": "0"
+              },
+              "c_m_axis_mm2s_tdata_width": {
+                "value": "16"
               }
             },
             "interface_ports": {
@@ -2689,6 +2665,33 @@
                 "Data_S2MM": {
                   "range": "4G",
                   "width": "32"
+                }
+              }
+            }
+          },
+          "filt_0": {
+            "vlnv": "xilinx.com:hls:filt:1.0",
+            "ip_revision": "2113495512",
+            "xci_name": "FIR_Test_filt_0_1",
+            "xci_path": "ip\\FIR_Test_filt_0_1\\FIR_Test_filt_0_1.xci",
+            "inst_hier_path": "FIR/filt_0",
+            "interface_ports": {
+              "m_axi_gmem": {
+                "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+                "mode": "Master",
+                "address_space_ref": "Data_m_axi_gmem",
+                "base_address": {
+                  "minimum": "0x00000000",
+                  "maximum": "0xFFFFFFFFFFFFFFFF",
+                  "width": "64"
+                }
+              }
+            },
+            "addressing": {
+              "address_spaces": {
+                "Data_m_axi_gmem": {
+                  "range": "16E",
+                  "width": "64"
                 }
               }
             }
@@ -2742,19 +2745,19 @@
           "processing_system7_0_FCLK_CLK0": {
             "ports": [
               "ap_clk",
-              "filt_0/ap_clk",
               "axi_dma_0/m_axi_mm2s_aclk",
               "axi_dma_0/s_axi_lite_aclk",
               "axi_dma_0/m_axi_s2mm_aclk",
-              "axi_bram_ctrl_0/s_axi_aclk"
+              "axi_bram_ctrl_0/s_axi_aclk",
+              "filt_0/ap_clk"
             ]
           },
           "rst_ps7_0_100M_peripheral_aresetn": {
             "ports": [
               "ap_rst_n",
-              "filt_0/ap_rst_n",
               "axi_dma_0/axi_resetn",
-              "axi_bram_ctrl_0/s_axi_aresetn"
+              "axi_bram_ctrl_0/s_axi_aresetn",
+              "filt_0/ap_rst_n"
             ]
           }
         }
@@ -2855,19 +2858,6 @@
           }
         }
       },
-      "/FIR/filt_0": {
-        "address_spaces": {
-          "Data_m_axi_gmem": {
-            "segments": {
-              "SEG_axi_bram_ctrl_0_Mem0": {
-                "address_block": "/FIR/axi_bram_ctrl_0/S_AXI/Mem0",
-                "offset": "0x00000000C0000000",
-                "range": "8K"
-              }
-            }
-          }
-        }
-      },
       "/FIR/axi_dma_0": {
         "address_spaces": {
           "Data_MM2S": {
@@ -2919,6 +2909,19 @@
                 "address_block": "/processing_system7_0/S_AXI_GP0/GP0_QSPI_LINEAR",
                 "offset": "0xFC000000",
                 "range": "16M"
+              }
+            }
+          }
+        }
+      },
+      "/FIR/filt_0": {
+        "address_spaces": {
+          "Data_m_axi_gmem": {
+            "segments": {
+              "SEG_axi_bram_ctrl_0_Mem0": {
+                "address_block": "/FIR/axi_bram_ctrl_0/S_AXI/Mem0",
+                "offset": "0x00000000C0000000",
+                "range": "8K"
               }
             }
           }
