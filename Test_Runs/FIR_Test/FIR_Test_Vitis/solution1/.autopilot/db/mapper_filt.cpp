@@ -275,10 +275,10 @@ extern "C" void apatb_filt_hw(volatile void * __xlx_apatb_param_y_V_data_V, vola
 using hls::sim::createStream;
   // Collect __xlx_c__tmp_vec
 std::vector<Byte<2>> __xlx_c__tmp_vec;
-for (size_t i = 0; i < 11; ++i){
+for (size_t i = 0; i < 33; ++i){
 __xlx_c__tmp_vec.push_back(((Byte<2>*)__xlx_apatb_param_c)[i]);
 }
-  int __xlx_size_param_c = 11;
+  int __xlx_size_param_c = 33;
   int __xlx_offset_param_c = 0;
   int __xlx_offset_byte_param_c = 0*2;
   //Create input buffer for y_V_data_V

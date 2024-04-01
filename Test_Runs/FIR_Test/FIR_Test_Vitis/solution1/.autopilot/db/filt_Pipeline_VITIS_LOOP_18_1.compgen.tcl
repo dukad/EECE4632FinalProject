@@ -6,7 +6,7 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 }
 
 
-set id 5
+set id 17
 set name filt_mac_muladd_16s_16s_16ns_16_4_1
 set corename simcore_mac
 set op mac
@@ -76,7 +76,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 14 \
+    id 36 \
     name x_V_data_V \
     reset_level 1 \
     sync_rst true \
@@ -95,7 +95,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 15 \
+    id 37 \
     name x_V_keep_V \
     reset_level 1 \
     sync_rst true \
@@ -114,7 +114,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 16 \
+    id 38 \
     name x_V_strb_V \
     reset_level 1 \
     sync_rst true \
@@ -133,7 +133,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 17 \
+    id 39 \
     name x_V_user_V \
     reset_level 1 \
     sync_rst true \
@@ -152,7 +152,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 18 \
+    id 40 \
     name x_V_last_V \
     reset_level 1 \
     sync_rst true \
@@ -171,7 +171,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 19 \
+    id 41 \
     name x_V_id_V \
     reset_level 1 \
     sync_rst true \
@@ -190,7 +190,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 20 \
+    id 42 \
     name x_V_dest_V \
     reset_level 1 \
     sync_rst true \
@@ -209,7 +209,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 32 \
+    id 76 \
     name y_V_data_V \
     reset_level 1 \
     sync_rst true \
@@ -228,7 +228,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 33 \
+    id 77 \
     name y_V_keep_V \
     reset_level 1 \
     sync_rst true \
@@ -247,7 +247,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 34 \
+    id 78 \
     name y_V_strb_V \
     reset_level 1 \
     sync_rst true \
@@ -266,7 +266,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 35 \
+    id 79 \
     name y_V_user_V \
     reset_level 1 \
     sync_rst true \
@@ -285,7 +285,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 36 \
+    id 80 \
     name y_V_last_V \
     reset_level 1 \
     sync_rst true \
@@ -304,7 +304,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 37 \
+    id 81 \
     name y_V_id_V \
     reset_level 1 \
     sync_rst true \
@@ -323,7 +323,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 38 \
+    id 82 \
     name y_V_dest_V \
     reset_level 1 \
     sync_rst true \
@@ -341,22 +341,22 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 21 \
-    name gmem_addr_read_10 \
+    id 43 \
+    name gmem_addr_read_32 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_gmem_addr_read_10 \
+    corename dc_gmem_addr_read_32 \
     op interface \
-    ports { gmem_addr_read_10 { I 16 vector } } \
+    ports { gmem_addr_read_32 { I 16 vector } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 22 \
+    id 44 \
     name gmem_addr_read \
     type other \
     dir I \
@@ -371,7 +371,337 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 23 \
+    id 45 \
+    name gmem_addr_read_31 \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_gmem_addr_read_31 \
+    op interface \
+    ports { gmem_addr_read_31 { I 16 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 46 \
+    name gmem_addr_read_30 \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_gmem_addr_read_30 \
+    op interface \
+    ports { gmem_addr_read_30 { I 16 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 47 \
+    name gmem_addr_read_29 \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_gmem_addr_read_29 \
+    op interface \
+    ports { gmem_addr_read_29 { I 16 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 48 \
+    name gmem_addr_read_28 \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_gmem_addr_read_28 \
+    op interface \
+    ports { gmem_addr_read_28 { I 16 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 49 \
+    name gmem_addr_read_27 \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_gmem_addr_read_27 \
+    op interface \
+    ports { gmem_addr_read_27 { I 16 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 50 \
+    name gmem_addr_read_26 \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_gmem_addr_read_26 \
+    op interface \
+    ports { gmem_addr_read_26 { I 16 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 51 \
+    name gmem_addr_read_25 \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_gmem_addr_read_25 \
+    op interface \
+    ports { gmem_addr_read_25 { I 16 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 52 \
+    name gmem_addr_read_24 \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_gmem_addr_read_24 \
+    op interface \
+    ports { gmem_addr_read_24 { I 16 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 53 \
+    name gmem_addr_read_23 \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_gmem_addr_read_23 \
+    op interface \
+    ports { gmem_addr_read_23 { I 16 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 54 \
+    name gmem_addr_read_22 \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_gmem_addr_read_22 \
+    op interface \
+    ports { gmem_addr_read_22 { I 16 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 55 \
+    name gmem_addr_read_21 \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_gmem_addr_read_21 \
+    op interface \
+    ports { gmem_addr_read_21 { I 16 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 56 \
+    name gmem_addr_read_20 \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_gmem_addr_read_20 \
+    op interface \
+    ports { gmem_addr_read_20 { I 16 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 57 \
+    name gmem_addr_read_19 \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_gmem_addr_read_19 \
+    op interface \
+    ports { gmem_addr_read_19 { I 16 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 58 \
+    name gmem_addr_read_18 \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_gmem_addr_read_18 \
+    op interface \
+    ports { gmem_addr_read_18 { I 16 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 59 \
+    name gmem_addr_read_17 \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_gmem_addr_read_17 \
+    op interface \
+    ports { gmem_addr_read_17 { I 16 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 60 \
+    name gmem_addr_read_16 \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_gmem_addr_read_16 \
+    op interface \
+    ports { gmem_addr_read_16 { I 16 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 61 \
+    name gmem_addr_read_15 \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_gmem_addr_read_15 \
+    op interface \
+    ports { gmem_addr_read_15 { I 16 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 62 \
+    name gmem_addr_read_14 \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_gmem_addr_read_14 \
+    op interface \
+    ports { gmem_addr_read_14 { I 16 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 63 \
+    name gmem_addr_read_13 \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_gmem_addr_read_13 \
+    op interface \
+    ports { gmem_addr_read_13 { I 16 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 64 \
+    name gmem_addr_read_12 \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_gmem_addr_read_12 \
+    op interface \
+    ports { gmem_addr_read_12 { I 16 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 65 \
+    name gmem_addr_read_11 \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_gmem_addr_read_11 \
+    op interface \
+    ports { gmem_addr_read_11 { I 16 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 66 \
+    name gmem_addr_read_10 \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_gmem_addr_read_10 \
+    op interface \
+    ports { gmem_addr_read_10 { I 16 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 67 \
     name gmem_addr_read_9 \
     type other \
     dir I \
@@ -386,7 +716,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 24 \
+    id 68 \
     name gmem_addr_read_8 \
     type other \
     dir I \
@@ -401,7 +731,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 25 \
+    id 69 \
     name gmem_addr_read_7 \
     type other \
     dir I \
@@ -416,7 +746,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 26 \
+    id 70 \
     name gmem_addr_read_6 \
     type other \
     dir I \
@@ -431,7 +761,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 27 \
+    id 71 \
     name gmem_addr_read_5 \
     type other \
     dir I \
@@ -446,7 +776,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 28 \
+    id 72 \
     name gmem_addr_read_4 \
     type other \
     dir I \
@@ -461,7 +791,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 29 \
+    id 73 \
     name gmem_addr_read_3 \
     type other \
     dir I \
@@ -476,7 +806,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 30 \
+    id 74 \
     name gmem_addr_read_2 \
     type other \
     dir I \
@@ -491,7 +821,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 31 \
+    id 75 \
     name gmem_addr_read_1 \
     type other \
     dir I \

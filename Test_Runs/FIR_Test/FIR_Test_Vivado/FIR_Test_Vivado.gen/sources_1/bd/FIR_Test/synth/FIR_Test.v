@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-//Date        : Mon Apr  1 16:57:16 2024
+//Date        : Mon Apr  1 18:48:19 2024
 //Host        : DESKTOP-G7JA666 running 64-bit major release  (build 9200)
 //Command     : generate_target FIR_Test.bd
 //Design      : FIR_Test
@@ -1740,7 +1740,7 @@ module FIR_imp_13DKXQW
         .douta(axi_bram_ctrl_0_BRAM_PORTA_DOUT),
         .ena(axi_bram_ctrl_0_BRAM_PORTA_EN),
         .rsta(axi_bram_ctrl_0_BRAM_PORTA_RST));
-  FIR_Test_filt_0_2 filt_0
+  FIR_Test_filt_0_4 filt_0
        (.ap_clk(processing_system7_0_FCLK_CLK0),
         .ap_rst_n(rst_ps7_0_100M_peripheral_aresetn),
         .m_axi_gmem_ARADDR(filt_0_m_axi_gmem_ARADDR),

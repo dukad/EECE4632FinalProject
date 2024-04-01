@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'filt'
 ================================================================
-* Date:           Mon Apr  1 16:53:17 2024
+* Date:           Mon Apr  1 18:35:05 2024
 
 * Version:        2023.2 (Build 4023990 on Oct 11 2023)
 * Project:        FIR_Test_Vitis
@@ -65,7 +65,7 @@ IsGatedGlobalClock: 0
 ============================================================
 + Verbose Summary: Schedule
 ============================================================
-* Number of FSM states : 23
+* Number of FSM states : 45
 * Pipeline : 0
 * Dataflow Pipeline: 0
 
@@ -92,106 +92,194 @@ IsGatedGlobalClock: 0
 20 --> 21 
 21 --> 22 
 22 --> 23 
-23 --> 
+23 --> 24 
+24 --> 25 
+25 --> 26 
+26 --> 27 
+27 --> 28 
+28 --> 29 
+29 --> 30 
+30 --> 31 
+31 --> 32 
+32 --> 33 
+33 --> 34 
+34 --> 35 
+35 --> 36 
+36 --> 37 
+37 --> 38 
+38 --> 39 
+39 --> 40 
+40 --> 41 
+41 --> 42 
+42 --> 43 
+43 --> 44 
+44 --> 45 
+45 --> 
 
 * FSM state operations: 
 
 State 1 <SV = 0> <Delay = 1.00>
-ST_1 : Operation 24 [1/1] (1.00ns)   --->   "%c_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %c" [filt.cpp:11]   --->   Operation 24 'read' 'c_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
-ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%p_cast = partselect i63 @_ssdm_op_PartSelect.i63.i64.i32.i32, i64 %c_read, i32 1, i32 63" [filt.cpp:11]   --->   Operation 25 'partselect' 'p_cast' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%p_cast_cast = sext i63 %p_cast" [filt.cpp:11]   --->   Operation 26 'sext' 'p_cast_cast' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%gmem_addr = getelementptr i16 %gmem, i64 %p_cast_cast" [filt.cpp:11]   --->   Operation 27 'getelementptr' 'gmem_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (1.00ns)   --->   "%c_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %c" [filt.cpp:11]   --->   Operation 46 'read' 'c_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%p_cast = partselect i63 @_ssdm_op_PartSelect.i63.i64.i32.i32, i64 %c_read, i32 1, i32 63" [filt.cpp:11]   --->   Operation 47 'partselect' 'p_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%p_cast_cast = sext i63 %p_cast" [filt.cpp:11]   --->   Operation 48 'sext' 'p_cast_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%gmem_addr = getelementptr i16 %gmem, i64 %p_cast_cast" [filt.cpp:11]   --->   Operation 49 'getelementptr' 'gmem_addr' <Predicate = true> <Delay = 0.00>
 
 State 2 <SV = 1> <Delay = 7.30>
-ST_2 : Operation 28 [8/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i16, i16 %gmem_addr, i32 11" [filt.cpp:11]   --->   Operation 28 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_2 : Operation 50 [8/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i16, i16 %gmem_addr, i32 33" [filt.cpp:11]   --->   Operation 50 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 3 <SV = 2> <Delay = 7.30>
-ST_3 : Operation 29 [7/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i16, i16 %gmem_addr, i32 11" [filt.cpp:11]   --->   Operation 29 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_3 : Operation 51 [7/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i16, i16 %gmem_addr, i32 33" [filt.cpp:11]   --->   Operation 51 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 4 <SV = 3> <Delay = 7.30>
-ST_4 : Operation 30 [6/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i16, i16 %gmem_addr, i32 11" [filt.cpp:11]   --->   Operation 30 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_4 : Operation 52 [6/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i16, i16 %gmem_addr, i32 33" [filt.cpp:11]   --->   Operation 52 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 5 <SV = 4> <Delay = 7.30>
-ST_5 : Operation 31 [5/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i16, i16 %gmem_addr, i32 11" [filt.cpp:11]   --->   Operation 31 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_5 : Operation 53 [5/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i16, i16 %gmem_addr, i32 33" [filt.cpp:11]   --->   Operation 53 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 6 <SV = 5> <Delay = 7.30>
-ST_6 : Operation 32 [4/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i16, i16 %gmem_addr, i32 11" [filt.cpp:11]   --->   Operation 32 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_6 : Operation 54 [4/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i16, i16 %gmem_addr, i32 33" [filt.cpp:11]   --->   Operation 54 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 7 <SV = 6> <Delay = 7.30>
-ST_7 : Operation 33 [3/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i16, i16 %gmem_addr, i32 11" [filt.cpp:11]   --->   Operation 33 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_7 : Operation 55 [3/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i16, i16 %gmem_addr, i32 33" [filt.cpp:11]   --->   Operation 55 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 8 <SV = 7> <Delay = 7.30>
-ST_8 : Operation 34 [2/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i16, i16 %gmem_addr, i32 11" [filt.cpp:11]   --->   Operation 34 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_8 : Operation 56 [2/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i16, i16 %gmem_addr, i32 33" [filt.cpp:11]   --->   Operation 56 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 9 <SV = 8> <Delay = 7.30>
-ST_9 : Operation 35 [1/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i16, i16 %gmem_addr, i32 11" [filt.cpp:11]   --->   Operation 35 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_9 : Operation 57 [1/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i16, i16 %gmem_addr, i32 33" [filt.cpp:11]   --->   Operation 57 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 10 <SV = 9> <Delay = 7.30>
-ST_10 : Operation 36 [1/1] (7.30ns)   --->   "%gmem_addr_read = read i16 @_ssdm_op_Read.m_axi.p1i16, i16 %gmem_addr" [filt.cpp:11]   --->   Operation 36 'read' 'gmem_addr_read' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_10 : Operation 58 [1/1] (7.30ns)   --->   "%gmem_addr_read = read i16 @_ssdm_op_Read.m_axi.p1i16, i16 %gmem_addr" [filt.cpp:11]   --->   Operation 58 'read' 'gmem_addr_read' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 11 <SV = 10> <Delay = 7.30>
-ST_11 : Operation 37 [1/1] (7.30ns)   --->   "%gmem_addr_read_1 = read i16 @_ssdm_op_Read.m_axi.p1i16, i16 %gmem_addr" [filt.cpp:11]   --->   Operation 37 'read' 'gmem_addr_read_1' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_11 : Operation 59 [1/1] (7.30ns)   --->   "%gmem_addr_read_1 = read i16 @_ssdm_op_Read.m_axi.p1i16, i16 %gmem_addr" [filt.cpp:11]   --->   Operation 59 'read' 'gmem_addr_read_1' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 12 <SV = 11> <Delay = 7.30>
-ST_12 : Operation 38 [1/1] (7.30ns)   --->   "%gmem_addr_read_2 = read i16 @_ssdm_op_Read.m_axi.p1i16, i16 %gmem_addr" [filt.cpp:11]   --->   Operation 38 'read' 'gmem_addr_read_2' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_12 : Operation 60 [1/1] (7.30ns)   --->   "%gmem_addr_read_2 = read i16 @_ssdm_op_Read.m_axi.p1i16, i16 %gmem_addr" [filt.cpp:11]   --->   Operation 60 'read' 'gmem_addr_read_2' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 13 <SV = 12> <Delay = 7.30>
-ST_13 : Operation 39 [1/1] (7.30ns)   --->   "%gmem_addr_read_3 = read i16 @_ssdm_op_Read.m_axi.p1i16, i16 %gmem_addr" [filt.cpp:11]   --->   Operation 39 'read' 'gmem_addr_read_3' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_13 : Operation 61 [1/1] (7.30ns)   --->   "%gmem_addr_read_3 = read i16 @_ssdm_op_Read.m_axi.p1i16, i16 %gmem_addr" [filt.cpp:11]   --->   Operation 61 'read' 'gmem_addr_read_3' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 14 <SV = 13> <Delay = 7.30>
-ST_14 : Operation 40 [1/1] (7.30ns)   --->   "%gmem_addr_read_4 = read i16 @_ssdm_op_Read.m_axi.p1i16, i16 %gmem_addr" [filt.cpp:11]   --->   Operation 40 'read' 'gmem_addr_read_4' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_14 : Operation 62 [1/1] (7.30ns)   --->   "%gmem_addr_read_4 = read i16 @_ssdm_op_Read.m_axi.p1i16, i16 %gmem_addr" [filt.cpp:11]   --->   Operation 62 'read' 'gmem_addr_read_4' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 15 <SV = 14> <Delay = 7.30>
-ST_15 : Operation 41 [1/1] (7.30ns)   --->   "%gmem_addr_read_5 = read i16 @_ssdm_op_Read.m_axi.p1i16, i16 %gmem_addr" [filt.cpp:11]   --->   Operation 41 'read' 'gmem_addr_read_5' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_15 : Operation 63 [1/1] (7.30ns)   --->   "%gmem_addr_read_5 = read i16 @_ssdm_op_Read.m_axi.p1i16, i16 %gmem_addr" [filt.cpp:11]   --->   Operation 63 'read' 'gmem_addr_read_5' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 16 <SV = 15> <Delay = 7.30>
-ST_16 : Operation 42 [1/1] (7.30ns)   --->   "%gmem_addr_read_6 = read i16 @_ssdm_op_Read.m_axi.p1i16, i16 %gmem_addr" [filt.cpp:11]   --->   Operation 42 'read' 'gmem_addr_read_6' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_16 : Operation 64 [1/1] (7.30ns)   --->   "%gmem_addr_read_6 = read i16 @_ssdm_op_Read.m_axi.p1i16, i16 %gmem_addr" [filt.cpp:11]   --->   Operation 64 'read' 'gmem_addr_read_6' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 17 <SV = 16> <Delay = 7.30>
-ST_17 : Operation 43 [1/1] (7.30ns)   --->   "%gmem_addr_read_7 = read i16 @_ssdm_op_Read.m_axi.p1i16, i16 %gmem_addr" [filt.cpp:11]   --->   Operation 43 'read' 'gmem_addr_read_7' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_17 : Operation 65 [1/1] (7.30ns)   --->   "%gmem_addr_read_7 = read i16 @_ssdm_op_Read.m_axi.p1i16, i16 %gmem_addr" [filt.cpp:11]   --->   Operation 65 'read' 'gmem_addr_read_7' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 18 <SV = 17> <Delay = 7.30>
-ST_18 : Operation 44 [1/1] (7.30ns)   --->   "%gmem_addr_read_8 = read i16 @_ssdm_op_Read.m_axi.p1i16, i16 %gmem_addr" [filt.cpp:11]   --->   Operation 44 'read' 'gmem_addr_read_8' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_18 : Operation 66 [1/1] (7.30ns)   --->   "%gmem_addr_read_8 = read i16 @_ssdm_op_Read.m_axi.p1i16, i16 %gmem_addr" [filt.cpp:11]   --->   Operation 66 'read' 'gmem_addr_read_8' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 19 <SV = 18> <Delay = 7.30>
-ST_19 : Operation 45 [1/1] (7.30ns)   --->   "%gmem_addr_read_9 = read i16 @_ssdm_op_Read.m_axi.p1i16, i16 %gmem_addr" [filt.cpp:11]   --->   Operation 45 'read' 'gmem_addr_read_9' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_19 : Operation 67 [1/1] (7.30ns)   --->   "%gmem_addr_read_9 = read i16 @_ssdm_op_Read.m_axi.p1i16, i16 %gmem_addr" [filt.cpp:11]   --->   Operation 67 'read' 'gmem_addr_read_9' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 20 <SV = 19> <Delay = 7.30>
-ST_20 : Operation 46 [1/1] (7.30ns)   --->   "%gmem_addr_read_10 = read i16 @_ssdm_op_Read.m_axi.p1i16, i16 %gmem_addr" [filt.cpp:11]   --->   Operation 46 'read' 'gmem_addr_read_10' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_20 : Operation 68 [1/1] (7.30ns)   --->   "%gmem_addr_read_10 = read i16 @_ssdm_op_Read.m_axi.p1i16, i16 %gmem_addr" [filt.cpp:11]   --->   Operation 68 'read' 'gmem_addr_read_10' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
-State 21 <SV = 20> <Delay = 5.58>
-ST_21 : Operation 47 [1/1] (0.00ns)   --->   "%empty_19 = wait i32 @_ssdm_op_Wait"   --->   Operation 47 'wait' 'empty_19' <Predicate = true> <Delay = 0.00>
-ST_21 : Operation 48 [2/2] (5.58ns)   --->   "%call_ln11 = call void @filt_Pipeline_VITIS_LOOP_18_1, i16 %x_V_data_V, i2 %x_V_keep_V, i2 %x_V_strb_V, i1 %x_V_user_V, i1 %x_V_last_V, i1 %x_V_id_V, i1 %x_V_dest_V, i16 %gmem_addr_read_10, i16 %gmem_addr_read, i16 %gmem_addr_read_9, i16 %gmem_addr_read_8, i16 %gmem_addr_read_7, i16 %gmem_addr_read_6, i16 %gmem_addr_read_5, i16 %gmem_addr_read_4, i16 %gmem_addr_read_3, i16 %gmem_addr_read_2, i16 %gmem_addr_read_1, i16 %y_V_data_V, i2 %y_V_keep_V, i2 %y_V_strb_V, i1 %y_V_user_V, i1 %y_V_last_V, i1 %y_V_id_V, i1 %y_V_dest_V, i16 %filt_stream_short_stream_axis_0_shift_reg, i16 %filt_stream_short_stream_axis_0_shift_reg_1, i16 %filt_stream_short_stream_axis_0_shift_reg_2, i16 %filt_stream_short_stream_axis_0_shift_reg_3, i16 %filt_stream_short_stream_axis_0_shift_reg_4, i16 %filt_stream_short_stream_axis_0_shift_reg_5, i16 %filt_stream_short_stream_axis_0_shift_reg_6, i16 %filt_stream_short_stream_axis_0_shift_reg_7, i16 %filt_stream_short_stream_axis_0_shift_reg_8, i16 %filt_stream_short_stream_axis_0_shift_reg_9" [filt.cpp:11]   --->   Operation 48 'call' 'call_ln11' <Predicate = true> <Delay = 5.58> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+State 21 <SV = 20> <Delay = 7.30>
+ST_21 : Operation 69 [1/1] (7.30ns)   --->   "%gmem_addr_read_11 = read i16 @_ssdm_op_Read.m_axi.p1i16, i16 %gmem_addr" [filt.cpp:11]   --->   Operation 69 'read' 'gmem_addr_read_11' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
-State 22 <SV = 21> <Delay = 4.90>
-ST_22 : Operation 49 [1/2] (4.90ns)   --->   "%call_ln11 = call void @filt_Pipeline_VITIS_LOOP_18_1, i16 %x_V_data_V, i2 %x_V_keep_V, i2 %x_V_strb_V, i1 %x_V_user_V, i1 %x_V_last_V, i1 %x_V_id_V, i1 %x_V_dest_V, i16 %gmem_addr_read_10, i16 %gmem_addr_read, i16 %gmem_addr_read_9, i16 %gmem_addr_read_8, i16 %gmem_addr_read_7, i16 %gmem_addr_read_6, i16 %gmem_addr_read_5, i16 %gmem_addr_read_4, i16 %gmem_addr_read_3, i16 %gmem_addr_read_2, i16 %gmem_addr_read_1, i16 %y_V_data_V, i2 %y_V_keep_V, i2 %y_V_strb_V, i1 %y_V_user_V, i1 %y_V_last_V, i1 %y_V_id_V, i1 %y_V_dest_V, i16 %filt_stream_short_stream_axis_0_shift_reg, i16 %filt_stream_short_stream_axis_0_shift_reg_1, i16 %filt_stream_short_stream_axis_0_shift_reg_2, i16 %filt_stream_short_stream_axis_0_shift_reg_3, i16 %filt_stream_short_stream_axis_0_shift_reg_4, i16 %filt_stream_short_stream_axis_0_shift_reg_5, i16 %filt_stream_short_stream_axis_0_shift_reg_6, i16 %filt_stream_short_stream_axis_0_shift_reg_7, i16 %filt_stream_short_stream_axis_0_shift_reg_8, i16 %filt_stream_short_stream_axis_0_shift_reg_9" [filt.cpp:11]   --->   Operation 49 'call' 'call_ln11' <Predicate = true> <Delay = 4.90> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+State 22 <SV = 21> <Delay = 7.30>
+ST_22 : Operation 70 [1/1] (7.30ns)   --->   "%gmem_addr_read_12 = read i16 @_ssdm_op_Read.m_axi.p1i16, i16 %gmem_addr" [filt.cpp:11]   --->   Operation 70 'read' 'gmem_addr_read_12' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
-State 23 <SV = 22> <Delay = 0.00>
-ST_23 : Operation 50 [1/1] (0.00ns)   --->   "%spectopmodule_ln11 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_12" [filt.cpp:11]   --->   Operation 50 'spectopmodule' 'spectopmodule_ln11' <Predicate = true> <Delay = 0.00>
-ST_23 : Operation 51 [1/1] (0.00ns)   --->   "%specinterface_ln11 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty_13, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0" [filt.cpp:11]   --->   Operation 51 'specinterface' 'specinterface_ln11' <Predicate = true> <Delay = 0.00>
-ST_23 : Operation 52 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %gmem, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 11, void @empty_1, void @empty_2, void @empty_0, i32 16, i32 16, i32 16, i32 16, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 52 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_23 : Operation 53 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %gmem"   --->   Operation 53 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_23 : Operation 54 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %y_V_data_V, i2 %y_V_keep_V, i2 %y_V_strb_V, i1 %y_V_user_V, i1 %y_V_last_V, i1 %y_V_id_V, i1 %y_V_dest_V, void @empty_3, i32 1, i32 1, void @empty_4, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 54 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_23 : Operation 55 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %y_V_data_V"   --->   Operation 55 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_23 : Operation 56 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i2 %y_V_keep_V"   --->   Operation 56 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_23 : Operation 57 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i2 %y_V_strb_V"   --->   Operation 57 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_23 : Operation 58 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %y_V_user_V"   --->   Operation 58 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_23 : Operation 59 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %y_V_last_V"   --->   Operation 59 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_23 : Operation 60 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %y_V_id_V"   --->   Operation 60 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_23 : Operation 61 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %y_V_dest_V"   --->   Operation 61 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_23 : Operation 62 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %c, void @empty_5, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_6, void @empty_7, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_8, i32 4294967295, i32 0"   --->   Operation 62 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_23 : Operation 63 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %c, void @empty_9, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_8, i32 4294967295, i32 0"   --->   Operation 63 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_23 : Operation 64 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %x_V_data_V, i2 %x_V_keep_V, i2 %x_V_strb_V, i1 %x_V_user_V, i1 %x_V_last_V, i1 %x_V_id_V, i1 %x_V_dest_V, void @empty_3, i32 1, i32 1, void @empty_4, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 64 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_23 : Operation 65 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %x_V_data_V"   --->   Operation 65 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_23 : Operation 66 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i2 %x_V_keep_V"   --->   Operation 66 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_23 : Operation 67 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i2 %x_V_strb_V"   --->   Operation 67 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_23 : Operation 68 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %x_V_user_V"   --->   Operation 68 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_23 : Operation 69 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %x_V_last_V"   --->   Operation 69 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_23 : Operation 70 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %x_V_id_V"   --->   Operation 70 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_23 : Operation 71 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %x_V_dest_V"   --->   Operation 71 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_23 : Operation 72 [1/1] (0.00ns)   --->   "%specaxissidechannel_ln18 = specaxissidechannel void @_ssdm_op_SpecAXISSideChannel, i16 %y_V_data_V, i2 %y_V_keep_V, i2 %y_V_strb_V, i1 %y_V_user_V, i1 %y_V_last_V, i1 %y_V_id_V, i1 %y_V_dest_V, void @empty_10" [filt.cpp:18]   --->   Operation 72 'specaxissidechannel' 'specaxissidechannel_ln18' <Predicate = true> <Delay = 0.00>
-ST_23 : Operation 73 [1/1] (0.00ns)   --->   "%specaxissidechannel_ln18 = specaxissidechannel void @_ssdm_op_SpecAXISSideChannel, i16 %x_V_data_V, i2 %x_V_keep_V, i2 %x_V_strb_V, i1 %x_V_user_V, i1 %x_V_last_V, i1 %x_V_id_V, i1 %x_V_dest_V, void @empty_11" [filt.cpp:18]   --->   Operation 73 'specaxissidechannel' 'specaxissidechannel_ln18' <Predicate = true> <Delay = 0.00>
-ST_23 : Operation 74 [1/1] (0.00ns)   --->   "%ret_ln50 = ret" [filt.cpp:50]   --->   Operation 74 'ret' 'ret_ln50' <Predicate = true> <Delay = 0.00>
+State 23 <SV = 22> <Delay = 7.30>
+ST_23 : Operation 71 [1/1] (7.30ns)   --->   "%gmem_addr_read_13 = read i16 @_ssdm_op_Read.m_axi.p1i16, i16 %gmem_addr" [filt.cpp:11]   --->   Operation 71 'read' 'gmem_addr_read_13' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 24 <SV = 23> <Delay = 7.30>
+ST_24 : Operation 72 [1/1] (7.30ns)   --->   "%gmem_addr_read_14 = read i16 @_ssdm_op_Read.m_axi.p1i16, i16 %gmem_addr" [filt.cpp:11]   --->   Operation 72 'read' 'gmem_addr_read_14' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 25 <SV = 24> <Delay = 7.30>
+ST_25 : Operation 73 [1/1] (7.30ns)   --->   "%gmem_addr_read_15 = read i16 @_ssdm_op_Read.m_axi.p1i16, i16 %gmem_addr" [filt.cpp:11]   --->   Operation 73 'read' 'gmem_addr_read_15' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 26 <SV = 25> <Delay = 7.30>
+ST_26 : Operation 74 [1/1] (7.30ns)   --->   "%gmem_addr_read_16 = read i16 @_ssdm_op_Read.m_axi.p1i16, i16 %gmem_addr" [filt.cpp:11]   --->   Operation 74 'read' 'gmem_addr_read_16' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 27 <SV = 26> <Delay = 7.30>
+ST_27 : Operation 75 [1/1] (7.30ns)   --->   "%gmem_addr_read_17 = read i16 @_ssdm_op_Read.m_axi.p1i16, i16 %gmem_addr" [filt.cpp:11]   --->   Operation 75 'read' 'gmem_addr_read_17' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 28 <SV = 27> <Delay = 7.30>
+ST_28 : Operation 76 [1/1] (7.30ns)   --->   "%gmem_addr_read_18 = read i16 @_ssdm_op_Read.m_axi.p1i16, i16 %gmem_addr" [filt.cpp:11]   --->   Operation 76 'read' 'gmem_addr_read_18' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 29 <SV = 28> <Delay = 7.30>
+ST_29 : Operation 77 [1/1] (7.30ns)   --->   "%gmem_addr_read_19 = read i16 @_ssdm_op_Read.m_axi.p1i16, i16 %gmem_addr" [filt.cpp:11]   --->   Operation 77 'read' 'gmem_addr_read_19' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 30 <SV = 29> <Delay = 7.30>
+ST_30 : Operation 78 [1/1] (7.30ns)   --->   "%gmem_addr_read_20 = read i16 @_ssdm_op_Read.m_axi.p1i16, i16 %gmem_addr" [filt.cpp:11]   --->   Operation 78 'read' 'gmem_addr_read_20' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 31 <SV = 30> <Delay = 7.30>
+ST_31 : Operation 79 [1/1] (7.30ns)   --->   "%gmem_addr_read_21 = read i16 @_ssdm_op_Read.m_axi.p1i16, i16 %gmem_addr" [filt.cpp:11]   --->   Operation 79 'read' 'gmem_addr_read_21' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 32 <SV = 31> <Delay = 7.30>
+ST_32 : Operation 80 [1/1] (7.30ns)   --->   "%gmem_addr_read_22 = read i16 @_ssdm_op_Read.m_axi.p1i16, i16 %gmem_addr" [filt.cpp:11]   --->   Operation 80 'read' 'gmem_addr_read_22' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 33 <SV = 32> <Delay = 7.30>
+ST_33 : Operation 81 [1/1] (7.30ns)   --->   "%gmem_addr_read_23 = read i16 @_ssdm_op_Read.m_axi.p1i16, i16 %gmem_addr" [filt.cpp:11]   --->   Operation 81 'read' 'gmem_addr_read_23' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 34 <SV = 33> <Delay = 7.30>
+ST_34 : Operation 82 [1/1] (7.30ns)   --->   "%gmem_addr_read_24 = read i16 @_ssdm_op_Read.m_axi.p1i16, i16 %gmem_addr" [filt.cpp:11]   --->   Operation 82 'read' 'gmem_addr_read_24' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 35 <SV = 34> <Delay = 7.30>
+ST_35 : Operation 83 [1/1] (7.30ns)   --->   "%gmem_addr_read_25 = read i16 @_ssdm_op_Read.m_axi.p1i16, i16 %gmem_addr" [filt.cpp:11]   --->   Operation 83 'read' 'gmem_addr_read_25' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 36 <SV = 35> <Delay = 7.30>
+ST_36 : Operation 84 [1/1] (7.30ns)   --->   "%gmem_addr_read_26 = read i16 @_ssdm_op_Read.m_axi.p1i16, i16 %gmem_addr" [filt.cpp:11]   --->   Operation 84 'read' 'gmem_addr_read_26' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 37 <SV = 36> <Delay = 7.30>
+ST_37 : Operation 85 [1/1] (7.30ns)   --->   "%gmem_addr_read_27 = read i16 @_ssdm_op_Read.m_axi.p1i16, i16 %gmem_addr" [filt.cpp:11]   --->   Operation 85 'read' 'gmem_addr_read_27' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 38 <SV = 37> <Delay = 7.30>
+ST_38 : Operation 86 [1/1] (7.30ns)   --->   "%gmem_addr_read_28 = read i16 @_ssdm_op_Read.m_axi.p1i16, i16 %gmem_addr" [filt.cpp:11]   --->   Operation 86 'read' 'gmem_addr_read_28' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 39 <SV = 38> <Delay = 7.30>
+ST_39 : Operation 87 [1/1] (7.30ns)   --->   "%gmem_addr_read_29 = read i16 @_ssdm_op_Read.m_axi.p1i16, i16 %gmem_addr" [filt.cpp:11]   --->   Operation 87 'read' 'gmem_addr_read_29' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 40 <SV = 39> <Delay = 7.30>
+ST_40 : Operation 88 [1/1] (7.30ns)   --->   "%gmem_addr_read_30 = read i16 @_ssdm_op_Read.m_axi.p1i16, i16 %gmem_addr" [filt.cpp:11]   --->   Operation 88 'read' 'gmem_addr_read_30' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 41 <SV = 40> <Delay = 7.30>
+ST_41 : Operation 89 [1/1] (7.30ns)   --->   "%gmem_addr_read_31 = read i16 @_ssdm_op_Read.m_axi.p1i16, i16 %gmem_addr" [filt.cpp:11]   --->   Operation 89 'read' 'gmem_addr_read_31' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 42 <SV = 41> <Delay = 7.30>
+ST_42 : Operation 90 [1/1] (7.30ns)   --->   "%gmem_addr_read_32 = read i16 @_ssdm_op_Read.m_axi.p1i16, i16 %gmem_addr" [filt.cpp:11]   --->   Operation 90 'read' 'gmem_addr_read_32' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 43 <SV = 42> <Delay = 1.05>
+ST_43 : Operation 91 [1/1] (0.00ns)   --->   "%empty_19 = wait i32 @_ssdm_op_Wait"   --->   Operation 91 'wait' 'empty_19' <Predicate = true> <Delay = 0.00>
+ST_43 : Operation 92 [2/2] (1.05ns)   --->   "%call_ln11 = call void @filt_Pipeline_VITIS_LOOP_18_1, i16 %x_V_data_V, i2 %x_V_keep_V, i2 %x_V_strb_V, i1 %x_V_user_V, i1 %x_V_last_V, i1 %x_V_id_V, i1 %x_V_dest_V, i16 %gmem_addr_read_32, i16 %gmem_addr_read, i16 %gmem_addr_read_31, i16 %gmem_addr_read_30, i16 %gmem_addr_read_29, i16 %gmem_addr_read_28, i16 %gmem_addr_read_27, i16 %gmem_addr_read_26, i16 %gmem_addr_read_25, i16 %gmem_addr_read_24, i16 %gmem_addr_read_23, i16 %gmem_addr_read_22, i16 %gmem_addr_read_21, i16 %gmem_addr_read_20, i16 %gmem_addr_read_19, i16 %gmem_addr_read_18, i16 %gmem_addr_read_17, i16 %gmem_addr_read_16, i16 %gmem_addr_read_15, i16 %gmem_addr_read_14, i16 %gmem_addr_read_13, i16 %gmem_addr_read_12, i16 %gmem_addr_read_11, i16 %gmem_addr_read_10, i16 %gmem_addr_read_9, i16 %gmem_addr_read_8, i16 %gmem_addr_read_7, i16 %gmem_addr_read_6, i16 %gmem_addr_read_5, i16 %gmem_addr_read_4, i16 %gmem_addr_read_3, i16 %gmem_addr_read_2, i16 %gmem_addr_read_1, i16 %y_V_data_V, i2 %y_V_keep_V, i2 %y_V_strb_V, i1 %y_V_user_V, i1 %y_V_last_V, i1 %y_V_id_V, i1 %y_V_dest_V, i16 %p_ZZ4filtRN3hls6streamINS_4axisI6ap_intILi16EELm1ELm1ELm1ELh56ELb0EEELi0EEEPsS6_E, i16 %p_ZZ4filtRN3hls6streamINS_4axisI6ap_intILi16EELm1ELm1ELm1ELh56ELb0EEELi0EEEPsS6_E_1, i16 %p_ZZ4filtRN3hls6streamINS_4axisI6ap_intILi16EELm1ELm1ELm1ELh56ELb0EEELi0EEEPsS6_E_2, i16 %p_ZZ4filtRN3hls6streamINS_4axisI6ap_intILi16EELm1ELm1ELm1ELh56ELb0EEELi0EEEPsS6_E_3, i16 %p_ZZ4filtRN3hls6streamINS_4axisI6ap_intILi16EELm1ELm1ELm1ELh56ELb0EEELi0EEEPsS6_E_4, i16 %p_ZZ4filtRN3hls6streamINS_4axisI6ap_intILi16EELm1ELm1ELm1ELh56ELb0EEELi0EEEPsS6_E_5, i16 %p_ZZ4filtRN3hls6streamINS_4axisI6ap_intILi16EELm1ELm1ELm1ELh56ELb0EEELi0EEEPsS6_E_6, i16 %p_ZZ4filtRN3hls6streamINS_4axisI6ap_intILi16EELm1ELm1ELm1ELh56ELb0EEELi0EEEPsS6_E_7, i16 %p_ZZ4filtRN3hls6streamINS_4axisI6ap_intILi16EELm1ELm1ELm1ELh56ELb0EEELi0EEEPsS6_E_8, i16 %p_ZZ4filtRN3hls6streamINS_4axisI6ap_intILi16EELm1ELm1ELm1ELh56ELb0EEELi0EEEPsS6_E_9, i16 %p_ZZ4filtRN3hls6streamINS_4axisI6ap_intILi16EELm1ELm1ELm1ELh56ELb0EEELi0EEEPsS6_E_10, i16 %p_ZZ4filtRN3hls6streamINS_4axisI6ap_intILi16EELm1ELm1ELm1ELh56ELb0EEELi0EEEPsS6_E_11, i16 %p_ZZ4filtRN3hls6streamINS_4axisI6ap_intILi16EELm1ELm1ELm1ELh56ELb0EEELi0EEEPsS6_E_12, i16 %p_ZZ4filtRN3hls6streamINS_4axisI6ap_intILi16EELm1ELm1ELm1ELh56ELb0EEELi0EEEPsS6_E_13, i16 %p_ZZ4filtRN3hls6streamINS_4axisI6ap_intILi16EELm1ELm1ELm1ELh56ELb0EEELi0EEEPsS6_E_14, i16 %p_ZZ4filtRN3hls6streamINS_4axisI6ap_intILi16EELm1ELm1ELm1ELh56ELb0EEELi0EEEPsS6_E_15, i16 %p_ZZ4filtRN3hls6streamINS_4axisI6ap_intILi16EELm1ELm1ELm1ELh56ELb0EEELi0EEEPsS6_E_16, i16 %p_ZZ4filtRN3hls6streamINS_4axisI6ap_intILi16EELm1ELm1ELm1ELh56ELb0EEELi0EEEPsS6_E_17, i16 %p_ZZ4filtRN3hls6streamINS_4axisI6ap_intILi16EELm1ELm1ELm1ELh56ELb0EEELi0EEEPsS6_E_18, i16 %p_ZZ4filtRN3hls6streamINS_4axisI6ap_intILi16EELm1ELm1ELm1ELh56ELb0EEELi0EEEPsS6_E_19, i16 %p_ZZ4filtRN3hls6streamINS_4axisI6ap_intILi16EELm1ELm1ELm1ELh56ELb0EEELi0EEEPsS6_E_20, i16 %p_ZZ4filtRN3hls6streamINS_4axisI6ap_intILi16EELm1ELm1ELm1ELh56ELb0EEELi0EEEPsS6_E_21, i16 %filt_stream_short_stream_axis_0_lowfreq_shift_reg, i16 %filt_stream_short_stream_axis_0_lowfreq_shift_reg_1, i16 %filt_stream_short_stream_axis_0_lowfreq_shift_reg_2, i16 %filt_stream_short_stream_axis_0_lowfreq_shift_reg_3, i16 %filt_stream_short_stream_axis_0_lowfreq_shift_reg_4, i16 %filt_stream_short_stream_axis_0_lowfreq_shift_reg_5, i16 %filt_stream_short_stream_axis_0_lowfreq_shift_reg_6, i16 %filt_stream_short_stream_axis_0_lowfreq_shift_reg_7, i16 %filt_stream_short_stream_axis_0_lowfreq_shift_reg_8, i16 %filt_stream_short_stream_axis_0_lowfreq_shift_reg_9" [filt.cpp:11]   --->   Operation 92 'call' 'call_ln11' <Predicate = true> <Delay = 1.05> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 44 <SV = 43> <Delay = 4.90>
+ST_44 : Operation 93 [1/2] (4.90ns)   --->   "%call_ln11 = call void @filt_Pipeline_VITIS_LOOP_18_1, i16 %x_V_data_V, i2 %x_V_keep_V, i2 %x_V_strb_V, i1 %x_V_user_V, i1 %x_V_last_V, i1 %x_V_id_V, i1 %x_V_dest_V, i16 %gmem_addr_read_32, i16 %gmem_addr_read, i16 %gmem_addr_read_31, i16 %gmem_addr_read_30, i16 %gmem_addr_read_29, i16 %gmem_addr_read_28, i16 %gmem_addr_read_27, i16 %gmem_addr_read_26, i16 %gmem_addr_read_25, i16 %gmem_addr_read_24, i16 %gmem_addr_read_23, i16 %gmem_addr_read_22, i16 %gmem_addr_read_21, i16 %gmem_addr_read_20, i16 %gmem_addr_read_19, i16 %gmem_addr_read_18, i16 %gmem_addr_read_17, i16 %gmem_addr_read_16, i16 %gmem_addr_read_15, i16 %gmem_addr_read_14, i16 %gmem_addr_read_13, i16 %gmem_addr_read_12, i16 %gmem_addr_read_11, i16 %gmem_addr_read_10, i16 %gmem_addr_read_9, i16 %gmem_addr_read_8, i16 %gmem_addr_read_7, i16 %gmem_addr_read_6, i16 %gmem_addr_read_5, i16 %gmem_addr_read_4, i16 %gmem_addr_read_3, i16 %gmem_addr_read_2, i16 %gmem_addr_read_1, i16 %y_V_data_V, i2 %y_V_keep_V, i2 %y_V_strb_V, i1 %y_V_user_V, i1 %y_V_last_V, i1 %y_V_id_V, i1 %y_V_dest_V, i16 %p_ZZ4filtRN3hls6streamINS_4axisI6ap_intILi16EELm1ELm1ELm1ELh56ELb0EEELi0EEEPsS6_E, i16 %p_ZZ4filtRN3hls6streamINS_4axisI6ap_intILi16EELm1ELm1ELm1ELh56ELb0EEELi0EEEPsS6_E_1, i16 %p_ZZ4filtRN3hls6streamINS_4axisI6ap_intILi16EELm1ELm1ELm1ELh56ELb0EEELi0EEEPsS6_E_2, i16 %p_ZZ4filtRN3hls6streamINS_4axisI6ap_intILi16EELm1ELm1ELm1ELh56ELb0EEELi0EEEPsS6_E_3, i16 %p_ZZ4filtRN3hls6streamINS_4axisI6ap_intILi16EELm1ELm1ELm1ELh56ELb0EEELi0EEEPsS6_E_4, i16 %p_ZZ4filtRN3hls6streamINS_4axisI6ap_intILi16EELm1ELm1ELm1ELh56ELb0EEELi0EEEPsS6_E_5, i16 %p_ZZ4filtRN3hls6streamINS_4axisI6ap_intILi16EELm1ELm1ELm1ELh56ELb0EEELi0EEEPsS6_E_6, i16 %p_ZZ4filtRN3hls6streamINS_4axisI6ap_intILi16EELm1ELm1ELm1ELh56ELb0EEELi0EEEPsS6_E_7, i16 %p_ZZ4filtRN3hls6streamINS_4axisI6ap_intILi16EELm1ELm1ELm1ELh56ELb0EEELi0EEEPsS6_E_8, i16 %p_ZZ4filtRN3hls6streamINS_4axisI6ap_intILi16EELm1ELm1ELm1ELh56ELb0EEELi0EEEPsS6_E_9, i16 %p_ZZ4filtRN3hls6streamINS_4axisI6ap_intILi16EELm1ELm1ELm1ELh56ELb0EEELi0EEEPsS6_E_10, i16 %p_ZZ4filtRN3hls6streamINS_4axisI6ap_intILi16EELm1ELm1ELm1ELh56ELb0EEELi0EEEPsS6_E_11, i16 %p_ZZ4filtRN3hls6streamINS_4axisI6ap_intILi16EELm1ELm1ELm1ELh56ELb0EEELi0EEEPsS6_E_12, i16 %p_ZZ4filtRN3hls6streamINS_4axisI6ap_intILi16EELm1ELm1ELm1ELh56ELb0EEELi0EEEPsS6_E_13, i16 %p_ZZ4filtRN3hls6streamINS_4axisI6ap_intILi16EELm1ELm1ELm1ELh56ELb0EEELi0EEEPsS6_E_14, i16 %p_ZZ4filtRN3hls6streamINS_4axisI6ap_intILi16EELm1ELm1ELm1ELh56ELb0EEELi0EEEPsS6_E_15, i16 %p_ZZ4filtRN3hls6streamINS_4axisI6ap_intILi16EELm1ELm1ELm1ELh56ELb0EEELi0EEEPsS6_E_16, i16 %p_ZZ4filtRN3hls6streamINS_4axisI6ap_intILi16EELm1ELm1ELm1ELh56ELb0EEELi0EEEPsS6_E_17, i16 %p_ZZ4filtRN3hls6streamINS_4axisI6ap_intILi16EELm1ELm1ELm1ELh56ELb0EEELi0EEEPsS6_E_18, i16 %p_ZZ4filtRN3hls6streamINS_4axisI6ap_intILi16EELm1ELm1ELm1ELh56ELb0EEELi0EEEPsS6_E_19, i16 %p_ZZ4filtRN3hls6streamINS_4axisI6ap_intILi16EELm1ELm1ELm1ELh56ELb0EEELi0EEEPsS6_E_20, i16 %p_ZZ4filtRN3hls6streamINS_4axisI6ap_intILi16EELm1ELm1ELm1ELh56ELb0EEELi0EEEPsS6_E_21, i16 %filt_stream_short_stream_axis_0_lowfreq_shift_reg, i16 %filt_stream_short_stream_axis_0_lowfreq_shift_reg_1, i16 %filt_stream_short_stream_axis_0_lowfreq_shift_reg_2, i16 %filt_stream_short_stream_axis_0_lowfreq_shift_reg_3, i16 %filt_stream_short_stream_axis_0_lowfreq_shift_reg_4, i16 %filt_stream_short_stream_axis_0_lowfreq_shift_reg_5, i16 %filt_stream_short_stream_axis_0_lowfreq_shift_reg_6, i16 %filt_stream_short_stream_axis_0_lowfreq_shift_reg_7, i16 %filt_stream_short_stream_axis_0_lowfreq_shift_reg_8, i16 %filt_stream_short_stream_axis_0_lowfreq_shift_reg_9" [filt.cpp:11]   --->   Operation 93 'call' 'call_ln11' <Predicate = true> <Delay = 4.90> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 45 <SV = 44> <Delay = 0.00>
+ST_45 : Operation 94 [1/1] (0.00ns)   --->   "%spectopmodule_ln11 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_6" [filt.cpp:11]   --->   Operation 94 'spectopmodule' 'spectopmodule_ln11' <Predicate = true> <Delay = 0.00>
+ST_45 : Operation 95 [1/1] (0.00ns)   --->   "%specinterface_ln11 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty_5, i32 0, i32 0, void @empty_12, i32 0, i32 0, void @empty_12, void @empty_12, void @empty_12, i32 0, i32 0, i32 0, i32 0, void @empty_12, void @empty_12, i32 4294967295, i32 0" [filt.cpp:11]   --->   Operation 95 'specinterface' 'specinterface_ln11' <Predicate = true> <Delay = 0.00>
+ST_45 : Operation 96 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %gmem, void @empty_11, i32 0, i32 0, void @empty_12, i32 0, i32 11, void @empty_13, void @empty_14, void @empty_12, i32 16, i32 16, i32 16, i32 16, void @empty_12, void @empty_12, i32 4294967295, i32 0"   --->   Operation 96 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_45 : Operation 97 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %gmem"   --->   Operation 97 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_45 : Operation 98 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %y_V_data_V, i2 %y_V_keep_V, i2 %y_V_strb_V, i1 %y_V_user_V, i1 %y_V_last_V, i1 %y_V_id_V, i1 %y_V_dest_V, void @empty_2, i32 1, i32 1, void @empty_3, i32 0, i32 0, void @empty_12, void @empty_12, void @empty_12, i32 0, i32 0, i32 0, i32 0, void @empty_12, void @empty_12, i32 4294967295, i32 0"   --->   Operation 98 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_45 : Operation 99 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %y_V_data_V"   --->   Operation 99 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_45 : Operation 100 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i2 %y_V_keep_V"   --->   Operation 100 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_45 : Operation 101 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i2 %y_V_strb_V"   --->   Operation 101 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_45 : Operation 102 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %y_V_user_V"   --->   Operation 102 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_45 : Operation 103 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %y_V_last_V"   --->   Operation 103 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_45 : Operation 104 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %y_V_id_V"   --->   Operation 104 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_45 : Operation 105 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %y_V_dest_V"   --->   Operation 105 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_45 : Operation 106 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %c, void @empty_1, i32 0, i32 0, void @empty_12, i32 0, i32 0, void @empty_0, void @empty, void @empty_12, i32 0, i32 0, i32 0, i32 0, void @empty_12, void @empty_9, i32 4294967295, i32 0"   --->   Operation 106 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_45 : Operation 107 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %c, void @empty_10, i32 0, i32 0, void @empty_12, i32 0, i32 0, void @empty_12, void @empty_12, void @empty_12, i32 0, i32 0, i32 0, i32 0, void @empty_12, void @empty_9, i32 4294967295, i32 0"   --->   Operation 107 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_45 : Operation 108 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %x_V_data_V, i2 %x_V_keep_V, i2 %x_V_strb_V, i1 %x_V_user_V, i1 %x_V_last_V, i1 %x_V_id_V, i1 %x_V_dest_V, void @empty_2, i32 1, i32 1, void @empty_3, i32 0, i32 0, void @empty_12, void @empty_12, void @empty_12, i32 0, i32 0, i32 0, i32 0, void @empty_12, void @empty_12, i32 4294967295, i32 0"   --->   Operation 108 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_45 : Operation 109 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %x_V_data_V"   --->   Operation 109 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_45 : Operation 110 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i2 %x_V_keep_V"   --->   Operation 110 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_45 : Operation 111 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i2 %x_V_strb_V"   --->   Operation 111 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_45 : Operation 112 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %x_V_user_V"   --->   Operation 112 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_45 : Operation 113 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %x_V_last_V"   --->   Operation 113 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_45 : Operation 114 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %x_V_id_V"   --->   Operation 114 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_45 : Operation 115 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %x_V_dest_V"   --->   Operation 115 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_45 : Operation 116 [1/1] (0.00ns)   --->   "%specaxissidechannel_ln18 = specaxissidechannel void @_ssdm_op_SpecAXISSideChannel, i16 %y_V_data_V, i2 %y_V_keep_V, i2 %y_V_strb_V, i1 %y_V_user_V, i1 %y_V_last_V, i1 %y_V_id_V, i1 %y_V_dest_V, void @empty_8" [filt.cpp:18]   --->   Operation 116 'specaxissidechannel' 'specaxissidechannel_ln18' <Predicate = true> <Delay = 0.00>
+ST_45 : Operation 117 [1/1] (0.00ns)   --->   "%specaxissidechannel_ln18 = specaxissidechannel void @_ssdm_op_SpecAXISSideChannel, i16 %x_V_data_V, i2 %x_V_keep_V, i2 %x_V_strb_V, i1 %x_V_user_V, i1 %x_V_last_V, i1 %x_V_id_V, i1 %x_V_dest_V, void @empty_7" [filt.cpp:18]   --->   Operation 117 'specaxissidechannel' 'specaxissidechannel_ln18' <Predicate = true> <Delay = 0.00>
+ST_45 : Operation 118 [1/1] (0.00ns)   --->   "%ret_ln58 = ret" [filt.cpp:58]   --->   Operation 118 'ret' 'ret_ln58' <Predicate = true> <Delay = 0.00>
 
 
 ============================================================
@@ -201,93 +289,181 @@ Target clock period: 10.000ns, clock uncertainty: 2.700ns.
 
  <State 1>: 1.000ns
 The critical path consists of the following:
-	s_axi read operation ('c_read', filt.cpp:11) on port 'c' (filt.cpp:11) [49]  (1.000 ns)
+	s_axi read operation ('c_read', filt.cpp:11) on port 'c' (filt.cpp:11) [71]  (1.000 ns)
 
  <State 2>: 7.300ns
 The critical path consists of the following:
-	bus request operation ('empty', filt.cpp:11) on port 'gmem' (filt.cpp:11) [53]  (7.300 ns)
+	bus request operation ('empty', filt.cpp:11) on port 'gmem' (filt.cpp:11) [75]  (7.300 ns)
 
  <State 3>: 7.300ns
 The critical path consists of the following:
-	bus request operation ('empty', filt.cpp:11) on port 'gmem' (filt.cpp:11) [53]  (7.300 ns)
+	bus request operation ('empty', filt.cpp:11) on port 'gmem' (filt.cpp:11) [75]  (7.300 ns)
 
  <State 4>: 7.300ns
 The critical path consists of the following:
-	bus request operation ('empty', filt.cpp:11) on port 'gmem' (filt.cpp:11) [53]  (7.300 ns)
+	bus request operation ('empty', filt.cpp:11) on port 'gmem' (filt.cpp:11) [75]  (7.300 ns)
 
  <State 5>: 7.300ns
 The critical path consists of the following:
-	bus request operation ('empty', filt.cpp:11) on port 'gmem' (filt.cpp:11) [53]  (7.300 ns)
+	bus request operation ('empty', filt.cpp:11) on port 'gmem' (filt.cpp:11) [75]  (7.300 ns)
 
  <State 6>: 7.300ns
 The critical path consists of the following:
-	bus request operation ('empty', filt.cpp:11) on port 'gmem' (filt.cpp:11) [53]  (7.300 ns)
+	bus request operation ('empty', filt.cpp:11) on port 'gmem' (filt.cpp:11) [75]  (7.300 ns)
 
  <State 7>: 7.300ns
 The critical path consists of the following:
-	bus request operation ('empty', filt.cpp:11) on port 'gmem' (filt.cpp:11) [53]  (7.300 ns)
+	bus request operation ('empty', filt.cpp:11) on port 'gmem' (filt.cpp:11) [75]  (7.300 ns)
 
  <State 8>: 7.300ns
 The critical path consists of the following:
-	bus request operation ('empty', filt.cpp:11) on port 'gmem' (filt.cpp:11) [53]  (7.300 ns)
+	bus request operation ('empty', filt.cpp:11) on port 'gmem' (filt.cpp:11) [75]  (7.300 ns)
 
  <State 9>: 7.300ns
 The critical path consists of the following:
-	bus request operation ('empty', filt.cpp:11) on port 'gmem' (filt.cpp:11) [53]  (7.300 ns)
+	bus request operation ('empty', filt.cpp:11) on port 'gmem' (filt.cpp:11) [75]  (7.300 ns)
 
  <State 10>: 7.300ns
 The critical path consists of the following:
-	bus read operation ('gmem_addr_read', filt.cpp:11) on port 'gmem' (filt.cpp:11) [54]  (7.300 ns)
+	bus read operation ('gmem_addr_read', filt.cpp:11) on port 'gmem' (filt.cpp:11) [76]  (7.300 ns)
 
  <State 11>: 7.300ns
 The critical path consists of the following:
-	bus read operation ('gmem_addr_read_1', filt.cpp:11) on port 'gmem' (filt.cpp:11) [55]  (7.300 ns)
+	bus read operation ('gmem_addr_read_1', filt.cpp:11) on port 'gmem' (filt.cpp:11) [77]  (7.300 ns)
 
  <State 12>: 7.300ns
 The critical path consists of the following:
-	bus read operation ('gmem_addr_read_2', filt.cpp:11) on port 'gmem' (filt.cpp:11) [56]  (7.300 ns)
+	bus read operation ('gmem_addr_read_2', filt.cpp:11) on port 'gmem' (filt.cpp:11) [78]  (7.300 ns)
 
  <State 13>: 7.300ns
 The critical path consists of the following:
-	bus read operation ('gmem_addr_read_3', filt.cpp:11) on port 'gmem' (filt.cpp:11) [57]  (7.300 ns)
+	bus read operation ('gmem_addr_read_3', filt.cpp:11) on port 'gmem' (filt.cpp:11) [79]  (7.300 ns)
 
  <State 14>: 7.300ns
 The critical path consists of the following:
-	bus read operation ('gmem_addr_read_4', filt.cpp:11) on port 'gmem' (filt.cpp:11) [58]  (7.300 ns)
+	bus read operation ('gmem_addr_read_4', filt.cpp:11) on port 'gmem' (filt.cpp:11) [80]  (7.300 ns)
 
  <State 15>: 7.300ns
 The critical path consists of the following:
-	bus read operation ('gmem_addr_read_5', filt.cpp:11) on port 'gmem' (filt.cpp:11) [59]  (7.300 ns)
+	bus read operation ('gmem_addr_read_5', filt.cpp:11) on port 'gmem' (filt.cpp:11) [81]  (7.300 ns)
 
  <State 16>: 7.300ns
 The critical path consists of the following:
-	bus read operation ('gmem_addr_read_6', filt.cpp:11) on port 'gmem' (filt.cpp:11) [60]  (7.300 ns)
+	bus read operation ('gmem_addr_read_6', filt.cpp:11) on port 'gmem' (filt.cpp:11) [82]  (7.300 ns)
 
  <State 17>: 7.300ns
 The critical path consists of the following:
-	bus read operation ('gmem_addr_read_7', filt.cpp:11) on port 'gmem' (filt.cpp:11) [61]  (7.300 ns)
+	bus read operation ('gmem_addr_read_7', filt.cpp:11) on port 'gmem' (filt.cpp:11) [83]  (7.300 ns)
 
  <State 18>: 7.300ns
 The critical path consists of the following:
-	bus read operation ('gmem_addr_read_8', filt.cpp:11) on port 'gmem' (filt.cpp:11) [62]  (7.300 ns)
+	bus read operation ('gmem_addr_read_8', filt.cpp:11) on port 'gmem' (filt.cpp:11) [84]  (7.300 ns)
 
  <State 19>: 7.300ns
 The critical path consists of the following:
-	bus read operation ('gmem_addr_read_9', filt.cpp:11) on port 'gmem' (filt.cpp:11) [63]  (7.300 ns)
+	bus read operation ('gmem_addr_read_9', filt.cpp:11) on port 'gmem' (filt.cpp:11) [85]  (7.300 ns)
 
  <State 20>: 7.300ns
 The critical path consists of the following:
-	bus read operation ('gmem_addr_read_10', filt.cpp:11) on port 'gmem' (filt.cpp:11) [64]  (7.300 ns)
+	bus read operation ('gmem_addr_read_10', filt.cpp:11) on port 'gmem' (filt.cpp:11) [86]  (7.300 ns)
 
- <State 21>: 5.580ns
+ <State 21>: 7.300ns
 The critical path consists of the following:
-	'call' operation 0 bit ('call_ln11', filt.cpp:11) to 'filt_Pipeline_VITIS_LOOP_18_1' [68]  (5.580 ns)
+	bus read operation ('gmem_addr_read_11', filt.cpp:11) on port 'gmem' (filt.cpp:11) [87]  (7.300 ns)
 
- <State 22>: 4.903ns
+ <State 22>: 7.300ns
 The critical path consists of the following:
-	'call' operation 0 bit ('call_ln11', filt.cpp:11) to 'filt_Pipeline_VITIS_LOOP_18_1' [68]  (4.903 ns)
+	bus read operation ('gmem_addr_read_12', filt.cpp:11) on port 'gmem' (filt.cpp:11) [88]  (7.300 ns)
 
- <State 23>: 0.000ns
+ <State 23>: 7.300ns
+The critical path consists of the following:
+	bus read operation ('gmem_addr_read_13', filt.cpp:11) on port 'gmem' (filt.cpp:11) [89]  (7.300 ns)
+
+ <State 24>: 7.300ns
+The critical path consists of the following:
+	bus read operation ('gmem_addr_read_14', filt.cpp:11) on port 'gmem' (filt.cpp:11) [90]  (7.300 ns)
+
+ <State 25>: 7.300ns
+The critical path consists of the following:
+	bus read operation ('gmem_addr_read_15', filt.cpp:11) on port 'gmem' (filt.cpp:11) [91]  (7.300 ns)
+
+ <State 26>: 7.300ns
+The critical path consists of the following:
+	bus read operation ('gmem_addr_read_16', filt.cpp:11) on port 'gmem' (filt.cpp:11) [92]  (7.300 ns)
+
+ <State 27>: 7.300ns
+The critical path consists of the following:
+	bus read operation ('gmem_addr_read_17', filt.cpp:11) on port 'gmem' (filt.cpp:11) [93]  (7.300 ns)
+
+ <State 28>: 7.300ns
+The critical path consists of the following:
+	bus read operation ('gmem_addr_read_18', filt.cpp:11) on port 'gmem' (filt.cpp:11) [94]  (7.300 ns)
+
+ <State 29>: 7.300ns
+The critical path consists of the following:
+	bus read operation ('gmem_addr_read_19', filt.cpp:11) on port 'gmem' (filt.cpp:11) [95]  (7.300 ns)
+
+ <State 30>: 7.300ns
+The critical path consists of the following:
+	bus read operation ('gmem_addr_read_20', filt.cpp:11) on port 'gmem' (filt.cpp:11) [96]  (7.300 ns)
+
+ <State 31>: 7.300ns
+The critical path consists of the following:
+	bus read operation ('gmem_addr_read_21', filt.cpp:11) on port 'gmem' (filt.cpp:11) [97]  (7.300 ns)
+
+ <State 32>: 7.300ns
+The critical path consists of the following:
+	bus read operation ('gmem_addr_read_22', filt.cpp:11) on port 'gmem' (filt.cpp:11) [98]  (7.300 ns)
+
+ <State 33>: 7.300ns
+The critical path consists of the following:
+	bus read operation ('gmem_addr_read_23', filt.cpp:11) on port 'gmem' (filt.cpp:11) [99]  (7.300 ns)
+
+ <State 34>: 7.300ns
+The critical path consists of the following:
+	bus read operation ('gmem_addr_read_24', filt.cpp:11) on port 'gmem' (filt.cpp:11) [100]  (7.300 ns)
+
+ <State 35>: 7.300ns
+The critical path consists of the following:
+	bus read operation ('gmem_addr_read_25', filt.cpp:11) on port 'gmem' (filt.cpp:11) [101]  (7.300 ns)
+
+ <State 36>: 7.300ns
+The critical path consists of the following:
+	bus read operation ('gmem_addr_read_26', filt.cpp:11) on port 'gmem' (filt.cpp:11) [102]  (7.300 ns)
+
+ <State 37>: 7.300ns
+The critical path consists of the following:
+	bus read operation ('gmem_addr_read_27', filt.cpp:11) on port 'gmem' (filt.cpp:11) [103]  (7.300 ns)
+
+ <State 38>: 7.300ns
+The critical path consists of the following:
+	bus read operation ('gmem_addr_read_28', filt.cpp:11) on port 'gmem' (filt.cpp:11) [104]  (7.300 ns)
+
+ <State 39>: 7.300ns
+The critical path consists of the following:
+	bus read operation ('gmem_addr_read_29', filt.cpp:11) on port 'gmem' (filt.cpp:11) [105]  (7.300 ns)
+
+ <State 40>: 7.300ns
+The critical path consists of the following:
+	bus read operation ('gmem_addr_read_30', filt.cpp:11) on port 'gmem' (filt.cpp:11) [106]  (7.300 ns)
+
+ <State 41>: 7.300ns
+The critical path consists of the following:
+	bus read operation ('gmem_addr_read_31', filt.cpp:11) on port 'gmem' (filt.cpp:11) [107]  (7.300 ns)
+
+ <State 42>: 7.300ns
+The critical path consists of the following:
+	bus read operation ('gmem_addr_read_32', filt.cpp:11) on port 'gmem' (filt.cpp:11) [108]  (7.300 ns)
+
+ <State 43>: 1.050ns
+The critical path consists of the following:
+	'call' operation 0 bit ('call_ln11', filt.cpp:11) to 'filt_Pipeline_VITIS_LOOP_18_1' [112]  (1.050 ns)
+
+ <State 44>: 4.903ns
+The critical path consists of the following:
+	'call' operation 0 bit ('call_ln11', filt.cpp:11) to 'filt_Pipeline_VITIS_LOOP_18_1' [112]  (4.903 ns)
+
+ <State 45>: 0.000ns
 The critical path consists of the following:
 
 
@@ -322,6 +498,28 @@ N/A
 	State 21
 	State 22
 	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+	State 37
+	State 38
+	State 39
+	State 40
+	State 41
+	State 42
+	State 43
+	State 44
+	State 45
 
 
 ============================================================

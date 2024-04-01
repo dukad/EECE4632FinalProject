@@ -44,20 +44,20 @@
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="filt.cpp:15:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="filt" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_ctrl_none port=return" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="filt.cpp:29:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="filt.cpp:37:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="filt" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="filt.cpp:11:0" msg_body="Unrolling loop 'Shift_Accum_Loop' (filt.cpp:28:2) in function 'filt' completely with a factor of 10">
-        <args Factor="10" LoopLoc="filt.cpp:28:2" LoopName="Shift_Accum_Loop"/>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="filt.cpp:11:0" msg_body="Unrolling loop 'LowFreq_Shift_Accumulate_Loop' (filt.cpp:36:3) in function 'filt' completely with a factor of 32">
+        <args Factor="32" LoopLoc="filt.cpp:36:3" LoopName="LowFreq_Shift_Accumulate_Loop"/>
     </msg>
-    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="filt.cpp:19:0" msg_body="array_partition dim=1 type=complete  variable=_ZZ4filtRN3hls6streamINS_4axisI6ap_intILi16EELm1ELm1ELm1ELh56ELb0EEELi0EEEPsS6_E9shift_reg 1 filt filt.cpp:19:0 filt(hls::stream&lt;hls::axis&lt;ap_int&lt;16&gt;, 1ul, 1ul, 1ul, (unsigned char)56, false&gt;, 0&gt;&amp;, short*, hls::stream&lt;hls::axis&lt;ap_int&lt;16&gt;, 1ul, 1ul, 1ul, (unsigned char)56, false&gt;, 0&gt;&amp;)::shift_reg">
-        <args PragmaFunction="filt" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=_ZZ4filtRN3hls6streamINS_4axisI6ap_intILi16EELm1ELm1ELm1ELh56ELb0EEELi0EEEPsS6_E9shift_reg" PragmaType="array_partition" VarName="filt(hls::stream&lt;hls::axis&lt;ap_int&lt;16&gt;, 1ul, 1ul, 1ul, (unsigned char)56, false&gt;, 0&gt;&amp;, short*, hls::stream&lt;hls::axis&lt;ap_int&lt;16&gt;, 1ul, 1ul, 1ul, (unsigned char)56, false&gt;, 0&gt;&amp;)::shift_reg" varLoc="filt.cpp:19:0"/>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="filt.cpp:19:0" msg_body="array_partition dim=1 type=complete  variable=_ZZ4filtRN3hls6streamINS_4axisI6ap_intILi16EELm1ELm1ELm1ELh56ELb0EEELi0EEEPsS6_E17lowfreq_shift_reg 1 filt filt.cpp:19:0 filt(hls::stream&lt;hls::axis&lt;ap_int&lt;16&gt;, 1ul, 1ul, 1ul, (unsigned char)56, false&gt;, 0&gt;&amp;, short*, hls::stream&lt;hls::axis&lt;ap_int&lt;16&gt;, 1ul, 1ul, 1ul, (unsigned char)56, false&gt;, 0&gt;&amp;)::lowfreq_shift_reg">
+        <args PragmaFunction="filt" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=_ZZ4filtRN3hls6streamINS_4axisI6ap_intILi16EELm1ELm1ELm1ELh56ELb0EEELi0EEEPsS6_E17lowfreq_shift_reg" PragmaType="array_partition" VarName="filt(hls::stream&lt;hls::axis&lt;ap_int&lt;16&gt;, 1ul, 1ul, 1ul, (unsigned char)56, false&gt;, 0&gt;&amp;, short*, hls::stream&lt;hls::axis&lt;ap_int&lt;16&gt;, 1ul, 1ul, 1ul, (unsigned char)56, false&gt;, 0&gt;&amp;)::lowfreq_shift_reg" varLoc="filt.cpp:19:0"/>
     </msg>
-    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="filt.cpp:19:0" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'filt(hls::stream&lt;hls::axis&lt;ap_int&lt;16&gt;, 1ul, 1ul, 1ul, (unsigned char)56, false&gt;, 0&gt;&amp;, short*, hls::stream&lt;hls::axis&lt;ap_int&lt;16&gt;, 1ul, 1ul, 1ul, (unsigned char)56, false&gt;, 0&gt;&amp;)::shift_reg' due to pipeline pragma">
-        <args Dim="1" Mode="complete" Name="filt(hls::stream&lt;hls::axis&lt;ap_int&lt;16&gt;, 1ul, 1ul, 1ul, (unsigned char)56, false&gt;, 0&gt;&amp;, short*, hls::stream&lt;hls::axis&lt;ap_int&lt;16&gt;, 1ul, 1ul, 1ul, (unsigned char)56, false&gt;, 0&gt;&amp;)::shift_reg" PragmaType="array_partition"/>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="filt.cpp:19:0" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'filt(hls::stream&lt;hls::axis&lt;ap_int&lt;16&gt;, 1ul, 1ul, 1ul, (unsigned char)56, false&gt;, 0&gt;&amp;, short*, hls::stream&lt;hls::axis&lt;ap_int&lt;16&gt;, 1ul, 1ul, 1ul, (unsigned char)56, false&gt;, 0&gt;&amp;)::lowfreq_shift_reg' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="filt(hls::stream&lt;hls::axis&lt;ap_int&lt;16&gt;, 1ul, 1ul, 1ul, (unsigned char)56, false&gt;, 0&gt;&amp;, short*, hls::stream&lt;hls::axis&lt;ap_int&lt;16&gt;, 1ul, 1ul, 1ul, (unsigned char)56, false&gt;, 0&gt;&amp;)::lowfreq_shift_reg" PragmaType="array_partition"/>
     </msg>
-    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="filt.cpp:19:0" msg_body="Applying array_partition to '_ZZ4filtRN3hls6streamINS_4axisI6ap_intILi16EELm1ELm1ELm1ELh56ELb0EEELi0EEEPsS6_E9shift_reg': Complete partitioning on dimension 1.">
-        <args Dim="1" Mode="Complete" UOName="_ZZ4filtRN3hls6streamINS_4axisI6ap_intILi16EELm1ELm1ELm1ELh56ELb0EEELi0EEEPsS6_E9shift_reg"/>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="filt.cpp:19:0" msg_body="Applying array_partition to '_ZZ4filtRN3hls6streamINS_4axisI6ap_intILi16EELm1ELm1ELm1ELh56ELb0EEELi0EEEPsS6_E17lowfreq_shift_reg': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="_ZZ4filtRN3hls6streamINS_4axisI6ap_intILi16EELm1ELm1ELm1ELh56ELb0EEELi0EEEPsS6_E17lowfreq_shift_reg"/>
     </msg>
 </xilinx:hls_fe_msgs>
 

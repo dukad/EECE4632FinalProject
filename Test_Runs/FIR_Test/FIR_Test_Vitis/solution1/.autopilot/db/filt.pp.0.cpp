@@ -9749,7 +9749,7 @@ typedef short acc_t;
 
 
 
-__attribute__((sdx_kernel("filt", 0))) void filt (hls::stream<AXI_VAL>& y, coef_t c[11], hls::stream<AXI_VAL>& x) {
+__attribute__((sdx_kernel("filt", 0))) void filt (hls::stream<AXI_VAL>& y, coef_t c[33], hls::stream<AXI_VAL>& x) {
 #line 15 "C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vitis/solution1/csynth.tcl"
 #pragma HLSDIRECTIVE TOP name=filt
 # 11 "filt.cpp"
@@ -9761,35 +9761,43 @@ __attribute__((sdx_kernel("filt", 0))) void filt (hls::stream<AXI_VAL>& y, coef_
 
 
  VITIS_LOOP_18_1: while(1) {
- static data_t shift_reg[11];
- acc_t acc;
- data_t data;
+  static data_t lowfreq_shift_reg[33];
+  static data_t midfreq_shift_reg[33];
+  static data_t highfreq_shift_reg[33];
 
- acc=0;
- AXI_VAL tmp1;
- x.read(tmp1);
- short i;
- Shift_Accum_Loop:
- for (i = 11 - 1; i > 0; i--) {
+  acc_t lowfreq_accumulate;
+  acc_t midfreq_accumulate;
+  acc_t highfreq_accumulate;
+
+  data_t data;
+  short i;
+
+  AXI_VAL tmp;
+  x.read(tmp);
+
+  lowfreq_accumulate = 0;
+
+  LowFreq_Shift_Accumulate_Loop:
+  for (i = 33 - 1; i > 0; i--){
 #pragma HLS UNROLL
- shift_reg[i] = shift_reg[i - 1];
-  acc += shift_reg[i] * c[i];
- }
-
- acc += tmp1.data.to_short() * c[0];
- shift_reg[0] = tmp1.data.to_short();
- AXI_VAL output;
- output.data = acc;
- output.keep = tmp1.keep;
- output.strb = tmp1.strb;
- output.last = tmp1.last;
- output.dest = tmp1.dest;
- output.id = tmp1.id;
- output.user = tmp1.user;
- y.write(output);
-
- if (tmp1.last) {
-  break;
- }
+ lowfreq_shift_reg[i] = lowfreq_shift_reg[i - 1];
+   lowfreq_accumulate += lowfreq_shift_reg[i] * c[i];
   }
+
+  lowfreq_accumulate+= tmp.data.to_short() * c[0];
+  lowfreq_shift_reg[0] = tmp.data.to_short();
+  AXI_VAL output;
+  output.data = lowfreq_accumulate;
+  output.keep = tmp.keep;
+  output.strb = tmp.strb;
+  output.last = tmp.last;
+  output.dest = tmp.dest;
+  output.id = tmp.id;
+  output.user = tmp.user;
+  y.write(output);
+
+  if (tmp.last) {
+   break;
+  }
+ }
 }
