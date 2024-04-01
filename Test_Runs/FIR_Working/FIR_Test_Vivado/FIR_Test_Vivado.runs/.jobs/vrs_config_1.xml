@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="FIR_Test_axi_dma_0_0_synth_1" LaunchDir="C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.runs/FIR_Test_axi_dma_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="FIR_Test_filt_0_0_synth_1" LaunchDir="C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.runs/FIR_Test_filt_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="FIR_Test_axi_bram_ctrl_0_0_synth_1" LaunchDir="C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.runs/FIR_Test_axi_bram_ctrl_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="FIR_Test_blk_mem_gen_0_0_synth_1" LaunchDir="C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.runs/FIR_Test_blk_mem_gen_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="FIR_Test_rst_ps7_0_100M_0_synth_1" LaunchDir="C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.runs/FIR_Test_rst_ps7_0_100M_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="FIR_Test_auto_pc_1_synth_1" LaunchDir="C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.runs/FIR_Test_auto_pc_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="FIR_Test_auto_pc_0_synth_1" LaunchDir="C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.runs/FIR_Test_auto_pc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="FIR_Test_processing_system7_0_0_synth_1" LaunchDir="C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.runs/FIR_Test_processing_system7_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="FIR_Test_xbar_0_synth_1" LaunchDir="C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.runs/FIR_Test_xbar_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="FIR_Test_axi_dma_0_0_synth_1"/>
+		<Parent Id="FIR_Test_filt_0_0_synth_1"/>
+		<Parent Id="FIR_Test_axi_bram_ctrl_0_0_synth_1"/>
+		<Parent Id="FIR_Test_blk_mem_gen_0_0_synth_1"/>
+		<Parent Id="FIR_Test_rst_ps7_0_100M_0_synth_1"/>
+		<Parent Id="FIR_Test_auto_pc_1_synth_1"/>
+		<Parent Id="FIR_Test_auto_pc_0_synth_1"/>
+		<Parent Id="FIR_Test_processing_system7_0_0_synth_1"/>
+		<Parent Id="FIR_Test_xbar_0_synth_1"/>
+	</Run>
+	<Run Id="impl_1" LaunchDir="C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.runs/impl_1" FlowId="Vivado_Implementation" FromStepId="init_design" ToStepId="write_bitstream">
+		<Parent Id="synth_1"/>
+		<Parent Id="FIR_Test_axi_dma_0_0_synth_1"/>
+		<Parent Id="FIR_Test_filt_0_0_synth_1"/>
+		<Parent Id="FIR_Test_axi_bram_ctrl_0_0_synth_1"/>
+		<Parent Id="FIR_Test_blk_mem_gen_0_0_synth_1"/>
+		<Parent Id="FIR_Test_rst_ps7_0_100M_0_synth_1"/>
+		<Parent Id="FIR_Test_auto_pc_1_synth_1"/>
+		<Parent Id="FIR_Test_auto_pc_0_synth_1"/>
+		<Parent Id="FIR_Test_processing_system7_0_0_synth_1"/>
+		<Parent Id="FIR_Test_xbar_0_synth_1"/>
+	</Run>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+		<Parameter Name="general.shortenLongPath" Val="true" Type="bool"/>
+	</Parameters>
+	<ProductInfo Name="vivado"/>
+</Runs>
+
