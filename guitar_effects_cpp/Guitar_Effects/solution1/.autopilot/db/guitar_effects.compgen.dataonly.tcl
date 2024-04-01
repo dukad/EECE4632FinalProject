@@ -28,7 +28,7 @@ distortion_threshold {
 }
 distortion_clip_factor { 
 	dir I
-	width 32
+	width 1
 	depth 1
 	mode ap_none
 	offset 48

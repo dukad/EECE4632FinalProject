@@ -1,0 +1,444 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Mon Apr  1 16:32:23 2024
+# Process ID: 21140
+# Current directory: C:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/guitar_effects_design_guitar_effects_0_19_synth_1
+# Command line: vivado.exe -log guitar_effects_design_guitar_effects_0_19.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source guitar_effects_design_guitar_effects_0_19.tcl
+# Log file: C:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/guitar_effects_design_guitar_effects_0_19_synth_1/guitar_effects_design_guitar_effects_0_19.vds
+# Journal file: C:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/guitar_effects_design_guitar_effects_0_19_synth_1\vivado.jou
+# Running On: WFXB07B250A366D, OS: Windows, CPU Frequency: 2904 MHz, CPU Physical cores: 8, Host memory: 16881 MB
+#-----------------------------------------------------------
+source guitar_effects_design_guitar_effects_0_19.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/du.kad/Desktop/EECE4632FinalProject/guitar_effects_cpp'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.1/data/ip'.
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/ip 
+Command: synth_design -top guitar_effects_design_guitar_effects_0_19 -part xc7z020clg400-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 14956
+WARNING: [Synth 8-9501] generate block is allowed only inside loop and conditional generate in SystemVerilog mode [C:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:4023]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1636.340 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'guitar_effects_design_guitar_effects_0_19' [c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_guitar_effects_0_19/synth/guitar_effects_design_guitar_effects_0_19.v:53]
+INFO: [Synth 8-6157] synthesizing module 'guitar_effects' [c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/5994/hdl/verilog/guitar_effects.v:10]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/5994/hdl/verilog/guitar_effects.v:465]
+INFO: [Synth 8-6157] synthesizing module 'guitar_effects_compression_buffer_RAM_AUTO_0R0W' [c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/5994/hdl/verilog/guitar_effects_compression_buffer_RAM_AUTO_0R0W.v:7]
+INFO: [Synth 8-3876] $readmem data file './guitar_effects_compression_buffer_RAM_AUTO_0R0W.dat' is read successfully [c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/5994/hdl/verilog/guitar_effects_compression_buffer_RAM_AUTO_0R0W.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'guitar_effects_compression_buffer_RAM_AUTO_0R0W' (0#1) [c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/5994/hdl/verilog/guitar_effects_compression_buffer_RAM_AUTO_0R0W.v:7]
+INFO: [Synth 8-6157] synthesizing module 'guitar_effects_delay_buffer_RAM_AUTO_1R1W' [c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/5994/hdl/verilog/guitar_effects_delay_buffer_RAM_AUTO_1R1W.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'guitar_effects_delay_buffer_RAM_AUTO_1R1W' (0#1) [c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/5994/hdl/verilog/guitar_effects_delay_buffer_RAM_AUTO_1R1W.v:7]
+INFO: [Synth 8-6157] synthesizing module 'guitar_effects_guitar_effects_Pipeline_2' [c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/5994/hdl/verilog/guitar_effects_guitar_effects_Pipeline_2.v:10]
+INFO: [Synth 8-6157] synthesizing module 'guitar_effects_flow_control_loop_pipe_sequential_init' [c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/5994/hdl/verilog/guitar_effects_flow_control_loop_pipe_sequential_init.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'guitar_effects_flow_control_loop_pipe_sequential_init' (0#1) [c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/5994/hdl/verilog/guitar_effects_flow_control_loop_pipe_sequential_init.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'guitar_effects_guitar_effects_Pipeline_2' (0#1) [c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/5994/hdl/verilog/guitar_effects_guitar_effects_Pipeline_2.v:10]
+INFO: [Synth 8-6157] synthesizing module 'guitar_effects_compression' [c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/5994/hdl/verilog/guitar_effects_compression.v:10]
+INFO: [Synth 8-6157] synthesizing module 'guitar_effects_sitofp_32ns_32_6_no_dsp_1' [c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/5994/hdl/verilog/guitar_effects_sitofp_32ns_32_6_no_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'guitar_effects_sitofp_32ns_32_6_no_dsp_1_ip' [c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/5994/hdl/ip/guitar_effects_sitofp_32ns_32_6_no_dsp_1_ip.v:53]
+INFO: [Synth 8-6157] synthesizing module 'LUT1' [C:/Xilinx/Vivado/2022.1/scripts/rt/data/unisim_comp.v:62648]
+INFO: [Synth 8-6155] done synthesizing module 'LUT1' (0#1) [C:/Xilinx/Vivado/2022.1/scripts/rt/data/unisim_comp.v:62648]
+INFO: [Synth 8-6155] done synthesizing module 'guitar_effects_sitofp_32ns_32_6_no_dsp_1_ip' (0#1) [c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/5994/hdl/ip/guitar_effects_sitofp_32ns_32_6_no_dsp_1_ip.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'guitar_effects_sitofp_32ns_32_6_no_dsp_1' (0#1) [c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/5994/hdl/verilog/guitar_effects_sitofp_32ns_32_6_no_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'guitar_effects_sdiv_32ns_32ns_32_36_seq_1' [c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/5994/hdl/verilog/guitar_effects_sdiv_32ns_32ns_32_36_seq_1.v:88]
+INFO: [Synth 8-6157] synthesizing module 'guitar_effects_sdiv_32ns_32ns_32_36_seq_1_divseq' [c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/5994/hdl/verilog/guitar_effects_sdiv_32ns_32ns_32_36_seq_1.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'guitar_effects_sdiv_32ns_32ns_32_36_seq_1_divseq' (0#1) [c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/5994/hdl/verilog/guitar_effects_sdiv_32ns_32ns_32_36_seq_1.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'guitar_effects_sdiv_32ns_32ns_32_36_seq_1' (0#1) [c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/5994/hdl/verilog/guitar_effects_sdiv_32ns_32ns_32_36_seq_1.v:88]
+INFO: [Synth 8-6155] done synthesizing module 'guitar_effects_compression' (0#1) [c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/5994/hdl/verilog/guitar_effects_compression.v:10]
+INFO: [Synth 8-6157] synthesizing module 'guitar_effects_control_r_s_axi' [c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/5994/hdl/verilog/guitar_effects_control_r_s_axi.v:7]
+INFO: [Synth 8-155] case statement is not full and has no default [c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/5994/hdl/verilog/guitar_effects_control_r_s_axi.v:224]
+INFO: [Synth 8-6155] done synthesizing module 'guitar_effects_control_r_s_axi' (0#1) [c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/5994/hdl/verilog/guitar_effects_control_r_s_axi.v:7]
+INFO: [Synth 8-6157] synthesizing module 'guitar_effects_fadd_32ns_32ns_32_5_full_dsp_1' [c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/5994/hdl/verilog/guitar_effects_fadd_32ns_32ns_32_5_full_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'guitar_effects_fadd_32ns_32ns_32_5_full_dsp_1_ip' [c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/5994/hdl/ip/guitar_effects_fadd_32ns_32ns_32_5_full_dsp_1_ip.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'guitar_effects_fadd_32ns_32ns_32_5_full_dsp_1_ip' (0#1) [c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/5994/hdl/ip/guitar_effects_fadd_32ns_32ns_32_5_full_dsp_1_ip.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'guitar_effects_fadd_32ns_32ns_32_5_full_dsp_1' (0#1) [c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/5994/hdl/verilog/guitar_effects_fadd_32ns_32ns_32_5_full_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'guitar_effects_fmul_32ns_32ns_32_4_max_dsp_1' [c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/5994/hdl/verilog/guitar_effects_fmul_32ns_32ns_32_4_max_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'guitar_effects_fmul_32ns_32ns_32_4_max_dsp_1_ip' [c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/5994/hdl/ip/guitar_effects_fmul_32ns_32ns_32_4_max_dsp_1_ip.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'guitar_effects_fmul_32ns_32ns_32_4_max_dsp_1_ip' (0#1) [c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/5994/hdl/ip/guitar_effects_fmul_32ns_32ns_32_4_max_dsp_1_ip.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'guitar_effects_fmul_32ns_32ns_32_4_max_dsp_1' (0#1) [c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/5994/hdl/verilog/guitar_effects_fmul_32ns_32ns_32_4_max_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'guitar_effects_srem_32ns_17ns_16_36_seq_1' [c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/5994/hdl/verilog/guitar_effects_srem_32ns_17ns_16_36_seq_1.v:88]
+INFO: [Synth 8-6157] synthesizing module 'guitar_effects_srem_32ns_17ns_16_36_seq_1_divseq' [c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/5994/hdl/verilog/guitar_effects_srem_32ns_17ns_16_36_seq_1.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'guitar_effects_srem_32ns_17ns_16_36_seq_1_divseq' (0#1) [c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/5994/hdl/verilog/guitar_effects_srem_32ns_17ns_16_36_seq_1.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'guitar_effects_srem_32ns_17ns_16_36_seq_1' (0#1) [c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/5994/hdl/verilog/guitar_effects_srem_32ns_17ns_16_36_seq_1.v:88]
+INFO: [Synth 8-6157] synthesizing module 'guitar_effects_regslice_both' [c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/5994/hdl/verilog/guitar_effects_regslice_both.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'guitar_effects_regslice_both' (0#1) [c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/5994/hdl/verilog/guitar_effects_regslice_both.v:9]
+INFO: [Synth 8-6157] synthesizing module 'guitar_effects_regslice_both__parameterized0' [c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/5994/hdl/verilog/guitar_effects_regslice_both.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'guitar_effects_regslice_both__parameterized0' (0#1) [c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/5994/hdl/verilog/guitar_effects_regslice_both.v:9]
+INFO: [Synth 8-6157] synthesizing module 'guitar_effects_regslice_both__parameterized1' [c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/5994/hdl/verilog/guitar_effects_regslice_both.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'guitar_effects_regslice_both__parameterized1' (0#1) [c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/5994/hdl/verilog/guitar_effects_regslice_both.v:9]
+INFO: [Synth 8-6157] synthesizing module 'guitar_effects_regslice_both__parameterized2' [c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/5994/hdl/verilog/guitar_effects_regslice_both.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'guitar_effects_regslice_both__parameterized2' (0#1) [c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/5994/hdl/verilog/guitar_effects_regslice_both.v:9]
+INFO: [Synth 8-6157] synthesizing module 'guitar_effects_regslice_both__parameterized3' [c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/5994/hdl/verilog/guitar_effects_regslice_both.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'guitar_effects_regslice_both__parameterized3' (0#1) [c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/5994/hdl/verilog/guitar_effects_regslice_both.v:9]
+INFO: [Synth 8-6157] synthesizing module 'guitar_effects_regslice_both__parameterized4' [c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/5994/hdl/verilog/guitar_effects_regslice_both.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'guitar_effects_regslice_both__parameterized4' (0#1) [c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/5994/hdl/verilog/guitar_effects_regslice_both.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'guitar_effects' (0#1) [c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/5994/hdl/verilog/guitar_effects.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'guitar_effects_design_guitar_effects_0_19' (0#1) [c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_guitar_effects_0_19/synth/guitar_effects_design_guitar_effects_0_19.v:53]
+WARNING: [Synth 8-6014] Unused sequential element remd_reg was removed.  [c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/5994/hdl/verilog/guitar_effects_sdiv_32ns_32ns_32_36_seq_1.v:172]
+WARNING: [Synth 8-6014] Unused sequential element quot_reg was removed.  [c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/5994/hdl/verilog/guitar_effects_srem_32ns_17ns_16_36_seq_1.v:162]
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized19 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized19 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized19 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized19 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized19 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized17 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized17 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized17 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DEC_OP_STATE[11] in module flt_dec_op is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DEC_OP_STATE[10] in module flt_dec_op is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DEC_OP_STATE[9] in module flt_dec_op is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DEC_OP_STATE[8] in module flt_dec_op is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DIVIDE_BY_ZERO_IN in module flt_dec_op is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized29 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized29 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized29 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized29 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized29 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized35 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized35 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized35 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[30] in module fix_to_flt_conv_exp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[29] in module fix_to_flt_conv_exp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[28] in module fix_to_flt_conv_exp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[27] in module fix_to_flt_conv_exp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[26] in module fix_to_flt_conv_exp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[25] in module fix_to_flt_conv_exp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[24] in module fix_to_flt_conv_exp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[23] in module fix_to_flt_conv_exp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[22] in module fix_to_flt_conv_exp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[21] in module fix_to_flt_conv_exp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[20] in module fix_to_flt_conv_exp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[19] in module fix_to_flt_conv_exp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[18] in module fix_to_flt_conv_exp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[17] in module fix_to_flt_conv_exp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[16] in module fix_to_flt_conv_exp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[15] in module fix_to_flt_conv_exp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[14] in module fix_to_flt_conv_exp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[13] in module fix_to_flt_conv_exp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[12] in module fix_to_flt_conv_exp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[11] in module fix_to_flt_conv_exp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[10] in module fix_to_flt_conv_exp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[9] in module fix_to_flt_conv_exp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[8] in module fix_to_flt_conv_exp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[7] in module fix_to_flt_conv_exp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[6] in module fix_to_flt_conv_exp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[5] in module fix_to_flt_conv_exp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[4] in module fix_to_flt_conv_exp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[3] in module fix_to_flt_conv_exp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[2] in module fix_to_flt_conv_exp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[1] in module fix_to_flt_conv_exp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[0] in module fix_to_flt_conv_exp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized33 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized33 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized33 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized33 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized33 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port B[11] in module carry_chain__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized27 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized27 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized27 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized27 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized27 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized25 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized25 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized25 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized25 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized25 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port NORMALIZE[1] in module flt_round_bit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port FIXED_POINT in module flt_round_bit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port FIX_MANT_SIGN in module flt_round_bit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SIGN in module flt_round_bit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized31 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized31 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized31 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized31 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized31 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized23 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized23 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized23 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized23 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized23 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized21 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized21 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized21 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized21 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized21 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EXP_OUT[7] in module renorm_and_round_logic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EXP_OUT[6] in module renorm_and_round_logic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EXP_OUT[5] in module renorm_and_round_logic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EXP_OUT[4] in module renorm_and_round_logic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EXP_OUT[3] in module renorm_and_round_logic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EXP_OUT[2] in module renorm_and_round_logic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EXP_OUT[1] in module renorm_and_round_logic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EXP_OUT[0] in module renorm_and_round_logic is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1826.797 ; gain = 190.457
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1826.797 ; gain = 190.457
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1826.797 ; gain = 190.457
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.157 . Memory (MB): peak = 1826.797 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 408 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_guitar_effects_0_19/constraints/guitar_effects_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_guitar_effects_0_19/constraints/guitar_effects_ooc.xdc] for cell 'inst'
+Parsing XDC File [C:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/guitar_effects_design_guitar_effects_0_19_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/guitar_effects_design_guitar_effects_0_19_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1826.797 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 35 instances were transformed.
+  FDE => FDRE: 35 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.114 . Memory (MB): peak = 1826.797 ; gain = 0.000
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1826.797 ; gain = 190.457
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1826.797 ; gain = 190.457
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  C:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/guitar_effects_design_guitar_effects_0_19_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1826.797 ; gain = 190.457
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-802] inferred FSM for state register 'wstate_reg' in module 'guitar_effects_control_r_s_axi'
+INFO: [Synth 8-802] inferred FSM for state register 'rstate_reg' in module 'guitar_effects_control_r_s_axi'
+WARNING: [Synth 8-3936] Found unconnected internal register 'remd_tmp_reg' and it is trimmed from '32' to '31' bits. [c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/5994/hdl/verilog/guitar_effects_srem_32ns_17ns_16_36_seq_1.v:43]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                             0001 |                               11
+*
+                  WRIDLE |                             0010 |                               00
+                  WRDATA |                             0100 |                               01
+                  WRRESP |                             1000 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'wstate_reg' using encoding 'one-hot' in module 'guitar_effects_control_r_s_axi'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              001 |                               10
+*
+                  RDIDLE |                              010 |                               00
+                  RDDATA |                              100 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rstate_reg' using encoding 'one-hot' in module 'guitar_effects_control_r_s_axi'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1826.797 ; gain = 190.457
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'guitar_effects_sitofp_32ns_32_6_no_dsp_1:/guitar_effects_sitofp_32ns_32_6_no_dsp_1_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXTRA_LSB_BIT_DEL' (delay__parameterized4) to 'guitar_effects_sitofp_32ns_32_6_no_dsp_1:/guitar_effects_sitofp_32ns_32_6_no_dsp_1_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXTRA_LSB_RND1_DEL'
+INFO: [Synth 8-223] decloning instance 'guitar_effects_sitofp_32ns_32_6_no_dsp_1:/guitar_effects_sitofp_32ns_32_6_no_dsp_1_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXP_INC_DELAY' (delay__parameterized4) to 'guitar_effects_sitofp_32ns_32_6_no_dsp_1:/guitar_effects_sitofp_32ns_32_6_no_dsp_1_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXP_INC_RND1_DELAY'
+INFO: [Synth 8-223] decloning instance 'guitar_effects_sitofp_32ns_32_6_no_dsp_1:/guitar_effects_sitofp_32ns_32_6_no_dsp_1_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXP_IN_DELAY.EXP_IN_DEL' (delay__parameterized15) to 'guitar_effects_sitofp_32ns_32_6_no_dsp_1:/guitar_effects_sitofp_32ns_32_6_no_dsp_1_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXP_RND2_DELAY.EXP_RND_DEL'
+INFO: [Synth 8-223] decloning instance 'guitar_effects_sitofp_32ns_32_6_no_dsp_1:/guitar_effects_sitofp_32ns_32_6_no_dsp_1_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXP_IN_DELAY.EXP_OFF_OP_DEL' (delay__parameterized15) to 'guitar_effects_sitofp_32ns_32_6_no_dsp_1:/guitar_effects_sitofp_32ns_32_6_no_dsp_1_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXP_RND2_DELAY.EXP_OFF_RND_DEL'
+INFO: [Synth 8-223] decloning instance 'guitar_effects_sitofp_32ns_32_6_no_dsp_1:/guitar_effects_sitofp_32ns_32_6_no_dsp_1_ip_u/inst/i_synth/DELAY_INVALID_OP' (delay__parameterized4) to 'guitar_effects_sitofp_32ns_32_6_no_dsp_1:/guitar_effects_sitofp_32ns_32_6_no_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO'
+INFO: [Synth 8-223] decloning instance 'guitar_effects_sitofp_32ns_32_6_no_dsp_1:/guitar_effects_sitofp_32ns_32_6_no_dsp_1_ip_u/inst/i_synth/DELAY_INVALID_OP' (delay__parameterized4) to 'guitar_effects_sitofp_32ns_32_6_no_dsp_1:/guitar_effects_sitofp_32ns_32_6_no_dsp_1_ip_u/inst/i_synth/DELAY_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'guitar_effects_sitofp_32ns_32_6_no_dsp_1:/guitar_effects_sitofp_32ns_32_6_no_dsp_1_ip_u/inst/i_synth/DELAY_INVALID_OP' (delay__parameterized4) to 'guitar_effects_sitofp_32ns_32_6_no_dsp_1:/guitar_effects_sitofp_32ns_32_6_no_dsp_1_ip_u/inst/i_synth/DELAY_UNDERFLOW'
+INFO: [Synth 8-223] decloning instance 'guitar_effects_sitofp_32ns_32_6_no_dsp_1:/guitar_effects_sitofp_32ns_32_6_no_dsp_1_ip_u/inst/i_synth/DELAY_INVALID_OP' (delay__parameterized4) to 'guitar_effects_sitofp_32ns_32_6_no_dsp_1:/guitar_effects_sitofp_32ns_32_6_no_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'guitar_effects_sitofp_32ns_32_6_no_dsp_1:/guitar_effects_sitofp_32ns_32_6_no_dsp_1_ip_u/inst/i_synth/DELAY_INVALID_OP' (delay__parameterized4) to 'guitar_effects_sitofp_32ns_32_6_no_dsp_1:/guitar_effects_sitofp_32ns_32_6_no_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/fadd_32ns_32ns_32_5_full_dsp_1_U15/guitar_effects_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/SUB_DELAY' (delay__parameterized4) to 'inst/fadd_32ns_32ns_32_5_full_dsp_1_U15/guitar_effects_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/SUB_ADD_IP_DELAY'
+INFO: [Synth 8-223] decloning instance 'inst/fadd_32ns_32ns_32_5_full_dsp_1_U15/guitar_effects_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized4) to 'inst/fadd_32ns_32ns_32_5_full_dsp_1_U15/guitar_effects_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/fadd_32ns_32ns_32_5_full_dsp_1_U15/guitar_effects_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized4) to 'inst/fadd_32ns_32ns_32_5_full_dsp_1_U15/guitar_effects_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/fmul_32ns_32ns_32_4_max_dsp_1_U16/guitar_effects_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized4) to 'inst/fmul_32ns_32ns_32_4_max_dsp_1_U16/guitar_effects_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/fmul_32ns_32ns_32_4_max_dsp_1_U16/guitar_effects_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized4) to 'inst/fmul_32ns_32ns_32_4_max_dsp_1_U16/guitar_effects_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3936] Found unconnected internal register 'guitar_effects_sdiv_32ns_32ns_32_36_seq_1_divseq_u/remd_tmp_reg' and it is trimmed from '32' to '31' bits. [c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/5994/hdl/verilog/guitar_effects_sdiv_32ns_32ns_32_36_seq_1.v:43]
+WARNING: [Synth 8-3936] Found unconnected internal register 'guitar_effects_srem_32ns_17ns_16_36_seq_1_divseq_u/sign0_reg' and it is trimmed from '2' to '1' bits. [c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/5994/hdl/verilog/guitar_effects_srem_32ns_17ns_16_36_seq_1.v:44]
+WARNING: [Synth 8-3332] Sequential element (FSM_onehot_wstate_reg[0]) is unused and will be removed from module guitar_effects_control_r_s_axi.
+WARNING: [Synth 8-3332] Sequential element (FSM_onehot_rstate_reg[0]) is unused and will be removed from module guitar_effects_control_r_s_axi.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_14_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_14_viv__parameterized1.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1826.797 ; gain = 190.457
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:43 ; elapsed = 00:00:44 . Memory (MB): peak = 1826.797 ; gain = 190.457
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 1826.797 ; gain = 190.457
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:46 ; elapsed = 00:00:48 . Memory (MB): peak = 1826.797 ; gain = 190.457
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:50 ; elapsed = 00:00:52 . Memory (MB): peak = 1826.797 ; gain = 190.457
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:50 ; elapsed = 00:00:52 . Memory (MB): peak = 1826.797 ; gain = 190.457
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:51 ; elapsed = 00:00:53 . Memory (MB): peak = 1826.797 ; gain = 190.457
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:51 ; elapsed = 00:00:53 . Memory (MB): peak = 1826.797 ; gain = 190.457
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:51 ; elapsed = 00:00:53 . Memory (MB): peak = 1826.797 ; gain = 190.457
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:51 ; elapsed = 00:00:53 . Memory (MB): peak = 1826.797 ; gain = 190.457
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++--------------------------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name                     | DSP Mapping     | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++--------------------------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|dsp48e1_wrapper                 | Dynamic         | -      | -      | -      | -      | 40     | -    | -    | -    | -    | 0     | 0    | 1    | 
+|dsp48e1_wrapper__parameterized0 | C+A'*B'         | 24     | 16     | 35     | -      | 35     | 1    | 1    | 1    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized1 | (A*B)'          | 24     | 17     | -      | -      | 41     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|dsp48e1_wrapper__parameterized2 | PCIN>>17+(A*B)' | 0      | 7      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|dsp48e1_wrapper__parameterized3 | PCIN+A:B+C      | 22     | 0      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++--------------------------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY4   |   193|
+|2     |DSP48E1  |     5|
+|7     |LUT1     |   360|
+|8     |LUT2     |   457|
+|9     |LUT3     |  1181|
+|10    |LUT4     |   478|
+|11    |LUT5     |   378|
+|12    |LUT6     |   840|
+|13    |MUXCY    |   228|
+|14    |MUXF7    |     6|
+|15    |RAMB36E1 |    64|
+|17    |SRL16E   |     2|
+|18    |SRLC32E  |     2|
+|19    |XORCY    |   137|
+|20    |FDE      |    35|
+|21    |FDRE     |  3112|
+|22    |FDSE     |     2|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:51 ; elapsed = 00:00:53 . Memory (MB): peak = 1826.797 ; gain = 190.457
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 198 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:31 ; elapsed = 00:00:50 . Memory (MB): peak = 1826.797 ; gain = 190.457
+Synthesis Optimization Complete : Time (s): cpu = 00:00:51 ; elapsed = 00:00:53 . Memory (MB): peak = 1826.797 ; gain = 190.457
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.114 . Memory (MB): peak = 1826.797 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 668 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1838.145 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 95 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 60 instances
+  FDE => FDRE: 35 instances
+
+Synth Design complete, checksum: 1bf0d79a
+INFO: [Common 17-83] Releasing license: Synthesis
+96 Infos, 111 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:55 ; elapsed = 00:00:59 . Memory (MB): peak = 1838.145 ; gain = 201.805
+INFO: [Common 17-1381] The checkpoint 'C:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/guitar_effects_design_guitar_effects_0_19_synth_1/guitar_effects_design_guitar_effects_0_19.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP guitar_effects_design_guitar_effects_0_19, cache-ID = 0c1876a4eeb0c003
+INFO: [Coretcl 2-1174] Renamed 214 cell refs.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/guitar_effects_design_guitar_effects_0_19_synth_1/guitar_effects_design_guitar_effects_0_19.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file guitar_effects_design_guitar_effects_0_19_utilization_synth.rpt -pb guitar_effects_design_guitar_effects_0_19_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Apr  1 16:33:36 2024...

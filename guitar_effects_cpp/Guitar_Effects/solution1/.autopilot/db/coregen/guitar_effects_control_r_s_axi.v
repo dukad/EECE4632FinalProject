@@ -33,7 +33,7 @@ module guitar_effects_control_r_s_axi
     input  wire                          axilite_out_ap_vld,
     output wire [7:0]                    control,
     output wire [31:0]                   distortion_threshold,
-    output wire [31:0]                   distortion_clip_factor,
+    output wire [0:0]                    distortion_clip_factor,
     output wire [31:0]                   compression_min_threshold,
     output wire [31:0]                   compression_max_threshold,
     output wire [31:0]                   compression_zero_threshold,
@@ -58,7 +58,8 @@ module guitar_effects_control_r_s_axi
 //        bit 31~0 - distortion_threshold[31:0] (Read/Write)
 // 0x2c : reserved
 // 0x30 : Data signal of distortion_clip_factor
-//        bit 31~0 - distortion_clip_factor[31:0] (Read/Write)
+//        bit 0  - distortion_clip_factor[0] (Read/Write)
+//        others - reserved
 // 0x34 : reserved
 // 0x38 : Data signal of compression_min_threshold
 //        bit 31~0 - compression_min_threshold[31:0] (Read/Write)
@@ -123,7 +124,7 @@ localparam
     reg  [31:0]                   int_axilite_out = 'b0;
     reg  [7:0]                    int_control = 'b0;
     reg  [31:0]                   int_distortion_threshold = 'b0;
-    reg  [31:0]                   int_distortion_clip_factor = 'b0;
+    reg  [0:0]                    int_distortion_clip_factor = 'b0;
     reg  [31:0]                   int_compression_min_threshold = 'b0;
     reg  [31:0]                   int_compression_max_threshold = 'b0;
     reg  [31:0]                   int_compression_zero_threshold = 'b0;
@@ -234,7 +235,7 @@ always @(posedge ACLK) begin
                     rdata <= int_distortion_threshold[31:0];
                 end
                 ADDR_DISTORTION_CLIP_FACTOR_DATA_0: begin
-                    rdata <= int_distortion_clip_factor[31:0];
+                    rdata <= int_distortion_clip_factor[0:0];
                 end
                 ADDR_COMPRESSION_MIN_THRESHOLD_DATA_0: begin
                     rdata <= int_compression_min_threshold[31:0];
@@ -308,13 +309,13 @@ always @(posedge ACLK) begin
     end
 end
 
-// int_distortion_clip_factor[31:0]
+// int_distortion_clip_factor[0:0]
 always @(posedge ACLK) begin
     if (ARESET)
-        int_distortion_clip_factor[31:0] <= 0;
+        int_distortion_clip_factor[0:0] <= 0;
     else if (ACLK_EN) begin
         if (w_hs && waddr == ADDR_DISTORTION_CLIP_FACTOR_DATA_0)
-            int_distortion_clip_factor[31:0] <= (WDATA[31:0] & wmask) | (int_distortion_clip_factor[31:0] & ~wmask);
+            int_distortion_clip_factor[0:0] <= (WDATA[31:0] & wmask) | (int_distortion_clip_factor[0:0] & ~wmask);
     end
 end
 

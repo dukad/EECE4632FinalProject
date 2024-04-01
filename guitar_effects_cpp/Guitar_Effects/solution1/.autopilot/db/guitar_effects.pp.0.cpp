@@ -6424,7 +6424,10 @@ private:
 
 
 
-int distortion(int input, int threshold, float clip_factor);
+typedef ap_fixed<1,8> mult_float;
+
+
+int distortion(int input, int threshold, mult_float clip_factor);
 int compression(int input, int min_threshold, int max_threshold, int zero_threshold, int& current_level, int values_buffer[441], int compression_buffer_index, int lpf_coefficients[441]);
 int delay(int input, int delay_samples, float delay_mult, int delay_buffer[44100], int delay_buffer_index);
 
@@ -6434,7 +6437,7 @@ __attribute__((sdx_kernel("guitar_effects", 0))) void guitar_effects (
  int &axilite_out,
     char control,
     int distortion_threshold,
-    float distortion_clip_factor,
+    mult_float distortion_clip_factor,
     int compression_min_threshold,
     int compression_max_threshold,
     int compression_zero_threshold,
@@ -6442,7 +6445,11 @@ __attribute__((sdx_kernel("guitar_effects", 0))) void guitar_effects (
     int delay_samples) {
 #line 15 "C:/Users/du.kad/Desktop/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/csynth.tcl"
 #pragma HLSDIRECTIVE TOP name=guitar_effects
-# 26 "guitar_effects.cpp"
+# 29 "guitar_effects.cpp"
+
+#line 6 "C:/Users/du.kad/Desktop/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/directives.tcl"
+#pragma HLSDIRECTIVE TOP name=guitar_effects
+# 29 "guitar_effects.cpp"
 
 
 
@@ -6468,7 +6475,7 @@ __attribute__((sdx_kernel("guitar_effects", 0))) void guitar_effects (
     int compression_buffer_index = 0;
     int lpf_coefficients[441] = {0};
     float filter_value = 3.0 / 441;
-    VITIS_LOOP_51_1: for (int i = 0; i < 441; i++) {
+    VITIS_LOOP_54_1: for (int i = 0; i < 441; i++) {
      lpf_coefficients[i] = filter_value;
     }
 
@@ -6477,10 +6484,11 @@ __attribute__((sdx_kernel("guitar_effects", 0))) void guitar_effects (
     int delay_buffer_index = 0;
 
     ap_axis<32,2,5,6> tmp;
+    ap_axis<32,2,5,6> tmp_out;
     int tmp_int;
     axilite_out = 0;
 
-    VITIS_LOOP_63_2: while(1) {
+    VITIS_LOOP_67_2: while(1) {
         INPUT.read(tmp);
         tmp_int = tmp.data.to_int();
 
@@ -6506,25 +6514,34 @@ __attribute__((sdx_kernel("guitar_effects", 0))) void guitar_effects (
          tmp_int = tmp_int;
         }
 
-        tmp.data = (tmp_int);
-        OUTPUT.write(tmp);
+        tmp_out.data = (tmp_int);
+        tmp_out.keep = tmp.keep;
+        tmp_out.strb = tmp.strb;
+        tmp_out.last = 0;
+        tmp_out.dest = tmp.dest;
+        tmp_out.id = tmp.id;
+        tmp_out.user = tmp.user;
+
         if(tmp.last){
-            break;
-            }
-        }
+                    break;
+                    }
+        OUTPUT.write(tmp_out);
+    }
+    tmp_out.last = 1;
+    OUTPUT.write(tmp_out);
 
 
 }
 
 
-int distortion(int input, int threshold, float clip_factor) {
+int distortion(int input, int threshold, mult_float clip_factor) {
 
     int result;
     int negative_threshold = -threshold;
     if (input > threshold) {
-        result = (((input - threshold)*clip_factor) + threshold);
+        result = (((input - threshold)*clip_factor) + threshold).to_int();
     } else if (input < negative_threshold) {
-        result = (((input + threshold)*clip_factor) - threshold);
+        result = (((input + threshold)*clip_factor) - threshold).to_int();
     } else {
         result = input;
     }
@@ -6558,16 +6575,16 @@ int compression(int input, int min_threshold, int max_threshold, int zero_thresh
     if (current_level > max_threshold) {
      if (current_level > 0) {
 
-      compression_factor = static_cast<float>(max_threshold) / current_level;
-      output = static_cast<int>(input * compression_factor);
+      compression_factor = (max_threshold) / current_level;
+      output = (input * compression_factor);
      } else {
       output = input;
      }
 
     } else if ((current_level < min_threshold) && (current_level > zero_threshold)) {
      if (current_level > 0) {
-      compression_factor = static_cast<int>(min_threshold) / current_level;
-      output = static_cast<int>(input * compression_factor);
+      compression_factor = (min_threshold) / current_level;
+      output = (input * compression_factor);
      } else {
       output = input;
      }
@@ -6584,7 +6601,7 @@ int compression(int input, int min_threshold, int max_threshold, int zero_thresh
 int delay(int input, int delay_samples, float delay_mult, int delay_buffer[44100], int delay_buffer_index) {
 
     int output;
-    output = static_cast<int>(input + (delay_buffer[(delay_buffer_index - delay_samples) % 44100]*delay_mult));
+    output = (input + (delay_buffer[(delay_buffer_index - delay_samples) % 44100]*delay_mult));
 
 
     delay_buffer[delay_buffer_index] = output;

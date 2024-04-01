@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'compression'" level="0">
-<item name = "Date">Wed Mar 27 19:53:44 2024
+<item name = "Date">Mon Apr  1 16:30:48 2024
 </item>
 <item name = "Version">2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)</item>
 <item name = "Project">Guitar_Effects</item>
@@ -49,21 +49,21 @@
 <column name="DSP">-, -, -, -, -</column>
 <column name="Expression">-, -, 0, 1397, -</column>
 <column name="FIFO">-, -, -, -, -</column>
-<column name="Instance">-, -, 394, 238, -</column>
+<column name="Instance">-, -, 788, 476, -</column>
 <column name="Memory">-, -, -, -, -</column>
-<column name="Multiplexer">-, -, -, 488, -</column>
-<column name="Register">-, -, 467, -, -</column>
+<column name="Multiplexer">-, -, -, 545, -</column>
+<column name="Register">-, -, 487, -, -</column>
 <specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
-<specialColumn name="Utilization (%)">0, 0, ~0, 3, 0</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, 1, 4, 0</specialColumn>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="fdiv_32ns_32ns_32_16_no_dsp_1_U3">fdiv_32ns_32ns_32_16_no_dsp_1, 0, 0, 0, 0, 0</column>
+<column name="sdiv_32ns_32ns_32_36_seq_1_U5">sdiv_32ns_32ns_32_36_seq_1, 0, 0, 394, 238, 0</column>
 <column name="sdiv_32ns_32ns_32_36_seq_1_U6">sdiv_32ns_32ns_32_36_seq_1, 0, 0, 394, 238, 0</column>
-<column name="sitofp_32ns_32_6_no_dsp_1_U5">sitofp_32ns_32_6_no_dsp_1, 0, 0, 0, 0, 0</column>
+<column name="sitofp_32ns_32_6_no_dsp_1_U4">sitofp_32ns_32_6_no_dsp_1, 0, 0, 0, 0, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -80,68 +80,66 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="add_ln346_3_fu_237_p2">+, 0, 0, 14, 9, 8</column>
-<column name="add_ln346_fu_383_p2">+, 0, 0, 14, 9, 8</column>
-<column name="result_V_12_fu_476_p2">-, 0, 0, 39, 1, 32</column>
-<column name="result_V_16_fu_330_p2">-, 0, 0, 39, 1, 32</column>
-<column name="sub_ln120_fu_150_p2">-, 0, 0, 39, 1, 32</column>
-<column name="sub_ln1512_3_fu_251_p2">-, 0, 0, 15, 7, 8</column>
-<column name="sub_ln1512_fu_397_p2">-, 0, 0, 15, 7, 8</column>
-<column name="and_ln147_1_fu_195_p2">and, 0, 0, 2, 1, 1</column>
-<column name="and_ln147_fu_189_p2">and, 0, 0, 2, 1, 1</column>
-<column name="icmp_ln138_fu_165_p2">icmp, 0, 0, 18, 32, 32</column>
-<column name="icmp_ln139_fu_171_p2">icmp, 0, 0, 18, 32, 1</column>
-<column name="icmp_ln147_1_fu_183_p2">icmp, 0, 0, 18, 32, 32</column>
-<column name="icmp_ln147_fu_177_p2">icmp, 0, 0, 18, 32, 32</column>
-<column name="r_V_7_fu_289_p2">lshr, 0, 0, 242, 79, 79</column>
-<column name="r_V_fu_435_p2">lshr, 0, 0, 242, 79, 79</column>
-<column name="result_V_17_fu_335_p3">select, 0, 0, 32, 1, 32</column>
-<column name="result_V_fu_481_p3">select, 0, 0, 32, 1, 32</column>
-<column name="ush_3_fu_261_p3">select, 0, 0, 9, 1, 9</column>
-<column name="ush_fu_407_p3">select, 0, 0, 9, 1, 9</column>
-<column name="val_3_fu_323_p3">select, 0, 0, 32, 1, 32</column>
-<column name="val_fu_469_p3">select, 0, 0, 32, 1, 32</column>
+<column name="add_ln346_1_fu_234_p2">+, 0, 0, 14, 9, 8</column>
+<column name="add_ln346_fu_392_p2">+, 0, 0, 14, 9, 8</column>
+<column name="result_V_4_fu_339_p2">-, 0, 0, 39, 1, 32</column>
+<column name="result_V_8_fu_327_p2">-, 0, 0, 39, 1, 32</column>
+<column name="sub_ln133_fu_141_p2">-, 0, 0, 39, 1, 32</column>
+<column name="sub_ln1512_1_fu_248_p2">-, 0, 0, 15, 7, 8</column>
+<column name="sub_ln1512_fu_406_p2">-, 0, 0, 15, 7, 8</column>
+<column name="and_ln160_1_fu_186_p2">and, 0, 0, 2, 1, 1</column>
+<column name="and_ln160_fu_180_p2">and, 0, 0, 2, 1, 1</column>
+<column name="icmp_ln151_fu_156_p2">icmp, 0, 0, 18, 32, 32</column>
+<column name="icmp_ln152_fu_162_p2">icmp, 0, 0, 18, 32, 1</column>
+<column name="icmp_ln160_1_fu_174_p2">icmp, 0, 0, 18, 32, 32</column>
+<column name="icmp_ln160_fu_168_p2">icmp, 0, 0, 18, 32, 32</column>
+<column name="r_V_4_fu_286_p2">lshr, 0, 0, 242, 79, 79</column>
+<column name="r_V_fu_444_p2">lshr, 0, 0, 242, 79, 79</column>
+<column name="result_V_9_fu_332_p3">select, 0, 0, 32, 1, 32</column>
+<column name="result_V_fu_344_p3">select, 0, 0, 32, 1, 32</column>
+<column name="ush_1_fu_258_p3">select, 0, 0, 9, 1, 9</column>
+<column name="ush_fu_416_p3">select, 0, 0, 9, 1, 9</column>
+<column name="val_1_fu_320_p3">select, 0, 0, 32, 1, 32</column>
+<column name="val_fu_478_p3">select, 0, 0, 32, 1, 32</column>
 <column name="values_buffer_d0">select, 0, 0, 32, 1, 32</column>
-<column name="r_V_6_fu_441_p2">shl, 0, 0, 242, 79, 79</column>
-<column name="r_V_8_fu_295_p2">shl, 0, 0, 242, 79, 79</column>
+<column name="r_V_3_fu_450_p2">shl, 0, 0, 242, 79, 79</column>
+<column name="r_V_5_fu_292_p2">shl, 0, 0, 242, 79, 79</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
-<column name="ap_NS_fsm">385, 78, 1, 78</column>
-<column name="ap_phi_mux_output_2_phi_fu_99_p8">9, 2, 32, 64</column>
+<column name="ap_NS_fsm">485, 97, 1, 97</column>
+<column name="ap_phi_mux_output_2_phi_fu_99_p8">14, 3, 32, 96</column>
 <column name="ap_return_0">9, 2, 32, 64</column>
 <column name="ap_return_1">9, 2, 32, 64</column>
-<column name="grp_fu_109_p0">14, 3, 32, 96</column>
-<column name="grp_fu_109_p1">14, 3, 32, 96</column>
-<column name="grp_fu_117_p0">20, 4, 32, 128</column>
-<column name="grp_fu_121_p0">14, 3, 32, 96</column>
+<column name="grp_fu_113_p0">14, 3, 32, 96</column>
 <column name="output_2_reg_96">14, 3, 32, 96</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
-<column name="and_ln147_1_reg_519">1, 0, 1, 0</column>
-<column name="ap_CS_fsm">77, 0, 77, 0</column>
+<column name="and_ln160_1_reg_517">1, 0, 1, 0</column>
+<column name="ap_CS_fsm">96, 0, 96, 0</column>
 <column name="ap_return_0_preg">32, 0, 32, 0</column>
 <column name="ap_return_1_preg">32, 0, 32, 0</column>
-<column name="compression_factor_reg_554">32, 0, 32, 0</column>
-<column name="icmp_ln138_reg_512">1, 0, 1, 0</column>
-<column name="isNeg_3_reg_538">1, 0, 1, 0</column>
-<column name="isNeg_reg_569">1, 0, 1, 0</column>
+<column name="icmp_ln151_reg_509">1, 0, 1, 0</column>
+<column name="icmp_ln152_reg_513">1, 0, 1, 0</column>
+<column name="isNeg_1_reg_536">1, 0, 1, 0</column>
+<column name="isNeg_reg_567">1, 0, 1, 0</column>
 <column name="output_2_reg_96">32, 0, 32, 0</column>
-<column name="p_Result_6_reg_564">23, 0, 23, 0</column>
-<column name="p_Result_7_reg_528">1, 0, 1, 0</column>
-<column name="p_Result_8_reg_533">23, 0, 23, 0</column>
-<column name="p_Result_s_reg_559">1, 0, 1, 0</column>
-<column name="reg_125">32, 0, 32, 0</column>
-<column name="reg_132">32, 0, 32, 0</column>
-<column name="reg_138">32, 0, 32, 0</column>
-<column name="sdiv_ln149_reg_523">32, 0, 32, 0</column>
-<column name="ush_3_reg_543">9, 0, 9, 0</column>
-<column name="ush_reg_574">9, 0, 9, 0</column>
-<column name="val_3_reg_548">32, 0, 32, 0</column>
-<column name="val_reg_579">32, 0, 32, 0</column>
+<column name="p_Result_2_reg_562">23, 0, 23, 0</column>
+<column name="p_Result_3_reg_526">1, 0, 1, 0</column>
+<column name="p_Result_4_reg_531">23, 0, 23, 0</column>
+<column name="p_Result_s_reg_557">1, 0, 1, 0</column>
+<column name="reg_119">32, 0, 32, 0</column>
+<column name="reg_124">32, 0, 32, 0</column>
+<column name="reg_129">32, 0, 32, 0</column>
+<column name="sdiv_ln154_reg_552">32, 0, 32, 0</column>
+<column name="sdiv_ln162_reg_521">32, 0, 32, 0</column>
+<column name="ush_1_reg_541">9, 0, 9, 0</column>
+<column name="ush_reg_572">9, 0, 9, 0</column>
+<column name="val_1_reg_546">32, 0, 32, 0</column>
+<column name="val_reg_577">32, 0, 32, 0</column>
 </table>
 </item>
 </section>
@@ -159,13 +157,13 @@
 <column name="ap_ready">out, 1, ap_ctrl_hs, compression, return value</column>
 <column name="ap_return_0">out, 32, ap_ctrl_hs, compression, return value</column>
 <column name="ap_return_1">out, 32, ap_ctrl_hs, compression, return value</column>
-<column name="grp_fu_382_p_din0">out, 32, ap_ctrl_hs, compression, return value</column>
-<column name="grp_fu_382_p_din1">out, 32, ap_ctrl_hs, compression, return value</column>
-<column name="grp_fu_382_p_dout0">in, 32, ap_ctrl_hs, compression, return value</column>
-<column name="grp_fu_382_p_ce">out, 1, ap_ctrl_hs, compression, return value</column>
-<column name="grp_fu_386_p_din0">out, 32, ap_ctrl_hs, compression, return value</column>
-<column name="grp_fu_386_p_dout0">in, 32, ap_ctrl_hs, compression, return value</column>
-<column name="grp_fu_386_p_ce">out, 1, ap_ctrl_hs, compression, return value</column>
+<column name="grp_fu_392_p_din0">out, 32, ap_ctrl_hs, compression, return value</column>
+<column name="grp_fu_392_p_din1">out, 32, ap_ctrl_hs, compression, return value</column>
+<column name="grp_fu_392_p_dout0">in, 32, ap_ctrl_hs, compression, return value</column>
+<column name="grp_fu_392_p_ce">out, 1, ap_ctrl_hs, compression, return value</column>
+<column name="grp_fu_396_p_din0">out, 32, ap_ctrl_hs, compression, return value</column>
+<column name="grp_fu_396_p_dout0">in, 32, ap_ctrl_hs, compression, return value</column>
+<column name="grp_fu_396_p_ce">out, 1, ap_ctrl_hs, compression, return value</column>
 <column name="input_r">in, 32, ap_none, input_r, scalar</column>
 <column name="min_threshold">in, 32, ap_none, min_threshold, scalar</column>
 <column name="max_threshold">in, 32, ap_none, max_threshold, scalar</column>

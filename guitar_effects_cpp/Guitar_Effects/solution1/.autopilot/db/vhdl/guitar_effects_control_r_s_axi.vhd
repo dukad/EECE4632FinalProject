@@ -36,7 +36,7 @@ port (
     axilite_out_ap_vld    :in   STD_LOGIC;
     control               :out  STD_LOGIC_VECTOR(7 downto 0);
     distortion_threshold  :out  STD_LOGIC_VECTOR(31 downto 0);
-    distortion_clip_factor :out  STD_LOGIC_VECTOR(31 downto 0);
+    distortion_clip_factor :out  STD_LOGIC_VECTOR(0 downto 0);
     compression_min_threshold :out  STD_LOGIC_VECTOR(31 downto 0);
     compression_max_threshold :out  STD_LOGIC_VECTOR(31 downto 0);
     compression_zero_threshold :out  STD_LOGIC_VECTOR(31 downto 0);
@@ -63,7 +63,8 @@ end entity guitar_effects_control_r_s_axi;
 --        bit 31~0 - distortion_threshold[31:0] (Read/Write)
 -- 0x2c : reserved
 -- 0x30 : Data signal of distortion_clip_factor
---        bit 31~0 - distortion_clip_factor[31:0] (Read/Write)
+--        bit 0  - distortion_clip_factor[0] (Read/Write)
+--        others - reserved
 -- 0x34 : reserved
 -- 0x38 : Data signal of compression_min_threshold
 --        bit 31~0 - compression_min_threshold[31:0] (Read/Write)
@@ -123,7 +124,7 @@ architecture behave of guitar_effects_control_r_s_axi is
     signal int_axilite_out     : UNSIGNED(31 downto 0) := (others => '0');
     signal int_control         : UNSIGNED(7 downto 0) := (others => '0');
     signal int_distortion_threshold : UNSIGNED(31 downto 0) := (others => '0');
-    signal int_distortion_clip_factor : UNSIGNED(31 downto 0) := (others => '0');
+    signal int_distortion_clip_factor : UNSIGNED(0 downto 0) := (others => '0');
     signal int_compression_min_threshold : UNSIGNED(31 downto 0) := (others => '0');
     signal int_compression_max_threshold : UNSIGNED(31 downto 0) := (others => '0');
     signal int_compression_zero_threshold : UNSIGNED(31 downto 0) := (others => '0');
@@ -253,7 +254,7 @@ begin
                     when ADDR_DISTORTION_THRESHOLD_DATA_0 =>
                         rdata_data <= RESIZE(int_distortion_threshold(31 downto 0), 32);
                     when ADDR_DISTORTION_CLIP_FACTOR_DATA_0 =>
-                        rdata_data <= RESIZE(int_distortion_clip_factor(31 downto 0), 32);
+                        rdata_data <= RESIZE(int_distortion_clip_factor(0 downto 0), 32);
                     when ADDR_COMPRESSION_MIN_THRESHOLD_DATA_0 =>
                         rdata_data <= RESIZE(int_compression_min_threshold(31 downto 0), 32);
                     when ADDR_COMPRESSION_MAX_THRESHOLD_DATA_0 =>
@@ -337,7 +338,7 @@ begin
         if (ACLK'event and ACLK = '1') then
             if (ACLK_EN = '1') then
                 if (w_hs = '1' and waddr = ADDR_DISTORTION_CLIP_FACTOR_DATA_0) then
-                    int_distortion_clip_factor(31 downto 0) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_distortion_clip_factor(31 downto 0));
+                    int_distortion_clip_factor(0 downto 0) <= (UNSIGNED(WDATA(0 downto 0)) and wmask(0 downto 0)) or ((not wmask(0 downto 0)) and int_distortion_clip_factor(0 downto 0));
                 end if;
             end if;
         end if;

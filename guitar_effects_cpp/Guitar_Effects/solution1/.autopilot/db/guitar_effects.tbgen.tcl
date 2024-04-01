@@ -30,7 +30,7 @@ set C_modelArgList {
 	{ axilite_out int 32 regular {axi_slave 1}  }
 	{ control int 8 regular {axi_slave 0}  }
 	{ distortion_threshold int 32 regular {axi_slave 0}  }
-	{ distortion_clip_factor float 32 regular {axi_slave 0}  }
+	{ distortion_clip_factor int 1 regular {axi_slave 0}  }
 	{ compression_min_threshold int 32 regular {axi_slave 0}  }
 	{ compression_max_threshold int 32 regular {axi_slave 0}  }
 	{ compression_zero_threshold int 32 regular {axi_slave 0}  }
@@ -55,7 +55,7 @@ set C_modelArgMapList {[
  	{ "Name" : "axilite_out", "interface" : "axi_slave", "bundle":"control_r","type":"ap_vld","bitwidth" : 32, "direction" : "WRITEONLY", "offset" : {"out":16}, "offset_end" : {"out":23}} , 
  	{ "Name" : "control", "interface" : "axi_slave", "bundle":"control_r","type":"ap_none","bitwidth" : 8, "direction" : "READONLY", "offset" : {"in":32}, "offset_end" : {"in":39}} , 
  	{ "Name" : "distortion_threshold", "interface" : "axi_slave", "bundle":"control_r","type":"ap_none","bitwidth" : 32, "direction" : "READONLY", "offset" : {"in":40}, "offset_end" : {"in":47}} , 
- 	{ "Name" : "distortion_clip_factor", "interface" : "axi_slave", "bundle":"control_r","type":"ap_none","bitwidth" : 32, "direction" : "READONLY", "offset" : {"in":48}, "offset_end" : {"in":55}} , 
+ 	{ "Name" : "distortion_clip_factor", "interface" : "axi_slave", "bundle":"control_r","type":"ap_none","bitwidth" : 1, "direction" : "READONLY", "offset" : {"in":48}, "offset_end" : {"in":55}} , 
  	{ "Name" : "compression_min_threshold", "interface" : "axi_slave", "bundle":"control_r","type":"ap_none","bitwidth" : 32, "direction" : "READONLY", "offset" : {"in":56}, "offset_end" : {"in":63}} , 
  	{ "Name" : "compression_max_threshold", "interface" : "axi_slave", "bundle":"control_r","type":"ap_none","bitwidth" : 32, "direction" : "READONLY", "offset" : {"in":64}, "offset_end" : {"in":71}} , 
  	{ "Name" : "compression_zero_threshold", "interface" : "axi_slave", "bundle":"control_r","type":"ap_none","bitwidth" : 32, "direction" : "READONLY", "offset" : {"in":72}, "offset_end" : {"in":79}} , 
@@ -186,13 +186,13 @@ set RtlHierarchyInfo {[
 			{"Name" : "delay_samples", "Type" : "None", "Direction" : "I"},
 			{"Name" : "compression_buffer", "Type" : "Memory", "Direction" : "O",
 				"SubConnect" : [
-					{"ID" : "5", "SubInstance" : "grp_compression_fu_366", "Port" : "values_buffer", "Inst_start_state" : "75", "Inst_end_state" : "76"}]}],
+					{"ID" : "5", "SubInstance" : "grp_compression_fu_376", "Port" : "values_buffer", "Inst_start_state" : "40", "Inst_end_state" : "41"}]}],
 		"Loop" : [
-			{"Name" : "VITIS_LOOP_63_2", "PipelineType" : "no",
-				"LoopDec" : {"FSMBitwidth" : "97", "FirstState" : "ap_ST_fsm_state38", "LastState" : ["ap_ST_fsm_state97"], "QuitState" : ["ap_ST_fsm_state38"], "PreState" : ["ap_ST_fsm_state37"], "PostState" : ["ap_ST_fsm_state1"], "OneDepthLoop" : "0", "OneStateBlock": ""}}]},
+			{"Name" : "VITIS_LOOP_67_2", "PipelineType" : "no",
+				"LoopDec" : {"FSMBitwidth" : "63", "FirstState" : "ap_ST_fsm_state38", "LastState" : ["ap_ST_fsm_state62"], "QuitState" : ["ap_ST_fsm_state61"], "PreState" : ["ap_ST_fsm_state37"], "PostState" : ["ap_ST_fsm_state63"], "OneDepthLoop" : "0", "OneStateBlock": ""}}]},
 	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.compression_buffer_U", "Parent" : "0"},
 	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.delay_buffer_U", "Parent" : "0"},
-	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_guitar_effects_Pipeline_2_fu_361", "Parent" : "0", "Child" : ["4"],
+	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_guitar_effects_Pipeline_2_fu_371", "Parent" : "0", "Child" : ["4"],
 		"CDFG" : "guitar_effects_Pipeline_2",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
@@ -210,8 +210,8 @@ set RtlHierarchyInfo {[
 			{"Name" : "delay_buffer", "Type" : "Memory", "Direction" : "O"}],
 		"Loop" : [
 			{"Name" : "Loop 1", "PipelineType" : "NotSupport"}]},
-	{"ID" : "4", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_guitar_effects_Pipeline_2_fu_361.flow_control_loop_pipe_sequential_init_U", "Parent" : "3"},
-	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_compression_fu_366", "Parent" : "0", "Child" : ["6", "7", "8"],
+	{"ID" : "4", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_guitar_effects_Pipeline_2_fu_371.flow_control_loop_pipe_sequential_init_U", "Parent" : "3"},
+	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_compression_fu_376", "Parent" : "0", "Child" : ["6", "7", "8"],
 		"CDFG" : "compression",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
@@ -232,14 +232,14 @@ set RtlHierarchyInfo {[
 			{"Name" : "zero_threshold", "Type" : "None", "Direction" : "I"},
 			{"Name" : "current_level_read", "Type" : "None", "Direction" : "I"},
 			{"Name" : "values_buffer", "Type" : "Memory", "Direction" : "O"}]},
-	{"ID" : "6", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_compression_fu_366.fdiv_32ns_32ns_32_16_no_dsp_1_U3", "Parent" : "5"},
-	{"ID" : "7", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_compression_fu_366.sitofp_32ns_32_6_no_dsp_1_U5", "Parent" : "5"},
-	{"ID" : "8", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_compression_fu_366.sdiv_32ns_32ns_32_36_seq_1_U6", "Parent" : "5"},
+	{"ID" : "6", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_compression_fu_376.sitofp_32ns_32_6_no_dsp_1_U4", "Parent" : "5"},
+	{"ID" : "7", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_compression_fu_376.sdiv_32ns_32ns_32_36_seq_1_U5", "Parent" : "5"},
+	{"ID" : "8", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_compression_fu_376.sdiv_32ns_32ns_32_36_seq_1_U6", "Parent" : "5"},
 	{"ID" : "9", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.control_r_s_axi_U", "Parent" : "0"},
-	{"ID" : "10", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.faddfsub_32ns_32ns_32_5_full_dsp_1_U16", "Parent" : "0"},
-	{"ID" : "11", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.fmul_32ns_32ns_32_4_max_dsp_1_U17", "Parent" : "0"},
-	{"ID" : "12", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.sitofp_32ns_32_6_no_dsp_1_U18", "Parent" : "0"},
-	{"ID" : "13", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.srem_32ns_17ns_16_36_seq_1_U19", "Parent" : "0"},
+	{"ID" : "10", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.fadd_32ns_32ns_32_5_full_dsp_1_U15", "Parent" : "0"},
+	{"ID" : "11", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.fmul_32ns_32ns_32_4_max_dsp_1_U16", "Parent" : "0"},
+	{"ID" : "12", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.sitofp_32ns_32_6_no_dsp_1_U17", "Parent" : "0"},
+	{"ID" : "13", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.srem_32ns_17ns_16_36_seq_1_U18", "Parent" : "0"},
 	{"ID" : "14", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_INPUT_r_V_data_V_U", "Parent" : "0"},
 	{"ID" : "15", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_INPUT_r_V_keep_V_U", "Parent" : "0"},
 	{"ID" : "16", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_INPUT_r_V_strb_V_U", "Parent" : "0"},
@@ -265,14 +265,14 @@ set ArgLastReadFirstWriteLatency {
 		INPUT_r_V_last_V {Type I LastRead 37 FirstWrite -1}
 		INPUT_r_V_id_V {Type I LastRead 37 FirstWrite -1}
 		INPUT_r_V_dest_V {Type I LastRead 37 FirstWrite -1}
-		OUTPUT_r_V_data_V {Type O LastRead -1 FirstWrite 77}
-		OUTPUT_r_V_keep_V {Type O LastRead -1 FirstWrite 77}
-		OUTPUT_r_V_strb_V {Type O LastRead -1 FirstWrite 77}
-		OUTPUT_r_V_user_V {Type O LastRead -1 FirstWrite 77}
-		OUTPUT_r_V_last_V {Type O LastRead -1 FirstWrite 77}
-		OUTPUT_r_V_id_V {Type O LastRead -1 FirstWrite 77}
-		OUTPUT_r_V_dest_V {Type O LastRead -1 FirstWrite 77}
-		axilite_out {Type O LastRead -1 FirstWrite 78}
+		OUTPUT_r_V_data_V {Type O LastRead -1 FirstWrite 60}
+		OUTPUT_r_V_keep_V {Type O LastRead -1 FirstWrite 60}
+		OUTPUT_r_V_strb_V {Type O LastRead -1 FirstWrite 60}
+		OUTPUT_r_V_user_V {Type O LastRead -1 FirstWrite 60}
+		OUTPUT_r_V_last_V {Type O LastRead -1 FirstWrite 60}
+		OUTPUT_r_V_id_V {Type O LastRead -1 FirstWrite 60}
+		OUTPUT_r_V_dest_V {Type O LastRead -1 FirstWrite 60}
+		axilite_out {Type O LastRead -1 FirstWrite 60}
 		control {Type I LastRead 0 FirstWrite -1}
 		distortion_threshold {Type I LastRead 0 FirstWrite -1}
 		distortion_clip_factor {Type I LastRead 0 FirstWrite -1}

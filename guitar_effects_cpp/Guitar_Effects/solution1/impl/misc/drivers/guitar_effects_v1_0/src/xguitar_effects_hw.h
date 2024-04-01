@@ -21,7 +21,8 @@
 //        bit 31~0 - distortion_threshold[31:0] (Read/Write)
 // 0x2c : reserved
 // 0x30 : Data signal of distortion_clip_factor
-//        bit 31~0 - distortion_clip_factor[31:0] (Read/Write)
+//        bit 0  - distortion_clip_factor[0] (Read/Write)
+//        others - reserved
 // 0x34 : reserved
 // 0x38 : Data signal of compression_min_threshold
 //        bit 31~0 - compression_min_threshold[31:0] (Read/Write)
@@ -48,7 +49,7 @@
 #define XGUITAR_EFFECTS_CONTROL_R_ADDR_DISTORTION_THRESHOLD_DATA       0x28
 #define XGUITAR_EFFECTS_CONTROL_R_BITS_DISTORTION_THRESHOLD_DATA       32
 #define XGUITAR_EFFECTS_CONTROL_R_ADDR_DISTORTION_CLIP_FACTOR_DATA     0x30
-#define XGUITAR_EFFECTS_CONTROL_R_BITS_DISTORTION_CLIP_FACTOR_DATA     32
+#define XGUITAR_EFFECTS_CONTROL_R_BITS_DISTORTION_CLIP_FACTOR_DATA     1
 #define XGUITAR_EFFECTS_CONTROL_R_ADDR_COMPRESSION_MIN_THRESHOLD_DATA  0x38
 #define XGUITAR_EFFECTS_CONTROL_R_BITS_COMPRESSION_MIN_THRESHOLD_DATA  32
 #define XGUITAR_EFFECTS_CONTROL_R_ADDR_COMPRESSION_MAX_THRESHOLD_DATA  0x40

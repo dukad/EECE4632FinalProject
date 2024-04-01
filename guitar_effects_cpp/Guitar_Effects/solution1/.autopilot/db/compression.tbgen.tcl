@@ -48,13 +48,13 @@ set portList {
 	{ values_buffer_d0 sc_out sc_lv 32 signal 5 } 
 	{ ap_return_0 sc_out sc_lv 32 signal -1 } 
 	{ ap_return_1 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_382_p_din0 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_382_p_din1 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_382_p_dout0 sc_in sc_lv 32 signal -1 } 
-	{ grp_fu_382_p_ce sc_out sc_logic 1 signal -1 } 
-	{ grp_fu_386_p_din0 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_386_p_dout0 sc_in sc_lv 32 signal -1 } 
-	{ grp_fu_386_p_ce sc_out sc_logic 1 signal -1 } 
+	{ grp_fu_392_p_din0 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_392_p_din1 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_392_p_dout0 sc_in sc_lv 32 signal -1 } 
+	{ grp_fu_392_p_ce sc_out sc_logic 1 signal -1 } 
+	{ grp_fu_396_p_din0 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_396_p_dout0 sc_in sc_lv 32 signal -1 } 
+	{ grp_fu_396_p_ce sc_out sc_logic 1 signal -1 } 
 }
 set NewPortList {[ 
 	{ "name": "ap_clk", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "clock", "bundle":{"name": "ap_clk", "role": "default" }} , 
@@ -74,13 +74,13 @@ set NewPortList {[
  	{ "name": "values_buffer_d0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "values_buffer", "role": "d0" }} , 
  	{ "name": "ap_return_0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "ap_return_0", "role": "default" }} , 
  	{ "name": "ap_return_1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "ap_return_1", "role": "default" }} , 
- 	{ "name": "grp_fu_382_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_382_p_din0", "role": "default" }} , 
- 	{ "name": "grp_fu_382_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_382_p_din1", "role": "default" }} , 
- 	{ "name": "grp_fu_382_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_382_p_dout0", "role": "default" }} , 
- 	{ "name": "grp_fu_382_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_382_p_ce", "role": "default" }} , 
- 	{ "name": "grp_fu_386_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_386_p_din0", "role": "default" }} , 
- 	{ "name": "grp_fu_386_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_386_p_dout0", "role": "default" }} , 
- 	{ "name": "grp_fu_386_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_386_p_ce", "role": "default" }}  ]}
+ 	{ "name": "grp_fu_392_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_392_p_din0", "role": "default" }} , 
+ 	{ "name": "grp_fu_392_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_392_p_din1", "role": "default" }} , 
+ 	{ "name": "grp_fu_392_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_392_p_dout0", "role": "default" }} , 
+ 	{ "name": "grp_fu_392_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_392_p_ce", "role": "default" }} , 
+ 	{ "name": "grp_fu_396_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_396_p_din0", "role": "default" }} , 
+ 	{ "name": "grp_fu_396_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_396_p_dout0", "role": "default" }} , 
+ 	{ "name": "grp_fu_396_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_396_p_ce", "role": "default" }}  ]}
 
 set RtlHierarchyInfo {[
 	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2", "3"],
@@ -104,8 +104,8 @@ set RtlHierarchyInfo {[
 			{"Name" : "zero_threshold", "Type" : "None", "Direction" : "I"},
 			{"Name" : "current_level_read", "Type" : "None", "Direction" : "I"},
 			{"Name" : "values_buffer", "Type" : "Memory", "Direction" : "O"}]},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.fdiv_32ns_32ns_32_16_no_dsp_1_U3", "Parent" : "0"},
-	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.sitofp_32ns_32_6_no_dsp_1_U5", "Parent" : "0"},
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.sitofp_32ns_32_6_no_dsp_1_U4", "Parent" : "0"},
+	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.sdiv_32ns_32ns_32_36_seq_1_U5", "Parent" : "0"},
 	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.sdiv_32ns_32ns_32_36_seq_1_U6", "Parent" : "0"}]}
 
 
