@@ -2,9 +2,9 @@
 #include <ap_axi_sdata.h>
 
 typedef ap_axis<16,1,1,1> AXI_VAL;
-typedef int data_t;
-typedef int	coef_t;
-typedef int	acc_t;
+typedef short data_t;
+typedef short	coef_t;
+typedef short	acc_t;
 
 #define N 11
 
@@ -23,7 +23,7 @@ void filt (hls::stream<AXI_VAL>& y, coef_t c[N], hls::stream<AXI_VAL>& x) {
 	acc=0;
 	AXI_VAL tmp1;
 	x.read(tmp1);
-	int i;
+	short i;
 	Shift_Accum_Loop:
 	for (i = N - 1; i > 0; i--) {
 #pragma HLS UNROLL
@@ -31,8 +31,8 @@ void filt (hls::stream<AXI_VAL>& y, coef_t c[N], hls::stream<AXI_VAL>& x) {
 		acc += shift_reg[i] * c[i];
 	}
 
-	acc += tmp1.data.to_int() * c[0];
-	shift_reg[0] = tmp1.data.to_int();
+	acc += tmp1.data.to_short() * c[0];
+	shift_reg[0] = tmp1.data.to_short();
 	AXI_VAL output;
 	output.data = acc;
 	output.keep = tmp1.keep;

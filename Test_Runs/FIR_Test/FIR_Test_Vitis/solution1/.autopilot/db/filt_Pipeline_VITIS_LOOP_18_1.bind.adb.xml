@@ -109,10 +109,10 @@ newFuncRoot:3 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i
 
 <Node id="40" bw="16" op_0_bw="16" op_1_bw="16">
 <![CDATA[
-newFuncRoot:4 %tmp = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %empty
+newFuncRoot:4 %gmem_addr_read_11 = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %gmem_addr_read_1
 
 ]]></Node>
-<StgValue><ssdm name="tmp"/></StgValue>
+<StgValue><ssdm name="gmem_addr_read_11"/></StgValue>
 </operation>
 
 <operation id="14" st_id="1" stage="1" lat="1">
@@ -124,10 +124,10 @@ newFuncRoot:4 %tmp = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %empty
 
 <Node id="41" bw="16" op_0_bw="16" op_1_bw="16">
 <![CDATA[
-newFuncRoot:5 %tmp_1 = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %empty_28
+newFuncRoot:5 %gmem_addr_read_12 = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %gmem_addr_read_2
 
 ]]></Node>
-<StgValue><ssdm name="tmp_1"/></StgValue>
+<StgValue><ssdm name="gmem_addr_read_12"/></StgValue>
 </operation>
 
 <operation id="15" st_id="1" stage="1" lat="1">
@@ -139,10 +139,10 @@ newFuncRoot:5 %tmp_1 = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %empty_28
 
 <Node id="42" bw="16" op_0_bw="16" op_1_bw="16">
 <![CDATA[
-newFuncRoot:6 %tmp_2 = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %empty_27
+newFuncRoot:6 %gmem_addr_read_13 = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %gmem_addr_read_3
 
 ]]></Node>
-<StgValue><ssdm name="tmp_2"/></StgValue>
+<StgValue><ssdm name="gmem_addr_read_13"/></StgValue>
 </operation>
 
 <operation id="16" st_id="1" stage="1" lat="1">
@@ -154,10 +154,10 @@ newFuncRoot:6 %tmp_2 = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %empty_27
 
 <Node id="43" bw="16" op_0_bw="16" op_1_bw="16">
 <![CDATA[
-newFuncRoot:7 %tmp_3 = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %empty_26
+newFuncRoot:7 %gmem_addr_read_14 = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %gmem_addr_read_4
 
 ]]></Node>
-<StgValue><ssdm name="tmp_3"/></StgValue>
+<StgValue><ssdm name="gmem_addr_read_14"/></StgValue>
 </operation>
 
 <operation id="17" st_id="1" stage="1" lat="1">
@@ -169,10 +169,10 @@ newFuncRoot:7 %tmp_3 = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %empty_26
 
 <Node id="44" bw="16" op_0_bw="16" op_1_bw="16">
 <![CDATA[
-newFuncRoot:8 %tmp_4 = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %empty_25
+newFuncRoot:8 %gmem_addr_read_15 = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %gmem_addr_read_5
 
 ]]></Node>
-<StgValue><ssdm name="tmp_4"/></StgValue>
+<StgValue><ssdm name="gmem_addr_read_15"/></StgValue>
 </operation>
 
 <operation id="18" st_id="1" stage="1" lat="1">
@@ -184,10 +184,10 @@ newFuncRoot:8 %tmp_4 = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %empty_25
 
 <Node id="45" bw="16" op_0_bw="16" op_1_bw="16">
 <![CDATA[
-newFuncRoot:9 %tmp_5 = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %empty_24
+newFuncRoot:9 %gmem_addr_read_16 = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %gmem_addr_read_6
 
 ]]></Node>
-<StgValue><ssdm name="tmp_5"/></StgValue>
+<StgValue><ssdm name="gmem_addr_read_16"/></StgValue>
 </operation>
 
 <operation id="19" st_id="1" stage="1" lat="1">
@@ -199,10 +199,10 @@ newFuncRoot:9 %tmp_5 = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %empty_24
 
 <Node id="46" bw="16" op_0_bw="16" op_1_bw="16">
 <![CDATA[
-newFuncRoot:10 %tmp_6 = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %empty_23
+newFuncRoot:10 %gmem_addr_read_17 = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %gmem_addr_read_7
 
 ]]></Node>
-<StgValue><ssdm name="tmp_6"/></StgValue>
+<StgValue><ssdm name="gmem_addr_read_17"/></StgValue>
 </operation>
 
 <operation id="20" st_id="1" stage="1" lat="1">
@@ -214,10 +214,10 @@ newFuncRoot:10 %tmp_6 = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %empty_23
 
 <Node id="47" bw="16" op_0_bw="16" op_1_bw="16">
 <![CDATA[
-newFuncRoot:11 %tmp_7 = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %empty_22
+newFuncRoot:11 %gmem_addr_read_18 = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %gmem_addr_read_8
 
 ]]></Node>
-<StgValue><ssdm name="tmp_7"/></StgValue>
+<StgValue><ssdm name="gmem_addr_read_18"/></StgValue>
 </operation>
 
 <operation id="21" st_id="1" stage="1" lat="1">
@@ -229,10 +229,10 @@ newFuncRoot:11 %tmp_7 = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %empty_22
 
 <Node id="48" bw="16" op_0_bw="16" op_1_bw="16">
 <![CDATA[
-newFuncRoot:12 %tmp_8 = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %empty_21
+newFuncRoot:12 %gmem_addr_read_19 = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %gmem_addr_read_9
 
 ]]></Node>
-<StgValue><ssdm name="tmp_8"/></StgValue>
+<StgValue><ssdm name="gmem_addr_read_19"/></StgValue>
 </operation>
 
 <operation id="22" st_id="1" stage="1" lat="1">
@@ -244,10 +244,10 @@ newFuncRoot:12 %tmp_8 = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %empty_21
 
 <Node id="49" bw="16" op_0_bw="16" op_1_bw="16">
 <![CDATA[
-newFuncRoot:13 %tmp_9 = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %empty_20
+newFuncRoot:13 %gmem_addr_read_20 = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %gmem_addr_read
 
 ]]></Node>
-<StgValue><ssdm name="tmp_9"/></StgValue>
+<StgValue><ssdm name="gmem_addr_read_20"/></StgValue>
 </operation>
 
 <operation id="23" st_id="1" stage="1" lat="1">
@@ -259,10 +259,10 @@ newFuncRoot:13 %tmp_9 = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %empty_20
 
 <Node id="50" bw="16" op_0_bw="16" op_1_bw="16">
 <![CDATA[
-newFuncRoot:14 %tmp_10 = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %empty_19
+newFuncRoot:14 %gmem_addr_read_21 = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %gmem_addr_read_10
 
 ]]></Node>
-<StgValue><ssdm name="tmp_10"/></StgValue>
+<StgValue><ssdm name="gmem_addr_read_21"/></StgValue>
 </operation>
 
 <operation id="24" st_id="1" stage="1" lat="1">
@@ -289,10 +289,10 @@ newFuncRoot:15 %br_ln0 = br void %Shift_Accum_Loop
 
 <Node id="53" bw="24" op_0_bw="24" op_1_bw="16" op_2_bw="2" op_3_bw="2" op_4_bw="1" op_5_bw="1" op_6_bw="1" op_7_bw="1">
 <![CDATA[
-Shift_Accum_Loop:0 %empty_29 = read i24 @_ssdm_op_Read.axis.volatile.i16P0A.i2P0A.i2P0A.i1P0A.i1P0A.i1P0A.i1P0A, i16 %x_V_data_V, i2 %x_V_keep_V, i2 %x_V_strb_V, i1 %x_V_user_V, i1 %x_V_last_V, i1 %x_V_id_V, i1 %x_V_dest_V
+Shift_Accum_Loop:0 %empty = read i24 @_ssdm_op_Read.axis.volatile.i16P0A.i2P0A.i2P0A.i1P0A.i1P0A.i1P0A.i1P0A, i16 %x_V_data_V, i2 %x_V_keep_V, i2 %x_V_strb_V, i1 %x_V_user_V, i1 %x_V_last_V, i1 %x_V_id_V, i1 %x_V_dest_V
 
 ]]></Node>
-<StgValue><ssdm name="empty_29"/></StgValue>
+<StgValue><ssdm name="empty"/></StgValue>
 </operation>
 
 <operation id="26" st_id="1" stage="1" lat="1">
@@ -304,7 +304,7 @@ Shift_Accum_Loop:0 %empty_29 = read i24 @_ssdm_op_Read.axis.volatile.i16P0A.i2P0
 
 <Node id="54" bw="16" op_0_bw="24">
 <![CDATA[
-Shift_Accum_Loop:1 %tmp1_data = extractvalue i24 %empty_29
+Shift_Accum_Loop:1 %tmp1_data = extractvalue i24 %empty
 
 ]]></Node>
 <StgValue><ssdm name="tmp1_data"/></StgValue>
@@ -319,7 +319,7 @@ Shift_Accum_Loop:1 %tmp1_data = extractvalue i24 %empty_29
 
 <Node id="55" bw="2" op_0_bw="24">
 <![CDATA[
-Shift_Accum_Loop:2 %tmp1_keep = extractvalue i24 %empty_29
+Shift_Accum_Loop:2 %tmp1_keep = extractvalue i24 %empty
 
 ]]></Node>
 <StgValue><ssdm name="tmp1_keep"/></StgValue>
@@ -334,7 +334,7 @@ Shift_Accum_Loop:2 %tmp1_keep = extractvalue i24 %empty_29
 
 <Node id="56" bw="2" op_0_bw="24">
 <![CDATA[
-Shift_Accum_Loop:3 %tmp1_strb = extractvalue i24 %empty_29
+Shift_Accum_Loop:3 %tmp1_strb = extractvalue i24 %empty
 
 ]]></Node>
 <StgValue><ssdm name="tmp1_strb"/></StgValue>
@@ -349,7 +349,7 @@ Shift_Accum_Loop:3 %tmp1_strb = extractvalue i24 %empty_29
 
 <Node id="57" bw="1" op_0_bw="24">
 <![CDATA[
-Shift_Accum_Loop:4 %tmp1_user = extractvalue i24 %empty_29
+Shift_Accum_Loop:4 %tmp1_user = extractvalue i24 %empty
 
 ]]></Node>
 <StgValue><ssdm name="tmp1_user"/></StgValue>
@@ -364,7 +364,7 @@ Shift_Accum_Loop:4 %tmp1_user = extractvalue i24 %empty_29
 
 <Node id="58" bw="1" op_0_bw="24">
 <![CDATA[
-Shift_Accum_Loop:5 %tmp1_last = extractvalue i24 %empty_29
+Shift_Accum_Loop:5 %tmp1_last = extractvalue i24 %empty
 
 ]]></Node>
 <StgValue><ssdm name="tmp1_last"/></StgValue>
@@ -379,7 +379,7 @@ Shift_Accum_Loop:5 %tmp1_last = extractvalue i24 %empty_29
 
 <Node id="59" bw="1" op_0_bw="24">
 <![CDATA[
-Shift_Accum_Loop:6 %tmp1_id = extractvalue i24 %empty_29
+Shift_Accum_Loop:6 %tmp1_id = extractvalue i24 %empty
 
 ]]></Node>
 <StgValue><ssdm name="tmp1_id"/></StgValue>
@@ -394,25 +394,25 @@ Shift_Accum_Loop:6 %tmp1_id = extractvalue i24 %empty_29
 
 <Node id="60" bw="1" op_0_bw="24">
 <![CDATA[
-Shift_Accum_Loop:7 %tmp1_dest = extractvalue i24 %empty_29
+Shift_Accum_Loop:7 %tmp1_dest = extractvalue i24 %empty
 
 ]]></Node>
 <StgValue><ssdm name="tmp1_dest"/></StgValue>
 </operation>
 
-<operation id="33" st_id="1" stage="1" lat="1">
-<core>NULL</core>
+<operation id="33" st_id="1" stage="3" lat="3">
+<core>DSP48</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="63" bw="16" op_0_bw="16">
+<Node id="63" bw="16" op_0_bw="16" op_1_bw="16">
 <![CDATA[
-Shift_Accum_Loop:10 %filt_stream_int_stream_axis_0_shift_reg_2_load = load i16 %filt_stream_int_stream_axis_0_shift_reg_2
+Shift_Accum_Loop:10 %mul_ln34 = mul i16 %tmp1_data, i16 %gmem_addr_read_20
 
 ]]></Node>
-<StgValue><ssdm name="filt_stream_int_stream_axis_0_shift_reg_2_load"/></StgValue>
+<StgValue><ssdm name="mul_ln34"/></StgValue>
 </operation>
 
 <operation id="34" st_id="1" stage="1" lat="1">
@@ -422,12 +422,12 @@ Shift_Accum_Loop:10 %filt_stream_int_stream_axis_0_shift_reg_2_load = load i16 %
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="64" bw="16" op_0_bw="16">
+<Node id="66" bw="16" op_0_bw="16">
 <![CDATA[
-Shift_Accum_Loop:11 %filt_stream_int_stream_axis_0_shift_reg_3_load = load i16 %filt_stream_int_stream_axis_0_shift_reg_3
+Shift_Accum_Loop:13 %filt_stream_short_stream_axis_0_shift_reg_2_load = load i16 %filt_stream_short_stream_axis_0_shift_reg_2
 
 ]]></Node>
-<StgValue><ssdm name="filt_stream_int_stream_axis_0_shift_reg_3_load"/></StgValue>
+<StgValue><ssdm name="filt_stream_short_stream_axis_0_shift_reg_2_load"/></StgValue>
 </operation>
 
 <operation id="35" st_id="1" stage="1" lat="1">
@@ -437,27 +437,27 @@ Shift_Accum_Loop:11 %filt_stream_int_stream_axis_0_shift_reg_3_load = load i16 %
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="65" bw="16" op_0_bw="16">
+<Node id="68" bw="16" op_0_bw="16">
 <![CDATA[
-Shift_Accum_Loop:12 %filt_stream_int_stream_axis_0_shift_reg_4_load = load i16 %filt_stream_int_stream_axis_0_shift_reg_4
+Shift_Accum_Loop:15 %filt_stream_short_stream_axis_0_shift_reg_3_load = load i16 %filt_stream_short_stream_axis_0_shift_reg_3
 
 ]]></Node>
-<StgValue><ssdm name="filt_stream_int_stream_axis_0_shift_reg_4_load"/></StgValue>
+<StgValue><ssdm name="filt_stream_short_stream_axis_0_shift_reg_3_load"/></StgValue>
 </operation>
 
-<operation id="36" st_id="1" stage="1" lat="1">
-<core>NULL</core>
+<operation id="36" st_id="1" stage="3" lat="3">
+<core>DSP48</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="66" bw="16" op_0_bw="16">
+<Node id="69" bw="16" op_0_bw="16" op_1_bw="16">
 <![CDATA[
-Shift_Accum_Loop:13 %filt_stream_int_stream_axis_0_shift_reg_5_load = load i16 %filt_stream_int_stream_axis_0_shift_reg_5
+Shift_Accum_Loop:16 %mul_ln31_2 = mul i16 %filt_stream_short_stream_axis_0_shift_reg_3_load, i16 %gmem_addr_read_17
 
 ]]></Node>
-<StgValue><ssdm name="filt_stream_int_stream_axis_0_shift_reg_5_load"/></StgValue>
+<StgValue><ssdm name="mul_ln31_2"/></StgValue>
 </operation>
 
 <operation id="37" st_id="1" stage="1" lat="1">
@@ -467,12 +467,12 @@ Shift_Accum_Loop:13 %filt_stream_int_stream_axis_0_shift_reg_5_load = load i16 %
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="67" bw="16" op_0_bw="16">
+<Node id="70" bw="16" op_0_bw="16">
 <![CDATA[
-Shift_Accum_Loop:14 %filt_stream_int_stream_axis_0_shift_reg_6_load = load i16 %filt_stream_int_stream_axis_0_shift_reg_6
+Shift_Accum_Loop:17 %filt_stream_short_stream_axis_0_shift_reg_4_load = load i16 %filt_stream_short_stream_axis_0_shift_reg_4
 
 ]]></Node>
-<StgValue><ssdm name="filt_stream_int_stream_axis_0_shift_reg_6_load"/></StgValue>
+<StgValue><ssdm name="filt_stream_short_stream_axis_0_shift_reg_4_load"/></StgValue>
 </operation>
 
 <operation id="38" st_id="1" stage="1" lat="1">
@@ -482,27 +482,27 @@ Shift_Accum_Loop:14 %filt_stream_int_stream_axis_0_shift_reg_6_load = load i16 %
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="68" bw="16" op_0_bw="16">
+<Node id="72" bw="16" op_0_bw="16">
 <![CDATA[
-Shift_Accum_Loop:15 %filt_stream_int_stream_axis_0_shift_reg_7_load = load i16 %filt_stream_int_stream_axis_0_shift_reg_7
+Shift_Accum_Loop:19 %filt_stream_short_stream_axis_0_shift_reg_5_load = load i16 %filt_stream_short_stream_axis_0_shift_reg_5
 
 ]]></Node>
-<StgValue><ssdm name="filt_stream_int_stream_axis_0_shift_reg_7_load"/></StgValue>
+<StgValue><ssdm name="filt_stream_short_stream_axis_0_shift_reg_5_load"/></StgValue>
 </operation>
 
 <operation id="39" st_id="1" stage="1" lat="1">
-<core>NULL</core>
+<core>Multiplier</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="69" bw="16" op_0_bw="16">
+<Node id="73" bw="16" op_0_bw="16" op_1_bw="16">
 <![CDATA[
-Shift_Accum_Loop:16 %filt_stream_int_stream_axis_0_shift_reg_8_load = load i16 %filt_stream_int_stream_axis_0_shift_reg_8
+Shift_Accum_Loop:20 %mul_ln31_4 = mul i16 %filt_stream_short_stream_axis_0_shift_reg_5_load, i16 %gmem_addr_read_15
 
 ]]></Node>
-<StgValue><ssdm name="filt_stream_int_stream_axis_0_shift_reg_8_load"/></StgValue>
+<StgValue><ssdm name="mul_ln31_4"/></StgValue>
 </operation>
 
 <operation id="40" st_id="1" stage="1" lat="1">
@@ -512,12 +512,12 @@ Shift_Accum_Loop:16 %filt_stream_int_stream_axis_0_shift_reg_8_load = load i16 %
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="70" bw="16" op_0_bw="16">
+<Node id="74" bw="16" op_0_bw="16">
 <![CDATA[
-Shift_Accum_Loop:17 %filt_stream_int_stream_axis_0_shift_reg_9_load = load i16 %filt_stream_int_stream_axis_0_shift_reg_9
+Shift_Accum_Loop:21 %filt_stream_short_stream_axis_0_shift_reg_6_load = load i16 %filt_stream_short_stream_axis_0_shift_reg_6
 
 ]]></Node>
-<StgValue><ssdm name="filt_stream_int_stream_axis_0_shift_reg_9_load"/></StgValue>
+<StgValue><ssdm name="filt_stream_short_stream_axis_0_shift_reg_6_load"/></StgValue>
 </operation>
 
 <operation id="41" st_id="1" stage="3" lat="3">
@@ -527,76 +527,76 @@ Shift_Accum_Loop:17 %filt_stream_int_stream_axis_0_shift_reg_9_load = load i16 %
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="71" bw="16" op_0_bw="16" op_1_bw="16">
-<![CDATA[
-Shift_Accum_Loop:18 %mul_ln34 = mul i16 %tmp_10, i16 %tmp1_data
-
-]]></Node>
-<StgValue><ssdm name="mul_ln34"/></StgValue>
-</operation>
-
-<operation id="42" st_id="1" stage="3" lat="3">
-<core>DSP48</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="73" bw="16" op_0_bw="16" op_1_bw="16">
-<![CDATA[
-Shift_Accum_Loop:20 %mul_ln34_2 = mul i16 %filt_stream_int_stream_axis_0_shift_reg_9_load, i16 %tmp_8
-
-]]></Node>
-<StgValue><ssdm name="mul_ln34_2"/></StgValue>
-</operation>
-
-<operation id="43" st_id="1" stage="3" lat="3">
-<core>DSP48</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
 <Node id="75" bw="16" op_0_bw="16" op_1_bw="16">
 <![CDATA[
-Shift_Accum_Loop:22 %mul_ln34_4 = mul i16 %filt_stream_int_stream_axis_0_shift_reg_6_load, i16 %tmp_6
+Shift_Accum_Loop:22 %mul_ln31_5 = mul i16 %filt_stream_short_stream_axis_0_shift_reg_6_load, i16 %gmem_addr_read_14
 
 ]]></Node>
-<StgValue><ssdm name="mul_ln34_4"/></StgValue>
+<StgValue><ssdm name="mul_ln31_5"/></StgValue>
 </operation>
 
-<operation id="44" st_id="1" stage="3" lat="3">
-<core>DSP48</core>
+<operation id="42" st_id="1" stage="1" lat="1">
+<core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="76" bw="16" op_0_bw="16" op_1_bw="16">
+<Node id="76" bw="16" op_0_bw="16">
 <![CDATA[
-Shift_Accum_Loop:23 %mul_ln34_5 = mul i16 %filt_stream_int_stream_axis_0_shift_reg_3_load, i16 %tmp_5
+Shift_Accum_Loop:23 %filt_stream_short_stream_axis_0_shift_reg_7_load = load i16 %filt_stream_short_stream_axis_0_shift_reg_7
 
 ]]></Node>
-<StgValue><ssdm name="mul_ln34_5"/></StgValue>
+<StgValue><ssdm name="filt_stream_short_stream_axis_0_shift_reg_7_load"/></StgValue>
+</operation>
+
+<operation id="43" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="78" bw="16" op_0_bw="16">
+<![CDATA[
+Shift_Accum_Loop:25 %filt_stream_short_stream_axis_0_shift_reg_8_load = load i16 %filt_stream_short_stream_axis_0_shift_reg_8
+
+]]></Node>
+<StgValue><ssdm name="filt_stream_short_stream_axis_0_shift_reg_8_load"/></StgValue>
+</operation>
+
+<operation id="44" st_id="1" stage="1" lat="1">
+<core>Multiplier</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="79" bw="16" op_0_bw="16" op_1_bw="16">
+<![CDATA[
+Shift_Accum_Loop:26 %mul_ln31_7 = mul i16 %filt_stream_short_stream_axis_0_shift_reg_8_load, i16 %gmem_addr_read_12
+
+]]></Node>
+<StgValue><ssdm name="mul_ln31_7"/></StgValue>
 </operation>
 
 <operation id="45" st_id="1" stage="1" lat="1">
-<core>Multiplier</core>
+<core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="78" bw="16" op_0_bw="16" op_1_bw="16">
+<Node id="80" bw="16" op_0_bw="16">
 <![CDATA[
-Shift_Accum_Loop:25 %mul_ln34_7 = mul i16 %filt_stream_int_stream_axis_0_shift_reg_5_load, i16 %tmp_3
+Shift_Accum_Loop:27 %filt_stream_short_stream_axis_0_shift_reg_9_load = load i16 %filt_stream_short_stream_axis_0_shift_reg_9
 
 ]]></Node>
-<StgValue><ssdm name="mul_ln34_7"/></StgValue>
+<StgValue><ssdm name="filt_stream_short_stream_axis_0_shift_reg_9_load"/></StgValue>
 </operation>
 
-<operation id="46" st_id="1" stage="1" lat="1">
-<core>Multiplier</core>
+<operation id="46" st_id="1" stage="3" lat="3">
+<core>DSP48</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
@@ -604,10 +604,10 @@ Shift_Accum_Loop:25 %mul_ln34_7 = mul i16 %filt_stream_int_stream_axis_0_shift_r
 
 <Node id="81" bw="16" op_0_bw="16" op_1_bw="16">
 <![CDATA[
-Shift_Accum_Loop:28 %mul_ln34_10 = mul i16 %filt_stream_int_stream_axis_0_shift_reg_8_load, i16 %tmp
+Shift_Accum_Loop:28 %mul_ln31_8 = mul i16 %filt_stream_short_stream_axis_0_shift_reg_9_load, i16 %gmem_addr_read_11
 
 ]]></Node>
-<StgValue><ssdm name="mul_ln34_10"/></StgValue>
+<StgValue><ssdm name="mul_ln31_8"/></StgValue>
 </operation>
 
 <operation id="47" st_id="1" stage="1" lat="1">
@@ -619,7 +619,7 @@ Shift_Accum_Loop:28 %mul_ln34_10 = mul i16 %filt_stream_int_stream_axis_0_shift_
 
 <Node id="94" bw="0" op_0_bw="16" op_1_bw="16" op_2_bw="0">
 <![CDATA[
-Shift_Accum_Loop:41 %store_ln30 = store i16 %filt_stream_int_stream_axis_0_shift_reg_3_load, i16 %filt_stream_int_stream_axis_0_shift_reg_2
+Shift_Accum_Loop:41 %store_ln30 = store i16 %filt_stream_short_stream_axis_0_shift_reg_3_load, i16 %filt_stream_short_stream_axis_0_shift_reg_2
 
 ]]></Node>
 <StgValue><ssdm name="store_ln30"/></StgValue>
@@ -634,7 +634,7 @@ Shift_Accum_Loop:41 %store_ln30 = store i16 %filt_stream_int_stream_axis_0_shift
 
 <Node id="95" bw="0" op_0_bw="16" op_1_bw="16" op_2_bw="0">
 <![CDATA[
-Shift_Accum_Loop:42 %store_ln30 = store i16 %filt_stream_int_stream_axis_0_shift_reg_4_load, i16 %filt_stream_int_stream_axis_0_shift_reg_3
+Shift_Accum_Loop:42 %store_ln30 = store i16 %filt_stream_short_stream_axis_0_shift_reg_4_load, i16 %filt_stream_short_stream_axis_0_shift_reg_3
 
 ]]></Node>
 <StgValue><ssdm name="store_ln30"/></StgValue>
@@ -649,7 +649,7 @@ Shift_Accum_Loop:42 %store_ln30 = store i16 %filt_stream_int_stream_axis_0_shift
 
 <Node id="96" bw="0" op_0_bw="16" op_1_bw="16" op_2_bw="0">
 <![CDATA[
-Shift_Accum_Loop:43 %store_ln30 = store i16 %filt_stream_int_stream_axis_0_shift_reg_5_load, i16 %filt_stream_int_stream_axis_0_shift_reg_4
+Shift_Accum_Loop:43 %store_ln30 = store i16 %filt_stream_short_stream_axis_0_shift_reg_5_load, i16 %filt_stream_short_stream_axis_0_shift_reg_4
 
 ]]></Node>
 <StgValue><ssdm name="store_ln30"/></StgValue>
@@ -664,7 +664,7 @@ Shift_Accum_Loop:43 %store_ln30 = store i16 %filt_stream_int_stream_axis_0_shift
 
 <Node id="97" bw="0" op_0_bw="16" op_1_bw="16" op_2_bw="0">
 <![CDATA[
-Shift_Accum_Loop:44 %store_ln30 = store i16 %filt_stream_int_stream_axis_0_shift_reg_6_load, i16 %filt_stream_int_stream_axis_0_shift_reg_5
+Shift_Accum_Loop:44 %store_ln30 = store i16 %filt_stream_short_stream_axis_0_shift_reg_6_load, i16 %filt_stream_short_stream_axis_0_shift_reg_5
 
 ]]></Node>
 <StgValue><ssdm name="store_ln30"/></StgValue>
@@ -679,7 +679,7 @@ Shift_Accum_Loop:44 %store_ln30 = store i16 %filt_stream_int_stream_axis_0_shift
 
 <Node id="98" bw="0" op_0_bw="16" op_1_bw="16" op_2_bw="0">
 <![CDATA[
-Shift_Accum_Loop:45 %store_ln30 = store i16 %filt_stream_int_stream_axis_0_shift_reg_7_load, i16 %filt_stream_int_stream_axis_0_shift_reg_6
+Shift_Accum_Loop:45 %store_ln30 = store i16 %filt_stream_short_stream_axis_0_shift_reg_7_load, i16 %filt_stream_short_stream_axis_0_shift_reg_6
 
 ]]></Node>
 <StgValue><ssdm name="store_ln30"/></StgValue>
@@ -694,7 +694,7 @@ Shift_Accum_Loop:45 %store_ln30 = store i16 %filt_stream_int_stream_axis_0_shift
 
 <Node id="99" bw="0" op_0_bw="16" op_1_bw="16" op_2_bw="0">
 <![CDATA[
-Shift_Accum_Loop:46 %store_ln30 = store i16 %filt_stream_int_stream_axis_0_shift_reg_8_load, i16 %filt_stream_int_stream_axis_0_shift_reg_7
+Shift_Accum_Loop:46 %store_ln30 = store i16 %filt_stream_short_stream_axis_0_shift_reg_8_load, i16 %filt_stream_short_stream_axis_0_shift_reg_7
 
 ]]></Node>
 <StgValue><ssdm name="store_ln30"/></StgValue>
@@ -709,7 +709,7 @@ Shift_Accum_Loop:46 %store_ln30 = store i16 %filt_stream_int_stream_axis_0_shift
 
 <Node id="100" bw="0" op_0_bw="16" op_1_bw="16" op_2_bw="0">
 <![CDATA[
-Shift_Accum_Loop:47 %store_ln30 = store i16 %filt_stream_int_stream_axis_0_shift_reg_9_load, i16 %filt_stream_int_stream_axis_0_shift_reg_8
+Shift_Accum_Loop:47 %store_ln30 = store i16 %filt_stream_short_stream_axis_0_shift_reg_9_load, i16 %filt_stream_short_stream_axis_0_shift_reg_8
 
 ]]></Node>
 <StgValue><ssdm name="store_ln30"/></StgValue>
@@ -724,7 +724,7 @@ Shift_Accum_Loop:47 %store_ln30 = store i16 %filt_stream_int_stream_axis_0_shift
 
 <Node id="101" bw="0" op_0_bw="16" op_1_bw="16" op_2_bw="0">
 <![CDATA[
-Shift_Accum_Loop:48 %store_ln35 = store i16 %tmp1_data, i16 %filt_stream_int_stream_axis_0_shift_reg_9
+Shift_Accum_Loop:48 %store_ln35 = store i16 %tmp1_data, i16 %filt_stream_short_stream_axis_0_shift_reg_9
 
 ]]></Node>
 <StgValue><ssdm name="store_ln35"/></StgValue>
@@ -805,25 +805,25 @@ cleanup.cont:2 %br_ln18 = br void %Shift_Accum_Loop
 
 <Node id="61" bw="16" op_0_bw="16">
 <![CDATA[
-Shift_Accum_Loop:8 %filt_stream_int_stream_axis_0_shift_reg_load = load i16 %filt_stream_int_stream_axis_0_shift_reg
+Shift_Accum_Loop:8 %filt_stream_short_stream_axis_0_shift_reg_load = load i16 %filt_stream_short_stream_axis_0_shift_reg
 
 ]]></Node>
-<StgValue><ssdm name="filt_stream_int_stream_axis_0_shift_reg_load"/></StgValue>
+<StgValue><ssdm name="filt_stream_short_stream_axis_0_shift_reg_load"/></StgValue>
 </operation>
 
 <operation id="60" st_id="2" stage="1" lat="1">
-<core>NULL</core>
+<core>Multiplier</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="62" bw="16" op_0_bw="16">
+<Node id="62" bw="16" op_0_bw="16" op_1_bw="16">
 <![CDATA[
-Shift_Accum_Loop:9 %filt_stream_int_stream_axis_0_shift_reg_1_load = load i16 %filt_stream_int_stream_axis_0_shift_reg_1
+Shift_Accum_Loop:9 %acc = mul i16 %filt_stream_short_stream_axis_0_shift_reg_load, i16 %gmem_addr_read_21
 
 ]]></Node>
-<StgValue><ssdm name="filt_stream_int_stream_axis_0_shift_reg_1_load"/></StgValue>
+<StgValue><ssdm name="acc"/></StgValue>
 </operation>
 
 <operation id="61" st_id="2" stage="2" lat="3">
@@ -833,42 +833,42 @@ Shift_Accum_Loop:9 %filt_stream_int_stream_axis_0_shift_reg_1_load = load i16 %f
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="71" bw="16" op_0_bw="16" op_1_bw="16">
+<Node id="63" bw="16" op_0_bw="16" op_1_bw="16">
 <![CDATA[
-Shift_Accum_Loop:18 %mul_ln34 = mul i16 %tmp_10, i16 %tmp1_data
+Shift_Accum_Loop:10 %mul_ln34 = mul i16 %tmp1_data, i16 %gmem_addr_read_20
 
 ]]></Node>
 <StgValue><ssdm name="mul_ln34"/></StgValue>
 </operation>
 
-<operation id="62" st_id="2" stage="3" lat="3">
-<core>DSP48</core>
+<operation id="62" st_id="2" stage="1" lat="1">
+<core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="72" bw="16" op_0_bw="16" op_1_bw="16">
+<Node id="64" bw="16" op_0_bw="16">
 <![CDATA[
-Shift_Accum_Loop:19 %mul_ln34_1 = mul i16 %filt_stream_int_stream_axis_0_shift_reg_7_load, i16 %tmp_9
+Shift_Accum_Loop:11 %filt_stream_short_stream_axis_0_shift_reg_1_load = load i16 %filt_stream_short_stream_axis_0_shift_reg_1
 
 ]]></Node>
-<StgValue><ssdm name="mul_ln34_1"/></StgValue>
+<StgValue><ssdm name="filt_stream_short_stream_axis_0_shift_reg_1_load"/></StgValue>
 </operation>
 
-<operation id="63" st_id="2" stage="2" lat="3">
+<operation id="63" st_id="2" stage="3" lat="3">
 <core>DSP48</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="73" bw="16" op_0_bw="16" op_1_bw="16">
+<Node id="65" bw="16" op_0_bw="16" op_1_bw="16">
 <![CDATA[
-Shift_Accum_Loop:20 %mul_ln34_2 = mul i16 %filt_stream_int_stream_axis_0_shift_reg_9_load, i16 %tmp_8
+Shift_Accum_Loop:12 %mul_ln31 = mul i16 %filt_stream_short_stream_axis_0_shift_reg_1_load, i16 %gmem_addr_read_19
 
 ]]></Node>
-<StgValue><ssdm name="mul_ln34_2"/></StgValue>
+<StgValue><ssdm name="mul_ln31"/></StgValue>
 </operation>
 
 <operation id="64" st_id="2" stage="1" lat="1">
@@ -878,12 +878,12 @@ Shift_Accum_Loop:20 %mul_ln34_2 = mul i16 %filt_stream_int_stream_axis_0_shift_r
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="74" bw="16" op_0_bw="16" op_1_bw="16">
+<Node id="67" bw="16" op_0_bw="16" op_1_bw="16">
 <![CDATA[
-Shift_Accum_Loop:21 %mul_ln34_3 = mul i16 %filt_stream_int_stream_axis_0_shift_reg_load, i16 %tmp_7
+Shift_Accum_Loop:14 %mul_ln31_1 = mul i16 %filt_stream_short_stream_axis_0_shift_reg_2_load, i16 %gmem_addr_read_18
 
 ]]></Node>
-<StgValue><ssdm name="mul_ln34_3"/></StgValue>
+<StgValue><ssdm name="mul_ln31_1"/></StgValue>
 </operation>
 
 <operation id="65" st_id="2" stage="2" lat="3">
@@ -893,42 +893,42 @@ Shift_Accum_Loop:21 %mul_ln34_3 = mul i16 %filt_stream_int_stream_axis_0_shift_r
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
+<Node id="69" bw="16" op_0_bw="16" op_1_bw="16">
+<![CDATA[
+Shift_Accum_Loop:16 %mul_ln31_2 = mul i16 %filt_stream_short_stream_axis_0_shift_reg_3_load, i16 %gmem_addr_read_17
+
+]]></Node>
+<StgValue><ssdm name="mul_ln31_2"/></StgValue>
+</operation>
+
+<operation id="66" st_id="2" stage="3" lat="3">
+<core>DSP48</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="71" bw="16" op_0_bw="16" op_1_bw="16">
+<![CDATA[
+Shift_Accum_Loop:18 %mul_ln31_3 = mul i16 %filt_stream_short_stream_axis_0_shift_reg_4_load, i16 %gmem_addr_read_16
+
+]]></Node>
+<StgValue><ssdm name="mul_ln31_3"/></StgValue>
+</operation>
+
+<operation id="67" st_id="2" stage="2" lat="3">
+<core>DSP48</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
 <Node id="75" bw="16" op_0_bw="16" op_1_bw="16">
 <![CDATA[
-Shift_Accum_Loop:22 %mul_ln34_4 = mul i16 %filt_stream_int_stream_axis_0_shift_reg_6_load, i16 %tmp_6
+Shift_Accum_Loop:22 %mul_ln31_5 = mul i16 %filt_stream_short_stream_axis_0_shift_reg_6_load, i16 %gmem_addr_read_14
 
 ]]></Node>
-<StgValue><ssdm name="mul_ln34_4"/></StgValue>
-</operation>
-
-<operation id="66" st_id="2" stage="2" lat="3">
-<core>DSP48</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="76" bw="16" op_0_bw="16" op_1_bw="16">
-<![CDATA[
-Shift_Accum_Loop:23 %mul_ln34_5 = mul i16 %filt_stream_int_stream_axis_0_shift_reg_3_load, i16 %tmp_5
-
-]]></Node>
-<StgValue><ssdm name="mul_ln34_5"/></StgValue>
-</operation>
-
-<operation id="67" st_id="2" stage="3" lat="3">
-<core>DSP48</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="77" bw="16" op_0_bw="16" op_1_bw="16">
-<![CDATA[
-Shift_Accum_Loop:24 %mul_ln34_6 = mul i16 %filt_stream_int_stream_axis_0_shift_reg_4_load, i16 %tmp_4
-
-]]></Node>
-<StgValue><ssdm name="mul_ln34_6"/></StgValue>
+<StgValue><ssdm name="mul_ln31_5"/></StgValue>
 </operation>
 
 <operation id="68" st_id="2" stage="3" lat="3">
@@ -938,27 +938,27 @@ Shift_Accum_Loop:24 %mul_ln34_6 = mul i16 %filt_stream_int_stream_axis_0_shift_r
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="79" bw="16" op_0_bw="16" op_1_bw="16">
+<Node id="77" bw="16" op_0_bw="16" op_1_bw="16">
 <![CDATA[
-Shift_Accum_Loop:26 %mul_ln34_8 = mul i16 %filt_stream_int_stream_axis_0_shift_reg_1_load, i16 %tmp_2
+Shift_Accum_Loop:24 %mul_ln31_6 = mul i16 %filt_stream_short_stream_axis_0_shift_reg_7_load, i16 %gmem_addr_read_13
 
 ]]></Node>
-<StgValue><ssdm name="mul_ln34_8"/></StgValue>
+<StgValue><ssdm name="mul_ln31_6"/></StgValue>
 </operation>
 
-<operation id="69" st_id="2" stage="1" lat="1">
-<core>Multiplier</core>
+<operation id="69" st_id="2" stage="2" lat="3">
+<core>DSP48</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="80" bw="16" op_0_bw="16" op_1_bw="16">
+<Node id="81" bw="16" op_0_bw="16" op_1_bw="16">
 <![CDATA[
-Shift_Accum_Loop:27 %mul_ln34_9 = mul i16 %filt_stream_int_stream_axis_0_shift_reg_2_load, i16 %tmp_1
+Shift_Accum_Loop:28 %mul_ln31_8 = mul i16 %filt_stream_short_stream_axis_0_shift_reg_9_load, i16 %gmem_addr_read_11
 
 ]]></Node>
-<StgValue><ssdm name="mul_ln34_9"/></StgValue>
+<StgValue><ssdm name="mul_ln31_8"/></StgValue>
 </operation>
 
 <operation id="70" st_id="2" stage="1" lat="1">
@@ -970,7 +970,7 @@ Shift_Accum_Loop:27 %mul_ln34_9 = mul i16 %filt_stream_int_stream_axis_0_shift_r
 
 <Node id="92" bw="0" op_0_bw="16" op_1_bw="16" op_2_bw="0">
 <![CDATA[
-Shift_Accum_Loop:39 %store_ln30 = store i16 %filt_stream_int_stream_axis_0_shift_reg_1_load, i16 %filt_stream_int_stream_axis_0_shift_reg
+Shift_Accum_Loop:39 %store_ln30 = store i16 %filt_stream_short_stream_axis_0_shift_reg_1_load, i16 %filt_stream_short_stream_axis_0_shift_reg
 
 ]]></Node>
 <StgValue><ssdm name="store_ln30"/></StgValue>
@@ -985,7 +985,7 @@ Shift_Accum_Loop:39 %store_ln30 = store i16 %filt_stream_int_stream_axis_0_shift
 
 <Node id="93" bw="0" op_0_bw="16" op_1_bw="16" op_2_bw="0">
 <![CDATA[
-Shift_Accum_Loop:40 %store_ln30 = store i16 %filt_stream_int_stream_axis_0_shift_reg_2_load, i16 %filt_stream_int_stream_axis_0_shift_reg_1
+Shift_Accum_Loop:40 %store_ln30 = store i16 %filt_stream_short_stream_axis_0_shift_reg_2_load, i16 %filt_stream_short_stream_axis_0_shift_reg_1
 
 ]]></Node>
 <StgValue><ssdm name="store_ln30"/></StgValue>
@@ -1001,9 +1001,9 @@ Shift_Accum_Loop:40 %store_ln30 = store i16 %filt_stream_int_stream_axis_0_shift
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="71" bw="16" op_0_bw="16" op_1_bw="16">
+<Node id="63" bw="16" op_0_bw="16" op_1_bw="16">
 <![CDATA[
-Shift_Accum_Loop:18 %mul_ln34 = mul i16 %tmp_10, i16 %tmp1_data
+Shift_Accum_Loop:10 %mul_ln34 = mul i16 %tmp1_data, i16 %gmem_addr_read_20
 
 ]]></Node>
 <StgValue><ssdm name="mul_ln34"/></StgValue>
@@ -1016,12 +1016,12 @@ Shift_Accum_Loop:18 %mul_ln34 = mul i16 %tmp_10, i16 %tmp1_data
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="72" bw="16" op_0_bw="16" op_1_bw="16">
+<Node id="65" bw="16" op_0_bw="16" op_1_bw="16">
 <![CDATA[
-Shift_Accum_Loop:19 %mul_ln34_1 = mul i16 %filt_stream_int_stream_axis_0_shift_reg_7_load, i16 %tmp_9
+Shift_Accum_Loop:12 %mul_ln31 = mul i16 %filt_stream_short_stream_axis_0_shift_reg_1_load, i16 %gmem_addr_read_19
 
 ]]></Node>
-<StgValue><ssdm name="mul_ln34_1"/></StgValue>
+<StgValue><ssdm name="mul_ln31"/></StgValue>
 </operation>
 
 <operation id="74" st_id="3" stage="1" lat="3">
@@ -1031,27 +1031,27 @@ Shift_Accum_Loop:19 %mul_ln34_1 = mul i16 %filt_stream_int_stream_axis_0_shift_r
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="73" bw="16" op_0_bw="16" op_1_bw="16">
+<Node id="69" bw="16" op_0_bw="16" op_1_bw="16">
 <![CDATA[
-Shift_Accum_Loop:20 %mul_ln34_2 = mul i16 %filt_stream_int_stream_axis_0_shift_reg_9_load, i16 %tmp_8
+Shift_Accum_Loop:16 %mul_ln31_2 = mul i16 %filt_stream_short_stream_axis_0_shift_reg_3_load, i16 %gmem_addr_read_17
 
 ]]></Node>
-<StgValue><ssdm name="mul_ln34_2"/></StgValue>
+<StgValue><ssdm name="mul_ln31_2"/></StgValue>
 </operation>
 
-<operation id="75" st_id="3" stage="1" lat="3">
+<operation id="75" st_id="3" stage="2" lat="3">
 <core>DSP48</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="75" bw="16" op_0_bw="16" op_1_bw="16">
+<Node id="71" bw="16" op_0_bw="16" op_1_bw="16">
 <![CDATA[
-Shift_Accum_Loop:22 %mul_ln34_4 = mul i16 %filt_stream_int_stream_axis_0_shift_reg_6_load, i16 %tmp_6
+Shift_Accum_Loop:18 %mul_ln31_3 = mul i16 %filt_stream_short_stream_axis_0_shift_reg_4_load, i16 %gmem_addr_read_16
 
 ]]></Node>
-<StgValue><ssdm name="mul_ln34_4"/></StgValue>
+<StgValue><ssdm name="mul_ln31_3"/></StgValue>
 </operation>
 
 <operation id="76" st_id="3" stage="1" lat="3">
@@ -1061,12 +1061,12 @@ Shift_Accum_Loop:22 %mul_ln34_4 = mul i16 %filt_stream_int_stream_axis_0_shift_r
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="76" bw="16" op_0_bw="16" op_1_bw="16">
+<Node id="75" bw="16" op_0_bw="16" op_1_bw="16">
 <![CDATA[
-Shift_Accum_Loop:23 %mul_ln34_5 = mul i16 %filt_stream_int_stream_axis_0_shift_reg_3_load, i16 %tmp_5
+Shift_Accum_Loop:22 %mul_ln31_5 = mul i16 %filt_stream_short_stream_axis_0_shift_reg_6_load, i16 %gmem_addr_read_14
 
 ]]></Node>
-<StgValue><ssdm name="mul_ln34_5"/></StgValue>
+<StgValue><ssdm name="mul_ln31_5"/></StgValue>
 </operation>
 
 <operation id="77" st_id="3" stage="2" lat="3">
@@ -1078,25 +1078,25 @@ Shift_Accum_Loop:23 %mul_ln34_5 = mul i16 %filt_stream_int_stream_axis_0_shift_r
 
 <Node id="77" bw="16" op_0_bw="16" op_1_bw="16">
 <![CDATA[
-Shift_Accum_Loop:24 %mul_ln34_6 = mul i16 %filt_stream_int_stream_axis_0_shift_reg_4_load, i16 %tmp_4
+Shift_Accum_Loop:24 %mul_ln31_6 = mul i16 %filt_stream_short_stream_axis_0_shift_reg_7_load, i16 %gmem_addr_read_13
 
 ]]></Node>
-<StgValue><ssdm name="mul_ln34_6"/></StgValue>
+<StgValue><ssdm name="mul_ln31_6"/></StgValue>
 </operation>
 
-<operation id="78" st_id="3" stage="2" lat="3">
+<operation id="78" st_id="3" stage="1" lat="3">
 <core>DSP48</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="79" bw="16" op_0_bw="16" op_1_bw="16">
+<Node id="81" bw="16" op_0_bw="16" op_1_bw="16">
 <![CDATA[
-Shift_Accum_Loop:26 %mul_ln34_8 = mul i16 %filt_stream_int_stream_axis_0_shift_reg_1_load, i16 %tmp_2
+Shift_Accum_Loop:28 %mul_ln31_8 = mul i16 %filt_stream_short_stream_axis_0_shift_reg_9_load, i16 %gmem_addr_read_11
 
 ]]></Node>
-<StgValue><ssdm name="mul_ln34_8"/></StgValue>
+<StgValue><ssdm name="mul_ln31_8"/></StgValue>
 </operation>
 
 <operation id="79" st_id="3" stage="2" lat="2">
@@ -1108,7 +1108,7 @@ Shift_Accum_Loop:26 %mul_ln34_8 = mul i16 %filt_stream_int_stream_axis_0_shift_r
 
 <Node id="82" bw="16" op_0_bw="16" op_1_bw="16">
 <![CDATA[
-Shift_Accum_Loop:29 %add_ln34 = add i16 %mul_ln34_3, i16 %mul_ln34
+Shift_Accum_Loop:29 %add_ln34 = add i16 %acc, i16 %mul_ln34
 
 ]]></Node>
 <StgValue><ssdm name="add_ln34"/></StgValue>
@@ -1123,7 +1123,7 @@ Shift_Accum_Loop:29 %add_ln34 = add i16 %mul_ln34_3, i16 %mul_ln34
 
 <Node id="83" bw="16" op_0_bw="16" op_1_bw="16">
 <![CDATA[
-Shift_Accum_Loop:30 %add_ln34_1 = add i16 %mul_ln34_9, i16 %mul_ln34_5
+Shift_Accum_Loop:30 %add_ln34_1 = add i16 %mul_ln31_1, i16 %mul_ln31_2
 
 ]]></Node>
 <StgValue><ssdm name="add_ln34_1"/></StgValue>
@@ -1138,7 +1138,7 @@ Shift_Accum_Loop:30 %add_ln34_1 = add i16 %mul_ln34_9, i16 %mul_ln34_5
 
 <Node id="86" bw="16" op_0_bw="16" op_1_bw="16">
 <![CDATA[
-Shift_Accum_Loop:33 %add_ln34_4 = add i16 %mul_ln34_7, i16 %mul_ln34_4
+Shift_Accum_Loop:33 %add_ln34_4 = add i16 %mul_ln31_4, i16 %mul_ln31_5
 
 ]]></Node>
 <StgValue><ssdm name="add_ln34_4"/></StgValue>
@@ -1153,7 +1153,7 @@ Shift_Accum_Loop:33 %add_ln34_4 = add i16 %mul_ln34_7, i16 %mul_ln34_4
 
 <Node id="88" bw="16" op_0_bw="16" op_1_bw="16">
 <![CDATA[
-Shift_Accum_Loop:35 %add_ln34_6 = add i16 %mul_ln34_10, i16 %mul_ln34_2
+Shift_Accum_Loop:35 %add_ln34_6 = add i16 %mul_ln31_7, i16 %mul_ln31_8
 
 ]]></Node>
 <StgValue><ssdm name="add_ln34_6"/></StgValue>
@@ -1169,12 +1169,12 @@ Shift_Accum_Loop:35 %add_ln34_6 = add i16 %mul_ln34_10, i16 %mul_ln34_2
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="72" bw="16" op_0_bw="16" op_1_bw="16">
+<Node id="65" bw="16" op_0_bw="16" op_1_bw="16">
 <![CDATA[
-Shift_Accum_Loop:19 %mul_ln34_1 = mul i16 %filt_stream_int_stream_axis_0_shift_reg_7_load, i16 %tmp_9
+Shift_Accum_Loop:12 %mul_ln31 = mul i16 %filt_stream_short_stream_axis_0_shift_reg_1_load, i16 %gmem_addr_read_19
 
 ]]></Node>
-<StgValue><ssdm name="mul_ln34_1"/></StgValue>
+<StgValue><ssdm name="mul_ln31"/></StgValue>
 </operation>
 
 <operation id="84" st_id="4" stage="1" lat="3">
@@ -1184,12 +1184,12 @@ Shift_Accum_Loop:19 %mul_ln34_1 = mul i16 %filt_stream_int_stream_axis_0_shift_r
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="77" bw="16" op_0_bw="16" op_1_bw="16">
+<Node id="71" bw="16" op_0_bw="16" op_1_bw="16">
 <![CDATA[
-Shift_Accum_Loop:24 %mul_ln34_6 = mul i16 %filt_stream_int_stream_axis_0_shift_reg_4_load, i16 %tmp_4
+Shift_Accum_Loop:18 %mul_ln31_3 = mul i16 %filt_stream_short_stream_axis_0_shift_reg_4_load, i16 %gmem_addr_read_16
 
 ]]></Node>
-<StgValue><ssdm name="mul_ln34_6"/></StgValue>
+<StgValue><ssdm name="mul_ln31_3"/></StgValue>
 </operation>
 
 <operation id="85" st_id="4" stage="1" lat="3">
@@ -1199,12 +1199,12 @@ Shift_Accum_Loop:24 %mul_ln34_6 = mul i16 %filt_stream_int_stream_axis_0_shift_r
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="79" bw="16" op_0_bw="16" op_1_bw="16">
+<Node id="77" bw="16" op_0_bw="16" op_1_bw="16">
 <![CDATA[
-Shift_Accum_Loop:26 %mul_ln34_8 = mul i16 %filt_stream_int_stream_axis_0_shift_reg_1_load, i16 %tmp_2
+Shift_Accum_Loop:24 %mul_ln31_6 = mul i16 %filt_stream_short_stream_axis_0_shift_reg_7_load, i16 %gmem_addr_read_13
 
 ]]></Node>
-<StgValue><ssdm name="mul_ln34_8"/></StgValue>
+<StgValue><ssdm name="mul_ln31_6"/></StgValue>
 </operation>
 
 <operation id="86" st_id="4" stage="1" lat="2">
@@ -1216,7 +1216,7 @@ Shift_Accum_Loop:26 %mul_ln34_8 = mul i16 %filt_stream_int_stream_axis_0_shift_r
 
 <Node id="82" bw="16" op_0_bw="16" op_1_bw="16">
 <![CDATA[
-Shift_Accum_Loop:29 %add_ln34 = add i16 %mul_ln34_3, i16 %mul_ln34
+Shift_Accum_Loop:29 %add_ln34 = add i16 %acc, i16 %mul_ln34
 
 ]]></Node>
 <StgValue><ssdm name="add_ln34"/></StgValue>
@@ -1231,7 +1231,7 @@ Shift_Accum_Loop:29 %add_ln34 = add i16 %mul_ln34_3, i16 %mul_ln34
 
 <Node id="83" bw="16" op_0_bw="16" op_1_bw="16">
 <![CDATA[
-Shift_Accum_Loop:30 %add_ln34_1 = add i16 %mul_ln34_9, i16 %mul_ln34_5
+Shift_Accum_Loop:30 %add_ln34_1 = add i16 %mul_ln31_1, i16 %mul_ln31_2
 
 ]]></Node>
 <StgValue><ssdm name="add_ln34_1"/></StgValue>
@@ -1246,7 +1246,7 @@ Shift_Accum_Loop:30 %add_ln34_1 = add i16 %mul_ln34_9, i16 %mul_ln34_5
 
 <Node id="84" bw="16" op_0_bw="16" op_1_bw="16">
 <![CDATA[
-Shift_Accum_Loop:31 %add_ln34_2 = add i16 %add_ln34_1, i16 %mul_ln34_8
+Shift_Accum_Loop:31 %add_ln34_2 = add i16 %add_ln34_1, i16 %mul_ln31
 
 ]]></Node>
 <StgValue><ssdm name="add_ln34_2"/></StgValue>
@@ -1261,7 +1261,7 @@ Shift_Accum_Loop:31 %add_ln34_2 = add i16 %add_ln34_1, i16 %mul_ln34_8
 
 <Node id="86" bw="16" op_0_bw="16" op_1_bw="16">
 <![CDATA[
-Shift_Accum_Loop:33 %add_ln34_4 = add i16 %mul_ln34_7, i16 %mul_ln34_4
+Shift_Accum_Loop:33 %add_ln34_4 = add i16 %mul_ln31_4, i16 %mul_ln31_5
 
 ]]></Node>
 <StgValue><ssdm name="add_ln34_4"/></StgValue>
@@ -1276,7 +1276,7 @@ Shift_Accum_Loop:33 %add_ln34_4 = add i16 %mul_ln34_7, i16 %mul_ln34_4
 
 <Node id="87" bw="16" op_0_bw="16" op_1_bw="16">
 <![CDATA[
-Shift_Accum_Loop:34 %add_ln34_5 = add i16 %add_ln34_4, i16 %mul_ln34_6
+Shift_Accum_Loop:34 %add_ln34_5 = add i16 %add_ln34_4, i16 %mul_ln31_3
 
 ]]></Node>
 <StgValue><ssdm name="add_ln34_5"/></StgValue>
@@ -1291,7 +1291,7 @@ Shift_Accum_Loop:34 %add_ln34_5 = add i16 %add_ln34_4, i16 %mul_ln34_6
 
 <Node id="88" bw="16" op_0_bw="16" op_1_bw="16">
 <![CDATA[
-Shift_Accum_Loop:35 %add_ln34_6 = add i16 %mul_ln34_10, i16 %mul_ln34_2
+Shift_Accum_Loop:35 %add_ln34_6 = add i16 %mul_ln31_7, i16 %mul_ln31_8
 
 ]]></Node>
 <StgValue><ssdm name="add_ln34_6"/></StgValue>
@@ -1306,7 +1306,7 @@ Shift_Accum_Loop:35 %add_ln34_6 = add i16 %mul_ln34_10, i16 %mul_ln34_2
 
 <Node id="89" bw="16" op_0_bw="16" op_1_bw="16">
 <![CDATA[
-Shift_Accum_Loop:36 %add_ln34_7 = add i16 %add_ln34_6, i16 %mul_ln34_1
+Shift_Accum_Loop:36 %add_ln34_7 = add i16 %add_ln34_6, i16 %mul_ln31_6
 
 ]]></Node>
 <StgValue><ssdm name="add_ln34_7"/></StgValue>
@@ -1324,7 +1324,7 @@ Shift_Accum_Loop:36 %add_ln34_7 = add i16 %add_ln34_6, i16 %mul_ln34_1
 
 <Node id="84" bw="16" op_0_bw="16" op_1_bw="16">
 <![CDATA[
-Shift_Accum_Loop:31 %add_ln34_2 = add i16 %add_ln34_1, i16 %mul_ln34_8
+Shift_Accum_Loop:31 %add_ln34_2 = add i16 %add_ln34_1, i16 %mul_ln31
 
 ]]></Node>
 <StgValue><ssdm name="add_ln34_2"/></StgValue>
@@ -1339,7 +1339,7 @@ Shift_Accum_Loop:31 %add_ln34_2 = add i16 %add_ln34_1, i16 %mul_ln34_8
 
 <Node id="87" bw="16" op_0_bw="16" op_1_bw="16">
 <![CDATA[
-Shift_Accum_Loop:34 %add_ln34_5 = add i16 %add_ln34_4, i16 %mul_ln34_6
+Shift_Accum_Loop:34 %add_ln34_5 = add i16 %add_ln34_4, i16 %mul_ln31_3
 
 ]]></Node>
 <StgValue><ssdm name="add_ln34_5"/></StgValue>
@@ -1354,7 +1354,7 @@ Shift_Accum_Loop:34 %add_ln34_5 = add i16 %add_ln34_4, i16 %mul_ln34_6
 
 <Node id="89" bw="16" op_0_bw="16" op_1_bw="16">
 <![CDATA[
-Shift_Accum_Loop:36 %add_ln34_7 = add i16 %add_ln34_6, i16 %mul_ln34_1
+Shift_Accum_Loop:36 %add_ln34_7 = add i16 %add_ln34_6, i16 %mul_ln31_6
 
 ]]></Node>
 <StgValue><ssdm name="add_ln34_7"/></StgValue>
@@ -1402,10 +1402,10 @@ Shift_Accum_Loop:32 %add_ln34_3 = add i16 %add_ln34_2, i16 %add_ln34
 
 <Node id="91" bw="16" op_0_bw="16" op_1_bw="16">
 <![CDATA[
-Shift_Accum_Loop:38 %acc = add i16 %add_ln34_8, i16 %add_ln34_3
+Shift_Accum_Loop:38 %acc_2 = add i16 %add_ln34_8, i16 %add_ln34_3
 
 ]]></Node>
-<StgValue><ssdm name="acc"/></StgValue>
+<StgValue><ssdm name="acc_2"/></StgValue>
 </operation>
 
 <operation id="99" st_id="6" stage="1" lat="1">
@@ -1417,7 +1417,7 @@ Shift_Accum_Loop:38 %acc = add i16 %add_ln34_8, i16 %add_ln34_3
 
 <Node id="102" bw="0" op_0_bw="0" op_1_bw="16" op_2_bw="2" op_3_bw="2" op_4_bw="1" op_5_bw="1" op_6_bw="1" op_7_bw="1" op_8_bw="16" op_9_bw="2" op_10_bw="2" op_11_bw="1" op_12_bw="1" op_13_bw="1" op_14_bw="1">
 <![CDATA[
-Shift_Accum_Loop:49 %write_ln44 = write void @_ssdm_op_Write.axis.volatile.i16P0A.i2P0A.i2P0A.i1P0A.i1P0A.i1P0A.i1P0A, i16 %y_V_data_V, i2 %y_V_keep_V, i2 %y_V_strb_V, i1 %y_V_user_V, i1 %y_V_last_V, i1 %y_V_id_V, i1 %y_V_dest_V, i16 %acc, i2 %tmp1_keep, i2 %tmp1_strb, i1 %tmp1_user, i1 %tmp1_last, i1 %tmp1_id, i1 %tmp1_dest
+Shift_Accum_Loop:49 %write_ln44 = write void @_ssdm_op_Write.axis.volatile.i16P0A.i2P0A.i2P0A.i1P0A.i1P0A.i1P0A.i1P0A, i16 %y_V_data_V, i2 %y_V_keep_V, i2 %y_V_strb_V, i1 %y_V_user_V, i1 %y_V_last_V, i1 %y_V_id_V, i1 %y_V_dest_V, i16 %acc_2, i2 %tmp1_keep, i2 %tmp1_strb, i1 %tmp1_user, i1 %tmp1_last, i1 %tmp1_id, i1 %tmp1_dest
 
 ]]></Node>
 <StgValue><ssdm name="write_ln44"/></StgValue>
@@ -1464,38 +1464,38 @@ while.end.exitStub:0 %ret_ln0 = ret
 <port id="123" name="x_V_dest_V" dir="0" iftype="0">
 <core>NULL</core><StgValue><ssdm name="x_V_dest_V"/></StgValue>
 </port>
-<port id="124" name="empty_19" dir="0" iftype="0">
-<core>NULL</core><StgValue><ssdm name="empty_19"/></StgValue>
+<port id="124" name="gmem_addr_read_10" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="gmem_addr_read_10"/></StgValue>
 </port>
-<port id="125" name="empty_20" dir="0" iftype="0">
-<core>NULL</core><StgValue><ssdm name="empty_20"/></StgValue>
+<port id="125" name="gmem_addr_read" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="gmem_addr_read"/></StgValue>
 </port>
-<port id="126" name="empty_21" dir="0" iftype="0">
-<core>NULL</core><StgValue><ssdm name="empty_21"/></StgValue>
+<port id="126" name="gmem_addr_read_9" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="gmem_addr_read_9"/></StgValue>
 </port>
-<port id="127" name="empty_22" dir="0" iftype="0">
-<core>NULL</core><StgValue><ssdm name="empty_22"/></StgValue>
+<port id="127" name="gmem_addr_read_8" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="gmem_addr_read_8"/></StgValue>
 </port>
-<port id="128" name="empty_23" dir="0" iftype="0">
-<core>NULL</core><StgValue><ssdm name="empty_23"/></StgValue>
+<port id="128" name="gmem_addr_read_7" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="gmem_addr_read_7"/></StgValue>
 </port>
-<port id="129" name="empty_24" dir="0" iftype="0">
-<core>NULL</core><StgValue><ssdm name="empty_24"/></StgValue>
+<port id="129" name="gmem_addr_read_6" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="gmem_addr_read_6"/></StgValue>
 </port>
-<port id="130" name="empty_25" dir="0" iftype="0">
-<core>NULL</core><StgValue><ssdm name="empty_25"/></StgValue>
+<port id="130" name="gmem_addr_read_5" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="gmem_addr_read_5"/></StgValue>
 </port>
-<port id="131" name="empty_26" dir="0" iftype="0">
-<core>NULL</core><StgValue><ssdm name="empty_26"/></StgValue>
+<port id="131" name="gmem_addr_read_4" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="gmem_addr_read_4"/></StgValue>
 </port>
-<port id="132" name="empty_27" dir="0" iftype="0">
-<core>NULL</core><StgValue><ssdm name="empty_27"/></StgValue>
+<port id="132" name="gmem_addr_read_3" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="gmem_addr_read_3"/></StgValue>
 </port>
-<port id="133" name="empty_28" dir="0" iftype="0">
-<core>NULL</core><StgValue><ssdm name="empty_28"/></StgValue>
+<port id="133" name="gmem_addr_read_2" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="gmem_addr_read_2"/></StgValue>
 </port>
-<port id="134" name="empty" dir="0" iftype="0">
-<core>NULL</core><StgValue><ssdm name="empty"/></StgValue>
+<port id="134" name="gmem_addr_read_1" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="gmem_addr_read_1"/></StgValue>
 </port>
 <port id="135" name="y_V_data_V" dir="1" iftype="0">
 <core>NULL</core><StgValue><ssdm name="y_V_data_V"/></StgValue>
@@ -1518,35 +1518,35 @@ while.end.exitStub:0 %ret_ln0 = ret
 <port id="141" name="y_V_dest_V" dir="1" iftype="0">
 <core>NULL</core><StgValue><ssdm name="y_V_dest_V"/></StgValue>
 </port>
-<port id="142" name="filt_stream_int_stream_axis_0_shift_reg" dir="2" iftype="0">
-<core>NULL</core><StgValue><ssdm name="filt_stream_int_stream_axis_0_shift_reg"/></StgValue>
+<port id="142" name="filt_stream_short_stream_axis_0_shift_reg" dir="2" iftype="0">
+<core>NULL</core><StgValue><ssdm name="filt_stream_short_stream_axis_0_shift_reg"/></StgValue>
 </port>
-<port id="143" name="filt_stream_int_stream_axis_0_shift_reg_1" dir="2" iftype="0">
-<core>NULL</core><StgValue><ssdm name="filt_stream_int_stream_axis_0_shift_reg_1"/></StgValue>
+<port id="143" name="filt_stream_short_stream_axis_0_shift_reg_1" dir="2" iftype="0">
+<core>NULL</core><StgValue><ssdm name="filt_stream_short_stream_axis_0_shift_reg_1"/></StgValue>
 </port>
-<port id="144" name="filt_stream_int_stream_axis_0_shift_reg_2" dir="2" iftype="0">
-<core>NULL</core><StgValue><ssdm name="filt_stream_int_stream_axis_0_shift_reg_2"/></StgValue>
+<port id="144" name="filt_stream_short_stream_axis_0_shift_reg_2" dir="2" iftype="0">
+<core>NULL</core><StgValue><ssdm name="filt_stream_short_stream_axis_0_shift_reg_2"/></StgValue>
 </port>
-<port id="145" name="filt_stream_int_stream_axis_0_shift_reg_3" dir="2" iftype="0">
-<core>NULL</core><StgValue><ssdm name="filt_stream_int_stream_axis_0_shift_reg_3"/></StgValue>
+<port id="145" name="filt_stream_short_stream_axis_0_shift_reg_3" dir="2" iftype="0">
+<core>NULL</core><StgValue><ssdm name="filt_stream_short_stream_axis_0_shift_reg_3"/></StgValue>
 </port>
-<port id="146" name="filt_stream_int_stream_axis_0_shift_reg_4" dir="2" iftype="0">
-<core>NULL</core><StgValue><ssdm name="filt_stream_int_stream_axis_0_shift_reg_4"/></StgValue>
+<port id="146" name="filt_stream_short_stream_axis_0_shift_reg_4" dir="2" iftype="0">
+<core>NULL</core><StgValue><ssdm name="filt_stream_short_stream_axis_0_shift_reg_4"/></StgValue>
 </port>
-<port id="147" name="filt_stream_int_stream_axis_0_shift_reg_5" dir="2" iftype="0">
-<core>NULL</core><StgValue><ssdm name="filt_stream_int_stream_axis_0_shift_reg_5"/></StgValue>
+<port id="147" name="filt_stream_short_stream_axis_0_shift_reg_5" dir="2" iftype="0">
+<core>NULL</core><StgValue><ssdm name="filt_stream_short_stream_axis_0_shift_reg_5"/></StgValue>
 </port>
-<port id="148" name="filt_stream_int_stream_axis_0_shift_reg_6" dir="2" iftype="0">
-<core>NULL</core><StgValue><ssdm name="filt_stream_int_stream_axis_0_shift_reg_6"/></StgValue>
+<port id="148" name="filt_stream_short_stream_axis_0_shift_reg_6" dir="2" iftype="0">
+<core>NULL</core><StgValue><ssdm name="filt_stream_short_stream_axis_0_shift_reg_6"/></StgValue>
 </port>
-<port id="149" name="filt_stream_int_stream_axis_0_shift_reg_7" dir="2" iftype="0">
-<core>NULL</core><StgValue><ssdm name="filt_stream_int_stream_axis_0_shift_reg_7"/></StgValue>
+<port id="149" name="filt_stream_short_stream_axis_0_shift_reg_7" dir="2" iftype="0">
+<core>NULL</core><StgValue><ssdm name="filt_stream_short_stream_axis_0_shift_reg_7"/></StgValue>
 </port>
-<port id="150" name="filt_stream_int_stream_axis_0_shift_reg_8" dir="2" iftype="0">
-<core>NULL</core><StgValue><ssdm name="filt_stream_int_stream_axis_0_shift_reg_8"/></StgValue>
+<port id="150" name="filt_stream_short_stream_axis_0_shift_reg_8" dir="2" iftype="0">
+<core>NULL</core><StgValue><ssdm name="filt_stream_short_stream_axis_0_shift_reg_8"/></StgValue>
 </port>
-<port id="151" name="filt_stream_int_stream_axis_0_shift_reg_9" dir="2" iftype="0">
-<core>NULL</core><StgValue><ssdm name="filt_stream_int_stream_axis_0_shift_reg_9"/></StgValue>
+<port id="151" name="filt_stream_short_stream_axis_0_shift_reg_9" dir="2" iftype="0">
+<core>NULL</core><StgValue><ssdm name="filt_stream_short_stream_axis_0_shift_reg_9"/></StgValue>
 </port>
 </ports>
 
@@ -1688,151 +1688,151 @@ while.end.exitStub:0 %ret_ln0 = ret
 </dataflow>
 <dataflow id="228" from="StgValue_184" to="specinterface_ln0" fromId="184" toId="12">
 </dataflow>
-<dataflow id="230" from="_ssdm_op_Read.ap_auto.i16" to="tmp" fromId="229" toId="13">
+<dataflow id="230" from="_ssdm_op_Read.ap_auto.i16" to="gmem_addr_read_11" fromId="229" toId="13">
 </dataflow>
-<dataflow id="231" from="empty" to="tmp" fromId="134" toId="13">
+<dataflow id="231" from="gmem_addr_read_1" to="gmem_addr_read_11" fromId="134" toId="13">
 </dataflow>
-<dataflow id="232" from="_ssdm_op_Read.ap_auto.i16" to="tmp_1" fromId="229" toId="14">
+<dataflow id="232" from="_ssdm_op_Read.ap_auto.i16" to="gmem_addr_read_12" fromId="229" toId="14">
 </dataflow>
-<dataflow id="233" from="empty_28" to="tmp_1" fromId="133" toId="14">
+<dataflow id="233" from="gmem_addr_read_2" to="gmem_addr_read_12" fromId="133" toId="14">
 </dataflow>
-<dataflow id="234" from="_ssdm_op_Read.ap_auto.i16" to="tmp_2" fromId="229" toId="15">
+<dataflow id="234" from="_ssdm_op_Read.ap_auto.i16" to="gmem_addr_read_13" fromId="229" toId="15">
 </dataflow>
-<dataflow id="235" from="empty_27" to="tmp_2" fromId="132" toId="15">
+<dataflow id="235" from="gmem_addr_read_3" to="gmem_addr_read_13" fromId="132" toId="15">
 </dataflow>
-<dataflow id="236" from="_ssdm_op_Read.ap_auto.i16" to="tmp_3" fromId="229" toId="16">
+<dataflow id="236" from="_ssdm_op_Read.ap_auto.i16" to="gmem_addr_read_14" fromId="229" toId="16">
 </dataflow>
-<dataflow id="237" from="empty_26" to="tmp_3" fromId="131" toId="16">
+<dataflow id="237" from="gmem_addr_read_4" to="gmem_addr_read_14" fromId="131" toId="16">
 </dataflow>
-<dataflow id="238" from="_ssdm_op_Read.ap_auto.i16" to="tmp_4" fromId="229" toId="17">
+<dataflow id="238" from="_ssdm_op_Read.ap_auto.i16" to="gmem_addr_read_15" fromId="229" toId="17">
 </dataflow>
-<dataflow id="239" from="empty_25" to="tmp_4" fromId="130" toId="17">
+<dataflow id="239" from="gmem_addr_read_5" to="gmem_addr_read_15" fromId="130" toId="17">
 </dataflow>
-<dataflow id="240" from="_ssdm_op_Read.ap_auto.i16" to="tmp_5" fromId="229" toId="18">
+<dataflow id="240" from="_ssdm_op_Read.ap_auto.i16" to="gmem_addr_read_16" fromId="229" toId="18">
 </dataflow>
-<dataflow id="241" from="empty_24" to="tmp_5" fromId="129" toId="18">
+<dataflow id="241" from="gmem_addr_read_6" to="gmem_addr_read_16" fromId="129" toId="18">
 </dataflow>
-<dataflow id="242" from="_ssdm_op_Read.ap_auto.i16" to="tmp_6" fromId="229" toId="19">
+<dataflow id="242" from="_ssdm_op_Read.ap_auto.i16" to="gmem_addr_read_17" fromId="229" toId="19">
 </dataflow>
-<dataflow id="243" from="empty_23" to="tmp_6" fromId="128" toId="19">
+<dataflow id="243" from="gmem_addr_read_7" to="gmem_addr_read_17" fromId="128" toId="19">
 </dataflow>
-<dataflow id="244" from="_ssdm_op_Read.ap_auto.i16" to="tmp_7" fromId="229" toId="20">
+<dataflow id="244" from="_ssdm_op_Read.ap_auto.i16" to="gmem_addr_read_18" fromId="229" toId="20">
 </dataflow>
-<dataflow id="245" from="empty_22" to="tmp_7" fromId="127" toId="20">
+<dataflow id="245" from="gmem_addr_read_8" to="gmem_addr_read_18" fromId="127" toId="20">
 </dataflow>
-<dataflow id="246" from="_ssdm_op_Read.ap_auto.i16" to="tmp_8" fromId="229" toId="21">
+<dataflow id="246" from="_ssdm_op_Read.ap_auto.i16" to="gmem_addr_read_19" fromId="229" toId="21">
 </dataflow>
-<dataflow id="247" from="empty_21" to="tmp_8" fromId="126" toId="21">
+<dataflow id="247" from="gmem_addr_read_9" to="gmem_addr_read_19" fromId="126" toId="21">
 </dataflow>
-<dataflow id="248" from="_ssdm_op_Read.ap_auto.i16" to="tmp_9" fromId="229" toId="22">
+<dataflow id="248" from="_ssdm_op_Read.ap_auto.i16" to="gmem_addr_read_20" fromId="229" toId="22">
 </dataflow>
-<dataflow id="249" from="empty_20" to="tmp_9" fromId="125" toId="22">
+<dataflow id="249" from="gmem_addr_read" to="gmem_addr_read_20" fromId="125" toId="22">
 </dataflow>
-<dataflow id="250" from="_ssdm_op_Read.ap_auto.i16" to="tmp_10" fromId="229" toId="23">
+<dataflow id="250" from="_ssdm_op_Read.ap_auto.i16" to="gmem_addr_read_21" fromId="229" toId="23">
 </dataflow>
-<dataflow id="251" from="empty_19" to="tmp_10" fromId="124" toId="23">
+<dataflow id="251" from="gmem_addr_read_10" to="gmem_addr_read_21" fromId="124" toId="23">
 </dataflow>
-<dataflow id="253" from="_ssdm_op_Read.axis.volatile.i16P0A.i2P0A.i2P0A.i1P0A.i1P0A.i1P0A.i1P0A" to="empty_29" fromId="252" toId="25">
+<dataflow id="253" from="_ssdm_op_Read.axis.volatile.i16P0A.i2P0A.i2P0A.i1P0A.i1P0A.i1P0A.i1P0A" to="empty" fromId="252" toId="25">
 </dataflow>
-<dataflow id="254" from="x_V_data_V" to="empty_29" fromId="117" toId="25">
+<dataflow id="254" from="x_V_data_V" to="empty" fromId="117" toId="25">
 </dataflow>
-<dataflow id="255" from="x_V_keep_V" to="empty_29" fromId="118" toId="25">
+<dataflow id="255" from="x_V_keep_V" to="empty" fromId="118" toId="25">
 </dataflow>
-<dataflow id="256" from="x_V_strb_V" to="empty_29" fromId="119" toId="25">
+<dataflow id="256" from="x_V_strb_V" to="empty" fromId="119" toId="25">
 </dataflow>
-<dataflow id="257" from="x_V_user_V" to="empty_29" fromId="120" toId="25">
+<dataflow id="257" from="x_V_user_V" to="empty" fromId="120" toId="25">
 </dataflow>
-<dataflow id="258" from="x_V_last_V" to="empty_29" fromId="121" toId="25">
+<dataflow id="258" from="x_V_last_V" to="empty" fromId="121" toId="25">
 </dataflow>
-<dataflow id="259" from="x_V_id_V" to="empty_29" fromId="122" toId="25">
+<dataflow id="259" from="x_V_id_V" to="empty" fromId="122" toId="25">
 </dataflow>
-<dataflow id="260" from="x_V_dest_V" to="empty_29" fromId="123" toId="25">
+<dataflow id="260" from="x_V_dest_V" to="empty" fromId="123" toId="25">
 </dataflow>
-<dataflow id="261" from="empty_29" to="tmp1_data" fromId="25" toId="26">
+<dataflow id="261" from="empty" to="tmp1_data" fromId="25" toId="26">
 </dataflow>
-<dataflow id="262" from="empty_29" to="tmp1_keep" fromId="25" toId="27">
+<dataflow id="262" from="empty" to="tmp1_keep" fromId="25" toId="27">
 </dataflow>
-<dataflow id="263" from="empty_29" to="tmp1_strb" fromId="25" toId="28">
+<dataflow id="263" from="empty" to="tmp1_strb" fromId="25" toId="28">
 </dataflow>
-<dataflow id="264" from="empty_29" to="tmp1_user" fromId="25" toId="29">
+<dataflow id="264" from="empty" to="tmp1_user" fromId="25" toId="29">
 </dataflow>
-<dataflow id="265" from="empty_29" to="tmp1_last" fromId="25" toId="30">
+<dataflow id="265" from="empty" to="tmp1_last" fromId="25" toId="30">
 </dataflow>
-<dataflow id="266" from="empty_29" to="tmp1_id" fromId="25" toId="31">
+<dataflow id="266" from="empty" to="tmp1_id" fromId="25" toId="31">
 </dataflow>
-<dataflow id="267" from="empty_29" to="tmp1_dest" fromId="25" toId="32">
+<dataflow id="267" from="empty" to="tmp1_dest" fromId="25" toId="32">
 </dataflow>
-<dataflow id="268" from="filt_stream_int_stream_axis_0_shift_reg_2" to="filt_stream_int_stream_axis_0_shift_reg_2_load" fromId="144" toId="33">
+<dataflow id="268" from="tmp1_data" to="mul_ln34" fromId="26" toId="33">
 </dataflow>
-<dataflow id="269" from="filt_stream_int_stream_axis_0_shift_reg_3" to="filt_stream_int_stream_axis_0_shift_reg_3_load" fromId="145" toId="34">
+<dataflow id="269" from="gmem_addr_read_20" to="mul_ln34" fromId="22" toId="33">
 </dataflow>
-<dataflow id="270" from="filt_stream_int_stream_axis_0_shift_reg_4" to="filt_stream_int_stream_axis_0_shift_reg_4_load" fromId="146" toId="35">
+<dataflow id="270" from="filt_stream_short_stream_axis_0_shift_reg_2" to="filt_stream_short_stream_axis_0_shift_reg_2_load" fromId="144" toId="34">
 </dataflow>
-<dataflow id="271" from="filt_stream_int_stream_axis_0_shift_reg_5" to="filt_stream_int_stream_axis_0_shift_reg_5_load" fromId="147" toId="36">
+<dataflow id="271" from="filt_stream_short_stream_axis_0_shift_reg_3" to="filt_stream_short_stream_axis_0_shift_reg_3_load" fromId="145" toId="35">
 </dataflow>
-<dataflow id="272" from="filt_stream_int_stream_axis_0_shift_reg_6" to="filt_stream_int_stream_axis_0_shift_reg_6_load" fromId="148" toId="37">
+<dataflow id="272" from="filt_stream_short_stream_axis_0_shift_reg_3_load" to="mul_ln31_2" fromId="35" toId="36">
 </dataflow>
-<dataflow id="273" from="filt_stream_int_stream_axis_0_shift_reg_7" to="filt_stream_int_stream_axis_0_shift_reg_7_load" fromId="149" toId="38">
+<dataflow id="273" from="gmem_addr_read_17" to="mul_ln31_2" fromId="19" toId="36">
 </dataflow>
-<dataflow id="274" from="filt_stream_int_stream_axis_0_shift_reg_8" to="filt_stream_int_stream_axis_0_shift_reg_8_load" fromId="150" toId="39">
+<dataflow id="274" from="filt_stream_short_stream_axis_0_shift_reg_4" to="filt_stream_short_stream_axis_0_shift_reg_4_load" fromId="146" toId="37">
 </dataflow>
-<dataflow id="275" from="filt_stream_int_stream_axis_0_shift_reg_9" to="filt_stream_int_stream_axis_0_shift_reg_9_load" fromId="151" toId="40">
+<dataflow id="275" from="filt_stream_short_stream_axis_0_shift_reg_5" to="filt_stream_short_stream_axis_0_shift_reg_5_load" fromId="147" toId="38">
 </dataflow>
-<dataflow id="276" from="tmp_10" to="mul_ln34" fromId="23" toId="41">
+<dataflow id="276" from="filt_stream_short_stream_axis_0_shift_reg_5_load" to="mul_ln31_4" fromId="38" toId="39">
 </dataflow>
-<dataflow id="277" from="tmp1_data" to="mul_ln34" fromId="26" toId="41">
+<dataflow id="277" from="gmem_addr_read_15" to="mul_ln31_4" fromId="17" toId="39">
 </dataflow>
-<dataflow id="278" from="filt_stream_int_stream_axis_0_shift_reg_9_load" to="mul_ln34_2" fromId="40" toId="42">
+<dataflow id="278" from="filt_stream_short_stream_axis_0_shift_reg_6" to="filt_stream_short_stream_axis_0_shift_reg_6_load" fromId="148" toId="40">
 </dataflow>
-<dataflow id="279" from="tmp_8" to="mul_ln34_2" fromId="21" toId="42">
+<dataflow id="279" from="filt_stream_short_stream_axis_0_shift_reg_6_load" to="mul_ln31_5" fromId="40" toId="41">
 </dataflow>
-<dataflow id="280" from="filt_stream_int_stream_axis_0_shift_reg_6_load" to="mul_ln34_4" fromId="37" toId="43">
+<dataflow id="280" from="gmem_addr_read_14" to="mul_ln31_5" fromId="16" toId="41">
 </dataflow>
-<dataflow id="281" from="tmp_6" to="mul_ln34_4" fromId="19" toId="43">
+<dataflow id="281" from="filt_stream_short_stream_axis_0_shift_reg_7" to="filt_stream_short_stream_axis_0_shift_reg_7_load" fromId="149" toId="42">
 </dataflow>
-<dataflow id="282" from="filt_stream_int_stream_axis_0_shift_reg_3_load" to="mul_ln34_5" fromId="34" toId="44">
+<dataflow id="282" from="filt_stream_short_stream_axis_0_shift_reg_8" to="filt_stream_short_stream_axis_0_shift_reg_8_load" fromId="150" toId="43">
 </dataflow>
-<dataflow id="283" from="tmp_5" to="mul_ln34_5" fromId="18" toId="44">
+<dataflow id="283" from="filt_stream_short_stream_axis_0_shift_reg_8_load" to="mul_ln31_7" fromId="43" toId="44">
 </dataflow>
-<dataflow id="284" from="filt_stream_int_stream_axis_0_shift_reg_5_load" to="mul_ln34_7" fromId="36" toId="45">
+<dataflow id="284" from="gmem_addr_read_12" to="mul_ln31_7" fromId="14" toId="44">
 </dataflow>
-<dataflow id="285" from="tmp_3" to="mul_ln34_7" fromId="16" toId="45">
+<dataflow id="285" from="filt_stream_short_stream_axis_0_shift_reg_9" to="filt_stream_short_stream_axis_0_shift_reg_9_load" fromId="151" toId="45">
 </dataflow>
-<dataflow id="286" from="filt_stream_int_stream_axis_0_shift_reg_8_load" to="mul_ln34_10" fromId="39" toId="46">
+<dataflow id="286" from="filt_stream_short_stream_axis_0_shift_reg_9_load" to="mul_ln31_8" fromId="45" toId="46">
 </dataflow>
-<dataflow id="287" from="tmp" to="mul_ln34_10" fromId="13" toId="46">
+<dataflow id="287" from="gmem_addr_read_11" to="mul_ln31_8" fromId="13" toId="46">
 </dataflow>
-<dataflow id="288" from="filt_stream_int_stream_axis_0_shift_reg_3_load" to="store_ln30" fromId="34" toId="47">
+<dataflow id="288" from="filt_stream_short_stream_axis_0_shift_reg_3_load" to="store_ln30" fromId="35" toId="47">
 </dataflow>
-<dataflow id="289" from="filt_stream_int_stream_axis_0_shift_reg_2" to="store_ln30" fromId="144" toId="47">
+<dataflow id="289" from="filt_stream_short_stream_axis_0_shift_reg_2" to="store_ln30" fromId="144" toId="47">
 </dataflow>
-<dataflow id="290" from="filt_stream_int_stream_axis_0_shift_reg_4_load" to="store_ln30" fromId="35" toId="48">
+<dataflow id="290" from="filt_stream_short_stream_axis_0_shift_reg_4_load" to="store_ln30" fromId="37" toId="48">
 </dataflow>
-<dataflow id="291" from="filt_stream_int_stream_axis_0_shift_reg_3" to="store_ln30" fromId="145" toId="48">
+<dataflow id="291" from="filt_stream_short_stream_axis_0_shift_reg_3" to="store_ln30" fromId="145" toId="48">
 </dataflow>
-<dataflow id="292" from="filt_stream_int_stream_axis_0_shift_reg_5_load" to="store_ln30" fromId="36" toId="49">
+<dataflow id="292" from="filt_stream_short_stream_axis_0_shift_reg_5_load" to="store_ln30" fromId="38" toId="49">
 </dataflow>
-<dataflow id="293" from="filt_stream_int_stream_axis_0_shift_reg_4" to="store_ln30" fromId="146" toId="49">
+<dataflow id="293" from="filt_stream_short_stream_axis_0_shift_reg_4" to="store_ln30" fromId="146" toId="49">
 </dataflow>
-<dataflow id="294" from="filt_stream_int_stream_axis_0_shift_reg_6_load" to="store_ln30" fromId="37" toId="50">
+<dataflow id="294" from="filt_stream_short_stream_axis_0_shift_reg_6_load" to="store_ln30" fromId="40" toId="50">
 </dataflow>
-<dataflow id="295" from="filt_stream_int_stream_axis_0_shift_reg_5" to="store_ln30" fromId="147" toId="50">
+<dataflow id="295" from="filt_stream_short_stream_axis_0_shift_reg_5" to="store_ln30" fromId="147" toId="50">
 </dataflow>
-<dataflow id="296" from="filt_stream_int_stream_axis_0_shift_reg_7_load" to="store_ln30" fromId="38" toId="51">
+<dataflow id="296" from="filt_stream_short_stream_axis_0_shift_reg_7_load" to="store_ln30" fromId="42" toId="51">
 </dataflow>
-<dataflow id="297" from="filt_stream_int_stream_axis_0_shift_reg_6" to="store_ln30" fromId="148" toId="51">
+<dataflow id="297" from="filt_stream_short_stream_axis_0_shift_reg_6" to="store_ln30" fromId="148" toId="51">
 </dataflow>
-<dataflow id="298" from="filt_stream_int_stream_axis_0_shift_reg_8_load" to="store_ln30" fromId="39" toId="52">
+<dataflow id="298" from="filt_stream_short_stream_axis_0_shift_reg_8_load" to="store_ln30" fromId="43" toId="52">
 </dataflow>
-<dataflow id="299" from="filt_stream_int_stream_axis_0_shift_reg_7" to="store_ln30" fromId="149" toId="52">
+<dataflow id="299" from="filt_stream_short_stream_axis_0_shift_reg_7" to="store_ln30" fromId="149" toId="52">
 </dataflow>
-<dataflow id="300" from="filt_stream_int_stream_axis_0_shift_reg_9_load" to="store_ln30" fromId="40" toId="53">
+<dataflow id="300" from="filt_stream_short_stream_axis_0_shift_reg_9_load" to="store_ln30" fromId="45" toId="53">
 </dataflow>
-<dataflow id="301" from="filt_stream_int_stream_axis_0_shift_reg_8" to="store_ln30" fromId="150" toId="53">
+<dataflow id="301" from="filt_stream_short_stream_axis_0_shift_reg_8" to="store_ln30" fromId="150" toId="53">
 </dataflow>
 <dataflow id="302" from="tmp1_data" to="store_ln35" fromId="26" toId="54">
 </dataflow>
-<dataflow id="303" from="filt_stream_int_stream_axis_0_shift_reg_9" to="store_ln35" fromId="151" toId="54">
+<dataflow id="303" from="filt_stream_short_stream_axis_0_shift_reg_9" to="store_ln35" fromId="151" toId="54">
 </dataflow>
 <dataflow id="304" from="tmp1_last" to="br_ln25" fromId="30" toId="55">
 </dataflow>
@@ -1852,149 +1852,149 @@ while.end.exitStub:0 %ret_ln0 = ret
 </dataflow>
 <dataflow id="315" from="empty_14" to="specloopname_ln18" fromId="314" toId="57">
 </dataflow>
-<dataflow id="316" from="filt_stream_int_stream_axis_0_shift_reg" to="filt_stream_int_stream_axis_0_shift_reg_load" fromId="142" toId="59">
+<dataflow id="316" from="filt_stream_short_stream_axis_0_shift_reg" to="filt_stream_short_stream_axis_0_shift_reg_load" fromId="142" toId="59">
 </dataflow>
-<dataflow id="317" from="filt_stream_int_stream_axis_0_shift_reg_1" to="filt_stream_int_stream_axis_0_shift_reg_1_load" fromId="143" toId="60">
+<dataflow id="317" from="filt_stream_short_stream_axis_0_shift_reg_load" to="acc" fromId="59" toId="60">
 </dataflow>
-<dataflow id="318" from="tmp_10" to="mul_ln34" fromId="23" toId="61">
+<dataflow id="318" from="gmem_addr_read_21" to="acc" fromId="23" toId="60">
 </dataflow>
 <dataflow id="319" from="tmp1_data" to="mul_ln34" fromId="26" toId="61">
 </dataflow>
-<dataflow id="320" from="filt_stream_int_stream_axis_0_shift_reg_7_load" to="mul_ln34_1" fromId="38" toId="62">
+<dataflow id="320" from="gmem_addr_read_20" to="mul_ln34" fromId="22" toId="61">
 </dataflow>
-<dataflow id="321" from="tmp_9" to="mul_ln34_1" fromId="22" toId="62">
+<dataflow id="321" from="filt_stream_short_stream_axis_0_shift_reg_1" to="filt_stream_short_stream_axis_0_shift_reg_1_load" fromId="143" toId="62">
 </dataflow>
-<dataflow id="322" from="filt_stream_int_stream_axis_0_shift_reg_9_load" to="mul_ln34_2" fromId="40" toId="63">
+<dataflow id="322" from="filt_stream_short_stream_axis_0_shift_reg_1_load" to="mul_ln31" fromId="62" toId="63">
 </dataflow>
-<dataflow id="323" from="tmp_8" to="mul_ln34_2" fromId="21" toId="63">
+<dataflow id="323" from="gmem_addr_read_19" to="mul_ln31" fromId="21" toId="63">
 </dataflow>
-<dataflow id="324" from="filt_stream_int_stream_axis_0_shift_reg_load" to="mul_ln34_3" fromId="59" toId="64">
+<dataflow id="324" from="filt_stream_short_stream_axis_0_shift_reg_2_load" to="mul_ln31_1" fromId="34" toId="64">
 </dataflow>
-<dataflow id="325" from="tmp_7" to="mul_ln34_3" fromId="20" toId="64">
+<dataflow id="325" from="gmem_addr_read_18" to="mul_ln31_1" fromId="20" toId="64">
 </dataflow>
-<dataflow id="326" from="filt_stream_int_stream_axis_0_shift_reg_6_load" to="mul_ln34_4" fromId="37" toId="65">
+<dataflow id="326" from="filt_stream_short_stream_axis_0_shift_reg_3_load" to="mul_ln31_2" fromId="35" toId="65">
 </dataflow>
-<dataflow id="327" from="tmp_6" to="mul_ln34_4" fromId="19" toId="65">
+<dataflow id="327" from="gmem_addr_read_17" to="mul_ln31_2" fromId="19" toId="65">
 </dataflow>
-<dataflow id="328" from="filt_stream_int_stream_axis_0_shift_reg_3_load" to="mul_ln34_5" fromId="34" toId="66">
+<dataflow id="328" from="filt_stream_short_stream_axis_0_shift_reg_4_load" to="mul_ln31_3" fromId="37" toId="66">
 </dataflow>
-<dataflow id="329" from="tmp_5" to="mul_ln34_5" fromId="18" toId="66">
+<dataflow id="329" from="gmem_addr_read_16" to="mul_ln31_3" fromId="18" toId="66">
 </dataflow>
-<dataflow id="330" from="filt_stream_int_stream_axis_0_shift_reg_4_load" to="mul_ln34_6" fromId="35" toId="67">
+<dataflow id="330" from="filt_stream_short_stream_axis_0_shift_reg_6_load" to="mul_ln31_5" fromId="40" toId="67">
 </dataflow>
-<dataflow id="331" from="tmp_4" to="mul_ln34_6" fromId="17" toId="67">
+<dataflow id="331" from="gmem_addr_read_14" to="mul_ln31_5" fromId="16" toId="67">
 </dataflow>
-<dataflow id="332" from="filt_stream_int_stream_axis_0_shift_reg_1_load" to="mul_ln34_8" fromId="60" toId="68">
+<dataflow id="332" from="filt_stream_short_stream_axis_0_shift_reg_7_load" to="mul_ln31_6" fromId="42" toId="68">
 </dataflow>
-<dataflow id="333" from="tmp_2" to="mul_ln34_8" fromId="15" toId="68">
+<dataflow id="333" from="gmem_addr_read_13" to="mul_ln31_6" fromId="15" toId="68">
 </dataflow>
-<dataflow id="334" from="filt_stream_int_stream_axis_0_shift_reg_2_load" to="mul_ln34_9" fromId="33" toId="69">
+<dataflow id="334" from="filt_stream_short_stream_axis_0_shift_reg_9_load" to="mul_ln31_8" fromId="45" toId="69">
 </dataflow>
-<dataflow id="335" from="tmp_1" to="mul_ln34_9" fromId="14" toId="69">
+<dataflow id="335" from="gmem_addr_read_11" to="mul_ln31_8" fromId="13" toId="69">
 </dataflow>
-<dataflow id="336" from="filt_stream_int_stream_axis_0_shift_reg_1_load" to="store_ln30" fromId="60" toId="70">
+<dataflow id="336" from="filt_stream_short_stream_axis_0_shift_reg_1_load" to="store_ln30" fromId="62" toId="70">
 </dataflow>
-<dataflow id="337" from="filt_stream_int_stream_axis_0_shift_reg" to="store_ln30" fromId="142" toId="70">
+<dataflow id="337" from="filt_stream_short_stream_axis_0_shift_reg" to="store_ln30" fromId="142" toId="70">
 </dataflow>
-<dataflow id="338" from="filt_stream_int_stream_axis_0_shift_reg_2_load" to="store_ln30" fromId="33" toId="71">
+<dataflow id="338" from="filt_stream_short_stream_axis_0_shift_reg_2_load" to="store_ln30" fromId="34" toId="71">
 </dataflow>
-<dataflow id="339" from="filt_stream_int_stream_axis_0_shift_reg_1" to="store_ln30" fromId="143" toId="71">
+<dataflow id="339" from="filt_stream_short_stream_axis_0_shift_reg_1" to="store_ln30" fromId="143" toId="71">
 </dataflow>
-<dataflow id="340" from="tmp_10" to="mul_ln34" fromId="23" toId="72">
+<dataflow id="340" from="tmp1_data" to="mul_ln34" fromId="26" toId="72">
 </dataflow>
-<dataflow id="341" from="tmp1_data" to="mul_ln34" fromId="26" toId="72">
+<dataflow id="341" from="gmem_addr_read_20" to="mul_ln34" fromId="22" toId="72">
 </dataflow>
-<dataflow id="342" from="filt_stream_int_stream_axis_0_shift_reg_7_load" to="mul_ln34_1" fromId="38" toId="73">
+<dataflow id="342" from="filt_stream_short_stream_axis_0_shift_reg_1_load" to="mul_ln31" fromId="62" toId="73">
 </dataflow>
-<dataflow id="343" from="tmp_9" to="mul_ln34_1" fromId="22" toId="73">
+<dataflow id="343" from="gmem_addr_read_19" to="mul_ln31" fromId="21" toId="73">
 </dataflow>
-<dataflow id="344" from="filt_stream_int_stream_axis_0_shift_reg_9_load" to="mul_ln34_2" fromId="40" toId="74">
+<dataflow id="344" from="filt_stream_short_stream_axis_0_shift_reg_3_load" to="mul_ln31_2" fromId="35" toId="74">
 </dataflow>
-<dataflow id="345" from="tmp_8" to="mul_ln34_2" fromId="21" toId="74">
+<dataflow id="345" from="gmem_addr_read_17" to="mul_ln31_2" fromId="19" toId="74">
 </dataflow>
-<dataflow id="346" from="filt_stream_int_stream_axis_0_shift_reg_6_load" to="mul_ln34_4" fromId="37" toId="75">
+<dataflow id="346" from="filt_stream_short_stream_axis_0_shift_reg_4_load" to="mul_ln31_3" fromId="37" toId="75">
 </dataflow>
-<dataflow id="347" from="tmp_6" to="mul_ln34_4" fromId="19" toId="75">
+<dataflow id="347" from="gmem_addr_read_16" to="mul_ln31_3" fromId="18" toId="75">
 </dataflow>
-<dataflow id="348" from="filt_stream_int_stream_axis_0_shift_reg_3_load" to="mul_ln34_5" fromId="34" toId="76">
+<dataflow id="348" from="filt_stream_short_stream_axis_0_shift_reg_6_load" to="mul_ln31_5" fromId="40" toId="76">
 </dataflow>
-<dataflow id="349" from="tmp_5" to="mul_ln34_5" fromId="18" toId="76">
+<dataflow id="349" from="gmem_addr_read_14" to="mul_ln31_5" fromId="16" toId="76">
 </dataflow>
-<dataflow id="350" from="filt_stream_int_stream_axis_0_shift_reg_4_load" to="mul_ln34_6" fromId="35" toId="77">
+<dataflow id="350" from="filt_stream_short_stream_axis_0_shift_reg_7_load" to="mul_ln31_6" fromId="42" toId="77">
 </dataflow>
-<dataflow id="351" from="tmp_4" to="mul_ln34_6" fromId="17" toId="77">
+<dataflow id="351" from="gmem_addr_read_13" to="mul_ln31_6" fromId="15" toId="77">
 </dataflow>
-<dataflow id="352" from="filt_stream_int_stream_axis_0_shift_reg_1_load" to="mul_ln34_8" fromId="60" toId="78">
+<dataflow id="352" from="filt_stream_short_stream_axis_0_shift_reg_9_load" to="mul_ln31_8" fromId="45" toId="78">
 </dataflow>
-<dataflow id="353" from="tmp_2" to="mul_ln34_8" fromId="15" toId="78">
+<dataflow id="353" from="gmem_addr_read_11" to="mul_ln31_8" fromId="13" toId="78">
 </dataflow>
-<dataflow id="354" from="mul_ln34_3" to="add_ln34" fromId="64" toId="79">
+<dataflow id="354" from="acc" to="add_ln34" fromId="60" toId="79">
 </dataflow>
 <dataflow id="355" from="mul_ln34" to="add_ln34" fromId="72" toId="79">
 </dataflow>
-<dataflow id="356" from="mul_ln34_9" to="add_ln34_1" fromId="69" toId="80">
+<dataflow id="356" from="mul_ln31_1" to="add_ln34_1" fromId="64" toId="80">
 </dataflow>
-<dataflow id="357" from="mul_ln34_5" to="add_ln34_1" fromId="76" toId="80">
+<dataflow id="357" from="mul_ln31_2" to="add_ln34_1" fromId="74" toId="80">
 </dataflow>
-<dataflow id="358" from="mul_ln34_7" to="add_ln34_4" fromId="45" toId="81">
+<dataflow id="358" from="mul_ln31_4" to="add_ln34_4" fromId="39" toId="81">
 </dataflow>
-<dataflow id="359" from="mul_ln34_4" to="add_ln34_4" fromId="75" toId="81">
+<dataflow id="359" from="mul_ln31_5" to="add_ln34_4" fromId="76" toId="81">
 </dataflow>
-<dataflow id="360" from="mul_ln34_10" to="add_ln34_6" fromId="46" toId="82">
+<dataflow id="360" from="mul_ln31_7" to="add_ln34_6" fromId="44" toId="82">
 </dataflow>
-<dataflow id="361" from="mul_ln34_2" to="add_ln34_6" fromId="74" toId="82">
+<dataflow id="361" from="mul_ln31_8" to="add_ln34_6" fromId="78" toId="82">
 </dataflow>
-<dataflow id="362" from="filt_stream_int_stream_axis_0_shift_reg_7_load" to="mul_ln34_1" fromId="38" toId="83">
+<dataflow id="362" from="filt_stream_short_stream_axis_0_shift_reg_1_load" to="mul_ln31" fromId="62" toId="83">
 </dataflow>
-<dataflow id="363" from="tmp_9" to="mul_ln34_1" fromId="22" toId="83">
+<dataflow id="363" from="gmem_addr_read_19" to="mul_ln31" fromId="21" toId="83">
 </dataflow>
-<dataflow id="364" from="filt_stream_int_stream_axis_0_shift_reg_4_load" to="mul_ln34_6" fromId="35" toId="84">
+<dataflow id="364" from="filt_stream_short_stream_axis_0_shift_reg_4_load" to="mul_ln31_3" fromId="37" toId="84">
 </dataflow>
-<dataflow id="365" from="tmp_4" to="mul_ln34_6" fromId="17" toId="84">
+<dataflow id="365" from="gmem_addr_read_16" to="mul_ln31_3" fromId="18" toId="84">
 </dataflow>
-<dataflow id="366" from="filt_stream_int_stream_axis_0_shift_reg_1_load" to="mul_ln34_8" fromId="60" toId="85">
+<dataflow id="366" from="filt_stream_short_stream_axis_0_shift_reg_7_load" to="mul_ln31_6" fromId="42" toId="85">
 </dataflow>
-<dataflow id="367" from="tmp_2" to="mul_ln34_8" fromId="15" toId="85">
+<dataflow id="367" from="gmem_addr_read_13" to="mul_ln31_6" fromId="15" toId="85">
 </dataflow>
-<dataflow id="368" from="mul_ln34_3" to="add_ln34" fromId="64" toId="86">
+<dataflow id="368" from="acc" to="add_ln34" fromId="60" toId="86">
 </dataflow>
 <dataflow id="369" from="mul_ln34" to="add_ln34" fromId="72" toId="86">
 </dataflow>
-<dataflow id="370" from="mul_ln34_9" to="add_ln34_1" fromId="69" toId="87">
+<dataflow id="370" from="mul_ln31_1" to="add_ln34_1" fromId="64" toId="87">
 </dataflow>
-<dataflow id="371" from="mul_ln34_5" to="add_ln34_1" fromId="76" toId="87">
+<dataflow id="371" from="mul_ln31_2" to="add_ln34_1" fromId="74" toId="87">
 </dataflow>
 <dataflow id="372" from="add_ln34_1" to="add_ln34_2" fromId="87" toId="88">
 </dataflow>
-<dataflow id="373" from="mul_ln34_8" to="add_ln34_2" fromId="85" toId="88">
+<dataflow id="373" from="mul_ln31" to="add_ln34_2" fromId="83" toId="88">
 </dataflow>
-<dataflow id="374" from="mul_ln34_7" to="add_ln34_4" fromId="45" toId="89">
+<dataflow id="374" from="mul_ln31_4" to="add_ln34_4" fromId="39" toId="89">
 </dataflow>
-<dataflow id="375" from="mul_ln34_4" to="add_ln34_4" fromId="75" toId="89">
+<dataflow id="375" from="mul_ln31_5" to="add_ln34_4" fromId="76" toId="89">
 </dataflow>
 <dataflow id="376" from="add_ln34_4" to="add_ln34_5" fromId="89" toId="90">
 </dataflow>
-<dataflow id="377" from="mul_ln34_6" to="add_ln34_5" fromId="84" toId="90">
+<dataflow id="377" from="mul_ln31_3" to="add_ln34_5" fromId="84" toId="90">
 </dataflow>
-<dataflow id="378" from="mul_ln34_10" to="add_ln34_6" fromId="46" toId="91">
+<dataflow id="378" from="mul_ln31_7" to="add_ln34_6" fromId="44" toId="91">
 </dataflow>
-<dataflow id="379" from="mul_ln34_2" to="add_ln34_6" fromId="74" toId="91">
+<dataflow id="379" from="mul_ln31_8" to="add_ln34_6" fromId="78" toId="91">
 </dataflow>
 <dataflow id="380" from="add_ln34_6" to="add_ln34_7" fromId="91" toId="92">
 </dataflow>
-<dataflow id="381" from="mul_ln34_1" to="add_ln34_7" fromId="83" toId="92">
+<dataflow id="381" from="mul_ln31_6" to="add_ln34_7" fromId="85" toId="92">
 </dataflow>
 <dataflow id="382" from="add_ln34_1" to="add_ln34_2" fromId="87" toId="93">
 </dataflow>
-<dataflow id="383" from="mul_ln34_8" to="add_ln34_2" fromId="85" toId="93">
+<dataflow id="383" from="mul_ln31" to="add_ln34_2" fromId="83" toId="93">
 </dataflow>
 <dataflow id="384" from="add_ln34_4" to="add_ln34_5" fromId="89" toId="94">
 </dataflow>
-<dataflow id="385" from="mul_ln34_6" to="add_ln34_5" fromId="84" toId="94">
+<dataflow id="385" from="mul_ln31_3" to="add_ln34_5" fromId="84" toId="94">
 </dataflow>
 <dataflow id="386" from="add_ln34_6" to="add_ln34_7" fromId="91" toId="95">
 </dataflow>
-<dataflow id="387" from="mul_ln34_1" to="add_ln34_7" fromId="83" toId="95">
+<dataflow id="387" from="mul_ln31_6" to="add_ln34_7" fromId="85" toId="95">
 </dataflow>
 <dataflow id="388" from="add_ln34_7" to="add_ln34_8" fromId="95" toId="96">
 </dataflow>
@@ -2004,9 +2004,9 @@ while.end.exitStub:0 %ret_ln0 = ret
 </dataflow>
 <dataflow id="391" from="add_ln34" to="add_ln34_3" fromId="86" toId="97">
 </dataflow>
-<dataflow id="392" from="add_ln34_8" to="acc" fromId="96" toId="98">
+<dataflow id="392" from="add_ln34_8" to="acc_2" fromId="96" toId="98">
 </dataflow>
-<dataflow id="393" from="add_ln34_3" to="acc" fromId="97" toId="98">
+<dataflow id="393" from="add_ln34_3" to="acc_2" fromId="97" toId="98">
 </dataflow>
 <dataflow id="395" from="_ssdm_op_Write.axis.volatile.i16P0A.i2P0A.i2P0A.i1P0A.i1P0A.i1P0A.i1P0A" to="write_ln44" fromId="394" toId="99">
 </dataflow>
@@ -2024,7 +2024,7 @@ while.end.exitStub:0 %ret_ln0 = ret
 </dataflow>
 <dataflow id="402" from="y_V_dest_V" to="write_ln44" fromId="141" toId="99">
 </dataflow>
-<dataflow id="403" from="acc" to="write_ln44" fromId="98" toId="99">
+<dataflow id="403" from="acc_2" to="write_ln44" fromId="98" toId="99">
 </dataflow>
 <dataflow id="404" from="tmp1_keep" to="write_ln44" fromId="27" toId="99">
 </dataflow>

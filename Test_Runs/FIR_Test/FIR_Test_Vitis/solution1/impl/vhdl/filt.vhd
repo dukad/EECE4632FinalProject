@@ -112,7 +112,7 @@ end;
 architecture behav of filt is 
     attribute CORE_GENERATION_INFO : STRING;
     attribute CORE_GENERATION_INFO of behav : architecture is
-    "filt_filt,hls_ip_2023_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020-clg400-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=7.300000,HLS_SYN_LAT=-1,HLS_SYN_TPT=none,HLS_SYN_MEM=4,HLS_SYN_DSP=0,HLS_SYN_FF=1966,HLS_SYN_LUT=1357,HLS_VERSION=2023_2}";
+    "filt_filt,hls_ip_2023_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020-clg400-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=7.300000,HLS_SYN_LAT=-1,HLS_SYN_TPT=none,HLS_SYN_MEM=2,HLS_SYN_DSP=0,HLS_SYN_FF=1991,HLS_SYN_LUT=1454,HLS_VERSION=2023_2}";
     constant ap_const_logic_1 : STD_LOGIC := '1';
     constant ap_const_logic_0 : STD_LOGIC := '0';
     constant ap_ST_fsm_state1 : STD_LOGIC_VECTOR (22 downto 0) := "00000000000000000000001";
@@ -156,11 +156,11 @@ architecture behav of filt is
     constant C_M_AXI_DATA_WIDTH : INTEGER := 32;
     constant ap_const_lv32_14 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000010100";
     constant ap_const_lv32_15 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000010101";
-    constant ap_const_lv4_0 : STD_LOGIC_VECTOR (3 downto 0) := "0000";
-    constant ap_const_lv32_2 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000010";
+    constant ap_const_lv2_0 : STD_LOGIC_VECTOR (1 downto 0) := "00";
     constant ap_const_lv32_3F : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000111111";
     constant ap_const_lv32_16 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000010110";
     constant ap_const_lv64_0 : STD_LOGIC_VECTOR (63 downto 0) := "0000000000000000000000000000000000000000000000000000000000000000";
+    constant ap_const_lv16_0 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
 
     signal ap_rst_n_inv : STD_LOGIC;
     signal c : STD_LOGIC_VECTOR (63 downto 0);
@@ -193,61 +193,50 @@ architecture behav of filt is
     attribute fsm_encoding of ap_CS_fsm_state19 : signal is "none";
     signal ap_CS_fsm_state20 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state20 : signal is "none";
-    signal gmem_addr_reg_261 : STD_LOGIC_VECTOR (63 downto 0);
+    signal gmem_addr_reg_215 : STD_LOGIC_VECTOR (63 downto 0);
     signal ap_CS_fsm_state1 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state1 : signal is "none";
-    signal trunc_ln34_fu_217_p1 : STD_LOGIC_VECTOR (15 downto 0);
-    signal trunc_ln34_reg_267 : STD_LOGIC_VECTOR (15 downto 0);
-    signal trunc_ln34_2_fu_221_p1 : STD_LOGIC_VECTOR (15 downto 0);
-    signal trunc_ln34_2_reg_272 : STD_LOGIC_VECTOR (15 downto 0);
-    signal trunc_ln34_10_fu_225_p1 : STD_LOGIC_VECTOR (15 downto 0);
-    signal trunc_ln34_10_reg_277 : STD_LOGIC_VECTOR (15 downto 0);
-    signal trunc_ln34_1_fu_229_p1 : STD_LOGIC_VECTOR (15 downto 0);
-    signal trunc_ln34_1_reg_282 : STD_LOGIC_VECTOR (15 downto 0);
-    signal trunc_ln34_4_fu_233_p1 : STD_LOGIC_VECTOR (15 downto 0);
-    signal trunc_ln34_4_reg_287 : STD_LOGIC_VECTOR (15 downto 0);
-    signal trunc_ln34_7_fu_237_p1 : STD_LOGIC_VECTOR (15 downto 0);
-    signal trunc_ln34_7_reg_292 : STD_LOGIC_VECTOR (15 downto 0);
-    signal trunc_ln34_6_fu_241_p1 : STD_LOGIC_VECTOR (15 downto 0);
-    signal trunc_ln34_6_reg_297 : STD_LOGIC_VECTOR (15 downto 0);
-    signal trunc_ln34_5_fu_245_p1 : STD_LOGIC_VECTOR (15 downto 0);
-    signal trunc_ln34_5_reg_302 : STD_LOGIC_VECTOR (15 downto 0);
-    signal trunc_ln34_9_fu_249_p1 : STD_LOGIC_VECTOR (15 downto 0);
-    signal trunc_ln34_9_reg_307 : STD_LOGIC_VECTOR (15 downto 0);
-    signal trunc_ln34_8_fu_253_p1 : STD_LOGIC_VECTOR (15 downto 0);
-    signal trunc_ln34_8_reg_312 : STD_LOGIC_VECTOR (15 downto 0);
-    signal trunc_ln34_3_fu_257_p1 : STD_LOGIC_VECTOR (15 downto 0);
-    signal trunc_ln34_3_reg_317 : STD_LOGIC_VECTOR (15 downto 0);
-    signal grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_ap_start : STD_LOGIC;
-    signal grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_ap_done : STD_LOGIC;
-    signal grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_ap_idle : STD_LOGIC;
-    signal grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_ap_ready : STD_LOGIC;
-    signal grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_y_TREADY : STD_LOGIC;
-    signal grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_x_TREADY : STD_LOGIC;
-    signal grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_y_TDATA : STD_LOGIC_VECTOR (15 downto 0);
-    signal grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_y_TVALID : STD_LOGIC;
-    signal grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_y_TKEEP : STD_LOGIC_VECTOR (1 downto 0);
-    signal grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_y_TSTRB : STD_LOGIC_VECTOR (1 downto 0);
-    signal grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_y_TUSER : STD_LOGIC_VECTOR (0 downto 0);
-    signal grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_y_TLAST : STD_LOGIC_VECTOR (0 downto 0);
-    signal grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_y_TID : STD_LOGIC_VECTOR (0 downto 0);
-    signal grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_y_TDEST : STD_LOGIC_VECTOR (0 downto 0);
+    signal gmem_addr_read_reg_221 : STD_LOGIC_VECTOR (15 downto 0);
+    signal gmem_addr_read_1_reg_226 : STD_LOGIC_VECTOR (15 downto 0);
+    signal gmem_addr_read_2_reg_231 : STD_LOGIC_VECTOR (15 downto 0);
+    signal gmem_addr_read_3_reg_236 : STD_LOGIC_VECTOR (15 downto 0);
+    signal gmem_addr_read_4_reg_241 : STD_LOGIC_VECTOR (15 downto 0);
+    signal gmem_addr_read_5_reg_246 : STD_LOGIC_VECTOR (15 downto 0);
+    signal gmem_addr_read_6_reg_251 : STD_LOGIC_VECTOR (15 downto 0);
+    signal gmem_addr_read_7_reg_256 : STD_LOGIC_VECTOR (15 downto 0);
+    signal gmem_addr_read_8_reg_261 : STD_LOGIC_VECTOR (15 downto 0);
+    signal gmem_addr_read_9_reg_266 : STD_LOGIC_VECTOR (15 downto 0);
+    signal gmem_addr_read_10_reg_271 : STD_LOGIC_VECTOR (15 downto 0);
+    signal grp_filt_Pipeline_VITIS_LOOP_18_1_fu_132_ap_start : STD_LOGIC;
+    signal grp_filt_Pipeline_VITIS_LOOP_18_1_fu_132_ap_done : STD_LOGIC;
+    signal grp_filt_Pipeline_VITIS_LOOP_18_1_fu_132_ap_idle : STD_LOGIC;
+    signal grp_filt_Pipeline_VITIS_LOOP_18_1_fu_132_ap_ready : STD_LOGIC;
+    signal grp_filt_Pipeline_VITIS_LOOP_18_1_fu_132_y_TREADY : STD_LOGIC;
+    signal grp_filt_Pipeline_VITIS_LOOP_18_1_fu_132_x_TREADY : STD_LOGIC;
+    signal grp_filt_Pipeline_VITIS_LOOP_18_1_fu_132_y_TDATA : STD_LOGIC_VECTOR (15 downto 0);
+    signal grp_filt_Pipeline_VITIS_LOOP_18_1_fu_132_y_TVALID : STD_LOGIC;
+    signal grp_filt_Pipeline_VITIS_LOOP_18_1_fu_132_y_TKEEP : STD_LOGIC_VECTOR (1 downto 0);
+    signal grp_filt_Pipeline_VITIS_LOOP_18_1_fu_132_y_TSTRB : STD_LOGIC_VECTOR (1 downto 0);
+    signal grp_filt_Pipeline_VITIS_LOOP_18_1_fu_132_y_TUSER : STD_LOGIC_VECTOR (0 downto 0);
+    signal grp_filt_Pipeline_VITIS_LOOP_18_1_fu_132_y_TLAST : STD_LOGIC_VECTOR (0 downto 0);
+    signal grp_filt_Pipeline_VITIS_LOOP_18_1_fu_132_y_TID : STD_LOGIC_VECTOR (0 downto 0);
+    signal grp_filt_Pipeline_VITIS_LOOP_18_1_fu_132_y_TDEST : STD_LOGIC_VECTOR (0 downto 0);
     signal gmem_AWREADY : STD_LOGIC;
     signal gmem_WREADY : STD_LOGIC;
     signal gmem_ARVALID : STD_LOGIC;
     signal gmem_ARREADY : STD_LOGIC;
     signal gmem_RVALID : STD_LOGIC;
     signal gmem_RREADY : STD_LOGIC;
-    signal gmem_RDATA : STD_LOGIC_VECTOR (31 downto 0);
-    signal gmem_RFIFONUM : STD_LOGIC_VECTOR (8 downto 0);
+    signal gmem_RDATA : STD_LOGIC_VECTOR (15 downto 0);
+    signal gmem_RFIFONUM : STD_LOGIC_VECTOR (9 downto 0);
     signal gmem_BVALID : STD_LOGIC;
-    signal grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_ap_start_reg : STD_LOGIC := '0';
+    signal grp_filt_Pipeline_VITIS_LOOP_18_1_fu_132_ap_start_reg : STD_LOGIC := '0';
     signal ap_CS_fsm_state21 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state21 : signal is "none";
     signal ap_CS_fsm_state22 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state22 : signal is "none";
-    signal p_cast_cast_fu_207_p1 : STD_LOGIC_VECTOR (63 downto 0);
-    signal p_cast_fu_197_p4 : STD_LOGIC_VECTOR (61 downto 0);
+    signal p_cast_cast_fu_205_p1 : STD_LOGIC_VECTOR (63 downto 0);
+    signal p_cast_fu_195_p4 : STD_LOGIC_VECTOR (62 downto 0);
     signal ap_NS_fsm : STD_LOGIC_VECTOR (22 downto 0);
     signal ap_ST_fsm_state1_blk : STD_LOGIC;
     signal ap_ST_fsm_state2_blk : STD_LOGIC;
@@ -345,17 +334,17 @@ architecture behav of filt is
         x_TLAST : IN STD_LOGIC_VECTOR (0 downto 0);
         x_TID : IN STD_LOGIC_VECTOR (0 downto 0);
         x_TDEST : IN STD_LOGIC_VECTOR (0 downto 0);
-        empty_19 : IN STD_LOGIC_VECTOR (15 downto 0);
-        empty_20 : IN STD_LOGIC_VECTOR (15 downto 0);
-        empty_21 : IN STD_LOGIC_VECTOR (15 downto 0);
-        empty_22 : IN STD_LOGIC_VECTOR (15 downto 0);
-        empty_23 : IN STD_LOGIC_VECTOR (15 downto 0);
-        empty_24 : IN STD_LOGIC_VECTOR (15 downto 0);
-        empty_25 : IN STD_LOGIC_VECTOR (15 downto 0);
-        empty_26 : IN STD_LOGIC_VECTOR (15 downto 0);
-        empty_27 : IN STD_LOGIC_VECTOR (15 downto 0);
-        empty_28 : IN STD_LOGIC_VECTOR (15 downto 0);
-        empty : IN STD_LOGIC_VECTOR (15 downto 0);
+        gmem_addr_read_10 : IN STD_LOGIC_VECTOR (15 downto 0);
+        gmem_addr_read : IN STD_LOGIC_VECTOR (15 downto 0);
+        gmem_addr_read_9 : IN STD_LOGIC_VECTOR (15 downto 0);
+        gmem_addr_read_8 : IN STD_LOGIC_VECTOR (15 downto 0);
+        gmem_addr_read_7 : IN STD_LOGIC_VECTOR (15 downto 0);
+        gmem_addr_read_6 : IN STD_LOGIC_VECTOR (15 downto 0);
+        gmem_addr_read_5 : IN STD_LOGIC_VECTOR (15 downto 0);
+        gmem_addr_read_4 : IN STD_LOGIC_VECTOR (15 downto 0);
+        gmem_addr_read_3 : IN STD_LOGIC_VECTOR (15 downto 0);
+        gmem_addr_read_2 : IN STD_LOGIC_VECTOR (15 downto 0);
+        gmem_addr_read_1 : IN STD_LOGIC_VECTOR (15 downto 0);
         y_TDATA : OUT STD_LOGIC_VECTOR (15 downto 0);
         y_TVALID : OUT STD_LOGIC;
         y_TKEEP : OUT STD_LOGIC_VECTOR (1 downto 0);
@@ -473,16 +462,16 @@ architecture behav of filt is
         I_ARLEN : IN STD_LOGIC_VECTOR (31 downto 0);
         I_RVALID : OUT STD_LOGIC;
         I_RREADY : IN STD_LOGIC;
-        I_RDATA : OUT STD_LOGIC_VECTOR (31 downto 0);
-        I_RFIFONUM : OUT STD_LOGIC_VECTOR (8 downto 0);
+        I_RDATA : OUT STD_LOGIC_VECTOR (15 downto 0);
+        I_RFIFONUM : OUT STD_LOGIC_VECTOR (9 downto 0);
         I_AWVALID : IN STD_LOGIC;
         I_AWREADY : OUT STD_LOGIC;
         I_AWADDR : IN STD_LOGIC_VECTOR (63 downto 0);
         I_AWLEN : IN STD_LOGIC_VECTOR (31 downto 0);
         I_WVALID : IN STD_LOGIC;
         I_WREADY : OUT STD_LOGIC;
-        I_WDATA : IN STD_LOGIC_VECTOR (31 downto 0);
-        I_WSTRB : IN STD_LOGIC_VECTOR (3 downto 0);
+        I_WDATA : IN STD_LOGIC_VECTOR (15 downto 0);
+        I_WSTRB : IN STD_LOGIC_VECTOR (1 downto 0);
         I_BVALID : OUT STD_LOGIC;
         I_BREADY : IN STD_LOGIC );
     end component;
@@ -506,43 +495,43 @@ architecture behav of filt is
 
 
 begin
-    grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134 : component filt_filt_Pipeline_VITIS_LOOP_18_1
+    grp_filt_Pipeline_VITIS_LOOP_18_1_fu_132 : component filt_filt_Pipeline_VITIS_LOOP_18_1
     port map (
         ap_clk => ap_clk,
         ap_rst => ap_rst_n_inv,
-        ap_start => grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_ap_start,
-        ap_done => grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_ap_done,
-        ap_idle => grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_ap_idle,
-        ap_ready => grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_ap_ready,
+        ap_start => grp_filt_Pipeline_VITIS_LOOP_18_1_fu_132_ap_start,
+        ap_done => grp_filt_Pipeline_VITIS_LOOP_18_1_fu_132_ap_done,
+        ap_idle => grp_filt_Pipeline_VITIS_LOOP_18_1_fu_132_ap_idle,
+        ap_ready => grp_filt_Pipeline_VITIS_LOOP_18_1_fu_132_ap_ready,
         x_TVALID => x_TVALID_int_regslice,
-        y_TREADY => grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_y_TREADY,
+        y_TREADY => grp_filt_Pipeline_VITIS_LOOP_18_1_fu_132_y_TREADY,
         x_TDATA => x_TDATA_int_regslice,
-        x_TREADY => grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_x_TREADY,
+        x_TREADY => grp_filt_Pipeline_VITIS_LOOP_18_1_fu_132_x_TREADY,
         x_TKEEP => x_TKEEP_int_regslice,
         x_TSTRB => x_TSTRB_int_regslice,
         x_TUSER => x_TUSER_int_regslice,
         x_TLAST => x_TLAST_int_regslice,
         x_TID => x_TID_int_regslice,
         x_TDEST => x_TDEST_int_regslice,
-        empty_19 => trunc_ln34_reg_267,
-        empty_20 => trunc_ln34_1_reg_282,
-        empty_21 => trunc_ln34_2_reg_272,
-        empty_22 => trunc_ln34_3_reg_317,
-        empty_23 => trunc_ln34_4_reg_287,
-        empty_24 => trunc_ln34_5_reg_302,
-        empty_25 => trunc_ln34_6_reg_297,
-        empty_26 => trunc_ln34_7_reg_292,
-        empty_27 => trunc_ln34_8_reg_312,
-        empty_28 => trunc_ln34_9_reg_307,
-        empty => trunc_ln34_10_reg_277,
-        y_TDATA => grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_y_TDATA,
-        y_TVALID => grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_y_TVALID,
-        y_TKEEP => grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_y_TKEEP,
-        y_TSTRB => grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_y_TSTRB,
-        y_TUSER => grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_y_TUSER,
-        y_TLAST => grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_y_TLAST,
-        y_TID => grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_y_TID,
-        y_TDEST => grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_y_TDEST);
+        gmem_addr_read_10 => gmem_addr_read_10_reg_271,
+        gmem_addr_read => gmem_addr_read_reg_221,
+        gmem_addr_read_9 => gmem_addr_read_9_reg_266,
+        gmem_addr_read_8 => gmem_addr_read_8_reg_261,
+        gmem_addr_read_7 => gmem_addr_read_7_reg_256,
+        gmem_addr_read_6 => gmem_addr_read_6_reg_251,
+        gmem_addr_read_5 => gmem_addr_read_5_reg_246,
+        gmem_addr_read_4 => gmem_addr_read_4_reg_241,
+        gmem_addr_read_3 => gmem_addr_read_3_reg_236,
+        gmem_addr_read_2 => gmem_addr_read_2_reg_231,
+        gmem_addr_read_1 => gmem_addr_read_1_reg_226,
+        y_TDATA => grp_filt_Pipeline_VITIS_LOOP_18_1_fu_132_y_TDATA,
+        y_TVALID => grp_filt_Pipeline_VITIS_LOOP_18_1_fu_132_y_TVALID,
+        y_TKEEP => grp_filt_Pipeline_VITIS_LOOP_18_1_fu_132_y_TKEEP,
+        y_TSTRB => grp_filt_Pipeline_VITIS_LOOP_18_1_fu_132_y_TSTRB,
+        y_TUSER => grp_filt_Pipeline_VITIS_LOOP_18_1_fu_132_y_TUSER,
+        y_TLAST => grp_filt_Pipeline_VITIS_LOOP_18_1_fu_132_y_TLAST,
+        y_TID => grp_filt_Pipeline_VITIS_LOOP_18_1_fu_132_y_TID,
+        y_TDEST => grp_filt_Pipeline_VITIS_LOOP_18_1_fu_132_y_TDEST);
 
     control_s_axi_U : component filt_control_s_axi
     generic map (
@@ -588,8 +577,8 @@ begin
         C_USER_VALUE => C_M_AXI_GMEM_USER_VALUE,
         C_PROT_VALUE => C_M_AXI_GMEM_PROT_VALUE,
         C_CACHE_VALUE => C_M_AXI_GMEM_CACHE_VALUE,
-        USER_RFIFONUM_WIDTH => 9,
-        USER_DW => 32,
+        USER_RFIFONUM_WIDTH => 10,
+        USER_DW => 16,
         USER_AW => 64,
         NUM_READ_OUTSTANDING => 16,
         NUM_WRITE_OUTSTANDING => 16)
@@ -644,7 +633,7 @@ begin
         ACLK_EN => ap_const_logic_1,
         I_ARVALID => gmem_ARVALID,
         I_ARREADY => gmem_ARREADY,
-        I_ARADDR => gmem_addr_reg_261,
+        I_ARADDR => gmem_addr_reg_215,
         I_ARLEN => ap_const_lv32_B,
         I_RVALID => gmem_RVALID,
         I_RREADY => gmem_RREADY,
@@ -656,8 +645,8 @@ begin
         I_AWLEN => ap_const_lv32_0,
         I_WVALID => ap_const_logic_0,
         I_WREADY => gmem_WREADY,
-        I_WDATA => ap_const_lv32_0,
-        I_WSTRB => ap_const_lv4_0,
+        I_WDATA => ap_const_lv16_0,
+        I_WSTRB => ap_const_lv2_0,
         I_BVALID => gmem_BVALID,
         I_BREADY => ap_const_logic_0);
 
@@ -667,8 +656,8 @@ begin
     port map (
         ap_clk => ap_clk,
         ap_rst => ap_rst_n_inv,
-        data_in => grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_y_TDATA,
-        vld_in => grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_y_TVALID,
+        data_in => grp_filt_Pipeline_VITIS_LOOP_18_1_fu_132_y_TDATA,
+        vld_in => grp_filt_Pipeline_VITIS_LOOP_18_1_fu_132_y_TVALID,
         ack_in => y_TREADY_int_regslice,
         data_out => y_TDATA,
         vld_out => regslice_both_y_V_data_V_U_vld_out,
@@ -681,8 +670,8 @@ begin
     port map (
         ap_clk => ap_clk,
         ap_rst => ap_rst_n_inv,
-        data_in => grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_y_TKEEP,
-        vld_in => grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_y_TVALID,
+        data_in => grp_filt_Pipeline_VITIS_LOOP_18_1_fu_132_y_TKEEP,
+        vld_in => grp_filt_Pipeline_VITIS_LOOP_18_1_fu_132_y_TVALID,
         ack_in => regslice_both_y_V_keep_V_U_ack_in_dummy,
         data_out => y_TKEEP,
         vld_out => regslice_both_y_V_keep_V_U_vld_out,
@@ -695,8 +684,8 @@ begin
     port map (
         ap_clk => ap_clk,
         ap_rst => ap_rst_n_inv,
-        data_in => grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_y_TSTRB,
-        vld_in => grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_y_TVALID,
+        data_in => grp_filt_Pipeline_VITIS_LOOP_18_1_fu_132_y_TSTRB,
+        vld_in => grp_filt_Pipeline_VITIS_LOOP_18_1_fu_132_y_TVALID,
         ack_in => regslice_both_y_V_strb_V_U_ack_in_dummy,
         data_out => y_TSTRB,
         vld_out => regslice_both_y_V_strb_V_U_vld_out,
@@ -709,8 +698,8 @@ begin
     port map (
         ap_clk => ap_clk,
         ap_rst => ap_rst_n_inv,
-        data_in => grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_y_TUSER,
-        vld_in => grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_y_TVALID,
+        data_in => grp_filt_Pipeline_VITIS_LOOP_18_1_fu_132_y_TUSER,
+        vld_in => grp_filt_Pipeline_VITIS_LOOP_18_1_fu_132_y_TVALID,
         ack_in => regslice_both_y_V_user_V_U_ack_in_dummy,
         data_out => y_TUSER,
         vld_out => regslice_both_y_V_user_V_U_vld_out,
@@ -723,8 +712,8 @@ begin
     port map (
         ap_clk => ap_clk,
         ap_rst => ap_rst_n_inv,
-        data_in => grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_y_TLAST,
-        vld_in => grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_y_TVALID,
+        data_in => grp_filt_Pipeline_VITIS_LOOP_18_1_fu_132_y_TLAST,
+        vld_in => grp_filt_Pipeline_VITIS_LOOP_18_1_fu_132_y_TVALID,
         ack_in => regslice_both_y_V_last_V_U_ack_in_dummy,
         data_out => y_TLAST,
         vld_out => regslice_both_y_V_last_V_U_vld_out,
@@ -737,8 +726,8 @@ begin
     port map (
         ap_clk => ap_clk,
         ap_rst => ap_rst_n_inv,
-        data_in => grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_y_TID,
-        vld_in => grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_y_TVALID,
+        data_in => grp_filt_Pipeline_VITIS_LOOP_18_1_fu_132_y_TID,
+        vld_in => grp_filt_Pipeline_VITIS_LOOP_18_1_fu_132_y_TVALID,
         ack_in => regslice_both_y_V_id_V_U_ack_in_dummy,
         data_out => y_TID,
         vld_out => regslice_both_y_V_id_V_U_vld_out,
@@ -751,8 +740,8 @@ begin
     port map (
         ap_clk => ap_clk,
         ap_rst => ap_rst_n_inv,
-        data_in => grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_y_TDEST,
-        vld_in => grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_y_TVALID,
+        data_in => grp_filt_Pipeline_VITIS_LOOP_18_1_fu_132_y_TDEST,
+        vld_in => grp_filt_Pipeline_VITIS_LOOP_18_1_fu_132_y_TVALID,
         ack_in => regslice_both_y_V_dest_V_U_ack_in_dummy,
         data_out => y_TDEST,
         vld_out => regslice_both_y_V_dest_V_U_vld_out,
@@ -873,16 +862,16 @@ begin
     end process;
 
 
-    grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_ap_start_reg_assign_proc : process(ap_clk)
+    grp_filt_Pipeline_VITIS_LOOP_18_1_fu_132_ap_start_reg_assign_proc : process(ap_clk)
     begin
         if (ap_clk'event and ap_clk =  '1') then
             if (ap_rst_n_inv = '1') then
-                grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_ap_start_reg <= ap_const_logic_0;
+                grp_filt_Pipeline_VITIS_LOOP_18_1_fu_132_ap_start_reg <= ap_const_logic_0;
             else
                 if ((ap_const_logic_1 = ap_CS_fsm_state21)) then 
-                    grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_ap_start_reg <= ap_const_logic_1;
-                elsif ((grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_ap_ready = ap_const_logic_1)) then 
-                    grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_ap_start_reg <= ap_const_logic_0;
+                    grp_filt_Pipeline_VITIS_LOOP_18_1_fu_132_ap_start_reg <= ap_const_logic_1;
+                elsif ((grp_filt_Pipeline_VITIS_LOOP_18_1_fu_132_ap_ready = ap_const_logic_1)) then 
+                    grp_filt_Pipeline_VITIS_LOOP_18_1_fu_132_ap_start_reg <= ap_const_logic_0;
                 end if; 
             end if;
         end if;
@@ -891,24 +880,8 @@ begin
     process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
-            if ((ap_const_logic_1 = ap_CS_fsm_state1)) then
-                gmem_addr_reg_261 <= p_cast_cast_fu_207_p1;
-            end if;
-        end if;
-    end process;
-    process (ap_clk)
-    begin
-        if (ap_clk'event and ap_clk = '1') then
-            if ((ap_const_logic_1 = ap_CS_fsm_state12)) then
-                trunc_ln34_10_reg_277 <= trunc_ln34_10_fu_225_p1;
-            end if;
-        end if;
-    end process;
-    process (ap_clk)
-    begin
-        if (ap_clk'event and ap_clk = '1') then
-            if ((ap_const_logic_1 = ap_CS_fsm_state13)) then
-                trunc_ln34_1_reg_282 <= trunc_ln34_1_fu_229_p1;
+            if ((ap_const_logic_1 = ap_CS_fsm_state20)) then
+                gmem_addr_read_10_reg_271 <= gmem_RDATA;
             end if;
         end if;
     end process;
@@ -916,15 +889,23 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if ((ap_const_logic_1 = ap_CS_fsm_state11)) then
-                trunc_ln34_2_reg_272 <= trunc_ln34_2_fu_221_p1;
+                gmem_addr_read_1_reg_226 <= gmem_RDATA;
             end if;
         end if;
     end process;
     process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
-            if ((ap_const_logic_1 = ap_CS_fsm_state20)) then
-                trunc_ln34_3_reg_317 <= trunc_ln34_3_fu_257_p1;
+            if ((ap_const_logic_1 = ap_CS_fsm_state12)) then
+                gmem_addr_read_2_reg_231 <= gmem_RDATA;
+            end if;
+        end if;
+    end process;
+    process (ap_clk)
+    begin
+        if (ap_clk'event and ap_clk = '1') then
+            if ((ap_const_logic_1 = ap_CS_fsm_state13)) then
+                gmem_addr_read_3_reg_236 <= gmem_RDATA;
             end if;
         end if;
     end process;
@@ -932,23 +913,7 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if ((ap_const_logic_1 = ap_CS_fsm_state14)) then
-                trunc_ln34_4_reg_287 <= trunc_ln34_4_fu_233_p1;
-            end if;
-        end if;
-    end process;
-    process (ap_clk)
-    begin
-        if (ap_clk'event and ap_clk = '1') then
-            if ((ap_const_logic_1 = ap_CS_fsm_state17)) then
-                trunc_ln34_5_reg_302 <= trunc_ln34_5_fu_245_p1;
-            end if;
-        end if;
-    end process;
-    process (ap_clk)
-    begin
-        if (ap_clk'event and ap_clk = '1') then
-            if ((ap_const_logic_1 = ap_CS_fsm_state16)) then
-                trunc_ln34_6_reg_297 <= trunc_ln34_6_fu_241_p1;
+                gmem_addr_read_4_reg_241 <= gmem_RDATA;
             end if;
         end if;
     end process;
@@ -956,15 +921,23 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if ((ap_const_logic_1 = ap_CS_fsm_state15)) then
-                trunc_ln34_7_reg_292 <= trunc_ln34_7_fu_237_p1;
+                gmem_addr_read_5_reg_246 <= gmem_RDATA;
             end if;
         end if;
     end process;
     process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
-            if ((ap_const_logic_1 = ap_CS_fsm_state19)) then
-                trunc_ln34_8_reg_312 <= trunc_ln34_8_fu_253_p1;
+            if ((ap_const_logic_1 = ap_CS_fsm_state16)) then
+                gmem_addr_read_6_reg_251 <= gmem_RDATA;
+            end if;
+        end if;
+    end process;
+    process (ap_clk)
+    begin
+        if (ap_clk'event and ap_clk = '1') then
+            if ((ap_const_logic_1 = ap_CS_fsm_state17)) then
+                gmem_addr_read_7_reg_256 <= gmem_RDATA;
             end if;
         end if;
     end process;
@@ -972,7 +945,15 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if ((ap_const_logic_1 = ap_CS_fsm_state18)) then
-                trunc_ln34_9_reg_307 <= trunc_ln34_9_fu_249_p1;
+                gmem_addr_read_8_reg_261 <= gmem_RDATA;
+            end if;
+        end if;
+    end process;
+    process (ap_clk)
+    begin
+        if (ap_clk'event and ap_clk = '1') then
+            if ((ap_const_logic_1 = ap_CS_fsm_state19)) then
+                gmem_addr_read_9_reg_266 <= gmem_RDATA;
             end if;
         end if;
     end process;
@@ -980,12 +961,20 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if ((ap_const_logic_1 = ap_CS_fsm_state10)) then
-                trunc_ln34_reg_267 <= trunc_ln34_fu_217_p1;
+                gmem_addr_read_reg_221 <= gmem_RDATA;
+            end if;
+        end if;
+    end process;
+    process (ap_clk)
+    begin
+        if (ap_clk'event and ap_clk = '1') then
+            if ((ap_const_logic_1 = ap_CS_fsm_state1)) then
+                gmem_addr_reg_215 <= p_cast_cast_fu_205_p1;
             end if;
         end if;
     end process;
 
-    ap_NS_fsm_assign_proc : process (ap_CS_fsm, ap_CS_fsm_state2, ap_CS_fsm_state10, ap_CS_fsm_state11, ap_CS_fsm_state12, ap_CS_fsm_state13, ap_CS_fsm_state14, ap_CS_fsm_state15, ap_CS_fsm_state16, ap_CS_fsm_state17, ap_CS_fsm_state18, ap_CS_fsm_state19, ap_CS_fsm_state20, grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_ap_done, gmem_ARREADY, gmem_RVALID, ap_CS_fsm_state22, regslice_both_y_V_data_V_U_apdone_blk, ap_CS_fsm_state23)
+    ap_NS_fsm_assign_proc : process (ap_CS_fsm, ap_CS_fsm_state2, ap_CS_fsm_state10, ap_CS_fsm_state11, ap_CS_fsm_state12, ap_CS_fsm_state13, ap_CS_fsm_state14, ap_CS_fsm_state15, ap_CS_fsm_state16, ap_CS_fsm_state17, ap_CS_fsm_state18, ap_CS_fsm_state19, ap_CS_fsm_state20, grp_filt_Pipeline_VITIS_LOOP_18_1_fu_132_ap_done, gmem_ARREADY, gmem_RVALID, ap_CS_fsm_state22, regslice_both_y_V_data_V_U_apdone_blk, ap_CS_fsm_state23)
     begin
         case ap_CS_fsm is
             when ap_ST_fsm_state1 => 
@@ -1079,7 +1068,7 @@ begin
             when ap_ST_fsm_state21 => 
                 ap_NS_fsm <= ap_ST_fsm_state22;
             when ap_ST_fsm_state22 => 
-                if (((grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_ap_done = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state22))) then
+                if (((ap_const_logic_1 = ap_CS_fsm_state22) and (grp_filt_Pipeline_VITIS_LOOP_18_1_fu_132_ap_done = ap_const_logic_1))) then
                     ap_NS_fsm <= ap_ST_fsm_state23;
                 else
                     ap_NS_fsm <= ap_ST_fsm_state22;
@@ -1223,9 +1212,9 @@ begin
 
     ap_ST_fsm_state21_blk <= ap_const_logic_0;
 
-    ap_ST_fsm_state22_blk_assign_proc : process(grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_ap_done)
+    ap_ST_fsm_state22_blk_assign_proc : process(grp_filt_Pipeline_VITIS_LOOP_18_1_fu_132_ap_done)
     begin
-        if ((grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_ap_done = ap_const_logic_0)) then 
+        if ((grp_filt_Pipeline_VITIS_LOOP_18_1_fu_132_ap_done = ap_const_logic_0)) then 
             ap_ST_fsm_state22_blk <= ap_const_logic_1;
         else 
             ap_ST_fsm_state22_blk <= ap_const_logic_0;
@@ -1305,33 +1294,22 @@ begin
         end if; 
     end process;
 
-    grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_ap_start <= grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_ap_start_reg;
-    grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_y_TREADY <= (y_TREADY_int_regslice and ap_CS_fsm_state22);
-        p_cast_cast_fu_207_p1 <= std_logic_vector(IEEE.numeric_std.resize(signed(p_cast_fu_197_p4),64));
+    grp_filt_Pipeline_VITIS_LOOP_18_1_fu_132_ap_start <= grp_filt_Pipeline_VITIS_LOOP_18_1_fu_132_ap_start_reg;
+    grp_filt_Pipeline_VITIS_LOOP_18_1_fu_132_y_TREADY <= (y_TREADY_int_regslice and ap_CS_fsm_state22);
+        p_cast_cast_fu_205_p1 <= std_logic_vector(IEEE.numeric_std.resize(signed(p_cast_fu_195_p4),64));
 
-    p_cast_fu_197_p4 <= c(63 downto 2);
-    trunc_ln34_10_fu_225_p1 <= gmem_RDATA(16 - 1 downto 0);
-    trunc_ln34_1_fu_229_p1 <= gmem_RDATA(16 - 1 downto 0);
-    trunc_ln34_2_fu_221_p1 <= gmem_RDATA(16 - 1 downto 0);
-    trunc_ln34_3_fu_257_p1 <= gmem_RDATA(16 - 1 downto 0);
-    trunc_ln34_4_fu_233_p1 <= gmem_RDATA(16 - 1 downto 0);
-    trunc_ln34_5_fu_245_p1 <= gmem_RDATA(16 - 1 downto 0);
-    trunc_ln34_6_fu_241_p1 <= gmem_RDATA(16 - 1 downto 0);
-    trunc_ln34_7_fu_237_p1 <= gmem_RDATA(16 - 1 downto 0);
-    trunc_ln34_8_fu_253_p1 <= gmem_RDATA(16 - 1 downto 0);
-    trunc_ln34_9_fu_249_p1 <= gmem_RDATA(16 - 1 downto 0);
-    trunc_ln34_fu_217_p1 <= gmem_RDATA(16 - 1 downto 0);
+    p_cast_fu_195_p4 <= c(63 downto 1);
     x_TREADY <= regslice_both_x_V_data_V_U_ack_in;
 
-    x_TREADY_int_regslice_assign_proc : process(grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_x_TREADY, ap_CS_fsm_state22)
+    x_TREADY_int_regslice_assign_proc : process(grp_filt_Pipeline_VITIS_LOOP_18_1_fu_132_x_TREADY, ap_CS_fsm_state22)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state22)) then 
-            x_TREADY_int_regslice <= grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_x_TREADY;
+            x_TREADY_int_regslice <= grp_filt_Pipeline_VITIS_LOOP_18_1_fu_132_x_TREADY;
         else 
             x_TREADY_int_regslice <= ap_const_logic_0;
         end if; 
     end process;
 
     y_TVALID <= regslice_both_y_V_data_V_U_vld_out;
-    y_TVALID_int_regslice <= grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_y_TVALID;
+    y_TVALID_int_regslice <= grp_filt_Pipeline_VITIS_LOOP_18_1_fu_132_y_TVALID;
 end behav;

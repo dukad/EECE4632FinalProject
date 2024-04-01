@@ -1,13 +1,4 @@
 {
-    "0": {
-        "name": "filt",
-        "file": "filt.cpp",
-        "fileloc": "11",
-        "instructions": "54",
-        "total_instructions": "125",
-        "calls": "1",
-        "basicblocks": "1"
-    },
     "1": {
         "name": "filt_Pipeline_VITIS_LOOP_18_1",
         "file": "filt.cpp",
@@ -25,5 +16,14 @@
         "loops": {
             "L": "1"
         }
+    },
+    "0": {
+        "name": "filt",
+        "file": "filt.cpp",
+        "fileloc": "11",
+        "instructions": "43",
+        "total_instructions": "114",
+        "calls": "1",
+        "basicblocks": "1"
     }
 }

@@ -244,19 +244,19 @@
             },
             "V6": {
                 "VT": "AC",
-                "BA": "0x00000000C0000000",
-                "HA": "0x00000000C0001FFF",
-                "BP": "C_S_AXI_BASEADDR",
-                "HP": "C_S_AXI_HIGHADDR",
-                "MA": "Data_m_axi_gmem",
-                "MX": "/FIR/filt_0",
-                "MI": "m_axi_gmem",
-                "MS": "SEG_axi_bram_ctrl_0_Mem0",
-                "MV": "xilinx.com:hls:filt:1.0",
-                "SX": "/FIR/axi_bram_ctrl_0",
-                "SI": "S_AXI",
-                "SS": "Mem0",
-                "SV": "xilinx.com:ip:axi_bram_ctrl:4.1",
+                "BA": "0xFC000000",
+                "HA": "0xFCFFFFFF",
+                "BP": "C_BASEADDR",
+                "HP": "C_HIGHADDR",
+                "MA": "Data_MM2S",
+                "MX": "/FIR/axi_dma_0",
+                "MI": "M_AXI_MM2S",
+                "MS": "SEG_processing_system7_0_GP0_QSPI_LINEAR",
+                "MV": "xilinx.com:ip:axi_dma:7.1",
+                "SX": "/processing_system7_0",
+                "SI": "S_AXI_GP0",
+                "SS": "GP0_QSPI_LINEAR",
+                "SV": "xilinx.com:ip:processing_system7:5.5",
                 "TM": "both",
                 "TU": "memory"
             },
@@ -266,9 +266,9 @@
                 "HA": "0xFCFFFFFF",
                 "BP": "C_BASEADDR",
                 "HP": "C_HIGHADDR",
-                "MA": "Data_MM2S",
+                "MA": "Data_S2MM",
                 "MX": "/FIR/axi_dma_0",
-                "MI": "M_AXI_MM2S",
+                "MI": "M_AXI_S2MM",
                 "MS": "SEG_processing_system7_0_GP0_QSPI_LINEAR",
                 "MV": "xilinx.com:ip:axi_dma:7.1",
                 "SX": "/processing_system7_0",
@@ -279,24 +279,6 @@
                 "TU": "memory"
             },
             "V8": {
-                "VT": "AC",
-                "BA": "0xFC000000",
-                "HA": "0xFCFFFFFF",
-                "BP": "C_BASEADDR",
-                "HP": "C_HIGHADDR",
-                "MA": "Data_S2MM",
-                "MX": "/FIR/axi_dma_0",
-                "MI": "M_AXI_S2MM",
-                "MS": "SEG_processing_system7_0_GP0_QSPI_LINEAR",
-                "MV": "xilinx.com:ip:axi_dma:7.1",
-                "SX": "/processing_system7_0",
-                "SI": "S_AXI_GP0",
-                "SS": "GP0_QSPI_LINEAR",
-                "SV": "xilinx.com:ip:processing_system7:5.5",
-                "TM": "both",
-                "TU": "memory"
-            },
-            "V9": {
                 "VT": "ACE",
                 "BA": "0x40000000",
                 "HA": "0x7FFFFFFF",
@@ -314,7 +296,7 @@
                 "TM": "both",
                 "TU": "register"
             },
-            "V10": {
+            "V9": {
                 "VT": "ACE",
                 "BA": "0x40000000",
                 "HA": "0x7FFFFFFF",
@@ -332,7 +314,7 @@
                 "TM": "both",
                 "TU": "register"
             },
-            "V11": {
+            "V10": {
                 "VT": "ACE",
                 "BA": "0xE0000000",
                 "HA": "0xE03FFFFF",
@@ -350,7 +332,7 @@
                 "TM": "both",
                 "TU": "register"
             },
-            "V12": {
+            "V11": {
                 "VT": "ACE",
                 "BA": "0xE0000000",
                 "HA": "0xE03FFFFF",
@@ -420,11 +402,6 @@
             },
             {
                 "src": "V11",
-                "trg": "V2",
-                "EH": "2"
-            },
-            {
-                "src": "V12",
                 "trg": "V2",
                 "EH": "2"
             }

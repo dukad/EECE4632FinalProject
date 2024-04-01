@@ -342,14 +342,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 21 \
-    name empty_19 \
+    name gmem_addr_read_10 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_empty_19 \
+    corename dc_gmem_addr_read_10 \
     op interface \
-    ports { empty_19 { I 16 vector } } \
+    ports { gmem_addr_read_10 { I 16 vector } } \
 } "
 }
 
@@ -357,14 +357,14 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 22 \
-    name empty_20 \
+    name gmem_addr_read \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_empty_20 \
+    corename dc_gmem_addr_read \
     op interface \
-    ports { empty_20 { I 16 vector } } \
+    ports { gmem_addr_read { I 16 vector } } \
 } "
 }
 
@@ -372,14 +372,14 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 23 \
-    name empty_21 \
+    name gmem_addr_read_9 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_empty_21 \
+    corename dc_gmem_addr_read_9 \
     op interface \
-    ports { empty_21 { I 16 vector } } \
+    ports { gmem_addr_read_9 { I 16 vector } } \
 } "
 }
 
@@ -387,14 +387,14 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 24 \
-    name empty_22 \
+    name gmem_addr_read_8 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_empty_22 \
+    corename dc_gmem_addr_read_8 \
     op interface \
-    ports { empty_22 { I 16 vector } } \
+    ports { gmem_addr_read_8 { I 16 vector } } \
 } "
 }
 
@@ -402,14 +402,14 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 25 \
-    name empty_23 \
+    name gmem_addr_read_7 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_empty_23 \
+    corename dc_gmem_addr_read_7 \
     op interface \
-    ports { empty_23 { I 16 vector } } \
+    ports { gmem_addr_read_7 { I 16 vector } } \
 } "
 }
 
@@ -417,14 +417,14 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 26 \
-    name empty_24 \
+    name gmem_addr_read_6 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_empty_24 \
+    corename dc_gmem_addr_read_6 \
     op interface \
-    ports { empty_24 { I 16 vector } } \
+    ports { gmem_addr_read_6 { I 16 vector } } \
 } "
 }
 
@@ -432,14 +432,14 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 27 \
-    name empty_25 \
+    name gmem_addr_read_5 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_empty_25 \
+    corename dc_gmem_addr_read_5 \
     op interface \
-    ports { empty_25 { I 16 vector } } \
+    ports { gmem_addr_read_5 { I 16 vector } } \
 } "
 }
 
@@ -447,14 +447,14 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 28 \
-    name empty_26 \
+    name gmem_addr_read_4 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_empty_26 \
+    corename dc_gmem_addr_read_4 \
     op interface \
-    ports { empty_26 { I 16 vector } } \
+    ports { gmem_addr_read_4 { I 16 vector } } \
 } "
 }
 
@@ -462,14 +462,14 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 29 \
-    name empty_27 \
+    name gmem_addr_read_3 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_empty_27 \
+    corename dc_gmem_addr_read_3 \
     op interface \
-    ports { empty_27 { I 16 vector } } \
+    ports { gmem_addr_read_3 { I 16 vector } } \
 } "
 }
 
@@ -477,14 +477,14 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 30 \
-    name empty_28 \
+    name gmem_addr_read_2 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_empty_28 \
+    corename dc_gmem_addr_read_2 \
     op interface \
-    ports { empty_28 { I 16 vector } } \
+    ports { gmem_addr_read_2 { I 16 vector } } \
 } "
 }
 
@@ -492,14 +492,14 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 31 \
-    name empty \
+    name gmem_addr_read_1 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_empty \
+    corename dc_gmem_addr_read_1 \
     op interface \
-    ports { empty { I 16 vector } } \
+    ports { gmem_addr_read_1 { I 16 vector } } \
 } "
 }
 

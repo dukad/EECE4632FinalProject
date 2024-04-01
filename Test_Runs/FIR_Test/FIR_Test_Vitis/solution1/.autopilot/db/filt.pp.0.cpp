@@ -9743,9 +9743,9 @@ private:
 # 3 "filt.cpp" 2
 
 typedef ap_axis<16,1,1,1> AXI_VAL;
-typedef int data_t;
-typedef int coef_t;
-typedef int acc_t;
+typedef short data_t;
+typedef short coef_t;
+typedef short acc_t;
 
 
 
@@ -9768,7 +9768,7 @@ __attribute__((sdx_kernel("filt", 0))) void filt (hls::stream<AXI_VAL>& y, coef_
  acc=0;
  AXI_VAL tmp1;
  x.read(tmp1);
- int i;
+ short i;
  Shift_Accum_Loop:
  for (i = 11 - 1; i > 0; i--) {
 #pragma HLS UNROLL
@@ -9776,8 +9776,8 @@ __attribute__((sdx_kernel("filt", 0))) void filt (hls::stream<AXI_VAL>& y, coef_
   acc += shift_reg[i] * c[i];
  }
 
- acc += tmp1.data.to_int() * c[0];
- shift_reg[0] = tmp1.data.to_int();
+ acc += tmp1.data.to_short() * c[0];
+ shift_reg[0] = tmp1.data.to_short();
  AXI_VAL output;
  output.data = acc;
  output.keep = tmp1.keep;

@@ -36,10 +36,10 @@
     </PerformanceEstimates>
     <AreaEstimates>
         <Resources>
-            <BRAM_18K>4</BRAM_18K>
+            <BRAM_18K>2</BRAM_18K>
             <DSP>11</DSP>
-            <FF>1966</FF>
-            <LUT>1357</LUT>
+            <FF>1991</FF>
+            <LUT>1454</LUT>
             <URAM>0</URAM>
         </Resources>
         <AvailableResources>
@@ -1022,11 +1022,11 @@
             <ModuleName>filt</ModuleName>
             <InstancesList>
                 <Instance>
-                    <InstName>grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134</InstName>
+                    <InstName>grp_filt_Pipeline_VITIS_LOOP_18_1_fu_132</InstName>
                     <ModuleName>filt_Pipeline_VITIS_LOOP_18_1</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>134</ID>
-                    <BindInstances>mac_muladd_16s_16s_16ns_16_4_1_U5 mac_muladd_16s_16s_16ns_16_4_1_U9 mac_muladd_16s_16s_16ns_16_4_1_U6 mul_16s_16s_16_1_1_U3 mac_muladd_16s_16s_16ns_16_4_1_U7 mac_muladd_16s_16s_16ns_16_4_1_U8 mac_muladd_16s_16s_16ns_16_4_1_U10 mul_16s_16s_16_1_1_U1 mac_muladd_16s_16s_16ns_16_4_1_U11 mul_16s_16s_16_1_1_U4 mul_16s_16s_16_1_1_U2 mac_muladd_16s_16s_16ns_16_4_1_U5 mac_muladd_16s_16s_16ns_16_4_1_U8 mac_muladd_16s_16s_16ns_16_4_1_U11 mac_muladd_16s_16s_16ns_16_4_1_U7 mac_muladd_16s_16s_16ns_16_4_1_U10 mac_muladd_16s_16s_16ns_16_4_1_U6 mac_muladd_16s_16s_16ns_16_4_1_U9 add_ln34_8_fu_357_p2</BindInstances>
+                    <ID>132</ID>
+                    <BindInstances>mul_16s_16s_16_1_1_U3 mac_muladd_16s_16s_16ns_16_4_1_U5 mac_muladd_16s_16s_16ns_16_4_1_U9 mul_16s_16s_16_1_1_U4 mac_muladd_16s_16s_16ns_16_4_1_U6 mac_muladd_16s_16s_16ns_16_4_1_U10 mul_16s_16s_16_1_1_U1 mac_muladd_16s_16s_16ns_16_4_1_U7 mac_muladd_16s_16s_16ns_16_4_1_U11 mul_16s_16s_16_1_1_U2 mac_muladd_16s_16s_16ns_16_4_1_U8 mac_muladd_16s_16s_16ns_16_4_1_U5 mac_muladd_16s_16s_16ns_16_4_1_U6 mac_muladd_16s_16s_16ns_16_4_1_U9 mac_muladd_16s_16s_16ns_16_4_1_U7 mac_muladd_16s_16s_16ns_16_4_1_U10 mac_muladd_16s_16s_16ns_16_4_1_U8 mac_muladd_16s_16s_16ns_16_4_1_U11 add_ln34_8_fu_357_p2</BindInstances>
                 </Instance>
             </InstancesList>
             <BindInstances>control_s_axi_U gmem_m_axi_U</BindInstances>
@@ -1101,24 +1101,24 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_18_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_16_1_1_U3" SOURCE="filt.cpp:31" STORAGESUBTYPE="" URAM="0" VARIABLE="acc"/>
                 <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="VITIS_LOOP_18_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U5" SOURCE="filt.cpp:34" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln34"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="VITIS_LOOP_18_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U9" SOURCE="filt.cpp:34" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln34_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="VITIS_LOOP_18_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U6" SOURCE="filt.cpp:34" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln34_2"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_18_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_16_1_1_U3" SOURCE="filt.cpp:34" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln34_3"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="VITIS_LOOP_18_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U7" SOURCE="filt.cpp:34" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln34_4"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="VITIS_LOOP_18_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U8" SOURCE="filt.cpp:34" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln34_5"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="VITIS_LOOP_18_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U10" SOURCE="filt.cpp:34" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln34_6"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_18_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_16_1_1_U1" SOURCE="filt.cpp:34" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln34_7"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="VITIS_LOOP_18_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U11" SOURCE="filt.cpp:34" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln34_8"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_18_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_16_1_1_U4" SOURCE="filt.cpp:34" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln34_9"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_18_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_16_1_1_U2" SOURCE="filt.cpp:34" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln34_10"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="VITIS_LOOP_18_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U9" SOURCE="filt.cpp:31" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln31"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_18_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_16_1_1_U4" SOURCE="filt.cpp:31" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln31_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="VITIS_LOOP_18_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U6" SOURCE="filt.cpp:31" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln31_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="VITIS_LOOP_18_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U10" SOURCE="filt.cpp:31" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln31_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_18_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_16_1_1_U1" SOURCE="filt.cpp:31" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln31_4"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="VITIS_LOOP_18_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U7" SOURCE="filt.cpp:31" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln31_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="VITIS_LOOP_18_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U11" SOURCE="filt.cpp:31" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln31_6"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_18_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_16s_16_1_1_U2" SOURCE="filt.cpp:31" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln31_7"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="VITIS_LOOP_18_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U8" SOURCE="filt.cpp:31" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln31_8"/>
                 <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="VITIS_LOOP_18_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U5" SOURCE="filt.cpp:34" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln34"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="VITIS_LOOP_18_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U8" SOURCE="filt.cpp:34" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln34_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="VITIS_LOOP_18_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U11" SOURCE="filt.cpp:34" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln34_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="VITIS_LOOP_18_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U6" SOURCE="filt.cpp:34" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln34_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="VITIS_LOOP_18_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U9" SOURCE="filt.cpp:34" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln34_2"/>
                 <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="VITIS_LOOP_18_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U7" SOURCE="filt.cpp:34" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln34_4"/>
                 <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="VITIS_LOOP_18_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U10" SOURCE="filt.cpp:34" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln34_5"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="VITIS_LOOP_18_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U6" SOURCE="filt.cpp:34" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln34_6"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="VITIS_LOOP_18_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U9" SOURCE="filt.cpp:34" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln34_7"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="VITIS_LOOP_18_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U8" SOURCE="filt.cpp:34" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln34_6"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="VITIS_LOOP_18_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U11" SOURCE="filt.cpp:34" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln34_7"/>
                 <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_18_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln34_8_fu_357_p2" SOURCE="filt.cpp:34" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln34_8"/>
             </BindNodes>
         </Module>
@@ -1148,16 +1148,16 @@
             </PerformanceEstimates>
             <AreaEstimates>
                 <Resources>
-                    <BRAM_18K>4</BRAM_18K>
+                    <BRAM_18K>2</BRAM_18K>
                     <AVAIL_BRAM>280</AVAIL_BRAM>
-                    <UTIL_BRAM>1</UTIL_BRAM>
+                    <UTIL_BRAM>~0</UTIL_BRAM>
                     <DSP>11</DSP>
                     <AVAIL_DSP>220</AVAIL_DSP>
                     <UTIL_DSP>5</UTIL_DSP>
-                    <FF>1966</FF>
+                    <FF>1991</FF>
                     <AVAIL_FF>106400</AVAIL_FF>
                     <UTIL_FF>1</UTIL_FF>
-                    <LUT>1357</LUT>
+                    <LUT>1454</LUT>
                     <AVAIL_LUT>53200</AVAIL_LUT>
                     <UTIL_LUT>2</UTIL_LUT>
                     <URAM>0</URAM>
@@ -1167,7 +1167,7 @@
             </AreaEstimates>
             <BindNodes>
                 <BindNode BINDTYPE="adapter" BRAM="0" BUNDLEDNAME="control" DISPNAME="bind_adapter " DSP="0" ID="" IMPL="" LATENCY="" LOOP="" OPTYPE="" PRAGMA="" RTLNAME="control_s_axi_U" SOURCE="" STORAGESIZE="" STORAGESUBTYPE="s_axilite" STORAGEUSAGE="interface" URAM="0" VARIABLE=""/>
-                <BindNode BINDTYPE="adapter" BRAM="4" BUNDLEDNAME="gmem" DISPNAME="bind_adapter " DSP="0" ID="" IMPL="" LATENCY="" LOOP="" OPTYPE="" PRAGMA="" RTLNAME="gmem_m_axi_U" SOURCE="" STORAGESIZE="" STORAGESUBTYPE="m_axi" STORAGEUSAGE="interface" URAM="0" VARIABLE=""/>
+                <BindNode BINDTYPE="adapter" BRAM="2" BUNDLEDNAME="gmem" DISPNAME="bind_adapter " DSP="0" ID="" IMPL="" LATENCY="" LOOP="" OPTYPE="" PRAGMA="" RTLNAME="gmem_m_axi_U" SOURCE="" STORAGESIZE="" STORAGESUBTYPE="m_axi" STORAGEUSAGE="interface" URAM="0" VARIABLE=""/>
             </BindNodes>
         </Module>
     </ModuleInformation>
@@ -1181,7 +1181,7 @@
                 <hwRef type="interface" interface="y" name="" usage="data" direction="out"/>
             </hwRefs>
         </Arg>
-        <Arg ArgName="c" index="1" direction="in" srcType="int*" srcSize="32">
+        <Arg ArgName="c" index="1" direction="in" srcType="short*" srcSize="16">
             <hwRefs>
                 <hwRef type="interface" interface="m_axi_gmem" name="" usage="data" direction="in"/>
                 <hwRef type="register" interface="s_axi_control" name="c_1" usage="address" direction="in"/>
@@ -1315,7 +1315,7 @@
             </ports>
             <constraints>
                 <constraint constraint_type="pragma interface" mode="m_axi" register_option="0" offset="slave" latency="0" num_read_outstanding="16" num_write_outstanding="16" max_read_burst_length="16" max_write_burst_length="16" max_widen_bitwidth="0" argName="c"/>
-                <constraint constraint_type="bitwidth" orig_bitwidth="32" final_bitwidth="32" argName="c"/>
+                <constraint constraint_type="bitwidth" orig_bitwidth="16" final_bitwidth="16" argName="c"/>
             </constraints>
         </Interface>
         <Interface InterfaceName="y" type="axi4stream" busTypeName="axis" mode="master" dataWidth="16" portPrefix="y_">
@@ -1356,7 +1356,7 @@
             <item name="M_AXI">
                 <table>
                     <keys size="12">Interface, Data Width (SW-&gt;HW), Address Width, Latency, Offset, Register, Max Widen Bitwidth, Max Read Burst Length, Max Write Burst Length, Num Read Outstanding, Num Write Outstanding, Resource Estimate</keys>
-                    <column name="m_axi_gmem">32 -&gt; 32, 64, 0, slave, 0, 0, 16, 16, 16, 16, BRAM=4</column>
+                    <column name="m_axi_gmem">16 -&gt; 16, 64, 0, slave, 0, 0, 16, 16, 16, 16, BRAM=2</column>
                 </table>
             </item>
             <item name="S_AXILITE Interfaces">
@@ -1395,7 +1395,7 @@
                 <table>
                     <keys size="3">Argument, Direction, Datatype</keys>
                     <column name="y">out, stream&lt;hls::axis&lt;ap_int&lt;16&gt; 1 1 1 '8' false&gt; 0&gt;&amp;</column>
-                    <column name="c">in, int*</column>
+                    <column name="c">in, short*</column>
                     <column name="x">in, stream&lt;hls::axis&lt;ap_int&lt;16&gt; 1 1 1 '8' false&gt; 0&gt;&amp;</column>
                 </table>
             </item>
@@ -1417,7 +1417,7 @@
             <item name="Inferred Burst Summary">
                 <table>
                     <keys size="4">HW Interface, Direction, Length, Width</keys>
-                    <column name="m_axi_gmem">read, 11, 32</column>
+                    <column name="m_axi_gmem">read, 11, 16</column>
                 </table>
             </item>
         </section>

@@ -1314,8 +1314,8 @@ void apatb_filt_hw(void* __xlx_apatb_param_y_V_data_V, void* __xlx_apatb_param_y
 #else
   static hls::sim::Memory<hls::sim::Reader, hls::sim::Writer> port15 {
 #endif
-    .width = 32,
-    .asize = 4,
+    .width = 16,
+    .asize = 2,
     .hbm = false,
     .name = { "gmem" },
 #ifdef POST_CHECK
@@ -1329,7 +1329,7 @@ void apatb_filt_hw(void* __xlx_apatb_param_y_V_data_V, void* __xlx_apatb_param_y
 #endif
   };
   port15.param = { __xlx_apatb_param_c };
-  port15.nbytes = { 44 };
+  port15.nbytes = { 22 };
   port15.offset = {  };
   port15.hasWrite = { false };
 

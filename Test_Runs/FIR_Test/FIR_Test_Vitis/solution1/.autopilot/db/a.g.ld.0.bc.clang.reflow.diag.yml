@@ -2,7 +2,7 @@
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: filt.cpp, Line: 11, Column: 0 }
-Function:        _Z4filtRN3hls6streamINS_4axisI6ap_intILi16EELm1ELm1ELm1ELh56ELb0EEELi0EEEPiS6_
+Function:        _Z4filtRN3hls6streamINS_4axisI6ap_intILi16EELm1ELm1ELm1ELh56ELb0EEELi0EEEPsS6_
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        Shift_Accum_Loop
@@ -17,7 +17,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
-Function:        _Z4filtRN3hls6streamINS_4axisI6ap_intILi16EELm1ELm1ELm1ELh56ELb0EEELi0EEEPiS6_
+Function:        _Z4filtRN3hls6streamINS_4axisI6ap_intILi16EELm1ELm1ELm1ELh56ELb0EEELi0EEEPsS6_
 Args:            
   - String:          'Sequential '
   - Direction:       read
@@ -30,7 +30,7 @@ Args:
   - String:          ' '
   - BundleName:      gmem
   - String:          ' '
-  - Function:        'filt(hls::stream<hls::axis<ap_int<16>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, int*, hls::stream<hls::axis<ap_int<16>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&)'
+  - Function:        'filt(hls::stream<hls::axis<ap_int<16>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, short*, hls::stream<hls::axis<ap_int<16>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&)'
     DebugLoc:        { File: filt.cpp, Line: 11, Column: 0 }
   - String:          ' '
   - String:          ' _XLX_SEP_ '
@@ -39,40 +39,40 @@ Args:
   - OrigID:          entry.load.89
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          entry.load.123
+  - OrigID:          entry.load.133
+  - OrigAccess:      load
+  - OrigDirection:   read
+  - OrigID:          entry.load.130
+  - OrigAccess:      load
+  - OrigDirection:   read
+  - OrigID:          entry.load.127
+  - OrigAccess:      load
+  - OrigDirection:   read
+  - OrigID:          entry.load.124
   - OrigAccess:      load
   - OrigDirection:   read
   - OrigID:          entry.load.121
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          entry.load.119
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          entry.load.117
+  - OrigID:          entry.load.118
   - OrigAccess:      load
   - OrigDirection:   read
   - OrigID:          entry.load.115
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          entry.load.113
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          entry.load.111
+  - OrigID:          entry.load.112
   - OrigAccess:      load
   - OrigDirection:   read
   - OrigID:          entry.load.109
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          entry.load.107
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          entry.load.105
+  - OrigID:          entry.load.106
 ...
 --- !Missed
 Pass:            reflow-burst-inference
 Name:            CouldNotAnalyzeBoundsPattern
 DebugLoc:        { File: filt.cpp, Line: 18, Column: 19 }
-Function:        _Z4filtRN3hls6streamINS_4axisI6ap_intILi16EELm1ELm1ELm1ELh56ELb0EEELi0EEEPiS6_
+Function:        _Z4filtRN3hls6streamINS_4axisI6ap_intILi16EELm1ELm1ELm1ELh56ELb0EEELi0EEEPsS6_
 Args:            
   - String:          Could not analyze the loop bounds
   - String:          ' _XLX_SEP_ '
@@ -80,17 +80,17 @@ Args:
   - String:          ' '
   - LoopLoc:         'filt.cpp:18:19'
   - String:          ' '
-  - Function:        'filt(hls::stream<hls::axis<ap_int<16>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, int*, hls::stream<hls::axis<ap_int<16>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&)'
+  - Function:        'filt(hls::stream<hls::axis<ap_int<16>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, short*, hls::stream<hls::axis<ap_int<16>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&)'
     DebugLoc:        { File: filt.cpp, Line: 11, Column: 0 }
   - String:          ' '
 ...
 --- !Missed
 Pass:            reflow-burst-widen
 Name:            GreaterOrEqualThreshold
-Function:        _Z4filtRN3hls6streamINS_4axisI6ap_intILi16EELm1ELm1ELm1ELh56ELb0EEELi0EEEPiS6_
+Function:        _Z4filtRN3hls6streamINS_4axisI6ap_intILi16EELm1ELm1ELm1ELh56ELb0EEELi0EEEPsS6_
 Args:            
   - String:          'Could not widen since type '
-  - Type:            i32
+  - Type:            i16
   - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
   - Threshold:       '0'
   - String:          ' _XLX_SEP_ '
@@ -101,7 +101,7 @@ Args:
   - String:          ' '
   - BundleName:      gmem
   - String:          ' '
-  - Function:        'filt(hls::stream<hls::axis<ap_int<16>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, int*, hls::stream<hls::axis<ap_int<16>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&)'
+  - Function:        'filt(hls::stream<hls::axis<ap_int<16>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, short*, hls::stream<hls::axis<ap_int<16>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&)'
     DebugLoc:        { File: filt.cpp, Line: 11, Column: 0 }
   - String:          ' '
 ...
@@ -109,7 +109,7 @@ Args:
 Pass:            reflow-occurrence-inference
 Name:            NonComputableLoopForm
 DebugLoc:        { File: filt.cpp, Line: 18, Column: 19 }
-Function:        _Z4filtRN3hls6streamINS_4axisI6ap_intILi16EELm1ELm1ELm1ELh56ELb0EEELi0EEEPiS6_
+Function:        _Z4filtRN3hls6streamINS_4axisI6ap_intILi16EELm1ELm1ELm1ELh56ELb0EEELi0EEEPsS6_
 Args:            
   - String:          'Could not analyze occurrence information within '''
   - LoopName:        VITIS_LOOP_18_1
@@ -131,11 +131,11 @@ Args:
 Pass:            reflow-auto-array-partition
 Name:            AutoParallelPerformanceDrivenVerbosePassed
 DebugLoc:        { File: filt.cpp, Line: 19, Column: 0 }
-Function:        _Z4filtRN3hls6streamINS_4axisI6ap_intILi16EELm1ELm1ELm1ELh56ELb0EEELi0EEEPiS6_
+Function:        _Z4filtRN3hls6streamINS_4axisI6ap_intILi16EELm1ELm1ELm1ELh56ELb0EEELi0EEEPsS6_
 Args:            
   - PragmaType:      array_partition
   - String:          ' '
-  - PragmaOptions:   'dim=1 type=complete  variable=_ZZ4filtRN3hls6streamINS_4axisI6ap_intILi16EELm1ELm1ELm1ELh56ELb0EEELi0EEEPiS6_E9shift_reg'
+  - PragmaOptions:   'dim=1 type=complete  variable=_ZZ4filtRN3hls6streamINS_4axisI6ap_intILi16EELm1ELm1ELm1ELh56ELb0EEELi0EEEPsS6_E9shift_reg'
   - String:          ' '
   - PragmaIsAuto:    '1'
   - String:          ' '
@@ -143,14 +143,14 @@ Args:
   - String:          ' '
   - varLoc:          'filt.cpp:19:0'
   - String:          ' '
-  - VarName:         'filt(hls::stream<hls::axis<ap_int<16>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, int*, hls::stream<hls::axis<ap_int<16>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&)::shift_reg'
+  - VarName:         'filt(hls::stream<hls::axis<ap_int<16>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, short*, hls::stream<hls::axis<ap_int<16>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&)::shift_reg'
   - String:          ' '
 ...
 --- !Passed
 Pass:            reflow-auto-array-partition
 Name:            AutoArrayXform
 DebugLoc:        { File: filt.cpp, Line: 19, Column: 0 }
-Function:        _Z4filtRN3hls6streamINS_4axisI6ap_intILi16EELm1ELm1ELm1ELh56ELb0EEELi0EEEPiS6_
+Function:        _Z4filtRN3hls6streamINS_4axisI6ap_intILi16EELm1ELm1ELm1ELh56ELb0EEELi0EEEPsS6_
 Args:            
   - String:          'Inferring pragma '''
   - PragmaType:      array_partition
@@ -159,7 +159,7 @@ Args:
   - String:          ' dim='
   - Dim:             '1'
   - String:          ''' for array '''
-  - Name:            'filt(hls::stream<hls::axis<ap_int<16>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, int*, hls::stream<hls::axis<ap_int<16>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&)::shift_reg'
+  - Name:            'filt(hls::stream<hls::axis<ap_int<16>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, short*, hls::stream<hls::axis<ap_int<16>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&)::shift_reg'
   - String:          ''''
   - String:          ' due to '
   - String:          pipeline
@@ -169,12 +169,12 @@ Args:
 Pass:            reflow-array-partition
 Name:            ArrayXform
 DebugLoc:        { File: filt.cpp, Line: 19, Column: 0 }
-Function:        _Z4filtRN3hls6streamINS_4axisI6ap_intILi16EELm1ELm1ELm1ELh56ELb0EEELi0EEEPiS6_
+Function:        _Z4filtRN3hls6streamINS_4axisI6ap_intILi16EELm1ELm1ELm1ELh56ELb0EEELi0EEEPsS6_
 Args:            
   - String:          'Applying '
   - String:          array_partition
   - String:          ' to '''
-  - UOName:          _ZZ4filtRN3hls6streamINS_4axisI6ap_intILi16EELm1ELm1ELm1ELh56ELb0EEELi0EEEPiS6_E9shift_reg
+  - UOName:          _ZZ4filtRN3hls6streamINS_4axisI6ap_intILi16EELm1ELm1ELm1ELh56ELb0EEELi0EEEPsS6_E9shift_reg
   - String:          ''':'
   - String:          ' '
   - Mode:            Complete
@@ -186,14 +186,14 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
-Function:        _Z4filtRN3hls6streamINS_4axisI6ap_intILi16EELm1ELm1ELm1ELh56ELb0EEELi0EEEPiS6_
+Function:        _Z4filtRN3hls6streamINS_4axisI6ap_intILi16EELm1ELm1ELm1ELh56ELb0EEELi0EEEPsS6_
 Args:            
   - String:          'Multiple burst '
   - Direction:       reads
   - String:          ' of length '
   - Length:          '11'
   - String:          ' and bit width '
-  - Width:           '32'
+  - Width:           '16'
   - String:          ' has been inferred.'
   - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
   - String:          ' _XLX_SEP_ '
@@ -202,21 +202,21 @@ Args:
   - String:          ' '
   - BundleName:      gmem
   - String:          ' '
-  - Function:        'filt(hls::stream<hls::axis<ap_int<16>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, int*, hls::stream<hls::axis<ap_int<16>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&)'
+  - Function:        'filt(hls::stream<hls::axis<ap_int<16>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, short*, hls::stream<hls::axis<ap_int<16>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&)'
     DebugLoc:        { File: filt.cpp, Line: 11, Column: 0 }
   - String:          ' '
 ...
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredSummary
-Function:        _Z4filtRN3hls6streamINS_4axisI6ap_intILi16EELm1ELm1ELm1ELh56ELb0EEELi0EEEPiS6_
+Function:        _Z4filtRN3hls6streamINS_4axisI6ap_intILi16EELm1ELm1ELm1ELh56ELb0EEELi0EEEPsS6_
 Args:            
   - String:          'Multiple burst '
   - Direction:       reads
   - String:          ' of length '
   - Length:          '11'
   - String:          ' and bit width '
-  - Width:           '32'
+  - Width:           '16'
   - String:          ' has been inferred on bundle '''
   - BundleName:      gmem
   - String:          '''.'

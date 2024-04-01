@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'filt_Pipeline_VITIS_LOOP_18_1'" level="0">
-<item name = "Date">Mon Apr  1 16:12:01 2024
+<item name = "Date">Mon Apr  1 16:53:18 2024
 </item>
 <item name = "Version">2023.2 (Build 4023990 on Oct 11 2023)</item>
 <item name = "Project">FIR_Test_Vitis</item>
@@ -107,6 +107,7 @@
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="acc_reg_541">16, 0, 16, 0</column>
 <column name="add_ln34_2_reg_576">16, 0, 16, 0</column>
 <column name="add_ln34_8_reg_581">16, 0, 16, 0</column>
 <column name="add_ln34_reg_556">16, 0, 16, 0</column>
@@ -123,25 +124,24 @@
 <column name="ap_loop_exit_ready_pp0_iter3_reg">1, 0, 1, 0</column>
 <column name="ap_loop_exit_ready_pp0_iter4_reg">1, 0, 1, 0</column>
 <column name="ap_loop_exit_ready_pp0_iter5_reg">1, 0, 1, 0</column>
-<column name="filt_stream_int_stream_axis_0_shift_reg">16, 0, 16, 0</column>
-<column name="filt_stream_int_stream_axis_0_shift_reg_1">16, 0, 16, 0</column>
-<column name="filt_stream_int_stream_axis_0_shift_reg_2">16, 0, 16, 0</column>
-<column name="filt_stream_int_stream_axis_0_shift_reg_2_load_reg_500">16, 0, 16, 0</column>
-<column name="filt_stream_int_stream_axis_0_shift_reg_3">16, 0, 16, 0</column>
-<column name="filt_stream_int_stream_axis_0_shift_reg_4">16, 0, 16, 0</column>
-<column name="filt_stream_int_stream_axis_0_shift_reg_4_load_reg_511">16, 0, 16, 0</column>
-<column name="filt_stream_int_stream_axis_0_shift_reg_5">16, 0, 16, 0</column>
-<column name="filt_stream_int_stream_axis_0_shift_reg_6">16, 0, 16, 0</column>
-<column name="filt_stream_int_stream_axis_0_shift_reg_7">16, 0, 16, 0</column>
-<column name="filt_stream_int_stream_axis_0_shift_reg_7_load_reg_521">16, 0, 16, 0</column>
-<column name="filt_stream_int_stream_axis_0_shift_reg_8">16, 0, 16, 0</column>
-<column name="filt_stream_int_stream_axis_0_shift_reg_9">16, 0, 16, 0</column>
-<column name="mul_ln34_10_reg_536">16, 0, 16, 0</column>
-<column name="mul_ln34_10_reg_536_pp0_iter1_reg">16, 0, 16, 0</column>
-<column name="mul_ln34_3_reg_546">16, 0, 16, 0</column>
-<column name="mul_ln34_7_reg_531">16, 0, 16, 0</column>
-<column name="mul_ln34_7_reg_531_pp0_iter1_reg">16, 0, 16, 0</column>
-<column name="mul_ln34_9_reg_551">16, 0, 16, 0</column>
+<column name="filt_stream_short_stream_axis_0_shift_reg">16, 0, 16, 0</column>
+<column name="filt_stream_short_stream_axis_0_shift_reg_1">16, 0, 16, 0</column>
+<column name="filt_stream_short_stream_axis_0_shift_reg_2">16, 0, 16, 0</column>
+<column name="filt_stream_short_stream_axis_0_shift_reg_2_load_reg_500">16, 0, 16, 0</column>
+<column name="filt_stream_short_stream_axis_0_shift_reg_3">16, 0, 16, 0</column>
+<column name="filt_stream_short_stream_axis_0_shift_reg_4">16, 0, 16, 0</column>
+<column name="filt_stream_short_stream_axis_0_shift_reg_4_load_reg_511">16, 0, 16, 0</column>
+<column name="filt_stream_short_stream_axis_0_shift_reg_5">16, 0, 16, 0</column>
+<column name="filt_stream_short_stream_axis_0_shift_reg_6">16, 0, 16, 0</column>
+<column name="filt_stream_short_stream_axis_0_shift_reg_7">16, 0, 16, 0</column>
+<column name="filt_stream_short_stream_axis_0_shift_reg_7_load_reg_526">16, 0, 16, 0</column>
+<column name="filt_stream_short_stream_axis_0_shift_reg_8">16, 0, 16, 0</column>
+<column name="filt_stream_short_stream_axis_0_shift_reg_9">16, 0, 16, 0</column>
+<column name="mul_ln31_1_reg_551">16, 0, 16, 0</column>
+<column name="mul_ln31_4_reg_516">16, 0, 16, 0</column>
+<column name="mul_ln31_4_reg_516_pp0_iter1_reg">16, 0, 16, 0</column>
+<column name="mul_ln31_7_reg_531">16, 0, 16, 0</column>
+<column name="mul_ln31_7_reg_531_pp0_iter1_reg">16, 0, 16, 0</column>
 <column name="tmp1_dest_reg_495">1, 0, 1, 0</column>
 <column name="tmp1_id_reg_490">1, 0, 1, 0</column>
 <column name="tmp1_keep_reg_470">2, 0, 2, 0</column>
@@ -180,17 +180,17 @@
 <column name="x_TUSER">in, 1, axis, x_V_user_V, pointer</column>
 <column name="x_TLAST">in, 1, axis, x_V_last_V, pointer</column>
 <column name="x_TID">in, 1, axis, x_V_id_V, pointer</column>
-<column name="empty_19">in, 16, ap_none, empty_19, scalar</column>
-<column name="empty_20">in, 16, ap_none, empty_20, scalar</column>
-<column name="empty_21">in, 16, ap_none, empty_21, scalar</column>
-<column name="empty_22">in, 16, ap_none, empty_22, scalar</column>
-<column name="empty_23">in, 16, ap_none, empty_23, scalar</column>
-<column name="empty_24">in, 16, ap_none, empty_24, scalar</column>
-<column name="empty_25">in, 16, ap_none, empty_25, scalar</column>
-<column name="empty_26">in, 16, ap_none, empty_26, scalar</column>
-<column name="empty_27">in, 16, ap_none, empty_27, scalar</column>
-<column name="empty_28">in, 16, ap_none, empty_28, scalar</column>
-<column name="empty">in, 16, ap_none, empty, scalar</column>
+<column name="gmem_addr_read_10">in, 16, ap_none, gmem_addr_read_10, scalar</column>
+<column name="gmem_addr_read">in, 16, ap_none, gmem_addr_read, scalar</column>
+<column name="gmem_addr_read_9">in, 16, ap_none, gmem_addr_read_9, scalar</column>
+<column name="gmem_addr_read_8">in, 16, ap_none, gmem_addr_read_8, scalar</column>
+<column name="gmem_addr_read_7">in, 16, ap_none, gmem_addr_read_7, scalar</column>
+<column name="gmem_addr_read_6">in, 16, ap_none, gmem_addr_read_6, scalar</column>
+<column name="gmem_addr_read_5">in, 16, ap_none, gmem_addr_read_5, scalar</column>
+<column name="gmem_addr_read_4">in, 16, ap_none, gmem_addr_read_4, scalar</column>
+<column name="gmem_addr_read_3">in, 16, ap_none, gmem_addr_read_3, scalar</column>
+<column name="gmem_addr_read_2">in, 16, ap_none, gmem_addr_read_2, scalar</column>
+<column name="gmem_addr_read_1">in, 16, ap_none, gmem_addr_read_1, scalar</column>
 <column name="y_TVALID">out, 1, axis, y_V_dest_V, pointer</column>
 <column name="y_TDEST">out, 1, axis, y_V_dest_V, pointer</column>
 <column name="y_TKEEP">out, 2, axis, y_V_keep_V, pointer</column>
