@@ -20,7 +20,7 @@ Design is defaulting to srcset: sources_1
 Design is defaulting to constrset: constrs_1
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Project 1-454] Reading design checkpoint 'c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_axi_dma_1/guitar_effects_design_axi_dma_1.dcp' for cell 'guitar_effects_design_i/axi_dma'
-INFO: [Project 1-454] Reading design checkpoint 'c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_guitar_effects_0_19/guitar_effects_design_guitar_effects_0_19.dcp' for cell 'guitar_effects_design_i/guitar_effects_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_guitar_effects_0_21/guitar_effects_design_guitar_effects_0_21.dcp' for cell 'guitar_effects_design_i/guitar_effects_0'
 INFO: [Project 1-454] Reading design checkpoint 'c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_processing_system7_0_1/guitar_effects_design_processing_system7_0_1.dcp' for cell 'guitar_effects_design_i/processing_system7_0'
 INFO: [Project 1-454] Reading design checkpoint 'c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_rst_ps7_0_100M_1/guitar_effects_design_rst_ps7_0_100M_1.dcp' for cell 'guitar_effects_design_i/rst_ps7_0_100M'
 INFO: [Project 1-454] Reading design checkpoint 'c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_auto_pc_0/guitar_effects_design_auto_pc_0.dcp' for cell 'guitar_effects_design_i/axi_mem_intercon/s00_couplers/auto_pc'
@@ -28,8 +28,8 @@ INFO: [Project 1-454] Reading design checkpoint 'c:/Users/du.kad/Desktop/EECE463
 INFO: [Project 1-454] Reading design checkpoint 'c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_auto_pc_1/guitar_effects_design_auto_pc_1.dcp' for cell 'guitar_effects_design_i/axi_mem_intercon_1/s00_couplers/auto_pc'
 INFO: [Project 1-454] Reading design checkpoint 'c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_xbar_1/guitar_effects_design_xbar_1.dcp' for cell 'guitar_effects_design_i/ps7_0_axi_periph/xbar'
 INFO: [Project 1-454] Reading design checkpoint 'c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_auto_pc_2/guitar_effects_design_auto_pc_2.dcp' for cell 'guitar_effects_design_i/ps7_0_axi_periph/s00_couplers/auto_pc'
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.272 . Memory (MB): peak = 1637.102 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 431 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.235 . Memory (MB): peak = 1637.992 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 442 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2022.1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -50,7 +50,7 @@ Parsing XDC File [c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Eff
 Finished Parsing XDC File [c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_auto_us_0/guitar_effects_design_auto_us_0_clocks.xdc] for cell 'guitar_effects_design_i/axi_mem_intercon/s00_couplers/auto_us/inst'
 INFO: [Project 1-1714] 6 XPM XDC files have been applied to the design.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1637.102 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1637.992 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 5 instances were transformed.
   RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 4 instances
@@ -58,7 +58,7 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 
 20 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
 link_design completed successfully
-link_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 1637.102 ; gain = 0.000
+link_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 1637.992 ; gain = 0.000
 Command: opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
@@ -69,13 +69,13 @@ INFO: [DRC 23-27] Running DRC with 2 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.968 . Memory (MB): peak = 1637.102 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.962 . Memory (MB): peak = 1637.992 ; gain = 0.000
 
 Starting Cache Timing Information Task
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Ending Cache Timing Information Task | Checksum: 157cdd733
+Ending Cache Timing Information Task | Checksum: 1aeb21d10
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1962.496 ; gain = 325.395
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1951.332 ; gain = 313.340
 
 Starting Logic Optimization Task
 
@@ -84,47 +84,47 @@ INFO: [Opt 31-1287] Pulled Inverter guitar_effects_design_i/axi_dma/U0/I_PRMRY_D
 INFO: [Opt 31-1287] Pulled Inverter guitar_effects_design_i/axi_dma/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_WR_DATA_CNTL/sig_last_mmap_dbeat_reg_i_1__0 into driver instance guitar_effects_design_i/axi_dma/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_WR_DATA_CNTL/sig_next_calc_error_reg_i_3, which resulted in an inversion of 5 pins
 INFO: [Opt 31-1287] Pulled Inverter guitar_effects_design_i/axi_mem_intercon/s00_couplers/auto_us/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/si_register_slice_inst/aw.aw_pipe/USE_RTL_FIFO.data_srl_reg[31][13]_srl32_i_1 into driver instance guitar_effects_design_i/axi_mem_intercon/s00_couplers/auto_us/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/si_register_slice_inst/aw.aw_pipe/m_axi_awaddr[2]_INST_0_i_3, which resulted in an inversion of 6 pins
 INFO: [Opt 31-1287] Pulled Inverter guitar_effects_design_i/ps7_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/addr_arbiter_inst/m_atarget_enc[1]_i_1 into driver instance guitar_effects_design_i/ps7_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/addr_arbiter_inst/m_atarget_hot[2]_i_2, which resulted in an inversion of 5 pins
-INFO: [Opt 31-138] Pushed 3 inverter(s) to 15 load pin(s).
+INFO: [Opt 31-138] Pushed 2 inverter(s) to 6 load pin(s).
 In IDDR TRANSFORM
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 1 Retarget | Checksum: 1a3dfc470
+Phase 1 Retarget | Checksum: 10d214297
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.565 . Memory (MB): peak = 2276.090 ; gain = 0.070
-INFO: [Opt 31-389] Phase Retarget created 71 cells and removed 166 cells
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.516 . Memory (MB): peak = 2270.215 ; gain = 0.055
+INFO: [Opt 31-389] Phase Retarget created 37 cells and removed 133 cells
 INFO: [Opt 31-1021] In phase Retarget, 27 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 2 Constant propagation
 INFO: [Opt 31-138] Pushed 3 inverter(s) to 12 load pin(s).
-Phase 2 Constant propagation | Checksum: 1424ec109
+Phase 2 Constant propagation | Checksum: b74b155c
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.714 . Memory (MB): peak = 2276.090 ; gain = 0.070
-INFO: [Opt 31-389] Phase Constant propagation created 128 cells and removed 495 cells
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.665 . Memory (MB): peak = 2270.215 ; gain = 0.055
+INFO: [Opt 31-389] Phase Constant propagation created 128 cells and removed 492 cells
 INFO: [Opt 31-1021] In phase Constant propagation, 27 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 3 Sweep
-Phase 3 Sweep | Checksum: 165b71d9e
+Phase 3 Sweep | Checksum: e187333b
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2276.090 ; gain = 0.070
-INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 371 cells
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2270.215 ; gain = 0.055
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 344 cells
 INFO: [Opt 31-1021] In phase Sweep, 97 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 4 BUFG optimization
-Phase 4 BUFG optimization | Checksum: 165b71d9e
+Phase 4 BUFG optimization | Checksum: e187333b
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2276.090 ; gain = 0.070
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2270.215 ; gain = 0.055
 INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
 
 Phase 5 Shift Register Optimization
 INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
-Phase 5 Shift Register Optimization | Checksum: 165b71d9e
+Phase 5 Shift Register Optimization | Checksum: e187333b
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2276.090 ; gain = 0.070
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2270.215 ; gain = 0.055
 INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
 
 Phase 6 Post Processing Netlist
-Phase 6 Post Processing Netlist | Checksum: 165b71d9e
+Phase 6 Post Processing Netlist | Checksum: e187333b
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2276.090 ; gain = 0.070
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2270.215 ; gain = 0.055
 INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
 INFO: [Opt 31-1021] In phase Post Processing Netlist, 33 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 Opt_design Change Summary
@@ -134,9 +134,9 @@ Opt_design Change Summary
 -------------------------------------------------------------------------------------------------------------------------
 |  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
 -------------------------------------------------------------------------------------------------------------------------
-|  Retarget                     |              71  |             166  |                                             27  |
-|  Constant propagation         |             128  |             495  |                                             27  |
-|  Sweep                        |               0  |             371  |                                             97  |
+|  Retarget                     |              37  |             133  |                                             27  |
+|  Constant propagation         |             128  |             492  |                                             27  |
+|  Sweep                        |               0  |             344  |                                             97  |
 |  BUFG optimization            |               0  |               0  |                                              0  |
 |  Shift Register Optimization  |               0  |               0  |                                              0  |
 |  Post Processing Netlist      |               0  |               0  |                                             33  |
@@ -146,10 +146,10 @@ Opt_design Change Summary
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 2276.090 ; gain = 0.000
-Ending Logic Optimization Task | Checksum: 13fc3df2b
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 2270.215 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 16e7b94b8
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2276.090 ; gain = 0.070
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2270.215 ; gain = 0.055
 
 Starting Power Optimization Task
 INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
@@ -162,43 +162,43 @@ INFO: [Pwropt 34-10] Applying ODC optimizations ...
 
 
 Starting PowerOpt Patch Enables Task
-INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 67 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 68 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
 INFO: [Pwropt 34-201] Structural ODC has moved 1 WE to EN ports
-Number of BRAM Ports augmented: 68 newly gated: 1 Total Ports: 134
+Number of BRAM Ports augmented: 36 newly gated: 1 Total Ports: 136
 Number of Flops added for Enable Generation: 3
 
-Ending PowerOpt Patch Enables Task | Checksum: 10446a326
+Ending PowerOpt Patch Enables Task | Checksum: 17de85f22
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.300 . Memory (MB): peak = 2474.055 ; gain = 0.000
-Ending Power Optimization Task | Checksum: 10446a326
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.232 . Memory (MB): peak = 2428.449 ; gain = 0.000
+Ending Power Optimization Task | Checksum: 17de85f22
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 2474.055 ; gain = 197.965
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 2428.449 ; gain = 158.234
 
 Starting Final Cleanup Task
 
 Starting Logic Optimization Task
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Ending Logic Optimization Task | Checksum: b7f80c6e
+Ending Logic Optimization Task | Checksum: 1c781dbd1
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.828 . Memory (MB): peak = 2474.055 ; gain = 0.000
-Ending Final Cleanup Task | Checksum: b7f80c6e
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.712 . Memory (MB): peak = 2428.449 ; gain = 0.000
+Ending Final Cleanup Task | Checksum: 1c781dbd1
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2474.055 ; gain = 0.000
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2428.449 ; gain = 0.000
 
 Starting Netlist Obfuscation Task
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 2474.055 ; gain = 0.000
-Ending Netlist Obfuscation Task | Checksum: b7f80c6e
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 2428.449 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: 1c781dbd1
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 2474.055 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 2428.449 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
 51 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-opt_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:21 . Memory (MB): peak = 2474.055 ; gain = 836.953
+opt_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:19 . Memory (MB): peak = 2428.449 ; gain = 790.457
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.049 . Memory (MB): peak = 2474.055 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.061 . Memory (MB): peak = 2428.449 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/impl_1/guitar_effects_design_wrapper_opt.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_drc -file guitar_effects_design_wrapper_drc_opted.rpt -pb guitar_effects_design_wrapper_drc_opted.pb -rpx guitar_effects_design_wrapper_drc_opted.rpx
 Command: report_drc -file guitar_effects_design_wrapper_drc_opted.rpt -pb guitar_effects_design_wrapper_drc_opted.pb -rpx guitar_effects_design_wrapper_drc_opted.rpx
@@ -215,7 +215,7 @@ INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
 INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
 Running DRC as a precondition to command place_design
 INFO: [DRC 23-27] Running DRC with 2 threads
-INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors, 12 Warnings, 1 Advisories
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors, 12 Warnings
 INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
 
 Starting Placer Task
@@ -224,53 +224,53 @@ INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 
 Phase 1 Placer Initialization
 
 Phase 1.1 Placer Initialization Netlist Sorting
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 2474.055 ; gain = 0.000
-Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 8d2aa193
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 2428.449 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: d445e274
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 2474.055 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 2474.055 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.027 . Memory (MB): peak = 2428.449 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 2428.449 ; gain = 0.000
 
 Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
-Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: d2f9768a
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: aa5b267e
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.740 . Memory (MB): peak = 2474.055 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.677 . Memory (MB): peak = 2428.449 ; gain = 0.000
 
 Phase 1.3 Build Placer Netlist Model
-Phase 1.3 Build Placer Netlist Model | Checksum: e09713f3
+Phase 1.3 Build Placer Netlist Model | Checksum: 13bc4e64e
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2474.055 ; gain = 0.000
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2428.449 ; gain = 0.000
 
 Phase 1.4 Constrain Clocks/Macros
-Phase 1.4 Constrain Clocks/Macros | Checksum: e09713f3
+Phase 1.4 Constrain Clocks/Macros | Checksum: 13bc4e64e
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2474.055 ; gain = 0.000
-Phase 1 Placer Initialization | Checksum: e09713f3
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2428.449 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: 13bc4e64e
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2474.055 ; gain = 0.000
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2428.449 ; gain = 0.000
 
 Phase 2 Global Placement
 
 Phase 2.1 Floorplanning
-Phase 2.1 Floorplanning | Checksum: 100d83c9e
+Phase 2.1 Floorplanning | Checksum: 16f8e8f34
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 2474.055 ; gain = 0.000
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 2428.449 ; gain = 0.000
 
 Phase 2.2 Update Timing before SLR Path Opt
-Phase 2.2 Update Timing before SLR Path Opt | Checksum: 472faa9f
+Phase 2.2 Update Timing before SLR Path Opt | Checksum: eee198b7
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 2474.055 ; gain = 0.000
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 2428.449 ; gain = 0.000
 
 Phase 2.3 Post-Processing in Floorplanning
-Phase 2.3 Post-Processing in Floorplanning | Checksum: 472faa9f
+Phase 2.3 Post-Processing in Floorplanning | Checksum: eee198b7
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 2474.055 ; gain = 0.000
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 2428.449 ; gain = 0.000
 
 Phase 2.4 Global Placement Core
 
 Phase 2.4.1 Physical Synthesis In Placer
-INFO: [Physopt 32-1035] Found 0 LUTNM shape to break, 434 LUT instances to create LUTNM shape
+INFO: [Physopt 32-1035] Found 0 LUTNM shape to break, 465 LUT instances to create LUTNM shape
 INFO: [Physopt 32-1044] Break lutnm for timing: one critical 0, two critical 0, total 0, new lutff created 0
-INFO: [Physopt 32-1138] End 1 Pass. Optimized 171 nets or LUTs. Breaked 0 LUT, combined 171 existing LUTs and moved 0 existing LUT
+INFO: [Physopt 32-1138] End 1 Pass. Optimized 155 nets or LUTs. Breaked 0 LUT, combined 155 existing LUTs and moved 0 existing LUT
 INFO: [Physopt 32-65] No nets found for high-fanout optimization.
 INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
@@ -281,7 +281,7 @@ INFO: [Physopt 32-670] No setup violation found.  BRAM Register Optimization was
 INFO: [Physopt 32-670] No setup violation found.  URAM Register Optimization was not performed.
 INFO: [Physopt 32-949] No candidate nets found for dynamic/static region interface net replication
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 2474.055 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 2428.449 ; gain = 0.000
 
 Summary of Physical Synthesis Optimizations
 ============================================
@@ -290,7 +290,7 @@ Summary of Physical Synthesis Optimizations
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 |  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
-|  LUT Combining                                    |            0  |            171  |                   171  |           0  |           1  |  00:00:00  |
+|  LUT Combining                                    |            0  |            155  |                   155  |           0  |           1  |  00:00:00  |
 |  Retime                                           |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  DSP Register                                     |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
@@ -299,59 +299,59 @@ Summary of Physical Synthesis Optimizations
 |  BRAM Register                                    |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
 |  URAM Register                                    |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
 |  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
-|  Total                                            |            0  |            171  |                   171  |           0  |           4  |  00:00:00  |
+|  Total                                            |            0  |            155  |                   155  |           0  |           4  |  00:00:00  |
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-Phase 2.4.1 Physical Synthesis In Placer | Checksum: 1938d76af
+Phase 2.4.1 Physical Synthesis In Placer | Checksum: 1f6c8d656
 
-Time (s): cpu = 00:00:16 ; elapsed = 00:00:09 . Memory (MB): peak = 2474.055 ; gain = 0.000
-Phase 2.4 Global Placement Core | Checksum: 229406fa9
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:08 . Memory (MB): peak = 2428.449 ; gain = 0.000
+Phase 2.4 Global Placement Core | Checksum: 1c2f519c4
 
-Time (s): cpu = 00:00:17 ; elapsed = 00:00:10 . Memory (MB): peak = 2474.055 ; gain = 0.000
-Phase 2 Global Placement | Checksum: 229406fa9
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:09 . Memory (MB): peak = 2428.449 ; gain = 0.000
+Phase 2 Global Placement | Checksum: 1c2f519c4
 
-Time (s): cpu = 00:00:17 ; elapsed = 00:00:10 . Memory (MB): peak = 2474.055 ; gain = 0.000
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:09 . Memory (MB): peak = 2428.449 ; gain = 0.000
 
 Phase 3 Detail Placement
 
 Phase 3.1 Commit Multi Column Macros
-Phase 3.1 Commit Multi Column Macros | Checksum: 1e7490863
+Phase 3.1 Commit Multi Column Macros | Checksum: 29c028244
 
-Time (s): cpu = 00:00:17 ; elapsed = 00:00:10 . Memory (MB): peak = 2474.055 ; gain = 0.000
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:09 . Memory (MB): peak = 2428.449 ; gain = 0.000
 
 Phase 3.2 Commit Most Macros & LUTRAMs
-Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 178d2fecd
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1e5acab67
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:11 . Memory (MB): peak = 2474.055 ; gain = 0.000
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:10 . Memory (MB): peak = 2428.449 ; gain = 0.000
 
 Phase 3.3 Area Swap Optimization
-Phase 3.3 Area Swap Optimization | Checksum: 14c710606
+Phase 3.3 Area Swap Optimization | Checksum: 11b1ebd9d
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:11 . Memory (MB): peak = 2474.055 ; gain = 0.000
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:10 . Memory (MB): peak = 2428.449 ; gain = 0.000
 
 Phase 3.4 Pipeline Register Optimization
-Phase 3.4 Pipeline Register Optimization | Checksum: 213d3b2dc
+Phase 3.4 Pipeline Register Optimization | Checksum: 1edfd946b
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:11 . Memory (MB): peak = 2474.055 ; gain = 0.000
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:10 . Memory (MB): peak = 2428.449 ; gain = 0.000
 
 Phase 3.5 Small Shape Detail Placement
-Phase 3.5 Small Shape Detail Placement | Checksum: 16e95bc01
+Phase 3.5 Small Shape Detail Placement | Checksum: 151aea136
 
-Time (s): cpu = 00:00:21 ; elapsed = 00:00:14 . Memory (MB): peak = 2474.055 ; gain = 0.000
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:12 . Memory (MB): peak = 2428.449 ; gain = 0.000
 
 Phase 3.6 Re-assign LUT pins
-Phase 3.6 Re-assign LUT pins | Checksum: 16411d671
+Phase 3.6 Re-assign LUT pins | Checksum: 1c26df6a6
 
-Time (s): cpu = 00:00:22 ; elapsed = 00:00:14 . Memory (MB): peak = 2474.055 ; gain = 0.000
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:13 . Memory (MB): peak = 2428.449 ; gain = 0.000
 
 Phase 3.7 Pipeline Register Optimization
-Phase 3.7 Pipeline Register Optimization | Checksum: 248ef7ed1
+Phase 3.7 Pipeline Register Optimization | Checksum: 1bd476f00
 
-Time (s): cpu = 00:00:22 ; elapsed = 00:00:14 . Memory (MB): peak = 2474.055 ; gain = 0.000
-Phase 3 Detail Placement | Checksum: 248ef7ed1
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:13 . Memory (MB): peak = 2428.449 ; gain = 0.000
+Phase 3 Detail Placement | Checksum: 1bd476f00
 
-Time (s): cpu = 00:00:22 ; elapsed = 00:00:14 . Memory (MB): peak = 2474.055 ; gain = 0.000
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:13 . Memory (MB): peak = 2428.449 ; gain = 0.000
 
 Phase 4 Post Placement Optimization and Clean-Up
 
@@ -359,7 +359,7 @@ Phase 4.1 Post Commit Optimization
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Phase 4.1.1 Post Placement Optimization
-Post Placement Optimization Initialization | Checksum: 1c49c884b
+Post Placement Optimization Initialization | Checksum: 1a0d9acc1
 
 Phase 4.1.1.1 BUFG Insertion
 
@@ -367,33 +367,33 @@ Starting Physical Synthesis Task
 
 Phase 1 Physical Synthesis Initialization
 INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=1.894 | TNS=0.000 |
-Phase 1 Physical Synthesis Initialization | Checksum: 12139c47e
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=1.279 | TNS=0.000 |
+Phase 1 Physical Synthesis Initialization | Checksum: 21d66a2d6
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.360 . Memory (MB): peak = 2474.055 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.323 . Memory (MB): peak = 2428.449 ; gain = 0.000
 INFO: [Place 46-56] BUFG insertion identified 0 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to Illegal Netlist: 0.
-Ending Physical Synthesis Task | Checksum: 14975a5ae
+Ending Physical Synthesis Task | Checksum: 25cae9725
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.442 . Memory (MB): peak = 2474.055 ; gain = 0.000
-Phase 4.1.1.1 BUFG Insertion | Checksum: 1c49c884b
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.384 . Memory (MB): peak = 2428.449 ; gain = 0.000
+Phase 4.1.1.1 BUFG Insertion | Checksum: 1a0d9acc1
 
-Time (s): cpu = 00:00:25 ; elapsed = 00:00:17 . Memory (MB): peak = 2474.055 ; gain = 0.000
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:15 . Memory (MB): peak = 2428.449 ; gain = 0.000
 
 Phase 4.1.1.2 Post Placement Timing Optimization
-INFO: [Place 30-746] Post Placement Timing Summary WNS=1.894. For the most accurate timing information please run report_timing.
-Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: 13b970ac7
+INFO: [Place 30-746] Post Placement Timing Summary WNS=1.279. For the most accurate timing information please run report_timing.
+Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: 1c1fabf9f
 
-Time (s): cpu = 00:00:25 ; elapsed = 00:00:17 . Memory (MB): peak = 2474.055 ; gain = 0.000
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:15 . Memory (MB): peak = 2428.449 ; gain = 0.000
 
-Time (s): cpu = 00:00:25 ; elapsed = 00:00:17 . Memory (MB): peak = 2474.055 ; gain = 0.000
-Phase 4.1 Post Commit Optimization | Checksum: 13b970ac7
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:15 . Memory (MB): peak = 2428.449 ; gain = 0.000
+Phase 4.1 Post Commit Optimization | Checksum: 1c1fabf9f
 
-Time (s): cpu = 00:00:26 ; elapsed = 00:00:17 . Memory (MB): peak = 2474.055 ; gain = 0.000
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:15 . Memory (MB): peak = 2428.449 ; gain = 0.000
 
 Phase 4.2 Post Placement Cleanup
-Phase 4.2 Post Placement Cleanup | Checksum: 13b970ac7
+Phase 4.2 Post Placement Cleanup | Checksum: 1c1fabf9f
 
-Time (s): cpu = 00:00:26 ; elapsed = 00:00:17 . Memory (MB): peak = 2474.055 ; gain = 0.000
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:15 . Memory (MB): peak = 2428.449 ; gain = 0.000
 
 Phase 4.3 Placer Reporting
 
@@ -405,45 +405,45 @@ INFO: [Place 30-612] Post-Placement Estimated Congestion
 |___________|___________________|___________________|
 |      North|                1x1|                2x2|
 |___________|___________________|___________________|
-|      South|                1x1|                2x2|
+|      South|                1x1|                1x1|
 |___________|___________________|___________________|
 |       East|                1x1|                1x1|
 |___________|___________________|___________________|
-|       West|                1x1|                1x1|
+|       West|                1x1|                2x2|
 |___________|___________________|___________________|
 
-Phase 4.3.1 Print Estimated Congestion | Checksum: 13b970ac7
+Phase 4.3.1 Print Estimated Congestion | Checksum: 1c1fabf9f
 
-Time (s): cpu = 00:00:26 ; elapsed = 00:00:17 . Memory (MB): peak = 2474.055 ; gain = 0.000
-Phase 4.3 Placer Reporting | Checksum: 13b970ac7
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:15 . Memory (MB): peak = 2428.449 ; gain = 0.000
+Phase 4.3 Placer Reporting | Checksum: 1c1fabf9f
 
-Time (s): cpu = 00:00:26 ; elapsed = 00:00:17 . Memory (MB): peak = 2474.055 ; gain = 0.000
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:15 . Memory (MB): peak = 2428.449 ; gain = 0.000
 
 Phase 4.4 Final Placement Cleanup
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 2474.055 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 2428.449 ; gain = 0.000
 
-Time (s): cpu = 00:00:26 ; elapsed = 00:00:17 . Memory (MB): peak = 2474.055 ; gain = 0.000
-Phase 4 Post Placement Optimization and Clean-Up | Checksum: 17fb6a2ce
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:15 . Memory (MB): peak = 2428.449 ; gain = 0.000
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 1c4c00e56
 
-Time (s): cpu = 00:00:26 ; elapsed = 00:00:17 . Memory (MB): peak = 2474.055 ; gain = 0.000
-Ending Placer Task | Checksum: 162c7d2da
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:15 . Memory (MB): peak = 2428.449 ; gain = 0.000
+Ending Placer Task | Checksum: 16c37ec7f
 
-Time (s): cpu = 00:00:26 ; elapsed = 00:00:17 . Memory (MB): peak = 2474.055 ; gain = 0.000
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:15 . Memory (MB): peak = 2428.449 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
 86 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
 place_design completed successfully
-place_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:18 . Memory (MB): peak = 2474.055 ; gain = 0.000
+place_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:16 . Memory (MB): peak = 2428.449 ; gain = 0.000
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.669 . Memory (MB): peak = 2474.055 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.588 . Memory (MB): peak = 2428.449 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/impl_1/guitar_effects_design_wrapper_placed.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_io -file guitar_effects_design_wrapper_io_placed.rpt
-report_io: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.046 . Memory (MB): peak = 2474.055 ; gain = 0.000
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.049 . Memory (MB): peak = 2428.449 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_utilization -file guitar_effects_design_wrapper_utilization_placed.rpt -pb guitar_effects_design_wrapper_utilization_placed.pb
 INFO: [runtcl-4] Executing : report_control_sets -verbose -file guitar_effects_design_wrapper_control_sets_placed.rpt
-report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.027 . Memory (MB): peak = 2474.055 ; gain = 0.000
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 2428.449 ; gain = 0.000
 Command: phys_opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
@@ -456,7 +456,7 @@ INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.663 . Memory (MB): peak = 2474.055 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.637 . Memory (MB): peak = 2428.449 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/impl_1/guitar_effects_design_wrapper_physopt.dcp' has been generated.
 Command: route_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
@@ -471,30 +471,30 @@ Starting Routing Task
 INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
 
 Phase 1 Build RT Design
-Checksum: PlaceDB: ce302ea8 ConstDB: 0 ShapeSum: 9497a432 RouteDB: 0
-Post Restoration Checksum: NetGraph: e2cb5544 NumContArr: d172d9b2 Constraints: 0 Timing: 0
-Phase 1 Build RT Design | Checksum: 1b43e2ef6
+Checksum: PlaceDB: 76af0348 ConstDB: 0 ShapeSum: f588e937 RouteDB: 0
+Post Restoration Checksum: NetGraph: a584f17a NumContArr: 97fa9b95 Constraints: 0 Timing: 0
+Phase 1 Build RT Design | Checksum: 13d7f8d0f
 
-Time (s): cpu = 00:00:25 ; elapsed = 00:00:21 . Memory (MB): peak = 2488.301 ; gain = 14.246
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:21 . Memory (MB): peak = 2461.012 ; gain = 32.563
 
 Phase 2 Router Initialization
 
 Phase 2.1 Fix Topology Constraints
-Phase 2.1 Fix Topology Constraints | Checksum: 1b43e2ef6
+Phase 2.1 Fix Topology Constraints | Checksum: 13d7f8d0f
 
-Time (s): cpu = 00:00:25 ; elapsed = 00:00:21 . Memory (MB): peak = 2494.902 ; gain = 20.848
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:22 . Memory (MB): peak = 2468.777 ; gain = 40.328
 
 Phase 2.2 Pre Route Cleanup
-Phase 2.2 Pre Route Cleanup | Checksum: 1b43e2ef6
+Phase 2.2 Pre Route Cleanup | Checksum: 13d7f8d0f
 
-Time (s): cpu = 00:00:25 ; elapsed = 00:00:21 . Memory (MB): peak = 2494.902 ; gain = 20.848
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:22 . Memory (MB): peak = 2468.777 ; gain = 40.328
  Number of Nodes with overlaps = 0
 
 Phase 2.3 Update Timing
-Phase 2.3 Update Timing | Checksum: 12b37bc9d
+Phase 2.3 Update Timing | Checksum: 2138fd719
 
-Time (s): cpu = 00:00:28 ; elapsed = 00:00:24 . Memory (MB): peak = 2521.570 ; gain = 47.516
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.848  | TNS=0.000  | WHS=-0.265 | THS=-123.807|
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:24 . Memory (MB): peak = 2497.898 ; gain = 69.449
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.193  | TNS=0.000  | WHS=-0.203 | THS=-115.936|
 
 
 Router Utilization Summary
@@ -503,90 +503,91 @@ Router Utilization Summary
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
-  Number of Failed Nets               = 10312
+  Number of Failed Nets               = 9320
     (Failed Nets is the sum of unrouted and partially routed nets)
-  Number of Unrouted Nets             = 10312
+  Number of Unrouted Nets             = 9320
   Number of Partially Routed Nets     = 0
   Number of Node Overlaps             = 0
 
-Phase 2 Router Initialization | Checksum: f43043bc
+Phase 2 Router Initialization | Checksum: 1a53da35e
 
-Time (s): cpu = 00:00:30 ; elapsed = 00:00:25 . Memory (MB): peak = 2567.875 ; gain = 93.820
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:25 . Memory (MB): peak = 2537.645 ; gain = 109.195
 
 Phase 3 Initial Routing
 
 Phase 3.1 Global Routing
-Phase 3.1 Global Routing | Checksum: f43043bc
+Phase 3.1 Global Routing | Checksum: 1a53da35e
 
-Time (s): cpu = 00:00:30 ; elapsed = 00:00:25 . Memory (MB): peak = 2567.875 ; gain = 93.820
-Phase 3 Initial Routing | Checksum: 1c6e32624
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:25 . Memory (MB): peak = 2537.645 ; gain = 109.195
+Phase 3 Initial Routing | Checksum: ba3cc6d6
 
-Time (s): cpu = 00:00:34 ; elapsed = 00:00:27 . Memory (MB): peak = 2574.258 ; gain = 100.203
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:27 . Memory (MB): peak = 2543.035 ; gain = 114.586
 
 Phase 4 Rip-up And Reroute
 
 Phase 4.1 Global Iteration 0
- Number of Nodes with overlaps = 785
- Number of Nodes with overlaps = 51
+ Number of Nodes with overlaps = 610
+ Number of Nodes with overlaps = 68
+ Number of Nodes with overlaps = 27
  Number of Nodes with overlaps = 9
- Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 5
+ Number of Nodes with overlaps = 1
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.372  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.268  | TNS=0.000  | WHS=N/A    | THS=N/A    |
 
-Phase 4.1 Global Iteration 0 | Checksum: 1f002bb5a
+Phase 4.1 Global Iteration 0 | Checksum: 113d4b0ab
 
-Time (s): cpu = 00:00:38 ; elapsed = 00:00:30 . Memory (MB): peak = 2574.258 ; gain = 100.203
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:31 . Memory (MB): peak = 2543.035 ; gain = 114.586
 
 Phase 4.2 Global Iteration 1
- Number of Nodes with overlaps = 1
- Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 6
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.372  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.268  | TNS=0.000  | WHS=N/A    | THS=N/A    |
 
-Phase 4.2 Global Iteration 1 | Checksum: c06eec1d
+Phase 4.2 Global Iteration 1 | Checksum: 21f5952f7
 
-Time (s): cpu = 00:00:39 ; elapsed = 00:00:31 . Memory (MB): peak = 2574.258 ; gain = 100.203
-Phase 4 Rip-up And Reroute | Checksum: c06eec1d
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:31 . Memory (MB): peak = 2543.035 ; gain = 114.586
+Phase 4 Rip-up And Reroute | Checksum: 21f5952f7
 
-Time (s): cpu = 00:00:39 ; elapsed = 00:00:31 . Memory (MB): peak = 2574.258 ; gain = 100.203
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:31 . Memory (MB): peak = 2543.035 ; gain = 114.586
 
 Phase 5 Delay and Skew Optimization
 
 Phase 5.1 Delay CleanUp
-Phase 5.1 Delay CleanUp | Checksum: c06eec1d
+Phase 5.1 Delay CleanUp | Checksum: 21f5952f7
 
-Time (s): cpu = 00:00:39 ; elapsed = 00:00:31 . Memory (MB): peak = 2574.258 ; gain = 100.203
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:31 . Memory (MB): peak = 2543.035 ; gain = 114.586
 
 Phase 5.2 Clock Skew Optimization
-Phase 5.2 Clock Skew Optimization | Checksum: c06eec1d
+Phase 5.2 Clock Skew Optimization | Checksum: 21f5952f7
 
-Time (s): cpu = 00:00:39 ; elapsed = 00:00:31 . Memory (MB): peak = 2574.258 ; gain = 100.203
-Phase 5 Delay and Skew Optimization | Checksum: c06eec1d
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:31 . Memory (MB): peak = 2543.035 ; gain = 114.586
+Phase 5 Delay and Skew Optimization | Checksum: 21f5952f7
 
-Time (s): cpu = 00:00:39 ; elapsed = 00:00:31 . Memory (MB): peak = 2574.258 ; gain = 100.203
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:31 . Memory (MB): peak = 2543.035 ; gain = 114.586
 
 Phase 6 Post Hold Fix
 
 Phase 6.1 Hold Fix Iter
 
 Phase 6.1.1 Update Timing
-Phase 6.1.1 Update Timing | Checksum: 5c96e801
+Phase 6.1.1 Update Timing | Checksum: 195e5f5bb
 
-Time (s): cpu = 00:00:40 ; elapsed = 00:00:32 . Memory (MB): peak = 2574.258 ; gain = 100.203
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.462  | TNS=0.000  | WHS=0.028  | THS=0.000  |
+Time (s): cpu = 00:00:39 ; elapsed = 00:00:32 . Memory (MB): peak = 2543.035 ; gain = 114.586
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.268  | TNS=0.000  | WHS=0.015  | THS=0.000  |
 
-Phase 6.1 Hold Fix Iter | Checksum: 927305dd
+Phase 6.1 Hold Fix Iter | Checksum: 1aa8f4db3
 
-Time (s): cpu = 00:00:40 ; elapsed = 00:00:32 . Memory (MB): peak = 2574.258 ; gain = 100.203
-Phase 6 Post Hold Fix | Checksum: 927305dd
+Time (s): cpu = 00:00:39 ; elapsed = 00:00:32 . Memory (MB): peak = 2543.035 ; gain = 114.586
+Phase 6 Post Hold Fix | Checksum: 1aa8f4db3
 
-Time (s): cpu = 00:00:40 ; elapsed = 00:00:32 . Memory (MB): peak = 2574.258 ; gain = 100.203
+Time (s): cpu = 00:00:39 ; elapsed = 00:00:32 . Memory (MB): peak = 2543.035 ; gain = 114.586
 
 Phase 7 Route finalize
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 2.18065 %
-  Global Horizontal Routing Utilization  = 2.58012 %
+  Global Vertical Routing Utilization    = 2.01817 %
+  Global Horizontal Routing Utilization  = 2.34204 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
@@ -596,43 +597,43 @@ Router Utilization Summary
   Number of Partially Routed Nets     = 0
   Number of Node Overlaps             = 0
 
-Phase 7 Route finalize | Checksum: dbdb9f4a
+Phase 7 Route finalize | Checksum: 1aeed491e
 
-Time (s): cpu = 00:00:40 ; elapsed = 00:00:32 . Memory (MB): peak = 2574.258 ; gain = 100.203
+Time (s): cpu = 00:00:39 ; elapsed = 00:00:32 . Memory (MB): peak = 2543.035 ; gain = 114.586
 
 Phase 8 Verifying routed nets
 
  Verification completed successfully
-Phase 8 Verifying routed nets | Checksum: dbdb9f4a
+Phase 8 Verifying routed nets | Checksum: 1aeed491e
 
-Time (s): cpu = 00:00:40 ; elapsed = 00:00:32 . Memory (MB): peak = 2574.258 ; gain = 100.203
+Time (s): cpu = 00:00:39 ; elapsed = 00:00:32 . Memory (MB): peak = 2543.035 ; gain = 114.586
 
 Phase 9 Depositing Routes
-Phase 9 Depositing Routes | Checksum: 1b8dcf272
+Phase 9 Depositing Routes | Checksum: 1e96a724a
 
-Time (s): cpu = 00:00:41 ; elapsed = 00:00:32 . Memory (MB): peak = 2574.258 ; gain = 100.203
+Time (s): cpu = 00:00:40 ; elapsed = 00:00:32 . Memory (MB): peak = 2543.035 ; gain = 114.586
 
 Phase 10 Post Router Timing
-INFO: [Route 35-57] Estimated Timing Summary | WNS=1.462  | TNS=0.000  | WHS=0.028  | THS=0.000  |
+INFO: [Route 35-57] Estimated Timing Summary | WNS=1.268  | TNS=0.000  | WHS=0.015  | THS=0.000  |
 
 INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
-Phase 10 Post Router Timing | Checksum: 1b8dcf272
+Phase 10 Post Router Timing | Checksum: 1e96a724a
 
-Time (s): cpu = 00:00:41 ; elapsed = 00:00:33 . Memory (MB): peak = 2574.258 ; gain = 100.203
+Time (s): cpu = 00:00:40 ; elapsed = 00:00:33 . Memory (MB): peak = 2543.035 ; gain = 114.586
 INFO: [Route 35-16] Router Completed Successfully
 
-Time (s): cpu = 00:00:41 ; elapsed = 00:00:33 . Memory (MB): peak = 2574.258 ; gain = 100.203
+Time (s): cpu = 00:00:40 ; elapsed = 00:00:33 . Memory (MB): peak = 2543.035 ; gain = 114.586
 
 Routing Is Done.
 INFO: [Common 17-83] Releasing license: Implementation
 110 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
 route_design completed successfully
-route_design: Time (s): cpu = 00:00:45 ; elapsed = 00:00:35 . Memory (MB): peak = 2574.258 ; gain = 100.203
+route_design: Time (s): cpu = 00:00:45 ; elapsed = 00:00:35 . Memory (MB): peak = 2543.035 ; gain = 114.586
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:03 ; elapsed = 00:00:00.755 . Memory (MB): peak = 2578.309 ; gain = 4.051
+Write XDEF Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.673 . Memory (MB): peak = 2550.090 ; gain = 7.055
 INFO: [Common 17-1381] The checkpoint 'C:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/impl_1/guitar_effects_design_wrapper_routed.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_drc -file guitar_effects_design_wrapper_drc_routed.rpt -pb guitar_effects_design_wrapper_drc_routed.pb -rpx guitar_effects_design_wrapper_drc_routed.rpx
 Command: report_drc -file guitar_effects_design_wrapper_drc_routed.rpt -pb guitar_effects_design_wrapper_drc_routed.pb -rpx guitar_effects_design_wrapper_drc_routed.rpx
@@ -675,24 +676,30 @@ INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc
 Running DRC as a precondition to command write_bitstream
 INFO: [IP_Flow 19-1839] IP Catalog is up to date.
 INFO: [DRC 23-27] Running DRC with 2 threads
-WARNING: [DRC DPIP-1] Input pipelining: DSP guitar_effects_design_i/guitar_effects_0/inst/fadd_32ns_32ns_32_5_full_dsp_1_U15/guitar_effects_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP input guitar_effects_design_i/guitar_effects_0/inst/fadd_32ns_32ns_32_5_full_dsp_1_U15/guitar_effects_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP guitar_effects_design_i/guitar_effects_0/inst/fadd_32ns_32ns_32_5_full_dsp_1_U15/guitar_effects_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP input guitar_effects_design_i/guitar_effects_0/inst/fadd_32ns_32ns_32_5_full_dsp_1_U15/guitar_effects_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP guitar_effects_design_i/guitar_effects_0/inst/fadd_32ns_32ns_32_5_full_dsp_1_U15/guitar_effects_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP input guitar_effects_design_i/guitar_effects_0/inst/fadd_32ns_32ns_32_5_full_dsp_1_U15/guitar_effects_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP guitar_effects_design_i/guitar_effects_0/inst/fadd_32ns_32ns_32_5_full_dsp_1_U15/guitar_effects_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP input guitar_effects_design_i/guitar_effects_0/inst/fadd_32ns_32ns_32_5_full_dsp_1_U15/guitar_effects_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP guitar_effects_design_i/guitar_effects_0/inst/fmul_32ns_32ns_32_4_max_dsp_1_U16/guitar_effects_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/i_no_versal_es1_workaround.DSP input guitar_effects_design_i/guitar_effects_0/inst/fmul_32ns_32ns_32_4_max_dsp_1_U16/guitar_effects_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/i_no_versal_es1_workaround.DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP guitar_effects_design_i/guitar_effects_0/inst/fmul_32ns_32ns_32_4_max_dsp_1_U16/guitar_effects_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/i_no_versal_es1_workaround.DSP input guitar_effects_design_i/guitar_effects_0/inst/fmul_32ns_32ns_32_4_max_dsp_1_U16/guitar_effects_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/i_no_versal_es1_workaround.DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP guitar_effects_design_i/guitar_effects_0/inst/fmul_32ns_32ns_32_4_max_dsp_1_U16/guitar_effects_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP input guitar_effects_design_i/guitar_effects_0/inst/fmul_32ns_32ns_32_4_max_dsp_1_U16/guitar_effects_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP guitar_effects_design_i/guitar_effects_0/inst/fmul_32ns_32ns_32_4_max_dsp_1_U16/guitar_effects_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP input guitar_effects_design_i/guitar_effects_0/inst/fmul_32ns_32ns_32_4_max_dsp_1_U16/guitar_effects_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP guitar_effects_design_i/guitar_effects_0/inst/fadd_32ns_32ns_32_5_full_dsp_1_U15/guitar_effects_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP output guitar_effects_design_i/guitar_effects_0/inst/fadd_32ns_32ns_32_5_full_dsp_1_U15/guitar_effects_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP guitar_effects_design_i/guitar_effects_0/inst/fmul_32ns_32ns_32_4_max_dsp_1_U16/guitar_effects_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP output guitar_effects_design_i/guitar_effects_0/inst/fmul_32ns_32ns_32_4_max_dsp_1_U16/guitar_effects_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP/PATTERNDETECT is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP guitar_effects_design_i/guitar_effects_0/inst/fmul_32ns_32ns_32_4_max_dsp_1_U16/guitar_effects_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP output guitar_effects_design_i/guitar_effects_0/inst/fmul_32ns_32ns_32_4_max_dsp_1_U16/guitar_effects_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP guitar_effects_design_i/guitar_effects_0/inst/fmul_32ns_32ns_32_4_max_dsp_1_U16/guitar_effects_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP output guitar_effects_design_i/guitar_effects_0/inst/fmul_32ns_32ns_32_4_max_dsp_1_U16/guitar_effects_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP/CARRYOUT[3:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP guitar_effects_design_i/guitar_effects_0/inst/fmul_32ns_32ns_32_4_max_dsp_1_U16/guitar_effects_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP output guitar_effects_design_i/guitar_effects_0/inst/fmul_32ns_32ns_32_4_max_dsp_1_U16/guitar_effects_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP guitar_effects_design_i/guitar_effects_0/inst/fadd_32ns_32ns_32_5_full_dsp_1_U15/guitar_effects_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP multiplier stage guitar_effects_design_i/guitar_effects_0/inst/fadd_32ns_32ns_32_5_full_dsp_1_U15/guitar_effects_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP guitar_effects_design_i/guitar_effects_0/inst/fmul_32ns_32ns_32_4_max_dsp_1_U16/guitar_effects_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/i_no_versal_es1_workaround.DSP multiplier stage guitar_effects_design_i/guitar_effects_0/inst/fmul_32ns_32ns_32_4_max_dsp_1_U16/guitar_effects_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/i_no_versal_es1_workaround.DSP/PATTERNDETECT is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC PDCN-1569] LUT equation term check: Used physical LUT pin 'A2' of cell guitar_effects_design_i/axi_mem_intercon/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin guitar_effects_design_i/axi_mem_intercon/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O6=(A5)+((~A5)*(~A6)*A3)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
-WARNING: [DRC PDCN-1569] LUT equation term check: Used physical LUT pin 'A3' of cell guitar_effects_design_i/axi_mem_intercon/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin guitar_effects_design_i/axi_mem_intercon/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O6=(A6)+((~A6)*(~A1)*A5)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
-WARNING: [DRC PDCN-1569] LUT equation term check: Used physical LUT pin 'A4' of cell guitar_effects_design_i/axi_mem_intercon_1/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin guitar_effects_design_i/axi_mem_intercon_1/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O6=(A6)+((~A6)*(~A5)*A3)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP guitar_effects_design_i/guitar_effects_0/inst/mul_32s_10s_42_2_1_U15/tmp_product output guitar_effects_design_i/guitar_effects_0/inst/mul_32s_10s_42_2_1_U15/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP guitar_effects_design_i/guitar_effects_0/inst/mul_32s_10s_42_2_1_U7/tmp_product output guitar_effects_design_i/guitar_effects_0/inst/mul_32s_10s_42_2_1_U7/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP guitar_effects_design_i/guitar_effects_0/inst/mul_32s_10s_42_2_1_U8/tmp_product output guitar_effects_design_i/guitar_effects_0/inst/mul_32s_10s_42_2_1_U8/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP guitar_effects_design_i/guitar_effects_0/inst/mul_32s_32s_48_2_1_U11/tmp_product output guitar_effects_design_i/guitar_effects_0/inst/mul_32s_32s_48_2_1_U11/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP guitar_effects_design_i/guitar_effects_0/inst/mul_32s_32s_48_2_1_U11/tmp_product__0 output guitar_effects_design_i/guitar_effects_0/inst/mul_32s_32s_48_2_1_U11/tmp_product__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP guitar_effects_design_i/guitar_effects_0/inst/mul_32s_32s_48_2_1_U14/tmp_product output guitar_effects_design_i/guitar_effects_0/inst/mul_32s_32s_48_2_1_U14/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP guitar_effects_design_i/guitar_effects_0/inst/mul_32s_32s_48_2_1_U14/tmp_product__0 output guitar_effects_design_i/guitar_effects_0/inst/mul_32s_32s_48_2_1_U14/tmp_product__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP guitar_effects_design_i/guitar_effects_0/inst/mul_32s_10s_42_2_1_U15/dout_reg multiplier stage guitar_effects_design_i/guitar_effects_0/inst/mul_32s_10s_42_2_1_U15/dout_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP guitar_effects_design_i/guitar_effects_0/inst/mul_32s_10s_42_2_1_U15/tmp_product multiplier stage guitar_effects_design_i/guitar_effects_0/inst/mul_32s_10s_42_2_1_U15/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP guitar_effects_design_i/guitar_effects_0/inst/mul_32s_10s_42_2_1_U7/dout_reg multiplier stage guitar_effects_design_i/guitar_effects_0/inst/mul_32s_10s_42_2_1_U7/dout_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP guitar_effects_design_i/guitar_effects_0/inst/mul_32s_10s_42_2_1_U7/tmp_product multiplier stage guitar_effects_design_i/guitar_effects_0/inst/mul_32s_10s_42_2_1_U7/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP guitar_effects_design_i/guitar_effects_0/inst/mul_32s_10s_42_2_1_U8/dout_reg multiplier stage guitar_effects_design_i/guitar_effects_0/inst/mul_32s_10s_42_2_1_U8/dout_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP guitar_effects_design_i/guitar_effects_0/inst/mul_32s_10s_42_2_1_U8/tmp_product multiplier stage guitar_effects_design_i/guitar_effects_0/inst/mul_32s_10s_42_2_1_U8/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP guitar_effects_design_i/guitar_effects_0/inst/mul_32s_32s_48_2_1_U11/dout_reg multiplier stage guitar_effects_design_i/guitar_effects_0/inst/mul_32s_32s_48_2_1_U11/dout_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP guitar_effects_design_i/guitar_effects_0/inst/mul_32s_32s_48_2_1_U11/dout_reg__0 multiplier stage guitar_effects_design_i/guitar_effects_0/inst/mul_32s_32s_48_2_1_U11/dout_reg__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP guitar_effects_design_i/guitar_effects_0/inst/mul_32s_32s_48_2_1_U11/tmp_product multiplier stage guitar_effects_design_i/guitar_effects_0/inst/mul_32s_32s_48_2_1_U11/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP guitar_effects_design_i/guitar_effects_0/inst/mul_32s_32s_48_2_1_U11/tmp_product__0 multiplier stage guitar_effects_design_i/guitar_effects_0/inst/mul_32s_32s_48_2_1_U11/tmp_product__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP guitar_effects_design_i/guitar_effects_0/inst/mul_32s_32s_48_2_1_U14/dout_reg multiplier stage guitar_effects_design_i/guitar_effects_0/inst/mul_32s_32s_48_2_1_U14/dout_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP guitar_effects_design_i/guitar_effects_0/inst/mul_32s_32s_48_2_1_U14/dout_reg__0 multiplier stage guitar_effects_design_i/guitar_effects_0/inst/mul_32s_32s_48_2_1_U14/dout_reg__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP guitar_effects_design_i/guitar_effects_0/inst/mul_32s_32s_48_2_1_U14/tmp_product multiplier stage guitar_effects_design_i/guitar_effects_0/inst/mul_32s_32s_48_2_1_U14/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP guitar_effects_design_i/guitar_effects_0/inst/mul_32s_32s_48_2_1_U14/tmp_product__0 multiplier stage guitar_effects_design_i/guitar_effects_0/inst/mul_32s_32s_48_2_1_U14/tmp_product__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC PDCN-1569] LUT equation term check: Used physical LUT pin 'A1' of cell guitar_effects_design_i/axi_mem_intercon/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin guitar_effects_design_i/axi_mem_intercon/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O6=(A3)+((~A3)*(~A6)*A2)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+WARNING: [DRC PDCN-1569] LUT equation term check: Used physical LUT pin 'A1' of cell guitar_effects_design_i/axi_mem_intercon_1/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin guitar_effects_design_i/axi_mem_intercon_1/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O6=(A6)+((~A6)*(~A5)*A3)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+WARNING: [DRC PDCN-1569] LUT equation term check: Used physical LUT pin 'A6' of cell guitar_effects_design_i/axi_mem_intercon/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin guitar_effects_design_i/axi_mem_intercon/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O6=(A3)+((~A3)*(~A5)*A1)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
 WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 guitar_effects_design_i/axi_dma/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0 has an input control pin guitar_effects_design_i/axi_dma/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0/WEBWE[0] (net: guitar_effects_design_i/axi_dma/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/wea[0]) which is driven by a register (guitar_effects_design_i/axi_mem_intercon_1/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 guitar_effects_design_i/axi_dma/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0 has an input control pin guitar_effects_design_i/axi_dma/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0/WEBWE[1] (net: guitar_effects_design_i/axi_dma/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/wea[0]) which is driven by a register (guitar_effects_design_i/axi_mem_intercon_1/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 guitar_effects_design_i/axi_dma/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0 has an input control pin guitar_effects_design_i/axi_dma/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0/WEBWE[2] (net: guitar_effects_design_i/axi_dma/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/wea[0]) which is driven by a register (guitar_effects_design_i/axi_mem_intercon_1/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
@@ -705,17 +712,11 @@ WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 guitar_effects
 WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 guitar_effects_design_i/axi_dma/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1 has an input control pin guitar_effects_design_i/axi_dma/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1/WEBWE[0] (net: guitar_effects_design_i/axi_dma/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/wea[0]) which is driven by a register (guitar_effects_design_i/axi_mem_intercon_1/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 guitar_effects_design_i/axi_dma/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1 has an input control pin guitar_effects_design_i/axi_dma/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1/WEBWE[1] (net: guitar_effects_design_i/axi_dma/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/wea[0]) which is driven by a register (guitar_effects_design_i/axi_mem_intercon_1/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 guitar_effects_design_i/axi_dma/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1 has an input control pin guitar_effects_design_i/axi_dma/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1/WEBWE[2] (net: guitar_effects_design_i/axi_dma/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/wea[0]) which is driven by a register (guitar_effects_design_i/axi_mem_intercon_1/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC RTSTAT-10] No routable loads: 33 net(s) have no routable loads. The problem bus(es) and/or net(s) are guitar_effects_design_i/axi_mem_intercon/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, guitar_effects_design_i/axi_mem_intercon/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, guitar_effects_design_i/axi_mem_intercon_1/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, guitar_effects_design_i/axi_mem_intercon/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg[2:0], guitar_effects_design_i/axi_mem_intercon/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg[2:0], guitar_effects_design_i/axi_mem_intercon_1/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg[2:0], guitar_effects_design_i/axi_mem_intercon/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg[2:0], guitar_effects_design_i/axi_mem_intercon_1/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg[2:0], guitar_effects_design_i/axi_mem_intercon/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg[2:0], guitar_effects_design_i/axi_mem_intercon_1/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb, guitar_effects_design_i/axi_mem_intercon/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb, guitar_effects_design_i/axi_mem_intercon/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb, guitar_effects_design_i/axi_mem_intercon/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_i, guitar_effects_design_i/axi_mem_intercon/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_i, guitar_effects_design_i/axi_mem_intercon_1/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_i... and (the first 15 of 21 listed).
-INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: guitar_effects_design_i/guitar_effects_0/inst/fadd_32ns_32ns_32_5_full_dsp_1_U15/guitar_effects_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/i_no_versal_es1_workaround.DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
-INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: guitar_effects_design_i/guitar_effects_0/inst/fmul_32ns_32ns_32_4_max_dsp_1_U16/guitar_effects_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/i_no_versal_es1_workaround.DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
-INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: guitar_effects_design_i/guitar_effects_0/inst/fmul_32ns_32ns_32_4_max_dsp_1_U16/guitar_effects_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
-INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: guitar_effects_design_i/guitar_effects_0/inst/fmul_32ns_32ns_32_4_max_dsp_1_U16/guitar_effects_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
-INFO: [DRC AVAL-5] enum_USE_MULT_NONE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: guitar_effects_design_i/guitar_effects_0/inst/fmul_32ns_32ns_32_4_max_dsp_1_U16/guitar_effects_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP: DSP48E1 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+WARNING: [DRC RTSTAT-10] No routable loads: 33 net(s) have no routable loads. The problem bus(es) and/or net(s) are guitar_effects_design_i/axi_mem_intercon/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, guitar_effects_design_i/axi_mem_intercon/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, guitar_effects_design_i/axi_mem_intercon_1/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, guitar_effects_design_i/axi_mem_intercon/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg[2:0], guitar_effects_design_i/axi_mem_intercon_1/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg[2:0], guitar_effects_design_i/axi_mem_intercon/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg[2:0], guitar_effects_design_i/axi_mem_intercon/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg[2:0], guitar_effects_design_i/axi_mem_intercon/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg[2:0], guitar_effects_design_i/axi_mem_intercon_1/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg[2:0], guitar_effects_design_i/axi_mem_intercon_1/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb, guitar_effects_design_i/axi_mem_intercon/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb, guitar_effects_design_i/axi_mem_intercon/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb, guitar_effects_design_i/axi_mem_intercon/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_i, guitar_effects_design_i/axi_mem_intercon_1/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_i, guitar_effects_design_i/axi_mem_intercon/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_i... and (the first 15 of 21 listed).
 INFO: [DRC REQP-165] writefirst: Synchronous clocking is detected for BRAM (guitar_effects_design_i/axi_dma/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1) in SDP mode with WRITE_FIRST write-mode. This is the preferred mode for best power characteristics, however it may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
 INFO: [DRC REQP-181] writefirst: Synchronous clocking is detected for BRAM (guitar_effects_design_i/axi_dma/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0) in SDP mode with WRITE_FIRST write-mode. This is the preferred mode for best power characteristics, however it may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
 INFO: [DRC REQP-181] writefirst: Synchronous clocking is detected for BRAM (guitar_effects_design_i/axi_dma/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg) in SDP mode with WRITE_FIRST write-mode. This is the preferred mode for best power characteristics, however it may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
-INFO: [DRC REQP-1725] DSP_Abus_sign_bit_alert: guitar_effects_design_i/guitar_effects_0/inst/fadd_32ns_32ns_32_5_full_dsp_1_U15/guitar_effects_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
-INFO: [Vivado 12-3199] DRC finished with 0 Errors, 31 Warnings, 9 Advisories
+INFO: [Vivado 12-3199] DRC finished with 0 Errors, 37 Warnings, 3 Advisories
 INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
 INFO: [Designutils 20-2272] Running write_bitstream with 2 threads.
 Loading data files...
@@ -727,7 +728,7 @@ Creating bitstream...
 Writing bitstream ./guitar_effects_design_wrapper.bit...
 INFO: [Vivado 12-1842] Bitgen Completed Successfully.
 INFO: [Common 17-83] Releasing license: Implementation
-23 Infos, 31 Warnings, 0 Critical Warnings and 0 Errors encountered.
+17 Infos, 37 Warnings, 0 Critical Warnings and 0 Errors encountered.
 write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:19 ; elapsed = 00:00:15 . Memory (MB): peak = 3059.516 ; gain = 470.660
-INFO: [Common 17-206] Exiting Vivado at Mon Apr  1 16:36:52 2024...
+write_bitstream: Time (s): cpu = 00:00:20 ; elapsed = 00:00:16 . Memory (MB): peak = 3030.984 ; gain = 477.551
+INFO: [Common 17-206] Exiting Vivado at Wed Apr  3 16:21:11 2024...
