@@ -2,10 +2,10 @@
 # Vivado v2022.1 (64-bit)
 # SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
 # IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
-# Start of session at: Mon Apr  1 15:28:01 2024
-# Process ID: 26856
+# Start of session at: Wed Apr  3 15:50:54 2024
+# Process ID: 26876
 # Current directory: C:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent19096 C:\Users\du.kad\Desktop\EECE4632FinalProject\Vivado_Guitar_Effects\Vivado_Guitar_Effects.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent24196 C:\Users\du.kad\Desktop\EECE4632FinalProject\Vivado_Guitar_Effects\Vivado_Guitar_Effects.xpr
 # Log file: C:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/vivado.log
 # Journal file: C:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects\vivado.jou
 # Running On: WFXB07B250A366D, OS: Windows, CPU Frequency: 2904 MHz, CPU Physical cores: 8, Host memory: 16881 MB
@@ -25,9 +25,9 @@ INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/du.kad/Desktop/EECE4
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.1/data/ip'.
 WARNING: [BD 41-1661] One or more IPs have been locked in the design 'guitar_effects_design.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
 List of locked IPs:
-guitar_effects_design_guitar_effects_0_15
+guitar_effects_design_guitar_effects_0_19
 
-open_project: Time (s): cpu = 00:00:21 ; elapsed = 00:00:11 . Memory (MB): peak = 1544.238 ; gain = 308.160
+open_project: Time (s): cpu = 00:00:24 ; elapsed = 00:00:12 . Memory (MB): peak = 1535.984 ; gain = 300.008
 update_compile_order -fileset sources_1
 open_bd_design {C:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd}
 Reading block design file <C:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd>...
@@ -44,155 +44,13 @@ Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - au
 Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_100M
 Adding component instance block -- xilinx.com:hls:guitar_effects:1.0 - guitar_effects_0
 Successfully read diagram <guitar_effects_design> from block design file <C:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd>
-open_bd_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1638.660 ; gain = 42.656
+open_bd_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:12 . Memory (MB): peak = 1643.051 ; gain = 84.184
 delete_bd_objs [get_bd_intf_nets ps7_0_axi_periph_M01_AXI] [get_bd_intf_nets axi_dma_M_AXIS_MM2S] [get_bd_intf_nets guitar_effects_0_OUTPUT_r] [get_bd_cells guitar_effects_0]
 set_property  ip_repo_paths  {} [current_project]
 update_ip_catalog
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
-set_property  ip_repo_paths  C:/Users/du.kad/Desktop/EECE4632FinalProject/guitar_effects_cpp [current_project]
-update_ip_catalog
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/du.kad/Desktop/EECE4632FinalProject/guitar_effects_cpp'.
-open_bd_design {C:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd}
-startgroup
-create_bd_cell -type ip -vlnv xilinx.com:hls:guitar_effects:1.0 guitar_effects_0
-endgroup
-apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (100 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/guitar_effects_0/s_axi_control_r} ddr_seg {Auto} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins guitar_effects_0/s_axi_control_r]
-Slave segment '/guitar_effects_0/s_axi_control_r/Reg' is being assigned into address space '/processing_system7_0/Data' at <0x4000_0000 [ 64K ]>.
-connect_bd_intf_net [get_bd_intf_pins guitar_effects_0/OUTPUT_r] [get_bd_intf_pins axi_dma/S_AXIS_S2MM]
-connect_bd_intf_net [get_bd_intf_pins guitar_effects_0/INPUT_r] [get_bd_intf_pins axi_dma/M_AXIS_MM2S]
-save_bd_design
-Wrote  : <C:\Users\du.kad\Desktop\EECE4632FinalProject\Vivado_Guitar_Effects\Vivado_Guitar_Effects.srcs\sources_1\bd\guitar_effects_design\guitar_effects_design.bd> 
-Wrote  : <C:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/ui/bd_aa970370.ui> 
-make_wrapper -files [get_files C:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd] -top
-Wrote  : <C:\Users\du.kad\Desktop\EECE4632FinalProject\Vivado_Guitar_Effects\Vivado_Guitar_Effects.srcs\sources_1\bd\guitar_effects_design\guitar_effects_design.bd> 
-Wrote  : <C:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/ui/bd_aa970370.ui> 
-Verilog Output written to : c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.v
-Verilog Output written to : c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/sim/guitar_effects_design.v
-Verilog Output written to : c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/hdl/guitar_effects_design_wrapper.v
-make_wrapper: Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 2084.184 ; gain = 235.715
-reset_run synth_1
-INFO: [Project 1-1161] Replacing file C:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/utils_1/imports/synth_1/guitar_effects_design_wrapper.dcp with file C:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1/guitar_effects_design_wrapper.dcp
-launch_runs impl_1 -to_step write_bitstream -jobs 16
-INFO: [BD 41-1662] The design 'guitar_effects_design.bd' is already validated. Therefore parameter propagation will not be re-run.
-Wrote  : <C:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/ui/bd_aa970370.ui> 
-Verilog Output written to : c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.v
-Verilog Output written to : c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/sim/guitar_effects_design.v
-Verilog Output written to : c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/hdl/guitar_effects_design_wrapper.v
-INFO: [BD 41-1029] Generation completed for the IP Integrator block guitar_effects_0 .
-WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_auto_pc_0/guitar_effects_design_auto_pc_0_ooc.xdc'
-INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s00_couplers/auto_pc .
-WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_auto_us_0/guitar_effects_design_auto_us_0_ooc.xdc'
-INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
-INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
-INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s00_couplers/auto_us .
-WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_auto_pc_1/guitar_effects_design_auto_pc_1_ooc.xdc'
-INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon_1/s00_couplers/auto_pc .
-WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_auto_pc_2/guitar_effects_design_auto_pc_2_ooc.xdc'
-INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
-Exporting to file c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/hw_handoff/guitar_effects_design.hwh
-Generated Hardware Definition File c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.hwdef
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP guitar_effects_design_auto_pc_0, cache-ID = 3f08cd93ceb400ff; cache size = 114.979 MB.
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP guitar_effects_design_auto_pc_1, cache-ID = 912590907487e6d3; cache size = 114.979 MB.
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP guitar_effects_design_auto_pc_2, cache-ID = 42ad08fd9091ea99; cache size = 114.979 MB.
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP guitar_effects_design_auto_us_0, cache-ID = 1672a46880f00d5b; cache size = 114.979 MB.
-[Mon Apr  1 15:40:28 2024] Launched guitar_effects_design_guitar_effects_0_16_synth_1, synth_1...
-Run output will be captured here:
-guitar_effects_design_guitar_effects_0_16_synth_1: C:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/guitar_effects_design_guitar_effects_0_16_synth_1/runme.log
-synth_1: C:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1/runme.log
-[Mon Apr  1 15:40:28 2024] Launched impl_1...
-Run output will be captured here: C:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/impl_1/runme.log
-launch_runs: Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 2097.398 ; gain = 13.215
-open_run impl_1
-INFO: [Device 21-403] Loading part xc7z020clg400-1
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.262 . Memory (MB): peak = 2282.203 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 420 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-479] Netlist was created with Vivado 2022.1
-INFO: [Project 1-570] Preparing netlist for logic optimization
-INFO: [Timing 38-478] Restoring timing data from binary archive.
-INFO: [Timing 38-479] Binary timing data restore complete.
-INFO: [Project 1-856] Restoring constraints from binary archive.
-INFO: [Project 1-853] Binary constraint restore complete.
-Reading XDEF placement.
-Reading placer database...
-Reading XDEF routing.
-Read XDEF Files: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.660 . Memory (MB): peak = 2999.793 ; gain = 4.719
-Restored from archive | CPU: 1.000000 secs | Memory: 0.000000 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.660 . Memory (MB): peak = 2999.793 ; gain = 4.719
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 2999.879 ; gain = 0.000
-INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 5 instances were transformed.
-  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 4 instances
-  RAM32X1D => RAM32X1D (RAMD32(x2)): 1 instance 
-
-open_run: Time (s): cpu = 00:00:24 ; elapsed = 00:00:15 . Memory (MB): peak = 3165.031 ; gain = 1045.250
-open_report: Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 3192.730 ; gain = 18.285
-WARNING: [IP_Flow 19-4318] IP-XACT file does not exist: c:/Users/du.kad/Desktop/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/impl/ip/component.xml. It will be created.
-open_bd_design {C:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd}
-open_bd_design {C:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd}
-update_ip_catalog -rebuild -scan_changes
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/du.kad/Desktop/EECE4632FinalProject/guitar_effects_cpp'.
-report_ip_status -name ip_status
-delete_bd_objs [get_bd_intf_nets axi_dma_M_AXIS_MM2S] [get_bd_intf_nets guitar_effects_0_OUTPUT_r] [get_bd_intf_nets ps7_0_axi_periph_M01_AXI] [get_bd_cells guitar_effects_0]
-startgroup
-create_bd_cell -type ip -vlnv xilinx.com:hls:guitar_effects:1.0 guitar_effects_0
-endgroup
-apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (100 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/guitar_effects_0/s_axi_control_r} ddr_seg {Auto} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins guitar_effects_0/s_axi_control_r]
-Slave segment '/guitar_effects_0/s_axi_control_r/Reg' is being assigned into address space '/processing_system7_0/Data' at <0x4000_0000 [ 64K ]>.
-connect_bd_intf_net [get_bd_intf_pins guitar_effects_0/OUTPUT_r] [get_bd_intf_pins axi_dma/S_AXIS_S2MM]
-connect_bd_intf_net [get_bd_intf_pins guitar_effects_0/INPUT_r] [get_bd_intf_pins axi_dma/M_AXIS_MM2S]
-save_bd_design
-Wrote  : <C:\Users\du.kad\Desktop\EECE4632FinalProject\Vivado_Guitar_Effects\Vivado_Guitar_Effects.srcs\sources_1\bd\guitar_effects_design\guitar_effects_design.bd> 
-Wrote  : <C:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/ui/bd_aa970370.ui> 
-make_wrapper -files [get_files C:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd] -top
-Wrote  : <C:\Users\du.kad\Desktop\EECE4632FinalProject\Vivado_Guitar_Effects\Vivado_Guitar_Effects.srcs\sources_1\bd\guitar_effects_design\guitar_effects_design.bd> 
-Verilog Output written to : c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.v
-Verilog Output written to : c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/sim/guitar_effects_design.v
-Verilog Output written to : c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/hdl/guitar_effects_design_wrapper.v
-make_wrapper: Time (s): cpu = 00:00:12 ; elapsed = 00:00:10 . Memory (MB): peak = 3269.586 ; gain = 0.000
-reset_run synth_1
-INFO: [Project 1-1161] Replacing file C:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/utils_1/imports/synth_1/guitar_effects_design_wrapper.dcp with file C:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1/guitar_effects_design_wrapper.dcp
-launch_runs impl_1 -to_step write_bitstream -jobs 16
-INFO: [BD 41-1662] The design 'guitar_effects_design.bd' is already validated. Therefore parameter propagation will not be re-run.
-Wrote  : <C:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/ui/bd_aa970370.ui> 
-Verilog Output written to : c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.v
-Verilog Output written to : c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/sim/guitar_effects_design.v
-Verilog Output written to : c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/hdl/guitar_effects_design_wrapper.v
-INFO: [BD 41-1029] Generation completed for the IP Integrator block guitar_effects_0 .
-WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_auto_pc_0/guitar_effects_design_auto_pc_0_ooc.xdc'
-INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s00_couplers/auto_pc .
-WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_auto_us_0/guitar_effects_design_auto_us_0_ooc.xdc'
-INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
-INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
-INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s00_couplers/auto_us .
-WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_auto_pc_1/guitar_effects_design_auto_pc_1_ooc.xdc'
-INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon_1/s00_couplers/auto_pc .
-WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_auto_pc_2/guitar_effects_design_auto_pc_2_ooc.xdc'
-INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
-Exporting to file c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/hw_handoff/guitar_effects_design.hwh
-Generated Hardware Definition File c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.hwdef
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP guitar_effects_design_auto_pc_0, cache-ID = 3f08cd93ceb400ff; cache size = 122.966 MB.
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP guitar_effects_design_auto_pc_1, cache-ID = 912590907487e6d3; cache size = 122.966 MB.
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP guitar_effects_design_auto_pc_2, cache-ID = 42ad08fd9091ea99; cache size = 122.966 MB.
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP guitar_effects_design_auto_us_0, cache-ID = 1672a46880f00d5b; cache size = 122.966 MB.
-[Mon Apr  1 15:55:44 2024] Launched guitar_effects_design_guitar_effects_0_17_synth_1, synth_1...
-Run output will be captured here:
-guitar_effects_design_guitar_effects_0_17_synth_1: C:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/guitar_effects_design_guitar_effects_0_17_synth_1/runme.log
-synth_1: C:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1/runme.log
-[Mon Apr  1 15:55:44 2024] Launched impl_1...
-Run output will be captured here: C:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/impl_1/runme.log
-launch_runs: Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 3269.586 ; gain = 0.000
-WARNING: [IP_Flow 19-4318] IP-XACT file does not exist: c:/Users/du.kad/Desktop/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/impl/ip/component.xml. It will be created.
-update_ip_catalog -rebuild -scan_changes
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/du.kad/Desktop/EECE4632FinalProject/guitar_effects_cpp'.
-report_ip_status -name ip_status
-delete_bd_objs [get_bd_intf_nets ps7_0_axi_periph_M01_AXI] [get_bd_intf_nets axi_dma_M_AXIS_MM2S] [get_bd_intf_nets guitar_effects_0_OUTPUT_r] [get_bd_cells guitar_effects_0]
-set_property  ip_repo_paths  {} [current_project]
-update_ip_catalog
+update_ip_catalog -rebuild
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 set_property  ip_repo_paths  C:/Users/du.kad/Desktop/EECE4632FinalProject/guitar_effects_cpp [current_project]
@@ -214,7 +72,7 @@ Wrote  : <C:\Users\du.kad\Desktop\EECE4632FinalProject\Vivado_Guitar_Effects\Viv
 Verilog Output written to : c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.v
 Verilog Output written to : c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/sim/guitar_effects_design.v
 Verilog Output written to : c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/hdl/guitar_effects_design_wrapper.v
-make_wrapper: Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 3324.824 ; gain = 0.688
+make_wrapper: Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 2077.355 ; gain = 137.547
 reset_run synth_1
 INFO: [Project 1-1161] Replacing file C:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/utils_1/imports/synth_1/guitar_effects_design_wrapper.dcp with file C:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1/guitar_effects_design_wrapper.dcp
 launch_runs impl_1 -to_step write_bitstream -jobs 16
@@ -236,14 +94,14 @@ WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/du.kad
 INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
 Exporting to file c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/hw_handoff/guitar_effects_design.hwh
 Generated Hardware Definition File c:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.hwdef
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP guitar_effects_design_auto_pc_0, cache-ID = 3f08cd93ceb400ff; cache size = 130.954 MB.
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP guitar_effects_design_auto_pc_1, cache-ID = 912590907487e6d3; cache size = 130.954 MB.
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP guitar_effects_design_auto_pc_2, cache-ID = 42ad08fd9091ea99; cache size = 130.954 MB.
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP guitar_effects_design_auto_us_0, cache-ID = 1672a46880f00d5b; cache size = 130.954 MB.
-[Mon Apr  1 16:22:05 2024] Launched guitar_effects_design_guitar_effects_0_18_synth_1, synth_1...
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP guitar_effects_design_auto_pc_0, cache-ID = 3f08cd93ceb400ff; cache size = 145.673 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP guitar_effects_design_auto_pc_1, cache-ID = 912590907487e6d3; cache size = 145.673 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP guitar_effects_design_auto_pc_2, cache-ID = 42ad08fd9091ea99; cache size = 145.673 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP guitar_effects_design_auto_us_0, cache-ID = 1672a46880f00d5b; cache size = 145.673 MB.
+[Wed Apr  3 15:53:20 2024] Launched guitar_effects_design_guitar_effects_0_20_synth_1, synth_1...
 Run output will be captured here:
-guitar_effects_design_guitar_effects_0_18_synth_1: C:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/guitar_effects_design_guitar_effects_0_18_synth_1/runme.log
+guitar_effects_design_guitar_effects_0_20_synth_1: C:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/guitar_effects_design_guitar_effects_0_20_synth_1/runme.log
 synth_1: C:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1/runme.log
-[Mon Apr  1 16:22:05 2024] Launched impl_1...
+[Wed Apr  3 15:53:20 2024] Launched impl_1...
 Run output will be captured here: C:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/impl_1/runme.log
-launch_runs: Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 3330.594 ; gain = 5.770
+launch_runs: Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 2102.840 ; gain = 25.484
