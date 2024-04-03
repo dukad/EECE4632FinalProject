@@ -3,8 +3,8 @@
         "name": "filt",
         "file": "filt.cpp",
         "fileloc": "11",
-        "instructions": "69",
-        "total_instructions": "69",
+        "instructions": "76",
+        "total_instructions": "76",
         "calls": "",
         "basicblocks": "4",
         "loads": {

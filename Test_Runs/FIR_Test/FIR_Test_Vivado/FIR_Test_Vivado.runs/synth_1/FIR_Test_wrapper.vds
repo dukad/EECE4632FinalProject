@@ -3,8 +3,8 @@
 # SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
 # IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
 # SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
-# Start of session at: Wed Apr  3 16:18:49 2024
-# Process ID: 13136
+# Start of session at: Wed Apr  3 16:38:21 2024
+# Process ID: 34748
 # Current directory: C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.runs/synth_1
 # Command line: vivado.exe -log FIR_Test_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source FIR_Test_wrapper.tcl
 # Log file: C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.runs/synth_1/FIR_Test_wrapper.vds
@@ -12,14 +12,14 @@
 # Running On: DESKTOP-G7JA666, OS: Windows, CPU Frequency: 2304 MHz, CPU Physical cores: 8, Host memory: 34065 MB
 #-----------------------------------------------------------
 source FIR_Test_wrapper.tcl -notrace
-create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:20 . Memory (MB): peak = 566.828 ; gain = 183.805
+create_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:20 . Memory (MB): peak = 566.035 ; gain = 181.777
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test'.
 WARNING: [IP_Flow 19-3656] If you move the project, the path for repository 'c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test' may become invalid. A better location for the repository would be in a path adjacent to the project. (Current project location is 'c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.runs/synth_1'.)
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.2/data/ip'.
 WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
 Current IP cache path is c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.cache/ip 
-add_files: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 581.941 ; gain = 8.910
+add_files: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 583.398 ; gain = 10.887
 Command: read_checkpoint -auto_incremental -incremental C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.srcs/utils_1/imports/synth_1/FIR_Test_wrapper.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.srcs/utils_1/imports/synth_1/FIR_Test_wrapper.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -32,99 +32,143 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 18872
+INFO: [Synth 8-7075] Helper process launched with PID 6668
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:17 . Memory (MB): peak = 1461.316 ; gain = 440.855
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:19 . Memory (MB): peak = 1462.672 ; gain = 440.582
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'FIR_Test_wrapper' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/hdl/FIR_Test_wrapper.v:13]
-INFO: [Synth 8-6157] synthesizing module 'FIR_Test' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:426]
-INFO: [Synth 8-6157] synthesizing module 'FIR0_imp_1RZIFTJ' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:13]
-INFO: [Synth 8-6157] synthesizing module 'FIR_Test_axi_bram_ctrl_0_0' [C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.runs/synth_1/.Xil/Vivado-13136-DESKTOP-G7JA666/realtime/FIR_Test_axi_bram_ctrl_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'FIR_Test_axi_bram_ctrl_0_0' (0#1) [C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.runs/synth_1/.Xil/Vivado-13136-DESKTOP-G7JA666/realtime/FIR_Test_axi_bram_ctrl_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'bram_we_a' of module 'FIR_Test_axi_bram_ctrl_0_0' is unconnected for instance 'axi_bram_ctrl_0' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:254]
-WARNING: [Synth 8-7071] port 'bram_wrdata_a' of module 'FIR_Test_axi_bram_ctrl_0_0' is unconnected for instance 'axi_bram_ctrl_0' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:254]
-WARNING: [Synth 8-7023] instance 'axi_bram_ctrl_0' of module 'FIR_Test_axi_bram_ctrl_0_0' has 44 connections declared, but only 42 given [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:254]
-INFO: [Synth 8-6157] synthesizing module 'FIR_Test_axi_dma_0_0' [C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.runs/synth_1/.Xil/Vivado-13136-DESKTOP-G7JA666/realtime/FIR_Test_axi_dma_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'FIR_Test_axi_dma_0_0' (0#1) [C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.runs/synth_1/.Xil/Vivado-13136-DESKTOP-G7JA666/realtime/FIR_Test_axi_dma_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'mm2s_prmry_reset_out_n' of module 'FIR_Test_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:297]
-WARNING: [Synth 8-7071] port 's2mm_prmry_reset_out_n' of module 'FIR_Test_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:297]
-WARNING: [Synth 8-7071] port 'mm2s_introut' of module 'FIR_Test_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:297]
-WARNING: [Synth 8-7071] port 's2mm_introut' of module 'FIR_Test_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:297]
-WARNING: [Synth 8-7071] port 'axi_dma_tstvec' of module 'FIR_Test_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:297]
-WARNING: [Synth 8-7023] instance 'axi_dma_0' of module 'FIR_Test_axi_dma_0_0' has 64 connections declared, but only 59 given [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:297]
-INFO: [Synth 8-6157] synthesizing module 'FIR_Test_blk_mem_gen_0_0' [C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.runs/synth_1/.Xil/Vivado-13136-DESKTOP-G7JA666/realtime/FIR_Test_blk_mem_gen_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'FIR_Test_blk_mem_gen_0_0' (0#1) [C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.runs/synth_1/.Xil/Vivado-13136-DESKTOP-G7JA666/realtime/FIR_Test_blk_mem_gen_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'rsta_busy' of module 'FIR_Test_blk_mem_gen_0_0' is unconnected for instance 'blk_mem_gen_0' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:357]
-WARNING: [Synth 8-7023] instance 'blk_mem_gen_0' of module 'FIR_Test_blk_mem_gen_0_0' has 6 connections declared, but only 5 given [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:357]
-INFO: [Synth 8-6157] synthesizing module 'FIR_Test_filt_0_7' [C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.runs/synth_1/.Xil/Vivado-13136-DESKTOP-G7JA666/realtime/FIR_Test_filt_0_7_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'FIR_Test_filt_0_7' (0#1) [C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.runs/synth_1/.Xil/Vivado-13136-DESKTOP-G7JA666/realtime/FIR_Test_filt_0_7_stub.v:6]
-WARNING: [Synth 8-7071] port 's_axi_control_AWREADY' of module 'FIR_Test_filt_0_7' is unconnected for instance 'filt_0' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:363]
-WARNING: [Synth 8-7071] port 's_axi_control_WREADY' of module 'FIR_Test_filt_0_7' is unconnected for instance 'filt_0' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:363]
-WARNING: [Synth 8-7071] port 's_axi_control_BRESP' of module 'FIR_Test_filt_0_7' is unconnected for instance 'filt_0' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:363]
-WARNING: [Synth 8-7071] port 's_axi_control_BVALID' of module 'FIR_Test_filt_0_7' is unconnected for instance 'filt_0' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:363]
-WARNING: [Synth 8-7071] port 's_axi_control_ARREADY' of module 'FIR_Test_filt_0_7' is unconnected for instance 'filt_0' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:363]
-WARNING: [Synth 8-7071] port 's_axi_control_RDATA' of module 'FIR_Test_filt_0_7' is unconnected for instance 'filt_0' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:363]
-WARNING: [Synth 8-7071] port 's_axi_control_RRESP' of module 'FIR_Test_filt_0_7' is unconnected for instance 'filt_0' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:363]
-WARNING: [Synth 8-7071] port 's_axi_control_RVALID' of module 'FIR_Test_filt_0_7' is unconnected for instance 'filt_0' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:363]
-WARNING: [Synth 8-7071] port 'y_TDEST' of module 'FIR_Test_filt_0_7' is unconnected for instance 'filt_0' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:363]
-WARNING: [Synth 8-7071] port 'y_TSTRB' of module 'FIR_Test_filt_0_7' is unconnected for instance 'filt_0' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:363]
-WARNING: [Synth 8-7071] port 'y_TUSER' of module 'FIR_Test_filt_0_7' is unconnected for instance 'filt_0' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:363]
-WARNING: [Synth 8-7071] port 'y_TID' of module 'FIR_Test_filt_0_7' is unconnected for instance 'filt_0' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:363]
-WARNING: [Synth 8-7071] port 'm_axi_gmem_AWREGION' of module 'FIR_Test_filt_0_7' is unconnected for instance 'filt_0' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:363]
-WARNING: [Synth 8-7071] port 'm_axi_gmem_AWQOS' of module 'FIR_Test_filt_0_7' is unconnected for instance 'filt_0' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:363]
-WARNING: [Synth 8-7071] port 'm_axi_gmem_WID' of module 'FIR_Test_filt_0_7' is unconnected for instance 'filt_0' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:363]
-WARNING: [Synth 8-7071] port 'm_axi_gmem_ARREGION' of module 'FIR_Test_filt_0_7' is unconnected for instance 'filt_0' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:363]
-WARNING: [Synth 8-7071] port 'm_axi_gmem_ARQOS' of module 'FIR_Test_filt_0_7' is unconnected for instance 'filt_0' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:363]
-WARNING: [Synth 8-7023] instance 'filt_0' of module 'FIR_Test_filt_0_7' has 77 connections declared, but only 60 given [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:363]
-INFO: [Synth 8-6155] done synthesizing module 'FIR0_imp_1RZIFTJ' (0#1) [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:13]
-INFO: [Synth 8-6157] synthesizing module 'FIR_Test_axi_mem_intercon_0' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:914]
+INFO: [Synth 8-6157] synthesizing module 'FIR_Test' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:13]
+INFO: [Synth 8-6157] synthesizing module 'FIR_Test_axi_mem_intercon_0' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:501]
 INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_RK38EY' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:1806]
-INFO: [Synth 8-6157] synthesizing module 'FIR_Test_auto_pc_0' [C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.runs/synth_1/.Xil/Vivado-13136-DESKTOP-G7JA666/realtime/FIR_Test_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'FIR_Test_auto_pc_0' (0#1) [C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.runs/synth_1/.Xil/Vivado-13136-DESKTOP-G7JA666/realtime/FIR_Test_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'FIR_Test_auto_pc_0' [C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.runs/synth_1/.Xil/Vivado-34748-DESKTOP-G7JA666/realtime/FIR_Test_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'FIR_Test_auto_pc_0' (0#1) [C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.runs/synth_1/.Xil/Vivado-34748-DESKTOP-G7JA666/realtime/FIR_Test_auto_pc_0_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_RK38EY' (0#1) [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:1806]
 INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_16UIAS8' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:2211]
 INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_16UIAS8' (0#1) [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:2211]
 INFO: [Synth 8-6157] synthesizing module 's01_couplers_imp_WJ49H5' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:2605]
 INFO: [Synth 8-6155] done synthesizing module 's01_couplers_imp_WJ49H5' (0#1) [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:2605]
-INFO: [Synth 8-6157] synthesizing module 'FIR_Test_xbar_0' [C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.runs/synth_1/.Xil/Vivado-13136-DESKTOP-G7JA666/realtime/FIR_Test_xbar_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'FIR_Test_xbar_0' (0#1) [C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.runs/synth_1/.Xil/Vivado-13136-DESKTOP-G7JA666/realtime/FIR_Test_xbar_0_stub.v:6]
-WARNING: [Synth 8-689] width (1) of port connection 's_axi_arready' does not match port width (2) of module 'FIR_Test_xbar_0' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:1477]
-WARNING: [Synth 8-689] width (32) of port connection 's_axi_rdata' does not match port width (64) of module 'FIR_Test_xbar_0' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:1494]
-WARNING: [Synth 8-689] width (1) of port connection 's_axi_rlast' does not match port width (2) of module 'FIR_Test_xbar_0' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:1495]
-WARNING: [Synth 8-689] width (2) of port connection 's_axi_rresp' does not match port width (4) of module 'FIR_Test_xbar_0' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:1497]
-WARNING: [Synth 8-689] width (1) of port connection 's_axi_rvalid' does not match port width (2) of module 'FIR_Test_xbar_0' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:1498]
-WARNING: [Synth 8-7071] port 's_axi_bid' of module 'FIR_Test_xbar_0' is unconnected for instance 'xbar' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:1427]
-WARNING: [Synth 8-7071] port 's_axi_rid' of module 'FIR_Test_xbar_0' is unconnected for instance 'xbar' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:1427]
-WARNING: [Synth 8-7023] instance 'xbar' of module 'FIR_Test_xbar_0' has 78 connections declared, but only 76 given [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:1427]
-INFO: [Synth 8-6155] done synthesizing module 'FIR_Test_axi_mem_intercon_0' (0#1) [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:914]
-INFO: [Synth 8-6157] synthesizing module 'FIR_Test_processing_system7_0_0' [C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.runs/synth_1/.Xil/Vivado-13136-DESKTOP-G7JA666/realtime/FIR_Test_processing_system7_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'FIR_Test_processing_system7_0_0' (0#1) [C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.runs/synth_1/.Xil/Vivado-13136-DESKTOP-G7JA666/realtime/FIR_Test_processing_system7_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'USB0_PORT_INDCTL' of module 'FIR_Test_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:741]
-WARNING: [Synth 8-7071] port 'USB0_VBUS_PWRSELECT' of module 'FIR_Test_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:741]
-WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'FIR_Test_processing_system7_0_0' has 104 connections declared, but only 102 given [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:741]
-INFO: [Synth 8-6157] synthesizing module 'FIR_Test_ps7_0_axi_periph_0' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:1506]
+INFO: [Synth 8-6157] synthesizing module 'FIR_Test_xbar_0' [C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.runs/synth_1/.Xil/Vivado-34748-DESKTOP-G7JA666/realtime/FIR_Test_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'FIR_Test_xbar_0' (0#1) [C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.runs/synth_1/.Xil/Vivado-34748-DESKTOP-G7JA666/realtime/FIR_Test_xbar_0_stub.v:6]
+WARNING: [Synth 8-689] width (1) of port connection 's_axi_arready' does not match port width (2) of module 'FIR_Test_xbar_0' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:1064]
+WARNING: [Synth 8-689] width (32) of port connection 's_axi_rdata' does not match port width (64) of module 'FIR_Test_xbar_0' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:1081]
+WARNING: [Synth 8-689] width (1) of port connection 's_axi_rlast' does not match port width (2) of module 'FIR_Test_xbar_0' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:1082]
+WARNING: [Synth 8-689] width (2) of port connection 's_axi_rresp' does not match port width (4) of module 'FIR_Test_xbar_0' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:1084]
+WARNING: [Synth 8-689] width (1) of port connection 's_axi_rvalid' does not match port width (2) of module 'FIR_Test_xbar_0' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:1085]
+WARNING: [Synth 8-7071] port 's_axi_bid' of module 'FIR_Test_xbar_0' is unconnected for instance 'xbar' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:1014]
+WARNING: [Synth 8-7071] port 's_axi_rid' of module 'FIR_Test_xbar_0' is unconnected for instance 'xbar' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:1014]
+WARNING: [Synth 8-7023] instance 'xbar' of module 'FIR_Test_xbar_0' has 78 connections declared, but only 76 given [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:1014]
+INFO: [Synth 8-6155] done synthesizing module 'FIR_Test_axi_mem_intercon_0' (0#1) [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:501]
+INFO: [Synth 8-6157] synthesizing module 'firDMA_imp_SIM45Z' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:1393]
+INFO: [Synth 8-6157] synthesizing module 'FIR_Test_axi_bram_ctrl_0_0' [C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.runs/synth_1/.Xil/Vivado-34748-DESKTOP-G7JA666/realtime/FIR_Test_axi_bram_ctrl_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'FIR_Test_axi_bram_ctrl_0_0' (0#1) [C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.runs/synth_1/.Xil/Vivado-34748-DESKTOP-G7JA666/realtime/FIR_Test_axi_bram_ctrl_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'bram_we_a' of module 'FIR_Test_axi_bram_ctrl_0_0' is unconnected for instance 'axi_bram_ctrl_0' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:1634]
+WARNING: [Synth 8-7071] port 'bram_wrdata_a' of module 'FIR_Test_axi_bram_ctrl_0_0' is unconnected for instance 'axi_bram_ctrl_0' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:1634]
+WARNING: [Synth 8-7023] instance 'axi_bram_ctrl_0' of module 'FIR_Test_axi_bram_ctrl_0_0' has 44 connections declared, but only 42 given [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:1634]
+INFO: [Synth 8-6157] synthesizing module 'FIR_Test_axi_dma_0_0' [C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.runs/synth_1/.Xil/Vivado-34748-DESKTOP-G7JA666/realtime/FIR_Test_axi_dma_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'FIR_Test_axi_dma_0_0' (0#1) [C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.runs/synth_1/.Xil/Vivado-34748-DESKTOP-G7JA666/realtime/FIR_Test_axi_dma_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mm2s_prmry_reset_out_n' of module 'FIR_Test_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:1677]
+WARNING: [Synth 8-7071] port 's2mm_prmry_reset_out_n' of module 'FIR_Test_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:1677]
+WARNING: [Synth 8-7071] port 'mm2s_introut' of module 'FIR_Test_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:1677]
+WARNING: [Synth 8-7071] port 's2mm_introut' of module 'FIR_Test_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:1677]
+WARNING: [Synth 8-7071] port 'axi_dma_tstvec' of module 'FIR_Test_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:1677]
+WARNING: [Synth 8-7023] instance 'axi_dma_0' of module 'FIR_Test_axi_dma_0_0' has 64 connections declared, but only 59 given [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:1677]
+INFO: [Synth 8-6157] synthesizing module 'FIR_Test_blk_mem_gen_0_0' [C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.runs/synth_1/.Xil/Vivado-34748-DESKTOP-G7JA666/realtime/FIR_Test_blk_mem_gen_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'FIR_Test_blk_mem_gen_0_0' (0#1) [C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.runs/synth_1/.Xil/Vivado-34748-DESKTOP-G7JA666/realtime/FIR_Test_blk_mem_gen_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'rsta_busy' of module 'FIR_Test_blk_mem_gen_0_0' is unconnected for instance 'blk_mem_gen_0' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:1737]
+WARNING: [Synth 8-7023] instance 'blk_mem_gen_0' of module 'FIR_Test_blk_mem_gen_0_0' has 6 connections declared, but only 5 given [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:1737]
+INFO: [Synth 8-6157] synthesizing module 'FIR_Test_filt_0_8' [C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.runs/synth_1/.Xil/Vivado-34748-DESKTOP-G7JA666/realtime/FIR_Test_filt_0_8_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'FIR_Test_filt_0_8' (0#1) [C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.runs/synth_1/.Xil/Vivado-34748-DESKTOP-G7JA666/realtime/FIR_Test_filt_0_8_stub.v:6]
+WARNING: [Synth 8-7071] port 's_axi_control_AWREADY' of module 'FIR_Test_filt_0_8' is unconnected for instance 'filt_0' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:1743]
+WARNING: [Synth 8-7071] port 's_axi_control_WREADY' of module 'FIR_Test_filt_0_8' is unconnected for instance 'filt_0' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:1743]
+WARNING: [Synth 8-7071] port 's_axi_control_BRESP' of module 'FIR_Test_filt_0_8' is unconnected for instance 'filt_0' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:1743]
+WARNING: [Synth 8-7071] port 's_axi_control_BVALID' of module 'FIR_Test_filt_0_8' is unconnected for instance 'filt_0' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:1743]
+WARNING: [Synth 8-7071] port 's_axi_control_ARREADY' of module 'FIR_Test_filt_0_8' is unconnected for instance 'filt_0' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:1743]
+WARNING: [Synth 8-7071] port 's_axi_control_RDATA' of module 'FIR_Test_filt_0_8' is unconnected for instance 'filt_0' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:1743]
+WARNING: [Synth 8-7071] port 's_axi_control_RRESP' of module 'FIR_Test_filt_0_8' is unconnected for instance 'filt_0' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:1743]
+WARNING: [Synth 8-7071] port 's_axi_control_RVALID' of module 'FIR_Test_filt_0_8' is unconnected for instance 'filt_0' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:1743]
+WARNING: [Synth 8-7071] port 'm_axi_gmem_AWREGION' of module 'FIR_Test_filt_0_8' is unconnected for instance 'filt_0' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:1743]
+WARNING: [Synth 8-7071] port 'm_axi_gmem_AWQOS' of module 'FIR_Test_filt_0_8' is unconnected for instance 'filt_0' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:1743]
+WARNING: [Synth 8-7071] port 'm_axi_gmem_WID' of module 'FIR_Test_filt_0_8' is unconnected for instance 'filt_0' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:1743]
+WARNING: [Synth 8-7071] port 'm_axi_gmem_ARREGION' of module 'FIR_Test_filt_0_8' is unconnected for instance 'filt_0' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:1743]
+WARNING: [Synth 8-7071] port 'm_axi_gmem_ARQOS' of module 'FIR_Test_filt_0_8' is unconnected for instance 'filt_0' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:1743]
+WARNING: [Synth 8-7071] port 'y_TDEST' of module 'FIR_Test_filt_0_8' is unconnected for instance 'filt_0' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:1743]
+WARNING: [Synth 8-7071] port 'y_TSTRB' of module 'FIR_Test_filt_0_8' is unconnected for instance 'filt_0' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:1743]
+WARNING: [Synth 8-7071] port 'y_TUSER' of module 'FIR_Test_filt_0_8' is unconnected for instance 'filt_0' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:1743]
+WARNING: [Synth 8-7071] port 'y_TID' of module 'FIR_Test_filt_0_8' is unconnected for instance 'filt_0' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:1743]
+WARNING: [Synth 8-7023] instance 'filt_0' of module 'FIR_Test_filt_0_8' has 77 connections declared, but only 60 given [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:1743]
+INFO: [Synth 8-6155] done synthesizing module 'firDMA_imp_SIM45Z' (0#1) [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:1393]
+INFO: [Synth 8-6157] synthesizing module 'FIR_Test_processing_system7_0_0' [C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.runs/synth_1/.Xil/Vivado-34748-DESKTOP-G7JA666/realtime/FIR_Test_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'FIR_Test_processing_system7_0_0' (0#1) [C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.runs/synth_1/.Xil/Vivado-34748-DESKTOP-G7JA666/realtime/FIR_Test_processing_system7_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'USB0_PORT_INDCTL' of module 'FIR_Test_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:328]
+WARNING: [Synth 8-7071] port 'USB0_VBUS_PWRSELECT' of module 'FIR_Test_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:328]
+WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'FIR_Test_processing_system7_0_0' has 104 connections declared, but only 102 given [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:328]
+INFO: [Synth 8-6157] synthesizing module 'FIR_Test_ps7_0_axi_periph_0' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:1093]
 INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1UBNX4J' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:2315]
-INFO: [Synth 8-6157] synthesizing module 'FIR_Test_auto_pc_1' [C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.runs/synth_1/.Xil/Vivado-13136-DESKTOP-G7JA666/realtime/FIR_Test_auto_pc_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'FIR_Test_auto_pc_1' (0#1) [C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.runs/synth_1/.Xil/Vivado-13136-DESKTOP-G7JA666/realtime/FIR_Test_auto_pc_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'FIR_Test_auto_pc_1' [C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.runs/synth_1/.Xil/Vivado-34748-DESKTOP-G7JA666/realtime/FIR_Test_auto_pc_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'FIR_Test_auto_pc_1' (0#1) [C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.runs/synth_1/.Xil/Vivado-34748-DESKTOP-G7JA666/realtime/FIR_Test_auto_pc_1_stub.v:6]
 WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'FIR_Test_auto_pc_1' is unconnected for instance 'auto_pc' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:2546]
 WARNING: [Synth 8-7071] port 'm_axi_wstrb' of module 'FIR_Test_auto_pc_1' is unconnected for instance 'auto_pc' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:2546]
 WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'FIR_Test_auto_pc_1' is unconnected for instance 'auto_pc' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:2546]
 WARNING: [Synth 8-7023] instance 'auto_pc' of module 'FIR_Test_auto_pc_1' has 59 connections declared, but only 56 given [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:2546]
 INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1UBNX4J' (0#1) [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:2315]
-INFO: [Synth 8-6155] done synthesizing module 'FIR_Test_ps7_0_axi_periph_0' (0#1) [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:1506]
-INFO: [Synth 8-6157] synthesizing module 'FIR_Test_rst_ps7_0_100M_0' [C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.runs/synth_1/.Xil/Vivado-13136-DESKTOP-G7JA666/realtime/FIR_Test_rst_ps7_0_100M_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'FIR_Test_rst_ps7_0_100M_0' (0#1) [C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.runs/synth_1/.Xil/Vivado-13136-DESKTOP-G7JA666/realtime/FIR_Test_rst_ps7_0_100M_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'mb_reset' of module 'FIR_Test_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:905]
-WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'FIR_Test_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:905]
-WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'FIR_Test_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:905]
-WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'FIR_Test_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:905]
-WARNING: [Synth 8-7023] instance 'rst_ps7_0_100M' of module 'FIR_Test_rst_ps7_0_100M_0' has 10 connections declared, but only 6 given [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:905]
-INFO: [Synth 8-6155] done synthesizing module 'FIR_Test' (0#1) [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:426]
+INFO: [Synth 8-6155] done synthesizing module 'FIR_Test_ps7_0_axi_periph_0' (0#1) [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:1093]
+INFO: [Synth 8-6157] synthesizing module 'FIR_Test_rst_ps7_0_100M_0' [C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.runs/synth_1/.Xil/Vivado-34748-DESKTOP-G7JA666/realtime/FIR_Test_rst_ps7_0_100M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'FIR_Test_rst_ps7_0_100M_0' (0#1) [C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.runs/synth_1/.Xil/Vivado-34748-DESKTOP-G7JA666/realtime/FIR_Test_rst_ps7_0_100M_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'FIR_Test_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:492]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'FIR_Test_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:492]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'FIR_Test_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:492]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'FIR_Test_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:492]
+WARNING: [Synth 8-7023] instance 'rst_ps7_0_100M' of module 'FIR_Test_rst_ps7_0_100M_0' has 10 connections declared, but only 6 given [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:492]
+INFO: [Synth 8-6155] done synthesizing module 'FIR_Test' (0#1) [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/synth/FIR_Test.v:13]
 INFO: [Synth 8-6155] done synthesizing module 'FIR_Test_wrapper' (0#1) [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/hdl/FIR_Test_wrapper.v:13]
 WARNING: [Synth 8-7129] Port M_ACLK in module s00_couplers_imp_1UBNX4J is either unconnected or has no load
 WARNING: [Synth 8-7129] Port M_ARESETN in module s00_couplers_imp_1UBNX4J is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ACLK in module FIR_Test_ps7_0_axi_periph_0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ARESETN in module FIR_Test_ps7_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_LITE_araddr[31] in module firDMA_imp_SIM45Z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_LITE_araddr[30] in module firDMA_imp_SIM45Z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_LITE_araddr[29] in module firDMA_imp_SIM45Z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_LITE_araddr[28] in module firDMA_imp_SIM45Z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_LITE_araddr[27] in module firDMA_imp_SIM45Z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_LITE_araddr[26] in module firDMA_imp_SIM45Z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_LITE_araddr[25] in module firDMA_imp_SIM45Z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_LITE_araddr[24] in module firDMA_imp_SIM45Z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_LITE_araddr[23] in module firDMA_imp_SIM45Z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_LITE_araddr[22] in module firDMA_imp_SIM45Z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_LITE_araddr[21] in module firDMA_imp_SIM45Z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_LITE_araddr[20] in module firDMA_imp_SIM45Z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_LITE_araddr[19] in module firDMA_imp_SIM45Z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_LITE_araddr[18] in module firDMA_imp_SIM45Z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_LITE_araddr[17] in module firDMA_imp_SIM45Z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_LITE_araddr[16] in module firDMA_imp_SIM45Z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_LITE_araddr[15] in module firDMA_imp_SIM45Z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_LITE_araddr[14] in module firDMA_imp_SIM45Z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_LITE_araddr[13] in module firDMA_imp_SIM45Z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_LITE_araddr[12] in module firDMA_imp_SIM45Z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_LITE_araddr[11] in module firDMA_imp_SIM45Z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_LITE_araddr[10] in module firDMA_imp_SIM45Z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_LITE_awaddr[31] in module firDMA_imp_SIM45Z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_LITE_awaddr[30] in module firDMA_imp_SIM45Z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_LITE_awaddr[29] in module firDMA_imp_SIM45Z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_LITE_awaddr[28] in module firDMA_imp_SIM45Z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_LITE_awaddr[27] in module firDMA_imp_SIM45Z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_LITE_awaddr[26] in module firDMA_imp_SIM45Z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_LITE_awaddr[25] in module firDMA_imp_SIM45Z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_LITE_awaddr[24] in module firDMA_imp_SIM45Z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_LITE_awaddr[23] in module firDMA_imp_SIM45Z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_LITE_awaddr[22] in module firDMA_imp_SIM45Z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_LITE_awaddr[21] in module firDMA_imp_SIM45Z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_LITE_awaddr[20] in module firDMA_imp_SIM45Z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_LITE_awaddr[19] in module firDMA_imp_SIM45Z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_LITE_awaddr[18] in module firDMA_imp_SIM45Z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_LITE_awaddr[17] in module firDMA_imp_SIM45Z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_LITE_awaddr[16] in module firDMA_imp_SIM45Z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_LITE_awaddr[15] in module firDMA_imp_SIM45Z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_LITE_awaddr[14] in module firDMA_imp_SIM45Z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_LITE_awaddr[13] in module firDMA_imp_SIM45Z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_LITE_awaddr[12] in module firDMA_imp_SIM45Z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_LITE_awaddr[11] in module firDMA_imp_SIM45Z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_LITE_awaddr[10] in module firDMA_imp_SIM45Z is either unconnected or has no load
 WARNING: [Synth 8-7129] Port M_ACLK in module s01_couplers_imp_WJ49H5 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port M_ARESETN in module s01_couplers_imp_WJ49H5 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port S_ACLK in module s01_couplers_imp_WJ49H5 is either unconnected or has no load
@@ -151,63 +195,19 @@ WARNING: [Synth 8-7129] Port S00_ACLK in module FIR_Test_axi_mem_intercon_0 is e
 WARNING: [Synth 8-7129] Port S00_ARESETN in module FIR_Test_axi_mem_intercon_0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port S01_ACLK in module FIR_Test_axi_mem_intercon_0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port S01_ARESETN in module FIR_Test_axi_mem_intercon_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_LITE_araddr[31] in module FIR0_imp_1RZIFTJ is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_LITE_araddr[30] in module FIR0_imp_1RZIFTJ is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_LITE_araddr[29] in module FIR0_imp_1RZIFTJ is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_LITE_araddr[28] in module FIR0_imp_1RZIFTJ is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_LITE_araddr[27] in module FIR0_imp_1RZIFTJ is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_LITE_araddr[26] in module FIR0_imp_1RZIFTJ is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_LITE_araddr[25] in module FIR0_imp_1RZIFTJ is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_LITE_araddr[24] in module FIR0_imp_1RZIFTJ is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_LITE_araddr[23] in module FIR0_imp_1RZIFTJ is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_LITE_araddr[22] in module FIR0_imp_1RZIFTJ is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_LITE_araddr[21] in module FIR0_imp_1RZIFTJ is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_LITE_araddr[20] in module FIR0_imp_1RZIFTJ is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_LITE_araddr[19] in module FIR0_imp_1RZIFTJ is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_LITE_araddr[18] in module FIR0_imp_1RZIFTJ is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_LITE_araddr[17] in module FIR0_imp_1RZIFTJ is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_LITE_araddr[16] in module FIR0_imp_1RZIFTJ is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_LITE_araddr[15] in module FIR0_imp_1RZIFTJ is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_LITE_araddr[14] in module FIR0_imp_1RZIFTJ is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_LITE_araddr[13] in module FIR0_imp_1RZIFTJ is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_LITE_araddr[12] in module FIR0_imp_1RZIFTJ is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_LITE_araddr[11] in module FIR0_imp_1RZIFTJ is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_LITE_araddr[10] in module FIR0_imp_1RZIFTJ is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_LITE_awaddr[31] in module FIR0_imp_1RZIFTJ is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_LITE_awaddr[30] in module FIR0_imp_1RZIFTJ is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_LITE_awaddr[29] in module FIR0_imp_1RZIFTJ is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_LITE_awaddr[28] in module FIR0_imp_1RZIFTJ is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_LITE_awaddr[27] in module FIR0_imp_1RZIFTJ is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_LITE_awaddr[26] in module FIR0_imp_1RZIFTJ is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_LITE_awaddr[25] in module FIR0_imp_1RZIFTJ is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_LITE_awaddr[24] in module FIR0_imp_1RZIFTJ is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_LITE_awaddr[23] in module FIR0_imp_1RZIFTJ is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_LITE_awaddr[22] in module FIR0_imp_1RZIFTJ is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_LITE_awaddr[21] in module FIR0_imp_1RZIFTJ is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_LITE_awaddr[20] in module FIR0_imp_1RZIFTJ is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_LITE_awaddr[19] in module FIR0_imp_1RZIFTJ is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_LITE_awaddr[18] in module FIR0_imp_1RZIFTJ is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_LITE_awaddr[17] in module FIR0_imp_1RZIFTJ is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_LITE_awaddr[16] in module FIR0_imp_1RZIFTJ is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_LITE_awaddr[15] in module FIR0_imp_1RZIFTJ is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_LITE_awaddr[14] in module FIR0_imp_1RZIFTJ is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_LITE_awaddr[13] in module FIR0_imp_1RZIFTJ is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_LITE_awaddr[12] in module FIR0_imp_1RZIFTJ is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_LITE_awaddr[11] in module FIR0_imp_1RZIFTJ is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_LITE_awaddr[10] in module FIR0_imp_1RZIFTJ is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:24 . Memory (MB): peak = 1580.238 ; gain = 559.777
+Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:25 . Memory (MB): peak = 1580.859 ; gain = 558.770
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:24 . Memory (MB): peak = 1580.238 ; gain = 559.777
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:26 . Memory (MB): peak = 1580.859 ; gain = 558.770
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:24 . Memory (MB): peak = 1580.238 ; gain = 559.777
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:26 . Memory (MB): peak = 1580.859 ; gain = 558.770
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.104 . Memory (MB): peak = 1580.238 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.107 . Memory (MB): peak = 1580.859 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -222,35 +222,35 @@ Parsing XDC File [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/T
 Finished Parsing XDC File [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/ip/FIR_Test_auto_pc_0/FIR_Test_auto_pc_0/FIR_Test_auto_pc_0_in_context.xdc] for cell 'FIR_Test_i/axi_mem_intercon/m00_couplers/auto_pc'
 Parsing XDC File [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/ip/FIR_Test_auto_pc_1/FIR_Test_auto_pc_1/FIR_Test_auto_pc_1_in_context.xdc] for cell 'FIR_Test_i/ps7_0_axi_periph/s00_couplers/auto_pc'
 Finished Parsing XDC File [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/ip/FIR_Test_auto_pc_1/FIR_Test_auto_pc_1/FIR_Test_auto_pc_1_in_context.xdc] for cell 'FIR_Test_i/ps7_0_axi_periph/s00_couplers/auto_pc'
-Parsing XDC File [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/ip/FIR_Test_axi_bram_ctrl_0_0/FIR_Test_axi_bram_ctrl_0_0/FIR_Test_axi_bram_ctrl_0_0_in_context.xdc] for cell 'FIR_Test_i/FIR0/axi_bram_ctrl_0'
-Finished Parsing XDC File [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/ip/FIR_Test_axi_bram_ctrl_0_0/FIR_Test_axi_bram_ctrl_0_0/FIR_Test_axi_bram_ctrl_0_0_in_context.xdc] for cell 'FIR_Test_i/FIR0/axi_bram_ctrl_0'
-Parsing XDC File [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/ip/FIR_Test_blk_mem_gen_0_0/FIR_Test_blk_mem_gen_0_0/FIR_Test_blk_mem_gen_0_0_in_context.xdc] for cell 'FIR_Test_i/FIR0/blk_mem_gen_0'
-Finished Parsing XDC File [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/ip/FIR_Test_blk_mem_gen_0_0/FIR_Test_blk_mem_gen_0_0/FIR_Test_blk_mem_gen_0_0_in_context.xdc] for cell 'FIR_Test_i/FIR0/blk_mem_gen_0'
-Parsing XDC File [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/ip/FIR_Test_axi_dma_0_0/FIR_Test_axi_dma_0_0/FIR_Test_axi_dma_0_0_in_context.xdc] for cell 'FIR_Test_i/FIR0/axi_dma_0'
-Finished Parsing XDC File [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/ip/FIR_Test_axi_dma_0_0/FIR_Test_axi_dma_0_0/FIR_Test_axi_dma_0_0_in_context.xdc] for cell 'FIR_Test_i/FIR0/axi_dma_0'
-Parsing XDC File [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/ip/FIR_Test_filt_0_7/FIR_Test_filt_0_7/FIR_Test_filt_0_7_in_context.xdc] for cell 'FIR_Test_i/FIR0/filt_0'
-Finished Parsing XDC File [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/ip/FIR_Test_filt_0_7/FIR_Test_filt_0_7/FIR_Test_filt_0_7_in_context.xdc] for cell 'FIR_Test_i/FIR0/filt_0'
+Parsing XDC File [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/ip/FIR_Test_axi_bram_ctrl_0_0/FIR_Test_axi_bram_ctrl_0_0/FIR_Test_axi_bram_ctrl_0_0_in_context.xdc] for cell 'FIR_Test_i/firDMA/axi_bram_ctrl_0'
+Finished Parsing XDC File [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/ip/FIR_Test_axi_bram_ctrl_0_0/FIR_Test_axi_bram_ctrl_0_0/FIR_Test_axi_bram_ctrl_0_0_in_context.xdc] for cell 'FIR_Test_i/firDMA/axi_bram_ctrl_0'
+Parsing XDC File [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/ip/FIR_Test_blk_mem_gen_0_0/FIR_Test_blk_mem_gen_0_0/FIR_Test_blk_mem_gen_0_0_in_context.xdc] for cell 'FIR_Test_i/firDMA/blk_mem_gen_0'
+Finished Parsing XDC File [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/ip/FIR_Test_blk_mem_gen_0_0/FIR_Test_blk_mem_gen_0_0/FIR_Test_blk_mem_gen_0_0_in_context.xdc] for cell 'FIR_Test_i/firDMA/blk_mem_gen_0'
+Parsing XDC File [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/ip/FIR_Test_axi_dma_0_0/FIR_Test_axi_dma_0_0/FIR_Test_axi_dma_0_0_in_context.xdc] for cell 'FIR_Test_i/firDMA/axi_dma_0'
+Finished Parsing XDC File [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/ip/FIR_Test_axi_dma_0_0/FIR_Test_axi_dma_0_0/FIR_Test_axi_dma_0_0_in_context.xdc] for cell 'FIR_Test_i/firDMA/axi_dma_0'
+Parsing XDC File [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/ip/FIR_Test_filt_0_8/FIR_Test_filt_0_8/FIR_Test_filt_0_8_in_context.xdc] for cell 'FIR_Test_i/firDMA/filt_0'
+Finished Parsing XDC File [c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/ip/FIR_Test_filt_0_8/FIR_Test_filt_0_8/FIR_Test_filt_0_8_in_context.xdc] for cell 'FIR_Test_i/firDMA/filt_0'
 Parsing XDC File [C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.runs/synth_1/dont_touch.xdc]
 Finished Parsing XDC File [C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1580.238 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1580.859 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 1580.238 ; gain = 0.000
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'FIR_Test_i/FIR0/blk_mem_gen_0' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 1580.859 ; gain = 0.000
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'FIR_Test_i/firDMA/blk_mem_gen_0' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:50 . Memory (MB): peak = 1580.238 ; gain = 559.777
+Finished Constraint Validation : Time (s): cpu = 00:00:28 ; elapsed = 00:01:02 . Memory (MB): peak = 1580.859 ; gain = 558.770
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:50 . Memory (MB): peak = 1580.238 ; gain = 559.777
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:28 ; elapsed = 00:01:02 . Memory (MB): peak = 1580.859 ; gain = 558.770
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -523,15 +523,15 @@ Applied set_property KEEP_HIERARCHY = SOFT for FIR_Test_i/axi_mem_intercon/m00_c
 Applied set_property KEEP_HIERARCHY = SOFT for FIR_Test_i/axi_mem_intercon. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for FIR_Test_i/ps7_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for FIR_Test_i/ps7_0_axi_periph. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for FIR_Test_i/FIR0/axi_bram_ctrl_0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for FIR_Test_i/FIR0/blk_mem_gen_0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for FIR_Test_i/FIR0/axi_dma_0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for FIR_Test_i/FIR0/filt_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for FIR_Test_i/firDMA/axi_bram_ctrl_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for FIR_Test_i/firDMA/blk_mem_gen_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for FIR_Test_i/firDMA/axi_dma_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for FIR_Test_i/firDMA/filt_0. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:51 . Memory (MB): peak = 1580.238 ; gain = 559.777
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:01:04 . Memory (MB): peak = 1580.859 ; gain = 558.770
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:51 . Memory (MB): peak = 1580.238 ; gain = 559.777
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:29 ; elapsed = 00:01:04 . Memory (MB): peak = 1580.859 ; gain = 558.770
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -574,25 +574,25 @@ WARNING: [Synth 8-7129] Port S00_ARESETN in module FIR_Test_axi_mem_intercon_0 i
 WARNING: [Synth 8-7129] Port S01_ACLK in module FIR_Test_axi_mem_intercon_0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port S01_ARESETN in module FIR_Test_axi_mem_intercon_0 is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:55 . Memory (MB): peak = 1580.238 ; gain = 559.777
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:01:11 . Memory (MB): peak = 1580.859 ; gain = 558.770
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:01:08 . Memory (MB): peak = 1580.238 ; gain = 559.777
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:42 ; elapsed = 00:01:32 . Memory (MB): peak = 1586.121 ; gain = 564.031
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:01:08 . Memory (MB): peak = 1580.238 ; gain = 559.777
+Finished Timing Optimization : Time (s): cpu = 00:00:42 ; elapsed = 00:01:32 . Memory (MB): peak = 1586.121 ; gain = 564.031
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:01:08 . Memory (MB): peak = 1580.238 ; gain = 559.777
+Finished Technology Mapping : Time (s): cpu = 00:00:42 ; elapsed = 00:01:32 . Memory (MB): peak = 1586.121 ; gain = 564.031
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -610,37 +610,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:27 ; elapsed = 00:01:17 . Memory (MB): peak = 1580.238 ; gain = 559.777
+Finished IO Insertion : Time (s): cpu = 00:00:50 ; elapsed = 00:01:48 . Memory (MB): peak = 1592.840 ; gain = 570.750
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:27 ; elapsed = 00:01:17 . Memory (MB): peak = 1580.238 ; gain = 559.777
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:50 ; elapsed = 00:01:48 . Memory (MB): peak = 1592.840 ; gain = 570.750
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:27 ; elapsed = 00:01:17 . Memory (MB): peak = 1580.238 ; gain = 559.777
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:50 ; elapsed = 00:01:48 . Memory (MB): peak = 1592.840 ; gain = 570.750
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:27 ; elapsed = 00:01:18 . Memory (MB): peak = 1580.238 ; gain = 559.777
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:50 ; elapsed = 00:01:48 . Memory (MB): peak = 1592.840 ; gain = 570.750
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:27 ; elapsed = 00:01:18 . Memory (MB): peak = 1580.238 ; gain = 559.777
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:50 ; elapsed = 00:01:48 . Memory (MB): peak = 1592.840 ; gain = 570.750
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:27 ; elapsed = 00:01:18 . Memory (MB): peak = 1580.238 ; gain = 559.777
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:50 ; elapsed = 00:01:48 . Memory (MB): peak = 1592.840 ; gain = 570.750
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -658,7 +658,7 @@ Report BlackBoxes:
 |6     |FIR_Test_axi_bram_ctrl_0_0      |         1|
 |7     |FIR_Test_axi_dma_0_0            |         1|
 |8     |FIR_Test_blk_mem_gen_0_0        |         1|
-|9     |FIR_Test_filt_0_7               |         1|
+|9     |FIR_Test_filt_0_8               |         1|
 +------+--------------------------------+----------+
 
 Report Cell Usage: 
@@ -675,24 +675,24 @@ Report Cell Usage:
 |9     |FIR_Test_xbar                 |     1|
 +------+------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:27 ; elapsed = 00:01:18 . Memory (MB): peak = 1580.238 ; gain = 559.777
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:50 ; elapsed = 00:01:48 . Memory (MB): peak = 1592.840 ; gain = 570.750
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 21 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:01:10 . Memory (MB): peak = 1580.238 ; gain = 559.777
-Synthesis Optimization Complete : Time (s): cpu = 00:00:27 ; elapsed = 00:01:18 . Memory (MB): peak = 1580.238 ; gain = 559.777
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:35 ; elapsed = 00:01:40 . Memory (MB): peak = 1592.840 ; gain = 570.750
+Synthesis Optimization Complete : Time (s): cpu = 00:00:50 ; elapsed = 00:01:48 . Memory (MB): peak = 1592.840 ; gain = 570.750
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.055 . Memory (MB): peak = 1580.238 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.097 . Memory (MB): peak = 1592.840 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1588.684 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1609.449 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: 8e1244a3
+Synth Design complete | Checksum: 4cd3fbe9
 INFO: [Common 17-83] Releasing license: Synthesis
 57 Infos, 147 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:01:35 . Memory (MB): peak = 1594.664 ; gain = 996.695
+synth_design: Time (s): cpu = 00:01:00 ; elapsed = 00:02:07 . Memory (MB): peak = 1613.461 ; gain = 1016.324
 INFO: [Common 17-1381] The checkpoint 'C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.runs/synth_1/FIR_Test_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file FIR_Test_wrapper_utilization_synth.rpt -pb FIR_Test_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Apr  3 16:21:02 2024...
+INFO: [Common 17-206] Exiting Vivado at Wed Apr  3 16:41:06 2024...

@@ -31,16 +31,16 @@ void filt (hls::stream<AXI_VAL>& y, coef_t c[N], hls::stream<AXI_VAL>& x) {
 		x.read(tmp);
 
 		lowfreq_accumulate = 0;
-		midfreq_accumulate = c[0];
+		midfreq_accumulate = 0;
 
 		LowFreq_Shift_Accumulate_Loop:
 		for (i = N - 1; i > 0; i--){
 #pragma HLS UNROLL
 			lowfreq_shift_reg[i] = lowfreq_shift_reg[i - 1];
-			lowfreq_accumulate += lowfreq_shift_reg[i] * 1;
+			lowfreq_accumulate += lowfreq_shift_reg[i] * c[0];
 		}
 
-		lowfreq_accumulate += tmp.data.to_short() * 1;
+		lowfreq_accumulate += tmp.data.to_short() * c[0];
 		lowfreq_shift_reg[0] = tmp.data.to_short();
 		AXI_VAL output;
 		output.data = lowfreq_accumulate;

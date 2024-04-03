@@ -4,16 +4,17 @@
     "calls": "",
     "file": "filt.cpp",
     "fileloc": 11,
-    "instructions": 144,
+    "instructions": 177,
     "loads": {
       "G": 10,
-      "L": 7
+      "L": 7,
+      "T": 1
     },
     "name": "filt",
     "stores": {
       "G": 11,
       "L": 7
     },
-    "total_instructions": 144
+    "total_instructions": 177
   }
 }

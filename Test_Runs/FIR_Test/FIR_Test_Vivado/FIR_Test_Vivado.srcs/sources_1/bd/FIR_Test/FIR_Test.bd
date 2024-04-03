@@ -26,7 +26,7 @@
           "auto_pc": ""
         }
       },
-      "FIR0": {
+      "firDMA": {
         "axi_bram_ctrl_0": "",
         "blk_mem_gen_0": "",
         "axi_dma_0": "",
@@ -2561,7 +2561,7 @@
           }
         }
       },
-      "FIR0": {
+      "firDMA": {
         "interface_ports": {
           "S_AXI_LITE": {
             "mode": "Slave",
@@ -2595,7 +2595,7 @@
             "ip_revision": "9",
             "xci_name": "FIR_Test_axi_bram_ctrl_0_0",
             "xci_path": "ip\\FIR_Test_axi_bram_ctrl_0_0\\FIR_Test_axi_bram_ctrl_0_0.xci",
-            "inst_hier_path": "FIR0/axi_bram_ctrl_0",
+            "inst_hier_path": "firDMA/axi_bram_ctrl_0",
             "parameters": {
               "DATA_WIDTH": {
                 "value": "32"
@@ -2610,7 +2610,7 @@
             "ip_revision": "7",
             "xci_name": "FIR_Test_blk_mem_gen_0_0",
             "xci_path": "ip\\FIR_Test_blk_mem_gen_0_0\\FIR_Test_blk_mem_gen_0_0.xci",
-            "inst_hier_path": "FIR0/blk_mem_gen_0",
+            "inst_hier_path": "firDMA/blk_mem_gen_0",
             "parameters": {
               "Coe_File": {
                 "value": "../../../../../../../filt.coe"
@@ -2628,7 +2628,7 @@
             "ip_revision": "30",
             "xci_name": "FIR_Test_axi_dma_0_0",
             "xci_path": "ip\\FIR_Test_axi_dma_0_0\\FIR_Test_axi_dma_0_0.xci",
-            "inst_hier_path": "FIR0/axi_dma_0",
+            "inst_hier_path": "firDMA/axi_dma_0",
             "parameters": {
               "c_include_sg": {
                 "value": "0"
@@ -2680,10 +2680,10 @@
           },
           "filt_0": {
             "vlnv": "xilinx.com:hls:filt:1.0",
-            "ip_revision": "2113498391",
-            "xci_name": "FIR_Test_filt_0_7",
-            "xci_path": "ip\\FIR_Test_filt_0_7\\FIR_Test_filt_0_7.xci",
-            "inst_hier_path": "FIR0/filt_0",
+            "ip_revision": "2113498411",
+            "xci_name": "FIR_Test_filt_0_8",
+            "xci_path": "ip\\FIR_Test_filt_0_8\\FIR_Test_filt_0_8.xci",
+            "inst_hier_path": "firDMA/filt_0",
             "interface_ports": {
               "m_axi_gmem": {
                 "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
@@ -2775,13 +2775,13 @@
     "interface_nets": {
       "axi_dma_0_M_AXI_MM2S": {
         "interface_ports": [
-          "FIR0/M_AXI_MM2S",
+          "firDMA/M_AXI_MM2S",
           "axi_mem_intercon/S00_AXI"
         ]
       },
       "axi_dma_0_M_AXI_S2MM": {
         "interface_ports": [
-          "FIR0/M_AXI_S2MM",
+          "firDMA/M_AXI_S2MM",
           "axi_mem_intercon/S01_AXI"
         ]
       },
@@ -2812,7 +2812,7 @@
       "ps7_0_axi_periph_M00_AXI": {
         "interface_ports": [
           "ps7_0_axi_periph/M00_AXI",
-          "FIR0/S_AXI_LITE"
+          "firDMA/S_AXI_LITE"
         ]
       }
     },
@@ -2830,7 +2830,7 @@
           "ps7_0_axi_periph/S00_ACLK",
           "ps7_0_axi_periph/M00_ACLK",
           "axi_mem_intercon/S01_ACLK",
-          "FIR0/ap_clk"
+          "firDMA/ap_clk"
         ]
       },
       "processing_system7_0_FCLK_RESET0_N": {
@@ -2849,7 +2849,7 @@
           "ps7_0_axi_periph/M00_ARESETN",
           "ps7_0_axi_periph/ARESETN",
           "axi_mem_intercon/S01_ARESETN",
-          "FIR0/ap_rst_n"
+          "firDMA/ap_rst_n"
         ]
       }
     },
@@ -2859,7 +2859,7 @@
           "Data": {
             "segments": {
               "SEG_axi_dma_0_Reg": {
-                "address_block": "/FIR0/axi_dma_0/S_AXI_LITE/Reg",
+                "address_block": "/firDMA/axi_dma_0/S_AXI_LITE/Reg",
                 "offset": "0x41E00000",
                 "range": "64K"
               }
@@ -2867,7 +2867,7 @@
           }
         }
       },
-      "/FIR0/axi_dma_0": {
+      "/firDMA/axi_dma_0": {
         "address_spaces": {
           "Data_MM2S": {
             "segments": {
