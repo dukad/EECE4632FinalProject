@@ -102,9 +102,9 @@ int distortion(int input, int threshold, float clip_factor) {
     int result;
     int negative_threshold = -threshold;
     if (input > threshold) {
-        result = (((input - threshold)*clip_factor) + threshold);
+        result = (((input - threshold)*clip_factor).to_int() + threshold);
     } else if (input < negative_threshold) {
-        result = (((input + threshold)*clip_factor) - threshold);
+        result = (((input + threshold)*clip_factor).to_int() - threshold);
     } else {
         result = input;
     }
