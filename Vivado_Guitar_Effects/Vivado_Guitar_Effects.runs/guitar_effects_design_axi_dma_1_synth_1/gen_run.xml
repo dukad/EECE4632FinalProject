@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="guitar_effects_design_axi_dma_1_synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1711577637">
   <File Type="PA-TCL" Name="guitar_effects_design_axi_dma_1.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="guitar_effects_design_axi_dma_1_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="guitar_effects_design_axi_dma_1_reports.tcl"/>
   <File Type="RDS-RDS" Name="guitar_effects_design_axi_dma_1.vds"/>
   <File Type="RDS-UTIL" Name="guitar_effects_design_axi_dma_1_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="guitar_effects_design_axi_dma_1_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="guitar_effects_design_axi_dma_1.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="guitar_effects_design_axi_dma_1_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="guitar_effects_design_axi_dma_1_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/guitar_effects_design_axi_dma_1">
     <File Path="$PSRCDIR/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_axi_dma_1/guitar_effects_design_axi_dma_1.xci">
       <FileInfo>
@@ -50,9 +47,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>

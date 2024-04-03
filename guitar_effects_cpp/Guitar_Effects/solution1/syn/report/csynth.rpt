@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'guitar_effects'
 ================================================================
 + General Information: 
-    * Date:           Wed Mar 27 19:53:45 2024
+    * Date:           Mon Apr  1 16:30:49 2024
     * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
     * Project:        Guitar_Effects
     * Solution:       solution1 (Vivado IP Flow Target)
@@ -19,11 +19,11 @@
     |            Modules           | Issue|      | Latency |  Latency  | Iteration|         |  Trip |          |           |        |           |            |     |
     |            & Loops           | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count | Pipelined|   BRAM    |   DSP  |     FF    |     LUT    | URAM|
     +------------------------------+------+------+---------+-----------+----------+---------+-------+----------+-----------+--------+-----------+------------+-----+
-    |+ guitar_effects              |     -|  0.04|        -|          -|         -|        -|      -|        no|  129 (46%)|  5 (2%)|  3075 (2%)|  6729 (12%)|    -|
+    |+ guitar_effects              |     -|  0.04|        -|          -|         -|        -|      -|        no|  129 (46%)|  5 (2%)|  3222 (3%)|  5584 (10%)|    -|
     | + guitar_effects_Pipeline_2  |     -|  1.62|    44102|  4.410e+05|         -|    44102|      -|        no|          -|       -|   18 (~0%)|    63 (~0%)|    -|
     |  o Loop 1                    |     -|  7.30|    44100|  4.410e+05|         1|        1|  44100|       yes|          -|       -|          -|           -|    -|
-    | o VITIS_LOOP_63_2            |     -|  7.30|        -|          -|        90|        -|      -|        no|          -|       -|          -|           -|    -|
-    |  + compression               |     -|  0.80|       48|    480.000|         -|       48|      -|        no|          -|       -|  861 (~0%)|   2123 (3%)|    -|
+    | o VITIS_LOOP_67_2            |     -|  7.30|        -|          -|        73|        -|      -|        no|          -|       -|          -|           -|    -|
+    |  + compression               |     -|  0.80|       48|    480.000|         -|       48|      -|        no|          -|       -|  1275 (1%)|   2418 (4%)|    -|
     +------------------------------+------+------+---------+-----------+----------+---------+-------+----------+-----------+--------+-----------+------------+-----+
 
 
@@ -83,7 +83,7 @@
 | axilite_out                | out       | int&                                       |
 | control                    | in        | char                                       |
 | distortion_threshold       | in        | int                                        |
-| distortion_clip_factor     | in        | float                                      |
+| distortion_clip_factor     | in        | ap_fixed<1, 8, AP_TRN, AP_WRAP, 0>         |
 | compression_min_threshold  | in        | int                                        |
 | compression_max_threshold  | in        | int                                        |
 | compression_zero_threshold | in        | int                                        |
@@ -120,41 +120,31 @@
 ================================================================
 == Bind Op Report
 ================================================================
-+------------------------------------------+-----+--------+--------------------+------+---------+---------+
-| Name                                     | DSP | Pragma | Variable           | Op   | Impl    | Latency |
-+------------------------------------------+-----+--------+--------------------+------+---------+---------+
-| + guitar_effects                         | 5   |        |                    |      |         |         |
-|   negative_threshold_fu_455_p2           | -   |        | negative_threshold | sub  | fabric  | 0       |
-|   grp_fu_449_p0                          | -   |        | sub_i135           | sub  | fabric  | 0       |
-|   add_ln107_fu_516_p2                    | -   |        | add_ln107          | add  | fabric  | 0       |
-|   fmul_32ns_32ns_32_4_max_dsp_1_U17      | 3   |        | mul8_i             | fmul | maxdsp  | 3       |
-|   faddfsub_32ns_32ns_32_5_full_dsp_1_U16 | 2   |        | dc_1               | fsub | fulldsp | 4       |
-|   add_ln346_1_fu_556_p2                  | -   |        | add_ln346_1        | add  | fabric  | 0       |
-|   sub_ln1512_1_fu_570_p2                 | -   |        | sub_ln1512_1       | sub  | fabric  | 0       |
-|   result_V_5_fu_649_p2                   | -   |        | result_V_5         | sub  | fabric  | 0       |
-|   sub_ln105_fu_521_p2                    | -   |        | sub_ln105          | sub  | fabric  | 0       |
-|   fmul_32ns_32ns_32_4_max_dsp_1_U17      | 3   |        | mul_i              | fmul | maxdsp  | 3       |
-|   faddfsub_32ns_32ns_32_5_full_dsp_1_U16 | 2   |        | dc                 | fsub | fulldsp | 4       |
-|   add_ln346_fu_690_p2                    | -   |        | add_ln346          | add  | fabric  | 0       |
-|   sub_ln1512_fu_704_p2                   | -   |        | sub_ln1512         | sub  | fabric  | 0       |
-|   result_V_2_fu_783_p2                   | -   |        | result_V_2         | sub  | fabric  | 0       |
-|   fmul_32ns_32ns_32_4_max_dsp_1_U17      | 3   |        | mul_i1             | fmul | maxdsp  | 3       |
-|   faddfsub_32ns_32ns_32_5_full_dsp_1_U16 | 2   |        | dc_2               | fsub | fulldsp | 4       |
-|   add_ln346_2_fu_847_p2                  | -   |        | add_ln346_2        | add  | fabric  | 0       |
-|   sub_ln1512_2_fu_861_p2                 | -   |        | sub_ln1512_2       | sub  | fabric  | 0       |
-|   result_V_8_fu_946_p2                   | -   |        | result_V_8         | sub  | fabric  | 0       |
-|  + guitar_effects_Pipeline_2             | 0   |        |                    |      |         |         |
-|    empty_25_fu_56_p2                     | -   |        | empty_25           | add  | fabric  | 0       |
-|  + compression                           | 0   |        |                    |      |         |         |
-|    sub_ln120_fu_150_p2                   | -   |        | sub_ln120          | sub  | fabric  | 0       |
-|    add_ln346_3_fu_237_p2                 | -   |        | add_ln346_3        | add  | fabric  | 0       |
-|    sub_ln1512_3_fu_251_p2                | -   |        | sub_ln1512_3       | sub  | fabric  | 0       |
-|    result_V_16_fu_330_p2                 | -   |        | result_V_16        | sub  | fabric  | 0       |
-|    fdiv_32ns_32ns_32_16_no_dsp_1_U3      | -   |        | compression_factor | fdiv | fabric  | 15      |
-|    add_ln346_fu_383_p2                   | -   |        | add_ln346          | add  | fabric  | 0       |
-|    sub_ln1512_fu_397_p2                  | -   |        | sub_ln1512         | sub  | fabric  | 0       |
-|    result_V_12_fu_476_p2                 | -   |        | result_V_12        | sub  | fabric  | 0       |
-+------------------------------------------+-----+--------+--------------------+------+---------+---------+
++--------------------------------------+-----+--------+--------------------+------+---------+---------+
+| Name                                 | DSP | Pragma | Variable           | Op   | Impl    | Latency |
++--------------------------------------+-----+--------+--------------------+------+---------+---------+
+| + guitar_effects                     | 5   |        |                    |      |         |         |
+|   negative_threshold_fu_459_p2       | -   |        | negative_threshold | sub  | fabric  | 0       |
+|   grp_fu_453_p0                      | -   |        | sub_i286           | sub  | fabric  | 0       |
+|   ret_V_1_fu_550_p2                  | -   |        | ret_V_1            | sub  | fabric  | 0       |
+|   sub_ln1319_fu_555_p2               | -   |        | sub_ln1319         | sub  | fabric  | 0       |
+|   ret_V_fu_575_p2                    | -   |        | ret_V              | add  | fabric  | 0       |
+|   fmul_32ns_32ns_32_4_max_dsp_1_U16  | 3   |        | mul_i              | fmul | maxdsp  | 3       |
+|   fadd_32ns_32ns_32_5_full_dsp_1_U15 | 2   |        | dc                 | fadd | fulldsp | 4       |
+|   add_ln346_fu_632_p2                | -   |        | add_ln346          | add  | fabric  | 0       |
+|   sub_ln1512_fu_646_p2               | -   |        | sub_ln1512         | sub  | fabric  | 0       |
+|   result_V_2_fu_732_p2               | -   |        | result_V_2         | sub  | fabric  | 0       |
+|  + guitar_effects_Pipeline_2         | 0   |        |                    |      |         |         |
+|    empty_25_fu_56_p2                 | -   |        | empty_25           | add  | fabric  | 0       |
+|  + compression                       | 0   |        |                    |      |         |         |
+|    sub_ln133_fu_141_p2               | -   |        | sub_ln133          | sub  | fabric  | 0       |
+|    add_ln346_1_fu_234_p2             | -   |        | add_ln346_1        | add  | fabric  | 0       |
+|    sub_ln1512_1_fu_248_p2            | -   |        | sub_ln1512_1       | sub  | fabric  | 0       |
+|    result_V_8_fu_327_p2              | -   |        | result_V_8         | sub  | fabric  | 0       |
+|    add_ln346_fu_392_p2               | -   |        | add_ln346          | add  | fabric  | 0       |
+|    sub_ln1512_fu_406_p2              | -   |        | sub_ln1512         | sub  | fabric  | 0       |
+|    result_V_4_fu_339_p2              | -   |        | result_V_4         | sub  | fabric  | 0       |
++--------------------------------------+-----+--------+--------------------+------+---------+---------+
 
 
 ================================================================
@@ -176,18 +166,18 @@
 +-----------+-------------------------------------------+---------------------------------------------------------------------+
 | Type      | Options                                   | Location                                                            |
 +-----------+-------------------------------------------+---------------------------------------------------------------------+
-| interface | axis port=INPUT                           | guitar_effects.cpp:29 in guitar_effects, INPUT                      |
-| interface | axis port=OUTPUT                          | guitar_effects.cpp:30 in guitar_effects, OUTPUT                     |
-| interface | s_axilite port=control                    | guitar_effects.cpp:31 in guitar_effects, control                    |
-| interface | s_axilite port=distortion_threshold       | guitar_effects.cpp:32 in guitar_effects, distortion_threshold       |
-| interface | s_axilite port=distortion_clip_factor     | guitar_effects.cpp:33 in guitar_effects, distortion_clip_factor     |
-| interface | s_axilite port=compression_min_threshold  | guitar_effects.cpp:34 in guitar_effects, compression_min_threshold  |
-| interface | s_axilite port=compression_max_threshold  | guitar_effects.cpp:35 in guitar_effects, compression_max_threshold  |
-| interface | s_axilite port=compression_zero_threshold | guitar_effects.cpp:36 in guitar_effects, compression_zero_threshold |
-| interface | s_axilite port=delay_mult                 | guitar_effects.cpp:37 in guitar_effects, delay_mult                 |
-| interface | s_axilite port=delay_samples              | guitar_effects.cpp:38 in guitar_effects, delay_samples              |
-| interface | s_axilite port=axilite_out                | guitar_effects.cpp:39 in guitar_effects, axilite_out                |
-| interface | ap_ctrl_none port=return                  | guitar_effects.cpp:40 in guitar_effects, return                     |
+| interface | axis port=INPUT                           | guitar_effects.cpp:32 in guitar_effects, INPUT                      |
+| interface | axis port=OUTPUT                          | guitar_effects.cpp:33 in guitar_effects, OUTPUT                     |
+| interface | s_axilite port=control                    | guitar_effects.cpp:34 in guitar_effects, control                    |
+| interface | s_axilite port=distortion_threshold       | guitar_effects.cpp:35 in guitar_effects, distortion_threshold       |
+| interface | s_axilite port=distortion_clip_factor     | guitar_effects.cpp:36 in guitar_effects, distortion_clip_factor     |
+| interface | s_axilite port=compression_min_threshold  | guitar_effects.cpp:37 in guitar_effects, compression_min_threshold  |
+| interface | s_axilite port=compression_max_threshold  | guitar_effects.cpp:38 in guitar_effects, compression_max_threshold  |
+| interface | s_axilite port=compression_zero_threshold | guitar_effects.cpp:39 in guitar_effects, compression_zero_threshold |
+| interface | s_axilite port=delay_mult                 | guitar_effects.cpp:40 in guitar_effects, delay_mult                 |
+| interface | s_axilite port=delay_samples              | guitar_effects.cpp:41 in guitar_effects, delay_samples              |
+| interface | s_axilite port=axilite_out                | guitar_effects.cpp:42 in guitar_effects, axilite_out                |
+| interface | ap_ctrl_none port=return                  | guitar_effects.cpp:43 in guitar_effects, return                     |
 +-----------+-------------------------------------------+---------------------------------------------------------------------+
 
 
