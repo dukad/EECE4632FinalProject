@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-//Date        : Wed Apr  3 15:53:12 2024
+//Date        : Wed Apr  3 16:17:02 2024
 //Host        : WFXB07B250A366D running 64-bit major release  (build 9200)
 //Command     : generate_target guitar_effects_design.bd
 //Design      : guitar_effects_design
@@ -9,7 +9,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "guitar_effects_design,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=guitar_effects_design,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=17,numReposBlks=9,numNonXlnxBlks=0,numHierBlks=8,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=1,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=22,da_ps7_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "guitar_effects_design.hwdef" *) 
+(* CORE_GENERATION_INFO = "guitar_effects_design,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=guitar_effects_design,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=17,numReposBlks=9,numNonXlnxBlks=0,numHierBlks=8,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=1,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=23,da_ps7_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "guitar_effects_design.hwdef" *) 
 module guitar_effects_design
    (DDR_addr,
     DDR_ba,
@@ -358,7 +358,7 @@ module guitar_effects_design
         .S00_AXI_rready(axi_dma_M_AXI_MM2S_RREADY),
         .S00_AXI_rresp(axi_dma_M_AXI_MM2S_RRESP),
         .S00_AXI_rvalid(axi_dma_M_AXI_MM2S_RVALID));
-  guitar_effects_design_guitar_effects_0_20 guitar_effects_0
+  guitar_effects_design_guitar_effects_0_21 guitar_effects_0
        (.INPUT_r_TDATA(axi_dma_M_AXIS_MM2S_TDATA),
         .INPUT_r_TDEST({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .INPUT_r_TID({1'b0,1'b0,1'b0,1'b0,1'b0}),
