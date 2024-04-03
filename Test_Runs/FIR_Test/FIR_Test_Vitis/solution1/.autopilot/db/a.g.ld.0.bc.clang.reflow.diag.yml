@@ -12,7 +12,7 @@ Args:
   - String:          'in function '''
   - String:          filt
   - String:          ''' completely with a factor of '
-  - Factor:          '32'
+  - Factor:          '10'
 ...
 --- !Passed
 Pass:            reflow-burst-inference
@@ -22,7 +22,7 @@ Args:
   - String:          'Sequential '
   - Direction:       read
   - String:          ' of length '
-  - Length:          '33'
+  - Length:          '11'
   - String:          ' has been inferred'
   - String:          ' _XLX_SEP_ '
   - AccessID:        c1seq
@@ -36,103 +36,37 @@ Args:
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          entry.load.111
+  - OrigID:          entry.load.89
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          entry.load.221
+  - OrigID:          entry.load.133
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          entry.load.218
+  - OrigID:          entry.load.130
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          entry.load.215
+  - OrigID:          entry.load.127
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          entry.load.212
+  - OrigID:          entry.load.124
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          entry.load.209
+  - OrigID:          entry.load.121
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          entry.load.206
+  - OrigID:          entry.load.118
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          entry.load.203
+  - OrigID:          entry.load.115
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          entry.load.200
+  - OrigID:          entry.load.112
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          entry.load.197
+  - OrigID:          entry.load.109
   - OrigAccess:      load
   - OrigDirection:   read
-  - OrigID:          entry.load.194
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          entry.load.191
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          entry.load.188
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          entry.load.185
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          entry.load.182
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          entry.load.179
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          entry.load.176
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          entry.load.173
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          entry.load.170
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          entry.load.167
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          entry.load.164
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          entry.load.161
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          entry.load.158
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          entry.load.155
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          entry.load.152
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          entry.load.149
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          entry.load.146
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          entry.load.143
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          entry.load.140
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          entry.load.137
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          entry.load.134
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          entry.load.131
-  - OrigAccess:      load
-  - OrigDirection:   read
-  - OrigID:          entry.load.128
+  - OrigID:          entry.load.106
 ...
 --- !Missed
 Pass:            reflow-burst-inference
@@ -257,7 +191,7 @@ Args:
   - String:          'Multiple burst '
   - Direction:       reads
   - String:          ' of length '
-  - Length:          '33'
+  - Length:          '11'
   - String:          ' and bit width '
   - Width:           '16'
   - String:          ' has been inferred.'
@@ -280,7 +214,7 @@ Args:
   - String:          'Multiple burst '
   - Direction:       reads
   - String:          ' of length '
-  - Length:          '33'
+  - Length:          '11'
   - String:          ' and bit width '
   - Width:           '16'
   - String:          ' has been inferred on bundle '''

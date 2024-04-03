@@ -2597,6 +2597,9 @@
             "xci_path": "ip\\FIR_Test_axi_bram_ctrl_0_0\\FIR_Test_axi_bram_ctrl_0_0.xci",
             "inst_hier_path": "FIR/axi_bram_ctrl_0",
             "parameters": {
+              "DATA_WIDTH": {
+                "value": "32"
+              },
               "SINGLE_PORT_BRAM": {
                 "value": "1"
               }
@@ -2671,9 +2674,9 @@
           },
           "filt_0": {
             "vlnv": "xilinx.com:hls:filt:1.0",
-            "ip_revision": "2113495659",
-            "xci_name": "FIR_Test_filt_0_4",
-            "xci_path": "ip\\FIR_Test_filt_0_4\\FIR_Test_filt_0_4.xci",
+            "ip_revision": "2113498350",
+            "xci_name": "FIR_Test_filt_0_5",
+            "xci_path": "ip\\FIR_Test_filt_0_5\\FIR_Test_filt_0_5.xci",
             "inst_hier_path": "FIR/filt_0",
             "interface_ports": {
               "m_axi_gmem": {

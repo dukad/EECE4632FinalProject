@@ -1329,7 +1329,7 @@ void apatb_filt_hw(void* __xlx_apatb_param_y_V_data_V, void* __xlx_apatb_param_y
 #endif
   };
   port15.param = { __xlx_apatb_param_c };
-  port15.nbytes = { 66 };
+  port15.nbytes = { 22 };
   port15.offset = {  };
   port15.hasWrite = { false };
 

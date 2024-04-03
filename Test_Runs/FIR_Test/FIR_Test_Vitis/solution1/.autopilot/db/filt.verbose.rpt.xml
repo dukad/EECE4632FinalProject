@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'filt'" level="0">
-<item name = "Date">Mon Apr  1 18:35:07 2024
+<item name = "Date">Wed Apr  3 15:29:45 2024
 </item>
 <item name = "Version">2023.2 (Build 4023990 on Oct 11 2023)</item>
 <item name = "Project">FIR_Test_Vitis</item>
@@ -31,7 +31,7 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_filt_Pipeline_VITIS_LOOP_18_1_fu_178">filt_Pipeline_VITIS_LOOP_18_1, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_filt_Pipeline_VITIS_LOOP_18_1_fu_132">filt_Pipeline_VITIS_LOOP_18_1, ?, ?, ?, ?, ?, ?, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
@@ -50,12 +50,12 @@
 <column name="DSP">-, -, -, -, -</column>
 <column name="Expression">-, -, 0, 2, -</column>
 <column name="FIFO">-, -, -, -, -</column>
-<column name="Instance">2, 33, 2595, 1604, -</column>
+<column name="Instance">2, 11, 1727, 1312, -</column>
 <column name="Memory">-, -, -, -, -</column>
-<column name="Multiplexer">-, -, -, 228, -</column>
-<column name="Register">-, -, 638, -, -</column>
+<column name="Multiplexer">-, -, -, 140, -</column>
+<column name="Register">-, -, 264, -, -</column>
 <specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
-<specialColumn name="Utilization (%)">~0, 15, 3, 3, 0</specialColumn>
+<specialColumn name="Utilization (%)">~0, 5, 1, 2, 0</specialColumn>
 </table>
 </item>
 <item name = "Detail">
@@ -63,7 +63,7 @@
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
 <column name="control_s_axi_U">control_s_axi, 0, 0, 100, 168, 0</column>
-<column name="grp_filt_Pipeline_VITIS_LOOP_18_1_fu_178">filt_Pipeline_VITIS_LOOP_18_1, 0, 33, 1640, 605, 0</column>
+<column name="grp_filt_Pipeline_VITIS_LOOP_18_1_fu_132">filt_Pipeline_VITIS_LOOP_18_1, 0, 11, 772, 313, 0</column>
 <column name="gmem_m_axi_U">gmem_m_axi, 2, 0, 855, 831, 0</column>
 </table>
 </item>
@@ -81,12 +81,12 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="grp_filt_Pipeline_VITIS_LOOP_18_1_fu_178_y_TREADY">and, 0, 0, 2, 1, 1</column>
+<column name="grp_filt_Pipeline_VITIS_LOOP_18_1_fu_132_y_TREADY">and, 0, 0, 2, 1, 1</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
-<column name="ap_NS_fsm">201, 46, 1, 46</column>
+<column name="ap_NS_fsm">113, 24, 1, 24</column>
 <column name="gmem_blk_n_AR">9, 2, 1, 2</column>
 <column name="gmem_blk_n_R">9, 2, 1, 2</column>
 <column name="x_TREADY_int_regslice">9, 2, 1, 2</column>
@@ -94,42 +94,20 @@
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
-<column name="ap_CS_fsm">45, 0, 45, 0</column>
-<column name="gmem_addr_read_10_reg_383">16, 0, 16, 0</column>
-<column name="gmem_addr_read_11_reg_388">16, 0, 16, 0</column>
-<column name="gmem_addr_read_12_reg_393">16, 0, 16, 0</column>
-<column name="gmem_addr_read_13_reg_398">16, 0, 16, 0</column>
-<column name="gmem_addr_read_14_reg_403">16, 0, 16, 0</column>
-<column name="gmem_addr_read_15_reg_408">16, 0, 16, 0</column>
-<column name="gmem_addr_read_16_reg_413">16, 0, 16, 0</column>
-<column name="gmem_addr_read_17_reg_418">16, 0, 16, 0</column>
-<column name="gmem_addr_read_18_reg_423">16, 0, 16, 0</column>
-<column name="gmem_addr_read_19_reg_428">16, 0, 16, 0</column>
-<column name="gmem_addr_read_1_reg_338">16, 0, 16, 0</column>
-<column name="gmem_addr_read_20_reg_433">16, 0, 16, 0</column>
-<column name="gmem_addr_read_21_reg_438">16, 0, 16, 0</column>
-<column name="gmem_addr_read_22_reg_443">16, 0, 16, 0</column>
-<column name="gmem_addr_read_23_reg_448">16, 0, 16, 0</column>
-<column name="gmem_addr_read_24_reg_453">16, 0, 16, 0</column>
-<column name="gmem_addr_read_25_reg_458">16, 0, 16, 0</column>
-<column name="gmem_addr_read_26_reg_463">16, 0, 16, 0</column>
-<column name="gmem_addr_read_27_reg_468">16, 0, 16, 0</column>
-<column name="gmem_addr_read_28_reg_473">16, 0, 16, 0</column>
-<column name="gmem_addr_read_29_reg_478">16, 0, 16, 0</column>
-<column name="gmem_addr_read_2_reg_343">16, 0, 16, 0</column>
-<column name="gmem_addr_read_30_reg_483">16, 0, 16, 0</column>
-<column name="gmem_addr_read_31_reg_488">16, 0, 16, 0</column>
-<column name="gmem_addr_read_32_reg_493">16, 0, 16, 0</column>
-<column name="gmem_addr_read_3_reg_348">16, 0, 16, 0</column>
-<column name="gmem_addr_read_4_reg_353">16, 0, 16, 0</column>
-<column name="gmem_addr_read_5_reg_358">16, 0, 16, 0</column>
-<column name="gmem_addr_read_6_reg_363">16, 0, 16, 0</column>
-<column name="gmem_addr_read_7_reg_368">16, 0, 16, 0</column>
-<column name="gmem_addr_read_8_reg_373">16, 0, 16, 0</column>
-<column name="gmem_addr_read_9_reg_378">16, 0, 16, 0</column>
-<column name="gmem_addr_read_reg_333">16, 0, 16, 0</column>
-<column name="gmem_addr_reg_327">64, 0, 64, 0</column>
-<column name="grp_filt_Pipeline_VITIS_LOOP_18_1_fu_178_ap_start_reg">1, 0, 1, 0</column>
+<column name="ap_CS_fsm">23, 0, 23, 0</column>
+<column name="gmem_addr_read_10_reg_271">16, 0, 16, 0</column>
+<column name="gmem_addr_read_1_reg_226">16, 0, 16, 0</column>
+<column name="gmem_addr_read_2_reg_231">16, 0, 16, 0</column>
+<column name="gmem_addr_read_3_reg_236">16, 0, 16, 0</column>
+<column name="gmem_addr_read_4_reg_241">16, 0, 16, 0</column>
+<column name="gmem_addr_read_5_reg_246">16, 0, 16, 0</column>
+<column name="gmem_addr_read_6_reg_251">16, 0, 16, 0</column>
+<column name="gmem_addr_read_7_reg_256">16, 0, 16, 0</column>
+<column name="gmem_addr_read_8_reg_261">16, 0, 16, 0</column>
+<column name="gmem_addr_read_9_reg_266">16, 0, 16, 0</column>
+<column name="gmem_addr_read_reg_221">16, 0, 16, 0</column>
+<column name="gmem_addr_reg_215">64, 0, 64, 0</column>
+<column name="grp_filt_Pipeline_VITIS_LOOP_18_1_fu_132_ap_start_reg">1, 0, 1, 0</column>
 </table>
 </item>
 </section>

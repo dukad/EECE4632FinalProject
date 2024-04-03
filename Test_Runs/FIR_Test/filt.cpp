@@ -3,10 +3,10 @@
 
 typedef ap_axis<16,1,1,1> AXI_VAL;
 typedef short data_t;
-typedef short	coef_t;
-typedef short	acc_t;
+typedef short coef_t;
+typedef short acc_t;
 
-#define N 33
+#define N 11
 
 void filt (hls::stream<AXI_VAL>& y, coef_t c[N], hls::stream<AXI_VAL>& x) {
 #pragma HLS INTERFACE m_axi depth=11 port=c
@@ -39,7 +39,7 @@ void filt (hls::stream<AXI_VAL>& y, coef_t c[N], hls::stream<AXI_VAL>& x) {
 			lowfreq_accumulate += lowfreq_shift_reg[i] * c[i];
 		}
 
-		lowfreq_accumulate+= tmp.data.to_short() * c[0];
+		lowfreq_accumulate += tmp.data.to_short() * c[0];
 		lowfreq_shift_reg[0] = tmp.data.to_short();
 		AXI_VAL output;
 		output.data = lowfreq_accumulate;
