@@ -1,10 +1,10 @@
 #include <hls_stream.h>
 #include <ap_axi_sdata.h>
 
-typedef ap_axis<16,1,1,1> AXI_VAL;
-typedef short data_t;
-typedef short coef_t;
-typedef short acc_t;
+typedef ap_axis<32,1,1,1> AXI_VAL;
+typedef int data_t;
+typedef int coef_t;
+typedef int acc_t;
 
 #define N 11
 
@@ -25,7 +25,7 @@ void filt (hls::stream<AXI_VAL>& y, coef_t c[N], hls::stream<AXI_VAL>& x) {
 		acc_t highfreq_accumulate;
 
 		data_t data;
-		short i;
+		int i;
 
 		AXI_VAL tmp;
 		x.read(tmp);

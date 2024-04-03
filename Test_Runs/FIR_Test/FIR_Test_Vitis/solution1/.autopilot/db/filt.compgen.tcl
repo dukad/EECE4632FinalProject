@@ -61,7 +61,7 @@ eval "::AESL_LIB_XILADAPTER::native_axis_add { \
     corename {y} \
     metadata {  } \
     op interface \
-    ports { y_TDATA { O 16 vector } } \
+    ports { y_TDATA { O 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'y_V_data_V'"
@@ -80,7 +80,7 @@ eval "::AESL_LIB_XILADAPTER::native_axis_add { \
     corename {y} \
     metadata {  } \
     op interface \
-    ports { y_TKEEP { O 2 vector } } \
+    ports { y_TKEEP { O 4 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'y_V_keep_V'"
@@ -99,7 +99,7 @@ eval "::AESL_LIB_XILADAPTER::native_axis_add { \
     corename {y} \
     metadata {  } \
     op interface \
-    ports { y_TSTRB { O 2 vector } } \
+    ports { y_TSTRB { O 4 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'y_V_strb_V'"
@@ -194,7 +194,7 @@ eval "::AESL_LIB_XILADAPTER::native_axis_add { \
     corename {x} \
     metadata {  } \
     op interface \
-    ports { x_TDATA { I 16 vector } } \
+    ports { x_TDATA { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'x_V_data_V'"
@@ -213,7 +213,7 @@ eval "::AESL_LIB_XILADAPTER::native_axis_add { \
     corename {x} \
     metadata {  } \
     op interface \
-    ports { x_TKEEP { I 2 vector } } \
+    ports { x_TKEEP { I 4 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'x_V_keep_V'"
@@ -232,7 +232,7 @@ eval "::AESL_LIB_XILADAPTER::native_axis_add { \
     corename {x} \
     metadata {  } \
     op interface \
-    ports { x_TSTRB { I 2 vector } } \
+    ports { x_TSTRB { I 4 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'x_V_strb_V'"

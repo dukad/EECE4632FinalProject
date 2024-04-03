@@ -2,10 +2,10 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-// Date        : Mon Apr  1 16:25:35 2024
+// Date        : Mon Apr  1 15:28:38 2024
 // Host        : DESKTOP-G7JA666 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/ip/FIR_Test_axi_dma_0_0/FIR_Test_axi_dma_0_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top FIR_Test_axi_dma_0_0 -prefix
+//               FIR_Test_axi_dma_0_0_ FIR_Test_axi_dma_0_0_stub.v
 // Design      : FIR_Test_axi_dma_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg400-1
@@ -31,7 +31,7 @@ module FIR_Test_axi_dma_0_0(s_axi_lite_aclk, m_axi_mm2s_aclk,
   m_axi_s2mm_wready, m_axi_s2mm_bresp, m_axi_s2mm_bvalid, m_axi_s2mm_bready, 
   s2mm_prmry_reset_out_n, s_axis_s2mm_tdata, s_axis_s2mm_tkeep, s_axis_s2mm_tvalid, 
   s_axis_s2mm_tready, s_axis_s2mm_tlast, mm2s_introut, s2mm_introut, axi_dma_tstvec)
-/* synthesis syn_black_box black_box_pad_pin="axi_resetn,s_axi_lite_awvalid,s_axi_lite_awready,s_axi_lite_awaddr[9:0],s_axi_lite_wvalid,s_axi_lite_wready,s_axi_lite_wdata[31:0],s_axi_lite_bresp[1:0],s_axi_lite_bvalid,s_axi_lite_bready,s_axi_lite_arvalid,s_axi_lite_arready,s_axi_lite_araddr[9:0],s_axi_lite_rvalid,s_axi_lite_rready,s_axi_lite_rdata[31:0],s_axi_lite_rresp[1:0],m_axi_mm2s_araddr[31:0],m_axi_mm2s_arlen[7:0],m_axi_mm2s_arsize[2:0],m_axi_mm2s_arburst[1:0],m_axi_mm2s_arprot[2:0],m_axi_mm2s_arcache[3:0],m_axi_mm2s_arvalid,m_axi_mm2s_arready,m_axi_mm2s_rdata[31:0],m_axi_mm2s_rresp[1:0],m_axi_mm2s_rlast,m_axi_mm2s_rvalid,m_axi_mm2s_rready,mm2s_prmry_reset_out_n,m_axis_mm2s_tdata[15:0],m_axis_mm2s_tkeep[1:0],m_axis_mm2s_tvalid,m_axis_mm2s_tready,m_axis_mm2s_tlast,m_axi_s2mm_awaddr[31:0],m_axi_s2mm_awlen[7:0],m_axi_s2mm_awsize[2:0],m_axi_s2mm_awburst[1:0],m_axi_s2mm_awprot[2:0],m_axi_s2mm_awcache[3:0],m_axi_s2mm_awvalid,m_axi_s2mm_awready,m_axi_s2mm_wdata[31:0],m_axi_s2mm_wstrb[3:0],m_axi_s2mm_wlast,m_axi_s2mm_wvalid,m_axi_s2mm_wready,m_axi_s2mm_bresp[1:0],m_axi_s2mm_bvalid,m_axi_s2mm_bready,s2mm_prmry_reset_out_n,s_axis_s2mm_tdata[15:0],s_axis_s2mm_tkeep[1:0],s_axis_s2mm_tvalid,s_axis_s2mm_tready,s_axis_s2mm_tlast,mm2s_introut,s2mm_introut,axi_dma_tstvec[31:0]" */
+/* synthesis syn_black_box black_box_pad_pin="axi_resetn,s_axi_lite_awvalid,s_axi_lite_awready,s_axi_lite_awaddr[9:0],s_axi_lite_wvalid,s_axi_lite_wready,s_axi_lite_wdata[31:0],s_axi_lite_bresp[1:0],s_axi_lite_bvalid,s_axi_lite_bready,s_axi_lite_arvalid,s_axi_lite_arready,s_axi_lite_araddr[9:0],s_axi_lite_rvalid,s_axi_lite_rready,s_axi_lite_rdata[31:0],s_axi_lite_rresp[1:0],m_axi_mm2s_araddr[31:0],m_axi_mm2s_arlen[7:0],m_axi_mm2s_arsize[2:0],m_axi_mm2s_arburst[1:0],m_axi_mm2s_arprot[2:0],m_axi_mm2s_arcache[3:0],m_axi_mm2s_arvalid,m_axi_mm2s_arready,m_axi_mm2s_rdata[31:0],m_axi_mm2s_rresp[1:0],m_axi_mm2s_rlast,m_axi_mm2s_rvalid,m_axi_mm2s_rready,mm2s_prmry_reset_out_n,m_axis_mm2s_tdata[31:0],m_axis_mm2s_tkeep[3:0],m_axis_mm2s_tvalid,m_axis_mm2s_tready,m_axis_mm2s_tlast,m_axi_s2mm_awaddr[31:0],m_axi_s2mm_awlen[7:0],m_axi_s2mm_awsize[2:0],m_axi_s2mm_awburst[1:0],m_axi_s2mm_awprot[2:0],m_axi_s2mm_awcache[3:0],m_axi_s2mm_awvalid,m_axi_s2mm_awready,m_axi_s2mm_wdata[31:0],m_axi_s2mm_wstrb[3:0],m_axi_s2mm_wlast,m_axi_s2mm_wvalid,m_axi_s2mm_wready,m_axi_s2mm_bresp[1:0],m_axi_s2mm_bvalid,m_axi_s2mm_bready,s2mm_prmry_reset_out_n,s_axis_s2mm_tdata[31:0],s_axis_s2mm_tkeep[3:0],s_axis_s2mm_tvalid,s_axis_s2mm_tready,s_axis_s2mm_tlast,mm2s_introut,s2mm_introut,axi_dma_tstvec[31:0]" */
 /* synthesis syn_force_seq_prim="s_axi_lite_aclk" */
 /* synthesis syn_force_seq_prim="m_axi_mm2s_aclk" */
 /* synthesis syn_force_seq_prim="m_axi_s2mm_aclk" */;
@@ -69,8 +69,8 @@ module FIR_Test_axi_dma_0_0(s_axi_lite_aclk, m_axi_mm2s_aclk,
   input m_axi_mm2s_rvalid;
   output m_axi_mm2s_rready;
   output mm2s_prmry_reset_out_n;
-  output [15:0]m_axis_mm2s_tdata;
-  output [1:0]m_axis_mm2s_tkeep;
+  output [31:0]m_axis_mm2s_tdata;
+  output [3:0]m_axis_mm2s_tkeep;
   output m_axis_mm2s_tvalid;
   input m_axis_mm2s_tready;
   output m_axis_mm2s_tlast;
@@ -91,8 +91,8 @@ module FIR_Test_axi_dma_0_0(s_axi_lite_aclk, m_axi_mm2s_aclk,
   input m_axi_s2mm_bvalid;
   output m_axi_s2mm_bready;
   output s2mm_prmry_reset_out_n;
-  input [15:0]s_axis_s2mm_tdata;
-  input [1:0]s_axis_s2mm_tkeep;
+  input [31:0]s_axis_s2mm_tdata;
+  input [3:0]s_axis_s2mm_tkeep;
   input s_axis_s2mm_tvalid;
   output s_axis_s2mm_tready;
   input s_axis_s2mm_tlast;

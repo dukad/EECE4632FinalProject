@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-//Date        : Wed Apr  3 15:34:54 2024
+//Date        : Wed Apr  3 15:52:30 2024
 //Host        : DESKTOP-G7JA666 running 64-bit major release  (build 9200)
 //Command     : generate_target FIR_Test.bd
 //Design      : FIR_Test
@@ -1491,8 +1491,8 @@ module FIR_imp_13DKXQW
   wire [31:0]axi_bram_ctrl_0_BRAM_PORTA_DOUT;
   wire axi_bram_ctrl_0_BRAM_PORTA_EN;
   wire axi_bram_ctrl_0_BRAM_PORTA_RST;
-  wire [15:0]axi_dma_0_M_AXIS_MM2S_TDATA;
-  wire [1:0]axi_dma_0_M_AXIS_MM2S_TKEEP;
+  wire [31:0]axi_dma_0_M_AXIS_MM2S_TDATA;
+  wire [3:0]axi_dma_0_M_AXIS_MM2S_TKEEP;
   wire axi_dma_0_M_AXIS_MM2S_TLAST;
   wire axi_dma_0_M_AXIS_MM2S_TREADY;
   wire axi_dma_0_M_AXIS_MM2S_TVALID;
@@ -1560,8 +1560,8 @@ module FIR_imp_13DKXQW
   wire filt_0_m_axi_gmem_WREADY;
   wire [3:0]filt_0_m_axi_gmem_WSTRB;
   wire filt_0_m_axi_gmem_WVALID;
-  wire [15:0]filt_0_y_TDATA;
-  wire [1:0]filt_0_y_TKEEP;
+  wire [31:0]filt_0_y_TDATA;
+  wire [3:0]filt_0_y_TKEEP;
   wire [0:0]filt_0_y_TLAST;
   wire filt_0_y_TREADY;
   wire filt_0_y_TVALID;
@@ -1740,7 +1740,7 @@ module FIR_imp_13DKXQW
         .douta(axi_bram_ctrl_0_BRAM_PORTA_DOUT),
         .ena(axi_bram_ctrl_0_BRAM_PORTA_EN),
         .rsta(axi_bram_ctrl_0_BRAM_PORTA_RST));
-  FIR_Test_filt_0_5 filt_0
+  FIR_Test_filt_0_6 filt_0
        (.ap_clk(processing_system7_0_FCLK_CLK0),
         .ap_rst_n(rst_ps7_0_100M_peripheral_aresetn),
         .m_axi_gmem_ARADDR(filt_0_m_axi_gmem_ARADDR),
@@ -1793,7 +1793,7 @@ module FIR_imp_13DKXQW
         .x_TKEEP(axi_dma_0_M_AXIS_MM2S_TKEEP),
         .x_TLAST(axi_dma_0_M_AXIS_MM2S_TLAST),
         .x_TREADY(axi_dma_0_M_AXIS_MM2S_TREADY),
-        .x_TSTRB({1'b1,1'b1}),
+        .x_TSTRB({1'b1,1'b1,1'b1,1'b1}),
         .x_TUSER(1'b0),
         .x_TVALID(axi_dma_0_M_AXIS_MM2S_TVALID),
         .y_TDATA(filt_0_y_TDATA),

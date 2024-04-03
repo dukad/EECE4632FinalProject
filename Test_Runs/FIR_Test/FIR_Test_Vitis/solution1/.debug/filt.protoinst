@@ -3,7 +3,7 @@
 	"modules": {
 		"filt": {
 			"proto_instances": {
-				"grp_filt_Pipeline_VITIS_LOOP_18_1_fu_132/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_132_activity": {
+				"grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134/grp_filt_Pipeline_VITIS_LOOP_18_1_fu_134_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},

@@ -1,5 +1,5 @@
 INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2023.2/bin/unwrapped/win64.o/vitis_hls.exe'
-INFO: [HLS 200-10] For user 'a01me' on host 'desktop-g7ja666' (Windows NT_amd64 version 6.2) on Wed Apr 03 15:30:06 -0400 2024
+INFO: [HLS 200-10] For user 'a01me' on host 'desktop-g7ja666' (Windows NT_amd64 version 6.2) on Wed Apr 03 15:48:59 -0400 2024
 INFO: [HLS 200-10] In directory 'C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test'
 INFO: [HLS 200-2053] The vitis_hls executable is being deprecated. Consider using vitis-run --mode hls --tcl
 Sourcing Tcl script 'C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vitis/solution1/export.tcl'
@@ -33,11 +33,11 @@ INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
     ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source run_ippack.tcl -notrace
-ipx::create_core: Time (s): cpu = 00:00:06 ; elapsed = 00:00:22 . Memory (MB): peak = 569.602 ; gain = 176.125
+ipx::create_core: Time (s): cpu = 00:00:08 ; elapsed = 00:00:16 . Memory (MB): peak = 571.578 ; gain = 175.559
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.2/data/ip'.
-INFO: [Common 17-206] Exiting Vivado at Wed Apr  3 15:31:00 2024...
+INFO: [Common 17-206] Exiting Vivado at Wed Apr  3 15:49:37 2024...
 INFO: [HLS 200-802] Generated output file export.zip
-INFO: [HLS 200-111] Finished Command export_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 50.28 seconds; current allocated memory: 8.777 MB.
-INFO: [HLS 200-112] Total CPU user time: 3 seconds. Total CPU system time: 1 seconds. Total elapsed time: 56.068 seconds; peak allocated memory: 202.242 MB.
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 33.817 seconds; current allocated memory: 8.547 MB.
+INFO: [HLS 200-112] Total CPU user time: 4 seconds. Total CPU system time: 1 seconds. Total elapsed time: 39.499 seconds; peak allocated memory: 202.211 MB.

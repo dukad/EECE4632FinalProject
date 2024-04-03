@@ -2634,7 +2634,7 @@
                 "value": "0"
               },
               "c_m_axis_mm2s_tdata_width": {
-                "value": "16"
+                "value": "32"
               }
             },
             "interface_ports": {
@@ -2674,9 +2674,9 @@
           },
           "filt_0": {
             "vlnv": "xilinx.com:hls:filt:1.0",
-            "ip_revision": "2113498350",
-            "xci_name": "FIR_Test_filt_0_5",
-            "xci_path": "ip\\FIR_Test_filt_0_5\\FIR_Test_filt_0_5.xci",
+            "ip_revision": "2113498369",
+            "xci_name": "FIR_Test_filt_0_6",
+            "xci_path": "ip\\FIR_Test_filt_0_6\\FIR_Test_filt_0_6.xci",
             "inst_hier_path": "FIR/filt_0",
             "interface_ports": {
               "m_axi_gmem": {
