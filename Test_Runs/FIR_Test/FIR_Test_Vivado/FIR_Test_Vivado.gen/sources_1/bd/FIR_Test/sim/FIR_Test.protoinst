@@ -3,7 +3,7 @@
 	"modules": {
 		"FIR_Test": {
 			"proto_instances": {
-				"/FIR/M_AXI_MM2S": {
+				"/FIR0/M_AXI_MM2S": {
 					"interface": "xilinx.com:interface:aximm:1.0",
 					"ports": {
 						"ACLK": { "actual": "ap_clk"},
@@ -22,7 +22,7 @@
 						"RVALID": { "actual": "M_AXI_MM2S_rvalid"}
 					}
 				},
-				"/FIR/M_AXI_S2MM": {
+				"/FIR0/M_AXI_S2MM": {
 					"interface": "xilinx.com:interface:aximm:1.0",
 					"ports": {
 						"ACLK": { "actual": "ap_clk"},
@@ -44,7 +44,7 @@
 						"WVALID": { "actual": "M_AXI_S2MM_wvalid"}
 					}
 				},
-				"/FIR/S_AXI_LITE": {
+				"/FIR0/S_AXI_LITE": {
 					"interface": "xilinx.com:interface:aximm:1.0",
 					"ports": {
 						"ACLK": { "actual": "ap_clk"},
@@ -67,7 +67,7 @@
 						"WVALID": { "actual": "S_AXI_LITE_wvalid"}
 					}
 				},
-				"/FIR/axi_bram_ctrl_0/S_AXI": {
+				"/FIR0/axi_bram_ctrl_0/S_AXI": {
 					"interface": "xilinx.com:interface:aximm:1.0",
 					"ports": {
 						"ACLK": { "actual": "s_axi_aclk"},
@@ -109,19 +109,19 @@
 						"WVALID": { "actual": "s_axi_wvalid"}
 					}
 				},
-				"/FIR/axi_dma_0/M_AXIS_MM2S": {
+				"/FIR0/axi_dma_0/M_AXIS_MM2S": {
 					"interface": "xilinx.com:interface:axis:1.0",
 					"ports": {
 						"ACLK": { "actual": "m_axi_mm2s_aclk"},
 						"ARESETN": { "actual": "mm2s_prmry_reset_out_n"},
-						"TDATA": { "actual": "m_axis_mm2s_tdata[31:0]"},
-						"TKEEP": { "actual": "m_axis_mm2s_tkeep[3:0]"},
+						"TDATA": { "actual": "m_axis_mm2s_tdata[15:0]"},
+						"TKEEP": { "actual": "m_axis_mm2s_tkeep[1:0]"},
 						"TLAST": { "actual": "m_axis_mm2s_tlast"},
 						"TREADY": { "actual": "m_axis_mm2s_tready"},
 						"TVALID": { "actual": "m_axis_mm2s_tvalid"}
 					}
 				},
-				"/FIR/axi_dma_0/M_AXI_MM2S": {
+				"/FIR0/axi_dma_0/M_AXI_MM2S": {
 					"interface": "xilinx.com:interface:aximm:1.0",
 					"ports": {
 						"ACLK": { "actual": "m_axi_mm2s_aclk"},
@@ -141,7 +141,7 @@
 						"RVALID": { "actual": "m_axi_mm2s_rvalid"}
 					}
 				},
-				"/FIR/axi_dma_0/M_AXI_S2MM": {
+				"/FIR0/axi_dma_0/M_AXI_S2MM": {
 					"interface": "xilinx.com:interface:aximm:1.0",
 					"ports": {
 						"ACLK": { "actual": "m_axi_s2mm_aclk"},
@@ -164,19 +164,19 @@
 						"WVALID": { "actual": "m_axi_s2mm_wvalid"}
 					}
 				},
-				"/FIR/axi_dma_0/S_AXIS_S2MM": {
+				"/FIR0/axi_dma_0/S_AXIS_S2MM": {
 					"interface": "xilinx.com:interface:axis:1.0",
 					"ports": {
 						"ACLK": { "actual": "m_axi_s2mm_aclk"},
 						"ARESETN": { "actual": "s2mm_prmry_reset_out_n"},
-						"TDATA": { "actual": "s_axis_s2mm_tdata[31:0]"},
-						"TKEEP": { "actual": "s_axis_s2mm_tkeep[3:0]"},
+						"TDATA": { "actual": "s_axis_s2mm_tdata[15:0]"},
+						"TKEEP": { "actual": "s_axis_s2mm_tkeep[1:0]"},
 						"TLAST": { "actual": "s_axis_s2mm_tlast"},
 						"TREADY": { "actual": "s_axis_s2mm_tready"},
 						"TVALID": { "actual": "s_axis_s2mm_tvalid"}
 					}
 				},
-				"/FIR/axi_dma_0/S_AXI_LITE": {
+				"/FIR0/axi_dma_0/S_AXI_LITE": {
 					"interface": "xilinx.com:interface:aximm:1.0",
 					"ports": {
 						"ACLK": { "actual": "s_axi_lite_aclk"},
@@ -199,7 +199,7 @@
 						"WVALID": { "actual": "s_axi_lite_wvalid"}
 					}
 				},
-				"/FIR/filt_0/m_axi_gmem": {
+				"/FIR0/filt_0/m_axi_gmem": {
 					"interface": "xilinx.com:interface:aximm:1.0",
 					"ports": {
 						"ACLK": { "actual": "ap_clk"},
@@ -246,34 +246,34 @@
 						"WVALID": { "actual": "m_axi_gmem_WVALID"}
 					}
 				},
-				"/FIR/filt_0/x": {
+				"/FIR0/filt_0/x": {
 					"interface": "xilinx.com:interface:axis:1.0",
 					"ports": {
 						"ACLK": { "actual": "ap_clk"},
 						"ARESETN": { "actual": "ap_rst_n"},
-						"TDATA": { "actual": "x_TDATA[31:0]"},
+						"TDATA": { "actual": "x_TDATA[15:0]"},
 						"TDEST": { "actual": "x_TDEST[0:0]"},
 						"TID": { "actual": "x_TID[0:0]"},
-						"TKEEP": { "actual": "x_TKEEP[3:0]"},
+						"TKEEP": { "actual": "x_TKEEP[1:0]"},
 						"TLAST": { "actual": "x_TLAST[0:0]"},
 						"TREADY": { "actual": "x_TREADY"},
-						"TSTRB": { "actual": "x_TSTRB[3:0]"},
+						"TSTRB": { "actual": "x_TSTRB[1:0]"},
 						"TUSER": { "actual": "x_TUSER[0:0]"},
 						"TVALID": { "actual": "x_TVALID"}
 					}
 				},
-				"/FIR/filt_0/y": {
+				"/FIR0/filt_0/y": {
 					"interface": "xilinx.com:interface:axis:1.0",
 					"ports": {
 						"ACLK": { "actual": "ap_clk"},
 						"ARESETN": { "actual": "ap_rst_n"},
-						"TDATA": { "actual": "y_TDATA[31:0]"},
+						"TDATA": { "actual": "y_TDATA[15:0]"},
 						"TDEST": { "actual": "y_TDEST[0:0]"},
 						"TID": { "actual": "y_TID[0:0]"},
-						"TKEEP": { "actual": "y_TKEEP[3:0]"},
+						"TKEEP": { "actual": "y_TKEEP[1:0]"},
 						"TLAST": { "actual": "y_TLAST[0:0]"},
 						"TREADY": { "actual": "y_TREADY"},
-						"TSTRB": { "actual": "y_TSTRB[3:0]"},
+						"TSTRB": { "actual": "y_TSTRB[1:0]"},
 						"TUSER": { "actual": "y_TUSER[0:0]"},
 						"TVALID": { "actual": "y_TVALID"}
 					}

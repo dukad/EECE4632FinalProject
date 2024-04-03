@@ -9742,10 +9742,10 @@ private:
 }
 # 3 "filt.cpp" 2
 
-typedef ap_axis<32,1,1,1> AXI_VAL;
-typedef int data_t;
-typedef int coef_t;
-typedef int acc_t;
+typedef ap_axis<16,1,1,1> AXI_VAL;
+typedef short data_t;
+typedef short coef_t;
+typedef short acc_t;
 
 
 
@@ -9770,21 +9770,22 @@ __attribute__((sdx_kernel("filt", 0))) void filt (hls::stream<AXI_VAL>& y, coef_
   acc_t highfreq_accumulate;
 
   data_t data;
-  int i;
+  short i;
 
   AXI_VAL tmp;
   x.read(tmp);
 
   lowfreq_accumulate = 0;
+  midfreq_accumulate = c[0];
 
   LowFreq_Shift_Accumulate_Loop:
   for (i = 11 - 1; i > 0; i--){
 #pragma HLS UNROLL
  lowfreq_shift_reg[i] = lowfreq_shift_reg[i - 1];
-   lowfreq_accumulate += lowfreq_shift_reg[i] * c[i];
+   lowfreq_accumulate += lowfreq_shift_reg[i] * 1;
   }
 
-  lowfreq_accumulate += tmp.data.to_short() * c[0];
+  lowfreq_accumulate += tmp.data.to_short() * 1;
   lowfreq_shift_reg[0] = tmp.data.to_short();
   AXI_VAL output;
   output.data = lowfreq_accumulate;
