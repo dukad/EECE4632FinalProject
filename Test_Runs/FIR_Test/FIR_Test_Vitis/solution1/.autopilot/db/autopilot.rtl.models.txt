@@ -1,7 +1,3 @@
-filt_mul_16s_16s_16_1_1
-filt_mac_muladd_16s_16s_16ns_16_4_1
-filt_flow_control_loop_pipe_sequential_init
-filt_gmem_m_axi
 filt_control_s_axi
 filt_regslice_both
 filt_regslice_both
@@ -17,5 +13,5 @@ filt_regslice_both
 filt_regslice_both
 filt_regslice_both
 filt_regslice_both
-filt_Pipeline_VITIS_LOOP_18_1
+filt_flow_control_loop_pipe_no_ap_cont
 filt

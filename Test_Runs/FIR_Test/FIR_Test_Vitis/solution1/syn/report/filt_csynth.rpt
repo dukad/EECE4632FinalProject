@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'filt'
 ================================================================
-* Date:           Mon Apr  1 18:35:07 2024
+* Date:           Wed Apr  3 16:11:19 2024
 
 * Version:        2023.2 (Build 4023990 on Oct 11 2023)
 * Project:        FIR_Test_Vitis
@@ -20,7 +20,7 @@
     +--------+----------+----------+------------+
     |  Clock |  Target  | Estimated| Uncertainty|
     +--------+----------+----------+------------+
-    |ap_clk  |  10.00 ns|  7.300 ns|     2.70 ns|
+    |ap_clk  |  10.00 ns|  5.980 ns|     2.70 ns|
     +--------+----------+----------+------------+
 
 + Latency: 
@@ -34,15 +34,15 @@
 
     + Detail: 
         * Instance: 
-        +------------------------------------------+-------------------------------+---------+---------+----------+----------+-----+-----+---------+
-        |                                          |                               |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
-        |                 Instance                 |             Module            |   min   |   max   |    min   |    max   | min | max |   Type  |
-        +------------------------------------------+-------------------------------+---------+---------+----------+----------+-----+-----+---------+
-        |grp_filt_Pipeline_VITIS_LOOP_18_1_fu_178  |filt_Pipeline_VITIS_LOOP_18_1  |        ?|        ?|         ?|         ?|    ?|    ?|       no|
-        +------------------------------------------+-------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        N/A
 
         * Loop: 
-        N/A
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_18_1  |        ?|        ?|         4|          1|          1|     ?|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
 
 
 
@@ -54,31 +54,29 @@
 |       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
 +-----------------+---------+-----+--------+-------+-----+
 |DSP              |        -|    -|       -|      -|    -|
-|Expression       |        -|    -|       0|      2|    -|
+|Expression       |        -|    -|       0|    182|    -|
 |FIFO             |        -|    -|       -|      -|    -|
-|Instance         |        2|   33|    2595|   1604|    -|
+|Instance         |        0|    -|     100|    168|    -|
 |Memory           |        -|    -|       -|      -|    -|
-|Multiplexer      |        -|    -|       -|    228|    -|
-|Register         |        -|    -|     638|      -|    -|
+|Multiplexer      |        -|    -|       -|     18|    -|
+|Register         |        -|    -|     652|    192|    -|
 +-----------------+---------+-----+--------+-------+-----+
-|Total            |        2|   33|    3233|   1834|    0|
+|Total            |        0|    0|     752|    560|    0|
 +-----------------+---------+-----+--------+-------+-----+
 |Available        |      280|  220|  106400|  53200|    0|
 +-----------------+---------+-----+--------+-------+-----+
-|Utilization (%)  |       ~0|   15|       3|      3|    0|
+|Utilization (%)  |        0|    0|      ~0|      1|    0|
 +-----------------+---------+-----+--------+-------+-----+
 
 + Detail: 
     * Instance: 
-    +------------------------------------------+-------------------------------+---------+----+------+-----+-----+
-    |                 Instance                 |             Module            | BRAM_18K| DSP|  FF  | LUT | URAM|
-    +------------------------------------------+-------------------------------+---------+----+------+-----+-----+
-    |control_s_axi_U                           |control_s_axi                  |        0|   0|   100|  168|    0|
-    |grp_filt_Pipeline_VITIS_LOOP_18_1_fu_178  |filt_Pipeline_VITIS_LOOP_18_1  |        0|  33|  1640|  605|    0|
-    |gmem_m_axi_U                              |gmem_m_axi                     |        2|   0|   855|  831|    0|
-    +------------------------------------------+-------------------------------+---------+----+------+-----+-----+
-    |Total                                     |                               |        2|  33|  2595| 1604|    0|
-    +------------------------------------------+-------------------------------+---------+----+------+-----+-----+
+    +-----------------+---------------+---------+----+-----+-----+-----+
+    |     Instance    |     Module    | BRAM_18K| DSP|  FF | LUT | URAM|
+    +-----------------+---------------+---------+----+-----+-----+-----+
+    |control_s_axi_U  |control_s_axi  |        0|   0|  100|  168|    0|
+    +-----------------+---------------+---------+----+-----+-----+-----+
+    |Total            |               |        0|   0|  100|  168|    0|
+    +-----------------+---------------+---------+----+-----+-----+-----+
 
     * DSP: 
     N/A
@@ -90,69 +88,76 @@
     N/A
 
     * Expression: 
-    +---------------------------------------------------+----------+----+---+----+------------+------------+
-    |                   Variable Name                   | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
-    +---------------------------------------------------+----------+----+---+----+------------+------------+
-    |grp_filt_Pipeline_VITIS_LOOP_18_1_fu_178_y_TREADY  |       and|   0|  0|   2|           1|           1|
-    +---------------------------------------------------+----------+----+---+----+------------+------------+
-    |Total                                              |          |   0|  0|   2|           1|           1|
-    +---------------------------------------------------+----------+----+---+----+------------+------------+
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |add_ln43_1_fu_262_p2              |         +|   0|  0|  16|          16|          16|
+    |add_ln43_2_fu_268_p2              |         +|   0|  0|  16|          16|          16|
+    |add_ln43_3_fu_325_p2              |         +|   0|  0|  16|          16|          16|
+    |add_ln43_4_fu_274_p2              |         +|   0|  0|  23|          16|          16|
+    |add_ln43_5_fu_279_p2              |         +|   0|  0|  16|          16|          16|
+    |add_ln43_6_fu_197_p2              |         +|   0|  0|  16|          16|          16|
+    |add_ln43_7_fu_203_p2              |         +|   0|  0|  16|          16|          16|
+    |add_ln43_8_fu_285_p2              |         +|   0|  0|  16|          16|          16|
+    |add_ln43_fu_257_p2                |         +|   0|  0|  23|          16|          16|
+    |y_TDATA_int_regslice              |         +|   0|  0|  16|          16|          16|
+    |ap_block_pp0_stage0_01001         |        or|   0|  0|   2|           1|           1|
+    |ap_block_pp0_stage0_11001         |        or|   0|  0|   2|           1|           1|
+    |ap_block_state4_pp0_stage0_iter3  |        or|   0|  0|   2|           1|           1|
+    |ap_enable_pp0                     |       xor|   0|  0|   2|           1|           2|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |Total                             |          |   0|  0| 182|         164|         165|
+    +----------------------------------+----------+----+---+----+------------+------------+
 
     * Multiplexer: 
-    +-----------------------+-----+-----------+-----+-----------+
-    |          Name         | LUT | Input Size| Bits| Total Bits|
-    +-----------------------+-----+-----------+-----+-----------+
-    |ap_NS_fsm              |  201|         46|    1|         46|
-    |gmem_blk_n_AR          |    9|          2|    1|          2|
-    |gmem_blk_n_R           |    9|          2|    1|          2|
-    |x_TREADY_int_regslice  |    9|          2|    1|          2|
-    +-----------------------+-----+-----------+-----+-----------+
-    |Total                  |  228|         52|    4|         52|
-    +-----------------------+-----+-----------+-----+-----------+
+    +---------------+----+-----------+-----+-----------+
+    |      Name     | LUT| Input Size| Bits| Total Bits|
+    +---------------+----+-----------+-----+-----------+
+    |x_TDATA_blk_n  |   9|          2|    1|          2|
+    |y_TDATA_blk_n  |   9|          2|    1|          2|
+    +---------------+----+-----------+-----+-----------+
+    |Total          |  18|          4|    2|          4|
+    +---------------+----+-----------+-----+-----------+
 
     * Register: 
-    +-------------------------------------------------------+----+----+-----+-----------+
-    |                          Name                         | FF | LUT| Bits| Const Bits|
-    +-------------------------------------------------------+----+----+-----+-----------+
-    |ap_CS_fsm                                              |  45|   0|   45|          0|
-    |gmem_addr_read_10_reg_383                              |  16|   0|   16|          0|
-    |gmem_addr_read_11_reg_388                              |  16|   0|   16|          0|
-    |gmem_addr_read_12_reg_393                              |  16|   0|   16|          0|
-    |gmem_addr_read_13_reg_398                              |  16|   0|   16|          0|
-    |gmem_addr_read_14_reg_403                              |  16|   0|   16|          0|
-    |gmem_addr_read_15_reg_408                              |  16|   0|   16|          0|
-    |gmem_addr_read_16_reg_413                              |  16|   0|   16|          0|
-    |gmem_addr_read_17_reg_418                              |  16|   0|   16|          0|
-    |gmem_addr_read_18_reg_423                              |  16|   0|   16|          0|
-    |gmem_addr_read_19_reg_428                              |  16|   0|   16|          0|
-    |gmem_addr_read_1_reg_338                               |  16|   0|   16|          0|
-    |gmem_addr_read_20_reg_433                              |  16|   0|   16|          0|
-    |gmem_addr_read_21_reg_438                              |  16|   0|   16|          0|
-    |gmem_addr_read_22_reg_443                              |  16|   0|   16|          0|
-    |gmem_addr_read_23_reg_448                              |  16|   0|   16|          0|
-    |gmem_addr_read_24_reg_453                              |  16|   0|   16|          0|
-    |gmem_addr_read_25_reg_458                              |  16|   0|   16|          0|
-    |gmem_addr_read_26_reg_463                              |  16|   0|   16|          0|
-    |gmem_addr_read_27_reg_468                              |  16|   0|   16|          0|
-    |gmem_addr_read_28_reg_473                              |  16|   0|   16|          0|
-    |gmem_addr_read_29_reg_478                              |  16|   0|   16|          0|
-    |gmem_addr_read_2_reg_343                               |  16|   0|   16|          0|
-    |gmem_addr_read_30_reg_483                              |  16|   0|   16|          0|
-    |gmem_addr_read_31_reg_488                              |  16|   0|   16|          0|
-    |gmem_addr_read_32_reg_493                              |  16|   0|   16|          0|
-    |gmem_addr_read_3_reg_348                               |  16|   0|   16|          0|
-    |gmem_addr_read_4_reg_353                               |  16|   0|   16|          0|
-    |gmem_addr_read_5_reg_358                               |  16|   0|   16|          0|
-    |gmem_addr_read_6_reg_363                               |  16|   0|   16|          0|
-    |gmem_addr_read_7_reg_368                               |  16|   0|   16|          0|
-    |gmem_addr_read_8_reg_373                               |  16|   0|   16|          0|
-    |gmem_addr_read_9_reg_378                               |  16|   0|   16|          0|
-    |gmem_addr_read_reg_333                                 |  16|   0|   16|          0|
-    |gmem_addr_reg_327                                      |  64|   0|   64|          0|
-    |grp_filt_Pipeline_VITIS_LOOP_18_1_fu_178_ap_start_reg  |   1|   0|    1|          0|
-    +-------------------------------------------------------+----+----+-----+-----------+
-    |Total                                                  | 638|   0|  638|          0|
-    +-------------------------------------------------------+----+----+-----+-----------+
+    +------------------------------------------------------------------+----+----+-----+-----------+
+    |                               Name                               | FF | LUT| Bits| Const Bits|
+    +------------------------------------------------------------------+----+----+-----+-----------+
+    |add_ln43_2_reg_386                                                |  16|   0|   16|          0|
+    |add_ln43_7_reg_376                                                |  16|   0|   16|          0|
+    |add_ln43_8_reg_391                                                |  16|   0|   16|          0|
+    |add_ln43_reg_381                                                  |  16|   0|   16|          0|
+    |ap_CS_fsm                                                         |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1                                           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2                                           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter3                                           |   1|   0|    1|          0|
+    |filt_stream_short_stream_axis_0_lowfreq_shift_reg                 |  16|   0|   16|          0|
+    |filt_stream_short_stream_axis_0_lowfreq_shift_reg_1               |  16|   0|   16|          0|
+    |filt_stream_short_stream_axis_0_lowfreq_shift_reg_2               |  16|   0|   16|          0|
+    |filt_stream_short_stream_axis_0_lowfreq_shift_reg_3               |  16|   0|   16|          0|
+    |filt_stream_short_stream_axis_0_lowfreq_shift_reg_4               |  16|   0|   16|          0|
+    |filt_stream_short_stream_axis_0_lowfreq_shift_reg_5               |  16|   0|   16|          0|
+    |filt_stream_short_stream_axis_0_lowfreq_shift_reg_6               |  16|   0|   16|          0|
+    |filt_stream_short_stream_axis_0_lowfreq_shift_reg_6_load_reg_370  |  16|   0|   16|          0|
+    |filt_stream_short_stream_axis_0_lowfreq_shift_reg_7               |  16|   0|   16|          0|
+    |filt_stream_short_stream_axis_0_lowfreq_shift_reg_8               |  16|   0|   16|          0|
+    |filt_stream_short_stream_axis_0_lowfreq_shift_reg_9               |  16|   0|   16|          0|
+    |tmp_data_reg_335                                                  |  16|   0|   16|          0|
+    |tmp_dest_reg_365                                                  |   1|   0|    1|          0|
+    |tmp_id_reg_360                                                    |   1|   0|    1|          0|
+    |tmp_keep_reg_340                                                  |   2|   0|    2|          0|
+    |tmp_last_reg_355                                                  |   1|   0|    1|          0|
+    |tmp_strb_reg_345                                                  |   2|   0|    2|          0|
+    |tmp_user_reg_350                                                  |   1|   0|    1|          0|
+    |tmp_dest_reg_365                                                  |  64|  32|    1|          0|
+    |tmp_id_reg_360                                                    |  64|  32|    1|          0|
+    |tmp_keep_reg_340                                                  |  64|  32|    2|          0|
+    |tmp_last_reg_355                                                  |  64|  32|    1|          0|
+    |tmp_strb_reg_345                                                  |  64|  32|    2|          0|
+    |tmp_user_reg_350                                                  |  64|  32|    1|          0|
+    +------------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                             | 652| 192|  276|          0|
+    +------------------------------------------------------------------+----+----+-----+-----------+
 
 
 
@@ -182,6 +187,12 @@
 |s_axi_control_BRESP    |  out|    2|         s_axi|       control|        scalar|
 |ap_clk                 |   in|    1|  ap_ctrl_none|          filt|  return value|
 |ap_rst_n               |   in|    1|  ap_ctrl_none|          filt|  return value|
+|x_TVALID               |   in|    1|          axis|    x_V_dest_V|       pointer|
+|x_TREADY               |  out|    1|          axis|    x_V_dest_V|       pointer|
+|x_TDEST                |   in|    1|          axis|    x_V_dest_V|       pointer|
+|y_TREADY               |   in|    1|          axis|    y_V_dest_V|       pointer|
+|y_TVALID               |  out|    1|          axis|    y_V_dest_V|       pointer|
+|y_TDEST                |  out|    1|          axis|    y_V_dest_V|       pointer|
 |m_axi_gmem_AWVALID     |  out|    1|         m_axi|          gmem|       pointer|
 |m_axi_gmem_AWREADY     |   in|    1|         m_axi|          gmem|       pointer|
 |m_axi_gmem_AWADDR      |  out|   64|         m_axi|          gmem|       pointer|
@@ -228,18 +239,12 @@
 |m_axi_gmem_BID         |   in|    1|         m_axi|          gmem|       pointer|
 |m_axi_gmem_BUSER       |   in|    1|         m_axi|          gmem|       pointer|
 |y_TDATA                |  out|   16|          axis|    y_V_data_V|       pointer|
-|y_TVALID               |  out|    1|          axis|    y_V_dest_V|       pointer|
-|y_TREADY               |   in|    1|          axis|    y_V_dest_V|       pointer|
-|y_TDEST                |  out|    1|          axis|    y_V_dest_V|       pointer|
 |y_TKEEP                |  out|    2|          axis|    y_V_keep_V|       pointer|
 |y_TSTRB                |  out|    2|          axis|    y_V_strb_V|       pointer|
 |y_TUSER                |  out|    1|          axis|    y_V_user_V|       pointer|
 |y_TLAST                |  out|    1|          axis|    y_V_last_V|       pointer|
 |y_TID                  |  out|    1|          axis|      y_V_id_V|       pointer|
 |x_TDATA                |   in|   16|          axis|    x_V_data_V|       pointer|
-|x_TVALID               |   in|    1|          axis|    x_V_dest_V|       pointer|
-|x_TREADY               |  out|    1|          axis|    x_V_dest_V|       pointer|
-|x_TDEST                |   in|    1|          axis|    x_V_dest_V|       pointer|
 |x_TKEEP                |   in|    2|          axis|    x_V_keep_V|       pointer|
 |x_TSTRB                |   in|    2|          axis|    x_V_strb_V|       pointer|
 |x_TUSER                |   in|    1|          axis|    x_V_user_V|       pointer|

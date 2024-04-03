@@ -9749,7 +9749,7 @@ typedef short acc_t;
 
 
 
-__attribute__((sdx_kernel("filt", 0))) void filt (hls::stream<AXI_VAL>& y, coef_t c[33], hls::stream<AXI_VAL>& x) {
+__attribute__((sdx_kernel("filt", 0))) void filt (hls::stream<AXI_VAL>& y, coef_t c[11], hls::stream<AXI_VAL>& x) {
 #line 15 "C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vitis/solution1/csynth.tcl"
 #pragma HLSDIRECTIVE TOP name=filt
 # 11 "filt.cpp"
@@ -9761,9 +9761,9 @@ __attribute__((sdx_kernel("filt", 0))) void filt (hls::stream<AXI_VAL>& y, coef_
 
 
  VITIS_LOOP_18_1: while(1) {
-  static data_t lowfreq_shift_reg[33];
-  static data_t midfreq_shift_reg[33];
-  static data_t highfreq_shift_reg[33];
+  static data_t lowfreq_shift_reg[11];
+  static data_t midfreq_shift_reg[11];
+  static data_t highfreq_shift_reg[11];
 
   acc_t lowfreq_accumulate;
   acc_t midfreq_accumulate;
@@ -9776,15 +9776,16 @@ __attribute__((sdx_kernel("filt", 0))) void filt (hls::stream<AXI_VAL>& y, coef_
   x.read(tmp);
 
   lowfreq_accumulate = 0;
+  midfreq_accumulate = c[0];
 
   LowFreq_Shift_Accumulate_Loop:
-  for (i = 33 - 1; i > 0; i--){
+  for (i = 11 - 1; i > 0; i--){
 #pragma HLS UNROLL
  lowfreq_shift_reg[i] = lowfreq_shift_reg[i - 1];
-   lowfreq_accumulate += lowfreq_shift_reg[i] * c[i];
+   lowfreq_accumulate += lowfreq_shift_reg[i] * 1;
   }
 
-  lowfreq_accumulate+= tmp.data.to_short() * c[0];
+  lowfreq_accumulate += tmp.data.to_short() * 1;
   lowfreq_shift_reg[0] = tmp.data.to_short();
   AXI_VAL output;
   output.data = lowfreq_accumulate;
