@@ -7,8 +7,7 @@
       "name": "FIR_Test",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2023.2",
-      "validated": "true"
+      "tool_version": "2023.2"
     },
     "design_tree": {
       "processing_system7_0": "",
@@ -2633,14 +2632,8 @@
               "c_include_sg": {
                 "value": "0"
               },
-              "c_m_axi_s2mm_data_width": {
-                "value": "32"
-              },
               "c_m_axis_mm2s_tdata_width": {
-                "value": "16"
-              },
-              "c_s_axis_s2mm_tdata_width": {
-                "value": "16"
+                "value": "32"
               }
             },
             "interface_ports": {
@@ -2756,9 +2749,9 @@
               "ap_clk",
               "axi_dma_0/m_axi_mm2s_aclk",
               "axi_dma_0/s_axi_lite_aclk",
-              "axi_dma_0/m_axi_s2mm_aclk",
               "axi_bram_ctrl_0/s_axi_aclk",
-              "filt_0/ap_clk"
+              "filt_0/ap_clk",
+              "axi_dma_0/m_axi_s2mm_aclk"
             ]
           },
           "rst_ps7_0_100M_peripheral_aresetn": {
