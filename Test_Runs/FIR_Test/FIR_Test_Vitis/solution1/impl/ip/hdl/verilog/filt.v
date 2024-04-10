@@ -6,7 +6,7 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="filt_filt,hls_ip_2023_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020-clg400-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=7.300000,HLS_SYN_LAT=-1,HLS_SYN_TPT=none,HLS_SYN_MEM=4,HLS_SYN_DSP=0,HLS_SYN_FF=1625,HLS_SYN_LUT=1359,HLS_VERSION=2023_2}" *)
+(* CORE_GENERATION_INFO="filt_filt,hls_ip_2023_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020-clg400-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=7.300000,HLS_SYN_LAT=-1,HLS_SYN_TPT=none,HLS_SYN_MEM=4,HLS_SYN_DSP=0,HLS_SYN_FF=1625,HLS_SYN_LUT=1398,HLS_VERSION=2023_2}" *)
 
 module filt (
         ap_clk,
@@ -215,9 +215,9 @@ reg    y_TDATA_blk_n;
 reg    ap_enable_reg_pp0_iter3;
 reg    x_TDATA_blk_n;
 reg    ap_enable_reg_pp0_iter0;
-reg   [63:0] c_read_reg_266;
+reg   [63:0] c_read_reg_274;
 wire    ap_CS_fsm_state1;
-reg   [31:0] tmp1_data_reg_271;
+reg   [3:0] tmp1_keep_reg_279;
 reg    ap_block_state2_pp0_stage0_iter0;
 reg    gmem_AWVALID;
 wire    gmem_AWREADY;
@@ -234,33 +234,34 @@ reg    ap_block_state4_io;
 reg    ap_block_state5_pp0_stage0_iter3;
 reg    ap_block_state9_pp0_stage0_iter7;
 reg    ap_block_pp0_stage0_11001;
-reg   [31:0] tmp1_data_reg_271_pp0_iter1_reg;
-reg   [3:0] tmp1_keep_reg_277;
-reg   [3:0] tmp1_keep_reg_277_pp0_iter1_reg;
-reg   [3:0] tmp1_strb_reg_282;
-reg   [3:0] tmp1_strb_reg_282_pp0_iter1_reg;
-reg   [0:0] tmp1_user_reg_287;
-reg   [0:0] tmp1_user_reg_287_pp0_iter1_reg;
-wire   [0:0] tmp1_last_fu_205_p1;
-reg   [0:0] tmp1_last_reg_292;
-reg   [0:0] tmp1_last_reg_292_pp0_iter1_reg;
-reg   [0:0] tmp1_id_reg_297;
-reg   [0:0] tmp1_id_reg_297_pp0_iter1_reg;
-reg   [0:0] tmp1_dest_reg_302;
-reg   [0:0] tmp1_dest_reg_302_pp0_iter1_reg;
-reg   [63:0] gmem_addr_reg_307;
+reg   [3:0] tmp1_keep_reg_279_pp0_iter1_reg;
+reg   [3:0] tmp1_strb_reg_284;
+reg   [3:0] tmp1_strb_reg_284_pp0_iter1_reg;
+reg   [0:0] tmp1_user_reg_289;
+reg   [0:0] tmp1_user_reg_289_pp0_iter1_reg;
+wire   [0:0] tmp1_last_fu_207_p1;
+reg   [0:0] tmp1_last_reg_294;
+reg   [0:0] tmp1_last_reg_294_pp0_iter1_reg;
+reg   [0:0] tmp1_id_reg_299;
+reg   [0:0] tmp1_id_reg_299_pp0_iter1_reg;
+reg   [0:0] tmp1_dest_reg_304;
+reg   [0:0] tmp1_dest_reg_304_pp0_iter1_reg;
+wire   [31:0] output1_data_fu_219_p2;
+reg   [31:0] output1_data_reg_309;
+reg   [31:0] output1_data_reg_309_pp0_iter1_reg;
+reg   [63:0] gmem_addr_reg_315;
 reg    ap_block_pp0_stage0_subdone;
 reg    ap_condition_pp0_flush_enable;
 reg    ap_enable_reg_pp0_iter4;
 reg    ap_enable_reg_pp0_iter5;
 reg    ap_enable_reg_pp0_iter6;
-wire  signed [63:0] sext_ln18_fu_238_p1;
+wire  signed [63:0] sext_ln18_fu_246_p1;
 reg    ap_block_pp0_stage0_01001;
-reg   [63:0] j_fu_112;
-wire   [63:0] add_ln30_fu_248_p2;
-wire   [63:0] shl_ln18_fu_217_p2;
-wire   [63:0] add_ln18_fu_223_p2;
-wire   [61:0] trunc_ln_fu_228_p4;
+reg   [63:0] j_fu_114;
+wire   [63:0] add_ln30_fu_256_p2;
+wire   [63:0] shl_ln18_fu_225_p2;
+wire   [63:0] add_ln18_1_fu_231_p2;
+wire   [61:0] trunc_ln_fu_236_p4;
 reg   [2:0] ap_NS_fsm;
 wire    ap_ST_fsm_state1_blk;
 reg    ap_ST_fsm_state10_blk;
@@ -331,7 +332,7 @@ initial begin
 #0 ap_enable_reg_pp0_iter4 = 1'b0;
 #0 ap_enable_reg_pp0_iter5 = 1'b0;
 #0 ap_enable_reg_pp0_iter6 = 1'b0;
-#0 j_fu_112 = 64'd0;
+#0 j_fu_114 = 64'd0;
 end
 
 filt_control_s_axi #(
@@ -441,11 +442,11 @@ gmem_m_axi_U(
     .I_RFIFONUM(gmem_RFIFONUM),
     .I_AWVALID(gmem_AWVALID),
     .I_AWREADY(gmem_AWREADY),
-    .I_AWADDR(gmem_addr_reg_307),
+    .I_AWADDR(gmem_addr_reg_315),
     .I_AWLEN(32'd1),
     .I_WVALID(gmem_WVALID),
     .I_WREADY(gmem_WREADY),
-    .I_WDATA(tmp1_data_reg_271_pp0_iter1_reg),
+    .I_WDATA(output1_data_reg_309_pp0_iter1_reg),
     .I_WSTRB(4'd15),
     .I_BVALID(gmem_BVALID),
     .I_BREADY(gmem_BREADY)
@@ -456,7 +457,7 @@ filt_regslice_both #(
 regslice_both_y_V_data_V_U(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
-    .data_in(tmp1_data_reg_271_pp0_iter1_reg),
+    .data_in(output1_data_reg_309_pp0_iter1_reg),
     .vld_in(y_TVALID_int_regslice),
     .ack_in(y_TREADY_int_regslice),
     .data_out(y_TDATA),
@@ -470,7 +471,7 @@ filt_regslice_both #(
 regslice_both_y_V_keep_V_U(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
-    .data_in(tmp1_keep_reg_277_pp0_iter1_reg),
+    .data_in(tmp1_keep_reg_279_pp0_iter1_reg),
     .vld_in(y_TVALID_int_regslice),
     .ack_in(regslice_both_y_V_keep_V_U_ack_in_dummy),
     .data_out(y_TKEEP),
@@ -484,7 +485,7 @@ filt_regslice_both #(
 regslice_both_y_V_strb_V_U(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
-    .data_in(tmp1_strb_reg_282_pp0_iter1_reg),
+    .data_in(tmp1_strb_reg_284_pp0_iter1_reg),
     .vld_in(y_TVALID_int_regslice),
     .ack_in(regslice_both_y_V_strb_V_U_ack_in_dummy),
     .data_out(y_TSTRB),
@@ -498,7 +499,7 @@ filt_regslice_both #(
 regslice_both_y_V_user_V_U(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
-    .data_in(tmp1_user_reg_287_pp0_iter1_reg),
+    .data_in(tmp1_user_reg_289_pp0_iter1_reg),
     .vld_in(y_TVALID_int_regslice),
     .ack_in(regslice_both_y_V_user_V_U_ack_in_dummy),
     .data_out(y_TUSER),
@@ -512,7 +513,7 @@ filt_regslice_both #(
 regslice_both_y_V_last_V_U(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
-    .data_in(tmp1_last_reg_292_pp0_iter1_reg),
+    .data_in(tmp1_last_reg_294_pp0_iter1_reg),
     .vld_in(y_TVALID_int_regslice),
     .ack_in(regslice_both_y_V_last_V_U_ack_in_dummy),
     .data_out(y_TLAST),
@@ -526,7 +527,7 @@ filt_regslice_both #(
 regslice_both_y_V_id_V_U(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
-    .data_in(tmp1_id_reg_297_pp0_iter1_reg),
+    .data_in(tmp1_id_reg_299_pp0_iter1_reg),
     .vld_in(y_TVALID_int_regslice),
     .ack_in(regslice_both_y_V_id_V_U_ack_in_dummy),
     .data_out(y_TID),
@@ -540,7 +541,7 @@ filt_regslice_both #(
 regslice_both_y_V_dest_V_U(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
-    .data_in(tmp1_dest_reg_302_pp0_iter1_reg),
+    .data_in(tmp1_dest_reg_304_pp0_iter1_reg),
     .vld_in(y_TVALID_int_regslice),
     .ack_in(regslice_both_y_V_dest_V_U_ack_in_dummy),
     .data_out(y_TDEST),
@@ -741,35 +742,35 @@ end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state1)) begin
-        j_fu_112 <= 64'd0;
-    end else if (((1'b0 == ap_block_pp0_stage0_11001) & (tmp1_last_fu_205_p1 == 1'd0) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
-        j_fu_112 <= add_ln30_fu_248_p2;
+        j_fu_114 <= 64'd0;
+    end else if (((1'b0 == ap_block_pp0_stage0_11001) & (tmp1_last_fu_207_p1 == 1'd0) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
+        j_fu_114 <= add_ln30_fu_256_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state1)) begin
-        c_read_reg_266 <= c;
+        c_read_reg_274 <= c;
     end
 end
 
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        gmem_addr_reg_307 <= sext_ln18_fu_238_p1;
-        tmp1_data_reg_271 <= x_TDATA_int_regslice;
-        tmp1_data_reg_271_pp0_iter1_reg <= tmp1_data_reg_271;
-        tmp1_dest_reg_302 <= x_TDEST_int_regslice;
-        tmp1_dest_reg_302_pp0_iter1_reg <= tmp1_dest_reg_302;
-        tmp1_id_reg_297 <= x_TID_int_regslice;
-        tmp1_id_reg_297_pp0_iter1_reg <= tmp1_id_reg_297;
-        tmp1_keep_reg_277 <= x_TKEEP_int_regslice;
-        tmp1_keep_reg_277_pp0_iter1_reg <= tmp1_keep_reg_277;
-        tmp1_last_reg_292 <= x_TLAST_int_regslice;
-        tmp1_last_reg_292_pp0_iter1_reg <= tmp1_last_reg_292;
-        tmp1_strb_reg_282 <= x_TSTRB_int_regslice;
-        tmp1_strb_reg_282_pp0_iter1_reg <= tmp1_strb_reg_282;
-        tmp1_user_reg_287 <= x_TUSER_int_regslice;
-        tmp1_user_reg_287_pp0_iter1_reg <= tmp1_user_reg_287;
+        gmem_addr_reg_315 <= sext_ln18_fu_246_p1;
+        output1_data_reg_309 <= output1_data_fu_219_p2;
+        output1_data_reg_309_pp0_iter1_reg <= output1_data_reg_309;
+        tmp1_dest_reg_304 <= x_TDEST_int_regslice;
+        tmp1_dest_reg_304_pp0_iter1_reg <= tmp1_dest_reg_304;
+        tmp1_id_reg_299 <= x_TID_int_regslice;
+        tmp1_id_reg_299_pp0_iter1_reg <= tmp1_id_reg_299;
+        tmp1_keep_reg_279 <= x_TKEEP_int_regslice;
+        tmp1_keep_reg_279_pp0_iter1_reg <= tmp1_keep_reg_279;
+        tmp1_last_reg_294 <= x_TLAST_int_regslice;
+        tmp1_last_reg_294_pp0_iter1_reg <= tmp1_last_reg_294;
+        tmp1_strb_reg_284 <= x_TSTRB_int_regslice;
+        tmp1_strb_reg_284_pp0_iter1_reg <= tmp1_strb_reg_284;
+        tmp1_user_reg_289 <= x_TUSER_int_regslice;
+        tmp1_user_reg_289_pp0_iter1_reg <= tmp1_user_reg_289;
     end
 end
 
@@ -784,7 +785,7 @@ end
 assign ap_ST_fsm_state1_blk = 1'b0;
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_subdone) & (tmp1_last_fu_205_p1 == 1'd1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if (((1'b0 == ap_block_pp0_stage0_subdone) & (tmp1_last_fu_207_p1 == 1'd1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         ap_condition_pp0_flush_enable = 1'b1;
     end else begin
         ap_condition_pp0_flush_enable = 1'b0;
@@ -906,9 +907,9 @@ always @ (*) begin
     endcase
 end
 
-assign add_ln18_fu_223_p2 = (shl_ln18_fu_217_p2 + c_read_reg_266);
+assign add_ln18_1_fu_231_p2 = (shl_ln18_fu_225_p2 + c_read_reg_274);
 
-assign add_ln30_fu_248_p2 = (j_fu_112 + 64'd1);
+assign add_ln30_fu_256_p2 = (j_fu_114 + 64'd1);
 
 assign ap_CS_fsm_pp0_stage0 = ap_CS_fsm[32'd1];
 
@@ -956,13 +957,15 @@ always @ (*) begin
     ap_rst_n_inv = ~ap_rst_n;
 end
 
-assign sext_ln18_fu_238_p1 = $signed(trunc_ln_fu_228_p4);
+assign output1_data_fu_219_p2 = (x_TDATA_int_regslice + 32'd5);
 
-assign shl_ln18_fu_217_p2 = j_fu_112 << 64'd2;
+assign sext_ln18_fu_246_p1 = $signed(trunc_ln_fu_236_p4);
 
-assign tmp1_last_fu_205_p1 = x_TLAST_int_regslice;
+assign shl_ln18_fu_225_p2 = j_fu_114 << 64'd2;
 
-assign trunc_ln_fu_228_p4 = {{add_ln18_fu_223_p2[63:2]}};
+assign tmp1_last_fu_207_p1 = x_TLAST_int_regslice;
+
+assign trunc_ln_fu_236_p4 = {{add_ln18_1_fu_231_p2[63:2]}};
 
 assign x_TREADY = regslice_both_x_V_data_V_U_ack_in;
 

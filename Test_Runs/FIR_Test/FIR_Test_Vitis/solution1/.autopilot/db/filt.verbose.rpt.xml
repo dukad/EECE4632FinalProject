@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'filt'" level="0">
-<item name = "Date">Wed Apr 10 16:02:33 2024
+<item name = "Date">Wed Apr 10 16:15:32 2024
 </item>
 <item name = "Version">2023.2 (Build 4023990 on Oct 11 2023)</item>
 <item name = "Project">FIR_Test_Vitis</item>
@@ -48,7 +48,7 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
 <column name="DSP">-, -, -, -, -</column>
-<column name="Expression">-, -, 0, 150, -</column>
+<column name="Expression">-, -, 0, 189, -</column>
 <column name="FIFO">-, -, -, -, -</column>
 <column name="Instance">4, -, 930, 902, -</column>
 <column name="Memory">-, -, -, -, -</column>
@@ -80,8 +80,9 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="add_ln18_fu_223_p2">+, 0, 0, 71, 64, 64</column>
-<column name="add_ln30_fu_248_p2">+, 0, 0, 71, 64, 1</column>
+<column name="add_ln18_1_fu_231_p2">+, 0, 0, 71, 64, 64</column>
+<column name="add_ln30_fu_256_p2">+, 0, 0, 71, 64, 1</column>
+<column name="output1_data_fu_219_p2">+, 0, 0, 39, 32, 3</column>
 <column name="ap_block_pp0_stage0_01001">or, 0, 0, 2, 1, 1</column>
 <column name="ap_block_pp0_stage0_11001">or, 0, 0, 2, 1, 1</column>
 <column name="ap_block_state4_io">or, 0, 0, 2, 1, 1</column>
@@ -95,7 +96,7 @@
 <column name="gmem_blk_n_AW">9, 2, 1, 2</column>
 <column name="gmem_blk_n_B">9, 2, 1, 2</column>
 <column name="gmem_blk_n_W">9, 2, 1, 2</column>
-<column name="j_fu_112">9, 2, 64, 128</column>
+<column name="j_fu_114">9, 2, 64, 128</column>
 <column name="x_TDATA_blk_n">9, 2, 1, 2</column>
 <column name="y_TDATA_blk_n">9, 2, 1, 2</column>
 </table>
@@ -111,23 +112,23 @@
 <column name="ap_enable_reg_pp0_iter5">1, 0, 1, 0</column>
 <column name="ap_enable_reg_pp0_iter6">1, 0, 1, 0</column>
 <column name="ap_enable_reg_pp0_iter7">1, 0, 1, 0</column>
-<column name="c_read_reg_266">64, 0, 64, 0</column>
-<column name="gmem_addr_reg_307">64, 0, 64, 0</column>
-<column name="j_fu_112">64, 0, 64, 0</column>
-<column name="tmp1_data_reg_271">32, 0, 32, 0</column>
-<column name="tmp1_dest_reg_302">1, 0, 1, 0</column>
-<column name="tmp1_id_reg_297">1, 0, 1, 0</column>
-<column name="tmp1_keep_reg_277">4, 0, 4, 0</column>
-<column name="tmp1_last_reg_292">1, 0, 1, 0</column>
-<column name="tmp1_strb_reg_282">4, 0, 4, 0</column>
-<column name="tmp1_user_reg_287">1, 0, 1, 0</column>
-<column name="tmp1_data_reg_271">64, 32, 32, 0</column>
-<column name="tmp1_dest_reg_302">64, 32, 1, 0</column>
-<column name="tmp1_id_reg_297">64, 32, 1, 0</column>
-<column name="tmp1_keep_reg_277">64, 32, 4, 0</column>
-<column name="tmp1_last_reg_292">64, 32, 1, 0</column>
-<column name="tmp1_strb_reg_282">64, 32, 4, 0</column>
-<column name="tmp1_user_reg_287">64, 32, 1, 0</column>
+<column name="c_read_reg_274">64, 0, 64, 0</column>
+<column name="gmem_addr_reg_315">64, 0, 64, 0</column>
+<column name="j_fu_114">64, 0, 64, 0</column>
+<column name="output1_data_reg_309">32, 0, 32, 0</column>
+<column name="tmp1_dest_reg_304">1, 0, 1, 0</column>
+<column name="tmp1_id_reg_299">1, 0, 1, 0</column>
+<column name="tmp1_keep_reg_279">4, 0, 4, 0</column>
+<column name="tmp1_last_reg_294">1, 0, 1, 0</column>
+<column name="tmp1_strb_reg_284">4, 0, 4, 0</column>
+<column name="tmp1_user_reg_289">1, 0, 1, 0</column>
+<column name="output1_data_reg_309">64, 32, 32, 0</column>
+<column name="tmp1_dest_reg_304">64, 32, 1, 0</column>
+<column name="tmp1_id_reg_299">64, 32, 1, 0</column>
+<column name="tmp1_keep_reg_279">64, 32, 4, 0</column>
+<column name="tmp1_last_reg_294">64, 32, 1, 0</column>
+<column name="tmp1_strb_reg_284">64, 32, 4, 0</column>
+<column name="tmp1_user_reg_289">64, 32, 1, 0</column>
 </table>
 </item>
 </section>

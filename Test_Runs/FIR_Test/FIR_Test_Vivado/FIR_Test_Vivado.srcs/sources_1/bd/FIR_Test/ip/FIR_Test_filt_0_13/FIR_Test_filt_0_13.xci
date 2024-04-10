@@ -1,11 +1,11 @@
 {
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
-    "xci_name": "FIR_Test_filt_0_12",
-    "cell_name": "firDMA/filt_0",
+    "xci_name": "FIR_Test_filt_0_13",
+    "cell_name": "filt",
     "component_reference": "xilinx.com:hls:filt:1.0",
-    "ip_revision": "2113508463",
-    "gen_directory": "../../../../../../FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/ip/FIR_Test_filt_0_12",
+    "ip_revision": "2113508476",
+    "gen_directory": "../../../../../../FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/ip/FIR_Test_filt_0_13",
     "parameters": {
       "component_parameters": {
         "C_M_AXI_GMEM_ENABLE_ID_PORTS": [ { "value": "true", "resolve_type": "user", "format": "bool", "usage": "all" } ],
@@ -20,7 +20,7 @@
         "C_M_AXI_GMEM_USER_VALUE": [ { "value": "0x00000000", "resolve_type": "user", "format": "bitString", "enabled": false, "usage": "all" } ],
         "C_M_AXI_GMEM_PROT_VALUE": [ { "value": "\"000\"", "resolve_type": "user", "format": "bitString", "usage": "all" } ],
         "C_M_AXI_GMEM_CACHE_VALUE": [ { "value": "\"0011\"", "resolve_type": "user", "format": "bitString", "usage": "all" } ],
-        "Component_Name": [ { "value": "FIR_Test_filt_0_12", "resolve_type": "user", "usage": "all" } ],
+        "Component_Name": [ { "value": "FIR_Test_filt_0_13", "resolve_type": "user", "usage": "all" } ],
         "clk_period": [ { "value": "10", "enabled": false, "usage": "all" } ],
         "machine": [ { "value": "64", "enabled": false, "usage": "all" } ],
         "combinational": [ { "value": "0", "enabled": false, "usage": "all" } ],
@@ -57,9 +57,9 @@
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
-        "IPREVISION": [ { "value": "2113508463" } ],
+        "IPREVISION": [ { "value": "2113508476" } ],
         "MANAGED": [ { "value": "TRUE" } ],
-        "OUTPUTDIR": [ { "value": "../../../../../../FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/ip/FIR_Test_filt_0_12" } ],
+        "OUTPUTDIR": [ { "value": "../../../../../../FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/ip/FIR_Test_filt_0_13" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
         "SHAREDDIR": [ { "value": "../../ipshared" } ],
         "SWVERSION": [ { "value": "2023.2" } ],

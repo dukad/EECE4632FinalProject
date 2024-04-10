@@ -62,7 +62,7 @@
 <Resources>
 <BRAM_18K>4</BRAM_18K>
 <FF>1625</FF>
-<LUT>1359</LUT>
+<LUT>1398</LUT>
 <DSP>0</DSP>
 <URAM>0</URAM>
 </Resources>

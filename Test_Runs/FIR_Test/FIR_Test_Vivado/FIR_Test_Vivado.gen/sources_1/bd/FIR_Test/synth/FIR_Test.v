@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-//Date        : Wed Apr 10 16:05:10 2024
+//Date        : Wed Apr 10 16:19:08 2024
 //Host        : DESKTOP-G7JA666 running 64-bit major release  (build 9200)
 //Command     : generate_target FIR_Test.bd
 //Design      : FIR_Test
@@ -277,7 +277,7 @@ module FIR_Test
         .S01_AXI_wready(axi_dma_0_M_AXI_S2MM_WREADY),
         .S01_AXI_wstrb(axi_dma_0_M_AXI_S2MM_WSTRB),
         .S01_AXI_wvalid(axi_dma_0_M_AXI_S2MM_WVALID));
-  firDMA_imp_SIM45Z firDMA
+  filtDMA_imp_1P63V5H filtDMA
        (.M_AXI_MM2S_araddr(axi_dma_0_M_AXI_MM2S_ARADDR),
         .M_AXI_MM2S_arburst(axi_dma_0_M_AXI_MM2S_ARBURST),
         .M_AXI_MM2S_arcache(axi_dma_0_M_AXI_MM2S_ARCACHE),
@@ -1390,7 +1390,7 @@ module FIR_Test_ps7_0_axi_periph_0
         .S_AXI_wvalid(ps7_0_axi_periph_to_s00_couplers_WVALID));
 endmodule
 
-module firDMA_imp_SIM45Z
+module filtDMA_imp_1P63V5H
    (M_AXI_MM2S_araddr,
     M_AXI_MM2S_arburst,
     M_AXI_MM2S_arcache,
@@ -1746,7 +1746,7 @@ module firDMA_imp_SIM45Z
         .ena(axi_bram_ctrl_0_BRAM_PORTA_EN),
         .rsta(axi_bram_ctrl_0_BRAM_PORTA_RST),
         .wea(axi_bram_ctrl_0_BRAM_PORTA_WE));
-  FIR_Test_filt_0_12 filt_0
+  FIR_Test_filt_0_13 filt
        (.ap_clk(processing_system7_0_FCLK_CLK0),
         .ap_rst_n(rst_ps7_0_100M_peripheral_aresetn),
         .m_axi_gmem_ARADDR(filt_0_m_axi_gmem_ARADDR),

@@ -48,13 +48,13 @@
 
 
 // IP VLNV: xilinx.com:hls:filt:1.0
-// IP Revision: 2113508463
+// IP Revision: 2113508476
 
 `timescale 1ns/1ps
 
 (* IP_DEFINITION_SOURCE = "HLS" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
-module FIR_Test_filt_0_12 (
+module FIR_Test_filt_0_13 (
   s_axi_control_AWADDR,
   s_axi_control_AWVALID,
   s_axi_control_AWREADY,

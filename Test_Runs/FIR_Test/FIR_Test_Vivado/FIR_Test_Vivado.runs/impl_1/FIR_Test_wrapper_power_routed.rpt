@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-| Date             : Wed Apr 10 16:09:21 2024
+| Date             : Wed Apr 10 16:25:15 2024
 | Host             : DESKTOP-G7JA666 running 64-bit major release  (build 9200)
 | Command          : report_power -file FIR_Test_wrapper_power_routed.rpt -pb FIR_Test_wrapper_power_summary_routed.pb -rpx FIR_Test_wrapper_power_routed.rpx
 | Design           : FIR_Test_wrapper
@@ -53,14 +53,14 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.013 |        3 |       --- |             --- |
-| Slice Logic              |     0.003 |     7308 |       --- |             --- |
-|   LUT as Logic           |     0.003 |     2378 |     53200 |            4.47 |
-|   CARRY4                 |    <0.001 |       88 |     13300 |            0.66 |
+| Slice Logic              |     0.003 |     7317 |       --- |             --- |
+|   LUT as Logic           |     0.003 |     2394 |     53200 |            4.50 |
+|   CARRY4                 |    <0.001 |       96 |     13300 |            0.72 |
 |   Register               |    <0.001 |     3482 |    106400 |            3.27 |
 |   LUT as Shift Register  |    <0.001 |      156 |     17400 |            0.90 |
 |   Others                 |     0.000 |      454 |       --- |             --- |
 |   LUT as Distributed RAM |     0.000 |       18 |     17400 |            0.10 |
-| Signals                  |     0.003 |     5119 |       --- |             --- |
+| Signals                  |     0.003 |     5126 |       --- |             --- |
 | Block RAM                |    <0.001 |        2 |       140 |            1.43 |
 | PS7                      |     1.256 |        1 |       --- |             --- |
 | Static Power             |     0.135 |          |           |                 |
@@ -152,12 +152,12 @@ Table of Contents
 +--------------------------+-----------+
 | FIR_Test_wrapper         |     1.276 |
 |   FIR_Test_i             |     1.276 |
-|     axi_mem_intercon     |     0.002 |
+|     axi_mem_intercon     |     0.003 |
 |       m00_couplers       |     0.001 |
 |       xbar               |     0.001 |
-|     firDMA               |     0.013 |
+|     filtDMA              |     0.013 |
 |       axi_dma_0          |     0.009 |
-|       filt_0             |     0.003 |
+|       filt               |     0.003 |
 |     processing_system7_0 |     1.257 |
 |       inst               |     1.257 |
 |     ps7_0_axi_periph     |     0.004 |

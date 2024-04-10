@@ -15,7 +15,7 @@ void filt (hls::stream<AXI_VAL>& y, coef_t c[N], hls::stream<AXI_VAL>& x) {
 		AXI_VAL tmp1;
 		x.read(tmp1);
 
-		c[j] = tmp1.data.to_int();
+		c[j] = tmp1.data.to_int() + 5;
 
 		AXI_VAL output1;
 		output1.data = c[j];

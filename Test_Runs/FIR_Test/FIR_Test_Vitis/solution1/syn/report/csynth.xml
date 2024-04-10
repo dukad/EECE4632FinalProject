@@ -57,7 +57,7 @@
         <Resources>
             <BRAM_18K>4</BRAM_18K>
             <FF>1625</FF>
-            <LUT>1359</LUT>
+            <LUT>1398</LUT>
             <DSP>0</DSP>
             <URAM>0</URAM>
         </Resources>
@@ -1039,7 +1039,7 @@
     <RTLDesignHierarchy>
         <TopModule MAX_DEPTH="2">
             <ModuleName>filt</ModuleName>
-            <BindInstances>add_ln18_fu_223_p2 add_ln30_fu_248_p2 control_s_axi_U gmem_m_axi_U</BindInstances>
+            <BindInstances>output1_data_fu_219_p2 add_ln18_1_fu_231_p2 add_ln30_fu_256_p2 control_s_axi_U gmem_m_axi_U</BindInstances>
         </TopModule>
     </RTLDesignHierarchy>
     <ModuleInformation>
@@ -1099,7 +1099,7 @@
                     <FF>1625</FF>
                     <AVAIL_FF>106400</AVAIL_FF>
                     <UTIL_FF>1</UTIL_FF>
-                    <LUT>1361</LUT>
+                    <LUT>1400</LUT>
                     <AVAIL_LUT>53200</AVAIL_LUT>
                     <UTIL_LUT>2</UTIL_LUT>
                     <DSP>0</DSP>
@@ -1111,8 +1111,9 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_11_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln18_fu_223_p2" SOURCE="filt.cpp:18" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln18"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_11_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln30_fu_248_p2" SOURCE="filt.cpp:30" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln30"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_11_1" OPTYPE="add" PRAGMA="" RTLNAME="output1_data_fu_219_p2" SOURCE="filt.cpp:18" STORAGESUBTYPE="" URAM="0" VARIABLE="output1_data"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_11_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln18_1_fu_231_p2" SOURCE="filt.cpp:18" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln18_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_11_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln30_fu_256_p2" SOURCE="filt.cpp:30" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln30"/>
                 <BindNode BINDTYPE="adapter" BRAM="0" BUNDLEDNAME="control" DISPNAME="bind_adapter " DSP="0" ID="" IMPL="" LATENCY="" LOOP="" OPTYPE="" PRAGMA="" RTLNAME="control_s_axi_U" SOURCE="" STORAGESIZE="" STORAGESUBTYPE="s_axilite" STORAGEUSAGE="interface" URAM="0" VARIABLE=""/>
                 <BindNode BINDTYPE="adapter" BRAM="4" BUNDLEDNAME="gmem" DISPNAME="bind_adapter " DSP="0" ID="" IMPL="" LATENCY="" LOOP="" OPTYPE="" PRAGMA="" RTLNAME="gmem_m_axi_U" SOURCE="" STORAGESIZE="" STORAGESUBTYPE="m_axi" STORAGEUSAGE="interface" URAM="0" VARIABLE=""/>
             </BindNodes>

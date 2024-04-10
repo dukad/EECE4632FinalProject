@@ -48,15 +48,15 @@
 
 
 // IP VLNV: xilinx.com:hls:filt:1.0
-// IP Revision: 2113508463
+// IP Revision: 2113508476
 
 (* X_CORE_INFO = "filt,Vivado 2023.2" *)
-(* CHECK_LICENSE_TYPE = "FIR_Test_filt_0_12,filt,{}" *)
-(* CORE_GENERATION_INFO = "FIR_Test_filt_0_12,filt,{x_ipProduct=Vivado 2023.2,x_ipVendor=xilinx.com,x_ipLibrary=hls,x_ipName=filt,x_ipVersion=1.0,x_ipCoreRevision=2113508463,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S_AXI_CONTROL_ADDR_WIDTH=5,C_S_AXI_CONTROL_DATA_WIDTH=32,C_M_AXI_GMEM_ID_WIDTH=1,C_M_AXI_GMEM_ADDR_WIDTH=64,C_M_AXI_GMEM_DATA_WIDTH=32,C_M_AXI_GMEM_AWUSER_WIDTH=1,C_M_AXI_GMEM_ARUSER_WIDTH=1,C_M_AXI_GMEM_WUSER_WIDTH=1,C_M_AXI_GMEM_RUSER_WIDTH=1,C_M_AXI_GMEM_BUSER_WIDTH=1,C_M_AXI_GMEM_USER_VALUE=0x00000000,C\
+(* CHECK_LICENSE_TYPE = "FIR_Test_filt_0_13,filt,{}" *)
+(* CORE_GENERATION_INFO = "FIR_Test_filt_0_13,filt,{x_ipProduct=Vivado 2023.2,x_ipVendor=xilinx.com,x_ipLibrary=hls,x_ipName=filt,x_ipVersion=1.0,x_ipCoreRevision=2113508476,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S_AXI_CONTROL_ADDR_WIDTH=5,C_S_AXI_CONTROL_DATA_WIDTH=32,C_M_AXI_GMEM_ID_WIDTH=1,C_M_AXI_GMEM_ADDR_WIDTH=64,C_M_AXI_GMEM_DATA_WIDTH=32,C_M_AXI_GMEM_AWUSER_WIDTH=1,C_M_AXI_GMEM_ARUSER_WIDTH=1,C_M_AXI_GMEM_WUSER_WIDTH=1,C_M_AXI_GMEM_RUSER_WIDTH=1,C_M_AXI_GMEM_BUSER_WIDTH=1,C_M_AXI_GMEM_USER_VALUE=0x00000000,C\
 _M_AXI_GMEM_PROT_VALUE=000,C_M_AXI_GMEM_CACHE_VALUE=0011}" *)
 (* IP_DEFINITION_SOURCE = "HLS" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
-module FIR_Test_filt_0_12 (
+module FIR_Test_filt_0_13 (
   s_axi_control_AWADDR,
   s_axi_control_AWVALID,
   s_axi_control_AWREADY,

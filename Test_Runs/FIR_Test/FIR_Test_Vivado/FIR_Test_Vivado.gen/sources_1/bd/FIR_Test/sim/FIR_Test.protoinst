@@ -493,7 +493,7 @@
 						"WVALID": { "actual": "s_axi_wvalid[1:1]"}
 					}
 				},
-				"/firDMA/M_AXI_MM2S": {
+				"/filtDMA/M_AXI_MM2S": {
 					"interface": "xilinx.com:interface:aximm:1.0",
 					"ports": {
 						"ACLK": { "actual": "ap_clk"},
@@ -512,7 +512,7 @@
 						"RVALID": { "actual": "M_AXI_MM2S_rvalid"}
 					}
 				},
-				"/firDMA/M_AXI_S2MM": {
+				"/filtDMA/M_AXI_S2MM": {
 					"interface": "xilinx.com:interface:aximm:1.0",
 					"ports": {
 						"ACLK": { "actual": "ap_clk"},
@@ -534,7 +534,7 @@
 						"WVALID": { "actual": "M_AXI_S2MM_wvalid"}
 					}
 				},
-				"/firDMA/S_AXI_LITE": {
+				"/filtDMA/S_AXI_LITE": {
 					"interface": "xilinx.com:interface:aximm:1.0",
 					"ports": {
 						"ACLK": { "actual": "ap_clk"},
@@ -557,7 +557,7 @@
 						"WVALID": { "actual": "S_AXI_LITE_wvalid"}
 					}
 				},
-				"/firDMA/axi_bram_ctrl_0/S_AXI": {
+				"/filtDMA/axi_bram_ctrl_0/S_AXI": {
 					"interface": "xilinx.com:interface:aximm:1.0",
 					"ports": {
 						"ACLK": { "actual": "s_axi_aclk"},
@@ -599,7 +599,7 @@
 						"WVALID": { "actual": "s_axi_wvalid"}
 					}
 				},
-				"/firDMA/axi_dma_0/M_AXIS_MM2S": {
+				"/filtDMA/axi_dma_0/M_AXIS_MM2S": {
 					"interface": "xilinx.com:interface:axis:1.0",
 					"ports": {
 						"ACLK": { "actual": "m_axi_mm2s_aclk"},
@@ -611,7 +611,7 @@
 						"TVALID": { "actual": "m_axis_mm2s_tvalid"}
 					}
 				},
-				"/firDMA/axi_dma_0/M_AXI_MM2S": {
+				"/filtDMA/axi_dma_0/M_AXI_MM2S": {
 					"interface": "xilinx.com:interface:aximm:1.0",
 					"ports": {
 						"ACLK": { "actual": "m_axi_mm2s_aclk"},
@@ -631,7 +631,7 @@
 						"RVALID": { "actual": "m_axi_mm2s_rvalid"}
 					}
 				},
-				"/firDMA/axi_dma_0/M_AXI_S2MM": {
+				"/filtDMA/axi_dma_0/M_AXI_S2MM": {
 					"interface": "xilinx.com:interface:aximm:1.0",
 					"ports": {
 						"ACLK": { "actual": "m_axi_s2mm_aclk"},
@@ -654,7 +654,7 @@
 						"WVALID": { "actual": "m_axi_s2mm_wvalid"}
 					}
 				},
-				"/firDMA/axi_dma_0/S_AXIS_S2MM": {
+				"/filtDMA/axi_dma_0/S_AXIS_S2MM": {
 					"interface": "xilinx.com:interface:axis:1.0",
 					"ports": {
 						"ACLK": { "actual": "m_axi_s2mm_aclk"},
@@ -666,7 +666,7 @@
 						"TVALID": { "actual": "s_axis_s2mm_tvalid"}
 					}
 				},
-				"/firDMA/axi_dma_0/S_AXI_LITE": {
+				"/filtDMA/axi_dma_0/S_AXI_LITE": {
 					"interface": "xilinx.com:interface:aximm:1.0",
 					"ports": {
 						"ACLK": { "actual": "s_axi_lite_aclk"},
@@ -689,7 +689,7 @@
 						"WVALID": { "actual": "s_axi_lite_wvalid"}
 					}
 				},
-				"/firDMA/filt_0/m_axi_gmem": {
+				"/filtDMA/filt/m_axi_gmem": {
 					"interface": "xilinx.com:interface:aximm:1.0",
 					"ports": {
 						"ACLK": { "actual": "ap_clk"},
@@ -736,7 +736,7 @@
 						"WVALID": { "actual": "m_axi_gmem_WVALID"}
 					}
 				},
-				"/firDMA/filt_0/x": {
+				"/filtDMA/filt/x": {
 					"interface": "xilinx.com:interface:axis:1.0",
 					"ports": {
 						"ACLK": { "actual": "ap_clk"},
@@ -752,7 +752,7 @@
 						"TVALID": { "actual": "x_TVALID"}
 					}
 				},
-				"/firDMA/filt_0/y": {
+				"/filtDMA/filt/y": {
 					"interface": "xilinx.com:interface:axis:1.0",
 					"ports": {
 						"ACLK": { "actual": "ap_clk"},
