@@ -6,14 +6,13 @@
     "fileloc": 3,
     "instructions": 77,
     "loads": {
-      "L": 7,
-      "T": 1
+      "L": 7
     },
     "name": "filt",
     "stores": {
       "L": 7,
       "T": 1
     },
-    "total_instructions": 217
+    "total_instructions": 221
   }
 }

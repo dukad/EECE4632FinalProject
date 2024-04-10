@@ -18,7 +18,7 @@ void filt (hls::stream<AXI_VAL>& y, coef_t c[N], hls::stream<AXI_VAL>& x) {
 		c[j] = tmp1.data.to_int();
 
 		AXI_VAL output1;
-		output1.data = c[j];
+		output1.data = tmp1.data.to_int();
 		output1.keep = tmp1.keep;
 		output1.strb = tmp1.strb;
 		output1.last = tmp1.last;
@@ -53,7 +53,7 @@ void filt (hls::stream<AXI_VAL>& y, coef_t c[N], hls::stream<AXI_VAL>& x) {
 //			accumulate += signal_shift_reg[i] * c[i];
 //		}
 //
-//		accumulate += tmp.data.to_short() * c[0];
+//		accumulate += tmp.data.to_int() * c[0];
 //		signal_shift_reg[0] = tmp.data.to_short();
 //		AXI_VAL output;
 //		output.data = accumulate;

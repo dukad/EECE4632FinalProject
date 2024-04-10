@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-| Date         : Wed Apr 10 15:32:00 2024
+| Date         : Wed Apr 10 15:54:43 2024
 | Host         : DESKTOP-G7JA666 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file FIR_Test_wrapper_utilization_placed.rpt -pb FIR_Test_wrapper_utilization_placed.pb
 | Design       : FIR_Test_wrapper
@@ -222,7 +222,7 @@ Table of Contents
 | FIR_Test_xbar_0                 |    1 |
 | FIR_Test_rst_ps7_0_100M_0       |    1 |
 | FIR_Test_processing_system7_0_0 |    1 |
-| FIR_Test_filt_0_10              |    1 |
+| FIR_Test_filt_0_11              |    1 |
 | FIR_Test_axi_dma_0_0            |    1 |
 | FIR_Test_axi_bram_ctrl_0_0      |    1 |
 | FIR_Test_auto_pc_1              |    1 |

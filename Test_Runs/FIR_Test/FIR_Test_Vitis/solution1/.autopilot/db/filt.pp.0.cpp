@@ -9782,7 +9782,7 @@ __attribute__((sdx_kernel("filt", 0))) void filt (hls::stream<AXI_VAL>& y, coef_
   c[j] = tmp1.data.to_int();
 
   AXI_VAL output1;
-  output1.data = c[j];
+  output1.data = tmp1.data.to_int();
   output1.keep = tmp1.keep;
   output1.strb = tmp1.strb;
   output1.last = tmp1.last;
