@@ -1,76 +1,63 @@
-#include <hls_stream.h>
-#include <ap_axi_sdata.h>
+#include "filt.h"
 
-typedef ap_axis<16,1,1,1> AXI_VAL;
-typedef int data_t;
-typedef int coef_t;
-typedef int acc_t;
+void filt (hls::stream<AXI_VAL>& y, coef_t c[N], hls::stream<AXI_VAL>& x) {
+#pragma HLS INTERFACE m_axi depth=99 port=c
+#pragma HLS INTERFACE axis register both port=x
+#pragma HLS INTERFACE axis register both port=y
+#pragma HLS INTERFACE ap_ctrl_none port=return
 
-#define N 11
+	while(1) {
+		// *** COEFFICIENT PROCESSING CODE ***
 
-void filter(data_t *y, coef_t c[N], data_t x){
-	static data_t lowfreq_shift_reg[N];
-	static data_t midfreq_shift_reg[N];
-	static data_t highfreq_shift_reg[N];
+		// *** BLOCK RAM READ/WRITE TEST ***
+		AXI_VAL tmp1;
+		x.read(tmp1);
 
-	acc_t lowfreq_accumulate;
-	acc_t midfreq_accumulate;
-	acc_t highfreq_accumulate;
+		for (int i = 0; i < N; i++){
+			c[i] = i;
+		}
 
-	data_t data;
-	int i;
+		int j = 0;
+		AXI_VAL output1;
+		output1.data = c[j];
+		output1.keep = tmp1.keep;
+		output1.strb = tmp1.strb;
+		output1.last = tmp1.last;
+		output1.dest = tmp1.dest;
+		output1.id = tmp1.id;
+		output1.user = tmp1.user;
+		y.write(output1);
 
-	AXI_VAL tmp;
-	x.read(tmp);
+		j += 1;
 
-	lowfreq_accumulate = 0;
+		if (tmp1.last){
+			break;
+		}
 
-	LowFreq_Shift_Accumulate_Loop:
-	for (i = N - 1; i > 0; i--){
-#pragma HLS UNROLL
-		lowfreq_shift_reg[i] = lowfreq_shift_reg[i - 1];
-		lowfreq_accumulate += lowfreq_shift_reg[i] * c[0];
-	}
-
-	lowfreq_accumulate += tmp.data.to_short() * c[0];
-	lowfreq_shift_reg[0] = tmp.data.to_short();
-}
-
-//void filt (hls::stream<AXI_VAL>& y, coef_t c[N], hls::stream<AXI_VAL>& x) {
-//#pragma HLS INTERFACE m_axi depth=11 port=c
-//#pragma HLS INTERFACE axis register both port=x
-//#pragma HLS INTERFACE axis register both port=y
-//#pragma HLS INTERFACE ap_ctrl_none port=return
-//   //coef_t taps[N] = {0,-10,-9,23,56,63,56,23,-9,-10,0};
+		// *** ACTUAL CODE ***
+//		static data_t signal_shift_reg[N];
 //
-//	while(1) {
-//		static data_t lowfreq_shift_reg[N];
-//		static data_t midfreq_shift_reg[N];
-//		static data_t highfreq_shift_reg[N];
-//
-//		acc_t lowfreq_accumulate;
-//		acc_t midfreq_accumulate;
-//		acc_t highfreq_accumulate;
+//		acc_t accumulate;
 //
 //		data_t data;
-//		short i;
+//		int i;
 //
 //		AXI_VAL tmp;
 //		x.read(tmp);
 //
-//		lowfreq_accumulate = 0;
+//		accumulate = 0;
 //
-//		LowFreq_Shift_Accumulate_Loop:
+//		Shift_Accumulate_Loop:
 //		for (i = N - 1; i > 0; i--){
 //#pragma HLS UNROLL
-//			lowfreq_shift_reg[i] = lowfreq_shift_reg[i - 1];
-//			lowfreq_accumulate += lowfreq_shift_reg[i] * c[0];
+//			signal_shift_reg[i] = signal_shift_reg[i - 1];
+//			accumulate += signal_shift_reg[i] * c[i];
 //		}
 //
-//		lowfreq_accumulate += tmp.data.to_short() * c[0];
-//		lowfreq_shift_reg[0] = tmp.data.to_short();
+//		accumulate += tmp.data.to_short() * c[0];
+//		signal_shift_reg[0] = tmp.data.to_short();
 //		AXI_VAL output;
-//		output.data = lowfreq_accumulate;
+//		output.data = accumulate;
 //		output.keep = tmp.keep;
 //		output.strb = tmp.strb;
 //		output.last = tmp.last;
@@ -82,5 +69,5 @@ void filter(data_t *y, coef_t c[N], data_t x){
 //		if (tmp.last) {
 //			break;
 //		}
-//	}
-//}
+	}
+}

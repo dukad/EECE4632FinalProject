@@ -1,5 +1,5 @@
 INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2023.2/bin/unwrapped/win64.o/vitis_hls.exe'
-INFO: [HLS 200-10] For user 'a01me' on host 'desktop-g7ja666' (Windows NT_amd64 version 6.2) on Wed Apr 03 16:31:23 -0400 2024
+INFO: [HLS 200-10] For user 'a01me' on host 'desktop-g7ja666' (Windows NT_amd64 version 6.2) on Wed Apr 10 14:19:56 -0400 2024
 INFO: [HLS 200-10] In directory 'C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test'
 INFO: [HLS 200-2053] The vitis_hls executable is being deprecated. Consider using vitis-run --mode hls --tcl
 Sourcing Tcl script 'C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vitis/solution1/export.tcl'
@@ -9,6 +9,8 @@ INFO: [HLS 200-10] Opening project 'C:/Users/a01me/Documents/GitHub/College/EECE
 INFO: [HLS 200-1510] Running: set_top filt 
 INFO: [HLS 200-1510] Running: add_files filt.cpp 
 INFO: [HLS 200-10] Adding design file 'filt.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files filt.h 
+INFO: [HLS 200-10] Adding design file 'filt.h' to the project
 INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
 INFO: [HLS 200-10] Opening solution 'C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vitis/solution1'.
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
@@ -18,10 +20,11 @@ Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/top
 INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
 INFO: [HLS 200-1464] Running solution command: config_export -output=C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test
 INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
-INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
 INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
-INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 INFO: [HLS 200-1510] Running: config_export -format ip_catalog -output C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test -rtl verilog 
+INFO: [HLS 200-1510] Running: source ./FIR_Test_Vitis/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name filt filt 
 INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog -output C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test 
 INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
 
@@ -33,11 +36,11 @@ INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
     ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source run_ippack.tcl -notrace
-ipx::create_core: Time (s): cpu = 00:00:08 ; elapsed = 00:00:13 . Memory (MB): peak = 568.938 ; gain = 173.793
+ipx::create_core: Time (s): cpu = 00:00:07 ; elapsed = 00:00:18 . Memory (MB): peak = 569.914 ; gain = 175.027
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.2/data/ip'.
-INFO: [Common 17-206] Exiting Vivado at Wed Apr  3 16:31:57 2024...
+INFO: [Common 17-206] Exiting Vivado at Wed Apr 10 14:20:45 2024...
 INFO: [HLS 200-802] Generated output file export.zip
-INFO: [HLS 200-111] Finished Command export_design CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 30.076 seconds; current allocated memory: 9.039 MB.
-INFO: [HLS 200-112] Total CPU user time: 5 seconds. Total CPU system time: 1 seconds. Total elapsed time: 35.509 seconds; peak allocated memory: 201.742 MB.
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 45.176 seconds; current allocated memory: 9.141 MB.
+INFO: [HLS 200-112] Total CPU user time: 4 seconds. Total CPU system time: 1 seconds. Total elapsed time: 51.218 seconds; peak allocated memory: 202.465 MB.

@@ -21,7 +21,7 @@ int main () {
   		signal = signal - 1;
 
 	// Execute the function with latest input
-    filter(&output,taps,signal);
+    filt(&output,taps,signal);
 
     if ((ramp_up == 1) && (signal >= 75))
     	ramp_up = 0;

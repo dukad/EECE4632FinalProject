@@ -7,8 +7,7 @@
       "name": "FIR_Test",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2023.2",
-      "validated": "true"
+      "tool_version": "2023.2"
     },
     "design_tree": {
       "processing_system7_0": "",
@@ -2612,14 +2611,8 @@
             "xci_path": "ip\\FIR_Test_blk_mem_gen_0_0\\FIR_Test_blk_mem_gen_0_0.xci",
             "inst_hier_path": "firDMA/blk_mem_gen_0",
             "parameters": {
-              "Coe_File": {
-                "value": "../../../../../../../filt.coe"
-              },
-              "Load_Init_File": {
-                "value": "true"
-              },
               "Memory_Type": {
-                "value": "Single_Port_ROM"
+                "value": "Single_Port_RAM"
               }
             }
           },
