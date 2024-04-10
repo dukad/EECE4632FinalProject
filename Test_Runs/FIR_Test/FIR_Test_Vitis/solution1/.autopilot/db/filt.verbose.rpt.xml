@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'filt'" level="0">
-<item name = "Date">Wed Apr  3 16:31:06 2024
+<item name = "Date">Wed Apr 10 14:19:39 2024
 </item>
 <item name = "Version">2023.2 (Build 4023990 on Oct 11 2023)</item>
 <item name = "Project">FIR_Test_Vitis</item>
@@ -31,11 +31,12 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_filt_Pipeline_VITIS_LOOP_16_2_fu_170">filt_Pipeline_VITIS_LOOP_16_2, 101, 101, 1.010 us, 1.010 us, 101, 101, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- VITIS_LOOP_18_1">?, ?, 5, 1, 1, ?, yes</column>
+<column name="- VITIS_LOOP_9_1">?, ?, 120, -, -, ?, no</column>
 </table>
 </item>
 </section>
@@ -48,14 +49,14 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
 <column name="DSP">-, -, -, -, -</column>
-<column name="Expression">-, -, 0, 180, -</column>
+<column name="Expression">-, -, 0, 4, -</column>
 <column name="FIFO">-, -, -, -, -</column>
-<column name="Instance">2, 1, 955, 1005, -</column>
+<column name="Instance">4, -, 947, 979, -</column>
 <column name="Memory">-, -, -, -, -</column>
-<column name="Multiplexer">-, -, -, 110, -</column>
-<column name="Register">-, -, 761, 192, -</column>
+<column name="Multiplexer">-, -, -, 225, -</column>
+<column name="Register">-, -, 191, -, -</column>
 <specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
-<specialColumn name="Utilization (%)">~0, ~0, 1, 2, 0</specialColumn>
+<specialColumn name="Utilization (%)">1, 0, 1, 2, 0</specialColumn>
 </table>
 </item>
 <item name = "Detail">
@@ -63,8 +64,8 @@
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
 <column name="control_s_axi_U">control_s_axi, 0, 0, 100, 168, 0</column>
-<column name="gmem_m_axi_U">gmem_m_axi, 2, 0, 855, 831, 0</column>
-<column name="mul_16s_16s_16_1_1_U1">mul_16s_16s_16_1_1, 0, 1, 0, 6, 0</column>
+<column name="grp_filt_Pipeline_VITIS_LOOP_16_2_fu_170">filt_Pipeline_VITIS_LOOP_16_2, 0, 0, 17, 77, 0</column>
+<column name="gmem_m_axi_U">gmem_m_axi, 4, 0, 830, 734, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -81,26 +82,21 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="add_ln43_1_fu_305_p2">+, 0, 0, 23, 16, 16</column>
-<column name="add_ln43_2_fu_310_p2">+, 0, 0, 16, 16, 16</column>
-<column name="add_ln43_3_fu_316_p2">+, 0, 0, 16, 16, 16</column>
-<column name="add_ln43_4_fu_373_p2">+, 0, 0, 16, 16, 16</column>
-<column name="add_ln43_5_fu_322_p2">+, 0, 0, 23, 16, 16</column>
-<column name="add_ln43_6_fu_327_p2">+, 0, 0, 16, 16, 16</column>
-<column name="add_ln43_7_fu_245_p2">+, 0, 0, 16, 16, 16</column>
-<column name="add_ln43_8_fu_251_p2">+, 0, 0, 16, 16, 16</column>
-<column name="add_ln43_9_fu_333_p2">+, 0, 0, 16, 16, 16</column>
-<column name="add_ln43_fu_377_p2">+, 0, 0, 16, 16, 16</column>
-<column name="ap_block_pp0_stage0_01001">or, 0, 0, 2, 1, 1</column>
-<column name="ap_block_pp0_stage0_11001">or, 0, 0, 2, 1, 1</column>
-<column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
+<column name="ap_block_state18">or, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state20">or, 0, 0, 2, 1, 1</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
-<column name="ap_NS_fsm">65, 13, 1, 13</column>
-<column name="ap_enable_reg_pp0_iter4">9, 2, 1, 2</column>
+<column name="ap_NS_fsm">106, 21, 1, 21</column>
+<column name="gmem_AWADDR">14, 3, 64, 192</column>
+<column name="gmem_AWLEN">14, 3, 32, 96</column>
+<column name="gmem_AWVALID">14, 3, 1, 3</column>
+<column name="gmem_BREADY">14, 3, 1, 3</column>
+<column name="gmem_WVALID">9, 2, 1, 2</column>
 <column name="gmem_blk_n_AR">9, 2, 1, 2</column>
+<column name="gmem_blk_n_AW">9, 2, 1, 2</column>
+<column name="gmem_blk_n_B">9, 2, 1, 2</column>
 <column name="gmem_blk_n_R">9, 2, 1, 2</column>
 <column name="x_TDATA_blk_n">9, 2, 1, 2</column>
 <column name="y_TDATA_blk_n">9, 2, 1, 2</column>
@@ -108,43 +104,17 @@
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
-<column name="add_ln43_1_reg_444">16, 0, 16, 0</column>
-<column name="add_ln43_3_reg_449">16, 0, 16, 0</column>
-<column name="add_ln43_8_reg_439">16, 0, 16, 0</column>
-<column name="add_ln43_9_reg_454">16, 0, 16, 0</column>
-<column name="add_ln43_reg_459">16, 0, 16, 0</column>
-<column name="ap_CS_fsm">12, 0, 12, 0</column>
-<column name="ap_enable_reg_pp0_iter0">1, 0, 1, 0</column>
-<column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
-<column name="ap_enable_reg_pp0_iter2">1, 0, 1, 0</column>
-<column name="ap_enable_reg_pp0_iter3">1, 0, 1, 0</column>
-<column name="ap_enable_reg_pp0_iter4">1, 0, 1, 0</column>
-<column name="filt_stream_short_stream_axis_0_lowfreq_shift_reg">16, 0, 16, 0</column>
-<column name="filt_stream_short_stream_axis_0_lowfreq_shift_reg_1">16, 0, 16, 0</column>
-<column name="filt_stream_short_stream_axis_0_lowfreq_shift_reg_2">16, 0, 16, 0</column>
-<column name="filt_stream_short_stream_axis_0_lowfreq_shift_reg_3">16, 0, 16, 0</column>
-<column name="filt_stream_short_stream_axis_0_lowfreq_shift_reg_4">16, 0, 16, 0</column>
-<column name="filt_stream_short_stream_axis_0_lowfreq_shift_reg_5">16, 0, 16, 0</column>
-<column name="filt_stream_short_stream_axis_0_lowfreq_shift_reg_6">16, 0, 16, 0</column>
-<column name="filt_stream_short_stream_axis_0_lowfreq_shift_reg_6_load_reg_433">16, 0, 16, 0</column>
-<column name="filt_stream_short_stream_axis_0_lowfreq_shift_reg_7">16, 0, 16, 0</column>
-<column name="filt_stream_short_stream_axis_0_lowfreq_shift_reg_8">16, 0, 16, 0</column>
-<column name="filt_stream_short_stream_axis_0_lowfreq_shift_reg_9">16, 0, 16, 0</column>
-<column name="gmem_addr_read_reg_393">16, 0, 16, 0</column>
-<column name="gmem_addr_reg_387">64, 0, 64, 0</column>
-<column name="tmp_data_reg_398">16, 0, 16, 0</column>
-<column name="tmp_dest_reg_428">1, 0, 1, 0</column>
-<column name="tmp_id_reg_423">1, 0, 1, 0</column>
-<column name="tmp_keep_reg_403">2, 0, 2, 0</column>
-<column name="tmp_last_reg_418">1, 0, 1, 0</column>
-<column name="tmp_strb_reg_408">2, 0, 2, 0</column>
-<column name="tmp_user_reg_413">1, 0, 1, 0</column>
-<column name="tmp_dest_reg_428">64, 32, 1, 0</column>
-<column name="tmp_id_reg_423">64, 32, 1, 0</column>
-<column name="tmp_keep_reg_403">64, 32, 2, 0</column>
-<column name="tmp_last_reg_418">64, 32, 1, 0</column>
-<column name="tmp_strb_reg_408">64, 32, 2, 0</column>
-<column name="tmp_user_reg_413">64, 32, 1, 0</column>
+<column name="ap_CS_fsm">20, 0, 20, 0</column>
+<column name="gmem_addr_reg_226">64, 0, 64, 0</column>
+<column name="grp_filt_Pipeline_VITIS_LOOP_16_2_fu_170_ap_start_reg">1, 0, 1, 0</column>
+<column name="output1_data_reg_262">32, 0, 32, 0</column>
+<column name="tmp1_dest_reg_257">1, 0, 1, 0</column>
+<column name="tmp1_id_reg_252">1, 0, 1, 0</column>
+<column name="tmp1_keep_reg_232">4, 0, 4, 0</column>
+<column name="tmp1_last_reg_247">1, 0, 1, 0</column>
+<column name="tmp1_strb_reg_237">4, 0, 4, 0</column>
+<column name="tmp1_user_reg_242">1, 0, 1, 0</column>
+<column name="trunc_ln_reg_221">62, 0, 62, 0</column>
 </table>
 </item>
 </section>
@@ -218,21 +188,21 @@
 <column name="m_axi_gmem_BRESP">in, 2, m_axi, gmem, pointer</column>
 <column name="m_axi_gmem_BID">in, 1, m_axi, gmem, pointer</column>
 <column name="m_axi_gmem_BUSER">in, 1, m_axi, gmem, pointer</column>
-<column name="y_TDATA">out, 16, axis, y_V_data_V, pointer</column>
+<column name="y_TDATA">out, 32, axis, y_V_data_V, pointer</column>
 <column name="y_TVALID">out, 1, axis, y_V_dest_V, pointer</column>
 <column name="y_TREADY">in, 1, axis, y_V_dest_V, pointer</column>
 <column name="y_TDEST">out, 1, axis, y_V_dest_V, pointer</column>
-<column name="y_TKEEP">out, 2, axis, y_V_keep_V, pointer</column>
-<column name="y_TSTRB">out, 2, axis, y_V_strb_V, pointer</column>
+<column name="y_TKEEP">out, 4, axis, y_V_keep_V, pointer</column>
+<column name="y_TSTRB">out, 4, axis, y_V_strb_V, pointer</column>
 <column name="y_TUSER">out, 1, axis, y_V_user_V, pointer</column>
 <column name="y_TLAST">out, 1, axis, y_V_last_V, pointer</column>
 <column name="y_TID">out, 1, axis, y_V_id_V, pointer</column>
-<column name="x_TDATA">in, 16, axis, x_V_data_V, pointer</column>
+<column name="x_TDATA">in, 32, axis, x_V_data_V, pointer</column>
 <column name="x_TVALID">in, 1, axis, x_V_dest_V, pointer</column>
 <column name="x_TREADY">out, 1, axis, x_V_dest_V, pointer</column>
 <column name="x_TDEST">in, 1, axis, x_V_dest_V, pointer</column>
-<column name="x_TKEEP">in, 2, axis, x_V_keep_V, pointer</column>
-<column name="x_TSTRB">in, 2, axis, x_V_strb_V, pointer</column>
+<column name="x_TKEEP">in, 4, axis, x_V_keep_V, pointer</column>
+<column name="x_TSTRB">in, 4, axis, x_V_strb_V, pointer</column>
 <column name="x_TUSER">in, 1, axis, x_V_user_V, pointer</column>
 <column name="x_TLAST">in, 1, axis, x_V_last_V, pointer</column>
 <column name="x_TID">in, 1, axis, x_V_id_V, pointer</column>

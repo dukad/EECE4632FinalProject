@@ -1,0 +1,145 @@
+
+
+================================================================
+== Vitis HLS Report for 'filt_Pipeline_VITIS_LOOP_16_2'
+================================================================
+* Date:           Wed Apr 10 14:19:37 2024
+
+* Version:        2023.2 (Build 4023990 on Oct 11 2023)
+* Project:        FIR_Test_Vitis
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.300 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |      101|      101|  1.010 us|  1.010 us|  101|  101|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_16_2  |       99|       99|         2|          1|          1|    99|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 2, States = { 1 2 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 5.04>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%i = alloca i32 1" [filt.cpp:16]   --->   Operation 5 'alloca' 'i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%sext_ln16_read = read i62 @_ssdm_op_Read.ap_auto.i62, i62 %sext_ln16"   --->   Operation 6 'read' 'sext_ln16_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%sext_ln16_cast = sext i62 %sext_ln16_read"   --->   Operation 7 'sext' 'sext_ln16_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 99, void @empty_1, void @empty_2, void @empty_0, i32 16, i32 16, i32 16, i32 16, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 8 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (1.58ns)   --->   "%store_ln16 = store i7 0, i7 %i" [filt.cpp:16]   --->   Operation 9 'store' 'store_ln16' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc"   --->   Operation 10 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%i_1 = load i7 %i" [filt.cpp:16]   --->   Operation 11 'load' 'i_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %gmem"   --->   Operation 12 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (1.87ns)   --->   "%icmp_ln16 = icmp_eq  i7 %i_1, i7 99" [filt.cpp:16]   --->   Operation 13 'icmp' 'icmp_ln16' <Predicate = true> <Delay = 1.87> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.87> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 14 [1/1] (1.87ns)   --->   "%add_ln16 = add i7 %i_1, i7 1" [filt.cpp:16]   --->   Operation 14 'add' 'add_ln16' <Predicate = true> <Delay = 1.87> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.87> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%br_ln16 = br i1 %icmp_ln16, void %for.inc.split, void %for.end.exitStub" [filt.cpp:16]   --->   Operation 15 'br' 'br_ln16' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (1.58ns)   --->   "%store_ln16 = store i7 %add_ln16, i7 %i" [filt.cpp:16]   --->   Operation 16 'store' 'store_ln16' <Predicate = (!icmp_ln16)> <Delay = 1.58>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 24 'ret' 'ret_ln0' <Predicate = (icmp_ln16)> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 7.30>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%gmem_addr = getelementptr i32 %gmem, i64 %sext_ln16_cast" [filt.cpp:16]   --->   Operation 17 'getelementptr' 'gmem_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%specpipeline_ln16 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_0" [filt.cpp:16]   --->   Operation 18 'specpipeline' 'specpipeline_ln16' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%speclooptripcount_ln16 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 99, i64 99, i64 99" [filt.cpp:16]   --->   Operation 19 'speclooptripcount' 'speclooptripcount_ln16' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%specloopname_ln16 = specloopname void @_ssdm_op_SpecLoopName, void @empty_14" [filt.cpp:16]   --->   Operation 20 'specloopname' 'specloopname_ln16' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%zext_ln17 = zext i7 %i_1" [filt.cpp:17]   --->   Operation 21 'zext' 'zext_ln17' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 22 [1/1] (7.30ns)   --->   "%write_ln17 = write void @_ssdm_op_Write.m_axi.p1i32, i32 %gmem_addr, i32 %zext_ln17, i4 15" [filt.cpp:17]   --->   Operation 22 'write' 'write_ln17' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%br_ln16 = br void %for.inc" [filt.cpp:16]   --->   Operation 23 'br' 'br_ln16' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 5.046ns
+The critical path consists of the following:
+	'store' operation 0 bit ('store_ln16', filt.cpp:16) of constant 0 on local variable 'i', filt.cpp:16 [7]  (1.588 ns)
+	'load' operation 7 bit ('i', filt.cpp:16) on local variable 'i', filt.cpp:16 [10]  (0.000 ns)
+	'icmp' operation 1 bit ('icmp_ln16', filt.cpp:16) [12]  (1.870 ns)
+	'store' operation 0 bit ('store_ln16', filt.cpp:16) of variable 'add_ln16', filt.cpp:16 on local variable 'i', filt.cpp:16 [22]  (1.588 ns)
+
+ <State 2>: 7.300ns
+The critical path consists of the following:
+	'getelementptr' operation 32 bit ('gmem_addr', filt.cpp:16) [16]  (0.000 ns)
+	bus write operation ('write_ln17', filt.cpp:17) on port 'gmem' (filt.cpp:17) [21]  (7.300 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

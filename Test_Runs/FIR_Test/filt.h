@@ -1,15 +1,16 @@
 #ifndef FILT_H
 #define FILT_H
-#define N	11
 
-typedef int	coef_t;
-typedef int	data_t;
-typedef int	acc_t;
+#include <hls_stream.h>
+#include <ap_axi_sdata.h>
 
-void fir (
-  data_t *y,
-  coef_t c[N+1],
-  data_t x
-  );
+typedef ap_axis<32,1,1,1> AXI_VAL;
+typedef int data_t;
+typedef int coef_t;
+typedef int acc_t;
+
+#define N 99
+
+void filt (hls::stream<AXI_VAL>& y, coef_t c[N], hls::stream<AXI_VAL>& x);
 
 #endif
