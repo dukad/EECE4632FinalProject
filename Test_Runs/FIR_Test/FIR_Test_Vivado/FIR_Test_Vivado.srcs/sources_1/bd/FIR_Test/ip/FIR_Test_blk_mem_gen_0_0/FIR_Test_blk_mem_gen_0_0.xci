@@ -35,7 +35,7 @@
         "Assume_Synchronous_Clk": [ { "value": "false", "resolve_type": "user", "format": "bool", "enabled": false, "usage": "all" } ],
         "Write_Width_A": [ { "value": "32", "value_src": "propagated", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "Write_Depth_A": [ { "value": "2048", "value_src": "propagated", "resolve_type": "user", "format": "long", "usage": "all" } ],
-        "Read_Width_A": [ { "value": "32", "resolve_type": "user", "usage": "all" } ],
+        "Read_Width_A": [ { "value": "32", "value_src": "propagated", "resolve_type": "user", "usage": "all" } ],
         "Operating_Mode_A": [ { "value": "WRITE_FIRST", "resolve_type": "user", "usage": "all" } ],
         "Enable_A": [ { "value": "Use_ENA_Pin", "resolve_type": "user", "enabled": false, "usage": "all" } ],
         "Write_Width_B": [ { "value": "32", "resolve_type": "user", "enabled": false, "usage": "all" } ],
@@ -227,7 +227,7 @@
             "MEM_WIDTH": [ { "value": "32", "value_src": "ip_propagated", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
             "MEM_ECC": [ { "value": "NONE", "value_src": "user_prop", "value_permission": "bd", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
             "MASTER_TYPE": [ { "value": "BRAM_CTRL", "value_src": "user", "value_permission": "bd", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
-            "READ_WRITE_MODE": [ { "value": "READ_ONLY", "value_src": "propagated", "value_permission": "bd", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
+            "READ_WRITE_MODE": [ { "value": "READ_WRITE", "value_src": "propagated", "value_permission": "bd", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
             "READ_LATENCY": [ { "value": "1", "value_src": "user_prop", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ]
           },
           "port_maps": {

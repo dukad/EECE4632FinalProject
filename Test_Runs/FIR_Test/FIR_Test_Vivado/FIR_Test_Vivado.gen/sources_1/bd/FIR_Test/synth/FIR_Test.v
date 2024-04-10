@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-//Date        : Wed Apr  3 16:35:39 2024
+//Date        : Wed Apr 10 14:26:46 2024
 //Host        : DESKTOP-G7JA666 running 64-bit major release  (build 9200)
 //Command     : generate_target FIR_Test.bd
 //Design      : FIR_Test
@@ -1488,11 +1488,13 @@ module firDMA_imp_SIM45Z
 
   wire [12:0]axi_bram_ctrl_0_BRAM_PORTA_ADDR;
   wire axi_bram_ctrl_0_BRAM_PORTA_CLK;
+  wire [31:0]axi_bram_ctrl_0_BRAM_PORTA_DIN;
   wire [31:0]axi_bram_ctrl_0_BRAM_PORTA_DOUT;
   wire axi_bram_ctrl_0_BRAM_PORTA_EN;
   wire axi_bram_ctrl_0_BRAM_PORTA_RST;
-  wire [15:0]axi_dma_0_M_AXIS_MM2S_TDATA;
-  wire [1:0]axi_dma_0_M_AXIS_MM2S_TKEEP;
+  wire [3:0]axi_bram_ctrl_0_BRAM_PORTA_WE;
+  wire [31:0]axi_dma_0_M_AXIS_MM2S_TDATA;
+  wire [3:0]axi_dma_0_M_AXIS_MM2S_TKEEP;
   wire axi_dma_0_M_AXIS_MM2S_TLAST;
   wire axi_dma_0_M_AXIS_MM2S_TREADY;
   wire axi_dma_0_M_AXIS_MM2S_TVALID;
@@ -1560,8 +1562,8 @@ module firDMA_imp_SIM45Z
   wire filt_0_m_axi_gmem_WREADY;
   wire [3:0]filt_0_m_axi_gmem_WSTRB;
   wire filt_0_m_axi_gmem_WVALID;
-  wire [15:0]filt_0_y_TDATA;
-  wire [1:0]filt_0_y_TKEEP;
+  wire [31:0]filt_0_y_TDATA;
+  wire [3:0]filt_0_y_TKEEP;
   wire [0:0]filt_0_y_TLAST;
   wire filt_0_y_TREADY;
   wire filt_0_y_TVALID;
@@ -1637,6 +1639,8 @@ module firDMA_imp_SIM45Z
         .bram_en_a(axi_bram_ctrl_0_BRAM_PORTA_EN),
         .bram_rddata_a(axi_bram_ctrl_0_BRAM_PORTA_DOUT),
         .bram_rst_a(axi_bram_ctrl_0_BRAM_PORTA_RST),
+        .bram_we_a(axi_bram_ctrl_0_BRAM_PORTA_WE),
+        .bram_wrdata_a(axi_bram_ctrl_0_BRAM_PORTA_DIN),
         .s_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s_axi_araddr(filt_0_m_axi_gmem_ARADDR[12:0]),
         .s_axi_arburst(filt_0_m_axi_gmem_ARBURST),
@@ -1737,10 +1741,12 @@ module firDMA_imp_SIM45Z
   FIR_Test_blk_mem_gen_0_0 blk_mem_gen_0
        (.addra({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,axi_bram_ctrl_0_BRAM_PORTA_ADDR}),
         .clka(axi_bram_ctrl_0_BRAM_PORTA_CLK),
+        .dina(axi_bram_ctrl_0_BRAM_PORTA_DIN),
         .douta(axi_bram_ctrl_0_BRAM_PORTA_DOUT),
         .ena(axi_bram_ctrl_0_BRAM_PORTA_EN),
-        .rsta(axi_bram_ctrl_0_BRAM_PORTA_RST));
-  FIR_Test_filt_0_8 filt_0
+        .rsta(axi_bram_ctrl_0_BRAM_PORTA_RST),
+        .wea(axi_bram_ctrl_0_BRAM_PORTA_WE));
+  FIR_Test_filt_0_9 filt_0
        (.ap_clk(processing_system7_0_FCLK_CLK0),
         .ap_rst_n(rst_ps7_0_100M_peripheral_aresetn),
         .m_axi_gmem_ARADDR(filt_0_m_axi_gmem_ARADDR),
@@ -1793,7 +1799,7 @@ module firDMA_imp_SIM45Z
         .x_TKEEP(axi_dma_0_M_AXIS_MM2S_TKEEP),
         .x_TLAST(axi_dma_0_M_AXIS_MM2S_TLAST),
         .x_TREADY(axi_dma_0_M_AXIS_MM2S_TREADY),
-        .x_TSTRB({1'b1,1'b1}),
+        .x_TSTRB({1'b1,1'b1,1'b1,1'b1}),
         .x_TUSER(1'b0),
         .x_TVALID(axi_dma_0_M_AXIS_MM2S_TVALID),
         .y_TDATA(filt_0_y_TDATA),
