@@ -5,5 +5,6 @@
   </source>
   <testbench>
     <originFiles name="filt_test.c" path="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Test_Runs\FIR_Test\filt_test.c"/>
+    <originFiles name="filt.h" path="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Test_Runs\FIR_Test\filt.h"/>
   </testbench>
 </autopilotfilemapping:AutoPilotFileMapping>

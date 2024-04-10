@@ -2,6 +2,7 @@
 <project xmlns="com.autoesl.autopilot.project" top="filt">
   <files>
     <file name="filt.cpp" sc="0" tb="false" cflags="" blackbox="false" csimflags=""/>
+    <file name="../../filt.h" sc="0" tb="1" cflags="" csimflags=""/>
     <file name="../../filt_test.c" sc="0" tb="1" cflags="" csimflags=""/>
   </files>
   <solutions>
