@@ -1,4 +1,9 @@
 set SynModuleInfo {
+  {SRCNAME filt_Pipeline_VITIS_LOOP_29_2 MODELNAME filt_Pipeline_VITIS_LOOP_29_2 RTLNAME filt_filt_Pipeline_VITIS_LOOP_29_2
+    SUBMODULES {
+      {MODELNAME filt_flow_control_loop_pipe_sequential_init RTLNAME filt_flow_control_loop_pipe_sequential_init BINDTYPE interface TYPE internal_upc_flow_control INSTNAME filt_flow_control_loop_pipe_sequential_init_U}
+    }
+  }
   {SRCNAME filt MODELNAME filt RTLNAME filt IS_TOP 1
     SUBMODULES {
       {MODELNAME filt_gmem_m_axi RTLNAME filt_gmem_m_axi BINDTYPE interface TYPE adapter IMPL m_axi}

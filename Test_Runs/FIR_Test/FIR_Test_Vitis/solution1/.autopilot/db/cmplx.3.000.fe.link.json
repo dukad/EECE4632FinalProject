@@ -4,7 +4,7 @@
     "calls": "",
     "file": "filt.cpp",
     "fileloc": 3,
-    "instructions": 95,
+    "instructions": 98,
     "loads": {
       "L": 7,
       "T": 1
@@ -14,6 +14,6 @@
       "L": 7,
       "T": 1
     },
-    "total_instructions": 243
+    "total_instructions": 246
   }
 }

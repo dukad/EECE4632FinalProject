@@ -1,18 +1,19 @@
 {
   "0": {
-    "basicblocks": 11,
+    "basicblocks": 17,
     "calls": "",
     "file": "filt.cpp",
     "fileloc": 3,
-    "instructions": 132,
+    "instructions": 151,
     "loads": {
       "L": 7,
       "T": 1
     },
     "name": "filt",
     "stores": {
-      "L": 7
+      "L": 7,
+      "T": 1
     },
-    "total_instructions": 132
+    "total_instructions": 151
   }
 }

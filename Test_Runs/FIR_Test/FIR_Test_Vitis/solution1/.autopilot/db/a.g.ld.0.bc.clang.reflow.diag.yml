@@ -1,14 +1,30 @@
 --- !Missed
 Pass:            reflow-burst-inference
 Name:            CouldNotAnalyzeBoundsPattern
-DebugLoc:        { File: filt.cpp, Line: 12, Column: 19 }
+DebugLoc:        { File: filt.cpp, Line: 29, Column: 20 }
 Function:        _Z4filtRN3hls6streamINS_4axisI6ap_intILi32EELm1ELm1ELm1ELh56ELb0EEELi0EEEPiS6_
 Args:            
   - String:          Could not analyze the loop bounds
   - String:          ' _XLX_SEP_ '
-  - LoopName:        VITIS_LOOP_12_1
+  - LoopName:        VITIS_LOOP_29_2
   - String:          ' '
-  - LoopLoc:         'filt.cpp:12:19'
+  - LoopLoc:         'filt.cpp:29:20'
+  - String:          ' '
+  - Function:        'filt(hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, int*, hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&)'
+    DebugLoc:        { File: filt.cpp, Line: 3, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: filt.cpp, Line: 14, Column: 19 }
+Function:        _Z4filtRN3hls6streamINS_4axisI6ap_intILi32EELm1ELm1ELm1ELh56ELb0EEELi0EEEPiS6_
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        VITIS_LOOP_14_1
+  - String:          ' '
+  - LoopLoc:         'filt.cpp:14:19'
   - String:          ' '
   - Function:        'filt(hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, int*, hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&)'
     DebugLoc:        { File: filt.cpp, Line: 3, Column: 0 }
@@ -17,13 +33,13 @@ Args:
 --- !Failure
 Pass:            reflow-occurrence-inference
 Name:            NonComputableLoopForm
-DebugLoc:        { File: filt.cpp, Line: 12, Column: 19 }
+DebugLoc:        { File: filt.cpp, Line: 14, Column: 19 }
 Function:        _Z4filtRN3hls6streamINS_4axisI6ap_intILi32EELm1ELm1ELm1ELh56ELb0EEELi0EEEPiS6_
 Args:            
   - String:          'Could not analyze occurrence information within '''
-  - LoopName:        VITIS_LOOP_12_1
+  - LoopName:        VITIS_LOOP_14_1
   - String:          '''('
-  - LoopLoc:         'filt.cpp:12:19'
+  - LoopLoc:         'filt.cpp:14:19'
   - String:          ') . Requires loop in simplify form and with single exit.'
 ...
 --- !HLSReportInfo
@@ -31,8 +47,8 @@ Pass:            auto-loop-pipeline
 Name:            AutoLoopPipeline
 Args:            
   - String:          'automatically set the pipeline for Loop< '
-  - LoopName:        VITIS_LOOP_12_1
+  - LoopName:        VITIS_LOOP_29_2
   - String:          '> at '
-  - LoopLoc:         'filt.cpp:12:19'
+  - LoopLoc:         'filt.cpp:29:20'
   - String:          ' '
 ...

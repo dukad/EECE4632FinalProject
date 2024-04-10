@@ -1,3 +1,4 @@
+filt_flow_control_loop_pipe_sequential_init
 filt_gmem_m_axi
 filt_control_s_axi
 filt_regslice_both
@@ -14,4 +15,5 @@ filt_regslice_both
 filt_regslice_both
 filt_regslice_both
 filt_regslice_both
+filt_Pipeline_VITIS_LOOP_29_2
 filt

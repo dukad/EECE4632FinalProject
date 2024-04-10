@@ -9757,7 +9757,7 @@ __attribute__((sdx_kernel("filt", 0))) void filt (hls::stream<AXI_VAL>& y, coef_
 # 2 "filt.cpp" 2
 
 __attribute__((sdx_kernel("filt", 0))) void filt (hls::stream<AXI_VAL>& y, coef_t c[99], hls::stream<AXI_VAL>& x) {
-#line 16 "C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vitis/solution1/csynth.tcl"
+#line 17 "C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vitis/solution1/csynth.tcl"
 #pragma HLSDIRECTIVE TOP name=filt
 # 3 "filt.cpp"
 
@@ -9772,8 +9772,10 @@ __attribute__((sdx_kernel("filt", 0))) void filt (hls::stream<AXI_VAL>& y, coef_
 
 
  int i = -1;
+ bool read_coefs = false;
+ bool read_signal = false;
 
- VITIS_LOOP_12_1: while(1) {
+ VITIS_LOOP_14_1: while(1) {
 
   static data_t signal_shift_reg[99];
 
@@ -9781,18 +9783,16 @@ __attribute__((sdx_kernel("filt", 0))) void filt (hls::stream<AXI_VAL>& y, coef_
 
   data_t data;
   int i;
-  bool coefs_or_signal;
 
   AXI_VAL tmp;
   x.read(tmp);
 
   accumulate = 0;
-  coefs_or_signal = false;
 
 
-  VITIS_LOOP_29_2: while (coefs_or_signal){
+  VITIS_LOOP_29_2: while (read_coefs){
    if (tmp.data.to_int() == 43962){
-    coefs_or_signal = false;
+    read_coefs = false;
     i = 0;
     break;
    }
@@ -9803,7 +9803,7 @@ __attribute__((sdx_kernel("filt", 0))) void filt (hls::stream<AXI_VAL>& y, coef_
   }
 
   if (tmp.data.to_int() == 48879){
-   coefs_or_signal = true;
+   read_coefs = true;
   }
 
 
