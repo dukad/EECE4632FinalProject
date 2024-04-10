@@ -10,7 +10,7 @@
 #define WAH_BANDPASS_RESOLUTION 20
 #define BANDPASS_FILTER_LENGTH 100
 
-typedef ap_fixed<1,8> mult_float;
+typedef ap_fixed<8,1> mult_float;
 
 // function definitions
 int distortion(int input, int threshold, mult_float clip_factor);
