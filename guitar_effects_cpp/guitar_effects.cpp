@@ -7,8 +7,8 @@
 #define FRAME_RATE 88200
 #define LPF_FILTER_LENGTH 441
 #define DELAY_BUFFER_SIZE 44100
-#define WAH_BANDPASS_RESOLUTION 100
-#define BANDPASS_FILTER_LENGTH 21
+#define WAH_BANDPASS_RESOLUTION 20
+#define BANDPASS_FILTER_LENGTH 100
 
 typedef ap_fixed<1,8> mult_float;
 
@@ -30,7 +30,9 @@ void guitar_effects (
     int compression_zero_threshold,
     float delay_mult,
     int delay_samples,
-    int tempo) {
+    int tempo,
+    float wah_coeffs[WAH_BANDPASS_RESOLUTION][BANDPASS_FILTER_LENGTH]
+    ) {
     
     // pragmas for all inputs/outputs
     #pragma HLS INTERFACE axis port=INPUT
@@ -46,6 +48,7 @@ void guitar_effects (
 	#pragma HLS INTERFACE s_axilite port=axilite_out
     #pragma HLS INTERFACE s_axilite port=tempo
 	#pragma HLS INTERFACE ap_ctrl_none port=return
+    #pragma HLS INTERFACE m_axi depth=2000 port=c
 
 
     // declare all necessary variables
@@ -98,7 +101,7 @@ void guitar_effects (
         if (control & 0b0001) {
             //apply wah function
         	axilite_out = axilite_out | 0b0001;
-        	tmp_int = wah(tmp_int, tempo, current_sample, wah_buffer_index, wah_values_buffer);
+        	tmp_int = wah(tmp_int, tempo, current_sample, wah_buffer_index, wah_values_buffer, wah_coeffs);
         }
 
         current_sample ++; // change the current sample to keep track of 
@@ -203,7 +206,7 @@ int delay(int input, int delay_samples, float delay_mult, int delay_buffer[DELAY
     return output;
 }
 
-int wah(int input, int tempo, int current_sample, wah_buffer_index, wah_values_buffer) {
+int wah(int input, int tempo, int current_sample, int wah_buffer_index, int wah_values_buffer, float bandpass_coeffs[WAH_BANDPASS_RESOLUTION][BANDPASS_FILTER_LENGTH]) {
     // apply wah effect
     // taking filter coeffecients from bandpass_coeffs.coe
     // approximate the control signal as a sine wave based on sampling rate and tempo
@@ -215,9 +218,6 @@ int wah(int input, int tempo, int current_sample, wah_buffer_index, wah_values_b
 
     // based on this control signal (int) use the bandpass filter coefficients to apply a bandpass filter to the input signal
     // this is done by convolving the input signal with the filter coefficients
-    // store Coeffs in matrix to be used for convolution
-    int bandpass_coeffs[WAH_BANDPASS_RESOLUTION][BANDPASS_FILTER_LENGTH] = {0};
-    // HOW TO DO THIS??
 
     WAH_LOOP : for (int i = 0; i < BANDPASS_FILTER_LENGTH; i++) { // convolve, but change which filter to convolve with based on the control signal
         //iterate through filter
