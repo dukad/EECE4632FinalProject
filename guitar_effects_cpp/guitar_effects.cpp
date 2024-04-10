@@ -7,6 +7,8 @@
 #define FRAME_RATE 88200
 #define LPF_FILTER_LENGTH 441
 #define DELAY_BUFFER_SIZE 44100
+#define WAH_BANDPASS_RESOLUTION 100
+#define BANDPASS_FILTER_LENGTH 21
 
 typedef ap_fixed<1,8> mult_float;
 
@@ -26,7 +28,8 @@ void guitar_effects (
     int compression_max_threshold,
     int compression_zero_threshold,
     float delay_mult,
-    int delay_samples) {
+    int delay_samples,
+    int tempo) {
     
     // pragmas for all inputs/outputs
     #pragma HLS INTERFACE axis port=INPUT
@@ -40,6 +43,7 @@ void guitar_effects (
 	#pragma HLS INTERFACE s_axilite port=delay_mult
 	#pragma HLS INTERFACE s_axilite port=delay_samples
 	#pragma HLS INTERFACE s_axilite port=axilite_out
+    #pragma HLS INTERFACE s_axilite port=tempo
 	#pragma HLS INTERFACE ap_ctrl_none port=return
 
 
@@ -59,10 +63,16 @@ void guitar_effects (
     int delay_buffer[DELAY_BUFFER_SIZE] = {0};
     int delay_buffer_index = 0;
 
+    //wah vars
+    int wah_buffer_index = 0;
+    int wah_values_buffer[BANDPASS_FILTER_LENGTH] = {0};
+
+
     ap_axis<32,2,5,6> tmp;
     ap_axis<32,2,5,6> tmp_out;
     int tmp_int;
     axilite_out = 0;
+    int current_sample = 0;
     // main loop to control all effects
     while(1) {   
         INPUT.read(tmp); // store input data to tmp
@@ -77,7 +87,7 @@ void guitar_effects (
         if (control & 0b0100) {
             // apply compression function
         	axilite_out = axilite_out | 0b0100;
-            tmp_int = compression(tmp_int, compression_min_threshold, compression_max_threshold, compression_zero_threshold, current_level, compression_buffer, compression_buffer_index, lpf_coefficients);
+            tmp_int = compression(tmp_int, compression_min_threshold, compression_max_threshold, compression_zero_threshold, current_level, compression_buffer, compression_buffer_index, lpf_coefficients, current_sample);
         }
         if (control & 0b0010) {
             //apply delay function
@@ -87,8 +97,10 @@ void guitar_effects (
         if (control & 0b0001) {
             //apply wah function
         	axilite_out = axilite_out | 0b0001;
-        	tmp_int = tmp_int;
+        	tmp_int = wah(tmp_int, tempo, current_sample, wah_buffer_index, wah_values_buffer);
         }
+
+        current_sample ++; // change the current sample to keep track of 
 
         tmp_out.data = (tmp_int);
         tmp_out.keep = tmp.keep;
@@ -126,7 +138,7 @@ int distortion(int input, int threshold, mult_float clip_factor) {
 }
 
 //compression effect
-int compression(int input, int min_threshold, int max_threshold, int zero_threshold, int& current_level, int values_buffer[LPF_FILTER_LENGTH], int compression_buffer_index, int lpf_coefficients[LPF_FILTER_LENGTH]) {
+int compression(int input, int min_threshold, int max_threshold, int zero_threshold, int& current_level, int values_buffer[LPF_FILTER_LENGTH], int compression_buffer_index, int lpf_coefficients[LPF_FILTER_LENGTH], int current_sample) {
     // rectify the input signal and apply a low pass filter
 	int abs_in = input;
 	if (input < 0) {
@@ -142,6 +154,10 @@ int compression(int input, int min_threshold, int max_threshold, int zero_thresh
         //iterate through filter
         int coeff_index = (compression_buffer_index + i) % LPF_FILTER_LENGTH; // get value to index the previous values by, essentially iterate though but loop if needed
         current_level += values_buffer[coeff_index] * lpf_coefficients[i];
+    }
+    // dont amplify the signal at the beginning to avoid spike
+    if (current_sample < LPF_FILTER_LENGTH) {
+    	current_level = min_threshold;
     }
 
     // apply dynamic range compression
@@ -184,4 +200,29 @@ int delay(int input, int delay_samples, float delay_mult, int delay_buffer[DELAY
     delay_buffer_index = (delay_buffer_index + 1) % DELAY_BUFFER_SIZE; // cycle if needed
 
     return output;
+}
+
+int wah(int input, int tempo, int current_sample, wah_buffer_index, wah_values_buffer) {
+    // apply wah effect
+    // taking filter coeffecients from bandpass_coeffs.coe
+    // approximate the control signal as a sine wave based on sampling rate and tempo
+    // depending on the control signal, apply a bandpass filter to the input signal through convolution
+    // return the output
+
+    // calculate the control signal
+    int control_signal = (int)(WAH_BANDPASS_RESOLUTION* (0.5 + 0.5*sin(current_sample*2*3.14159*tempo/FRAME_RATE))); // map sine wave to 0->1 then multiply by bandpass resolution
+
+    // based on this control signal (int) use the bandpass filter coefficients to apply a bandpass filter to the input signal
+    // this is done by convolving the input signal with the filter coefficients
+    // store Coeffs in matrix to be used for convolution
+    int bandpass_coeffs[WAH_BANDPASS_RESOLUTION][BANDPASS_FILTER_LENGTH] = {0};
+    // HOW TO DO THIS??
+
+    WAH_LOOP : for (int i = 0; i < BANDPASS_FILTER_LENGTH; i++) { // convolve, but change which filter to convolve with based on the control signal
+        //iterate through filter
+        int coeff_index = (wah_buffer_index + i) % BANDPASS_FILTER_LENGTH; // get value to index the previous values by, essentially iterate though but loop if needed
+        result += wah_values_buffer[coeff_index] * bandpass_coeffs[control_signal][i];
+    }
+
+    return result;
 }
