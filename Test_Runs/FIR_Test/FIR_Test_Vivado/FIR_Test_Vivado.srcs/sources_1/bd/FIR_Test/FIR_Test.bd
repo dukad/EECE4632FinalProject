@@ -1,13 +1,14 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xCC6CFA53F622E079",
+      "boundary_crc": "0xCC6CFA53B4580162",
       "device": "xc7z020clg400-1",
       "gen_directory": "../../../../FIR_Test_Vivado.gen/sources_1/bd/FIR_Test",
       "name": "FIR_Test",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2023.2"
+      "tool_version": "2023.2",
+      "validated": "true"
     },
     "design_tree": {
       "processing_system7_0": "",
@@ -2667,9 +2668,9 @@
           },
           "filt_0": {
             "vlnv": "xilinx.com:hls:filt:1.0",
-            "ip_revision": "2113498411",
-            "xci_name": "FIR_Test_filt_0_8",
-            "xci_path": "ip\\FIR_Test_filt_0_8\\FIR_Test_filt_0_8.xci",
+            "ip_revision": "2113508360",
+            "xci_name": "FIR_Test_filt_0_9",
+            "xci_path": "ip\\FIR_Test_filt_0_9\\FIR_Test_filt_0_9.xci",
             "inst_hier_path": "firDMA/filt_0",
             "interface_ports": {
               "m_axi_gmem": {
@@ -2744,8 +2745,8 @@
               "axi_dma_0/m_axi_mm2s_aclk",
               "axi_dma_0/s_axi_lite_aclk",
               "axi_bram_ctrl_0/s_axi_aclk",
-              "filt_0/ap_clk",
-              "axi_dma_0/m_axi_s2mm_aclk"
+              "axi_dma_0/m_axi_s2mm_aclk",
+              "filt_0/ap_clk"
             ]
           },
           "rst_ps7_0_100M_peripheral_aresetn": {
@@ -2905,6 +2906,19 @@
                 "address_block": "/processing_system7_0/S_AXI_GP0/GP0_QSPI_LINEAR",
                 "offset": "0xFC000000",
                 "range": "16M"
+              }
+            }
+          }
+        }
+      },
+      "/firDMA/filt_0": {
+        "address_spaces": {
+          "Data_m_axi_gmem": {
+            "segments": {
+              "SEG_axi_bram_ctrl_0_Mem0": {
+                "address_block": "/firDMA/axi_bram_ctrl_0/S_AXI/Mem0",
+                "offset": "0x00000000C0000000",
+                "range": "8K"
               }
             }
           }
