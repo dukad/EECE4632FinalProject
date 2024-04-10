@@ -28,7 +28,7 @@ distortion_threshold {
 }
 distortion_clip_factor { 
 	dir I
-	width 1
+	width 8
 	depth 1
 	mode ap_none
 	offset 48
@@ -73,6 +73,22 @@ delay_samples {
 	mode ap_none
 	offset 88
 	offset_end 95
+}
+tempo { 
+	dir I
+	width 32
+	depth 1
+	mode ap_none
+	offset 96
+	offset_end 103
+}
+wah_coeffs { 
+	dir I
+	width 64
+	depth 1
+	mode ap_none
+	offset 104
+	offset_end 115
 }
 }
 dict set axilite_register_dict control_r $port_control_r

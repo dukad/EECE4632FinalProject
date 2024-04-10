@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'guitar_effects'
 ================================================================
 + General Information: 
-    * Date:           Mon Apr  1 16:30:49 2024
+    * Date:           Wed Apr 10 17:07:07 2024
     * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
     * Project:        Guitar_Effects
     * Solution:       solution1 (Vivado IP Flow Target)
@@ -15,21 +15,37 @@
 + Performance & Resource Estimates: 
     
     PS: '+' for module; 'o' for loop; '*' for dataflow
-    +------------------------------+------+------+---------+-----------+----------+---------+-------+----------+-----------+--------+-----------+------------+-----+
-    |            Modules           | Issue|      | Latency |  Latency  | Iteration|         |  Trip |          |           |        |           |            |     |
-    |            & Loops           | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count | Pipelined|   BRAM    |   DSP  |     FF    |     LUT    | URAM|
-    +------------------------------+------+------+---------+-----------+----------+---------+-------+----------+-----------+--------+-----------+------------+-----+
-    |+ guitar_effects              |     -|  0.04|        -|          -|         -|        -|      -|        no|  129 (46%)|  5 (2%)|  3222 (3%)|  5584 (10%)|    -|
-    | + guitar_effects_Pipeline_2  |     -|  1.62|    44102|  4.410e+05|         -|    44102|      -|        no|          -|       -|   18 (~0%)|    63 (~0%)|    -|
-    |  o Loop 1                    |     -|  7.30|    44100|  4.410e+05|         1|        1|  44100|       yes|          -|       -|          -|           -|    -|
-    | o VITIS_LOOP_67_2            |     -|  7.30|        -|          -|        73|        -|      -|        no|          -|       -|          -|           -|    -|
-    |  + compression               |     -|  0.80|       48|    480.000|         -|       48|      -|        no|          -|       -|  1275 (1%)|   2418 (4%)|    -|
-    +------------------------------+------+------+---------+-----------+----------+---------+-------+----------+-----------+--------+-----------+------------+-----+
+    +--------------------------------------+------+------+---------+-----------+----------+---------+-------+----------+-----------+----------+-------------+-------------+-----+
+    |                Modules               | Issue|      | Latency |  Latency  | Iteration|         |  Trip |          |           |          |             |             |     |
+    |                & Loops               | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count | Pipelined|   BRAM    |    DSP   |      FF     |     LUT     | URAM|
+    +--------------------------------------+------+------+---------+-----------+----------+---------+-------+----------+-----------+----------+-------------+-------------+-----+
+    |+ guitar_effects                      |     -|  0.00|        -|          -|         -|        -|      -|        no|  138 (49%)|  78 (35%)|  13223 (12%)|  18263 (34%)|    -|
+    | + guitar_effects_Pipeline_2          |     -|  1.62|    44102|  4.410e+05|         -|    44102|      -|        no|          -|         -|     18 (~0%)|     63 (~0%)|    -|
+    |  o Loop 1                            |     -|  7.30|    44100|  4.410e+05|         1|        1|  44100|       yes|          -|         -|            -|            -|    -|
+    | + guitar_effects_Pipeline_3          |     -|  2.56|      102|  1.020e+03|         -|      102|      -|        no|          -|         -|      9 (~0%)|     51 (~0%)|    -|
+    |  o Loop 1                            |     -|  7.30|      100|  1.000e+03|         1|        1|    100|       yes|          -|         -|            -|            -|    -|
+    | o VITIS_LOOP_83_2                    |     -|  7.30|        -|          -|       353|        -|      -|        no|          -|         -|            -|            -|    -|
+    |  + compression                       |     -|  0.80|       49|    490.000|         -|       49|      -|        no|          -|         -|    1309 (1%)|    2473 (4%)|    -|
+    |  + sin_or_cos_double_s               |     -|  0.25|       55|    550.000|         -|       55|      -|        no|     8 (2%)|  54 (24%)|    5929 (5%)|   6460 (12%)|    -|
+    |   o Loop 1                           |     -|  7.30|        9|     90.000|         3|        -|      3|        no|          -|         -|            -|            -|    -|
+    |   o Loop 2                           |     -|  7.30|        4|     40.000|         1|        -|      4|        no|          -|         -|            -|            -|    -|
+    |   o Loop 3                           |     -|  7.30|        9|     90.000|         2|        -|      4|        no|          -|         -|            -|            -|    -|
+    |  + guitar_effects_Pipeline_WAH_LOOP  |     -|  0.00|      106|  1.060e+03|         -|      106|      -|        no|          -|   2 (~0%)|    431 (~0%)|    286 (~0%)|    -|
+    |   o WAH_LOOP                         |     -|  7.30|      104|  1.040e+03|         6|        1|    100|       yes|          -|         -|            -|            -|    -|
+    +--------------------------------------+------+------+---------+-----------+----------+---------+-------+----------+-----------+----------+-------------+-------------+-----+
 
 
 ================================================================
 == HW Interfaces
 ================================================================
+* M_AXI
++------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+| Interface  | Data Width | Address Width | Latency | Offset | Register | Max Widen | Max Read     | Max Write    | Num Read    | Num Write   |
+|            | (SW->HW)   |               |         |        |          | Bitwidth  | Burst Length | Burst Length | Outstanding | Outstanding |
++------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+| m_axi_gmem | 16 -> 16   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          |
++------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+
 * S_AXILITE Interfaces
 +-----------------+------------+---------------+--------+----------+
 | Interface       | Data Width | Address Width | Offset | Register |
@@ -51,6 +67,9 @@
 | s_axi_control_r | compression_zero_threshold | 0x48   | 32    | W      | Data signal of compression_zero_threshold |                      |
 | s_axi_control_r | delay_mult                 | 0x50   | 32    | W      | Data signal of delay_mult                 |                      |
 | s_axi_control_r | delay_samples              | 0x58   | 32    | W      | Data signal of delay_samples              |                      |
+| s_axi_control_r | tempo                      | 0x60   | 32    | W      | Data signal of tempo                      |                      |
+| s_axi_control_r | wah_coeffs_1               | 0x68   | 32    | W      | Data signal of wah_coeffs                 |                      |
+| s_axi_control_r | wah_coeffs_2               | 0x6c   | 32    | W      | Data signal of wah_coeffs                 |                      |
 +-----------------+----------------------------+--------+-------+--------+-------------------------------------------+----------------------+
 
 * AXIS
@@ -83,31 +102,37 @@
 | axilite_out                | out       | int&                                       |
 | control                    | in        | char                                       |
 | distortion_threshold       | in        | int                                        |
-| distortion_clip_factor     | in        | ap_fixed<1, 8, AP_TRN, AP_WRAP, 0>         |
+| distortion_clip_factor     | in        | ap_fixed<8, 1, AP_TRN, AP_WRAP, 0>         |
 | compression_min_threshold  | in        | int                                        |
 | compression_max_threshold  | in        | int                                        |
 | compression_zero_threshold | in        | int                                        |
 | delay_mult                 | in        | float                                      |
 | delay_samples              | in        | int                                        |
+| tempo                      | in        | int                                        |
+| wah_coeffs                 | in        | ap_fixed<16, -16, AP_TRN, AP_WRAP, 0>*     |
 +----------------------------+-----------+--------------------------------------------+
 
 * SW-to-HW Mapping
-+----------------------------+-----------------+-----------+------------------------------------------------------+
-| Argument                   | HW Interface    | HW Type   | HW Info                                              |
-+----------------------------+-----------------+-----------+------------------------------------------------------+
-| INPUT                      | INPUT_r         | interface |                                                      |
-| OUTPUT                     | OUTPUT_r        | interface |                                                      |
-| axilite_out                | s_axi_control_r | register  | name=axilite_out offset=0x10 range=32                |
-| axilite_out                | s_axi_control_r | register  | name=axilite_out_ctrl offset=0x14 range=32           |
-| control                    | s_axi_control_r | register  | name=control offset=0x20 range=32                    |
-| distortion_threshold       | s_axi_control_r | register  | name=distortion_threshold offset=0x28 range=32       |
-| distortion_clip_factor     | s_axi_control_r | register  | name=distortion_clip_factor offset=0x30 range=32     |
-| compression_min_threshold  | s_axi_control_r | register  | name=compression_min_threshold offset=0x38 range=32  |
-| compression_max_threshold  | s_axi_control_r | register  | name=compression_max_threshold offset=0x40 range=32  |
-| compression_zero_threshold | s_axi_control_r | register  | name=compression_zero_threshold offset=0x48 range=32 |
-| delay_mult                 | s_axi_control_r | register  | name=delay_mult offset=0x50 range=32                 |
-| delay_samples              | s_axi_control_r | register  | name=delay_samples offset=0x58 range=32              |
-+----------------------------+-----------------+-----------+------------------------------------------------------+
++----------------------------+-----------------+-----------+----------+------------------------------------------------------+
+| Argument                   | HW Interface    | HW Type   | HW Usage | HW Info                                              |
++----------------------------+-----------------+-----------+----------+------------------------------------------------------+
+| INPUT                      | INPUT_r         | interface |          |                                                      |
+| OUTPUT                     | OUTPUT_r        | interface |          |                                                      |
+| axilite_out                | s_axi_control_r | register  |          | name=axilite_out offset=0x10 range=32                |
+| axilite_out                | s_axi_control_r | register  |          | name=axilite_out_ctrl offset=0x14 range=32           |
+| control                    | s_axi_control_r | register  |          | name=control offset=0x20 range=32                    |
+| distortion_threshold       | s_axi_control_r | register  |          | name=distortion_threshold offset=0x28 range=32       |
+| distortion_clip_factor     | s_axi_control_r | register  |          | name=distortion_clip_factor offset=0x30 range=32     |
+| compression_min_threshold  | s_axi_control_r | register  |          | name=compression_min_threshold offset=0x38 range=32  |
+| compression_max_threshold  | s_axi_control_r | register  |          | name=compression_max_threshold offset=0x40 range=32  |
+| compression_zero_threshold | s_axi_control_r | register  |          | name=compression_zero_threshold offset=0x48 range=32 |
+| delay_mult                 | s_axi_control_r | register  |          | name=delay_mult offset=0x50 range=32                 |
+| delay_samples              | s_axi_control_r | register  |          | name=delay_samples offset=0x58 range=32              |
+| tempo                      | s_axi_control_r | register  |          | name=tempo offset=0x60 range=32                      |
+| wah_coeffs                 | m_axi_gmem      | interface |          |                                                      |
+| wah_coeffs                 | s_axi_control_r | register  | offset   | name=wah_coeffs_1 offset=0x68 range=32               |
+| wah_coeffs                 | s_axi_control_r | register  | offset   | name=wah_coeffs_2 offset=0x6c range=32               |
++----------------------------+-----------------+-----------+----------+------------------------------------------------------+
 
 
 ================================================================
@@ -115,7 +140,21 @@
 ================================================================
  Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
 
-  No burst in design
+* Inferred Burst Summary
++--------------+----------+-----------+--------+-------+---------------------------+
+| HW Interface | Loop     | Direction | Length | Width | Location                  |
++--------------+----------+-----------+--------+-------+---------------------------+
+| m_axi_gmem   | WAH_LOOP | read      | 100    | 16    | guitar_effects.cpp:227:16 |
++--------------+----------+-----------+--------+-------+---------------------------+
+
+* Inferred Bursts and Widening Missed
++--------------+------------+----------+-------------------------------------------------------------------------------------------------------+------------+---------------------------+
+| HW Interface | Variable   | Loop     | Problem                                                                                               | Resolution | Location                  |
++--------------+------------+----------+-------------------------------------------------------------------------------------------------------+------------+---------------------------+
+| m_axi_gmem   | wah_coeffs | WAH_LOOP | Could not widen since type i16 size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | guitar_effects.cpp:227:16 |
++--------------+------------+----------+-------------------------------------------------------------------------------------------------------+------------+---------------------------+
+
+    * Resolution URL: www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=XXX-YYY.html (replace XXX-YYY with column value)
 
 ================================================================
 == Bind Op Report
@@ -123,40 +162,100 @@
 +--------------------------------------+-----+--------+--------------------+------+---------+---------+
 | Name                                 | DSP | Pragma | Variable           | Op   | Impl    | Latency |
 +--------------------------------------+-----+--------+--------------------+------+---------+---------+
-| + guitar_effects                     | 5   |        |                    |      |         |         |
-|   negative_threshold_fu_459_p2       | -   |        | negative_threshold | sub  | fabric  | 0       |
-|   grp_fu_453_p0                      | -   |        | sub_i286           | sub  | fabric  | 0       |
-|   ret_V_1_fu_550_p2                  | -   |        | ret_V_1            | sub  | fabric  | 0       |
-|   sub_ln1319_fu_555_p2               | -   |        | sub_ln1319         | sub  | fabric  | 0       |
-|   ret_V_fu_575_p2                    | -   |        | ret_V              | add  | fabric  | 0       |
-|   fmul_32ns_32ns_32_4_max_dsp_1_U16  | 3   |        | mul_i              | fmul | maxdsp  | 3       |
-|   fadd_32ns_32ns_32_5_full_dsp_1_U15 | 2   |        | dc                 | fadd | fulldsp | 4       |
-|   add_ln346_fu_632_p2                | -   |        | add_ln346          | add  | fabric  | 0       |
-|   sub_ln1512_fu_646_p2               | -   |        | sub_ln1512         | sub  | fabric  | 0       |
-|   result_V_2_fu_732_p2               | -   |        | result_V_2         | sub  | fabric  | 0       |
+| + guitar_effects                     | 78  |        |                    |      |         |         |
+|   negative_threshold_fu_733_p2       | -   |        | negative_threshold | sub  | fabric  | 0       |
+|   grp_fu_727_p0                      | -   |        | sub_i288           | sub  | fabric  | 0       |
+|   current_sample_fu_787_p2           | -   |        | current_sample     | add  | fabric  | 0       |
+|   r_V_fu_809_p2                      | -   |        | r_V                | add  | fabric  | 0       |
+|   mul_32s_8s_40_2_1_U63              | 1   |        | r_V_35             | mul  | auto    | 1       |
+|   ret_V_12_fu_853_p2                 | -   |        | ret_V_12           | add  | fabric  | 0       |
+|   result_2_fu_872_p2                 | -   |        | result_2           | sub  | fabric  | 0       |
+|   r_V_27_fu_814_p2                   | -   |        | r_V_27             | sub  | fabric  | 0       |
+|   mul_32s_8s_40_2_1_U64              | 1   |        | r_V_34             | mul  | auto    | 1       |
+|   ret_V_fu_911_p2                    | -   |        | ret_V              | add  | fabric  | 0       |
+|   result_fu_930_p2                   | -   |        | result             | add  | fabric  | 0       |
+|   fmul_32ns_32ns_32_4_max_dsp_1_U56  | 3   |        | mul_i              | fmul | maxdsp  | 3       |
+|   fadd_32ns_32ns_32_5_full_dsp_1_U55 | 2   |        | dc                 | fadd | fulldsp | 4       |
+|   add_ln346_fu_987_p2                | -   |        | add_ln346          | add  | fabric  | 0       |
+|   sub_ln1512_fu_1001_p2              | -   |        | sub_ln1512         | sub  | fabric  | 0       |
+|   result_V_2_fu_1088_p2              | -   |        | result_V_2         | sub  | fabric  | 0       |
+|   dmul_64ns_64ns_64_7_max_dsp_1_U59  | 11  |        | mul1_i             | dmul | maxdsp  | 6       |
+|   dmul_64ns_64ns_64_7_max_dsp_1_U59  | 11  |        | mul3_i             | dmul | maxdsp  | 6       |
+|   ddiv_64ns_64ns_64_59_no_dsp_1_U60  | -   |        | x_assign           | ddiv | fabric  | 58      |
+|   dmul_64ns_64ns_64_7_max_dsp_1_U59  | 11  |        | mul4_i             | dmul | maxdsp  | 6       |
+|   dadd_64ns_64ns_64_7_full_dsp_1_U58 | 3   |        | add5_i             | dadd | fulldsp | 6       |
+|   dmul_64ns_64ns_64_7_max_dsp_1_U59  | 11  |        | dc_1               | dmul | maxdsp  | 6       |
+|   add_ln515_fu_1151_p2               | -   |        | add_ln515          | add  | fabric  | 0       |
+|   sub_ln1512_2_fu_1165_p2            | -   |        | sub_ln1512_2       | sub  | fabric  | 0       |
+|   result_V_6_fu_1233_p2              | -   |        | result_V_6         | sub  | fabric  | 0       |
+|   mul_32s_9ns_41_2_1_U65             | 1   |        | mul_ln227          | mul  | auto    | 1       |
+|   add_ln227_fu_1256_p2               | -   |        | add_ln227          | add  | fabric  | 0       |
 |  + guitar_effects_Pipeline_2         | 0   |        |                    |      |         |         |
-|    empty_25_fu_56_p2                 | -   |        | empty_25           | add  | fabric  | 0       |
+|    empty_72_fu_56_p2                 | -   |        | empty_72           | add  | fabric  | 0       |
+|  + guitar_effects_Pipeline_3         | 0   |        |                    |      |         |         |
+|    empty_70_fu_56_p2                 | -   |        | empty_70           | add  | fabric  | 0       |
 |  + compression                       | 0   |        |                    |      |         |         |
-|    sub_ln133_fu_141_p2               | -   |        | sub_ln133          | sub  | fabric  | 0       |
-|    add_ln346_1_fu_234_p2             | -   |        | add_ln346_1        | add  | fabric  | 0       |
-|    sub_ln1512_1_fu_248_p2            | -   |        | sub_ln1512_1       | sub  | fabric  | 0       |
-|    result_V_8_fu_327_p2              | -   |        | result_V_8         | sub  | fabric  | 0       |
-|    add_ln346_fu_392_p2               | -   |        | add_ln346          | add  | fabric  | 0       |
-|    sub_ln1512_fu_406_p2              | -   |        | sub_ln1512         | sub  | fabric  | 0       |
-|    result_V_4_fu_339_p2              | -   |        | result_V_4         | sub  | fabric  | 0       |
+|    sub_ln151_fu_157_p2               | -   |        | sub_ln151          | sub  | fabric  | 0       |
+|    add_ln346_1_fu_257_p2             | -   |        | add_ln346_1        | add  | fabric  | 0       |
+|    sub_ln1512_3_fu_271_p2            | -   |        | sub_ln1512_3       | sub  | fabric  | 0       |
+|    result_V_14_fu_350_p2             | -   |        | result_V_14        | sub  | fabric  | 0       |
+|    add_ln346_fu_415_p2               | -   |        | add_ln346          | add  | fabric  | 0       |
+|    sub_ln1512_fu_429_p2              | -   |        | sub_ln1512         | sub  | fabric  | 0       |
+|    result_V_11_fu_362_p2             | -   |        | result_V_11        | sub  | fabric  | 0       |
+|  + sin_or_cos_double_s               | 54  |        |                    |      |         |         |
+|    Ex_V_fu_594_p2                    | -   |        | Ex_V               | add  | fabric  | 0       |
+|    add_ln214_fu_414_p2               | -   |        | add_ln214          | add  | fabric  | 0       |
+|    mul_170s_53ns_170_5_1_U17         | 18  |        | ret_V_5            | mul  | auto    | 4       |
+|    Mx_bits_V_1_fu_530_p2             | -   |        | Mx_bits_V_1        | sub  | fabric  | 0       |
+|    Ex_V_3_fu_627_p2                  | -   |        | Ex_V_3             | sub  | fabric  | 0       |
+|    sub_ln1512_fu_644_p2              | -   |        | sub_ln1512         | sub  | fabric  | 0       |
+|    mul_49ns_49ns_98_5_1_U18          | 4   |        | r_V_4              | mul  | auto    | 4       |
+|    mul_49ns_49ns_98_5_1_U20          | 4   |        | r_V_5              | mul  | auto    | 4       |
+|    mul_49ns_49ns_98_5_1_U21          | 4   |        | r_V_7              | mul  | auto    | 4       |
+|    mul_56ns_52s_108_5_1_U22          | 5   |        | r_V_9              | mul  | auto    | 4       |
+|    mul_49ns_44s_93_5_1_U23           | 4   |        | r_V_10             | mul  | auto    | 4       |
+|    mul_42ns_33ns_75_2_1_U24          | 4   |        | r_V_11             | mul  | auto    | 1       |
+|    mul_35ns_25ns_60_2_1_U25          | 2   |        | r_V_12             | mul  | auto    | 1       |
+|    mul_64s_63ns_126_5_1_U26          | 9   |        | r_V_14             | mul  | auto    | 4       |
+|    i_5_fu_970_p2                     | -   |        | i_5                | add  | fabric  | 0       |
+|    sub_ln433_fu_984_p2               | -   |        | sub_ln433          | sub  | fabric  | 0       |
+|    sub_ln594_fu_990_p2               | -   |        | sub_ln594          | sub  | fabric  | 0       |
+|    sub_ln594_1_fu_1037_p2            | -   |        | sub_ln594_1        | sub  | fabric  | 0       |
+|    sub_ln594_2_fu_1041_p2            | -   |        | sub_ln594_2        | sub  | fabric  | 0       |
+|    sub_ln594_3_fu_1046_p2            | -   |        | sub_ln594_3        | sub  | fabric  | 0       |
+|    sub_ln594_4_fu_1072_p2            | -   |        | sub_ln594_4        | sub  | fabric  | 0       |
+|    add_ln443_fu_1142_p2              | -   |        | add_ln443          | add  | fabric  | 0       |
+|    add_ln450_fu_1249_p2              | -   |        | add_ln450          | add  | fabric  | 0       |
+|    shift_3_fu_1299_p2                | -   |        | shift_3            | add  | fabric  | 0       |
+|    sub_ln1512_1_fu_1293_p2           | -   |        | sub_ln1512_1       | sub  | fabric  | 0       |
+|    add_ln461_fu_1500_p2              | -   |        | add_ln461          | add  | fabric  | 0       |
+|    newexp_fu_1509_p2                 | -   |        | newexp             | sub  | fabric  | 0       |
+|  + guitar_effects_Pipeline_WAH_LOOP  | 2   |        |                    |      |         |         |
+|    add_ln229_fu_123_p2               | -   |        | add_ln229          | add  | fabric  | 0       |
+|    mul_32s_16s_48_2_1_U49            | 2   |        | r_V_22             | mul  | auto    | 1       |
+|    ret_V_9_fu_198_p2                 | -   |        | ret_V_9            | add  | fabric  | 0       |
+|    result_1_fu_221_p2                | -   |        | result_1           | add  | fabric  | 0       |
 +--------------------------------------+-----+--------+--------------------+------+---------+---------+
 
 
 ================================================================
 == Bind Storage Report
 ================================================================
-+------------------------+------+------+--------+--------------------+---------+------+---------+
-| Name                   | BRAM | URAM | Pragma | Variable           | Storage | Impl | Latency |
-+------------------------+------+------+--------+--------------------+---------+------+---------+
-| + guitar_effects       | 129  | 0    |        |                    |         |      |         |
-|   delay_buffer_U       | 128  | -    |        | delay_buffer       | ram_1p  | auto | 1       |
-|   compression_buffer_U | 1    | -    |        | compression_buffer | ram_1p  | auto | 1       |
-+------------------------+------+------+--------+--------------------+---------+------+---------+
++---------------------------------------+------+------+--------+----------------------------------+---------+--------+---------+
+| Name                                  | BRAM | URAM | Pragma | Variable                         | Storage | Impl   | Latency |
++---------------------------------------+------+------+--------+----------------------------------+---------+--------+---------+
+| + guitar_effects                      | 138  | 0    |        |                                  |         |        |         |
+|   delay_buffer_U                      | 128  | -    |        | delay_buffer                     | ram_1p  | auto   | 1       |
+|   wah_values_buffer_U                 | 1    | -    |        | wah_values_buffer                | ram_1p  | auto   | 1       |
+|   compression_buffer_U                | 1    | -    |        | compression_buffer               | ram_1p  | auto   | 1       |
+|  + sin_or_cos_double_s                | 8    | 0    |        |                                  |         |        |         |
+|    ref_4oPi_table_256_V_U             | 8    | -    |        | ref_4oPi_table_256_V             | rom_1p  | auto   | 1       |
+|    fourth_order_double_sin_cos_K0_V_U | -    | -    | pragma | fourth_order_double_sin_cos_K0_V | rom_1p  | lutram | 1       |
+|    fourth_order_double_sin_cos_K1_V_U | -    | -    | pragma | fourth_order_double_sin_cos_K1_V | rom_1p  | lutram | 1       |
+|    fourth_order_double_sin_cos_K2_V_U | -    | -    | pragma | fourth_order_double_sin_cos_K2_V | rom_1p  | lutram | 1       |
+|    fourth_order_double_sin_cos_K3_V_U | -    | -    | pragma | fourth_order_double_sin_cos_K3_V | rom_1p  | lutram | 1       |
+|    fourth_order_double_sin_cos_K4_V_U | -    | -    | pragma | fourth_order_double_sin_cos_K4_V | rom_1p  | lutram | 1       |
++---------------------------------------+------+------+--------+----------------------------------+---------+--------+---------+
 
 
 ================================================================
@@ -166,18 +265,20 @@
 +-----------+-------------------------------------------+---------------------------------------------------------------------+
 | Type      | Options                                   | Location                                                            |
 +-----------+-------------------------------------------+---------------------------------------------------------------------+
-| interface | axis port=INPUT                           | guitar_effects.cpp:32 in guitar_effects, INPUT                      |
-| interface | axis port=OUTPUT                          | guitar_effects.cpp:33 in guitar_effects, OUTPUT                     |
-| interface | s_axilite port=control                    | guitar_effects.cpp:34 in guitar_effects, control                    |
-| interface | s_axilite port=distortion_threshold       | guitar_effects.cpp:35 in guitar_effects, distortion_threshold       |
-| interface | s_axilite port=distortion_clip_factor     | guitar_effects.cpp:36 in guitar_effects, distortion_clip_factor     |
-| interface | s_axilite port=compression_min_threshold  | guitar_effects.cpp:37 in guitar_effects, compression_min_threshold  |
-| interface | s_axilite port=compression_max_threshold  | guitar_effects.cpp:38 in guitar_effects, compression_max_threshold  |
-| interface | s_axilite port=compression_zero_threshold | guitar_effects.cpp:39 in guitar_effects, compression_zero_threshold |
-| interface | s_axilite port=delay_mult                 | guitar_effects.cpp:40 in guitar_effects, delay_mult                 |
-| interface | s_axilite port=delay_samples              | guitar_effects.cpp:41 in guitar_effects, delay_samples              |
-| interface | s_axilite port=axilite_out                | guitar_effects.cpp:42 in guitar_effects, axilite_out                |
-| interface | ap_ctrl_none port=return                  | guitar_effects.cpp:43 in guitar_effects, return                     |
+| interface | axis port=INPUT                           | guitar_effects.cpp:40 in guitar_effects, INPUT                      |
+| interface | axis port=OUTPUT                          | guitar_effects.cpp:41 in guitar_effects, OUTPUT                     |
+| interface | s_axilite port=control                    | guitar_effects.cpp:42 in guitar_effects, control                    |
+| interface | s_axilite port=distortion_threshold       | guitar_effects.cpp:43 in guitar_effects, distortion_threshold       |
+| interface | s_axilite port=distortion_clip_factor     | guitar_effects.cpp:44 in guitar_effects, distortion_clip_factor     |
+| interface | s_axilite port=compression_min_threshold  | guitar_effects.cpp:45 in guitar_effects, compression_min_threshold  |
+| interface | s_axilite port=compression_max_threshold  | guitar_effects.cpp:46 in guitar_effects, compression_max_threshold  |
+| interface | s_axilite port=compression_zero_threshold | guitar_effects.cpp:47 in guitar_effects, compression_zero_threshold |
+| interface | s_axilite port=delay_mult                 | guitar_effects.cpp:48 in guitar_effects, delay_mult                 |
+| interface | s_axilite port=delay_samples              | guitar_effects.cpp:49 in guitar_effects, delay_samples              |
+| interface | s_axilite port=axilite_out                | guitar_effects.cpp:50 in guitar_effects, axilite_out                |
+| interface | s_axilite port=tempo                      | guitar_effects.cpp:51 in guitar_effects, tempo                      |
+| interface | ap_ctrl_none port=return                  | guitar_effects.cpp:52 in guitar_effects, return                     |
+| interface | m_axi depth=2000 port=wah_coeffs          | guitar_effects.cpp:53 in guitar_effects, wah_coeffs                 |
 +-----------+-------------------------------------------+---------------------------------------------------------------------+
 
 

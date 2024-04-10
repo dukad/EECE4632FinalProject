@@ -49,7 +49,7 @@ newFuncRoot:1 %store_ln0 = store i16 0, i16 %empty
 
 <Node id="4" bw="0" op_0_bw="0">
 <![CDATA[
-newFuncRoot:2 %br_ln0 = br void %memset.loop
+newFuncRoot:2 %br_ln0 = br void %memset.loop47
 
 ]]></Node>
 <StgValue><ssdm name="br_ln0"/></StgValue>
@@ -64,7 +64,7 @@ newFuncRoot:2 %br_ln0 = br void %memset.loop
 
 <Node id="6" bw="16" op_0_bw="16" op_1_bw="0">
 <![CDATA[
-memset.loop:0 %p_load = load i16 %empty
+memset.loop47:0 %p_load = load i16 %empty
 
 ]]></Node>
 <StgValue><ssdm name="p_load"/></StgValue>
@@ -79,7 +79,7 @@ memset.loop:0 %p_load = load i16 %empty
 
 <Node id="7" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="0">
 <![CDATA[
-memset.loop:1 %specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str
+memset.loop47:1 %specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str
 
 ]]></Node>
 <StgValue><ssdm name="specpipeline_ln0"/></StgValue>
@@ -94,10 +94,10 @@ memset.loop:1 %specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 
 
 <Node id="8" bw="1" op_0_bw="16" op_1_bw="16">
 <![CDATA[
-memset.loop:2 %exitcond1 = icmp_eq  i16 %p_load, i16 44100
+memset.loop47:2 %exitcond3324 = icmp_eq  i16 %p_load, i16 44100
 
 ]]></Node>
-<StgValue><ssdm name="exitcond1"/></StgValue>
+<StgValue><ssdm name="exitcond3324"/></StgValue>
 </operation>
 
 <operation id="10" st_id="1" stage="1" lat="1">
@@ -109,10 +109,10 @@ memset.loop:2 %exitcond1 = icmp_eq  i16 %p_load, i16 44100
 
 <Node id="9" bw="32" op_0_bw="32" op_1_bw="64" op_2_bw="64" op_3_bw="64">
 <![CDATA[
-memset.loop:3 %empty_24 = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 44100, i64 44100, i64 44100
+memset.loop47:3 %empty_71 = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 44100, i64 44100, i64 44100
 
 ]]></Node>
-<StgValue><ssdm name="empty_24"/></StgValue>
+<StgValue><ssdm name="empty_71"/></StgValue>
 </operation>
 
 <operation id="11" st_id="1" stage="1" lat="1">
@@ -124,10 +124,10 @@ memset.loop:3 %empty_24 = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64
 
 <Node id="10" bw="16" op_0_bw="16" op_1_bw="16">
 <![CDATA[
-memset.loop:4 %empty_25 = add i16 %p_load, i16 1
+memset.loop47:4 %empty_72 = add i16 %p_load, i16 1
 
 ]]></Node>
-<StgValue><ssdm name="empty_25"/></StgValue>
+<StgValue><ssdm name="empty_72"/></StgValue>
 </operation>
 
 <operation id="12" st_id="1" stage="1" lat="1">
@@ -139,7 +139,7 @@ memset.loop:4 %empty_25 = add i16 %p_load, i16 1
 
 <Node id="11" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
 <![CDATA[
-memset.loop:5 %br_ln0 = br i1 %exitcond1, void %memset.loop.split, void %split.exitStub
+memset.loop47:5 %br_ln0 = br i1 %exitcond3324, void %memset.loop47.split, void %memset.loop.preheader.exitStub
 
 ]]></Node>
 <StgValue><ssdm name="br_ln0"/></StgValue>
@@ -149,13 +149,13 @@ memset.loop:5 %br_ln0 = br i1 %exitcond1, void %memset.loop.split, void %split.e
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="exitcond1" val="0"/>
+<or_exp><and_exp><literal name="exitcond3324" val="0"/>
 </and_exp></or_exp>
 </condition>
 
 <Node id="13" bw="64" op_0_bw="16">
 <![CDATA[
-memset.loop.split:0 %p_cast4 = zext i16 %p_load
+memset.loop47.split:0 %p_cast4 = zext i16 %p_load
 
 ]]></Node>
 <StgValue><ssdm name="p_cast4"/></StgValue>
@@ -165,13 +165,13 @@ memset.loop.split:0 %p_cast4 = zext i16 %p_load
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="exitcond1" val="0"/>
+<or_exp><and_exp><literal name="exitcond3324" val="0"/>
 </and_exp></or_exp>
 </condition>
 
 <Node id="14" bw="16" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-memset.loop.split:1 %delay_buffer_addr = getelementptr i32 %delay_buffer, i64 0, i64 %p_cast4
+memset.loop47.split:1 %delay_buffer_addr = getelementptr i32 %delay_buffer, i64 0, i64 %p_cast4
 
 ]]></Node>
 <StgValue><ssdm name="delay_buffer_addr"/></StgValue>
@@ -181,13 +181,13 @@ memset.loop.split:1 %delay_buffer_addr = getelementptr i32 %delay_buffer, i64 0,
 <core>RAM</core>
 <MemPortIdVec>0 </MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="exitcond1" val="0"/>
+<or_exp><and_exp><literal name="exitcond3324" val="0"/>
 </and_exp></or_exp>
 </condition>
 
 <Node id="15" bw="0" op_0_bw="32" op_1_bw="16">
 <![CDATA[
-memset.loop.split:2 %store_ln0 = store i32 0, i16 %delay_buffer_addr
+memset.loop47.split:2 %store_ln0 = store i32 0, i16 %delay_buffer_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln0"/></StgValue>
@@ -197,13 +197,13 @@ memset.loop.split:2 %store_ln0 = store i32 0, i16 %delay_buffer_addr
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="exitcond1" val="0"/>
+<or_exp><and_exp><literal name="exitcond3324" val="0"/>
 </and_exp></or_exp>
 </condition>
 
 <Node id="16" bw="0" op_0_bw="16" op_1_bw="16" op_2_bw="0" op_3_bw="0">
 <![CDATA[
-memset.loop.split:3 %store_ln0 = store i16 %empty_25, i16 %empty
+memset.loop47.split:3 %store_ln0 = store i16 %empty_72, i16 %empty
 
 ]]></Node>
 <StgValue><ssdm name="store_ln0"/></StgValue>
@@ -213,13 +213,13 @@ memset.loop.split:3 %store_ln0 = store i16 %empty_25, i16 %empty
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="exitcond1" val="0"/>
+<or_exp><and_exp><literal name="exitcond3324" val="0"/>
 </and_exp></or_exp>
 </condition>
 
 <Node id="17" bw="0" op_0_bw="0">
 <![CDATA[
-memset.loop.split:4 %br_ln0 = br void %memset.loop
+memset.loop47.split:4 %br_ln0 = br void %memset.loop47
 
 ]]></Node>
 <StgValue><ssdm name="br_ln0"/></StgValue>
@@ -229,13 +229,13 @@ memset.loop.split:4 %br_ln0 = br void %memset.loop
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="exitcond1" val="1"/>
+<or_exp><and_exp><literal name="exitcond3324" val="1"/>
 </and_exp></or_exp>
 </condition>
 
 <Node id="19" bw="0">
 <![CDATA[
-split.exitStub:0 %ret_ln0 = ret
+memset.loop.preheader.exitStub:0 %ret_ln0 = ret
 
 ]]></Node>
 <StgValue><ssdm name="ret_ln0"/></StgValue>
@@ -273,23 +273,23 @@ split.exitStub:0 %ret_ln0 = ret
 </dataflow>
 <dataflow id="41" from="p_str" to="specpipeline_ln0" fromId="40" toId="8">
 </dataflow>
-<dataflow id="42" from="p_load" to="exitcond1" fromId="7" toId="9">
+<dataflow id="42" from="p_load" to="exitcond3324" fromId="7" toId="9">
 </dataflow>
-<dataflow id="44" from="StgValue_43" to="exitcond1" fromId="43" toId="9">
+<dataflow id="44" from="StgValue_43" to="exitcond3324" fromId="43" toId="9">
 </dataflow>
-<dataflow id="46" from="_ssdm_op_SpecLoopTripCount" to="empty_24" fromId="45" toId="10">
+<dataflow id="46" from="_ssdm_op_SpecLoopTripCount" to="empty_71" fromId="45" toId="10">
 </dataflow>
-<dataflow id="48" from="StgValue_47" to="empty_24" fromId="47" toId="10">
+<dataflow id="48" from="StgValue_47" to="empty_71" fromId="47" toId="10">
 </dataflow>
-<dataflow id="49" from="StgValue_47" to="empty_24" fromId="47" toId="10">
+<dataflow id="49" from="StgValue_47" to="empty_71" fromId="47" toId="10">
 </dataflow>
-<dataflow id="50" from="StgValue_47" to="empty_24" fromId="47" toId="10">
+<dataflow id="50" from="StgValue_47" to="empty_71" fromId="47" toId="10">
 </dataflow>
-<dataflow id="51" from="p_load" to="empty_25" fromId="7" toId="11">
+<dataflow id="51" from="p_load" to="empty_72" fromId="7" toId="11">
 </dataflow>
-<dataflow id="53" from="StgValue_52" to="empty_25" fromId="52" toId="11">
+<dataflow id="53" from="StgValue_52" to="empty_72" fromId="52" toId="11">
 </dataflow>
-<dataflow id="54" from="exitcond1" to="br_ln0" fromId="9" toId="12">
+<dataflow id="54" from="exitcond3324" to="br_ln0" fromId="9" toId="12">
 </dataflow>
 <dataflow id="55" from="p_load" to="p_cast4" fromId="7" toId="13">
 </dataflow>
@@ -303,11 +303,11 @@ split.exitStub:0 %ret_ln0 = ret
 </dataflow>
 <dataflow id="61" from="delay_buffer_addr" to="store_ln0" fromId="14" toId="15">
 </dataflow>
-<dataflow id="62" from="empty_25" to="store_ln0" fromId="11" toId="16">
+<dataflow id="62" from="empty_72" to="store_ln0" fromId="11" toId="16">
 </dataflow>
 <dataflow id="63" from="empty" to="store_ln0" fromId="4" toId="16">
 </dataflow>
-<dataflow id="64" from="exitcond1" to="StgValue_2" fromId="9" toId="2">
+<dataflow id="64" from="exitcond3324" to="StgValue_2" fromId="9" toId="2">
 </dataflow>
 </dataflows>
 

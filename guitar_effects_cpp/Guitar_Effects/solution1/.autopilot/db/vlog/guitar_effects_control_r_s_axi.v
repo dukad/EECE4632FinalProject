@@ -33,12 +33,14 @@ module guitar_effects_control_r_s_axi
     input  wire                          axilite_out_ap_vld,
     output wire [7:0]                    control,
     output wire [31:0]                   distortion_threshold,
-    output wire [0:0]                    distortion_clip_factor,
+    output wire [7:0]                    distortion_clip_factor,
     output wire [31:0]                   compression_min_threshold,
     output wire [31:0]                   compression_max_threshold,
     output wire [31:0]                   compression_zero_threshold,
     output wire [31:0]                   delay_mult,
-    output wire [31:0]                   delay_samples
+    output wire [31:0]                   delay_samples,
+    output wire [31:0]                   tempo,
+    output wire [63:0]                   wah_coeffs
 );
 //------------------------Address Info-------------------
 // 0x00 : reserved
@@ -58,8 +60,8 @@ module guitar_effects_control_r_s_axi
 //        bit 31~0 - distortion_threshold[31:0] (Read/Write)
 // 0x2c : reserved
 // 0x30 : Data signal of distortion_clip_factor
-//        bit 0  - distortion_clip_factor[0] (Read/Write)
-//        others - reserved
+//        bit 7~0 - distortion_clip_factor[7:0] (Read/Write)
+//        others  - reserved
 // 0x34 : reserved
 // 0x38 : Data signal of compression_min_threshold
 //        bit 31~0 - compression_min_threshold[31:0] (Read/Write)
@@ -76,6 +78,14 @@ module guitar_effects_control_r_s_axi
 // 0x58 : Data signal of delay_samples
 //        bit 31~0 - delay_samples[31:0] (Read/Write)
 // 0x5c : reserved
+// 0x60 : Data signal of tempo
+//        bit 31~0 - tempo[31:0] (Read/Write)
+// 0x64 : reserved
+// 0x68 : Data signal of wah_coeffs
+//        bit 31~0 - wah_coeffs[31:0] (Read/Write)
+// 0x6c : Data signal of wah_coeffs
+//        bit 31~0 - wah_coeffs[63:32] (Read/Write)
+// 0x70 : reserved
 // (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
 //------------------------Parameter----------------------
@@ -98,6 +108,11 @@ localparam
     ADDR_DELAY_MULT_CTRL                   = 7'h54,
     ADDR_DELAY_SAMPLES_DATA_0              = 7'h58,
     ADDR_DELAY_SAMPLES_CTRL                = 7'h5c,
+    ADDR_TEMPO_DATA_0                      = 7'h60,
+    ADDR_TEMPO_CTRL                        = 7'h64,
+    ADDR_WAH_COEFFS_DATA_0                 = 7'h68,
+    ADDR_WAH_COEFFS_DATA_1                 = 7'h6c,
+    ADDR_WAH_COEFFS_CTRL                   = 7'h70,
     WRIDLE                                 = 2'd0,
     WRDATA                                 = 2'd1,
     WRRESP                                 = 2'd2,
@@ -124,12 +139,14 @@ localparam
     reg  [31:0]                   int_axilite_out = 'b0;
     reg  [7:0]                    int_control = 'b0;
     reg  [31:0]                   int_distortion_threshold = 'b0;
-    reg  [0:0]                    int_distortion_clip_factor = 'b0;
+    reg  [7:0]                    int_distortion_clip_factor = 'b0;
     reg  [31:0]                   int_compression_min_threshold = 'b0;
     reg  [31:0]                   int_compression_max_threshold = 'b0;
     reg  [31:0]                   int_compression_zero_threshold = 'b0;
     reg  [31:0]                   int_delay_mult = 'b0;
     reg  [31:0]                   int_delay_samples = 'b0;
+    reg  [31:0]                   int_tempo = 'b0;
+    reg  [63:0]                   int_wah_coeffs = 'b0;
 
 //------------------------Instantiation------------------
 
@@ -235,7 +252,7 @@ always @(posedge ACLK) begin
                     rdata <= int_distortion_threshold[31:0];
                 end
                 ADDR_DISTORTION_CLIP_FACTOR_DATA_0: begin
-                    rdata <= int_distortion_clip_factor[0:0];
+                    rdata <= int_distortion_clip_factor[7:0];
                 end
                 ADDR_COMPRESSION_MIN_THRESHOLD_DATA_0: begin
                     rdata <= int_compression_min_threshold[31:0];
@@ -252,6 +269,15 @@ always @(posedge ACLK) begin
                 ADDR_DELAY_SAMPLES_DATA_0: begin
                     rdata <= int_delay_samples[31:0];
                 end
+                ADDR_TEMPO_DATA_0: begin
+                    rdata <= int_tempo[31:0];
+                end
+                ADDR_WAH_COEFFS_DATA_0: begin
+                    rdata <= int_wah_coeffs[31:0];
+                end
+                ADDR_WAH_COEFFS_DATA_1: begin
+                    rdata <= int_wah_coeffs[63:32];
+                end
             endcase
         end
     end
@@ -267,6 +293,8 @@ assign compression_max_threshold  = int_compression_max_threshold;
 assign compression_zero_threshold = int_compression_zero_threshold;
 assign delay_mult                 = int_delay_mult;
 assign delay_samples              = int_delay_samples;
+assign tempo                      = int_tempo;
+assign wah_coeffs                 = int_wah_coeffs;
 // int_axilite_out
 always @(posedge ACLK) begin
     if (ARESET)
@@ -309,13 +337,13 @@ always @(posedge ACLK) begin
     end
 end
 
-// int_distortion_clip_factor[0:0]
+// int_distortion_clip_factor[7:0]
 always @(posedge ACLK) begin
     if (ARESET)
-        int_distortion_clip_factor[0:0] <= 0;
+        int_distortion_clip_factor[7:0] <= 0;
     else if (ACLK_EN) begin
         if (w_hs && waddr == ADDR_DISTORTION_CLIP_FACTOR_DATA_0)
-            int_distortion_clip_factor[0:0] <= (WDATA[31:0] & wmask) | (int_distortion_clip_factor[0:0] & ~wmask);
+            int_distortion_clip_factor[7:0] <= (WDATA[31:0] & wmask) | (int_distortion_clip_factor[7:0] & ~wmask);
     end
 end
 
@@ -366,6 +394,36 @@ always @(posedge ACLK) begin
     else if (ACLK_EN) begin
         if (w_hs && waddr == ADDR_DELAY_SAMPLES_DATA_0)
             int_delay_samples[31:0] <= (WDATA[31:0] & wmask) | (int_delay_samples[31:0] & ~wmask);
+    end
+end
+
+// int_tempo[31:0]
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_tempo[31:0] <= 0;
+    else if (ACLK_EN) begin
+        if (w_hs && waddr == ADDR_TEMPO_DATA_0)
+            int_tempo[31:0] <= (WDATA[31:0] & wmask) | (int_tempo[31:0] & ~wmask);
+    end
+end
+
+// int_wah_coeffs[31:0]
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_wah_coeffs[31:0] <= 0;
+    else if (ACLK_EN) begin
+        if (w_hs && waddr == ADDR_WAH_COEFFS_DATA_0)
+            int_wah_coeffs[31:0] <= (WDATA[31:0] & wmask) | (int_wah_coeffs[31:0] & ~wmask);
+    end
+end
+
+// int_wah_coeffs[63:32]
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_wah_coeffs[63:32] <= 0;
+    else if (ACLK_EN) begin
+        if (w_hs && waddr == ADDR_WAH_COEFFS_DATA_1)
+            int_wah_coeffs[63:32] <= (WDATA[31:0] & wmask) | (int_wah_coeffs[63:32] & ~wmask);
     end
 end
 

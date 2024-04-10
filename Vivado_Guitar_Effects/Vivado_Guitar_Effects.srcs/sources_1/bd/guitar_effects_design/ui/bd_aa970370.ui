@@ -1,38 +1,39 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"0.438261",
-   "Default View_TopLeft":"-408,-242",
+   "Default View_ScaleFactor":"1.83843",
+   "Default View_TopLeft":"445,435",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
 #  -string -flagsOSRD
-preplace port DDR -pg 1 -lvl 5 -x 1610 -y 20 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -lvl 5 -x 1610 -y 40 -defaultsOSRD
-preplace inst axi_dma -pg 1 -lvl 2 -x 640 -y 120 -defaultsOSRD
-preplace inst axi_mem_intercon -pg 1 -lvl 2 -x 640 -y 340 -defaultsOSRD
-preplace inst axi_mem_intercon_1 -pg 1 -lvl 2 -x 640 -y 560 -defaultsOSRD
-preplace inst processing_system7_0 -pg 1 -lvl 2 -x 640 -y 780 -defaultsOSRD
-preplace inst ps7_0_axi_periph -pg 1 -lvl 4 -x 1430 -y 910 -defaultsOSRD
-preplace inst rst_ps7_0_100M -pg 1 -lvl 3 -x 1090 -y 960 -defaultsOSRD
-preplace inst guitar_effects_0 -pg 1 -lvl 1 -x -150 -y 10 -defaultsOSRD
-preplace netloc processing_system7_0_FCLK_CLK0 1 0 4 -330 100 30 920 890 850 1270
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 2 1 880 830n
-preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 0 4 -320 110 20 910 910J 860 1260
-preplace netloc axi_dma_M_AXI_MM2S 1 1 2 60 -10 880
-preplace netloc axi_dma_M_AXI_S2MM 1 1 2 70 0 870
-preplace netloc axi_mem_intercon_1_M00_AXI 1 1 2 70 900 870
-preplace netloc axi_mem_intercon_M00_AXI 1 1 2 40 -20 890
-preplace netloc processing_system7_0_DDR 1 2 3 910 20 NJ 20 NJ
-preplace netloc processing_system7_0_FIXED_IO 1 2 3 920 40 NJ 40 NJ
-preplace netloc processing_system7_0_M_AXI_GP0 1 2 2 NJ 790 1270
-preplace netloc ps7_0_axi_periph_M00_AXI 1 1 4 50 -30 NJ -30 NJ -30 1580
-preplace netloc ps7_0_axi_periph_M01_AXI 1 0 5 -320 -80 NJ -80 NJ -80 NJ -80 1590
-preplace netloc guitar_effects_0_OUTPUT_r 1 1 1 20 10n
-preplace netloc axi_dma_M_AXIS_MM2S 1 0 3 -330 -90 N -90 900
-levelinfo -pg 1 -350 -150 640 1090 1430 1610
-pagesize -pg 1 -db -bbox -sgen -350 -250 1730 1060
+preplace inst processing_system7_0 -pg 1 -lvl 3 -x 1030 -y 780 -defaultsOSRD
+preplace inst axi_bram_ctrl_0 -pg 1 -lvl 2 -x 590 -y 440 -defaultsOSRD
+preplace inst axi_bram_ctrl_0_bram -pg 1 -lvl 3 -x 1030 -y 440 -defaultsOSRD
+preplace inst rst_ps7_0_100M -pg 1 -lvl 4 -x 1460 -y 850 -defaultsOSRD
+preplace inst axi_dma_0 -pg 1 -lvl 1 -x 190 -y 620 -defaultsOSRD
+preplace inst axi_mem_intercon -pg 1 -lvl 5 -x 1800 -y -40 -defaultsOSRD
+preplace inst ps7_0_axi_periph -pg 1 -lvl 5 -x 1800 -y 250 -defaultsOSRD
+preplace inst GE -pg 1 -lvl 2 -x 590 -y 650 -defaultsOSRD
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 5 -10 480 390 560 780J 560 1290 380 1630
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 3 1 N 830
+preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 0 5 0 490 400 540 NJ 540 NJ 540 1650
+preplace netloc axi_bram_ctrl_0_BRAM_PORTA 1 2 1 N 440
+preplace netloc guitar_effects_0_m_axi_gmem 1 1 2 420 550 760
+preplace netloc axi_dma_0_M_AXI_MM2S 1 1 4 360J -140 NJ -140 NJ -140 1630
+preplace netloc axi_mem_intercon_M00_AXI 1 2 4 790 -220 NJ -220 NJ -220 1960
+preplace netloc processing_system7_0_M_AXI_GP0 1 3 2 1270J 370 1640
+preplace netloc ps7_0_axi_periph_M00_AXI 1 0 6 10 350 NJ 350 NJ 350 1280J 390 NJ 390 1960
+preplace netloc axi_dma_0_M_AXI_S2MM 1 1 4 370 -130 NJ -130 NJ -130 NJ
+preplace netloc axi_dma_0_M_AXIS_MM2S 1 1 1 360 600n
+preplace netloc guitar_effects_0_OUTPUT_r 1 0 3 20 500 380 520 770
+preplace netloc ps7_0_axi_periph_M01_AXI 1 1 5 410 360 NJ 360 1260J 400 NJ 400 1950
+preplace netloc axi_mem_intercon_M01_AXI 1 2 4 800 -210 NJ -210 NJ -210 1950
+levelinfo -pg 1 -30 190 590 1030 1460 1800 1980
+pagesize -pg 1 -db -bbox -sgen -30 -250 1980 1060
 "
 }
 {
-   "da_axi4_cnt":"23",
+   "da_axi4_cnt":"30",
+   "da_bram_cntlr_cnt":"1",
+   "da_clkrst_cnt":"1",
    "da_ps7_cnt":"1"
 }
