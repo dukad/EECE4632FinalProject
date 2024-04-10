@@ -1,10 +1,10 @@
 {
   "0": {
-    "basicblocks": 15,
+    "basicblocks": 10,
     "calls": "",
     "file": "filt.cpp",
     "fileloc": 3,
-    "instructions": 81,
+    "instructions": 77,
     "loads": {
       "L": 7,
       "T": 1

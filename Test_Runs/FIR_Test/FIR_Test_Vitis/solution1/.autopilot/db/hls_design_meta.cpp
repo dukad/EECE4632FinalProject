@@ -49,7 +49,7 @@ const Port_Property HLS_Design_Meta::port_props[]={
 	Port_Property("m_axi_gmem_BUSER", 1, hls_in, 0, "m_axi", "DATA", 1),
 	Port_Property("y_TDATA", 32, hls_out, 1, "axis", "out_data", 1),
 	Port_Property("y_TVALID", 1, hls_out, 7, "axis", "out_vld", 1),
-	Port_Property("y_TREADY", 1, hls_in, 7, "axis", "out_acc", 1),
+	Port_Property("y_TREADY", 1, hls_in, 1, "axis", "out_acc", 1),
 	Port_Property("y_TKEEP", 4, hls_out, 2, "axis", "out_data", 1),
 	Port_Property("y_TSTRB", 4, hls_out, 3, "axis", "out_data", 1),
 	Port_Property("y_TUSER", 1, hls_out, 4, "axis", "out_data", 1),

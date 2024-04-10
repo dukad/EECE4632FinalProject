@@ -6,6 +6,8 @@ void filt (hls::stream<AXI_VAL>& y, coef_t c[N], hls::stream<AXI_VAL>& x) {
 #pragma HLS INTERFACE axis register both port=y
 #pragma HLS INTERFACE ap_ctrl_none port=return
 
+	int j = 0;
+
 	while(1) {
 		// *** COEFFICIENT PROCESSING CODE ***
 
@@ -13,11 +15,8 @@ void filt (hls::stream<AXI_VAL>& y, coef_t c[N], hls::stream<AXI_VAL>& x) {
 		AXI_VAL tmp1;
 		x.read(tmp1);
 
-		for (int i = 0; i < N; i++){
-			c[i] = i;
-		}
+		c[j] = tmp1.data.to_int();
 
-		int j = 0;
 		AXI_VAL output1;
 		output1.data = c[j];
 		output1.keep = tmp1.keep;

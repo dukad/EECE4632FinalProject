@@ -3,20 +3,8 @@
         "name": "filt",
         "file": "filt.cpp",
         "fileloc": "3",
-        "instructions": "46",
-        "total_instructions": "66",
-        "calls": "1",
-        "basicblocks": "4",
-        "loops": {
-            "L": "1"
-        }
-    },
-    "1": {
-        "name": "filt_Pipeline_VITIS_LOOP_16_2",
-        "file": "filt.cpp",
-        "fileloc": "16",
-        "instructions": "20",
-        "total_instructions": "20",
+        "instructions": "53",
+        "total_instructions": "53",
         "calls": "",
         "basicblocks": "4",
         "loads": {

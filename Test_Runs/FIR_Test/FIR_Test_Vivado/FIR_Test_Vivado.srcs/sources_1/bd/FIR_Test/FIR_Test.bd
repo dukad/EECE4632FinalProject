@@ -2668,9 +2668,9 @@
           },
           "filt_0": {
             "vlnv": "xilinx.com:hls:filt:1.0",
-            "ip_revision": "2113508360",
-            "xci_name": "FIR_Test_filt_0_9",
-            "xci_path": "ip\\FIR_Test_filt_0_9\\FIR_Test_filt_0_9.xci",
+            "ip_revision": "2113508420",
+            "xci_name": "FIR_Test_filt_0_10",
+            "xci_path": "ip\\FIR_Test_filt_0_10\\FIR_Test_filt_0_10.xci",
             "inst_hier_path": "firDMA/filt_0",
             "interface_ports": {
               "m_axi_gmem": {

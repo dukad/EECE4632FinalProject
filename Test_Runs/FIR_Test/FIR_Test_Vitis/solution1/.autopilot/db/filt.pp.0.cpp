@@ -9770,18 +9770,17 @@ __attribute__((sdx_kernel("filt", 0))) void filt (hls::stream<AXI_VAL>& y, coef_
 #pragma HLS INTERFACE axis register both port=y
 #pragma HLS INTERFACE ap_ctrl_none port=return
 
- VITIS_LOOP_9_1: while(1) {
+ int j = 0;
+
+ VITIS_LOOP_11_1: while(1) {
 
 
 
   AXI_VAL tmp1;
   x.read(tmp1);
 
-  VITIS_LOOP_16_2: for (int i = 0; i < 99; i++){
-   c[i] = i;
-  }
+  c[j] = tmp1.data.to_int();
 
-  int j = 0;
   AXI_VAL output1;
   output1.data = c[j];
   output1.keep = tmp1.keep;
@@ -9797,6 +9796,6 @@ __attribute__((sdx_kernel("filt", 0))) void filt (hls::stream<AXI_VAL>& y, coef_
   if (tmp1.last){
    break;
   }
-# 72 "filt.cpp"
+# 71 "filt.cpp"
  }
 }
