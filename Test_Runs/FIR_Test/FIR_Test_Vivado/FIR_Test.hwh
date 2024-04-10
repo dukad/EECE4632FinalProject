@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Apr 10 16:19:10 2024" VIVADOVERSION="2023.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Apr 10 17:16:25 2024" VIVADOVERSION="2023.2">
 
   <SYSTEMINFO ARCH="zynq" BOARD="tul.com.tw:pynq-z2:part0:1.0" DEVICE="7z020" NAME="FIR_Test" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -1023,17 +1023,17 @@
         </PORT>
         <PORT DIR="I" LEFT="12" NAME="s_axi_araddr" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_araddr">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="filtDMA_filt" PORT="m_axi_gmem_ARADDR"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="m_axi_gmem_ARADDR"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="1" NAME="s_axi_arburst" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_arburst">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="filtDMA_filt" PORT="m_axi_gmem_ARBURST"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="m_axi_gmem_ARBURST"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="3" NAME="s_axi_arcache" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_arcache">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="filtDMA_filt" PORT="m_axi_gmem_ARCACHE"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="m_axi_gmem_ARCACHE"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="s_axi_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="rst_ps7_0_100M_peripheral_aresetn">
@@ -1043,167 +1043,167 @@
         </PORT>
         <PORT DIR="I" LEFT="0" NAME="s_axi_arid" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_arid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="filtDMA_filt" PORT="m_axi_gmem_ARID"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="m_axi_gmem_ARID"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="7" NAME="s_axi_arlen" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_arlen">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="filtDMA_filt" PORT="m_axi_gmem_ARLEN"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="m_axi_gmem_ARLEN"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="s_axi_arlock" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_arlock">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="filtDMA_filt" PORT="m_axi_gmem_ARLOCK"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="m_axi_gmem_ARLOCK"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="2" NAME="s_axi_arprot" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_arprot">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="filtDMA_filt" PORT="m_axi_gmem_ARPROT"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="m_axi_gmem_ARPROT"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="s_axi_arready" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_arready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="filtDMA_filt" PORT="m_axi_gmem_ARREADY"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="m_axi_gmem_ARREADY"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="2" NAME="s_axi_arsize" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_arsize">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="filtDMA_filt" PORT="m_axi_gmem_ARSIZE"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="m_axi_gmem_ARSIZE"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="s_axi_arvalid" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_arvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="filtDMA_filt" PORT="m_axi_gmem_ARVALID"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="m_axi_gmem_ARVALID"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="12" NAME="s_axi_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_awaddr">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="filtDMA_filt" PORT="m_axi_gmem_AWADDR"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="m_axi_gmem_AWADDR"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="1" NAME="s_axi_awburst" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_awburst">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="filtDMA_filt" PORT="m_axi_gmem_AWBURST"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="m_axi_gmem_AWBURST"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="3" NAME="s_axi_awcache" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_awcache">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="filtDMA_filt" PORT="m_axi_gmem_AWCACHE"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="m_axi_gmem_AWCACHE"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="0" NAME="s_axi_awid" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_awid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="filtDMA_filt" PORT="m_axi_gmem_AWID"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="m_axi_gmem_AWID"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="7" NAME="s_axi_awlen" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_awlen">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="filtDMA_filt" PORT="m_axi_gmem_AWLEN"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="m_axi_gmem_AWLEN"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="s_axi_awlock" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_awlock">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="filtDMA_filt" PORT="m_axi_gmem_AWLOCK"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="m_axi_gmem_AWLOCK"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="2" NAME="s_axi_awprot" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_awprot">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="filtDMA_filt" PORT="m_axi_gmem_AWPROT"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="m_axi_gmem_AWPROT"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="s_axi_awready" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_awready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="filtDMA_filt" PORT="m_axi_gmem_AWREADY"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="m_axi_gmem_AWREADY"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="2" NAME="s_axi_awsize" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_awsize">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="filtDMA_filt" PORT="m_axi_gmem_AWSIZE"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="m_axi_gmem_AWSIZE"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="s_axi_awvalid" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_awvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="filtDMA_filt" PORT="m_axi_gmem_AWVALID"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="m_axi_gmem_AWVALID"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="0" NAME="s_axi_bid" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_bid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="filtDMA_filt" PORT="m_axi_gmem_BID"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="m_axi_gmem_BID"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="s_axi_bready" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_bready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="filtDMA_filt" PORT="m_axi_gmem_BREADY"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="m_axi_gmem_BREADY"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="1" NAME="s_axi_bresp" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_bresp">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="filtDMA_filt" PORT="m_axi_gmem_BRESP"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="m_axi_gmem_BRESP"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="s_axi_bvalid" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_bvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="filtDMA_filt" PORT="m_axi_gmem_BVALID"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="m_axi_gmem_BVALID"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="31" NAME="s_axi_rdata" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_rdata">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="filtDMA_filt" PORT="m_axi_gmem_RDATA"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="m_axi_gmem_RDATA"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="0" NAME="s_axi_rid" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_rid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="filtDMA_filt" PORT="m_axi_gmem_RID"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="m_axi_gmem_RID"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="s_axi_rlast" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_rlast">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="filtDMA_filt" PORT="m_axi_gmem_RLAST"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="m_axi_gmem_RLAST"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="s_axi_rready" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_rready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="filtDMA_filt" PORT="m_axi_gmem_RREADY"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="m_axi_gmem_RREADY"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="1" NAME="s_axi_rresp" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_rresp">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="filtDMA_filt" PORT="m_axi_gmem_RRESP"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="m_axi_gmem_RRESP"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="s_axi_rvalid" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_rvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="filtDMA_filt" PORT="m_axi_gmem_RVALID"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="m_axi_gmem_RVALID"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="31" NAME="s_axi_wdata" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_wdata">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="filtDMA_filt" PORT="m_axi_gmem_WDATA"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="m_axi_gmem_WDATA"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="s_axi_wlast" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_wlast">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="filtDMA_filt" PORT="m_axi_gmem_WLAST"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="m_axi_gmem_WLAST"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="s_axi_wready" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_wready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="filtDMA_filt" PORT="m_axi_gmem_WREADY"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="m_axi_gmem_WREADY"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="3" NAME="s_axi_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_wstrb">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="filtDMA_filt" PORT="m_axi_gmem_WSTRB"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="m_axi_gmem_WSTRB"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="s_axi_wvalid" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_wvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="filtDMA_filt" PORT="m_axi_gmem_WVALID"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="m_axi_gmem_WVALID"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
       <BUSINTERFACES>
-        <BUSINTERFACE BUSNAME="filtDMA_filt_m_axi_gmem" DATAWIDTH="32" NAME="S_AXI" TYPE="SLAVE" VLNV="xilinx.com:interface:aximm:1.0">
+        <BUSINTERFACE BUSNAME="filtDMA_filt_0_m_axi_gmem" DATAWIDTH="32" NAME="S_AXI" TYPE="SLAVE" VLNV="xilinx.com:interface:aximm:1.0">
           <PARAMETER NAME="ADDR_WIDTH" VALUE="13"/>
           <PARAMETER NAME="ARUSER_WIDTH" VALUE="0"/>
           <PARAMETER NAME="AWUSER_WIDTH" VALUE="0"/>
@@ -2338,27 +2338,27 @@
         </PORT>
         <PORT DIR="O" LEFT="31" NAME="m_axis_mm2s_tdata" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_dma_0_m_axis_mm2s_tdata">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="filtDMA_filt" PORT="x_TDATA"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="x_TDATA"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="3" NAME="m_axis_mm2s_tkeep" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_dma_0_m_axis_mm2s_tkeep">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="filtDMA_filt" PORT="x_TKEEP"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="x_TKEEP"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="m_axis_mm2s_tlast" SIGIS="undef" SIGNAME="filtDMA_axi_dma_0_m_axis_mm2s_tlast">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="filtDMA_filt" PORT="x_TLAST"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="x_TLAST"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="m_axis_mm2s_tready" SIGIS="undef" SIGNAME="filtDMA_axi_dma_0_m_axis_mm2s_tready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="filtDMA_filt" PORT="x_TREADY"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="x_TREADY"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="m_axis_mm2s_tvalid" SIGIS="undef" SIGNAME="filtDMA_axi_dma_0_m_axis_mm2s_tvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="filtDMA_filt" PORT="x_TVALID"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="x_TVALID"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="mm2s_introut" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT"/>
@@ -2452,27 +2452,27 @@
         </PORT>
         <PORT DIR="I" LEFT="31" NAME="s_axis_s2mm_tdata" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_dma_0_s_axis_s2mm_tdata">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="filtDMA_filt" PORT="y_TDATA"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="y_TDATA"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="3" NAME="s_axis_s2mm_tkeep" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_dma_0_s_axis_s2mm_tkeep">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="filtDMA_filt" PORT="y_TKEEP"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="y_TKEEP"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="s_axis_s2mm_tlast" SIGIS="undef" SIGNAME="filtDMA_axi_dma_0_s_axis_s2mm_tlast">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="filtDMA_filt" PORT="y_TLAST"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="y_TLAST"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="s_axis_s2mm_tready" SIGIS="undef" SIGNAME="filtDMA_axi_dma_0_s_axis_s2mm_tready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="filtDMA_filt" PORT="y_TREADY"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="y_TREADY"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="s_axis_s2mm_tvalid" SIGIS="undef" SIGNAME="filtDMA_axi_dma_0_s_axis_s2mm_tvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="filtDMA_filt" PORT="y_TVALID"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="y_TVALID"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -2650,7 +2650,7 @@
             <PORTMAP LOGICAL="TVALID" PHYSICAL="m_axis_mm2s_tvalid"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="filtDMA_filt_y" NAME="S_AXIS_S2MM" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+        <BUSINTERFACE BUSNAME="filtDMA_filt_0_y" NAME="S_AXIS_S2MM" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="CLK_DOMAIN" VALUE="FIR_Test_processing_system7_0_0_FCLK_CLK0"/>
           <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="1"/>
@@ -2681,7 +2681,7 @@
       </MEMORYMAP>
       <PERIPHERALS>
         <PERIPHERAL INSTANCE="processing_system7_0"/>
-        <PERIPHERAL INSTANCE="filtDMA_filt"/>
+        <PERIPHERAL INSTANCE="filtDMA_filt_0"/>
       </PERIPHERALS>
     </MODULE>
     <MODULE COREREVISION="7" FULLNAME="/filtDMA/blk_mem_gen_0" HWVERSION="8.4" INSTANCE="filtDMA_blk_mem_gen_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="MEMORY" MODTYPE="blk_mem_gen" VLNV="xilinx.com:ip:blk_mem_gen:8.4">
@@ -2896,7 +2896,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="2113508476" FULLNAME="/filtDMA/filt" HWVERSION="1.0" INSTANCE="filtDMA_filt" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="filt" VLNV="xilinx.com:hls:filt:1.0">
+    <MODULE COREREVISION="2113508534" FULLNAME="/filtDMA/filt_0" HWVERSION="1.0" INSTANCE="filtDMA_filt_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="filt" VLNV="xilinx.com:hls:filt:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="C_M_AXI_GMEM_ADDR_WIDTH" VALUE="64"/>
@@ -2914,7 +2914,7 @@
         <PARAMETER NAME="C_S_AXI_CONTROL_DATA_WIDTH" VALUE="32"/>
         <PARAMETER NAME="C_M_AXI_GMEM_ENABLE_ID_PORTS" VALUE="true"/>
         <PARAMETER NAME="C_M_AXI_GMEM_ENABLE_USER_PORTS" VALUE="false"/>
-        <PARAMETER NAME="Component_Name" VALUE="FIR_Test_filt_0_13"/>
+        <PARAMETER NAME="Component_Name" VALUE="FIR_Test_filt_0_14"/>
         <PARAMETER NAME="II" VALUE="x"/>
         <PARAMETER NAME="clk_period" VALUE="10"/>
         <PARAMETER NAME="combinational" VALUE="0"/>
@@ -3229,7 +3229,7 @@
             <PORTMAP LOGICAL="WVALID" PHYSICAL="s_axi_control_WVALID"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="filtDMA_filt_m_axi_gmem" DATAWIDTH="32" NAME="m_axi_gmem" TYPE="MASTER" VLNV="xilinx.com:interface:aximm:1.0">
+        <BUSINTERFACE BUSNAME="filtDMA_filt_0_m_axi_gmem" DATAWIDTH="32" NAME="m_axi_gmem" TYPE="MASTER" VLNV="xilinx.com:interface:aximm:1.0">
           <PARAMETER NAME="ADDR_WIDTH" VALUE="64"/>
           <PARAMETER NAME="ARUSER_WIDTH" VALUE="0"/>
           <PARAMETER NAME="AWUSER_WIDTH" VALUE="0"/>
@@ -3257,7 +3257,7 @@
           <PARAMETER NAME="NUM_WRITE_THREADS" VALUE="1"/>
           <PARAMETER NAME="PHASE" VALUE="0.0"/>
           <PARAMETER NAME="PROTOCOL" VALUE="AXI4"/>
-          <PARAMETER NAME="READ_WRITE_MODE" VALUE="WRITE_ONLY"/>
+          <PARAMETER NAME="READ_WRITE_MODE" VALUE="READ_ONLY"/>
           <PARAMETER NAME="RUSER_BITS_PER_BYTE" VALUE="0"/>
           <PARAMETER NAME="RUSER_WIDTH" VALUE="0"/>
           <PARAMETER NAME="SUPPORTS_NARROW_BURST" VALUE="0"/>
@@ -3301,7 +3301,7 @@
             <PORTMAP LOGICAL="WVALID" PHYSICAL="m_axi_gmem_WVALID"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="filtDMA_filt_y" NAME="y" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
+        <BUSINTERFACE BUSNAME="filtDMA_filt_0_y" NAME="y" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="CLK_DOMAIN" VALUE="FIR_Test_processing_system7_0_0_FCLK_CLK0"/>
           <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="1"/>
@@ -4409,7 +4409,7 @@
             <CONNECTION INSTANCE="filtDMA_axi_dma_0" PORT="s_axi_lite_aclk"/>
             <CONNECTION INSTANCE="filtDMA_axi_bram_ctrl_0" PORT="s_axi_aclk"/>
             <CONNECTION INSTANCE="filtDMA_axi_dma_0" PORT="m_axi_s2mm_aclk"/>
-            <CONNECTION INSTANCE="filtDMA_filt" PORT="ap_clk"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="ap_clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="FCLK_RESET0_N" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="processing_system7_0_FCLK_RESET0_N">
@@ -5768,7 +5768,7 @@
             <CONNECTION INSTANCE="axi_mem_intercon" PORT="S01_ARESETN"/>
             <CONNECTION INSTANCE="filtDMA_axi_dma_0" PORT="axi_resetn"/>
             <CONNECTION INSTANCE="filtDMA_axi_bram_ctrl_0" PORT="s_axi_aresetn"/>
-            <CONNECTION INSTANCE="filtDMA_filt" PORT="ap_rst_n"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="ap_rst_n"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="0" NAME="peripheral_reset" POLARITY="ACTIVE_HIGH" RIGHT="0" SIGIS="rst"/>

@@ -6,46 +6,60 @@ void filt (hls::stream<AXI_VAL>& y, coef_t c[N], hls::stream<AXI_VAL>& x) {
 #pragma HLS INTERFACE axis register both port=y
 #pragma HLS INTERFACE ap_ctrl_none port=return
 
-	int j = 0;
+	// *** DEFINE VARIABLES ***
+	int i = -1;
 
 	while(1) {
+		// *** DEFINE MORE VARIABLES ***
+		static data_t signal_shift_reg[N];
+
+		acc_t accumulate;
+
+		data_t data;
+		int i;
+		bool coefs_or_signal;
+
+		AXI_VAL tmp;
+		x.read(tmp);
+
+		accumulate = 0;
+		coefs_or_signal = false;
+
 		// *** COEFFICIENT PROCESSING CODE ***
+		while (coefs_or_signal){
+			if (tmp.data.to_int() == 43962){   // 43962 is the decimal representation of 0xABBA
+				coefs_or_signal = false;
+				i = 0;
+				break;
+			}
+
+			c[i] = tmp.data.to_int();
+
+			i += 1;
+		}
+
+		if (tmp.data.to_int() == 48879){   // 48879 is the decimal representation of 0xBEEF
+			coefs_or_signal = true;
+		}
 
 		// *** BLOCK RAM READ/WRITE TEST ***
-		AXI_VAL tmp1;
-		x.read(tmp1);
+		AXI_VAL output;
+		output.data = c[i];
+		output.keep = tmp.keep;
+		output.strb = tmp.strb;
+		output.last = tmp.last;
+		output.dest = tmp.dest;
+		output.id = tmp.id;
+		output.user = tmp.user;
+		y.write(output);
 
-		c[j] = tmp1.data.to_int() + 5;
+		i += 1;
 
-		AXI_VAL output1;
-		output1.data = c[j];
-		output1.keep = tmp1.keep;
-		output1.strb = tmp1.strb;
-		output1.last = tmp1.last;
-		output1.dest = tmp1.dest;
-		output1.id = tmp1.id;
-		output1.user = tmp1.user;
-		y.write(output1);
-
-		j += 1;
-
-		if (tmp1.last){
+		if (tmp.last){
 			break;
 		}
 
 		// *** ACTUAL CODE ***
-//		static data_t signal_shift_reg[N];
-//
-//		acc_t accumulate;
-//
-//		data_t data;
-//		int i;
-//
-//		AXI_VAL tmp;
-//		x.read(tmp);
-//
-//		accumulate = 0;
-//
 //		Shift_Accumulate_Loop:
 //		for (i = N - 1; i > 0; i--){
 //#pragma HLS UNROLL

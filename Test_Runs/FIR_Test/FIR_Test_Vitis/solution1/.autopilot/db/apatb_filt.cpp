@@ -1319,17 +1319,8 @@ void apatb_filt_hw(void* __xlx_apatb_param_y_V_data_V, void* __xlx_apatb_param_y
     .hbm = false,
     .name = { "gmem" },
 #ifdef POST_CHECK
-#ifdef USE_BINARY_TV_FILE
-    .reader = new hls::sim::Input(AUTOTB_TVOUT_PC_gmem),
 #else
-    .reader = new hls::sim::Reader(AUTOTB_TVOUT_PC_gmem),
-#endif
-#else
-#ifdef USE_BINARY_TV_FILE
-    .owriter = new hls::sim::Output(AUTOTB_TVOUT_gmem),
-#else
-    .owriter = new hls::sim::Writer(AUTOTB_TVOUT_gmem),
-#endif
+    .owriter = nullptr,
 #ifdef USE_BINARY_TV_FILE
     .iwriter = new hls::sim::Output(AUTOTB_TVIN_gmem),
 #else
@@ -1340,12 +1331,11 @@ void apatb_filt_hw(void* __xlx_apatb_param_y_V_data_V, void* __xlx_apatb_param_y
   port15.param = { __xlx_apatb_param_c };
   port15.nbytes = { 396 };
   port15.offset = {  };
-  port15.hasWrite = { true };
+  port15.hasWrite = { false };
 
   try {
 #ifdef POST_CHECK
     CodeState = ENTER_WRAPC_PC;
-    check(port15);
     check(port0);
     check(port1);
     check(port2);
@@ -1412,7 +1402,6 @@ void apatb_filt_hw(void* __xlx_apatb_param_y_V_data_V, void* __xlx_apatb_param_y
     port13.doTCL(tcl);
     port14.doTCL(tcl);
     CodeState = DUMP_OUTPUTS;
-    dump(port15, port15.owriter, tcl.AESL_transaction);
     dump(port0, tcl.AESL_transaction);
     dump(port1, tcl.AESL_transaction);
     dump(port2, tcl.AESL_transaction);

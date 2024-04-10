@@ -15,7 +15,7 @@ set DLRegItemOffset 0
 set C_modelName {filt}
 set C_modelType { void 0 }
 set C_modelArgList {
-	{ gmem int 32 regular {axi_master 1}  }
+	{ gmem int 32 regular {axi_master 0}  }
 	{ y_V_data_V int 32 regular {axi_s 1 volatile  { y Data } }  }
 	{ y_V_keep_V int 4 regular {axi_s 1 volatile  { y Keep } }  }
 	{ y_V_strb_V int 4 regular {axi_s 1 volatile  { y Strb } }  }
@@ -35,7 +35,7 @@ set C_modelArgList {
 set hasAXIMCache 0
 set AXIMCacheInstList { }
 set C_modelArgMapList {[ 
-	{ "Name" : "gmem", "interface" : "axi_master", "bitwidth" : 32, "direction" : "WRITEONLY", "bitSlice":[ {"cElement": [{"cName": "c","offset": { "type": "dynamic","port_name": "c","bundle": "control"},"direction": "WRITEONLY"}]}]} , 
+	{ "Name" : "gmem", "interface" : "axi_master", "bitwidth" : 32, "direction" : "READONLY", "bitSlice":[ {"cElement": [{"cName": "c","offset": { "type": "dynamic","port_name": "c","bundle": "control"},"direction": "READONLY"}]}]} , 
  	{ "Name" : "y_V_data_V", "interface" : "axis", "bitwidth" : 32, "direction" : "WRITEONLY"} , 
  	{ "Name" : "y_V_keep_V", "interface" : "axis", "bitwidth" : 4, "direction" : "WRITEONLY"} , 
  	{ "Name" : "y_V_strb_V", "interface" : "axis", "bitwidth" : 4, "direction" : "WRITEONLY"} , 
@@ -237,11 +237,10 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"IsBlackBox" : "0",
 		"Port" : [
-			{"Name" : "gmem", "Type" : "MAXI", "Direction" : "O",
+			{"Name" : "gmem", "Type" : "MAXI", "Direction" : "I",
 				"BlockSignal" : [
-					{"Name" : "gmem_blk_n_AW", "Type" : "RtlSignal"},
-					{"Name" : "gmem_blk_n_W", "Type" : "RtlSignal"},
-					{"Name" : "gmem_blk_n_B", "Type" : "RtlSignal"}]},
+					{"Name" : "gmem_blk_n_AR", "Type" : "RtlSignal"},
+					{"Name" : "gmem_blk_n_R", "Type" : "RtlSignal"}]},
 			{"Name" : "y_V_data_V", "Type" : "Axis", "Direction" : "O", "BaseName" : "y",
 				"BlockSignal" : [
 					{"Name" : "y_TDATA_blk_n", "Type" : "RtlSignal"}]},
@@ -262,8 +261,8 @@ set RtlHierarchyInfo {[
 			{"Name" : "x_V_id_V", "Type" : "Axis", "Direction" : "I", "BaseName" : "x"},
 			{"Name" : "x_V_dest_V", "Type" : "Axis", "Direction" : "I", "BaseName" : "x"}],
 		"Loop" : [
-			{"Name" : "VITIS_LOOP_11_1", "PipelineType" : "pipeline",
-				"LoopDec" : {"FSMBitwidth" : "3", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter7", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "PreState" : ["ap_ST_fsm_state1"], "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter7", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "PostState" : ["ap_ST_fsm_state10"]}}]},
+			{"Name" : "VITIS_LOOP_12_1", "PipelineType" : "pipeline",
+				"LoopDec" : {"FSMBitwidth" : "12", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter1", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "PreState" : ["ap_ST_fsm_state10"], "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter1", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "PostState" : ["ap_ST_fsm_state13"]}}]},
 	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.control_s_axi_U", "Parent" : "0"},
 	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.gmem_m_axi_U", "Parent" : "0"},
 	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_y_V_data_V_U", "Parent" : "0"},
@@ -284,22 +283,22 @@ set RtlHierarchyInfo {[
 
 set ArgLastReadFirstWriteLatency {
 	filt {
-		gmem {Type O LastRead 4 FirstWrite 3}
-		y_V_data_V {Type O LastRead -1 FirstWrite 3}
-		y_V_keep_V {Type O LastRead -1 FirstWrite 3}
-		y_V_strb_V {Type O LastRead -1 FirstWrite 3}
-		y_V_user_V {Type O LastRead -1 FirstWrite 3}
-		y_V_last_V {Type O LastRead -1 FirstWrite 3}
-		y_V_id_V {Type O LastRead -1 FirstWrite 3}
-		y_V_dest_V {Type O LastRead -1 FirstWrite 3}
+		gmem {Type I LastRead 9 FirstWrite -1}
+		y_V_data_V {Type O LastRead -1 FirstWrite 10}
+		y_V_keep_V {Type O LastRead -1 FirstWrite 10}
+		y_V_strb_V {Type O LastRead -1 FirstWrite 10}
+		y_V_user_V {Type O LastRead -1 FirstWrite 10}
+		y_V_last_V {Type O LastRead -1 FirstWrite 10}
+		y_V_id_V {Type O LastRead -1 FirstWrite 10}
+		y_V_dest_V {Type O LastRead -1 FirstWrite 10}
 		c {Type I LastRead 0 FirstWrite -1}
-		x_V_data_V {Type I LastRead 1 FirstWrite -1}
-		x_V_keep_V {Type I LastRead 1 FirstWrite -1}
-		x_V_strb_V {Type I LastRead 1 FirstWrite -1}
-		x_V_user_V {Type I LastRead 1 FirstWrite -1}
-		x_V_last_V {Type I LastRead 1 FirstWrite -1}
-		x_V_id_V {Type I LastRead 1 FirstWrite -1}
-		x_V_dest_V {Type I LastRead 1 FirstWrite -1}}}
+		x_V_data_V {Type I LastRead 10 FirstWrite -1}
+		x_V_keep_V {Type I LastRead 10 FirstWrite -1}
+		x_V_strb_V {Type I LastRead 10 FirstWrite -1}
+		x_V_user_V {Type I LastRead 10 FirstWrite -1}
+		x_V_last_V {Type I LastRead 10 FirstWrite -1}
+		x_V_id_V {Type I LastRead 10 FirstWrite -1}
+		x_V_dest_V {Type I LastRead 10 FirstWrite -1}}}
 
 set hasDtUnsupportedChannel 0
 
@@ -331,7 +330,7 @@ set Spec2ImplPortList {
 }
 
 set maxi_interface_dict [dict create]
-dict set maxi_interface_dict gmem {NUM_READ_OUTSTANDING 16 NUM_WRITE_OUTSTANDING 16 MAX_READ_BURST_LENGTH 16 MAX_WRITE_BURST_LENGTH 16 READ_WRITE_MODE WRITE_ONLY}
+dict set maxi_interface_dict gmem {NUM_READ_OUTSTANDING 16 NUM_WRITE_OUTSTANDING 16 MAX_READ_BURST_LENGTH 16 MAX_WRITE_BURST_LENGTH 16 READ_WRITE_MODE READ_ONLY}
 
 # RTL port scheduling information:
 set fifoSchedulingInfoList { 

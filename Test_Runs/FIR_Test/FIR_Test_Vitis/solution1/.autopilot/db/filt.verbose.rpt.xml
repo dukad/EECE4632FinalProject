@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'filt'" level="0">
-<item name = "Date">Wed Apr 10 16:15:32 2024
+<item name = "Date">Wed Apr 10 17:13:45 2024
 </item>
 <item name = "Version">2023.2 (Build 4023990 on Oct 11 2023)</item>
 <item name = "Project">FIR_Test_Vitis</item>
@@ -35,7 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- VITIS_LOOP_11_1">?, ?, 8, 1, 1, ?, yes</column>
+<column name="- VITIS_LOOP_12_1">?, ?, 2, 1, 1, ?, yes</column>
 </table>
 </item>
 </section>
@@ -48,14 +48,14 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
 <column name="DSP">-, -, -, -, -</column>
-<column name="Expression">-, -, 0, 189, -</column>
+<column name="Expression">-, -, 0, 8, -</column>
 <column name="FIFO">-, -, -, -, -</column>
 <column name="Instance">4, -, 930, 902, -</column>
 <column name="Memory">-, -, -, -, -</column>
-<column name="Multiplexer">-, -, -, 83, -</column>
-<column name="Register">-, -, 695, 224, -</column>
+<column name="Multiplexer">-, -, -, 110, -</column>
+<column name="Register">-, -, 110, -, -</column>
 <specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
-<specialColumn name="Utilization (%)">1, 0, 1, 2, 0</specialColumn>
+<specialColumn name="Utilization (%)">1, 0, ~0, 1, 0</specialColumn>
 </table>
 </item>
 <item name = "Detail">
@@ -80,55 +80,29 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="add_ln18_1_fu_231_p2">+, 0, 0, 71, 64, 64</column>
-<column name="add_ln30_fu_256_p2">+, 0, 0, 71, 64, 1</column>
-<column name="output1_data_fu_219_p2">+, 0, 0, 39, 32, 3</column>
 <column name="ap_block_pp0_stage0_01001">or, 0, 0, 2, 1, 1</column>
 <column name="ap_block_pp0_stage0_11001">or, 0, 0, 2, 1, 1</column>
-<column name="ap_block_state4_io">or, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state11_pp0_stage0_iter0">or, 0, 0, 2, 1, 1</column>
 <column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
-<column name="ap_NS_fsm">20, 4, 1, 4</column>
-<column name="ap_enable_reg_pp0_iter7">9, 2, 1, 2</column>
-<column name="gmem_blk_n_AW">9, 2, 1, 2</column>
-<column name="gmem_blk_n_B">9, 2, 1, 2</column>
-<column name="gmem_blk_n_W">9, 2, 1, 2</column>
-<column name="j_fu_114">9, 2, 64, 128</column>
+<column name="ap_NS_fsm">65, 13, 1, 13</column>
+<column name="ap_enable_reg_pp0_iter1">9, 2, 1, 2</column>
+<column name="gmem_blk_n_AR">9, 2, 1, 2</column>
+<column name="gmem_blk_n_R">9, 2, 1, 2</column>
 <column name="x_TDATA_blk_n">9, 2, 1, 2</column>
 <column name="y_TDATA_blk_n">9, 2, 1, 2</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
-<column name="ap_CS_fsm">3, 0, 3, 0</column>
+<column name="ap_CS_fsm">12, 0, 12, 0</column>
 <column name="ap_enable_reg_pp0_iter0">1, 0, 1, 0</column>
 <column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
-<column name="ap_enable_reg_pp0_iter2">1, 0, 1, 0</column>
-<column name="ap_enable_reg_pp0_iter3">1, 0, 1, 0</column>
-<column name="ap_enable_reg_pp0_iter4">1, 0, 1, 0</column>
-<column name="ap_enable_reg_pp0_iter5">1, 0, 1, 0</column>
-<column name="ap_enable_reg_pp0_iter6">1, 0, 1, 0</column>
-<column name="ap_enable_reg_pp0_iter7">1, 0, 1, 0</column>
-<column name="c_read_reg_274">64, 0, 64, 0</column>
-<column name="gmem_addr_reg_315">64, 0, 64, 0</column>
-<column name="j_fu_114">64, 0, 64, 0</column>
-<column name="output1_data_reg_309">32, 0, 32, 0</column>
-<column name="tmp1_dest_reg_304">1, 0, 1, 0</column>
-<column name="tmp1_id_reg_299">1, 0, 1, 0</column>
-<column name="tmp1_keep_reg_279">4, 0, 4, 0</column>
-<column name="tmp1_last_reg_294">1, 0, 1, 0</column>
-<column name="tmp1_strb_reg_284">4, 0, 4, 0</column>
-<column name="tmp1_user_reg_289">1, 0, 1, 0</column>
-<column name="output1_data_reg_309">64, 32, 32, 0</column>
-<column name="tmp1_dest_reg_304">64, 32, 1, 0</column>
-<column name="tmp1_id_reg_299">64, 32, 1, 0</column>
-<column name="tmp1_keep_reg_279">64, 32, 4, 0</column>
-<column name="tmp1_last_reg_294">64, 32, 1, 0</column>
-<column name="tmp1_strb_reg_284">64, 32, 4, 0</column>
-<column name="tmp1_user_reg_289">64, 32, 1, 0</column>
+<column name="gmem_addr_reg_213">64, 0, 64, 0</column>
+<column name="output_data_reg_219">32, 0, 32, 0</column>
 </table>
 </item>
 </section>

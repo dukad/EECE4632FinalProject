@@ -30,7 +30,7 @@
         "axi_bram_ctrl_0": "",
         "blk_mem_gen_0": "",
         "axi_dma_0": "",
-        "filt": ""
+        "filt_0": ""
       }
     },
     "interface_ports": {
@@ -2666,12 +2666,12 @@
               }
             }
           },
-          "filt": {
+          "filt_0": {
             "vlnv": "xilinx.com:hls:filt:1.0",
-            "ip_revision": "2113508476",
-            "xci_name": "FIR_Test_filt_0_13",
-            "xci_path": "ip\\FIR_Test_filt_0_13\\FIR_Test_filt_0_13.xci",
-            "inst_hier_path": "filtDMA/filt",
+            "ip_revision": "2113508534",
+            "xci_name": "FIR_Test_filt_0_14",
+            "xci_path": "ip\\FIR_Test_filt_0_14\\FIR_Test_filt_0_14.xci",
+            "inst_hier_path": "filtDMA/filt_0",
             "interface_ports": {
               "m_axi_gmem": {
                 "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
@@ -2703,7 +2703,7 @@
           },
           "axi_dma_0_M_AXIS_MM2S": {
             "interface_ports": [
-              "filt/x",
+              "filt_0/x",
               "axi_dma_0/M_AXIS_MM2S"
             ]
           },
@@ -2721,13 +2721,13 @@
           },
           "filt_0_m_axi_gmem": {
             "interface_ports": [
-              "filt/m_axi_gmem",
+              "filt_0/m_axi_gmem",
               "axi_bram_ctrl_0/S_AXI"
             ]
           },
           "filt_0_y": {
             "interface_ports": [
-              "filt/y",
+              "filt_0/y",
               "axi_dma_0/S_AXIS_S2MM"
             ]
           },
@@ -2746,7 +2746,7 @@
               "axi_dma_0/s_axi_lite_aclk",
               "axi_bram_ctrl_0/s_axi_aclk",
               "axi_dma_0/m_axi_s2mm_aclk",
-              "filt/ap_clk"
+              "filt_0/ap_clk"
             ]
           },
           "rst_ps7_0_100M_peripheral_aresetn": {
@@ -2754,7 +2754,7 @@
               "ap_rst_n",
               "axi_dma_0/axi_resetn",
               "axi_bram_ctrl_0/s_axi_aresetn",
-              "filt/ap_rst_n"
+              "filt_0/ap_rst_n"
             ]
           }
         }

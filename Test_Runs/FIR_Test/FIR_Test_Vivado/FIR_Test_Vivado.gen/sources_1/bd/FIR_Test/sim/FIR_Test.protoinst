@@ -689,7 +689,7 @@
 						"WVALID": { "actual": "s_axi_lite_wvalid"}
 					}
 				},
-				"/filtDMA/filt/m_axi_gmem": {
+				"/filtDMA/filt_0/m_axi_gmem": {
 					"interface": "xilinx.com:interface:aximm:1.0",
 					"ports": {
 						"ACLK": { "actual": "ap_clk"},
@@ -736,7 +736,7 @@
 						"WVALID": { "actual": "m_axi_gmem_WVALID"}
 					}
 				},
-				"/filtDMA/filt/x": {
+				"/filtDMA/filt_0/x": {
 					"interface": "xilinx.com:interface:axis:1.0",
 					"ports": {
 						"ACLK": { "actual": "ap_clk"},
@@ -752,7 +752,7 @@
 						"TVALID": { "actual": "x_TVALID"}
 					}
 				},
-				"/filtDMA/filt/y": {
+				"/filtDMA/filt_0/y": {
 					"interface": "xilinx.com:interface:axis:1.0",
 					"ports": {
 						"ACLK": { "actual": "ap_clk"},

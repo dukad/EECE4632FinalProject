@@ -23,8 +23,13 @@ C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Test_Runs\FIR_Test\
       ^~~
       VITIS_LOOP_1247_1: 
 C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Test_Runs\FIR_Test\FIR_Test_Vitis\solution1\.autopilot\db\filt.pp.0.cpp:4081:7: note: FIX-IT applied suggested code changes
-C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Test_Runs\FIR_Test\FIR_Test_Vitis\solution1\.autopilot\db\filt.pp.0.cpp:9775:2: warning: Added loop label VITIS_LOOP_11_1:   [xilinx-label-all-loops]
+C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Test_Runs\FIR_Test\FIR_Test_Vitis\solution1\.autopilot\db\filt.pp.0.cpp:9776:2: warning: Added loop label VITIS_LOOP_12_1:   [xilinx-label-all-loops]
  while(1) {
  ^~~~~
- VITIS_LOOP_11_1: 
-C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Test_Runs\FIR_Test\FIR_Test_Vitis\solution1\.autopilot\db\filt.pp.0.cpp:9775:2: note: FIX-IT applied suggested code changes
+ VITIS_LOOP_12_1: 
+C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Test_Runs\FIR_Test\FIR_Test_Vitis\solution1\.autopilot\db\filt.pp.0.cpp:9776:2: note: FIX-IT applied suggested code changes
+C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Test_Runs\FIR_Test\FIR_Test_Vitis\solution1\.autopilot\db\filt.pp.0.cpp:9793:3: warning: Added loop label VITIS_LOOP_29_2:   [xilinx-label-all-loops]
+  while (coefs_or_signal){
+  ^~~~~
+  VITIS_LOOP_29_2: 
+C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Test_Runs\FIR_Test\FIR_Test_Vitis\solution1\.autopilot\db\filt.pp.0.cpp:9793:3: note: FIX-IT applied suggested code changes

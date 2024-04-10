@@ -613,7 +613,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>READ_WRITE_MODE</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.M_AXI_GMEM.READ_WRITE_MODE">WRITE_ONLY</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.M_AXI_GMEM.READ_WRITE_MODE">READ_ONLY</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>HAS_BURST</spirit:name>
@@ -930,7 +930,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>c1ad1590</spirit:value>
+            <spirit:value>489f55c5</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -946,7 +946,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>5de54986</spirit:value>
+            <spirit:value>adee0d04</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -962,7 +962,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>bd4e933d</spirit:value>
+            <spirit:value>5f071873</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -978,7 +978,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>9c6a885f</spirit:value>
+            <spirit:value>30ef89a1</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2628,7 +2628,7 @@
       <spirit:file>
         <spirit:name>hdl/vhdl/filt.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_3211e711</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_78b06723</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -2875,8 +2875,8 @@
       </xilinx:taxonomies>
       <xilinx:displayName>Filt</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>2113508476</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2024-04-10T20:16:33Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>2113508534</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2024-04-10T21:14:49Z</xilinx:coreCreationDateTime>
       <xilinx:sdxKernelAttributes>
         <xilinx:sdx_kernel>true</xilinx:sdx_kernel>
         <xilinx:sdx_kernel_type>hls</xilinx:sdx_kernel_type>
@@ -2884,10 +2884,10 @@
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2023.2</xilinx:xilinxVersion>
-      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="eadc08b6"/>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="f2a39daa"/>
       <xilinx:checksum xilinx:scope="addressSpaces" xilinx:value="2c1df7e3"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="48908a10"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="40c3a9b3"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="c2a3bf0a"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="170bff8b"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="11da1394"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="ec09d020"/>
