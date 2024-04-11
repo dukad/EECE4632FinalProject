@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-//Date        : Wed Apr 10 21:19:55 2024
+//Date        : Thu Apr 11 15:44:21 2024
 //Host        : DESKTOP-G7JA666 running 64-bit major release  (build 9200)
 //Command     : generate_target FIR_Test.bd
 //Design      : FIR_Test
@@ -1562,11 +1562,11 @@ module filtDMA_imp_1P63V5H
   wire filt_0_m_axi_gmem_WREADY;
   wire [3:0]filt_0_m_axi_gmem_WSTRB;
   wire filt_0_m_axi_gmem_WVALID;
-  wire [31:0]filt_0_y_TDATA;
-  wire [3:0]filt_0_y_TKEEP;
-  wire [0:0]filt_0_y_TLAST;
-  wire filt_0_y_TREADY;
-  wire filt_0_y_TVALID;
+  wire [31:0]filt_0_output_r_TDATA;
+  wire [3:0]filt_0_output_r_TKEEP;
+  wire [0:0]filt_0_output_r_TLAST;
+  wire filt_0_output_r_TREADY;
+  wire filt_0_output_r_TVALID;
   wire processing_system7_0_FCLK_CLK0;
   wire [31:0]ps7_0_axi_periph_M00_AXI_ARADDR;
   wire ps7_0_axi_periph_M00_AXI_ARREADY;
@@ -1733,11 +1733,11 @@ module filtDMA_imp_1P63V5H
         .s_axi_lite_wdata(ps7_0_axi_periph_M00_AXI_WDATA),
         .s_axi_lite_wready(ps7_0_axi_periph_M00_AXI_WREADY),
         .s_axi_lite_wvalid(ps7_0_axi_periph_M00_AXI_WVALID),
-        .s_axis_s2mm_tdata(filt_0_y_TDATA),
-        .s_axis_s2mm_tkeep(filt_0_y_TKEEP),
-        .s_axis_s2mm_tlast(filt_0_y_TLAST),
-        .s_axis_s2mm_tready(filt_0_y_TREADY),
-        .s_axis_s2mm_tvalid(filt_0_y_TVALID));
+        .s_axis_s2mm_tdata(filt_0_output_r_TDATA),
+        .s_axis_s2mm_tkeep(filt_0_output_r_TKEEP),
+        .s_axis_s2mm_tlast(filt_0_output_r_TLAST),
+        .s_axis_s2mm_tready(filt_0_output_r_TREADY),
+        .s_axis_s2mm_tvalid(filt_0_output_r_TVALID));
   FIR_Test_blk_mem_gen_0_0 blk_mem_gen_0
        (.addra({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,axi_bram_ctrl_0_BRAM_PORTA_ADDR}),
         .clka(axi_bram_ctrl_0_BRAM_PORTA_CLK),
@@ -1746,9 +1746,18 @@ module filtDMA_imp_1P63V5H
         .ena(axi_bram_ctrl_0_BRAM_PORTA_EN),
         .rsta(axi_bram_ctrl_0_BRAM_PORTA_RST),
         .wea(axi_bram_ctrl_0_BRAM_PORTA_WE));
-  FIR_Test_filt_0_16 filt_0
+  FIR_Test_filt_0_17 filt_0
        (.ap_clk(processing_system7_0_FCLK_CLK0),
         .ap_rst_n(rst_ps7_0_100M_peripheral_aresetn),
+        .input_r_TDATA(axi_dma_0_M_AXIS_MM2S_TDATA),
+        .input_r_TDEST(1'b0),
+        .input_r_TID(1'b0),
+        .input_r_TKEEP(axi_dma_0_M_AXIS_MM2S_TKEEP),
+        .input_r_TLAST(axi_dma_0_M_AXIS_MM2S_TLAST),
+        .input_r_TREADY(axi_dma_0_M_AXIS_MM2S_TREADY),
+        .input_r_TSTRB({1'b1,1'b1,1'b1,1'b1}),
+        .input_r_TUSER(1'b0),
+        .input_r_TVALID(axi_dma_0_M_AXIS_MM2S_TVALID),
         .m_axi_gmem_ARADDR(filt_0_m_axi_gmem_ARADDR),
         .m_axi_gmem_ARBURST(filt_0_m_axi_gmem_ARBURST),
         .m_axi_gmem_ARCACHE(filt_0_m_axi_gmem_ARCACHE),
@@ -1784,6 +1793,11 @@ module filtDMA_imp_1P63V5H
         .m_axi_gmem_WREADY(filt_0_m_axi_gmem_WREADY),
         .m_axi_gmem_WSTRB(filt_0_m_axi_gmem_WSTRB),
         .m_axi_gmem_WVALID(filt_0_m_axi_gmem_WVALID),
+        .output_r_TDATA(filt_0_output_r_TDATA),
+        .output_r_TKEEP(filt_0_output_r_TKEEP),
+        .output_r_TLAST(filt_0_output_r_TLAST),
+        .output_r_TREADY(filt_0_output_r_TREADY),
+        .output_r_TVALID(filt_0_output_r_TVALID),
         .s_axi_control_ARADDR({1'b0,1'b0,1'b0,1'b0,1'b0}),
         .s_axi_control_ARVALID(1'b0),
         .s_axi_control_AWADDR({1'b0,1'b0,1'b0,1'b0,1'b0}),
@@ -1792,21 +1806,7 @@ module filtDMA_imp_1P63V5H
         .s_axi_control_RREADY(1'b0),
         .s_axi_control_WDATA({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .s_axi_control_WSTRB({1'b1,1'b1,1'b1,1'b1}),
-        .s_axi_control_WVALID(1'b0),
-        .x_TDATA(axi_dma_0_M_AXIS_MM2S_TDATA),
-        .x_TDEST(1'b0),
-        .x_TID(1'b0),
-        .x_TKEEP(axi_dma_0_M_AXIS_MM2S_TKEEP),
-        .x_TLAST(axi_dma_0_M_AXIS_MM2S_TLAST),
-        .x_TREADY(axi_dma_0_M_AXIS_MM2S_TREADY),
-        .x_TSTRB({1'b1,1'b1,1'b1,1'b1}),
-        .x_TUSER(1'b0),
-        .x_TVALID(axi_dma_0_M_AXIS_MM2S_TVALID),
-        .y_TDATA(filt_0_y_TDATA),
-        .y_TKEEP(filt_0_y_TKEEP),
-        .y_TLAST(filt_0_y_TLAST),
-        .y_TREADY(filt_0_y_TREADY),
-        .y_TVALID(filt_0_y_TVALID));
+        .s_axi_control_WVALID(1'b0));
 endmodule
 
 module m00_couplers_imp_RK38EY

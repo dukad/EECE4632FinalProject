@@ -689,6 +689,22 @@
 						"WVALID": { "actual": "s_axi_lite_wvalid"}
 					}
 				},
+				"/filtDMA/filt_0/input_r": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "ap_clk"},
+						"ARESETN": { "actual": "ap_rst_n"},
+						"TDATA": { "actual": "input_r_TDATA[31:0]"},
+						"TDEST": { "actual": "input_r_TDEST[0:0]"},
+						"TID": { "actual": "input_r_TID[0:0]"},
+						"TKEEP": { "actual": "input_r_TKEEP[3:0]"},
+						"TLAST": { "actual": "input_r_TLAST[0:0]"},
+						"TREADY": { "actual": "input_r_TREADY"},
+						"TSTRB": { "actual": "input_r_TSTRB[3:0]"},
+						"TUSER": { "actual": "input_r_TUSER[0:0]"},
+						"TVALID": { "actual": "input_r_TVALID"}
+					}
+				},
 				"/filtDMA/filt_0/m_axi_gmem": {
 					"interface": "xilinx.com:interface:aximm:1.0",
 					"ports": {
@@ -736,36 +752,20 @@
 						"WVALID": { "actual": "m_axi_gmem_WVALID"}
 					}
 				},
-				"/filtDMA/filt_0/x": {
+				"/filtDMA/filt_0/output_r": {
 					"interface": "xilinx.com:interface:axis:1.0",
 					"ports": {
 						"ACLK": { "actual": "ap_clk"},
 						"ARESETN": { "actual": "ap_rst_n"},
-						"TDATA": { "actual": "x_TDATA[31:0]"},
-						"TDEST": { "actual": "x_TDEST[0:0]"},
-						"TID": { "actual": "x_TID[0:0]"},
-						"TKEEP": { "actual": "x_TKEEP[3:0]"},
-						"TLAST": { "actual": "x_TLAST[0:0]"},
-						"TREADY": { "actual": "x_TREADY"},
-						"TSTRB": { "actual": "x_TSTRB[3:0]"},
-						"TUSER": { "actual": "x_TUSER[0:0]"},
-						"TVALID": { "actual": "x_TVALID"}
-					}
-				},
-				"/filtDMA/filt_0/y": {
-					"interface": "xilinx.com:interface:axis:1.0",
-					"ports": {
-						"ACLK": { "actual": "ap_clk"},
-						"ARESETN": { "actual": "ap_rst_n"},
-						"TDATA": { "actual": "y_TDATA[31:0]"},
-						"TDEST": { "actual": "y_TDEST[0:0]"},
-						"TID": { "actual": "y_TID[0:0]"},
-						"TKEEP": { "actual": "y_TKEEP[3:0]"},
-						"TLAST": { "actual": "y_TLAST[0:0]"},
-						"TREADY": { "actual": "y_TREADY"},
-						"TSTRB": { "actual": "y_TSTRB[3:0]"},
-						"TUSER": { "actual": "y_TUSER[0:0]"},
-						"TVALID": { "actual": "y_TVALID"}
+						"TDATA": { "actual": "output_r_TDATA[31:0]"},
+						"TDEST": { "actual": "output_r_TDEST[0:0]"},
+						"TID": { "actual": "output_r_TID[0:0]"},
+						"TKEEP": { "actual": "output_r_TKEEP[3:0]"},
+						"TLAST": { "actual": "output_r_TLAST[0:0]"},
+						"TREADY": { "actual": "output_r_TREADY"},
+						"TSTRB": { "actual": "output_r_TSTRB[3:0]"},
+						"TUSER": { "actual": "output_r_TUSER[0:0]"},
+						"TVALID": { "actual": "output_r_TVALID"}
 					}
 				},
 				"/processing_system7_0/M_AXI_GP0": {
