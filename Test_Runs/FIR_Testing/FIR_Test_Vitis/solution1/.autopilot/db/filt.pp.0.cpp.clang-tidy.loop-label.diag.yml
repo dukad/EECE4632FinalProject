@@ -52,7 +52,7 @@ Diagnostics:
     FilePath:        filt.cpp
     Replacements:    
       - FilePath:        'C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Test_Runs\FIR_Testing\FIR_Test_Vitis\solution1\.autopilot\db\filt.pp.0.cpp'
-        Offset:          1060011
+        Offset:          1060025
         Length:          0
         ReplacementText: 'VITIS_LOOP_22_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -61,7 +61,7 @@ Diagnostics:
     FilePath:        filt.cpp
     Replacements:    
       - FilePath:        'C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Test_Runs\FIR_Testing\FIR_Test_Vitis\solution1\.autopilot\db\filt.pp.0.cpp'
-        Offset:          1060194
+        Offset:          1060208
         Length:          0
         ReplacementText: 'VITIS_LOOP_38_2: '
 ...

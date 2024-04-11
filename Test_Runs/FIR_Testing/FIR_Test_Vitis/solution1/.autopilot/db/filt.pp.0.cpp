@@ -9746,12 +9746,13 @@ private:
 }
 # 6 "./filt.h" 2
 
+
 typedef ap_axis<32,1,1,1> AXI_VAL;
 typedef int data_t;
 typedef int coef_t;
 typedef int acc_t;
-# 21 "./filt.h"
-__attribute__((sdx_kernel("filt", 0))) void filt (hls::stream<AXI_VAL>& y, coef_t c[99], hls::stream<AXI_VAL>& x);
+# 25 "./filt.h"
+__attribute__((sdx_kernel("filt", 0))) void filt (hls::stream<AXI_VAL>& output, coef_t coefs[99], hls::stream<AXI_VAL>& input);
 # 2 "filt.cpp" 2
 
 __attribute__((sdx_kernel("filt", 0))) void filt (hls::stream<AXI_VAL>& output, coef_t coefs[99], hls::stream<AXI_VAL>& input) {

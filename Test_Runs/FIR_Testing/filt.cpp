@@ -1,6 +1,6 @@
 #include "filt.h"
 
-void filt (hls::stream<AXI_VAL>& output, coef_t coefs[N], hls::stream<AXI_VAL>& input) {
+void filt (hls::stream<AXI_VAL>& output, coef_t coefs[NUM_COEFS], hls::stream<AXI_VAL>& input) {
 #pragma HLS INTERFACE m_axi depth=99 port=coefs
 #pragma HLS INTERFACE axis register both port=input
 #pragma HLS INTERFACE axis register both port=output
@@ -13,7 +13,7 @@ void filt (hls::stream<AXI_VAL>& output, coef_t coefs[N], hls::stream<AXI_VAL>& 
 
 	AXI_VAL tmp;
 	AXI_VAL tmp_out;
-	static data_t signal_shift_reg[N];
+	static data_t signal_shift_reg[NUM_COEFS];
 
 	bool running = true;
 
@@ -55,7 +55,7 @@ void filt (hls::stream<AXI_VAL>& output, coef_t coefs[N], hls::stream<AXI_VAL>& 
 				accumulate = 0;
 
 				Shift_Accumulate_Loop:
-				for (i = N - 1; i > 0; i--){
+				for (i = NUM_COEFS - 1; i > 0; i--){
 #pragma HLS UNROLL
 					signal_shift_reg[i] = signal_shift_reg[i - 1];
 					accumulate += signal_shift_reg[i] * coefs[i];

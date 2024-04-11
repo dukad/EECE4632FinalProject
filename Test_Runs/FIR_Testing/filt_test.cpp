@@ -2,7 +2,7 @@
 #include "filt.h"
 using namespace std;
 
-void filt (hls::stream<AXI_VAL>& y, coef_t c[N], hls::stream<AXI_VAL>& x);
+void filt (hls::stream<AXI_VAL>& output, coef_t coefs[NUM_COEFS], hls::stream<AXI_VAL>& input);
 
 int main(){
 	hls::stream<AXI_VAL> A, B;
@@ -27,8 +27,8 @@ int main(){
 	A.write(tmp1);
 
 	// Send 99 filter coefs
-	for (int i = 0; i < N; i++){
-		tmp1.data = i + 1;
+	for (int i = 0; i < NUM_COEFS; i++){
+		tmp1.data = i;
 
 		A.write(tmp1);
 	}
@@ -38,7 +38,7 @@ int main(){
 	A.write(tmp1);
 
 	// Give chance for output stream to run
-	for (int j = 0; j < N - 1; j++){
+	for (int j = 0; j < NUM_COEFS - 1; j++){
 		tmp1.data = 1;
 		A.write(tmp1);
 	}
@@ -54,7 +54,7 @@ int main(){
 
 	cout << "After function call" << endl;
 
-	for (int j = 0; j < N; j++){
+	for (int j = 0; j < NUM_COEFS; j++){
 		B.read(tmp2);
 		k = tmp2.data.to_int();
 
