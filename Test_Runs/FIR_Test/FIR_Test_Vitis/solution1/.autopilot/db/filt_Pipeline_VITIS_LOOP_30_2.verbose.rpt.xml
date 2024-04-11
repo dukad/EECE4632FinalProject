@@ -1,7 +1,7 @@
 <profile>
 
-<section name = "Vitis HLS Report for 'filt_Pipeline_VITIS_LOOP_29_2'" level="0">
-<item name = "Date">Wed Apr 10 17:54:57 2024
+<section name = "Vitis HLS Report for 'filt_Pipeline_VITIS_LOOP_30_2'" level="0">
+<item name = "Date">Wed Apr 10 20:55:06 2024
 </item>
 <item name = "Version">2023.2 (Build 4023990 on Oct 11 2023)</item>
 <item name = "Project">FIR_Test_Vitis</item>
@@ -35,7 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- VITIS_LOOP_29_2">?, ?, 8, 1, 1, ?, yes</column>
+<column name="- VITIS_LOOP_30_2">?, ?, 9, 1, 1, ?, yes</column>
 </table>
 </item>
 </section>
@@ -48,12 +48,12 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
 <column name="DSP">-, -, -, -, -</column>
-<column name="Expression">-, -, 0, 150, -</column>
+<column name="Expression">-, -, 0, 195, -</column>
 <column name="FIFO">-, -, -, -, -</column>
 <column name="Instance">-, -, -, -, -</column>
 <column name="Memory">-, -, -, -, -</column>
-<column name="Multiplexer">-, -, -, 63, -</column>
-<column name="Register">-, -, 144, -, -</column>
+<column name="Multiplexer">-, -, -, 90, -</column>
+<column name="Register">-, -, 340, 64, -</column>
 <specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
 <specialColumn name="Utilization (%)">0, 0, ~0, ~0, 0</specialColumn>
 </table>
@@ -78,11 +78,15 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="add_ln36_fu_132_p2">+, 0, 0, 71, 64, 64</column>
-<column name="add_ln38_fu_116_p2">+, 0, 0, 71, 64, 1</column>
-<column name="ap_block_pp0_stage0_01001">and, 0, 0, 2, 1, 1</column>
+<column name="add_ln40_fu_212_p2">+, 0, 0, 71, 64, 64</column>
+<column name="add_ln43_fu_237_p2">+, 0, 0, 71, 64, 1</column>
+<column name="ap_block_state1_pp0_stage0_iter0">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_219">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_353">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op32_read_state1">and, 0, 0, 2, 1, 1</column>
+<column name="icmp_ln32_fu_188_p2">icmp, 0, 0, 39, 32, 16</column>
+<column name="ap_block_pp0_stage0_01001">or, 0, 0, 2, 1, 1</column>
 <column name="ap_block_pp0_stage0_11001">or, 0, 0, 2, 1, 1</column>
-<column name="brmerge2_fu_122_p2">or, 0, 0, 2, 1, 1</column>
 <column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
 </table>
 </item>
@@ -90,11 +94,14 @@
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
 <column name="ap_done_int">9, 2, 1, 2</column>
 <column name="ap_enable_reg_pp0_iter1">9, 2, 1, 2</column>
-<column name="ap_enable_reg_pp0_iter2">9, 2, 1, 2</column>
+<column name="ap_return">9, 2, 1, 2</column>
+<column name="ap_sig_allocacmp_tmp_data_2">9, 2, 32, 64</column>
 <column name="gmem_blk_n_AW">9, 2, 1, 2</column>
 <column name="gmem_blk_n_B">9, 2, 1, 2</column>
 <column name="gmem_blk_n_W">9, 2, 1, 2</column>
-<column name="i_fu_64">9, 2, 64, 128</column>
+<column name="i_fu_96">9, 2, 64, 128</column>
+<column name="tmp_data_1_fu_92">9, 2, 32, 64</column>
+<column name="x_TDATA_blk_n">9, 2, 1, 2</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
@@ -109,14 +116,22 @@
 <column name="ap_enable_reg_pp0_iter6">1, 0, 1, 0</column>
 <column name="ap_enable_reg_pp0_iter7">1, 0, 1, 0</column>
 <column name="ap_enable_reg_pp0_iter8">1, 0, 1, 0</column>
+<column name="ap_loop_exit_ready_pp0_iter1_reg">1, 0, 1, 0</column>
 <column name="ap_loop_exit_ready_pp0_iter2_reg">1, 0, 1, 0</column>
 <column name="ap_loop_exit_ready_pp0_iter3_reg">1, 0, 1, 0</column>
 <column name="ap_loop_exit_ready_pp0_iter4_reg">1, 0, 1, 0</column>
 <column name="ap_loop_exit_ready_pp0_iter5_reg">1, 0, 1, 0</column>
 <column name="ap_loop_exit_ready_pp0_iter6_reg">1, 0, 1, 0</column>
 <column name="ap_loop_exit_ready_pp0_iter7_reg">1, 0, 1, 0</column>
-<column name="gmem_addr_reg_193">64, 0, 64, 0</column>
-<column name="i_fu_64">64, 0, 64, 0</column>
+<column name="ap_return_preg">1, 0, 1, 0</column>
+<column name="gmem_addr_reg_280">64, 0, 64, 0</column>
+<column name="i_fu_96">64, 0, 64, 0</column>
+<column name="icmp_ln32_reg_276">1, 0, 1, 0</column>
+<column name="merge_reg_158">1, 0, 1, 0</column>
+<column name="tmp_data_1_fu_92">32, 0, 32, 0</column>
+<column name="tmp_data_2_reg_271">32, 0, 32, 0</column>
+<column name="icmp_ln32_reg_276">64, 32, 1, 0</column>
+<column name="tmp_data_2_reg_271">64, 32, 32, 0</column>
 </table>
 </item>
 </section>
@@ -126,12 +141,15 @@
 <section name = "Interface" level="0">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
-<column name="ap_clk">in, 1, ap_ctrl_hs, filt_Pipeline_VITIS_LOOP_29_2, return value</column>
-<column name="ap_rst">in, 1, ap_ctrl_hs, filt_Pipeline_VITIS_LOOP_29_2, return value</column>
-<column name="ap_start">in, 1, ap_ctrl_hs, filt_Pipeline_VITIS_LOOP_29_2, return value</column>
-<column name="ap_done">out, 1, ap_ctrl_hs, filt_Pipeline_VITIS_LOOP_29_2, return value</column>
-<column name="ap_idle">out, 1, ap_ctrl_hs, filt_Pipeline_VITIS_LOOP_29_2, return value</column>
-<column name="ap_ready">out, 1, ap_ctrl_hs, filt_Pipeline_VITIS_LOOP_29_2, return value</column>
+<column name="ap_clk">in, 1, ap_ctrl_hs, filt_Pipeline_VITIS_LOOP_30_2, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, filt_Pipeline_VITIS_LOOP_30_2, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, filt_Pipeline_VITIS_LOOP_30_2, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, filt_Pipeline_VITIS_LOOP_30_2, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, filt_Pipeline_VITIS_LOOP_30_2, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, filt_Pipeline_VITIS_LOOP_30_2, return value</column>
+<column name="ap_return">out, 1, ap_ctrl_hs, filt_Pipeline_VITIS_LOOP_30_2, return value</column>
+<column name="x_TVALID">in, 1, axis, x_V_data_V, pointer</column>
+<column name="x_TDATA">in, 32, axis, x_V_data_V, pointer</column>
 <column name="m_axi_gmem_AWVALID">out, 1, m_axi, gmem, pointer</column>
 <column name="m_axi_gmem_AWREADY">in, 1, m_axi, gmem, pointer</column>
 <column name="m_axi_gmem_AWADDR">out, 64, m_axi, gmem, pointer</column>
@@ -178,10 +196,17 @@
 <column name="m_axi_gmem_BRESP">in, 2, m_axi, gmem, pointer</column>
 <column name="m_axi_gmem_BID">in, 1, m_axi, gmem, pointer</column>
 <column name="m_axi_gmem_BUSER">in, 1, m_axi, gmem, pointer</column>
-<column name="cmp">in, 1, ap_none, cmp, scalar</column>
-<column name="phi_ln29">in, 1, ap_none, phi_ln29, scalar</column>
-<column name="c">in, 64, ap_none, c, scalar</column>
+<column name="sext_ln30">in, 32, ap_none, sext_ln30, scalar</column>
 <column name="tmp_data">in, 32, ap_none, tmp_data, scalar</column>
+<column name="read_coefs">in, 1, ap_none, read_coefs, scalar</column>
+<column name="c">in, 64, ap_none, c, scalar</column>
+<column name="x_TREADY">out, 1, axis, x_V_dest_V, pointer</column>
+<column name="x_TDEST">in, 1, axis, x_V_dest_V, pointer</column>
+<column name="x_TKEEP">in, 4, axis, x_V_keep_V, pointer</column>
+<column name="x_TSTRB">in, 4, axis, x_V_strb_V, pointer</column>
+<column name="x_TUSER">in, 1, axis, x_V_user_V, pointer</column>
+<column name="x_TLAST">in, 1, axis, x_V_last_V, pointer</column>
+<column name="x_TID">in, 1, axis, x_V_id_V, pointer</column>
 </table>
 </item>
 </section>

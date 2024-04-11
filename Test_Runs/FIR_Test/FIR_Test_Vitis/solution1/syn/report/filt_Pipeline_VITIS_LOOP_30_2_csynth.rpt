@@ -1,9 +1,9 @@
 
 
 ================================================================
-== Vitis HLS Report for 'filt_Pipeline_VITIS_LOOP_29_2'
+== Vitis HLS Report for 'filt_Pipeline_VITIS_LOOP_30_2'
 ================================================================
-* Date:           Wed Apr 10 17:54:57 2024
+* Date:           Wed Apr 10 20:55:06 2024
 
 * Version:        2023.2 (Build 4023990 on Oct 11 2023)
 * Project:        FIR_Test_Vitis
@@ -41,7 +41,7 @@
         |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
         |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
         +-------------------+---------+---------+----------+-----------+-----------+------+----------+
-        |- VITIS_LOOP_29_2  |        ?|        ?|         8|          1|          1|     ?|       yes|
+        |- VITIS_LOOP_30_2  |        ?|        ?|         9|          1|          1|     ?|       yes|
         +-------------------+---------+---------+----------+-----------+-----------+------+----------+
 
 
@@ -54,14 +54,14 @@
 |       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
 +-----------------+---------+-----+--------+-------+-----+
 |DSP              |        -|    -|       -|      -|    -|
-|Expression       |        -|    -|       0|    150|    -|
+|Expression       |        -|    -|       0|    195|    -|
 |FIFO             |        -|    -|       -|      -|    -|
 |Instance         |        -|    -|       -|      -|    -|
 |Memory           |        -|    -|       -|      -|    -|
-|Multiplexer      |        -|    -|       -|     63|    -|
-|Register         |        -|    -|     144|      -|    -|
+|Multiplexer      |        -|    -|       -|     90|    -|
+|Register         |        -|    -|     340|     64|    -|
 +-----------------+---------+-----+--------+-------+-----+
-|Total            |        0|    0|     144|    213|    0|
+|Total            |        0|    0|     340|    349|    0|
 +-----------------+---------+-----+--------+-------+-----+
 |Available        |      280|  220|  106400|  53200|    0|
 +-----------------+---------+-----+--------+-------+-----+
@@ -82,33 +82,40 @@
     N/A
 
     * Expression: 
-    +---------------------------+----------+----+---+----+------------+------------+
-    |       Variable Name       | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
-    +---------------------------+----------+----+---+----+------------+------------+
-    |add_ln36_fu_132_p2         |         +|   0|  0|  71|          64|          64|
-    |add_ln38_fu_116_p2         |         +|   0|  0|  71|          64|           1|
-    |ap_block_pp0_stage0_01001  |       and|   0|  0|   2|           1|           1|
-    |ap_block_pp0_stage0_11001  |        or|   0|  0|   2|           1|           1|
-    |brmerge2_fu_122_p2         |        or|   0|  0|   2|           1|           1|
-    |ap_enable_pp0              |       xor|   0|  0|   2|           1|           2|
-    +---------------------------+----------+----+---+----+------------+------------+
-    |Total                      |          |   0|  0| 150|         132|          70|
-    +---------------------------+----------+----+---+----+------------+------------+
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |add_ln40_fu_212_p2                |         +|   0|  0|  71|          64|          64|
+    |add_ln43_fu_237_p2                |         +|   0|  0|  71|          64|           1|
+    |ap_block_state1_pp0_stage0_iter0  |       and|   0|  0|   2|           1|           1|
+    |ap_condition_219                  |       and|   0|  0|   2|           1|           1|
+    |ap_condition_353                  |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op32_read_state1     |       and|   0|  0|   2|           1|           1|
+    |icmp_ln32_fu_188_p2               |      icmp|   0|  0|  39|          32|          16|
+    |ap_block_pp0_stage0_01001         |        or|   0|  0|   2|           1|           1|
+    |ap_block_pp0_stage0_11001         |        or|   0|  0|   2|           1|           1|
+    |ap_enable_pp0                     |       xor|   0|  0|   2|           1|           2|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |Total                             |          |   0|  0| 195|         167|          89|
+    +----------------------------------+----------+----+---+----+------------+------------+
 
     * Multiplexer: 
-    +-------------------------+----+-----------+-----+-----------+
-    |           Name          | LUT| Input Size| Bits| Total Bits|
-    +-------------------------+----+-----------+-----+-----------+
-    |ap_done_int              |   9|          2|    1|          2|
-    |ap_enable_reg_pp0_iter1  |   9|          2|    1|          2|
-    |ap_enable_reg_pp0_iter2  |   9|          2|    1|          2|
-    |gmem_blk_n_AW            |   9|          2|    1|          2|
-    |gmem_blk_n_B             |   9|          2|    1|          2|
-    |gmem_blk_n_W             |   9|          2|    1|          2|
-    |i_fu_64                  |   9|          2|   64|        128|
-    +-------------------------+----+-----------+-----+-----------+
-    |Total                    |  63|         14|   70|        140|
-    +-------------------------+----+-----------+-----+-----------+
+    +-----------------------------+----+-----------+-----+-----------+
+    |             Name            | LUT| Input Size| Bits| Total Bits|
+    +-----------------------------+----+-----------+-----+-----------+
+    |ap_done_int                  |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1      |   9|          2|    1|          2|
+    |ap_return                    |   9|          2|    1|          2|
+    |ap_sig_allocacmp_tmp_data_2  |   9|          2|   32|         64|
+    |gmem_blk_n_AW                |   9|          2|    1|          2|
+    |gmem_blk_n_B                 |   9|          2|    1|          2|
+    |gmem_blk_n_W                 |   9|          2|    1|          2|
+    |i_fu_96                      |   9|          2|   64|        128|
+    |tmp_data_1_fu_92             |   9|          2|   32|         64|
+    |x_TDATA_blk_n                |   9|          2|    1|          2|
+    +-----------------------------+----+-----------+-----+-----------+
+    |Total                        |  90|         20|  135|        270|
+    +-----------------------------+----+-----------+-----+-----------+
 
     * Register: 
     +----------------------------------+----+----+-----+-----------+
@@ -124,16 +131,24 @@
     |ap_enable_reg_pp0_iter6           |   1|   0|    1|          0|
     |ap_enable_reg_pp0_iter7           |   1|   0|    1|          0|
     |ap_enable_reg_pp0_iter8           |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter1_reg  |   1|   0|    1|          0|
     |ap_loop_exit_ready_pp0_iter2_reg  |   1|   0|    1|          0|
     |ap_loop_exit_ready_pp0_iter3_reg  |   1|   0|    1|          0|
     |ap_loop_exit_ready_pp0_iter4_reg  |   1|   0|    1|          0|
     |ap_loop_exit_ready_pp0_iter5_reg  |   1|   0|    1|          0|
     |ap_loop_exit_ready_pp0_iter6_reg  |   1|   0|    1|          0|
     |ap_loop_exit_ready_pp0_iter7_reg  |   1|   0|    1|          0|
-    |gmem_addr_reg_193                 |  64|   0|   64|          0|
-    |i_fu_64                           |  64|   0|   64|          0|
+    |ap_return_preg                    |   1|   0|    1|          0|
+    |gmem_addr_reg_280                 |  64|   0|   64|          0|
+    |i_fu_96                           |  64|   0|   64|          0|
+    |icmp_ln32_reg_276                 |   1|   0|    1|          0|
+    |merge_reg_158                     |   1|   0|    1|          0|
+    |tmp_data_1_fu_92                  |  32|   0|   32|          0|
+    |tmp_data_2_reg_271                |  32|   0|   32|          0|
+    |icmp_ln32_reg_276                 |  64|  32|    1|          0|
+    |tmp_data_2_reg_271                |  64|  32|   32|          0|
     +----------------------------------+----+----+-----+-----------+
-    |Total                             | 144|   0|  144|          0|
+    |Total                             | 340|  64|  245|          0|
     +----------------------------------+----+----+-----+-----------+
 
 
@@ -145,12 +160,15 @@
 +---------------------+-----+-----+------------+-------------------------------+--------------+
 |      RTL Ports      | Dir | Bits|  Protocol  |         Source Object         |    C Type    |
 +---------------------+-----+-----+------------+-------------------------------+--------------+
-|ap_clk               |   in|    1|  ap_ctrl_hs|  filt_Pipeline_VITIS_LOOP_29_2|  return value|
-|ap_rst               |   in|    1|  ap_ctrl_hs|  filt_Pipeline_VITIS_LOOP_29_2|  return value|
-|ap_start             |   in|    1|  ap_ctrl_hs|  filt_Pipeline_VITIS_LOOP_29_2|  return value|
-|ap_done              |  out|    1|  ap_ctrl_hs|  filt_Pipeline_VITIS_LOOP_29_2|  return value|
-|ap_idle              |  out|    1|  ap_ctrl_hs|  filt_Pipeline_VITIS_LOOP_29_2|  return value|
-|ap_ready             |  out|    1|  ap_ctrl_hs|  filt_Pipeline_VITIS_LOOP_29_2|  return value|
+|ap_clk               |   in|    1|  ap_ctrl_hs|  filt_Pipeline_VITIS_LOOP_30_2|  return value|
+|ap_rst               |   in|    1|  ap_ctrl_hs|  filt_Pipeline_VITIS_LOOP_30_2|  return value|
+|ap_start             |   in|    1|  ap_ctrl_hs|  filt_Pipeline_VITIS_LOOP_30_2|  return value|
+|ap_done              |  out|    1|  ap_ctrl_hs|  filt_Pipeline_VITIS_LOOP_30_2|  return value|
+|ap_idle              |  out|    1|  ap_ctrl_hs|  filt_Pipeline_VITIS_LOOP_30_2|  return value|
+|ap_ready             |  out|    1|  ap_ctrl_hs|  filt_Pipeline_VITIS_LOOP_30_2|  return value|
+|ap_return            |  out|    1|  ap_ctrl_hs|  filt_Pipeline_VITIS_LOOP_30_2|  return value|
+|x_TVALID             |   in|    1|        axis|                     x_V_data_V|       pointer|
+|x_TDATA              |   in|   32|        axis|                     x_V_data_V|       pointer|
 |m_axi_gmem_AWVALID   |  out|    1|       m_axi|                           gmem|       pointer|
 |m_axi_gmem_AWREADY   |   in|    1|       m_axi|                           gmem|       pointer|
 |m_axi_gmem_AWADDR    |  out|   64|       m_axi|                           gmem|       pointer|
@@ -197,9 +215,16 @@
 |m_axi_gmem_BRESP     |   in|    2|       m_axi|                           gmem|       pointer|
 |m_axi_gmem_BID       |   in|    1|       m_axi|                           gmem|       pointer|
 |m_axi_gmem_BUSER     |   in|    1|       m_axi|                           gmem|       pointer|
-|cmp                  |   in|    1|     ap_none|                            cmp|        scalar|
-|phi_ln29             |   in|    1|     ap_none|                       phi_ln29|        scalar|
-|c                    |   in|   64|     ap_none|                              c|        scalar|
+|sext_ln30            |   in|   32|     ap_none|                      sext_ln30|        scalar|
 |tmp_data             |   in|   32|     ap_none|                       tmp_data|        scalar|
+|read_coefs           |   in|    1|     ap_none|                     read_coefs|        scalar|
+|c                    |   in|   64|     ap_none|                              c|        scalar|
+|x_TREADY             |  out|    1|        axis|                     x_V_dest_V|       pointer|
+|x_TDEST              |   in|    1|        axis|                     x_V_dest_V|       pointer|
+|x_TKEEP              |   in|    4|        axis|                     x_V_keep_V|       pointer|
+|x_TSTRB              |   in|    4|        axis|                     x_V_strb_V|       pointer|
+|x_TUSER              |   in|    1|        axis|                     x_V_user_V|       pointer|
+|x_TLAST              |   in|    1|        axis|                     x_V_last_V|       pointer|
+|x_TID                |   in|    1|        axis|                       x_V_id_V|       pointer|
 +---------------------+-----+-----+------------+-------------------------------+--------------+
 

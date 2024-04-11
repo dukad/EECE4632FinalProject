@@ -242,7 +242,7 @@ set RtlHierarchyInfo {[
 					{"Name" : "gmem_blk_n_AR", "Type" : "RtlSignal"},
 					{"Name" : "gmem_blk_n_R", "Type" : "RtlSignal"}],
 				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "grp_filt_Pipeline_VITIS_LOOP_29_2_fu_181", "Port" : "gmem", "Inst_start_state" : "2", "Inst_end_state" : "3"}]},
+					{"ID" : "1", "SubInstance" : "grp_filt_Pipeline_VITIS_LOOP_30_2_fu_303", "Port" : "gmem", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "y_V_data_V", "Type" : "Axis", "Direction" : "O", "BaseName" : "y",
 				"BlockSignal" : [
 					{"Name" : "y_TDATA_blk_n", "Type" : "RtlSignal"}]},
@@ -255,18 +255,32 @@ set RtlHierarchyInfo {[
 			{"Name" : "c", "Type" : "None", "Direction" : "I"},
 			{"Name" : "x_V_data_V", "Type" : "Axis", "Direction" : "I", "BaseName" : "x",
 				"BlockSignal" : [
-					{"Name" : "x_TDATA_blk_n", "Type" : "RtlSignal"}]},
-			{"Name" : "x_V_keep_V", "Type" : "Axis", "Direction" : "I", "BaseName" : "x"},
-			{"Name" : "x_V_strb_V", "Type" : "Axis", "Direction" : "I", "BaseName" : "x"},
-			{"Name" : "x_V_user_V", "Type" : "Axis", "Direction" : "I", "BaseName" : "x"},
-			{"Name" : "x_V_last_V", "Type" : "Axis", "Direction" : "I", "BaseName" : "x"},
-			{"Name" : "x_V_id_V", "Type" : "Axis", "Direction" : "I", "BaseName" : "x"},
-			{"Name" : "x_V_dest_V", "Type" : "Axis", "Direction" : "I", "BaseName" : "x"}],
+					{"Name" : "x_TDATA_blk_n", "Type" : "RtlSignal"}],
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "grp_filt_Pipeline_VITIS_LOOP_30_2_fu_303", "Port" : "x_V_data_V", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+			{"Name" : "x_V_keep_V", "Type" : "Axis", "Direction" : "I", "BaseName" : "x",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "grp_filt_Pipeline_VITIS_LOOP_30_2_fu_303", "Port" : "x_V_keep_V", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+			{"Name" : "x_V_strb_V", "Type" : "Axis", "Direction" : "I", "BaseName" : "x",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "grp_filt_Pipeline_VITIS_LOOP_30_2_fu_303", "Port" : "x_V_strb_V", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+			{"Name" : "x_V_user_V", "Type" : "Axis", "Direction" : "I", "BaseName" : "x",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "grp_filt_Pipeline_VITIS_LOOP_30_2_fu_303", "Port" : "x_V_user_V", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+			{"Name" : "x_V_last_V", "Type" : "Axis", "Direction" : "I", "BaseName" : "x",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "grp_filt_Pipeline_VITIS_LOOP_30_2_fu_303", "Port" : "x_V_last_V", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+			{"Name" : "x_V_id_V", "Type" : "Axis", "Direction" : "I", "BaseName" : "x",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "grp_filt_Pipeline_VITIS_LOOP_30_2_fu_303", "Port" : "x_V_id_V", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+			{"Name" : "x_V_dest_V", "Type" : "Axis", "Direction" : "I", "BaseName" : "x",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "grp_filt_Pipeline_VITIS_LOOP_30_2_fu_303", "Port" : "x_V_dest_V", "Inst_start_state" : "3", "Inst_end_state" : "4"}]}],
 		"Loop" : [
-			{"Name" : "VITIS_LOOP_14_1", "PipelineType" : "no",
-				"LoopDec" : {"FSMBitwidth" : "14", "FirstState" : "ap_ST_fsm_state2", "LastState" : ["ap_ST_fsm_state14"], "QuitState" : ["ap_ST_fsm_state2"], "PreState" : ["ap_ST_fsm_state1"], "PostState" : ["ap_ST_fsm_state1"], "OneDepthLoop" : "0", "OneStateBlock": ""}}]},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_filt_Pipeline_VITIS_LOOP_29_2_fu_181", "Parent" : "0", "Child" : ["2"],
-		"CDFG" : "filt_Pipeline_VITIS_LOOP_29_2",
+			{"Name" : "VITIS_LOOP_16_1", "PipelineType" : "no",
+				"LoopDec" : {"FSMBitwidth" : "16", "FirstState" : "ap_ST_fsm_state2", "LastState" : ["ap_ST_fsm_state16"], "QuitState" : ["ap_ST_fsm_state2"], "PreState" : ["ap_ST_fsm_state1"], "PostState" : ["ap_ST_fsm_state1"], "OneDepthLoop" : "0", "OneStateBlock": ""}}]},
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_filt_Pipeline_VITIS_LOOP_30_2_fu_303", "Parent" : "0", "Child" : ["2"],
+		"CDFG" : "filt_Pipeline_VITIS_LOOP_30_2",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
@@ -280,19 +294,28 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"IsBlackBox" : "0",
 		"Port" : [
+			{"Name" : "sext_ln30", "Type" : "None", "Direction" : "I"},
+			{"Name" : "tmp_data", "Type" : "None", "Direction" : "I"},
 			{"Name" : "gmem", "Type" : "MAXI", "Direction" : "O",
 				"BlockSignal" : [
 					{"Name" : "gmem_blk_n_AW", "Type" : "RtlSignal"},
 					{"Name" : "gmem_blk_n_W", "Type" : "RtlSignal"},
 					{"Name" : "gmem_blk_n_B", "Type" : "RtlSignal"}]},
-			{"Name" : "cmp", "Type" : "None", "Direction" : "I"},
-			{"Name" : "phi_ln29", "Type" : "None", "Direction" : "I"},
+			{"Name" : "read_coefs", "Type" : "None", "Direction" : "I"},
 			{"Name" : "c", "Type" : "None", "Direction" : "I"},
-			{"Name" : "tmp_data", "Type" : "None", "Direction" : "I"}],
+			{"Name" : "x_V_data_V", "Type" : "Axis", "Direction" : "I", "BaseName" : "x",
+				"BlockSignal" : [
+					{"Name" : "x_TDATA_blk_n", "Type" : "RtlSignal"}]},
+			{"Name" : "x_V_keep_V", "Type" : "Axis", "Direction" : "I", "BaseName" : "x"},
+			{"Name" : "x_V_strb_V", "Type" : "Axis", "Direction" : "I", "BaseName" : "x"},
+			{"Name" : "x_V_user_V", "Type" : "Axis", "Direction" : "I", "BaseName" : "x"},
+			{"Name" : "x_V_last_V", "Type" : "Axis", "Direction" : "I", "BaseName" : "x"},
+			{"Name" : "x_V_id_V", "Type" : "Axis", "Direction" : "I", "BaseName" : "x"},
+			{"Name" : "x_V_dest_V", "Type" : "Axis", "Direction" : "I", "BaseName" : "x"}],
 		"Loop" : [
-			{"Name" : "VITIS_LOOP_29_2", "PipelineType" : "UPC",
+			{"Name" : "VITIS_LOOP_30_2", "PipelineType" : "UPC",
 				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter8", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter8", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "2", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_filt_Pipeline_VITIS_LOOP_29_2_fu_181.flow_control_loop_pipe_sequential_init_U", "Parent" : "1"},
+	{"ID" : "2", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_filt_Pipeline_VITIS_LOOP_30_2_fu_303.flow_control_loop_pipe_sequential_init_U", "Parent" : "1"},
 	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.control_s_axi_U", "Parent" : "0"},
 	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.gmem_m_axi_U", "Parent" : "0"},
 	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_y_V_data_V_U", "Parent" : "0"},
@@ -313,28 +336,35 @@ set RtlHierarchyInfo {[
 
 set ArgLastReadFirstWriteLatency {
 	filt {
-		gmem {Type IO LastRead 11 FirstWrite 3}
-		y_V_data_V {Type O LastRead -1 FirstWrite 12}
-		y_V_keep_V {Type O LastRead -1 FirstWrite 12}
-		y_V_strb_V {Type O LastRead -1 FirstWrite 12}
-		y_V_user_V {Type O LastRead -1 FirstWrite 12}
-		y_V_last_V {Type O LastRead -1 FirstWrite 12}
-		y_V_id_V {Type O LastRead -1 FirstWrite 12}
-		y_V_dest_V {Type O LastRead -1 FirstWrite 12}
+		gmem {Type IO LastRead 13 FirstWrite 3}
+		y_V_data_V {Type O LastRead -1 FirstWrite 14}
+		y_V_keep_V {Type O LastRead -1 FirstWrite 14}
+		y_V_strb_V {Type O LastRead -1 FirstWrite 14}
+		y_V_user_V {Type O LastRead -1 FirstWrite 14}
+		y_V_last_V {Type O LastRead -1 FirstWrite 14}
+		y_V_id_V {Type O LastRead -1 FirstWrite 14}
+		y_V_dest_V {Type O LastRead -1 FirstWrite 14}
 		c {Type I LastRead 0 FirstWrite -1}
-		x_V_data_V {Type I LastRead 1 FirstWrite -1}
-		x_V_keep_V {Type I LastRead 1 FirstWrite -1}
-		x_V_strb_V {Type I LastRead 1 FirstWrite -1}
-		x_V_user_V {Type I LastRead 1 FirstWrite -1}
-		x_V_last_V {Type I LastRead 1 FirstWrite -1}
-		x_V_id_V {Type I LastRead 1 FirstWrite -1}
-		x_V_dest_V {Type I LastRead 1 FirstWrite -1}}
-	filt_Pipeline_VITIS_LOOP_29_2 {
+		x_V_data_V {Type I LastRead 4 FirstWrite -1}
+		x_V_keep_V {Type I LastRead 4 FirstWrite -1}
+		x_V_strb_V {Type I LastRead 4 FirstWrite -1}
+		x_V_user_V {Type I LastRead 4 FirstWrite -1}
+		x_V_last_V {Type I LastRead 4 FirstWrite -1}
+		x_V_id_V {Type I LastRead 4 FirstWrite -1}
+		x_V_dest_V {Type I LastRead 4 FirstWrite -1}}
+	filt_Pipeline_VITIS_LOOP_30_2 {
+		sext_ln30 {Type I LastRead 0 FirstWrite -1}
+		tmp_data {Type I LastRead 0 FirstWrite -1}
 		gmem {Type O LastRead 4 FirstWrite 3}
-		cmp {Type I LastRead 0 FirstWrite -1}
-		phi_ln29 {Type I LastRead 0 FirstWrite -1}
+		read_coefs {Type I LastRead 0 FirstWrite -1}
 		c {Type I LastRead 0 FirstWrite -1}
-		tmp_data {Type I LastRead 0 FirstWrite -1}}}
+		x_V_data_V {Type I LastRead 0 FirstWrite -1}
+		x_V_keep_V {Type I LastRead 0 FirstWrite -1}
+		x_V_strb_V {Type I LastRead 0 FirstWrite -1}
+		x_V_user_V {Type I LastRead 0 FirstWrite -1}
+		x_V_last_V {Type I LastRead 0 FirstWrite -1}
+		x_V_id_V {Type I LastRead 0 FirstWrite -1}
+		x_V_dest_V {Type I LastRead 0 FirstWrite -1}}}
 
 set hasDtUnsupportedChannel 0
 

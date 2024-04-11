@@ -7,9 +7,11 @@ void filt (hls::stream<AXI_VAL>& y, coef_t c[N], hls::stream<AXI_VAL>& x) {
 #pragma HLS INTERFACE ap_ctrl_none port=return
 
 	// *** DEFINE VARIABLES ***
-	int i = -1;
+	int i = 0;
+	int j;
 	bool read_coefs = false;
 	bool read_signal = false;
+	bool output_signal = false;
 
 	while(1) {
 		// *** DEFINE MORE VARIABLES ***
@@ -18,7 +20,6 @@ void filt (hls::stream<AXI_VAL>& y, coef_t c[N], hls::stream<AXI_VAL>& x) {
 		acc_t accumulate;
 
 		data_t data;
-		int i;
 
 		AXI_VAL tmp;
 		x.read(tmp);
@@ -27,32 +28,40 @@ void filt (hls::stream<AXI_VAL>& y, coef_t c[N], hls::stream<AXI_VAL>& x) {
 
 		// *** COEFFICIENT PROCESSING CODE ***
 		while (read_coefs){
+			j = tmp.data.to_int();
 			if (tmp.data.to_int() == 43962){   // 43962 is the decimal representation of 0xABBA
 				read_coefs = false;
+				output_signal = true;
+				x.read(tmp);
 				i = 0;
 				break;
 			}
 
 			c[i] = tmp.data.to_int();
 
+			x.read(tmp);
 			i += 1;
 		}
 
-		if (tmp.data.to_int() == 48879){   // 48879 is the decimal representation of 0xBEEF
-			read_coefs = true;
+		// *** BLOCK RAM READ/WRITE TEST ***
+		if (output_signal){
+			AXI_VAL output;
+			j = c[i];
+			output.data = c[i];
+			output.keep = tmp.keep;
+			output.strb = tmp.strb;
+			output.last = tmp.last;
+			output.dest = tmp.dest;
+			output.id = tmp.id;
+			output.user = tmp.user;
+			y.write(output);
 		}
 
-		// *** BLOCK RAM READ/WRITE TEST ***
-		AXI_VAL output;
-		output.data = c[i];
-		output.keep = tmp.keep;
-		output.strb = tmp.strb;
-		output.last = tmp.last;
-		output.dest = tmp.dest;
-		output.id = tmp.id;
-		output.user = tmp.user;
-		y.write(output);
-
+		if (tmp.data.to_int() == 48879){   // 48879 is the decimal representation of 0xBEEF
+			j = tmp.data.to_int();
+			read_coefs = true;
+			i -= 1;
+		}
 		i += 1;
 
 		if (tmp.last){

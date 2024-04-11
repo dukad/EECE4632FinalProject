@@ -1,5 +1,5 @@
-#ifndef FILT_H
-#define FILT_H
+#ifndef FILT_H_
+#define FILT_H_
 
 #include <hls_stream.h>
 #include <ap_axi_sdata.h>

@@ -9771,18 +9771,19 @@ __attribute__((sdx_kernel("filt", 0))) void filt (hls::stream<AXI_VAL>& y, coef_
 #pragma HLS INTERFACE ap_ctrl_none port=return
 
 
- int i = -1;
+ int i = 0;
+ int j;
  bool read_coefs = false;
  bool read_signal = false;
+ bool output_signal = false;
 
- VITIS_LOOP_14_1: while(1) {
+ VITIS_LOOP_16_1: while(1) {
 
   static data_t signal_shift_reg[99];
 
   acc_t accumulate;
 
   data_t data;
-  int i;
 
   AXI_VAL tmp;
   x.read(tmp);
@@ -9790,38 +9791,46 @@ __attribute__((sdx_kernel("filt", 0))) void filt (hls::stream<AXI_VAL>& y, coef_
   accumulate = 0;
 
 
-  VITIS_LOOP_29_2: while (read_coefs){
+  VITIS_LOOP_30_2: while (read_coefs){
+   j = tmp.data.to_int();
    if (tmp.data.to_int() == 43962){
     read_coefs = false;
+    output_signal = true;
+    x.read(tmp);
     i = 0;
     break;
    }
 
    c[i] = tmp.data.to_int();
 
+   x.read(tmp);
    i += 1;
   }
 
-  if (tmp.data.to_int() == 48879){
-   read_coefs = true;
+
+  if (output_signal){
+   AXI_VAL output;
+   j = c[i];
+   output.data = c[i];
+   output.keep = tmp.keep;
+   output.strb = tmp.strb;
+   output.last = tmp.last;
+   output.dest = tmp.dest;
+   output.id = tmp.id;
+   output.user = tmp.user;
+   y.write(output);
   }
 
-
-  AXI_VAL output;
-  output.data = c[i];
-  output.keep = tmp.keep;
-  output.strb = tmp.strb;
-  output.last = tmp.last;
-  output.dest = tmp.dest;
-  output.id = tmp.id;
-  output.user = tmp.user;
-  y.write(output);
-
+  if (tmp.data.to_int() == 48879){
+   j = tmp.data.to_int();
+   read_coefs = true;
+   i -= 1;
+  }
   i += 1;
 
   if (tmp.last){
    break;
   }
-# 85 "filt.cpp"
+# 94 "filt.cpp"
  }
 }

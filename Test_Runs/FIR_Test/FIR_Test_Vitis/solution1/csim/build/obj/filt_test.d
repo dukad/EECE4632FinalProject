@@ -1,4 +1,5 @@
-obj/filt_test.o: ../../../../filt_test.cpp \
+obj/filt_test.o: ../../../../filt_test.cpp ../../../../filt.h \
+ C:/Xilinx/Vitis_HLS/2023.2/include/hls_stream.h \
  C:/Xilinx/Vitis_HLS/2023.2/include/ap_axi_sdata.h \
  C:/Xilinx/Vitis_HLS/2023.2/include/ap_int.h \
  C:/Xilinx/Vitis_HLS/2023.2/include/etc/ap_common.h \
@@ -21,5 +22,4 @@ obj/filt_test.o: ../../../../filt_test.cpp \
  C:/Xilinx/Vitis_HLS/2023.2/include/ap_int.h \
  C:/Xilinx/Vitis_HLS/2023.2/include/etc/ap_fixed_ref.h \
  C:/Xilinx/Vitis_HLS/2023.2/include/etc/ap_fixed_special.h \
- C:/Xilinx/Vitis_HLS/2023.2/include/hls_stream.h ../../../../filt.cpp \
- ../../../../filt.h C:/Xilinx/Vitis_HLS/2023.2/include/hls_stream.h
+ C:/Xilinx/Vitis_HLS/2023.2/include/hls_stream.h

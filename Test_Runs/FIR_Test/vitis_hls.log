@@ -1,5 +1,5 @@
 INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2023.2/bin/unwrapped/win64.o/vitis_hls.exe'
-INFO: [HLS 200-10] For user 'a01me' on host 'desktop-g7ja666' (Windows NT_amd64 version 6.2) on Wed Apr 10 17:55:24 -0400 2024
+INFO: [HLS 200-10] For user 'a01me' on host 'desktop-g7ja666' (Windows NT_amd64 version 6.2) on Wed Apr 10 20:58:10 -0400 2024
 INFO: [HLS 200-10] In directory 'C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test'
 INFO: [HLS 200-2053] The vitis_hls executable is being deprecated. Consider using vitis-run --mode hls --tcl
 Sourcing Tcl script 'C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vitis/solution1/csim.tcl'
@@ -27,37 +27,12 @@ INFO: [HLS 200-1510] Running: create_clock -period 10 -name default
 INFO: [HLS 200-1510] Running: config_export -format ip_catalog -output C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test -rtl verilog 
 INFO: [HLS 200-1510] Running: source ./FIR_Test_Vitis/solution1/directives.tcl
 INFO: [HLS 200-1510] Running: set_directive_top -name filt filt 
-INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [HLS 200-1510] Running: csim_design -setup -quiet 
 INFO: [SIM 211-2] *************** CSIM start ***************
 INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
 INFO: [HLS 200-2036] Building debug C Simulation binaries
-   Compiling ../../../../filt_test.cpp in debug mode
    Compiling ../../../../filt.cpp in debug mode
    Generating csim.exe
-Makefile.rules:317: recipe for target 'csim.exe' failed
-In file included from C:/Xilinx/Vitis_HLS/2023.2/include/floating_point_v7_1_bitacc_cmodel.h:150:0,
-                 from C:/Xilinx/Vitis_HLS/2023.2/include/hls_fpo.h:140,
-                 from C:/Xilinx/Vitis_HLS/2023.2/include/etc/hls_half_fpo.h:19,
-                 from C:/Xilinx/Vitis_HLS/2023.2/include/hls_half.h:26,
-                 from C:/Xilinx/Vitis_HLS/2023.2/include/etc/ap_private.h:52,
-                 from C:/Xilinx/Vitis_HLS/2023.2/include/etc/ap_common.h:666,
-                 from C:/Xilinx/Vitis_HLS/2023.2/include/ap_int.h:10,
-                 from C:/Xilinx/Vitis_HLS/2023.2/include/ap_axi_sdata.h:15,
-                 from ../../../../filt_test.cpp:2:
-C:/Xilinx/Vitis_HLS/2023.2/include/gmp.h:58:0: warning: "__GMP_LIBGMP_DLL" redefined
- #define __GMP_LIBGMP_DLL  0
- 
-In file included from C:/Xilinx/Vitis_HLS/2023.2/include/hls_fpo.h:140:0,
-                 from C:/Xilinx/Vitis_HLS/2023.2/include/etc/hls_half_fpo.h:19,
-                 from C:/Xilinx/Vitis_HLS/2023.2/include/hls_half.h:26,
-                 from C:/Xilinx/Vitis_HLS/2023.2/include/etc/ap_private.h:52,
-                 from C:/Xilinx/Vitis_HLS/2023.2/include/etc/ap_common.h:666,
-                 from C:/Xilinx/Vitis_HLS/2023.2/include/ap_int.h:10,
-                 from C:/Xilinx/Vitis_HLS/2023.2/include/ap_axi_sdata.h:15,
-                 from ../../../../filt_test.cpp:2:
-C:/Xilinx/Vitis_HLS/2023.2/include/floating_point_v7_1_bitacc_cmodel.h:142:0: note: this is the location of the previous definition
- #define __GMP_LIBGMP_DLL 1
- 
 In file included from C:/Xilinx/Vitis_HLS/2023.2/include/floating_point_v7_1_bitacc_cmodel.h:150:0,
                  from C:/Xilinx/Vitis_HLS/2023.2/include/hls_fpo.h:140,
                  from C:/Xilinx/Vitis_HLS/2023.2/include/etc/hls_half_fpo.h:19,
@@ -83,23 +58,8 @@ In file included from C:/Xilinx/Vitis_HLS/2023.2/include/hls_fpo.h:140:0,
 C:/Xilinx/Vitis_HLS/2023.2/include/floating_point_v7_1_bitacc_cmodel.h:142:0: note: this is the location of the previous definition
  #define __GMP_LIBGMP_DLL 1
  
-obj/filt.o: In function `std::_Hashtable<void*, std::pair<void* const, hls::stream_entity<12ull> >, std::allocator<std::pair<void* const, hls::stream_entity<12ull> > >, std::__detail::_Select1st, std::equal_to<void*>, std::hash<void*>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::_M_insert_bucket_begin(unsigned long long, std::__detail::_Hash_node<std::pair<void* const, hls::stream_entity<12ull> >, false>*)':
-C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Test_Runs\FIR_Test\FIR_Test_Vitis\solution1\csim\build/../../../../filt.cpp:3: multiple definition of `filt(hls::stream<hls::axis<ap_int<32>, 1ull, 1ull, 1ull, (unsigned char)56, false>, 0>&, int*, hls::stream<hls::axis<ap_int<32>, 1ull, 1ull, 1ull, (unsigned char)56, false>, 0>&)'
-obj/filt_test.o:C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Test_Runs\FIR_Test\FIR_Test_Vitis\solution1\csim\build/../../../../filt.cpp:3: first defined here
-collect2.exe: error: ld returned 1 exit status
-make: *** [csim.exe] Error 1
-ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [HLS 200-2035] Skipping execution of C Simulation due to 'setup' option
+INFO: [SIM 211-1] CSim file generation done with 0 errors.
 INFO: [SIM 211-3] *************** CSIM finish ***************
-INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 8.533 seconds; current allocated memory: 0.535 MB.
-4
-    while executing
-"source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vitis/solution1/csim.tcl"
-    invoked from within
-"hls::main C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vitis/solution1/csim.tcl"
-    ("uplevel" body line 1)
-    invoked from within
-"uplevel 1 hls::main {*}$newargs"
-    (procedure "hls_proc" line 16)
-    invoked from within
-"hls_proc [info nameofexecutable] $argv"
-INFO: [HLS 200-112] Total CPU user time: 3 seconds. Total CPU system time: 1 seconds. Total elapsed time: 12.938 seconds; peak allocated memory: 193.199 MB.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 3.686 seconds; current allocated memory: 0.402 MB.
+INFO: [HLS 200-112] Total CPU user time: 4 seconds. Total CPU system time: 1 seconds. Total elapsed time: 7.921 seconds; peak allocated memory: 198.574 MB.
