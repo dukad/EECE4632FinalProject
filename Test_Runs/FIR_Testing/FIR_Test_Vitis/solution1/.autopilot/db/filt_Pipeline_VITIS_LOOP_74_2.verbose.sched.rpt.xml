@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'filt_Pipeline_VITIS_LOOP_74_2'" level="0">
-<item name = "Date">Thu Apr 11 17:56:57 2024
+<item name = "Date">Thu Apr 11 18:04:15 2024
 </item>
 <item name = "Version">2023.2 (Build 4023990 on Oct 11 2023)</item>
 <item name = "Project">FIR_Test_Vitis</item>
