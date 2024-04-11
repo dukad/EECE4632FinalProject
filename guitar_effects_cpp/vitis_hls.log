@@ -1,15 +1,15 @@
 INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2022.1/bin/unwrapped/win64.o/vitis_hls.exe'
-INFO: [HLS 200-10] For user 'du.kad' on host 'wfxb07b250a366d' (Windows NT_amd64 version 6.2) on Mon Apr 01 16:30:57 -0400 2024
+INFO: [HLS 200-10] For user 'du.kad' on host 'wfxb07b250a366d' (Windows NT_amd64 version 6.2) on Wed Apr 10 17:13:51 -0400 2024
 INFO: [HLS 200-10] In directory 'C:/Users/du.kad/Desktop/EECE4632FinalProject/guitar_effects_cpp'
 Sourcing Tcl script 'C:/Users/du.kad/Desktop/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/export.tcl'
 INFO: [HLS 200-1510] Running: source C:/Users/du.kad/Desktop/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/export.tcl
 INFO: [HLS 200-1510] Running: open_project Guitar_Effects 
 INFO: [HLS 200-10] Opening project 'C:/Users/du.kad/Desktop/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects'.
 INFO: [HLS 200-1510] Running: set_top guitar_effects 
-INFO: [HLS 200-1510] Running: add_files guitar_effects.h 
-INFO: [HLS 200-10] Adding design file 'guitar_effects.h' to the project
 INFO: [HLS 200-1510] Running: add_files guitar_effects.cpp 
 INFO: [HLS 200-10] Adding design file 'guitar_effects.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files guitar_effects.h 
+INFO: [HLS 200-10] Adding design file 'guitar_effects.h' to the project
 INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
 INFO: [HLS 200-10] Opening solution 'C:/Users/du.kad/Desktop/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1'.
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
@@ -38,19 +38,31 @@ Current project path is 'C:/Users/du.kad/Desktop/EECE4632FinalProject/guitar_eff
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.1/data/ip'.
+WARNING: [IP_Flow 19-4832] The IP name 'guitar_effects_dadd_64ns_64ns_64_7_full_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'guitar_effects_dadd_64ns_64ns_64_7_full_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'guitar_effects_dadd_64ns_64ns_64_7_full_dsp_1_ip'...
+WARNING: [IP_Flow 19-4832] The IP name 'guitar_effects_ddiv_64ns_64ns_64_59_no_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'guitar_effects_ddiv_64ns_64ns_64_59_no_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'guitar_effects_ddiv_64ns_64ns_64_59_no_dsp_1_ip'...
+WARNING: [IP_Flow 19-4832] The IP name 'guitar_effects_dmul_64ns_64ns_64_7_max_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'guitar_effects_dmul_64ns_64ns_64_7_max_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'guitar_effects_dmul_64ns_64ns_64_7_max_dsp_1_ip'...
 WARNING: [IP_Flow 19-4832] The IP name 'guitar_effects_fadd_32ns_32ns_32_5_full_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
 INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'guitar_effects_fadd_32ns_32ns_32_5_full_dsp_1_ip'...
 INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'guitar_effects_fadd_32ns_32ns_32_5_full_dsp_1_ip'...
 WARNING: [IP_Flow 19-4832] The IP name 'guitar_effects_fmul_32ns_32ns_32_4_max_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
 INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'guitar_effects_fmul_32ns_32ns_32_4_max_dsp_1_ip'...
 INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'guitar_effects_fmul_32ns_32ns_32_4_max_dsp_1_ip'...
+WARNING: [IP_Flow 19-4832] The IP name 'guitar_effects_sitodp_32ns_64_6_no_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'guitar_effects_sitodp_32ns_64_6_no_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'guitar_effects_sitodp_32ns_64_6_no_dsp_1_ip'...
 WARNING: [IP_Flow 19-4832] The IP name 'guitar_effects_sitofp_32ns_32_6_no_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
 INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'guitar_effects_sitofp_32ns_32_6_no_dsp_1_ip'...
 INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'guitar_effects_sitofp_32ns_32_6_no_dsp_1_ip'...
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.1/data/ip'.
-INFO: [Common 17-206] Exiting Vivado at Mon Apr  1 16:31:20 2024...
+INFO: [Common 17-206] Exiting Vivado at Wed Apr 10 17:14:31 2024...
 INFO: [HLS 200-802] Generated output file export.zip
-INFO: [HLS 200-111] Finished Command export_design CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 20.34 seconds; current allocated memory: 0.000 MB.
-INFO: [HLS 200-112] Total CPU user time: 4 seconds. Total CPU system time: 2 seconds. Total elapsed time: 23.067 seconds; peak allocated memory: 1.447 GB.
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 37.174 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 5 seconds. Total CPU system time: 2 seconds. Total elapsed time: 40.84 seconds; peak allocated memory: 1.391 GB.

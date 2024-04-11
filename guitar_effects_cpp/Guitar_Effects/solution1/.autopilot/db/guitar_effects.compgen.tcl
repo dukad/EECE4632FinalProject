@@ -18,14 +18,50 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 }
 
 
+set name guitar_effects_dadd_64ns_64ns_64_7_full_dsp_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {dadd} IMPL {fulldsp} LATENCY 6 ALLOW_PRAGMA 1
+}
+
+
+set name guitar_effects_dmul_64ns_64ns_64_7_max_dsp_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {dmul} IMPL {maxdsp} LATENCY 6 ALLOW_PRAGMA 1
+}
+
+
+set name guitar_effects_ddiv_64ns_64ns_64_59_no_dsp_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {ddiv} IMPL {fabric} LATENCY 58 ALLOW_PRAGMA 1
+}
+
+
+set name guitar_effects_sitodp_32ns_64_6_no_dsp_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {sitodp} IMPL {auto} LATENCY 5 ALLOW_PRAGMA 1
+}
+
+
 set name guitar_effects_srem_32ns_17ns_16_36_seq_1
 if {${::AESL::PGuard_rtl_comp_handler}} {
 	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {srem} IMPL {auto_seq} LATENCY 35 ALLOW_PRAGMA 1
 }
 
 
+set name guitar_effects_mul_32s_8s_40_2_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {mul} IMPL {auto} LATENCY 1 ALLOW_PRAGMA 1
+}
+
+
+set name guitar_effects_mul_32s_9ns_41_2_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {mul} IMPL {auto} LATENCY 1 ALLOW_PRAGMA 1
+}
+
+
 # Memory (RAM/ROM)  definition:
-set ID 23
+set ID 76
 set hasByteEnable 0
 set MemName guitar_effects_compression_buffer_RAM_AUTO_0R0W
 set CoreName ap_simcore_mem
@@ -104,7 +140,7 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_RAM] == "::AESL_LIB_VIRTEX::xil_gen_RA
 
 
 # Memory (RAM/ROM)  definition:
-set ID 24
+set ID 77
 set hasByteEnable 0
 set MemName guitar_effects_delay_buffer_RAM_AUTO_1R1W
 set CoreName ap_simcore_mem
@@ -182,6 +218,91 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_RAM] == "::AESL_LIB_VIRTEX::xil_gen_RA
 }
 
 
+# Memory (RAM/ROM)  definition:
+set ID 78
+set hasByteEnable 0
+set MemName guitar_effects_wah_values_buffer_RAM_AUTO_1R1W
+set CoreName ap_simcore_mem
+set PortList { 2 3 }
+set DataWd 32
+set AddrRange 100
+set AddrWd 7
+set impl_style auto
+set TrueReset 0
+set IsROM 0
+set ROMData { }
+set HasInitializer 0
+set Initializer $ROMData
+set NumOfStage 2
+set DelayBudget 3.254
+if {${::AESL::PGuard_simmodel_gen}} {
+if {[info proc ap_gen_simcore_mem] == "ap_gen_simcore_mem"} {
+    eval "ap_gen_simcore_mem { \
+    id ${ID} \
+    name ${MemName} \
+    corename ${CoreName}  \
+    op mem  \
+    hasByteEnable ${hasByteEnable} \
+    reset_level 1 \
+    sync_rst true \
+    stage_num ${NumOfStage}  \
+    port_num 2 \
+    port_list \{${PortList}\} \
+    data_wd ${DataWd} \
+    addr_wd ${AddrWd} \
+    addr_range ${AddrRange} \
+    style ${impl_style} \
+    true_reset ${TrueReset} \
+    delay_budget ${DelayBudget} \
+    HasInitializer ${HasInitializer} \
+    rom_data \{${ROMData}\} \
+ } "
+} else {
+    puts "@W \[IMPL-102\] Cannot find ap_gen_simcore_mem, check your platform lib"
+}
+}
+
+
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $MemName BINDTYPE {storage} TYPE {ram} IMPL {auto} LATENCY 2 ALLOW_PRAGMA 1
+}
+
+
+set CoreName RAM
+if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
+if {[info proc ::AESL_LIB_VIRTEX::xil_gen_RAM] == "::AESL_LIB_VIRTEX::xil_gen_RAM"} {
+    eval "::AESL_LIB_VIRTEX::xil_gen_RAM { \
+    id ${ID} \
+    name ${MemName} \
+    corename ${CoreName}  \
+    op mem  \
+    hasByteEnable ${hasByteEnable} \
+    reset_level 1 \
+    sync_rst true \
+    stage_num ${NumOfStage}  \
+    port_num 2 \
+    port_list \{${PortList}\} \
+    data_wd ${DataWd} \
+    addr_wd ${AddrWd} \
+    addr_range ${AddrRange} \
+    style ${impl_style} \
+    true_reset ${TrueReset} \
+    delay_budget ${DelayBudget} \
+    HasInitializer ${HasInitializer} \
+    rom_data \{${ROMData}\} \
+ } "
+  } else {
+    puts "@W \[IMPL-104\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_RAM, check your platform lib"
+  }
+}
+
+
+set name guitar_effects_gmem_m_axi
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {interface} TYPE {adapter} IMPL {m_axi}
+}
+
+
 # clear list
 if {${::AESL::PGuard_autoexp_gen}} {
     cg_default_interface_gen_dc_begin
@@ -217,7 +338,7 @@ distortion_threshold {
 }
 distortion_clip_factor { 
 	dir I
-	width 1
+	width 8
 	depth 1
 	mode ap_none
 	offset 48
@@ -263,6 +384,22 @@ delay_samples {
 	offset 88
 	offset_end 95
 }
+tempo { 
+	dir I
+	width 32
+	depth 1
+	mode ap_none
+	offset 96
+	offset_end 103
+}
+wah_coeffs { 
+	dir I
+	width 64
+	depth 1
+	mode ap_none
+	offset 104
+	offset_end 115
+}
 }
 dict set axilite_register_dict control_r $port_control_r
 
@@ -271,7 +408,7 @@ dict set axilite_register_dict control_r $port_control_r
 if {${::AESL::PGuard_simmodel_gen}} {
 	if {[info proc ::AESL_LIB_XILADAPTER::s_axilite_gen] == "::AESL_LIB_XILADAPTER::s_axilite_gen"} {
 		eval "::AESL_LIB_XILADAPTER::s_axilite_gen { \
-			id 25 \
+			id 79 \
 			corename guitar_effects_control_r_axilite \
 			name guitar_effects_control_r_s_axi \
 			ports {$port_control_r} \
@@ -295,7 +432,7 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 26 \
+    id 81 \
     name INPUT_r_V_data_V \
     reset_level 0 \
     sync_rst true \
@@ -314,7 +451,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 27 \
+    id 82 \
     name INPUT_r_V_keep_V \
     reset_level 0 \
     sync_rst true \
@@ -333,7 +470,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 28 \
+    id 83 \
     name INPUT_r_V_strb_V \
     reset_level 0 \
     sync_rst true \
@@ -352,7 +489,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 29 \
+    id 84 \
     name INPUT_r_V_user_V \
     reset_level 0 \
     sync_rst true \
@@ -371,7 +508,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 30 \
+    id 85 \
     name INPUT_r_V_last_V \
     reset_level 0 \
     sync_rst true \
@@ -390,7 +527,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 31 \
+    id 86 \
     name INPUT_r_V_id_V \
     reset_level 0 \
     sync_rst true \
@@ -409,7 +546,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 32 \
+    id 87 \
     name INPUT_r_V_dest_V \
     reset_level 0 \
     sync_rst true \
@@ -428,7 +565,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 33 \
+    id 88 \
     name OUTPUT_r_V_data_V \
     reset_level 0 \
     sync_rst true \
@@ -447,7 +584,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 34 \
+    id 89 \
     name OUTPUT_r_V_keep_V \
     reset_level 0 \
     sync_rst true \
@@ -466,7 +603,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 35 \
+    id 90 \
     name OUTPUT_r_V_strb_V \
     reset_level 0 \
     sync_rst true \
@@ -485,7 +622,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 36 \
+    id 91 \
     name OUTPUT_r_V_user_V \
     reset_level 0 \
     sync_rst true \
@@ -504,7 +641,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 37 \
+    id 92 \
     name OUTPUT_r_V_last_V \
     reset_level 0 \
     sync_rst true \
@@ -523,7 +660,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 38 \
+    id 93 \
     name OUTPUT_r_V_id_V \
     reset_level 0 \
     sync_rst true \
@@ -542,7 +679,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 39 \
+    id 94 \
     name OUTPUT_r_V_dest_V \
     reset_level 0 \
     sync_rst true \
@@ -608,7 +745,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 
 
 # RegSlice definition:
-set ID 40
+set ID 95
 set RegSliceName guitar_effects_regslice_both
 set RegSliceInstName guitar_effects_regslice_both_U
 set CoreName ap_simcore_guitar_effects_regslice_both
@@ -631,7 +768,7 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_regSlice, check you
 
 
 # RegSlice definition:
-set ID 41
+set ID 96
 set RegSliceName guitar_effects_regslice_both
 set RegSliceInstName guitar_effects_regslice_both_U
 set CoreName ap_simcore_guitar_effects_regslice_both
@@ -654,7 +791,7 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_regSlice, check you
 
 
 # RegSlice definition:
-set ID 42
+set ID 97
 set RegSliceName guitar_effects_regslice_both
 set RegSliceInstName guitar_effects_regslice_both_U
 set CoreName ap_simcore_guitar_effects_regslice_both
@@ -677,7 +814,7 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_regSlice, check you
 
 
 # RegSlice definition:
-set ID 43
+set ID 98
 set RegSliceName guitar_effects_regslice_both
 set RegSliceInstName guitar_effects_regslice_both_U
 set CoreName ap_simcore_guitar_effects_regslice_both
@@ -700,7 +837,7 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_regSlice, check you
 
 
 # RegSlice definition:
-set ID 44
+set ID 99
 set RegSliceName guitar_effects_regslice_both
 set RegSliceInstName guitar_effects_regslice_both_U
 set CoreName ap_simcore_guitar_effects_regslice_both
@@ -723,7 +860,7 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_regSlice, check you
 
 
 # RegSlice definition:
-set ID 45
+set ID 100
 set RegSliceName guitar_effects_regslice_both
 set RegSliceInstName guitar_effects_regslice_both_U
 set CoreName ap_simcore_guitar_effects_regslice_both
@@ -746,7 +883,7 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_regSlice, check you
 
 
 # RegSlice definition:
-set ID 46
+set ID 101
 set RegSliceName guitar_effects_regslice_both
 set RegSliceInstName guitar_effects_regslice_both_U
 set CoreName ap_simcore_guitar_effects_regslice_both
@@ -769,7 +906,7 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_regSlice, check you
 
 
 # RegSlice definition:
-set ID 47
+set ID 102
 set RegSliceName guitar_effects_regslice_both
 set RegSliceInstName guitar_effects_regslice_both_U
 set CoreName ap_simcore_guitar_effects_regslice_both
@@ -792,7 +929,7 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_regSlice, check you
 
 
 # RegSlice definition:
-set ID 48
+set ID 103
 set RegSliceName guitar_effects_regslice_both
 set RegSliceInstName guitar_effects_regslice_both_U
 set CoreName ap_simcore_guitar_effects_regslice_both
@@ -815,7 +952,7 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_regSlice, check you
 
 
 # RegSlice definition:
-set ID 49
+set ID 104
 set RegSliceName guitar_effects_regslice_both
 set RegSliceInstName guitar_effects_regslice_both_U
 set CoreName ap_simcore_guitar_effects_regslice_both
@@ -838,7 +975,7 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_regSlice, check you
 
 
 # RegSlice definition:
-set ID 50
+set ID 105
 set RegSliceName guitar_effects_regslice_both
 set RegSliceInstName guitar_effects_regslice_both_U
 set CoreName ap_simcore_guitar_effects_regslice_both
@@ -861,7 +998,7 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_regSlice, check you
 
 
 # RegSlice definition:
-set ID 51
+set ID 106
 set RegSliceName guitar_effects_regslice_both
 set RegSliceInstName guitar_effects_regslice_both_U
 set CoreName ap_simcore_guitar_effects_regslice_both
@@ -884,7 +1021,7 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_regSlice, check you
 
 
 # RegSlice definition:
-set ID 52
+set ID 107
 set RegSliceName guitar_effects_regslice_both
 set RegSliceInstName guitar_effects_regslice_both_U
 set CoreName ap_simcore_guitar_effects_regslice_both
@@ -907,7 +1044,7 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_regSlice, check you
 
 
 # RegSlice definition:
-set ID 53
+set ID 108
 set RegSliceName guitar_effects_regslice_both
 set RegSliceInstName guitar_effects_regslice_both_U
 set CoreName ap_simcore_guitar_effects_regslice_both

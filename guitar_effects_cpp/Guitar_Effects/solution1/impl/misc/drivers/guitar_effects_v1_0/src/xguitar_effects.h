@@ -100,6 +100,10 @@ void XGuitar_effects_Set_delay_mult(XGuitar_effects *InstancePtr, u32 Data);
 u32 XGuitar_effects_Get_delay_mult(XGuitar_effects *InstancePtr);
 void XGuitar_effects_Set_delay_samples(XGuitar_effects *InstancePtr, u32 Data);
 u32 XGuitar_effects_Get_delay_samples(XGuitar_effects *InstancePtr);
+void XGuitar_effects_Set_tempo(XGuitar_effects *InstancePtr, u32 Data);
+u32 XGuitar_effects_Get_tempo(XGuitar_effects *InstancePtr);
+void XGuitar_effects_Set_wah_coeffs(XGuitar_effects *InstancePtr, u64 Data);
+u64 XGuitar_effects_Get_wah_coeffs(XGuitar_effects *InstancePtr);
 
 #ifdef __cplusplus
 }

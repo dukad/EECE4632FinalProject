@@ -29,42 +29,42 @@
 		<link>
 			<name>source</name>
 			<type>2</type>
-			<location>C:/Users/du.kad/Desktop/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/.apc/.src</location>
+			<location>C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/.apc/.src</location>
 		</link>
 		<link>
 			<name>testbench</name>
 			<type>2</type>
-			<location>C:/Users/du.kad/Desktop/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/.apc/.tb</location>
+			<location>C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/.apc/.tb</location>
 		</link>
 		<link>
 			<name>solution1/constraints</name>
 			<type>2</type>
-			<location>C:/Users/du.kad/Desktop/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.tcls</location>
+			<location>C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.tcls</location>
 		</link>
 		<link>
 			<name>source/guitar_effects.cpp</name>
 			<type>1</type>
-			<location>C:/Users/du.kad/Desktop/EECE4632FinalProject/guitar_effects_cpp/guitar_effects.cpp</location>
+			<location>C:/EECE4632FinalProject/guitar_effects_cpp/guitar_effects.cpp</location>
 		</link>
 		<link>
 			<name>source/guitar_effects.h</name>
 			<type>1</type>
-			<location>C:/Users/du.kad/Desktop/EECE4632FinalProject/guitar_effects_cpp/guitar_effects.h</location>
+			<location>C:/EECE4632FinalProject/guitar_effects_cpp/guitar_effects.h</location>
 		</link>
 		<link>
 			<name>solution1/constraints/.xml.directive</name>
 			<type>1</type>
-			<location>C:/Users/du.kad/Desktop/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/solution1.directive</location>
+			<location>C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/solution1.directive</location>
 		</link>
 		<link>
 			<name>solution1/constraints/directives.tcl</name>
 			<type>1</type>
-			<location>C:/Users/du.kad/Desktop/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/directives.tcl</location>
+			<location>C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/directives.tcl</location>
 		</link>
 		<link>
 			<name>solution1/constraints/script.tcl</name>
 			<type>1</type>
-			<location>C:/Users/du.kad/Desktop/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/script.tcl</location>
+			<location>C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/script.tcl</location>
 		</link>
 	</linkedResources>
 </projectDescription>

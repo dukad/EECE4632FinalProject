@@ -2,12 +2,12 @@
 # Vivado v2022.1 (64-bit)
 # SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
 # IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
-# Start of session at: Wed Apr  3 16:18:17 2024
-# Process ID: 3952
-# Current directory: C:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1
+# Start of session at: Wed Apr 10 17:43:59 2024
+# Process ID: 14060
+# Current directory: C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1
 # Command line: vivado.exe -log guitar_effects_design_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source guitar_effects_design_wrapper.tcl
-# Log file: C:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1/guitar_effects_design_wrapper.vds
-# Journal file: C:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1\vivado.jou
+# Log file: C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1/guitar_effects_design_wrapper.vds
+# Journal file: C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1\vivado.jou
 # Running On: WFXB07B250A366D, OS: Windows, CPU Frequency: 2904 MHz, CPU Physical cores: 8, Host memory: 16881 MB
 #-----------------------------------------------------------
 source guitar_effects_design_wrapper.tcl -notrace

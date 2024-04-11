@@ -15,8 +15,8 @@
 //        bit 31~0 - distortion_threshold[31:0] (Read/Write)
 // 0x2c : reserved
 // 0x30 : Data signal of distortion_clip_factor
-//        bit 0  - distortion_clip_factor[0] (Read/Write)
-//        others - reserved
+//        bit 7~0 - distortion_clip_factor[7:0] (Read/Write)
+//        others  - reserved
 // 0x34 : reserved
 // 0x38 : Data signal of compression_min_threshold
 //        bit 31~0 - compression_min_threshold[31:0] (Read/Write)
@@ -33,6 +33,14 @@
 // 0x58 : Data signal of delay_samples
 //        bit 31~0 - delay_samples[31:0] (Read/Write)
 // 0x5c : reserved
+// 0x60 : Data signal of tempo
+//        bit 31~0 - tempo[31:0] (Read/Write)
+// 0x64 : reserved
+// 0x68 : Data signal of wah_coeffs
+//        bit 31~0 - wah_coeffs[31:0] (Read/Write)
+// 0x6c : Data signal of wah_coeffs
+//        bit 31~0 - wah_coeffs[63:32] (Read/Write)
+// 0x70 : reserved
 // (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
 #define CONTROL_R_ADDR_AXILITE_OUT_DATA                0x10
@@ -43,7 +51,7 @@
 #define CONTROL_R_ADDR_DISTORTION_THRESHOLD_DATA       0x28
 #define CONTROL_R_BITS_DISTORTION_THRESHOLD_DATA       32
 #define CONTROL_R_ADDR_DISTORTION_CLIP_FACTOR_DATA     0x30
-#define CONTROL_R_BITS_DISTORTION_CLIP_FACTOR_DATA     1
+#define CONTROL_R_BITS_DISTORTION_CLIP_FACTOR_DATA     8
 #define CONTROL_R_ADDR_COMPRESSION_MIN_THRESHOLD_DATA  0x38
 #define CONTROL_R_BITS_COMPRESSION_MIN_THRESHOLD_DATA  32
 #define CONTROL_R_ADDR_COMPRESSION_MAX_THRESHOLD_DATA  0x40
@@ -54,3 +62,7 @@
 #define CONTROL_R_BITS_DELAY_MULT_DATA                 32
 #define CONTROL_R_ADDR_DELAY_SAMPLES_DATA              0x58
 #define CONTROL_R_BITS_DELAY_SAMPLES_DATA              32
+#define CONTROL_R_ADDR_TEMPO_DATA                      0x60
+#define CONTROL_R_BITS_TEMPO_DATA                      32
+#define CONTROL_R_ADDR_WAH_COEFFS_DATA                 0x68
+#define CONTROL_R_BITS_WAH_COEFFS_DATA                 64

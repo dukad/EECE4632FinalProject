@@ -92,6 +92,12 @@ using namespace sc_dt;
 #define AUTOTB_TVOUT_delay_mult "../tv/cdatafile/c.guitar_effects.autotvout_delay_mult.dat"
 #define AUTOTB_TVIN_delay_samples "../tv/cdatafile/c.guitar_effects.autotvin_delay_samples.dat"
 #define AUTOTB_TVOUT_delay_samples "../tv/cdatafile/c.guitar_effects.autotvout_delay_samples.dat"
+#define AUTOTB_TVIN_tempo "../tv/cdatafile/c.guitar_effects.autotvin_tempo.dat"
+#define AUTOTB_TVOUT_tempo "../tv/cdatafile/c.guitar_effects.autotvout_tempo.dat"
+#define AUTOTB_TVIN_wah_coeffs "../tv/cdatafile/c.guitar_effects.autotvin_wah_coeffs.dat"
+#define AUTOTB_TVOUT_wah_coeffs "../tv/cdatafile/c.guitar_effects.autotvout_wah_coeffs.dat"
+#define AUTOTB_TVIN_gmem "../tv/cdatafile/c.guitar_effects.autotvin_gmem.dat"
+#define AUTOTB_TVOUT_gmem "../tv/cdatafile/c.guitar_effects.autotvout_gmem.dat"
 
 #define INTER_TCL "../tv/cdatafile/ref.tcl"
 
@@ -119,6 +125,9 @@ using namespace sc_dt;
 #define AUTOTB_TVOUT_PC_compression_zero_threshold "../tv/rtldatafile/rtl.guitar_effects.autotvout_compression_zero_threshold.dat"
 #define AUTOTB_TVOUT_PC_delay_mult "../tv/rtldatafile/rtl.guitar_effects.autotvout_delay_mult.dat"
 #define AUTOTB_TVOUT_PC_delay_samples "../tv/rtldatafile/rtl.guitar_effects.autotvout_delay_samples.dat"
+#define AUTOTB_TVOUT_PC_tempo "../tv/rtldatafile/rtl.guitar_effects.autotvout_tempo.dat"
+#define AUTOTB_TVOUT_PC_wah_coeffs "../tv/rtldatafile/rtl.guitar_effects.autotvout_wah_coeffs.dat"
+#define AUTOTB_TVOUT_PC_gmem "../tv/rtldatafile/rtl.guitar_effects.autotvout_gmem.dat"
 
 
 static const bool little_endian()
@@ -371,6 +380,9 @@ INTER_TCL_FILE(const char* name) {
   compression_zero_threshold_depth = 0;
   delay_mult_depth = 0;
   delay_samples_depth = 0;
+  tempo_depth = 0;
+  wah_coeffs_depth = 0;
+  gmem_depth = 0;
   trans_num =0;
 }
 ~INTER_TCL_FILE() {
@@ -411,6 +423,9 @@ string get_depth_list () {
   total_list << "{compression_zero_threshold " << compression_zero_threshold_depth << "}\n";
   total_list << "{delay_mult " << delay_mult_depth << "}\n";
   total_list << "{delay_samples " << delay_samples_depth << "}\n";
+  total_list << "{tempo " << tempo_depth << "}\n";
+  total_list << "{wah_coeffs " << wah_coeffs_depth << "}\n";
+  total_list << "{gmem " << gmem_depth << "}\n";
   return total_list.str();
 }
 void set_num (int num , int* class_num) {
@@ -443,6 +458,9 @@ void set_string(std::string list, std::string* class_list) {
     int compression_zero_threshold_depth;
     int delay_mult_depth;
     int delay_samples_depth;
+    int tempo_depth;
+    int wah_coeffs_depth;
+    int gmem_depth;
     int trans_num;
   private:
     ofstream mFile;
@@ -451,9 +469,9 @@ void set_string(std::string list, std::string* class_list) {
 
 
 struct __cosim_s1__ { char data[1]; };
-extern "C" void guitar_effects_hw_stub_wrapper(volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, char, int, __cosim_s1__*, int, int, int, float, int);
+extern "C" void guitar_effects_hw_stub_wrapper(volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, char, int, __cosim_s1__*, int, int, int, float, int, int, volatile void *);
 
-extern "C" void apatb_guitar_effects_hw(volatile void * __xlx_apatb_param_INPUT_V_data_V, volatile void * __xlx_apatb_param_INPUT_V_keep_V, volatile void * __xlx_apatb_param_INPUT_V_strb_V, volatile void * __xlx_apatb_param_INPUT_V_user_V, volatile void * __xlx_apatb_param_INPUT_V_last_V, volatile void * __xlx_apatb_param_INPUT_V_id_V, volatile void * __xlx_apatb_param_INPUT_V_dest_V, volatile void * __xlx_apatb_param_OUTPUT_V_data_V, volatile void * __xlx_apatb_param_OUTPUT_V_keep_V, volatile void * __xlx_apatb_param_OUTPUT_V_strb_V, volatile void * __xlx_apatb_param_OUTPUT_V_user_V, volatile void * __xlx_apatb_param_OUTPUT_V_last_V, volatile void * __xlx_apatb_param_OUTPUT_V_id_V, volatile void * __xlx_apatb_param_OUTPUT_V_dest_V, volatile void * __xlx_apatb_param_axilite_out, char __xlx_apatb_param_control, int __xlx_apatb_param_distortion_threshold, __cosim_s1__* __xlx_apatb_param_distortion_clip_factor, int __xlx_apatb_param_compression_min_threshold, int __xlx_apatb_param_compression_max_threshold, int __xlx_apatb_param_compression_zero_threshold, float __xlx_apatb_param_delay_mult, int __xlx_apatb_param_delay_samples) {
+extern "C" void apatb_guitar_effects_hw(volatile void * __xlx_apatb_param_INPUT_V_data_V, volatile void * __xlx_apatb_param_INPUT_V_keep_V, volatile void * __xlx_apatb_param_INPUT_V_strb_V, volatile void * __xlx_apatb_param_INPUT_V_user_V, volatile void * __xlx_apatb_param_INPUT_V_last_V, volatile void * __xlx_apatb_param_INPUT_V_id_V, volatile void * __xlx_apatb_param_INPUT_V_dest_V, volatile void * __xlx_apatb_param_OUTPUT_V_data_V, volatile void * __xlx_apatb_param_OUTPUT_V_keep_V, volatile void * __xlx_apatb_param_OUTPUT_V_strb_V, volatile void * __xlx_apatb_param_OUTPUT_V_user_V, volatile void * __xlx_apatb_param_OUTPUT_V_last_V, volatile void * __xlx_apatb_param_OUTPUT_V_id_V, volatile void * __xlx_apatb_param_OUTPUT_V_dest_V, volatile void * __xlx_apatb_param_axilite_out, char __xlx_apatb_param_control, int __xlx_apatb_param_distortion_threshold, __cosim_s1__* __xlx_apatb_param_distortion_clip_factor, int __xlx_apatb_param_compression_min_threshold, int __xlx_apatb_param_compression_max_threshold, int __xlx_apatb_param_compression_zero_threshold, float __xlx_apatb_param_delay_mult, int __xlx_apatb_param_delay_samples, int __xlx_apatb_param_tempo, volatile void * __xlx_apatb_param_wah_coeffs) {
   refine_signal_handler();
   fstream wrapc_switch_file_token;
   wrapc_switch_file_token.open(".hls_cosim_wrapc_switch.log");
@@ -974,6 +992,7 @@ aesl_fh.touch(WRAPC_STREAM_EGRESS_STATUS_OUTPUT_r_V_id_V);
 aesl_fh.touch(WRAPC_STREAM_SIZE_OUT_OUTPUT_r_V_dest_V);
 aesl_fh.touch(WRAPC_STREAM_EGRESS_STATUS_OUTPUT_r_V_dest_V);
 CodeState = DUMP_INPUTS;
+unsigned __xlx_offset_byte_param_wah_coeffs = 0;
 // data
 std::vector<int> __xlx_apatb_param_INPUT_V_data_V_stream_buf;
 {
@@ -1046,6 +1065,33 @@ std::vector<char> __xlx_apatb_param_OUTPUT_V_last_V_stream_buf;
 std::vector<char> __xlx_apatb_param_OUTPUT_V_id_V_stream_buf;
 // dest
 std::vector<char> __xlx_apatb_param_OUTPUT_V_dest_V_stream_buf;
+#ifdef USE_BINARY_TV_FILE
+{
+aesl_fh.touch(AUTOTB_TVIN_gmem, 'b');
+transaction<16> tr(2000);
+__xlx_offset_byte_param_wah_coeffs = 0*2;
+if (__xlx_apatb_param_wah_coeffs) {
+  tr.import<2>((char*)__xlx_apatb_param_wah_coeffs, 2000, 0);
+}
+aesl_fh.write(AUTOTB_TVIN_gmem, tr.p, tr.tbytes);
+tcl_file.set_num(2000, &tcl_file.gmem_depth);
+}
+#else
+aesl_fh.touch(AUTOTB_TVIN_gmem);
+{
+aesl_fh.write(AUTOTB_TVIN_gmem, begin_str(AESL_transaction));
+__xlx_offset_byte_param_wah_coeffs = 0*2;
+if (__xlx_apatb_param_wah_coeffs) {
+for (size_t i = 0; i < 2000; ++i) {
+unsigned char *pos = (unsigned char*)__xlx_apatb_param_wah_coeffs + i * 2;
+std::string s = formatData(pos, 16);
+aesl_fh.write(AUTOTB_TVIN_gmem, s);
+}
+}
+tcl_file.set_num(2000, &tcl_file.gmem_depth);
+aesl_fh.write(AUTOTB_TVIN_gmem, end_str());
+}
+#endif
 // print axilite_out Transactions
 {
 aesl_fh.write(AUTOTB_TVIN_axilite_out, begin_str(AESL_transaction));
@@ -1084,7 +1130,7 @@ aesl_fh.write(AUTOTB_TVIN_distortion_threshold, end_str());
 aesl_fh.write(AUTOTB_TVIN_distortion_clip_factor, begin_str(AESL_transaction));
 {
 auto *pos = (unsigned char*)__xlx_apatb_param_distortion_clip_factor;
-aesl_fh.write(AUTOTB_TVIN_distortion_clip_factor, formatData(pos, 1));
+aesl_fh.write(AUTOTB_TVIN_distortion_clip_factor, formatData(pos, 8));
 }
   tcl_file.set_num(1, &tcl_file.distortion_clip_factor_depth);
 aesl_fh.write(AUTOTB_TVIN_distortion_clip_factor, end_str());
@@ -1145,8 +1191,30 @@ aesl_fh.write(AUTOTB_TVIN_delay_samples, formatData(pos, 32));
 aesl_fh.write(AUTOTB_TVIN_delay_samples, end_str());
 }
 
+// print tempo Transactions
+{
+aesl_fh.write(AUTOTB_TVIN_tempo, begin_str(AESL_transaction));
+{
+auto *pos = (unsigned char*)&__xlx_apatb_param_tempo;
+aesl_fh.write(AUTOTB_TVIN_tempo, formatData(pos, 32));
+}
+  tcl_file.set_num(1, &tcl_file.tempo_depth);
+aesl_fh.write(AUTOTB_TVIN_tempo, end_str());
+}
+
+// print wah_coeffs Transactions
+{
+aesl_fh.write(AUTOTB_TVIN_wah_coeffs, begin_str(AESL_transaction));
+{
+auto *pos = (unsigned char*)&__xlx_offset_byte_param_wah_coeffs;
+aesl_fh.write(AUTOTB_TVIN_wah_coeffs, formatData(pos, 32));
+}
+  tcl_file.set_num(1, &tcl_file.wah_coeffs_depth);
+aesl_fh.write(AUTOTB_TVIN_wah_coeffs, end_str());
+}
+
 CodeState = CALL_C_DUT;
-guitar_effects_hw_stub_wrapper(__xlx_apatb_param_INPUT_V_data_V, __xlx_apatb_param_INPUT_V_keep_V, __xlx_apatb_param_INPUT_V_strb_V, __xlx_apatb_param_INPUT_V_user_V, __xlx_apatb_param_INPUT_V_last_V, __xlx_apatb_param_INPUT_V_id_V, __xlx_apatb_param_INPUT_V_dest_V, __xlx_apatb_param_OUTPUT_V_data_V, __xlx_apatb_param_OUTPUT_V_keep_V, __xlx_apatb_param_OUTPUT_V_strb_V, __xlx_apatb_param_OUTPUT_V_user_V, __xlx_apatb_param_OUTPUT_V_last_V, __xlx_apatb_param_OUTPUT_V_id_V, __xlx_apatb_param_OUTPUT_V_dest_V, __xlx_apatb_param_axilite_out, __xlx_apatb_param_control, __xlx_apatb_param_distortion_threshold, __xlx_apatb_param_distortion_clip_factor, __xlx_apatb_param_compression_min_threshold, __xlx_apatb_param_compression_max_threshold, __xlx_apatb_param_compression_zero_threshold, __xlx_apatb_param_delay_mult, __xlx_apatb_param_delay_samples);
+guitar_effects_hw_stub_wrapper(__xlx_apatb_param_INPUT_V_data_V, __xlx_apatb_param_INPUT_V_keep_V, __xlx_apatb_param_INPUT_V_strb_V, __xlx_apatb_param_INPUT_V_user_V, __xlx_apatb_param_INPUT_V_last_V, __xlx_apatb_param_INPUT_V_id_V, __xlx_apatb_param_INPUT_V_dest_V, __xlx_apatb_param_OUTPUT_V_data_V, __xlx_apatb_param_OUTPUT_V_keep_V, __xlx_apatb_param_OUTPUT_V_strb_V, __xlx_apatb_param_OUTPUT_V_user_V, __xlx_apatb_param_OUTPUT_V_last_V, __xlx_apatb_param_OUTPUT_V_id_V, __xlx_apatb_param_OUTPUT_V_dest_V, __xlx_apatb_param_axilite_out, __xlx_apatb_param_control, __xlx_apatb_param_distortion_threshold, __xlx_apatb_param_distortion_clip_factor, __xlx_apatb_param_compression_min_threshold, __xlx_apatb_param_compression_max_threshold, __xlx_apatb_param_compression_zero_threshold, __xlx_apatb_param_delay_mult, __xlx_apatb_param_delay_samples, __xlx_apatb_param_tempo, __xlx_apatb_param_wah_coeffs);
 CodeState = DUMP_OUTPUTS;
 long __xlx_apatb_param_INPUT_r_stream_buf_final_size = __xlx_apatb_param_INPUT_r_stream_buf_size - ((hls::stream<int>*)__xlx_apatb_param_INPUT_V_data_V)->size();
 aesl_fh.write(AUTOTB_TVIN_INPUT_r_V_data_V, begin_str(AESL_transaction));

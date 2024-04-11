@@ -26,8 +26,8 @@
           <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="40"/>
         </hw>
       </arg>
-      <arg id="5" access_type="r" src_name="distortion_clip_factor" src_type="ap_fixed&lt;1, 8, AP_TRN, AP_WRAP, 0&gt;" src_isptr="1" src_bitwidth="8" src_size_or_depth="1">
-        <hw hw_usage="data" hw_interface="S_AXILite" hw_name="control_r" hw_bitwidth="1" hw_size_or_depth="1" hw_kernel_support="true">
+      <arg id="5" access_type="r" src_name="distortion_clip_factor" src_type="ap_fixed&lt;8, 1, AP_TRN, AP_WRAP, 0&gt;" src_isptr="1" src_bitwidth="8" src_size_or_depth="1">
+        <hw hw_usage="data" hw_interface="S_AXILite" hw_name="control_r" hw_bitwidth="8" hw_size_or_depth="1" hw_kernel_support="true">
           <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="48"/>
         </hw>
       </arg>
@@ -54,6 +54,20 @@
       <arg id="10" access_type="r" src_name="delay_samples" src_type="int" src_isptr="0" src_bitwidth="32" src_size_or_depth="1">
         <hw hw_usage="data" hw_interface="S_AXILite" hw_name="control_r" hw_bitwidth="32" hw_size_or_depth="1" hw_kernel_support="true">
           <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="88"/>
+        </hw>
+      </arg>
+      <arg id="11" access_type="r" src_name="tempo" src_type="int" src_isptr="0" src_bitwidth="32" src_size_or_depth="1">
+        <hw hw_usage="data" hw_interface="S_AXILite" hw_name="control_r" hw_bitwidth="32" hw_size_or_depth="1" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="96"/>
+        </hw>
+      </arg>
+      <arg id="12" access_type="r" src_name="wah_coeffs" src_type="ap_fixed&lt;16, -16, AP_TRN, AP_WRAP, 0&gt;*" src_isptr="1" src_bitwidth="16" src_size_or_depth="2000">
+        <hw hw_usage="data" hw_interface="MAXI" hw_name="gmem" hw_bitwidth="16" hw_size_or_depth="0" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="m_axi" register_option="0" offset="slave" latency="0" num_read_outstanding="16" num_write_outstanding="16" max_read_burst_length="16" max_write_burst_length="16" max_widen_bitwidth="0"/>
+          <constraint constraint_type="bitwidth" orig_bitwidth="16" final_bitwidth="16"/>
+        </hw>
+        <hw hw_usage="address" hw_interface="S_AXILite" hw_name="control_r" hw_bitwidth="16" hw_size_or_depth="0" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="104"/>
         </hw>
       </arg>
     </args>
