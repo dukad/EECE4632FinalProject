@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1712873188">
+<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1712875904">
   <File Type="ROUTE-PWR" Name="FIR_Test_wrapper_power_routed.rpt"/>
   <File Type="PA-TCL" Name="FIR_Test_wrapper.tcl"/>
   <File Type="ROUTE-PWR-SUM" Name="FIR_Test_wrapper_power_summary_routed.pb"/>
@@ -147,7 +147,6 @@
     <Step Id="write_bitstream"/>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="FIR_Test_axi_bram_ctrl_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="FIR_Test_filt_0_18"/>
   <BlockFileSet Type="BlockSrcs" Name="FIR_Test_blk_mem_gen_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="FIR_Test_rst_ps7_0_100M_0"/>
   <BlockFileSet Type="BlockSrcs" Name="FIR_Test_processing_system7_0_0"/>

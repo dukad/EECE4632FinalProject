@@ -6,7 +6,7 @@
 +---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
 | Phase         | Step                        | Instructions | Description                                                                            |
 +---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
-| Compile/Link  |                             | 394          | After all functions are compiled and linked into a single design                       |
+| Compile/Link  |                             | 396          | After all functions are compiled and linked into a single design                       |
 |               |                             |              |                                                                                        |
 | Unroll/Inline |                             |              | After user unroll and inline pragmas are applied                                       |
 |               | (1) unroll                  | 917          | user unroll pragmas are applied                                                        |
@@ -36,7 +36,7 @@
 +----------+------------+--------------+---------------+--------------+-------------+---------------+
 | Function | Location   | Compile/Link | Unroll/Inline | Array/Struct | Performance | HW Transforms |
 +----------+------------+--------------+---------------+--------------+-------------+---------------+
-|   filt   | filt.cpp:3 | 394          | 872           | 882          | 765         | 699           |
+|   filt   | filt.cpp:3 | 396          | 872           | 882          | 765         | 699           |
 +----------+------------+--------------+---------------+--------------+-------------+---------------+
 
 * Design Size Message Settings

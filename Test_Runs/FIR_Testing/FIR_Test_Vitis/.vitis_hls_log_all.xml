@@ -12,14 +12,14 @@
   <warningLogs>
     <logs>
       <synLog>
-        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="FIR_Test_Vitis" solutionName="solution1" date="2024-04-11T18:04:17.716-0400" type="Warning"/>
-        <logs message="WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_40_1' (filt.cpp:40:19) in function 'filt' the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop.&#xD;&#xA;Resolution: For help on HLS 200-960 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&amp;url=ug1448-hls-guidance&amp;resourceid=200-960.html" projectName="FIR_Test_Vitis" solutionName="solution1" date="2024-04-11T18:04:15.295-0400" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="FIR_Test_Vitis" solutionName="solution1" date="2024-04-11T18:49:13.189-0400" type="Warning"/>
+        <logs message="WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_40_1' (filt.cpp:40:19) in function 'filt' the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop.&#xD;&#xA;Resolution: For help on HLS 200-960 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&amp;url=ug1448-hls-guidance&amp;resourceid=200-960.html" projectName="FIR_Test_Vitis" solutionName="solution1" date="2024-04-11T18:49:10.719-0400" type="Warning"/>
       </synLog>
       <simLog/>
       <mgLog/>
       <packageLog>
-        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'filt_fmul_32ns_32ns_32_2_max_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.&#xD;" projectName="FIR_Test_Vitis" solutionName="solution1" date="2024-04-11T18:05:11.386-0400" type="Warning"/>
-        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'filt_fadd_32ns_32ns_32_3_full_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.&#xD;" projectName="FIR_Test_Vitis" solutionName="solution1" date="2024-04-11T18:05:05.361-0400" type="Warning"/>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'filt_fmul_32ns_32ns_32_2_max_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.&#xD;" projectName="FIR_Test_Vitis" solutionName="solution1" date="2024-04-11T18:50:03.405-0400" type="Warning"/>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'filt_fadd_32ns_32ns_32_3_full_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.&#xD;" projectName="FIR_Test_Vitis" solutionName="solution1" date="2024-04-11T18:49:57.392-0400" type="Warning"/>
       </packageLog>
       <csimLog/>
     </logs>

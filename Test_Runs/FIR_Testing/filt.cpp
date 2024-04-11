@@ -40,7 +40,7 @@ void filt (hls::stream<AXI_VAL>& output, coef_t coefs[NUM_COEFS], hls::stream<AX
 	while(running){
 		input.read(tmp);
 
-		coef.ival = tmp.data.to_int();
+		coef.ival = tmp.data;
 
 		switch (state){
 			case IDLE:

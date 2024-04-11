@@ -9808,7 +9808,7 @@ __attribute__((sdx_kernel("filt", 0))) void filt (hls::stream<AXI_VAL>& output, 
  VITIS_LOOP_40_1: while(running){
   input.read(tmp);
 
-  coef.ival = tmp.data.to_int();
+  coef.ival = tmp.data;
 
   switch (state){
    case 0x0000:

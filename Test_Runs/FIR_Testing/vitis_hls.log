@@ -1,5 +1,5 @@
 INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2023.2/bin/unwrapped/win64.o/vitis_hls.exe'
-INFO: [HLS 200-10] For user 'a01me' on host 'desktop-g7ja666' (Windows NT_amd64 version 6.2) on Thu Apr 11 18:04:36 -0400 2024
+INFO: [HLS 200-10] For user 'a01me' on host 'desktop-g7ja666' (Windows NT_amd64 version 6.2) on Thu Apr 11 18:49:28 -0400 2024
 INFO: [HLS 200-10] In directory 'C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Testing'
 INFO: [HLS 200-2053] The vitis_hls executable is being deprecated. Consider using vitis-run --mode hls --tcl
 Sourcing Tcl script 'C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Testing/FIR_Test_Vitis/solution1/export.tcl'
@@ -40,7 +40,7 @@ INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
 source run_ippack.tcl -notrace
 INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
 Current project path is 'C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Testing/FIR_Test_Vitis/solution1/impl/ip'
-create_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 566.691 ; gain = 182.723
+create_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 565.352 ; gain = 181.648
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.2/data/ip'.
@@ -53,7 +53,7 @@ INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'filt_fmul_32ns_32
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.2/data/ip'.
-INFO: [Common 17-206] Exiting Vivado at Thu Apr 11 18:05:12 2024...
+INFO: [Common 17-206] Exiting Vivado at Thu Apr 11 18:50:04 2024...
 INFO: [HLS 200-802] Generated output file C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test.zip
-INFO: [HLS 200-111] Finished Command export_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 32.986 seconds; current allocated memory: 10.047 MB.
-INFO: [HLS 200-112] Total CPU user time: 5 seconds. Total CPU system time: 1 seconds. Total elapsed time: 37.12 seconds; peak allocated memory: 202.703 MB.
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 32.702 seconds; current allocated memory: 9.867 MB.
+INFO: [HLS 200-112] Total CPU user time: 5 seconds. Total CPU system time: 1 seconds. Total elapsed time: 36.785 seconds; peak allocated memory: 202.500 MB.
