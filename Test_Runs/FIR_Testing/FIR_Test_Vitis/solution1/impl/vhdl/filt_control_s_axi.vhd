@@ -34,7 +34,7 @@ port (
     RRESP                 :out  STD_LOGIC_VECTOR(1 downto 0);
     RVALID                :out  STD_LOGIC;
     RREADY                :in   STD_LOGIC;
-    c                     :out  STD_LOGIC_VECTOR(63 downto 0)
+    coefs                 :out  STD_LOGIC_VECTOR(63 downto 0)
 );
 end entity filt_control_s_axi;
 
@@ -45,10 +45,10 @@ end entity filt_control_s_axi;
 -- 0x04 : reserved
 -- 0x08 : reserved
 -- 0x0c : reserved
--- 0x10 : Data signal of c
---        bit 31~0 - c[31:0] (Read/Write)
--- 0x14 : Data signal of c
---        bit 31~0 - c[63:32] (Read/Write)
+-- 0x10 : Data signal of coefs
+--        bit 31~0 - coefs[31:0] (Read/Write)
+-- 0x14 : Data signal of coefs
+--        bit 31~0 - coefs[63:32] (Read/Write)
 -- 0x18 : reserved
 -- (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
@@ -57,9 +57,9 @@ architecture behave of filt_control_s_axi is
     signal wstate  : states := wrreset;
     signal rstate  : states := rdreset;
     signal wnext, rnext: states;
-    constant ADDR_C_DATA_0 : INTEGER := 16#10#;
-    constant ADDR_C_DATA_1 : INTEGER := 16#14#;
-    constant ADDR_C_CTRL   : INTEGER := 16#18#;
+    constant ADDR_COEFS_DATA_0 : INTEGER := 16#10#;
+    constant ADDR_COEFS_DATA_1 : INTEGER := 16#14#;
+    constant ADDR_COEFS_CTRL   : INTEGER := 16#18#;
     constant ADDR_BITS         : INTEGER := 5;
 
     signal waddr               : UNSIGNED(ADDR_BITS-1 downto 0);
@@ -74,7 +74,7 @@ architecture behave of filt_control_s_axi is
     signal ARREADY_t           : STD_LOGIC;
     signal RVALID_t            : STD_LOGIC;
     -- internal registers
-    signal int_c               : UNSIGNED(63 downto 0) := (others => '0');
+    signal int_coefs           : UNSIGNED(63 downto 0) := (others => '0');
 
 
 begin
@@ -190,10 +190,10 @@ begin
                 if (ar_hs = '1') then
                     rdata_data <= (others => '0');
                     case (TO_INTEGER(raddr)) is
-                    when ADDR_C_DATA_0 =>
-                        rdata_data <= RESIZE(int_c(31 downto 0), 32);
-                    when ADDR_C_DATA_1 =>
-                        rdata_data <= RESIZE(int_c(63 downto 32), 32);
+                    when ADDR_COEFS_DATA_0 =>
+                        rdata_data <= RESIZE(int_coefs(31 downto 0), 32);
+                    when ADDR_COEFS_DATA_1 =>
+                        rdata_data <= RESIZE(int_coefs(63 downto 32), 32);
                     when others =>
                         NULL;
                     end case;
@@ -203,14 +203,14 @@ begin
     end process;
 
 -- ----------------------- Register logic ----------------
-    c                    <= STD_LOGIC_VECTOR(int_c);
+    coefs                <= STD_LOGIC_VECTOR(int_coefs);
 
     process (ACLK)
     begin
         if (ACLK'event and ACLK = '1') then
             if (ACLK_EN = '1') then
-                if (w_hs = '1' and waddr = ADDR_C_DATA_0) then
-                    int_c(31 downto 0) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_c(31 downto 0));
+                if (w_hs = '1' and waddr = ADDR_COEFS_DATA_0) then
+                    int_coefs(31 downto 0) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_coefs(31 downto 0));
                 end if;
             end if;
         end if;
@@ -220,8 +220,8 @@ begin
     begin
         if (ACLK'event and ACLK = '1') then
             if (ACLK_EN = '1') then
-                if (w_hs = '1' and waddr = ADDR_C_DATA_1) then
-                    int_c(63 downto 32) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_c(63 downto 32));
+                if (w_hs = '1' and waddr = ADDR_COEFS_DATA_1) then
+                    int_coefs(63 downto 32) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_coefs(63 downto 32));
                 end if;
             end if;
         end if;

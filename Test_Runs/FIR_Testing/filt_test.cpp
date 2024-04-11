@@ -28,7 +28,7 @@ int main(){
 
 	// Send 99 filter coefs
 	for (int i = 0; i < N; i++){
-		tmp1.data = i;
+		tmp1.data = i + 1;
 
 		A.write(tmp1);
 	}
@@ -63,6 +63,6 @@ int main(){
 
 	cout << "Read from output buffer" << endl;
 
-	cout << "Success: results match" << endl;
+	cout << "GREAT! YOU PASSED" << endl;
 	return 0;
 }

@@ -1,5 +1,5 @@
 set SynModuleInfo {
-  {SRCNAME filt_Pipeline_VITIS_LOOP_35_2 MODELNAME filt_Pipeline_VITIS_LOOP_35_2 RTLNAME filt_filt_Pipeline_VITIS_LOOP_35_2
+  {SRCNAME filt_Pipeline_VITIS_LOOP_38_2 MODELNAME filt_Pipeline_VITIS_LOOP_38_2 RTLNAME filt_filt_Pipeline_VITIS_LOOP_38_2
     SUBMODULES {
       {MODELNAME filt_flow_control_loop_pipe_sequential_init RTLNAME filt_flow_control_loop_pipe_sequential_init BINDTYPE interface TYPE internal_upc_flow_control INSTNAME filt_flow_control_loop_pipe_sequential_init_U}
     }

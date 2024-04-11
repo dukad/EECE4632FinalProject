@@ -36,19 +36,19 @@ C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Testi
 C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Testing/FIR_Test_Vitis/solution1/directives.tcl:7:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=filt_XLX_SEP_ PragmaOptions=name=filt_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLSDIRECTIVE TOP name=filt
         ^
-filt.cpp:4:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=filt_XLX_SEP_ PragmaOptions=m_axi depth=99 port=c_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS INTERFACE m_axi depth=99 port=c
+filt.cpp:4:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=filt_XLX_SEP_ PragmaOptions=m_axi depth=99 port=coefs_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi depth=99 port=coefs
         ^
-filt.cpp:5:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=filt_XLX_SEP_ PragmaOptions=axis register both port=x_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS INTERFACE axis register both port=x
+filt.cpp:5:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=filt_XLX_SEP_ PragmaOptions=axis register both port=input_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE axis register both port=input
         ^
-filt.cpp:6:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=filt_XLX_SEP_ PragmaOptions=axis register both port=y_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS INTERFACE axis register both port=y
+filt.cpp:6:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=filt_XLX_SEP_ PragmaOptions=axis register both port=output_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE axis register both port=output
         ^
 filt.cpp:7:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=filt_XLX_SEP_ PragmaOptions=ap_ctrl_none port=return_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS INTERFACE ap_ctrl_none port=return
         ^
-filt.cpp:54:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=filt_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+filt.cpp:59:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=filt_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS UNROLL
         ^
 17 warnings generated.

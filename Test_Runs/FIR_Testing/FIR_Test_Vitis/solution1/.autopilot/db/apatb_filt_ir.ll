@@ -16,27 +16,27 @@ target triple = "fpga64-xilinx-none"
 %"struct.ssdm_int<1, false>" = type { i1 }
 
 ; Function Attrs: noinline willreturn
-define void @apatb_filt_ir(%"class.hls::stream<hls::axis<ap_int<32>, 1, 1, 1, '8', false>, 0>"* noalias nonnull dereferenceable(12) %y, i32* noalias nocapture nonnull "fpga.decayed.dim.hint"="99" "maxi" %c, %"class.hls::stream<hls::axis<ap_int<32>, 1, 1, 1, '8', false>, 0>"* noalias nonnull dereferenceable(12) %x) local_unnamed_addr #0 {
+define void @apatb_filt_ir(%"class.hls::stream<hls::axis<ap_int<32>, 1, 1, 1, '8', false>, 0>"* noalias nonnull dereferenceable(12) %output, i32* noalias nocapture nonnull "fpga.decayed.dim.hint"="99" "maxi" %coefs, %"class.hls::stream<hls::axis<ap_int<32>, 1, 1, 1, '8', false>, 0>"* noalias nonnull dereferenceable(12) %input) local_unnamed_addr #0 {
 entry:
-  %y_copy.data = alloca i32, align 512
-  %y_copy.keep = alloca i4, align 512
-  %y_copy.strb = alloca i4, align 512
-  %y_copy.user = alloca i1, align 512
-  %y_copy.last = alloca i1, align 512
-  %y_copy.id = alloca i1, align 512
-  %y_copy.dest = alloca i1, align 512
-  %c_copy = alloca [99 x i32], align 512
-  %x_copy.data = alloca i32, align 512
-  %x_copy.keep = alloca i4, align 512
-  %x_copy.strb = alloca i4, align 512
-  %x_copy.user = alloca i1, align 512
-  %x_copy.last = alloca i1, align 512
-  %x_copy.id = alloca i1, align 512
-  %x_copy.dest = alloca i1, align 512
-  %0 = bitcast i32* %c to [99 x i32]*
-  call fastcc void @copy_in(%"class.hls::stream<hls::axis<ap_int<32>, 1, 1, 1, '8', false>, 0>"* nonnull %y, i32* nonnull align 512 %y_copy.data, i4* nonnull align 512 %y_copy.keep, i4* nonnull align 512 %y_copy.strb, i1* nonnull align 512 %y_copy.user, i1* nonnull align 512 %y_copy.last, i1* nonnull align 512 %y_copy.id, i1* nonnull align 512 %y_copy.dest, [99 x i32]* nonnull %0, [99 x i32]* nonnull align 512 %c_copy, %"class.hls::stream<hls::axis<ap_int<32>, 1, 1, 1, '8', false>, 0>"* nonnull %x, i32* nonnull align 512 %x_copy.data, i4* nonnull align 512 %x_copy.keep, i4* nonnull align 512 %x_copy.strb, i1* nonnull align 512 %x_copy.user, i1* nonnull align 512 %x_copy.last, i1* nonnull align 512 %x_copy.id, i1* nonnull align 512 %x_copy.dest)
-  call void @apatb_filt_hw(i32* %y_copy.data, i4* %y_copy.keep, i4* %y_copy.strb, i1* %y_copy.user, i1* %y_copy.last, i1* %y_copy.id, i1* %y_copy.dest, [99 x i32]* %c_copy, i32* %x_copy.data, i4* %x_copy.keep, i4* %x_copy.strb, i1* %x_copy.user, i1* %x_copy.last, i1* %x_copy.id, i1* %x_copy.dest)
-  call void @copy_back(%"class.hls::stream<hls::axis<ap_int<32>, 1, 1, 1, '8', false>, 0>"* %y, i32* %y_copy.data, i4* %y_copy.keep, i4* %y_copy.strb, i1* %y_copy.user, i1* %y_copy.last, i1* %y_copy.id, i1* %y_copy.dest, [99 x i32]* %0, [99 x i32]* %c_copy, %"class.hls::stream<hls::axis<ap_int<32>, 1, 1, 1, '8', false>, 0>"* %x, i32* %x_copy.data, i4* %x_copy.keep, i4* %x_copy.strb, i1* %x_copy.user, i1* %x_copy.last, i1* %x_copy.id, i1* %x_copy.dest)
+  %output_copy.data = alloca i32, align 512
+  %output_copy.keep = alloca i4, align 512
+  %output_copy.strb = alloca i4, align 512
+  %output_copy.user = alloca i1, align 512
+  %output_copy.last = alloca i1, align 512
+  %output_copy.id = alloca i1, align 512
+  %output_copy.dest = alloca i1, align 512
+  %coefs_copy = alloca [99 x i32], align 512
+  %input_copy.data = alloca i32, align 512
+  %input_copy.keep = alloca i4, align 512
+  %input_copy.strb = alloca i4, align 512
+  %input_copy.user = alloca i1, align 512
+  %input_copy.last = alloca i1, align 512
+  %input_copy.id = alloca i1, align 512
+  %input_copy.dest = alloca i1, align 512
+  %0 = bitcast i32* %coefs to [99 x i32]*
+  call fastcc void @copy_in(%"class.hls::stream<hls::axis<ap_int<32>, 1, 1, 1, '8', false>, 0>"* nonnull %output, i32* nonnull align 512 %output_copy.data, i4* nonnull align 512 %output_copy.keep, i4* nonnull align 512 %output_copy.strb, i1* nonnull align 512 %output_copy.user, i1* nonnull align 512 %output_copy.last, i1* nonnull align 512 %output_copy.id, i1* nonnull align 512 %output_copy.dest, [99 x i32]* nonnull %0, [99 x i32]* nonnull align 512 %coefs_copy, %"class.hls::stream<hls::axis<ap_int<32>, 1, 1, 1, '8', false>, 0>"* nonnull %input, i32* nonnull align 512 %input_copy.data, i4* nonnull align 512 %input_copy.keep, i4* nonnull align 512 %input_copy.strb, i1* nonnull align 512 %input_copy.user, i1* nonnull align 512 %input_copy.last, i1* nonnull align 512 %input_copy.id, i1* nonnull align 512 %input_copy.dest)
+  call void @apatb_filt_hw(i32* %output_copy.data, i4* %output_copy.keep, i4* %output_copy.strb, i1* %output_copy.user, i1* %output_copy.last, i1* %output_copy.id, i1* %output_copy.dest, [99 x i32]* %coefs_copy, i32* %input_copy.data, i4* %input_copy.keep, i4* %input_copy.strb, i1* %input_copy.user, i1* %input_copy.last, i1* %input_copy.id, i1* %input_copy.dest)
+  call void @copy_back(%"class.hls::stream<hls::axis<ap_int<32>, 1, 1, 1, '8', false>, 0>"* %output, i32* %output_copy.data, i4* %output_copy.keep, i4* %output_copy.strb, i1* %output_copy.user, i1* %output_copy.last, i1* %output_copy.id, i1* %output_copy.dest, [99 x i32]* %0, [99 x i32]* %coefs_copy, %"class.hls::stream<hls::axis<ap_int<32>, 1, 1, 1, '8', false>, 0>"* %input, i32* %input_copy.data, i4* %input_copy.keep, i4* %input_copy.strb, i1* %input_copy.user, i1* %input_copy.last, i1* %input_copy.id, i1* %input_copy.dest)
   ret void
 }
 

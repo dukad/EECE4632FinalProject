@@ -93,8 +93,8 @@ int XFilt_Release(XFilt *InstancePtr);
 #endif
 
 
-void XFilt_Set_c(XFilt *InstancePtr, u64 Data);
-u64 XFilt_Get_c(XFilt *InstancePtr);
+void XFilt_Set_coefs(XFilt *InstancePtr, u64 Data);
+u64 XFilt_Get_coefs(XFilt *InstancePtr);
 
 #ifdef __cplusplus
 }

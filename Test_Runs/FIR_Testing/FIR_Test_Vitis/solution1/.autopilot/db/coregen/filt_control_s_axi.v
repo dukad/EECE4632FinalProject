@@ -31,7 +31,7 @@ module filt_control_s_axi
     output wire [1:0]                    RRESP,
     output wire                          RVALID,
     input  wire                          RREADY,
-    output wire [63:0]                   c
+    output wire [63:0]                   coefs
 );
 //------------------------Address Info-------------------
 // Protocol Used: ap_ctrl_none
@@ -40,25 +40,25 @@ module filt_control_s_axi
 // 0x04 : reserved
 // 0x08 : reserved
 // 0x0c : reserved
-// 0x10 : Data signal of c
-//        bit 31~0 - c[31:0] (Read/Write)
-// 0x14 : Data signal of c
-//        bit 31~0 - c[63:32] (Read/Write)
+// 0x10 : Data signal of coefs
+//        bit 31~0 - coefs[31:0] (Read/Write)
+// 0x14 : Data signal of coefs
+//        bit 31~0 - coefs[63:32] (Read/Write)
 // 0x18 : reserved
 // (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
 //------------------------Parameter----------------------
 localparam
-    ADDR_C_DATA_0 = 5'h10,
-    ADDR_C_DATA_1 = 5'h14,
-    ADDR_C_CTRL   = 5'h18,
-    WRIDLE        = 2'd0,
-    WRDATA        = 2'd1,
-    WRRESP        = 2'd2,
-    WRRESET       = 2'd3,
-    RDIDLE        = 2'd0,
-    RDDATA        = 2'd1,
-    RDRESET       = 2'd2,
+    ADDR_COEFS_DATA_0 = 5'h10,
+    ADDR_COEFS_DATA_1 = 5'h14,
+    ADDR_COEFS_CTRL   = 5'h18,
+    WRIDLE            = 2'd0,
+    WRDATA            = 2'd1,
+    WRRESP            = 2'd2,
+    WRRESET           = 2'd3,
+    RDIDLE            = 2'd0,
+    RDDATA            = 2'd1,
+    RDRESET           = 2'd2,
     ADDR_BITS                = 5;
 
 //------------------------Local signal-------------------
@@ -74,7 +74,7 @@ localparam
     wire                          ar_hs;
     wire [ADDR_BITS-1:0]          raddr;
     // internal registers
-    reg  [63:0]                   int_c = 'b0;
+    reg  [63:0]                   int_coefs = 'b0;
 
 //------------------------Instantiation------------------
 
@@ -167,11 +167,11 @@ always @(posedge ACLK) begin
         if (ar_hs) begin
             rdata <= 'b0;
             case (raddr)
-                ADDR_C_DATA_0: begin
-                    rdata <= int_c[31:0];
+                ADDR_COEFS_DATA_0: begin
+                    rdata <= int_coefs[31:0];
                 end
-                ADDR_C_DATA_1: begin
-                    rdata <= int_c[63:32];
+                ADDR_COEFS_DATA_1: begin
+                    rdata <= int_coefs[63:32];
                 end
             endcase
         end
@@ -180,24 +180,24 @@ end
 
 
 //------------------------Register logic-----------------
-assign c = int_c;
-// int_c[31:0]
+assign coefs = int_coefs;
+// int_coefs[31:0]
 always @(posedge ACLK) begin
     if (ARESET)
-        int_c[31:0] <= 0;
+        int_coefs[31:0] <= 0;
     else if (ACLK_EN) begin
-        if (w_hs && waddr == ADDR_C_DATA_0)
-            int_c[31:0] <= (WDATA[31:0] & wmask) | (int_c[31:0] & ~wmask);
+        if (w_hs && waddr == ADDR_COEFS_DATA_0)
+            int_coefs[31:0] <= (WDATA[31:0] & wmask) | (int_coefs[31:0] & ~wmask);
     end
 end
 
-// int_c[63:32]
+// int_coefs[63:32]
 always @(posedge ACLK) begin
     if (ARESET)
-        int_c[63:32] <= 0;
+        int_coefs[63:32] <= 0;
     else if (ACLK_EN) begin
-        if (w_hs && waddr == ADDR_C_DATA_1)
-            int_c[63:32] <= (WDATA[31:0] & wmask) | (int_c[63:32] & ~wmask);
+        if (w_hs && waddr == ADDR_COEFS_DATA_1)
+            int_coefs[63:32] <= (WDATA[31:0] & wmask) | (int_coefs[63:32] & ~wmask);
     end
 end
 

@@ -36,22 +36,22 @@
         <args ARG_PragmaContext="directive" ARG_PragmaFunction="filt" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=filt" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="filt.cpp:4:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="filt" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=99 port=c" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+        <args ARG_PragmaFunction="filt" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=99 port=coefs" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="filt.cpp:5:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="filt" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis register both port=x" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+        <args ARG_PragmaFunction="filt" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis register both port=input" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="filt.cpp:6:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="filt" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis register both port=y" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+        <args ARG_PragmaFunction="filt" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis register both port=output" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="filt.cpp:7:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="filt" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_ctrl_none port=return" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="filt.cpp:54:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="filt.cpp:59:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="filt" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="filt.cpp:3:0" msg_body="Unrolling loop 'Shift_Accumulate_Loop' (filt.cpp:53:5) in function 'filt' completely with a factor of 98">
-        <args Factor="98" LoopLoc="filt.cpp:53:5" LoopName="Shift_Accumulate_Loop"/>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="filt.cpp:3:0" msg_body="Unrolling loop 'Shift_Accumulate_Loop' (filt.cpp:58:5) in function 'filt' completely with a factor of 98">
+        <args Factor="98" LoopLoc="filt.cpp:58:5" LoopName="Shift_Accumulate_Loop"/>
     </msg>
 </xilinx:hls_fe_msgs>
 

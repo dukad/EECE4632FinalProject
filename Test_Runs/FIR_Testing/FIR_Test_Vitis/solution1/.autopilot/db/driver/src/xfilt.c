@@ -21,22 +21,22 @@ int XFilt_CfgInitialize(XFilt *InstancePtr, XFilt_Config *ConfigPtr) {
 }
 #endif
 
-void XFilt_Set_c(XFilt *InstancePtr, u64 Data) {
+void XFilt_Set_coefs(XFilt *InstancePtr, u64 Data) {
     Xil_AssertVoid(InstancePtr != NULL);
     Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
 
-    XFilt_WriteReg(InstancePtr->Control_BaseAddress, XFILT_CONTROL_ADDR_C_DATA, (u32)(Data));
-    XFilt_WriteReg(InstancePtr->Control_BaseAddress, XFILT_CONTROL_ADDR_C_DATA + 4, (u32)(Data >> 32));
+    XFilt_WriteReg(InstancePtr->Control_BaseAddress, XFILT_CONTROL_ADDR_COEFS_DATA, (u32)(Data));
+    XFilt_WriteReg(InstancePtr->Control_BaseAddress, XFILT_CONTROL_ADDR_COEFS_DATA + 4, (u32)(Data >> 32));
 }
 
-u64 XFilt_Get_c(XFilt *InstancePtr) {
+u64 XFilt_Get_coefs(XFilt *InstancePtr) {
     u64 Data;
 
     Xil_AssertNonvoid(InstancePtr != NULL);
     Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
 
-    Data = XFilt_ReadReg(InstancePtr->Control_BaseAddress, XFILT_CONTROL_ADDR_C_DATA);
-    Data += (u64)XFilt_ReadReg(InstancePtr->Control_BaseAddress, XFILT_CONTROL_ADDR_C_DATA + 4) << 32;
+    Data = XFilt_ReadReg(InstancePtr->Control_BaseAddress, XFILT_CONTROL_ADDR_COEFS_DATA);
+    Data += (u64)XFilt_ReadReg(InstancePtr->Control_BaseAddress, XFILT_CONTROL_ADDR_COEFS_DATA + 4) << 32;
     return Data;
 }
 

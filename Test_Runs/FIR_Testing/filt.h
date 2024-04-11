@@ -15,8 +15,8 @@ typedef int acc_t;
 #define READ_COEFS 0x0001
 #define OUTPUT_SIGNAL 0x0002
 
-#define BEEF 48879
-#define ABBA 43962
+#define BEEF 48879   // 0xBEEF = 48879
+#define ABBA 43962   // 0xABBA = 43962
 
 void filt (hls::stream<AXI_VAL>& y, coef_t c[N], hls::stream<AXI_VAL>& x);
 
