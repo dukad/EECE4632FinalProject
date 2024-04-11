@@ -8,7 +8,6 @@ void filt (hls::stream<AXI_VAL>& y, coef_t c[N], hls::stream<AXI_VAL>& x) {
 
 	// *** DEFINE VARIABLES ***
 	int i = 0;
-	int j;
 	bool read_coefs = false;
 	bool read_signal = false;
 	bool output_signal = false;
@@ -28,7 +27,6 @@ void filt (hls::stream<AXI_VAL>& y, coef_t c[N], hls::stream<AXI_VAL>& x) {
 
 		// *** COEFFICIENT PROCESSING CODE ***
 		while (read_coefs){
-			j = tmp.data.to_int();
 			if (tmp.data.to_int() == 43962){   // 43962 is the decimal representation of 0xABBA
 				read_coefs = false;
 				output_signal = true;
@@ -58,7 +56,6 @@ void filt (hls::stream<AXI_VAL>& y, coef_t c[N], hls::stream<AXI_VAL>& x) {
 		}
 
 		if (tmp.data.to_int() == 48879){   // 48879 is the decimal representation of 0xBEEF
-			j = tmp.data.to_int();
 			read_coefs = true;
 			i -= 1;
 		}

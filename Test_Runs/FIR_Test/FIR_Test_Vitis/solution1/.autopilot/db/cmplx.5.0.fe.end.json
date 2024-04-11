@@ -1,22 +1,4 @@
 {
-    "1": {
-        "name": "filt_Pipeline_VITIS_LOOP_30_2",
-        "file": "filt.cpp",
-        "fileloc": "10",
-        "instructions": "37",
-        "total_instructions": "37",
-        "calls": "",
-        "basicblocks": "5",
-        "loads": {
-            "L": "2"
-        },
-        "stores": {
-            "L": "4"
-        },
-        "loops": {
-            "L": "1"
-        }
-    },
     "0": {
         "name": "filt",
         "file": "filt.cpp",
@@ -30,6 +12,24 @@
         },
         "stores": {
             "L": "5"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "1": {
+        "name": "filt_Pipeline_VITIS_LOOP_30_2",
+        "file": "filt.cpp",
+        "fileloc": "10",
+        "instructions": "37",
+        "total_instructions": "37",
+        "calls": "",
+        "basicblocks": "5",
+        "loads": {
+            "L": "2"
+        },
+        "stores": {
+            "L": "4"
         },
         "loops": {
             "L": "1"
