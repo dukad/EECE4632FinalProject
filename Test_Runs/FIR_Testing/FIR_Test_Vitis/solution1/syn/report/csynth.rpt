@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'filt'
 ================================================================
 + General Information: 
-    * Date:           Thu Apr 11 01:03:45 2024
+    * Date:           Thu Apr 11 04:07:10 2024
     * Version:        2023.2 (Build 4023990 on Oct 11 2023)
     * Project:        FIR_Test_Vitis
     * Solution:       solution1 (Vivado IP Flow Target)
@@ -19,10 +19,10 @@
     |              Modules              | Issue|       | Latency | Latency| Iteration|         | Trip |          |        |         |           |            |     |
     |              & Loops              | Type | Slack | (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined|  BRAM  |   DSP   |     FF    |     LUT    | URAM|
     +-----------------------------------+------+-------+---------+--------+----------+---------+------+----------+--------+---------+-----------+------------+-----+
-    |+ filt                             |     -|   0.00|        -|       -|         -|        -|     -|        no|  6 (2%)|  18 (8%)|  7111 (6%)|  5874 (11%)|    -|
+    |+ filt                             |     -|   0.00|        -|       -|         -|        -|     -|        no|  6 (2%)|  21 (9%)|  7372 (6%)|  6207 (11%)|    -|
     | o VITIS_LOOP_22_1                 |     -|  14.60|        -|       -|         -|        -|     -|        no|       -|        -|          -|           -|    -|
-    |  + filt_Pipeline_VITIS_LOOP_29_2  |     -|   0.00|        -|       -|         -|        -|     -|        no|       -|        -|  340 (~0%)|   349 (~0%)|    -|
-    |   o VITIS_LOOP_29_2               |     -|  14.60|        -|       -|         9|        1|     -|       yes|       -|        -|          -|           -|    -|
+    |  + filt_Pipeline_VITIS_LOOP_35_2  |     -|   0.00|        -|       -|         -|        -|     -|        no|       -|        -|  371 (~0%)|   358 (~0%)|    -|
+    |   o VITIS_LOOP_35_2               |     -|  14.60|        -|       -|         8|        1|     -|       yes|       -|        -|          -|           -|    -|
     +-----------------------------------+------+-------+---------+--------+----------+---------+------+----------+--------+---------+-----------+------------+-----+
 
 
@@ -110,10 +110,10 @@
 +--------------+----------+-----------------+-----------+--------------+--------+-----------------+----------------+------------+-------------------------------------------------------------------------------------------------------+
 | HW Interface | Variable | Access Location | Direction | Burst Status | Length | Loop            | Loop Location  | Resolution | Problem                                                                                               |
 +--------------+----------+-----------------+-----------+--------------+--------+-----------------+----------------+------------+-------------------------------------------------------------------------------------------------------+
-| m_axi_gmem   | c        | filt.cpp:51:41  | read      | Widen Fail   |        |                 |                | 214-353    | Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0 |
-| m_axi_gmem   | c        | filt.cpp:51:41  | read      | Inferred     | 99     | VITIS_LOOP_22_1 | filt.cpp:22:19 |            |                                                                                                       |
-| m_axi_gmem   | c        | filt.cpp:54:38  | read      | Widen Fail   |        |                 |                | 214-353    | Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0 |
-| m_axi_gmem   | c        | filt.cpp:54:38  | read      | Inferred     | 99     | VITIS_LOOP_22_1 | filt.cpp:22:19 |            |                                                                                                       |
+| m_axi_gmem   | c        | filt.cpp:56:42  | read      | Widen Fail   |        |                 |                | 214-353    | Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem   | c        | filt.cpp:56:42  | read      | Inferred     | 99     | VITIS_LOOP_22_1 | filt.cpp:22:19 |            |                                                                                                       |
+| m_axi_gmem   | c        | filt.cpp:59:39  | read      | Widen Fail   |        |                 |                | 214-353    | Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem   | c        | filt.cpp:59:39  | read      | Inferred     | 99     | VITIS_LOOP_22_1 | filt.cpp:22:19 |            |                                                                                                       |
 +--------------+----------+-----------------+-----------+--------------+--------+-----------------+----------------+------------+-------------------------------------------------------------------------------------------------------+
 
     * Resolution URL: docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&url=ug1448-hls-guidance&resourceid=XXX-YYY.html (replace XXX-YYY with column value)
@@ -124,125 +124,126 @@
 +----------------------------------+-----+--------+-------------+-----+--------+---------+
 | Name                             | DSP | Pragma | Variable    | Op  | Impl   | Latency |
 +----------------------------------+-----+--------+-------------+-----+--------+---------+
-| + filt                           | 18  |        |             |     |        |         |
-|   add_ln72_fu_961_p2             |     |        | add_ln72    | add | fabric | 0       |
-|   mul_32s_32s_32_1_1_U13         | 3   |        | accumulate  | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U13         | 3   |        | mul_ln51    | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U13         | 3   |        | mul_ln51_1  | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U13         | 3   |        | mul_ln51_2  | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U13         | 3   |        | mul_ln51_3  | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U13         | 3   |        | mul_ln51_4  | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U13         | 3   |        | mul_ln51_5  | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U13         | 3   |        | mul_ln51_6  | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U13         | 3   |        | mul_ln51_7  | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U13         | 3   |        | mul_ln51_8  | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U13         | 3   |        | mul_ln51_9  | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U13         | 3   |        | mul_ln51_10 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U13         | 3   |        | mul_ln51_11 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U13         | 3   |        | mul_ln51_12 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U13         | 3   |        | mul_ln51_13 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U13         | 3   |        | mul_ln51_14 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U13         | 3   |        | mul_ln51_15 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U13         | 3   |        | mul_ln51_16 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U13         | 3   |        | mul_ln51_17 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U13         | 3   |        | mul_ln51_18 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U13         | 3   |        | mul_ln51_19 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U13         | 3   |        | mul_ln51_20 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U13         | 3   |        | mul_ln51_21 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U13         | 3   |        | mul_ln51_22 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U13         | 3   |        | mul_ln51_23 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U13         | 3   |        | mul_ln51_24 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U13         | 3   |        | mul_ln51_25 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U13         | 3   |        | mul_ln51_26 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U13         | 3   |        | mul_ln51_27 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U13         | 3   |        | mul_ln51_28 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U13         | 3   |        | mul_ln51_29 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U13         | 3   |        | mul_ln51_30 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U13         | 3   |        | mul_ln51_31 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U13         | 3   |        | mul_ln51_32 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U13         | 3   |        | mul_ln51_33 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U13         | 3   |        | mul_ln51_34 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln51_35 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U13         | 3   |        | mul_ln51_36 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U13         | 3   |        | mul_ln51_37 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U13         | 3   |        | mul_ln51_38 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln51_39 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U13         | 3   |        | mul_ln51_40 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U13         | 3   |        | mul_ln51_41 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U13         | 3   |        | mul_ln51_42 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U13         | 3   |        | mul_ln51_43 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U13         | 3   |        | mul_ln51_44 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U13         | 3   |        | mul_ln51_45 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U13         | 3   |        | mul_ln51_46 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U13         | 3   |        | mul_ln51_47 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U13         | 3   |        | mul_ln51_48 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln51_49 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U13         | 3   |        | mul_ln51_50 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln51_51 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U13         | 3   |        | mul_ln51_52 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U13         | 3   |        | mul_ln51_53 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U13         | 3   |        | mul_ln51_54 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln51_55 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U13         | 3   |        | mul_ln51_56 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln51_57 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U15         | 3   |        | mul_ln51_58 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U13         | 3   |        | mul_ln51_59 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln51_60 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U15         | 3   |        | mul_ln51_61 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U13         | 3   |        | mul_ln51_62 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln51_63 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U15         | 3   |        | mul_ln51_64 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U16         | 3   |        | mul_ln51_65 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U13         | 3   |        | mul_ln51_66 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln51_67 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U16         | 3   |        | mul_ln51_68 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U13         | 3   |        | mul_ln51_69 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U17         | 3   |        | mul_ln51_70 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U18         | 3   |        | mul_ln51_71 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U13         | 3   |        | mul_ln51_72 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U13         | 3   |        | mul_ln51_73 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln51_74 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U16         | 3   |        | mul_ln51_75 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U17         | 3   |        | mul_ln51_76 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U18         | 3   |        | mul_ln51_77 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln51_78 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln51_79 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U15         | 3   |        | mul_ln51_80 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U15         | 3   |        | mul_ln51_81 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln51_82 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U15         | 3   |        | mul_ln51_83 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U13         | 3   |        | mul_ln51_84 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln51_85 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U15         | 3   |        | mul_ln51_86 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U13         | 3   |        | mul_ln51_87 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln51_88 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U15         | 3   |        | mul_ln51_89 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U15         | 3   |        | mul_ln51_90 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U16         | 3   |        | mul_ln51_91 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U17         | 3   |        | mul_ln51_92 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U16         | 3   |        | mul_ln51_93 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln51_94 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U17         | 3   |        | mul_ln51_95 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U18         | 3   |        | mul_ln51_96 | mul | auto   | 0       |
-|   mul_32s_32s_32_1_1_U13         | 3   |        | mul_ln54    | mul | auto   | 0       |
-|   add_ln54_fu_1189_p2            |     |        | add_ln54    | add | fabric | 0       |
-|   grp_fu_881_p2                  |     |        | add_ln54_5  | add | fabric | 0       |
-|   grp_fu_881_p2                  |     |        | add_ln54_16 | add | fabric | 0       |
-|   grp_fu_881_p2                  |     |        | add_ln54_23 | add | fabric | 0       |
-|   grp_fu_881_p2                  |     |        | add_ln54_28 | add | fabric | 0       |
-|   grp_fu_881_p2                  |     |        | add_ln54_39 | add | fabric | 0       |
-|   grp_fu_881_p2                  |     |        | add_ln54_42 | add | fabric | 0       |
-|   grp_fu_713_p2                  |     |        | add_ln54_53 | add | fabric | 0       |
-|   grp_fu_713_p2                  |     |        | add_ln54_64 | add | fabric | 0       |
-|   grp_fu_719_p2                  |     |        | add_ln54_67 | add | fabric | 0       |
-|   grp_fu_713_p2                  |     |        | add_ln54_72 | add | fabric | 0       |
-|   add_ln54_77_fu_1029_p2         |     |        | add_ln54_77 | add | fabric | 0       |
-|   add_ln54_88_fu_1063_p2         |     |        | add_ln54_88 | add | fabric | 0       |
-|   grp_fu_719_p2                  |     |        | add_ln54_91 | add | fabric | 0       |
-|   i_4_fu_1238_p2                 |     |        | i_4         | add | fabric | 0       |
-|  + filt_Pipeline_VITIS_LOOP_29_2 | 0   |        |             |     |        |         |
-|    add_ln38_fu_212_p2            |     |        | add_ln38    | add | fabric | 0       |
-|    add_ln41_fu_237_p2            |     |        | add_ln41    | add | fabric | 0       |
+| + filt                           | 21  |        |             |     |        |         |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | accumulate  | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln56    | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln56_1  | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln56_2  | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln56_3  | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln56_4  | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln56_5  | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln56_6  | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln56_7  | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln56_8  | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln56_9  | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln56_10 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln56_11 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln56_12 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln56_13 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln56_14 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln56_15 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln56_16 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln56_17 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln56_18 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln56_19 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln56_20 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln56_21 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln56_22 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln56_23 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln56_24 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln56_25 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln56_26 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln56_27 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln56_28 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln56_29 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln56_30 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln56_31 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln56_32 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U15         | 3   |        | mul_ln56_33 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln56_34 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U15         | 3   |        | mul_ln56_35 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U16         | 3   |        | mul_ln56_36 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln56_37 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U15         | 3   |        | mul_ln56_38 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln56_39 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln56_40 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln56_41 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U15         | 3   |        | mul_ln56_42 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln56_43 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U15         | 3   |        | mul_ln56_44 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln56_45 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U15         | 3   |        | mul_ln56_46 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln56_47 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U15         | 3   |        | mul_ln56_48 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln56_49 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln56_50 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U15         | 3   |        | mul_ln56_51 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U16         | 3   |        | mul_ln56_52 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln56_53 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln56_54 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U15         | 3   |        | mul_ln56_55 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln56_56 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U15         | 3   |        | mul_ln56_57 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U16         | 3   |        | mul_ln56_58 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln56_59 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U15         | 3   |        | mul_ln56_60 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U16         | 3   |        | mul_ln56_61 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln56_62 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U15         | 3   |        | mul_ln56_63 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U16         | 3   |        | mul_ln56_64 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U17         | 3   |        | mul_ln56_65 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln56_66 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U15         | 3   |        | mul_ln56_67 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U17         | 3   |        | mul_ln56_68 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln56_69 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U18         | 3   |        | mul_ln56_70 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U19         | 3   |        | mul_ln56_71 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U20         | 3   |        | mul_ln56_72 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln56_73 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U15         | 3   |        | mul_ln56_74 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U17         | 3   |        | mul_ln56_75 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U18         | 3   |        | mul_ln56_76 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U19         | 3   |        | mul_ln56_77 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U20         | 3   |        | mul_ln56_78 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln56_79 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U15         | 3   |        | mul_ln56_80 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U16         | 3   |        | mul_ln56_81 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U15         | 3   |        | mul_ln56_82 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U16         | 3   |        | mul_ln56_83 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln56_84 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U15         | 3   |        | mul_ln56_85 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U16         | 3   |        | mul_ln56_86 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U15         | 3   |        | mul_ln56_87 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U16         | 3   |        | mul_ln56_88 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U17         | 3   |        | mul_ln56_89 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U16         | 3   |        | mul_ln56_90 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U18         | 3   |        | mul_ln56_91 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U19         | 3   |        | mul_ln56_92 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln56_93 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U17         | 3   |        | mul_ln56_94 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U18         | 3   |        | mul_ln56_95 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U19         | 3   |        | mul_ln56_96 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln59    | mul | auto   | 0       |
+|   add_ln59_fu_1099_p2            |     |        | add_ln59    | add | fabric | 0       |
+|   grp_fu_756_p2                  |     |        | add_ln59_5  | add | fabric | 0       |
+|   grp_fu_756_p2                  |     |        | add_ln59_16 | add | fabric | 0       |
+|   grp_fu_756_p2                  |     |        | add_ln59_23 | add | fabric | 0       |
+|   grp_fu_756_p2                  |     |        | add_ln59_28 | add | fabric | 0       |
+|   grp_fu_598_p2                  |     |        | add_ln59_39 | add | fabric | 0       |
+|   grp_fu_598_p2                  |     |        | add_ln59_42 | add | fabric | 0       |
+|   grp_fu_598_p2                  |     |        | add_ln59_53 | add | fabric | 0       |
+|   grp_fu_598_p2                  |     |        | add_ln59_64 | add | fabric | 0       |
+|   grp_fu_604_p2                  |     |        | add_ln59_67 | add | fabric | 0       |
+|   grp_fu_598_p2                  |     |        | add_ln59_72 | add | fabric | 0       |
+|   grp_fu_598_p2                  |     |        | add_ln59_77 | add | fabric | 0       |
+|   grp_fu_604_p2                  |     |        | add_ln59_88 | add | fabric | 0       |
+|   grp_fu_604_p2                  |     |        | add_ln59_91 | add | fabric | 0       |
+|   add_ln30_fu_1159_p2            |     |        | add_ln30    | add | fabric | 0       |
+|   add_ln74_fu_1175_p2            |     |        | add_ln74    | add | fabric | 0       |
+|   i_5_fu_1186_p2                 |     |        | i_5         | add | fabric | 0       |
+|  + filt_Pipeline_VITIS_LOOP_35_2 | 0   |        |             |     |        |         |
+|    add_ln43_fu_208_p2            |     |        | add_ln43    | add | fabric | 0       |
+|    add_ln46_fu_241_p2            |     |        | add_ln46    | add | fabric | 0       |
 +----------------------------------+-----+--------+-------------+-----+--------+---------+
 
 
@@ -271,7 +272,7 @@
 | interface | axis register both port=x | filt.cpp:5 in filt, x      |
 | interface | axis register both port=y | filt.cpp:6 in filt, y      |
 | interface | ap_ctrl_none port=return  | filt.cpp:7 in filt, return |
-| unroll    |                           | filt.cpp:49 in filt        |
+| unroll    |                           | filt.cpp:54 in filt        |
 +-----------+---------------------------+----------------------------+
 
 

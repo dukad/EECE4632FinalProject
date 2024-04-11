@@ -8,7 +8,7 @@ open_project FIR_Test_Vitis
 set_top filt
 add_files filt.cpp
 add_files filt.h
-add_files -tb filt_test.cpp
+add_files -tb filt_test.cpp -cflags "-Wno-unknown-pragmas"
 open_solution "solution1" -flow_target vivado
 set_part {xc7z020-clg400-1}
 create_clock -period 20 -name default
