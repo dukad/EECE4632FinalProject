@@ -22,28 +22,31 @@ int main(){
 	tmp1.id = 0;
 	tmp1.dest = 0;
 
-	// Send BEEF value (48879)
+	// *** Send BEEF value (48879) ***
 	tmp1.data = 48879;
 	A.write(tmp1);
 
-	// Send 99 filter coefs
+	// *** Send filter coef parameters ***
+
+
+	// *** Send 99 filter coefs ***
 	for (int i = 0; i < NUM_COEFS; i++){
 		tmp1.data = i;
 
 		A.write(tmp1);
 	}
 
-	// Send ABBA value (43962)
+	// *** Send ABBA value (43962) ***
 	tmp1.data = 43962;
 	A.write(tmp1);
 
-	// Give chance for output stream to run
+	// *** Give chance for output stream to run (Emulating a signal)***
 	for (int j = 0; j < NUM_COEFS - 1; j++){
 		tmp1.data = 1;
 		A.write(tmp1);
 	}
 
-	// Write final coef with last = 1
+	// *** Write final coef with last = 1 ***
 	tmp1.data = 0;
 	tmp1.last = 1;
 	A.write(tmp1);

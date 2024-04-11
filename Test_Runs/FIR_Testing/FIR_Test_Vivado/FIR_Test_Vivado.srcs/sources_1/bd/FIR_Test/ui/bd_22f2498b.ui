@@ -1,7 +1,7 @@
 {
    "ActiveEmotionalView":"Default View",
    "Default View_ScaleFactor":"0.994255",
-   "Default View_TopLeft":"-273,-115",
+   "Default View_TopLeft":"-286,-115",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
 #  -string -flagsOSRD
@@ -13,14 +13,14 @@ preplace port port-id_ap_rst_n -pg 1 -lvl 0 -x -360 -y 200 -defaultsOSRD
 preplace inst axi_bram_ctrl_0 -pg 1 -lvl 2 -x 580 -y 310 -defaultsOSRD
 preplace inst blk_mem_gen_0 -pg 1 -lvl 3 -x 920 -y 310 -defaultsOSRD
 preplace inst axi_dma_0 -pg 1 -lvl 2 -x 580 -y 130 -defaultsOSRD
-preplace inst filt_0 -pg 1 -lvl 1 -x 130 -y 220 -defaultsOSRD
-preplace netloc processing_system7_0_FCLK_CLK0 1 0 2 -340 130 410
-preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 0 2 -340 310 400
+preplace inst filt_0 -pg 1 -lvl 1 -x 150 -y 260 -defaultsOSRD
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 2 -340 170 400
+preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 0 2 -340 350 410
 preplace netloc axi_bram_ctrl_0_BRAM_PORTA 1 2 1 NJ 310
 preplace netloc axi_dma_0_M_AXI_MM2S 1 2 2 NJ 70 NJ
 preplace netloc axi_dma_0_M_AXI_S2MM 1 2 2 NJ 90 NJ
 preplace netloc ps7_0_axi_periph_M00_AXI 1 0 2 NJ 80 N
-levelinfo -pg 1 -360 130 580 920 1110
+levelinfo -pg 1 -360 150 580 920 1110
 pagesize -pg 1 -db -bbox -sgen -490 -330 1280 1090
 "
 }

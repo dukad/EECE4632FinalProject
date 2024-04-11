@@ -7,8 +7,7 @@
       "name": "FIR_Test",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2023.2",
-      "validated": "true"
+      "tool_version": "2023.2"
     },
     "design_tree": {
       "processing_system7_0": "",
@@ -2668,9 +2667,9 @@
           },
           "filt_0": {
             "vlnv": "xilinx.com:hls:filt:1.0",
-            "ip_revision": "2113508776",
-            "xci_name": "FIR_Test_filt_0_16",
-            "xci_path": "ip\\FIR_Test_filt_0_16\\FIR_Test_filt_0_16.xci",
+            "ip_revision": "2113509874",
+            "xci_name": "FIR_Test_filt_0_17",
+            "xci_path": "ip\\FIR_Test_filt_0_17\\FIR_Test_filt_0_17.xci",
             "inst_hier_path": "filtDMA/filt_0",
             "interface_ports": {
               "m_axi_gmem": {
@@ -2703,7 +2702,7 @@
           },
           "axi_dma_0_M_AXIS_MM2S": {
             "interface_ports": [
-              "filt_0/x",
+              "filt_0/input_r",
               "axi_dma_0/M_AXIS_MM2S"
             ]
           },
@@ -2725,9 +2724,9 @@
               "axi_bram_ctrl_0/S_AXI"
             ]
           },
-          "filt_0_y": {
+          "filt_0_output_r": {
             "interface_ports": [
-              "filt_0/y",
+              "filt_0/output_r",
               "axi_dma_0/S_AXIS_S2MM"
             ]
           },

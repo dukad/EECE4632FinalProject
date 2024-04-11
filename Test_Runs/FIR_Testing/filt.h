@@ -15,8 +15,9 @@ typedef int acc_t;
 
 // *** STATE DEFINITIONS ***
 #define IDLE 0x0000
-#define READ_COEFS 0x0001
-#define OUTPUT_SIGNAL 0x0002
+#define READ_COEF_PARAMS 0x0010
+#define READ_COEFS 0x0011
+#define OUTPUT_SIGNAL 0x1000
 
 // *** INDICATOR VALUE DEFINITIONS ***
 #define BEEF 48879   // 0xBEEF = 48879

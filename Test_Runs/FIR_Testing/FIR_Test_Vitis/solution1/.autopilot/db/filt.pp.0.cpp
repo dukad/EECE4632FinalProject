@@ -9751,7 +9751,7 @@ typedef ap_axis<32,1,1,1> AXI_VAL;
 typedef int data_t;
 typedef int coef_t;
 typedef int acc_t;
-# 25 "./filt.h"
+# 26 "./filt.h"
 __attribute__((sdx_kernel("filt", 0))) void filt (hls::stream<AXI_VAL>& output, coef_t coefs[99], hls::stream<AXI_VAL>& input);
 # 2 "filt.cpp" 2
 
@@ -9770,6 +9770,8 @@ __attribute__((sdx_kernel("filt", 0))) void filt (hls::stream<AXI_VAL>& output, 
 #pragma HLS INTERFACE ap_ctrl_none port=return
 
  int i = 0;
+ int coef_scale = 0;
+ int num_filters = 0;
 
  acc_t accumulate;
  data_t data;
@@ -9782,25 +9784,30 @@ __attribute__((sdx_kernel("filt", 0))) void filt (hls::stream<AXI_VAL>& output, 
 
  int state = 0x0000;
 
- VITIS_LOOP_22_1: while(running){
+ VITIS_LOOP_24_1: while(running){
   input.read(tmp);
 
   switch (state){
    case 0x0000:
 
     if (tmp.data.to_int() == 48879){
-     state = 0x0001;
+
+     state = 0x0011;
      i -= 1;
     }
     break;
+# 48 "filt.cpp"
+   case 0x0011:
 
-   case 0x0001:
 
 
 
-    VITIS_LOOP_38_2: while(state == 0x0001){
+
+
+
+    VITIS_LOOP_56_2: while(state == 0x0011){
      if (tmp.data.to_int() == 43962){
-      state = 0x0002;
+      state = 0x1000;
       i = 0;
       break;
      }
@@ -9812,7 +9819,7 @@ __attribute__((sdx_kernel("filt", 0))) void filt (hls::stream<AXI_VAL>& output, 
     }
     break;
 
-   case 0x0002:
+   case 0x1000:
 
 
     accumulate = 0;
@@ -9836,6 +9843,7 @@ __attribute__((sdx_kernel("filt", 0))) void filt (hls::stream<AXI_VAL>& output, 
     tmp_out.user = tmp.user;
 
     output.write(tmp_out);
+
     break;
   }
 

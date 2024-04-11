@@ -7,6 +7,8 @@ void filt (hls::stream<AXI_VAL>& output, coef_t coefs[NUM_COEFS], hls::stream<AX
 #pragma HLS INTERFACE ap_ctrl_none port=return
 
 	int i = 0;
+	int coef_scale = 0;   // THIS NEEDS TO BE CHANGED TO FLOAT/DOUBLE/FIXED
+	int num_filters = 0;
 
 	acc_t accumulate;
 	data_t data;
@@ -26,15 +28,31 @@ void filt (hls::stream<AXI_VAL>& output, coef_t coefs[NUM_COEFS], hls::stream<AX
 			case IDLE:
 				// Remains in idle state until 0xBEEF value is read on AXI stream
 				if (tmp.data.to_int() == BEEF){
+					//state = READ_COEF_PARAMS;
 					state = READ_COEFS;
 					i -= 1;
 				}
 				break;
 
+//			case READ_COEF_PARAMS:
+//				// *** COEFFICIENT PROCESSING SETUP ***
+//				num_filters = tmp.data.to_int();
+//
+//				input.read(tmp);
+//
+//				// FOR LOOP TO READ ALL COEFS INTO MEMORY
+//
+//				state = READ_COEFS;
+//				break;
+
 			case READ_COEFS:
 				// *** COEFFICIENT PROCESSING CODE ***
 				// Reads coefficients from AXI stream and writes them into coefficient array
 				// Keeps reading until value of 0xABBA is read on AXI stream
+//				input.read(tmp);
+//
+//				coef_scale = 0;
+
 				while(state == READ_COEFS){
 					if (tmp.data.to_int() == ABBA){
 						state = OUTPUT_SIGNAL;
@@ -56,7 +74,7 @@ void filt (hls::stream<AXI_VAL>& output, coef_t coefs[NUM_COEFS], hls::stream<AX
 
 				Shift_Accumulate_Loop:
 				for (i = NUM_COEFS - 1; i > 0; i--){
-#pragma HLS UNROLL
+				#pragma HLS UNROLL
 					signal_shift_reg[i] = signal_shift_reg[i - 1];
 					accumulate += signal_shift_reg[i] * coefs[i];
 				}
@@ -73,6 +91,7 @@ void filt (hls::stream<AXI_VAL>& output, coef_t coefs[NUM_COEFS], hls::stream<AX
 				tmp_out.user = tmp.user;
 
 				output.write(tmp_out);
+
 				break;
 		}
 
