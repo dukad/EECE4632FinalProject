@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
-    <originFiles name="filt.cpp" path="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Test_Runs\FIR_Test\filt.cpp"/>
-    <originFiles name="filt.h" path="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Test_Runs\FIR_Test\filt.h"/>
+    <originFiles name="filt.cpp" path="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Test_Runs\FIR_Testing\filt.cpp"/>
+    <originFiles name="filt.h" path="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Test_Runs\FIR_Testing\filt.h"/>
   </source>
   <testbench>
-    <originFiles name="filt_test.cpp" path="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Test_Runs\FIR_Test\filt_test.cpp"/>
+    <originFiles name="filt_test.cpp" path="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Test_Runs\FIR_Testing\filt_test.cpp"/>
   </testbench>
 </autopilotfilemapping:AutoPilotFileMapping>

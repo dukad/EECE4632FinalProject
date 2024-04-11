@@ -1,4 +1,4 @@
-<project xmlns="com.autoesl.autopilot.project" top="filt" name="FIR_Test_Vitis" projectType="C/C++">
+<project xmlns="com.autoesl.autopilot.project" name="FIR_Test_Vitis" top="filt" projectType="C/C++">
     <includePaths/>
     <libraryPaths/>
     <Simulation>

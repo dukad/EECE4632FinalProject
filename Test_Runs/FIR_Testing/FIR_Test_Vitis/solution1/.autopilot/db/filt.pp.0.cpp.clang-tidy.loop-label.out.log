@@ -23,13 +23,13 @@ C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Test_Runs\FIR_Testi
       ^~~
       VITIS_LOOP_1247_1: 
 C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Test_Runs\FIR_Testing\FIR_Test_Vitis\solution1\.autopilot\db\filt.pp.0.cpp:4081:7: note: FIX-IT applied suggested code changes
-C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Test_Runs\FIR_Testing\FIR_Test_Vitis\solution1\.autopilot\db\filt.pp.0.cpp:9787:2: warning: Added loop label VITIS_LOOP_24_1:   [xilinx-label-all-loops]
+C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Test_Runs\FIR_Testing\FIR_Test_Vitis\solution1\.autopilot\db\filt.pp.0.cpp:9808:2: warning: Added loop label VITIS_LOOP_40_1:   [xilinx-label-all-loops]
  while(running){
  ^~~~~
- VITIS_LOOP_24_1: 
-C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Test_Runs\FIR_Testing\FIR_Test_Vitis\solution1\.autopilot\db\filt.pp.0.cpp:9787:2: note: FIX-IT applied suggested code changes
-C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Test_Runs\FIR_Testing\FIR_Test_Vitis\solution1\.autopilot\db\filt.pp.0.cpp:9808:5: warning: Added loop label VITIS_LOOP_56_2:   [xilinx-label-all-loops]
+ VITIS_LOOP_40_1: 
+C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Test_Runs\FIR_Testing\FIR_Test_Vitis\solution1\.autopilot\db\filt.pp.0.cpp:9808:2: note: FIX-IT applied suggested code changes
+C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Test_Runs\FIR_Testing\FIR_Test_Vitis\solution1\.autopilot\db\filt.pp.0.cpp:9831:5: warning: Added loop label VITIS_LOOP_74_2:   [xilinx-label-all-loops]
     while(state == 0x0011){
     ^~~~~
-    VITIS_LOOP_56_2: 
-C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Test_Runs\FIR_Testing\FIR_Test_Vitis\solution1\.autopilot\db\filt.pp.0.cpp:9808:5: note: FIX-IT applied suggested code changes
+    VITIS_LOOP_74_2: 
+C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Test_Runs\FIR_Testing\FIR_Test_Vitis\solution1\.autopilot\db\filt.pp.0.cpp:9831:5: note: FIX-IT applied suggested code changes

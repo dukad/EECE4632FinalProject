@@ -9748,10 +9748,15 @@ private:
 
 
 typedef ap_axis<32,1,1,1> AXI_VAL;
-typedef int data_t;
+typedef float data_t;
 typedef int coef_t;
-typedef int acc_t;
-# 26 "./filt.h"
+typedef float acc_t;
+
+union fpint{
+ int ival;
+ float fval;
+};
+# 31 "./filt.h"
 __attribute__((sdx_kernel("filt", 0))) void filt (hls::stream<AXI_VAL>& output, coef_t coefs[99], hls::stream<AXI_VAL>& input);
 # 2 "filt.cpp" 2
 
@@ -9770,7 +9775,7 @@ __attribute__((sdx_kernel("filt", 0))) void filt (hls::stream<AXI_VAL>& output, 
 #pragma HLS INTERFACE ap_ctrl_none port=return
 
  int i = 0;
- int coef_scale = 0;
+ float coef_scale = 0;
  int num_filters = 0;
 
  acc_t accumulate;
@@ -9780,23 +9785,41 @@ __attribute__((sdx_kernel("filt", 0))) void filt (hls::stream<AXI_VAL>& output, 
  AXI_VAL tmp_out;
  static data_t signal_shift_reg[99];
 
+ fpint coef;
+ coef.ival = 0;
+ coef.fval = 0;
+
+ fpint acc;
+ acc.ival = 0;
+ acc.fval = 0;
+
+ fpint coe;
+ coe.ival = 0;
+ coe.fval = 0;
+
+ fpint co;
+ co.ival = 0;
+ co.fval = 0;
+
  bool running = true;
 
  int state = 0x0000;
 
- VITIS_LOOP_24_1: while(running){
+ VITIS_LOOP_40_1: while(running){
   input.read(tmp);
+
+  coef.ival = tmp.data.to_int();
 
   switch (state){
    case 0x0000:
 
-    if (tmp.data.to_int() == 48879){
+    if (coef.ival == 48879){
 
      state = 0x0011;
      i -= 1;
     }
     break;
-# 48 "filt.cpp"
+# 66 "filt.cpp"
    case 0x0011:
 
 
@@ -9805,16 +9828,17 @@ __attribute__((sdx_kernel("filt", 0))) void filt (hls::stream<AXI_VAL>& output, 
 
 
 
-    VITIS_LOOP_56_2: while(state == 0x0011){
-     if (tmp.data.to_int() == 43962){
+    VITIS_LOOP_74_2: while(state == 0x0011){
+     if (coef.ival == 43962){
       state = 0x1000;
       i = 0;
       break;
      }
 
-     coefs[i] = tmp.data.to_int();
+     coefs[i] = coef.ival;
 
      input.read(tmp);
+     coef.ival = tmp.data.to_int();
      i += 1;
     }
     break;
@@ -9828,13 +9852,17 @@ __attribute__((sdx_kernel("filt", 0))) void filt (hls::stream<AXI_VAL>& output, 
     for (i = 99 - 1; i > 0; i--){
 #pragma HLS UNROLL
  signal_shift_reg[i] = signal_shift_reg[i - 1];
-     accumulate += signal_shift_reg[i] * coefs[i];
+     coe.ival = coefs[i];
+     accumulate += signal_shift_reg[i] * coe.fval;
     }
 
-    accumulate += tmp.data.to_int() * coefs[0];
-    signal_shift_reg[0] = tmp.data.to_int();
+    co.ival = coefs[0];
+    accumulate += coef.fval * co.fval;
+    signal_shift_reg[0] = coef.fval;
 
-    tmp_out.data = accumulate;
+    acc.fval = accumulate;
+
+    tmp_out.data = acc.ival;
     tmp_out.keep = tmp.keep;
     tmp_out.strb = tmp.strb;
     tmp_out.last = tmp.last;

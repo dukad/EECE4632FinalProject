@@ -2,7 +2,7 @@
 #include "filt.h"
 using namespace std;
 
-void filt (hls::stream<AXI_VAL>& y, coef_t c[N], hls::stream<AXI_VAL>& x);
+void filt (hls::stream<AXI_VAL>& output, coef_t coefs[NUM_COEFS], hls::stream<AXI_VAL>& input);
 
 int main(){
 	hls::stream<AXI_VAL> A, B;
@@ -22,28 +22,31 @@ int main(){
 	tmp1.id = 0;
 	tmp1.dest = 0;
 
-	// Send BEEF value (48879)
+	// *** Send BEEF value (48879) ***
 	tmp1.data = 48879;
 	A.write(tmp1);
 
-	// Send 99 filter coefs
-	for (int i = 0; i < N; i++){
+	// *** Send filter coef parameters ***
+
+
+	// *** Send 99 filter coefs ***
+	for (int i = 0; i < NUM_COEFS; i++){
 		tmp1.data = i;
 
 		A.write(tmp1);
 	}
 
-	// Send ABBA value (43962)
+	// *** Send ABBA value (43962) ***
 	tmp1.data = 43962;
 	A.write(tmp1);
 
-	// Give chance for output stream to run
-	for (int j = 0; j < N - 1; j++){
+	// *** Give chance for output stream to run (Emulating a signal)***
+	for (int j = 0; j < NUM_COEFS - 1; j++){
 		tmp1.data = 1;
 		A.write(tmp1);
 	}
 
-	// Write final coef with last = 1
+	// *** Write final coef with last = 1 ***
 	tmp1.data = 0;
 	tmp1.last = 1;
 	A.write(tmp1);
@@ -54,7 +57,7 @@ int main(){
 
 	cout << "After function call" << endl;
 
-	for (int j = 0; j < N; j++){
+	for (int j = 0; j < NUM_COEFS; j++){
 		B.read(tmp2);
 		k = tmp2.data.to_int();
 
@@ -63,6 +66,6 @@ int main(){
 
 	cout << "Read from output buffer" << endl;
 
-	cout << "Success: results match" << endl;
+	cout << "GREAT! YOU PASSED" << endl;
 	return 0;
 }

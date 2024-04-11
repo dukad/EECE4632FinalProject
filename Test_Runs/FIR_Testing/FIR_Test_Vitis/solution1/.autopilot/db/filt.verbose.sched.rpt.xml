@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'filt'" level="0">
-<item name = "Date">Thu Apr 11 15:33:23 2024
+<item name = "Date">Thu Apr 11 17:56:58 2024
 </item>
 <item name = "Version">2023.2 (Build 4023990 on Oct 11 2023)</item>
 <item name = "Project">FIR_Test_Vitis</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">20.00 ns, 14.600 ns, 5.40 ns</column>
+<column name="ap_clk">30.00 ns, 21.900 ns, 8.10 ns</column>
 </table>
 </item>
 </section>
@@ -35,7 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- VITIS_LOOP_24_1">?, ?, ?, -, -, ?, no</column>
+<column name="- VITIS_LOOP_40_1">?, ?, ?, -, -, ?, no</column>
 </table>
 </item>
 </section>

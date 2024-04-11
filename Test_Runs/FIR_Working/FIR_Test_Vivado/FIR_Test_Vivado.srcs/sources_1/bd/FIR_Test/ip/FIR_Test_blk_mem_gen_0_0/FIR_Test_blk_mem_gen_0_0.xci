@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "FIR_Test_blk_mem_gen_0_0",
-    "cell_name": "firDMA/blk_mem_gen_0",
+    "cell_name": "filtDMA/blk_mem_gen_0",
     "component_reference": "xilinx.com:ip:blk_mem_gen:8.4",
     "ip_revision": "7",
     "gen_directory": "../../../../../../FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/ip/FIR_Test_blk_mem_gen_0_0",

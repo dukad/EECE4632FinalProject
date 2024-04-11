@@ -1,5 +1,6 @@
 INFO: [SIM 2] *************** CSIM start ***************
 INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../filt_test.cpp in debug mode
    Compiling ../../../../filt.cpp in debug mode
    Generating csim.exe
 In function
@@ -105,7 +106,7 @@ After function call
 4753
 4851
 Read from output buffer
-Success: results match
+GREAT! YOU PASSED
 INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 200
 INFO: [SIM 1] CSim done with 0 errors.
 INFO: [SIM 3] *************** CSIM finish ***************

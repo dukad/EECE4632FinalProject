@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "FIR_Test_axi_bram_ctrl_0_0",
-    "cell_name": "firDMA/axi_bram_ctrl_0",
+    "cell_name": "filtDMA/axi_bram_ctrl_0",
     "component_reference": "xilinx.com:ip:axi_bram_ctrl:4.1",
     "ip_revision": "9",
     "gen_directory": "../../../../../../FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/ip/FIR_Test_axi_bram_ctrl_0_0",

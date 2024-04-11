@@ -1,5 +1,6 @@
 filt_flow_control_loop_pipe_sequential_init
-filt_mul_32s_32s_32_1_1
+filt_fadd_32ns_32ns_32_3_full_dsp_1
+filt_fmul_32ns_32ns_32_2_max_dsp_1
 filt_signal_shift_reg_RAM_AUTO_1R1W
 filt_gmem_m_axi
 filt_control_s_axi
@@ -17,5 +18,5 @@ filt_regslice_both
 filt_regslice_both
 filt_regslice_both
 filt_regslice_both
-filt_Pipeline_VITIS_LOOP_56_2
+filt_Pipeline_VITIS_LOOP_74_2
 filt

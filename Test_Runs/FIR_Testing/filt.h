@@ -6,9 +6,14 @@
 
 // *** DATA TYPE DEFINITIONS ***
 typedef ap_axis<32,1,1,1> AXI_VAL;
-typedef int data_t;
+typedef float data_t;
 typedef int coef_t;
-typedef int acc_t;
+typedef float acc_t;
+
+union fpint{
+	int ival;
+	float fval;
+};
 
 // *** COEFFICIENT ARRAY DEFINITIONS ***
 #define NUM_COEFS 99

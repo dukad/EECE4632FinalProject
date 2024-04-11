@@ -12,8 +12,8 @@
   <warningLogs>
     <logs>
       <synLog>
-        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="FIR_Test_Vitis" solutionName="solution1" date="2024-04-11T01:03:43.609-0400" type="Warning"/>
-        <logs message="WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_22_1' (filt.cpp:22:19) in function 'filt' the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop.&#xD;&#xA;Resolution: For help on HLS 200-960 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&amp;url=ug1448-hls-guidance&amp;resourceid=200-960.html" projectName="FIR_Test_Vitis" solutionName="solution1" date="2024-04-11T01:03:39.631-0400" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="FIR_Test_Vitis" solutionName="solution1" date="2024-04-11T15:33:25.336-0400" type="Warning"/>
+        <logs message="WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_24_1' (filt.cpp:24:19) in function 'filt' the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop.&#xD;&#xA;Resolution: For help on HLS 200-960 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&amp;url=ug1448-hls-guidance&amp;resourceid=200-960.html" projectName="FIR_Test_Vitis" solutionName="solution1" date="2024-04-11T15:33:21.567-0400" type="Warning"/>
       </synLog>
       <simLog/>
       <mgLog/>

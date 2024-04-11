@@ -12,6 +12,18 @@ int main(){
 
 	int k = 0;
 
+	fpint temp_in;
+	temp_in.fval = 0.1;
+
+	fpint a;
+	a.fval = 0;
+
+	fpint b;
+	b.fval = 0;
+
+	fpint temp_sig_in;
+	temp_sig_in.fval = 1;
+
 	cout << "In function" << endl;
 
 	tmp1.data = 0;
@@ -30,8 +42,15 @@ int main(){
 
 
 	// *** Send 99 filter coefs ***
-	for (int i = 0; i < NUM_COEFS; i++){
-		tmp1.data = i;
+	for (float i = 0; i < NUM_COEFS; i++){
+		temp_in.fval += 0.1;
+		tmp1.data = temp_in.ival;
+//		a.ival = temp_in.ival * i;
+//
+//		b.fval = temp_in.fval * i;
+//
+//		cout << a.fval << " " << b.fval << endl;
+//		cout << a.ival << " " << b.ival << endl;
 
 		A.write(tmp1);
 	}
@@ -40,14 +59,14 @@ int main(){
 	tmp1.data = 43962;
 	A.write(tmp1);
 
-	// *** Give chance for output stream to run (Emulating a signal)***
+	// *** Give chance for output stream to run (Emulating a signal) ***
 	for (int j = 0; j < NUM_COEFS - 1; j++){
-		tmp1.data = 1;
+		tmp1.data = temp_sig_in.ival;
 		A.write(tmp1);
 	}
 
 	// *** Write final coef with last = 1 ***
-	tmp1.data = 0;
+	tmp1.data = 1;
 	tmp1.last = 1;
 	A.write(tmp1);
 
@@ -57,11 +76,15 @@ int main(){
 
 	cout << "After function call" << endl;
 
+	fpint temp;
+	temp.ival = 0;
+	temp.fval = 0;
+
 	for (int j = 0; j < NUM_COEFS; j++){
 		B.read(tmp2);
-		k = tmp2.data.to_int();
+		temp.ival = tmp2.data.to_int();
 
-		cout << tmp2.data.to_int() << endl;
+		cout << temp.fval << endl;
 	}
 
 	cout << "Read from output buffer" << endl;

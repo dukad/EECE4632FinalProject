@@ -1,6 +1,6 @@
 <dict>
   <key>main-file</key>
-  <string>C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vitis/solution1/.autopilot/db/filt.pp.0.cpp</string>
+  <string>C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Testing/FIR_Test_Vitis/solution1/.autopilot/db/filt.pp.0.cpp</string>
   <key>diagnostics</key>
   <array>
     <dict>
@@ -167,7 +167,7 @@
       <key>level</key>
       <string>warning</string>
       <key>filename</key>
-      <string>C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vitis/solution1/csynth.tcl</string>
+      <string>C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Testing/FIR_Test_Vitis/solution1/csynth.tcl</string>
       <key>line</key>
       <integer>17</integer>
       <key>column</key>
@@ -183,7 +183,7 @@
       <key>level</key>
       <string>warning</string>
       <key>filename</key>
-      <string>C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vitis/solution1/directives.tcl</string>
+      <string>C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Testing/FIR_Test_Vitis/solution1/directives.tcl</string>
       <key>line</key>
       <integer>7</integer>
       <key>column</key>
@@ -205,7 +205,7 @@
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=filt_XLX_SEP_ PragmaOptions=m_axi depth=99 port=c_XLX_SEP_</string>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=filt_XLX_SEP_ PragmaOptions=m_axi depth=99 port=coefs_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>
@@ -221,7 +221,7 @@
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=filt_XLX_SEP_ PragmaOptions=axis register both port=x_XLX_SEP_</string>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=filt_XLX_SEP_ PragmaOptions=axis register both port=input_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>
@@ -237,7 +237,7 @@
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=filt_XLX_SEP_ PragmaOptions=axis register both port=y_XLX_SEP_</string>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=filt_XLX_SEP_ PragmaOptions=axis register both port=output_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>
@@ -265,7 +265,7 @@
       <key>filename</key>
       <string>filt.cpp</string>
       <key>line</key>
-      <integer>49</integer>
+      <integer>77</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
