@@ -15,7 +15,7 @@ target triple = "fpga64-xilinx-none"
 %"struct.ap_int_base<1, false>" = type { %"struct.ssdm_int<1, false>" }
 %"struct.ssdm_int<1, false>" = type { i1 }
 
-; Function Attrs: inaccessiblemem_or_argmemonly noinline willreturn
+; Function Attrs: noinline willreturn
 define void @apatb_filt_ir(%"class.hls::stream<hls::axis<ap_int<32>, 1, 1, 1, '8', false>, 0>"* noalias nonnull dereferenceable(12) %y, i32* noalias nocapture nonnull "fpga.decayed.dim.hint"="99" "maxi" %c, %"class.hls::stream<hls::axis<ap_int<32>, 1, 1, 1, '8', false>, 0>"* noalias nonnull dereferenceable(12) %x) local_unnamed_addr #0 {
 entry:
   %y_copy.data = alloca i32, align 512
@@ -314,7 +314,7 @@ declare void @fpga_fifo_push_4(i8*, i8*)
 
 declare void @fpga_fifo_push_1(i8*, i8*)
 
-attributes #0 = { inaccessiblemem_or_argmemonly noinline willreturn "fpga.wrapper.func"="wrapper" }
+attributes #0 = { noinline willreturn "fpga.wrapper.func"="wrapper" }
 attributes #1 = { argmemonly noinline willreturn "fpga.wrapper.func"="copyin" }
 attributes #2 = { argmemonly noinline norecurse willreturn "fpga.wrapper.func"="onebyonecpy_hls" }
 attributes #3 = { argmemonly noinline norecurse willreturn "fpga.wrapper.func"="arraycpy_hls" }

@@ -47,21 +47,21 @@ Diagnostics:
         Length:          0
         ReplacementText: 'VITIS_LOOP_1247_1: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_16_1:  '
-    FileOffset:      16
+    Message:         'Added loop label VITIS_LOOP_22_1:  '
+    FileOffset:      22
     FilePath:        filt.cpp
     Replacements:    
       - FilePath:        'C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Test_Runs\FIR_Test\FIR_Test_Vitis\solution1\.autopilot\db\filt.pp.0.cpp'
-        Offset:          1059908
+        Offset:          1060004
         Length:          0
-        ReplacementText: 'VITIS_LOOP_16_1: '
+        ReplacementText: 'VITIS_LOOP_22_1: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_30_2:  '
-    FileOffset:      30
+    Message:         'Added loop label VITIS_LOOP_29_2:  '
+    FileOffset:      29
     FilePath:        filt.cpp
     Replacements:    
       - FilePath:        'C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Test_Runs\FIR_Test\FIR_Test_Vitis\solution1\.autopilot\db\filt.pp.0.cpp'
-        Offset:          1060049
+        Offset:          1060037
         Length:          0
-        ReplacementText: 'VITIS_LOOP_30_2: '
+        ReplacementText: 'VITIS_LOOP_29_2: '
 ...

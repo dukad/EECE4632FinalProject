@@ -14,80 +14,54 @@ int main(){
 
 	cout << "In function" << endl;
 
-	for (int j = 0; j < 1; j++){
-		tmp1.data = 48879;
-		tmp1.keep = 1;
-		tmp1.strb = 1;
-		tmp1.user = 1;
-		tmp1.last = 0;
-		tmp1.id = 0;
-		tmp1.dest = 0;
+	tmp1.data = 0;
+	tmp1.keep = 1;
+	tmp1.strb = 1;
+	tmp1.user = 1;
+	tmp1.last = 0;
+	tmp1.id = 0;
+	tmp1.dest = 0;
+
+	// Send BEEF value (48879)
+	tmp1.data = 48879;
+	A.write(tmp1);
+
+	// Send 99 filter coefs
+	for (int i = 0; i < N; i++){
+		tmp1.data = i;
 
 		A.write(tmp1);
 	}
 
-	for (int j = 1; j < 12; j++){
-		tmp1.data = j;
-		tmp1.keep = 1;
-		tmp1.strb = 1;
-		tmp1.user = 1;
-		tmp1.last = 0;
-		tmp1.id = 0;
-		tmp1.dest = 1;
+	// Send ABBA value (43962)
+	tmp1.data = 43962;
+	A.write(tmp1);
 
+	// Give chance for output stream to run
+	for (int j = 0; j < N - 1; j++){
+		tmp1.data = 1;
 		A.write(tmp1);
 	}
 
-	for (int j = 11; j < 13; j++){
-		tmp1.data = 43962;
-		tmp1.keep = 1;
-		tmp1.strb = 1;
-		tmp1.user = 1;
-		tmp1.last = 0;
-		tmp1.id = 0;
-		tmp1.dest = 1;
+	// Write final coef with last = 1
+	tmp1.data = 0;
+	tmp1.last = 1;
+	A.write(tmp1);
 
-		A.write(tmp1);
-	}
-
-	for (int j = 0; j < 11; j++){
-		tmp1.data = 0;
-		tmp1.keep = 1;
-		tmp1.strb = 1;
-		tmp1.user = 1;
-		tmp1.last = 0;
-		tmp1.id = 0;
-		tmp1.dest = 1;
-
-		A.write(tmp1);
-	}
-
-	for (int j = 11; j < 12; j++){
-		tmp1.data = 0;
-		tmp1.keep = 1;
-		tmp1.strb = 1;
-		tmp1.user = 1;
-		tmp1.last = 1;
-		tmp1.id = 0;
-		tmp1.dest = 1;
-
-		A.write(tmp1);
-	}
-
-	cout << "Wrote buffer" << endl;
+	cout << "Wrote to input buffer" << endl;
 
 	filt(B, coefs, A);
 
 	cout << "After function call" << endl;
 
-	for (int j = 1; j < 12; j++){
+	for (int j = 0; j < N; j++){
 		B.read(tmp2);
 		k = tmp2.data.to_int();
 
 		cout << tmp2.data.to_int() << endl;
 	}
 
-	cout << "Read buffer" << endl;
+	cout << "Read from output buffer" << endl;
 
 	cout << "Success: results match" << endl;
 	return 0;

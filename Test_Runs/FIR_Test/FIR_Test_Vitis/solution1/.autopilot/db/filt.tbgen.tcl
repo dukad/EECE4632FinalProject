@@ -222,7 +222,7 @@ set NewPortList {[
  	{ "name": "x_TDEST", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "x_V_dest_V", "role": "default" }}  ]}
 
 set RtlHierarchyInfo {[
-	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18"],
+	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25"],
 		"CDFG" : "filt",
 		"Protocol" : "ap_ctrl_none",
 		"ControlExist" : "0", "ap_start" : "0", "ap_ready" : "0", "ap_done" : "0", "ap_continue" : "0", "ap_idle" : "0", "real_start" : "0",
@@ -242,7 +242,7 @@ set RtlHierarchyInfo {[
 					{"Name" : "gmem_blk_n_AR", "Type" : "RtlSignal"},
 					{"Name" : "gmem_blk_n_R", "Type" : "RtlSignal"}],
 				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "grp_filt_Pipeline_VITIS_LOOP_30_2_fu_303", "Port" : "gmem", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "2", "SubInstance" : "grp_filt_Pipeline_VITIS_LOOP_29_2_fu_609", "Port" : "gmem", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "y_V_data_V", "Type" : "Axis", "Direction" : "O", "BaseName" : "y",
 				"BlockSignal" : [
 					{"Name" : "y_TDATA_blk_n", "Type" : "RtlSignal"}]},
@@ -257,30 +257,32 @@ set RtlHierarchyInfo {[
 				"BlockSignal" : [
 					{"Name" : "x_TDATA_blk_n", "Type" : "RtlSignal"}],
 				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "grp_filt_Pipeline_VITIS_LOOP_30_2_fu_303", "Port" : "x_V_data_V", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "2", "SubInstance" : "grp_filt_Pipeline_VITIS_LOOP_29_2_fu_609", "Port" : "x_V_data_V", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "x_V_keep_V", "Type" : "Axis", "Direction" : "I", "BaseName" : "x",
 				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "grp_filt_Pipeline_VITIS_LOOP_30_2_fu_303", "Port" : "x_V_keep_V", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "2", "SubInstance" : "grp_filt_Pipeline_VITIS_LOOP_29_2_fu_609", "Port" : "x_V_keep_V", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "x_V_strb_V", "Type" : "Axis", "Direction" : "I", "BaseName" : "x",
 				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "grp_filt_Pipeline_VITIS_LOOP_30_2_fu_303", "Port" : "x_V_strb_V", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "2", "SubInstance" : "grp_filt_Pipeline_VITIS_LOOP_29_2_fu_609", "Port" : "x_V_strb_V", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "x_V_user_V", "Type" : "Axis", "Direction" : "I", "BaseName" : "x",
 				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "grp_filt_Pipeline_VITIS_LOOP_30_2_fu_303", "Port" : "x_V_user_V", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "2", "SubInstance" : "grp_filt_Pipeline_VITIS_LOOP_29_2_fu_609", "Port" : "x_V_user_V", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "x_V_last_V", "Type" : "Axis", "Direction" : "I", "BaseName" : "x",
 				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "grp_filt_Pipeline_VITIS_LOOP_30_2_fu_303", "Port" : "x_V_last_V", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "2", "SubInstance" : "grp_filt_Pipeline_VITIS_LOOP_29_2_fu_609", "Port" : "x_V_last_V", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "x_V_id_V", "Type" : "Axis", "Direction" : "I", "BaseName" : "x",
 				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "grp_filt_Pipeline_VITIS_LOOP_30_2_fu_303", "Port" : "x_V_id_V", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "2", "SubInstance" : "grp_filt_Pipeline_VITIS_LOOP_29_2_fu_609", "Port" : "x_V_id_V", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "x_V_dest_V", "Type" : "Axis", "Direction" : "I", "BaseName" : "x",
 				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "grp_filt_Pipeline_VITIS_LOOP_30_2_fu_303", "Port" : "x_V_dest_V", "Inst_start_state" : "3", "Inst_end_state" : "4"}]}],
+					{"ID" : "2", "SubInstance" : "grp_filt_Pipeline_VITIS_LOOP_29_2_fu_609", "Port" : "x_V_dest_V", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+			{"Name" : "signal_shift_reg", "Type" : "Memory", "Direction" : "IO"}],
 		"Loop" : [
-			{"Name" : "VITIS_LOOP_16_1", "PipelineType" : "no",
-				"LoopDec" : {"FSMBitwidth" : "16", "FirstState" : "ap_ST_fsm_state2", "LastState" : ["ap_ST_fsm_state16"], "QuitState" : ["ap_ST_fsm_state2"], "PreState" : ["ap_ST_fsm_state1"], "PostState" : ["ap_ST_fsm_state1"], "OneDepthLoop" : "0", "OneStateBlock": ""}}]},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_filt_Pipeline_VITIS_LOOP_30_2_fu_303", "Parent" : "0", "Child" : ["2"],
-		"CDFG" : "filt_Pipeline_VITIS_LOOP_30_2",
+			{"Name" : "VITIS_LOOP_22_1", "PipelineType" : "no",
+				"LoopDec" : {"FSMBitwidth" : "114", "FirstState" : "ap_ST_fsm_state2", "LastState" : ["ap_ST_fsm_state114"], "QuitState" : ["ap_ST_fsm_state2"], "PreState" : ["ap_ST_fsm_state1"], "PostState" : ["ap_ST_fsm_state1"], "OneDepthLoop" : "0", "OneStateBlock": ""}}]},
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.signal_shift_reg_U", "Parent" : "0"},
+	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_filt_Pipeline_VITIS_LOOP_29_2_fu_609", "Parent" : "0", "Child" : ["3"],
+		"CDFG" : "filt_Pipeline_VITIS_LOOP_29_2",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
@@ -294,7 +296,7 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"IsBlackBox" : "0",
 		"Port" : [
-			{"Name" : "sext_ln30", "Type" : "None", "Direction" : "I"},
+			{"Name" : "sext_ln29", "Type" : "None", "Direction" : "I"},
 			{"Name" : "tmp_data", "Type" : "None", "Direction" : "I"},
 			{"Name" : "gmem", "Type" : "MAXI", "Direction" : "O",
 				"BlockSignal" : [
@@ -313,37 +315,43 @@ set RtlHierarchyInfo {[
 			{"Name" : "x_V_id_V", "Type" : "Axis", "Direction" : "I", "BaseName" : "x"},
 			{"Name" : "x_V_dest_V", "Type" : "Axis", "Direction" : "I", "BaseName" : "x"}],
 		"Loop" : [
-			{"Name" : "VITIS_LOOP_30_2", "PipelineType" : "UPC",
+			{"Name" : "VITIS_LOOP_29_2", "PipelineType" : "UPC",
 				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter8", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter8", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "2", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_filt_Pipeline_VITIS_LOOP_30_2_fu_303.flow_control_loop_pipe_sequential_init_U", "Parent" : "1"},
-	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.control_s_axi_U", "Parent" : "0"},
-	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.gmem_m_axi_U", "Parent" : "0"},
-	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_y_V_data_V_U", "Parent" : "0"},
-	{"ID" : "6", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_y_V_keep_V_U", "Parent" : "0"},
-	{"ID" : "7", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_y_V_strb_V_U", "Parent" : "0"},
-	{"ID" : "8", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_y_V_user_V_U", "Parent" : "0"},
-	{"ID" : "9", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_y_V_last_V_U", "Parent" : "0"},
-	{"ID" : "10", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_y_V_id_V_U", "Parent" : "0"},
-	{"ID" : "11", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_y_V_dest_V_U", "Parent" : "0"},
-	{"ID" : "12", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_x_V_data_V_U", "Parent" : "0"},
-	{"ID" : "13", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_x_V_keep_V_U", "Parent" : "0"},
-	{"ID" : "14", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_x_V_strb_V_U", "Parent" : "0"},
-	{"ID" : "15", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_x_V_user_V_U", "Parent" : "0"},
-	{"ID" : "16", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_x_V_last_V_U", "Parent" : "0"},
-	{"ID" : "17", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_x_V_id_V_U", "Parent" : "0"},
-	{"ID" : "18", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_x_V_dest_V_U", "Parent" : "0"}]}
+	{"ID" : "3", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_filt_Pipeline_VITIS_LOOP_29_2_fu_609.flow_control_loop_pipe_sequential_init_U", "Parent" : "2"},
+	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.control_s_axi_U", "Parent" : "0"},
+	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.gmem_m_axi_U", "Parent" : "0"},
+	{"ID" : "6", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_32s_32s_32_1_1_U13", "Parent" : "0"},
+	{"ID" : "7", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_32s_32s_32_1_1_U14", "Parent" : "0"},
+	{"ID" : "8", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_32s_32s_32_1_1_U15", "Parent" : "0"},
+	{"ID" : "9", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_32s_32s_32_1_1_U16", "Parent" : "0"},
+	{"ID" : "10", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_32s_32s_32_1_1_U17", "Parent" : "0"},
+	{"ID" : "11", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_32s_32s_32_1_1_U18", "Parent" : "0"},
+	{"ID" : "12", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_y_V_data_V_U", "Parent" : "0"},
+	{"ID" : "13", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_y_V_keep_V_U", "Parent" : "0"},
+	{"ID" : "14", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_y_V_strb_V_U", "Parent" : "0"},
+	{"ID" : "15", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_y_V_user_V_U", "Parent" : "0"},
+	{"ID" : "16", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_y_V_last_V_U", "Parent" : "0"},
+	{"ID" : "17", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_y_V_id_V_U", "Parent" : "0"},
+	{"ID" : "18", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_y_V_dest_V_U", "Parent" : "0"},
+	{"ID" : "19", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_x_V_data_V_U", "Parent" : "0"},
+	{"ID" : "20", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_x_V_keep_V_U", "Parent" : "0"},
+	{"ID" : "21", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_x_V_strb_V_U", "Parent" : "0"},
+	{"ID" : "22", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_x_V_user_V_U", "Parent" : "0"},
+	{"ID" : "23", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_x_V_last_V_U", "Parent" : "0"},
+	{"ID" : "24", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_x_V_id_V_U", "Parent" : "0"},
+	{"ID" : "25", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_x_V_dest_V_U", "Parent" : "0"}]}
 
 
 set ArgLastReadFirstWriteLatency {
 	filt {
-		gmem {Type IO LastRead 13 FirstWrite 3}
-		y_V_data_V {Type O LastRead -1 FirstWrite 14}
-		y_V_keep_V {Type O LastRead -1 FirstWrite 14}
-		y_V_strb_V {Type O LastRead -1 FirstWrite 14}
-		y_V_user_V {Type O LastRead -1 FirstWrite 14}
-		y_V_last_V {Type O LastRead -1 FirstWrite 14}
-		y_V_id_V {Type O LastRead -1 FirstWrite 14}
-		y_V_dest_V {Type O LastRead -1 FirstWrite 14}
+		gmem {Type IO LastRead 110 FirstWrite 3}
+		y_V_data_V {Type O LastRead -1 FirstWrite 112}
+		y_V_keep_V {Type O LastRead -1 FirstWrite 112}
+		y_V_strb_V {Type O LastRead -1 FirstWrite 112}
+		y_V_user_V {Type O LastRead -1 FirstWrite 112}
+		y_V_last_V {Type O LastRead -1 FirstWrite 112}
+		y_V_id_V {Type O LastRead -1 FirstWrite 112}
+		y_V_dest_V {Type O LastRead -1 FirstWrite 112}
 		c {Type I LastRead 0 FirstWrite -1}
 		x_V_data_V {Type I LastRead 4 FirstWrite -1}
 		x_V_keep_V {Type I LastRead 4 FirstWrite -1}
@@ -351,9 +359,10 @@ set ArgLastReadFirstWriteLatency {
 		x_V_user_V {Type I LastRead 4 FirstWrite -1}
 		x_V_last_V {Type I LastRead 4 FirstWrite -1}
 		x_V_id_V {Type I LastRead 4 FirstWrite -1}
-		x_V_dest_V {Type I LastRead 4 FirstWrite -1}}
-	filt_Pipeline_VITIS_LOOP_30_2 {
-		sext_ln30 {Type I LastRead 0 FirstWrite -1}
+		x_V_dest_V {Type I LastRead 4 FirstWrite -1}
+		signal_shift_reg {Type IO LastRead -1 FirstWrite -1}}
+	filt_Pipeline_VITIS_LOOP_29_2 {
+		sext_ln29 {Type I LastRead 0 FirstWrite -1}
 		tmp_data {Type I LastRead 0 FirstWrite -1}
 		gmem {Type O LastRead 4 FirstWrite 3}
 		read_coefs {Type I LastRead 0 FirstWrite -1}

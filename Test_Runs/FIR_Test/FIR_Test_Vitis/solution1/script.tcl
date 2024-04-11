@@ -11,7 +11,7 @@ add_files filt.h
 add_files -tb filt_test.cpp
 open_solution "solution1" -flow_target vivado
 set_part {xc7z020-clg400-1}
-create_clock -period 10 -name default
+create_clock -period 20 -name default
 config_export -format ip_catalog -output C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test -rtl verilog
 source "./FIR_Test_Vitis/solution1/directives.tcl"
 csim_design
