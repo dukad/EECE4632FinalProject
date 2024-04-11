@@ -8,7 +8,7 @@
     "gen_directory": "../../../../../../FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/ip/FIR_Test_axi_bram_ctrl_0_0",
     "parameters": {
       "component_parameters": {
-        "DATA_WIDTH": [ { "value": "32", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "DATA_WIDTH": [ { "value": "32", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "ID_WIDTH": [ { "value": "1", "value_src": "propagated", "value_permission": "bd", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "PROTOCOL": [ { "value": "AXI4", "resolve_type": "user", "usage": "all" } ],
         "SUPPORTS_NARROW_BURST": [ { "value": "0", "value_src": "propagated", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
@@ -200,7 +200,7 @@
             "MEM_SIZE": [ { "value": "8192", "value_src": "propagated", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
             "MEM_WIDTH": [ { "value": "32", "value_src": "propagated", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
             "MEM_ECC": [ { "value": "NONE", "value_src": "user", "value_permission": "bd", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
-            "READ_WRITE_MODE": [ { "value": "READ_ONLY", "value_src": "propagated", "value_permission": "bd", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
+            "READ_WRITE_MODE": [ { "value": "READ_WRITE", "value_src": "propagated", "value_permission": "bd", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
             "READ_LATENCY": [ { "value": "1", "value_src": "user", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ]
           },
           "port_maps": {

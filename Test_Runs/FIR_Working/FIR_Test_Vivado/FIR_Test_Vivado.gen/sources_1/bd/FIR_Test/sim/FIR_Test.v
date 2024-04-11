@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-//Date        : Mon Apr  1 16:57:16 2024
+//Date        : Wed Apr 10 21:19:55 2024
 //Host        : DESKTOP-G7JA666 running 64-bit major release  (build 9200)
 //Command     : generate_target FIR_Test.bd
 //Design      : FIR_Test
@@ -201,54 +201,6 @@ module FIR_Test
   wire ps7_0_axi_periph_M00_AXI_WVALID;
   wire [0:0]rst_ps7_0_100M_peripheral_aresetn;
 
-  FIR_imp_13DKXQW FIR
-       (.M_AXI_MM2S_araddr(axi_dma_0_M_AXI_MM2S_ARADDR),
-        .M_AXI_MM2S_arburst(axi_dma_0_M_AXI_MM2S_ARBURST),
-        .M_AXI_MM2S_arcache(axi_dma_0_M_AXI_MM2S_ARCACHE),
-        .M_AXI_MM2S_arlen(axi_dma_0_M_AXI_MM2S_ARLEN),
-        .M_AXI_MM2S_arprot(axi_dma_0_M_AXI_MM2S_ARPROT),
-        .M_AXI_MM2S_arready(axi_dma_0_M_AXI_MM2S_ARREADY),
-        .M_AXI_MM2S_arsize(axi_dma_0_M_AXI_MM2S_ARSIZE),
-        .M_AXI_MM2S_arvalid(axi_dma_0_M_AXI_MM2S_ARVALID),
-        .M_AXI_MM2S_rdata(axi_dma_0_M_AXI_MM2S_RDATA),
-        .M_AXI_MM2S_rlast(axi_dma_0_M_AXI_MM2S_RLAST),
-        .M_AXI_MM2S_rready(axi_dma_0_M_AXI_MM2S_RREADY),
-        .M_AXI_MM2S_rresp(axi_dma_0_M_AXI_MM2S_RRESP),
-        .M_AXI_MM2S_rvalid(axi_dma_0_M_AXI_MM2S_RVALID),
-        .M_AXI_S2MM_awaddr(axi_dma_0_M_AXI_S2MM_AWADDR),
-        .M_AXI_S2MM_awburst(axi_dma_0_M_AXI_S2MM_AWBURST),
-        .M_AXI_S2MM_awcache(axi_dma_0_M_AXI_S2MM_AWCACHE),
-        .M_AXI_S2MM_awlen(axi_dma_0_M_AXI_S2MM_AWLEN),
-        .M_AXI_S2MM_awprot(axi_dma_0_M_AXI_S2MM_AWPROT),
-        .M_AXI_S2MM_awready(axi_dma_0_M_AXI_S2MM_AWREADY),
-        .M_AXI_S2MM_awsize(axi_dma_0_M_AXI_S2MM_AWSIZE),
-        .M_AXI_S2MM_awvalid(axi_dma_0_M_AXI_S2MM_AWVALID),
-        .M_AXI_S2MM_bready(axi_dma_0_M_AXI_S2MM_BREADY),
-        .M_AXI_S2MM_bresp(axi_dma_0_M_AXI_S2MM_BRESP),
-        .M_AXI_S2MM_bvalid(axi_dma_0_M_AXI_S2MM_BVALID),
-        .M_AXI_S2MM_wdata(axi_dma_0_M_AXI_S2MM_WDATA),
-        .M_AXI_S2MM_wlast(axi_dma_0_M_AXI_S2MM_WLAST),
-        .M_AXI_S2MM_wready(axi_dma_0_M_AXI_S2MM_WREADY),
-        .M_AXI_S2MM_wstrb(axi_dma_0_M_AXI_S2MM_WSTRB),
-        .M_AXI_S2MM_wvalid(axi_dma_0_M_AXI_S2MM_WVALID),
-        .S_AXI_LITE_araddr(ps7_0_axi_periph_M00_AXI_ARADDR),
-        .S_AXI_LITE_arready(ps7_0_axi_periph_M00_AXI_ARREADY),
-        .S_AXI_LITE_arvalid(ps7_0_axi_periph_M00_AXI_ARVALID),
-        .S_AXI_LITE_awaddr(ps7_0_axi_periph_M00_AXI_AWADDR),
-        .S_AXI_LITE_awready(ps7_0_axi_periph_M00_AXI_AWREADY),
-        .S_AXI_LITE_awvalid(ps7_0_axi_periph_M00_AXI_AWVALID),
-        .S_AXI_LITE_bready(ps7_0_axi_periph_M00_AXI_BREADY),
-        .S_AXI_LITE_bresp(ps7_0_axi_periph_M00_AXI_BRESP),
-        .S_AXI_LITE_bvalid(ps7_0_axi_periph_M00_AXI_BVALID),
-        .S_AXI_LITE_rdata(ps7_0_axi_periph_M00_AXI_RDATA),
-        .S_AXI_LITE_rready(ps7_0_axi_periph_M00_AXI_RREADY),
-        .S_AXI_LITE_rresp(ps7_0_axi_periph_M00_AXI_RRESP),
-        .S_AXI_LITE_rvalid(ps7_0_axi_periph_M00_AXI_RVALID),
-        .S_AXI_LITE_wdata(ps7_0_axi_periph_M00_AXI_WDATA),
-        .S_AXI_LITE_wready(ps7_0_axi_periph_M00_AXI_WREADY),
-        .S_AXI_LITE_wvalid(ps7_0_axi_periph_M00_AXI_WVALID),
-        .ap_clk(processing_system7_0_FCLK_CLK0),
-        .ap_rst_n(rst_ps7_0_100M_peripheral_aresetn));
   FIR_Test_axi_mem_intercon_0 axi_mem_intercon
        (.ACLK(processing_system7_0_FCLK_CLK0),
         .ARESETN(rst_ps7_0_100M_peripheral_aresetn),
@@ -325,6 +277,54 @@ module FIR_Test
         .S01_AXI_wready(axi_dma_0_M_AXI_S2MM_WREADY),
         .S01_AXI_wstrb(axi_dma_0_M_AXI_S2MM_WSTRB),
         .S01_AXI_wvalid(axi_dma_0_M_AXI_S2MM_WVALID));
+  filtDMA_imp_1P63V5H filtDMA
+       (.M_AXI_MM2S_araddr(axi_dma_0_M_AXI_MM2S_ARADDR),
+        .M_AXI_MM2S_arburst(axi_dma_0_M_AXI_MM2S_ARBURST),
+        .M_AXI_MM2S_arcache(axi_dma_0_M_AXI_MM2S_ARCACHE),
+        .M_AXI_MM2S_arlen(axi_dma_0_M_AXI_MM2S_ARLEN),
+        .M_AXI_MM2S_arprot(axi_dma_0_M_AXI_MM2S_ARPROT),
+        .M_AXI_MM2S_arready(axi_dma_0_M_AXI_MM2S_ARREADY),
+        .M_AXI_MM2S_arsize(axi_dma_0_M_AXI_MM2S_ARSIZE),
+        .M_AXI_MM2S_arvalid(axi_dma_0_M_AXI_MM2S_ARVALID),
+        .M_AXI_MM2S_rdata(axi_dma_0_M_AXI_MM2S_RDATA),
+        .M_AXI_MM2S_rlast(axi_dma_0_M_AXI_MM2S_RLAST),
+        .M_AXI_MM2S_rready(axi_dma_0_M_AXI_MM2S_RREADY),
+        .M_AXI_MM2S_rresp(axi_dma_0_M_AXI_MM2S_RRESP),
+        .M_AXI_MM2S_rvalid(axi_dma_0_M_AXI_MM2S_RVALID),
+        .M_AXI_S2MM_awaddr(axi_dma_0_M_AXI_S2MM_AWADDR),
+        .M_AXI_S2MM_awburst(axi_dma_0_M_AXI_S2MM_AWBURST),
+        .M_AXI_S2MM_awcache(axi_dma_0_M_AXI_S2MM_AWCACHE),
+        .M_AXI_S2MM_awlen(axi_dma_0_M_AXI_S2MM_AWLEN),
+        .M_AXI_S2MM_awprot(axi_dma_0_M_AXI_S2MM_AWPROT),
+        .M_AXI_S2MM_awready(axi_dma_0_M_AXI_S2MM_AWREADY),
+        .M_AXI_S2MM_awsize(axi_dma_0_M_AXI_S2MM_AWSIZE),
+        .M_AXI_S2MM_awvalid(axi_dma_0_M_AXI_S2MM_AWVALID),
+        .M_AXI_S2MM_bready(axi_dma_0_M_AXI_S2MM_BREADY),
+        .M_AXI_S2MM_bresp(axi_dma_0_M_AXI_S2MM_BRESP),
+        .M_AXI_S2MM_bvalid(axi_dma_0_M_AXI_S2MM_BVALID),
+        .M_AXI_S2MM_wdata(axi_dma_0_M_AXI_S2MM_WDATA),
+        .M_AXI_S2MM_wlast(axi_dma_0_M_AXI_S2MM_WLAST),
+        .M_AXI_S2MM_wready(axi_dma_0_M_AXI_S2MM_WREADY),
+        .M_AXI_S2MM_wstrb(axi_dma_0_M_AXI_S2MM_WSTRB),
+        .M_AXI_S2MM_wvalid(axi_dma_0_M_AXI_S2MM_WVALID),
+        .S_AXI_LITE_araddr(ps7_0_axi_periph_M00_AXI_ARADDR),
+        .S_AXI_LITE_arready(ps7_0_axi_periph_M00_AXI_ARREADY),
+        .S_AXI_LITE_arvalid(ps7_0_axi_periph_M00_AXI_ARVALID),
+        .S_AXI_LITE_awaddr(ps7_0_axi_periph_M00_AXI_AWADDR),
+        .S_AXI_LITE_awready(ps7_0_axi_periph_M00_AXI_AWREADY),
+        .S_AXI_LITE_awvalid(ps7_0_axi_periph_M00_AXI_AWVALID),
+        .S_AXI_LITE_bready(ps7_0_axi_periph_M00_AXI_BREADY),
+        .S_AXI_LITE_bresp(ps7_0_axi_periph_M00_AXI_BRESP),
+        .S_AXI_LITE_bvalid(ps7_0_axi_periph_M00_AXI_BVALID),
+        .S_AXI_LITE_rdata(ps7_0_axi_periph_M00_AXI_RDATA),
+        .S_AXI_LITE_rready(ps7_0_axi_periph_M00_AXI_RREADY),
+        .S_AXI_LITE_rresp(ps7_0_axi_periph_M00_AXI_RRESP),
+        .S_AXI_LITE_rvalid(ps7_0_axi_periph_M00_AXI_RVALID),
+        .S_AXI_LITE_wdata(ps7_0_axi_periph_M00_AXI_WDATA),
+        .S_AXI_LITE_wready(ps7_0_axi_periph_M00_AXI_WREADY),
+        .S_AXI_LITE_wvalid(ps7_0_axi_periph_M00_AXI_WVALID),
+        .ap_clk(processing_system7_0_FCLK_CLK0),
+        .ap_rst_n(rst_ps7_0_100M_peripheral_aresetn));
   FIR_Test_processing_system7_0_0 processing_system7_0
        (.DDR_Addr(DDR_addr[14:0]),
         .DDR_BankAddr(DDR_ba[2:0]),
@@ -1390,7 +1390,7 @@ module FIR_Test_ps7_0_axi_periph_0
         .S_AXI_wvalid(ps7_0_axi_periph_to_s00_couplers_WVALID));
 endmodule
 
-module FIR_imp_13DKXQW
+module filtDMA_imp_1P63V5H
    (M_AXI_MM2S_araddr,
     M_AXI_MM2S_arburst,
     M_AXI_MM2S_arcache,
@@ -1488,11 +1488,13 @@ module FIR_imp_13DKXQW
 
   wire [12:0]axi_bram_ctrl_0_BRAM_PORTA_ADDR;
   wire axi_bram_ctrl_0_BRAM_PORTA_CLK;
+  wire [31:0]axi_bram_ctrl_0_BRAM_PORTA_DIN;
   wire [31:0]axi_bram_ctrl_0_BRAM_PORTA_DOUT;
   wire axi_bram_ctrl_0_BRAM_PORTA_EN;
   wire axi_bram_ctrl_0_BRAM_PORTA_RST;
-  wire [15:0]axi_dma_0_M_AXIS_MM2S_TDATA;
-  wire [1:0]axi_dma_0_M_AXIS_MM2S_TKEEP;
+  wire [3:0]axi_bram_ctrl_0_BRAM_PORTA_WE;
+  wire [31:0]axi_dma_0_M_AXIS_MM2S_TDATA;
+  wire [3:0]axi_dma_0_M_AXIS_MM2S_TKEEP;
   wire axi_dma_0_M_AXIS_MM2S_TLAST;
   wire axi_dma_0_M_AXIS_MM2S_TREADY;
   wire axi_dma_0_M_AXIS_MM2S_TVALID;
@@ -1560,8 +1562,8 @@ module FIR_imp_13DKXQW
   wire filt_0_m_axi_gmem_WREADY;
   wire [3:0]filt_0_m_axi_gmem_WSTRB;
   wire filt_0_m_axi_gmem_WVALID;
-  wire [15:0]filt_0_y_TDATA;
-  wire [1:0]filt_0_y_TKEEP;
+  wire [31:0]filt_0_y_TDATA;
+  wire [3:0]filt_0_y_TKEEP;
   wire [0:0]filt_0_y_TLAST;
   wire filt_0_y_TREADY;
   wire filt_0_y_TVALID;
@@ -1637,6 +1639,8 @@ module FIR_imp_13DKXQW
         .bram_en_a(axi_bram_ctrl_0_BRAM_PORTA_EN),
         .bram_rddata_a(axi_bram_ctrl_0_BRAM_PORTA_DOUT),
         .bram_rst_a(axi_bram_ctrl_0_BRAM_PORTA_RST),
+        .bram_we_a(axi_bram_ctrl_0_BRAM_PORTA_WE),
+        .bram_wrdata_a(axi_bram_ctrl_0_BRAM_PORTA_DIN),
         .s_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s_axi_araddr(filt_0_m_axi_gmem_ARADDR[12:0]),
         .s_axi_arburst(filt_0_m_axi_gmem_ARBURST),
@@ -1737,10 +1741,12 @@ module FIR_imp_13DKXQW
   FIR_Test_blk_mem_gen_0_0 blk_mem_gen_0
        (.addra({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,axi_bram_ctrl_0_BRAM_PORTA_ADDR}),
         .clka(axi_bram_ctrl_0_BRAM_PORTA_CLK),
+        .dina(axi_bram_ctrl_0_BRAM_PORTA_DIN),
         .douta(axi_bram_ctrl_0_BRAM_PORTA_DOUT),
         .ena(axi_bram_ctrl_0_BRAM_PORTA_EN),
-        .rsta(axi_bram_ctrl_0_BRAM_PORTA_RST));
-  FIR_Test_filt_0_2 filt_0
+        .rsta(axi_bram_ctrl_0_BRAM_PORTA_RST),
+        .wea(axi_bram_ctrl_0_BRAM_PORTA_WE));
+  FIR_Test_filt_0_16 filt_0
        (.ap_clk(processing_system7_0_FCLK_CLK0),
         .ap_rst_n(rst_ps7_0_100M_peripheral_aresetn),
         .m_axi_gmem_ARADDR(filt_0_m_axi_gmem_ARADDR),
@@ -1793,7 +1799,7 @@ module FIR_imp_13DKXQW
         .x_TKEEP(axi_dma_0_M_AXIS_MM2S_TKEEP),
         .x_TLAST(axi_dma_0_M_AXIS_MM2S_TLAST),
         .x_TREADY(axi_dma_0_M_AXIS_MM2S_TREADY),
-        .x_TSTRB({1'b1,1'b1}),
+        .x_TSTRB({1'b1,1'b1,1'b1,1'b1}),
         .x_TUSER(1'b0),
         .x_TVALID(axi_dma_0_M_AXIS_MM2S_TVALID),
         .y_TDATA(filt_0_y_TDATA),

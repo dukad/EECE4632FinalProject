@@ -156,6 +156,10 @@ extern "C" {
 }
 # 2 "<built-in>" 2
 # 1 "filt.cpp" 2
+# 1 "./filt.h" 1
+
+
+
 # 1 "C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\\hls_stream.h" 1
 # 12 "C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\\hls_stream.h"
 # 1 "C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/hls_stream_39.h" 1
@@ -285,7 +289,7 @@ class stream : public stream<__STREAM_T__, 0> {
 };
 }
 # 13 "C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\\hls_stream.h" 2
-# 2 "filt.cpp" 2
+# 5 "./filt.h" 2
 # 1 "C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\\ap_axi_sdata.h" 1
 # 15 "C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\\ap_axi_sdata.h"
 # 1 "C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/ap_int.h" 1
@@ -9740,56 +9744,102 @@ private:
 };
 
 }
-# 3 "filt.cpp" 2
+# 6 "./filt.h" 2
 
-typedef ap_axis<16,1,1,1> AXI_VAL;
-typedef short data_t;
-typedef short coef_t;
-typedef short acc_t;
+typedef ap_axis<32,1,1,1> AXI_VAL;
+typedef int data_t;
+typedef int coef_t;
+typedef int acc_t;
 
 
 
-__attribute__((sdx_kernel("filt", 0))) void filt (hls::stream<AXI_VAL>& y, coef_t c[11], hls::stream<AXI_VAL>& x) {
-#line 15 "C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vitis/solution1/csynth.tcl"
+__attribute__((sdx_kernel("filt", 0))) void filt (hls::stream<AXI_VAL>& y, coef_t c[99], hls::stream<AXI_VAL>& x);
+# 2 "filt.cpp" 2
+
+__attribute__((sdx_kernel("filt", 0))) void filt (hls::stream<AXI_VAL>& y, coef_t c[99], hls::stream<AXI_VAL>& x) {
+#line 17 "C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vitis/solution1/csynth.tcl"
 #pragma HLSDIRECTIVE TOP name=filt
-# 11 "filt.cpp"
+# 3 "filt.cpp"
 
-#pragma HLS INTERFACE m_axi depth=11 port=c
+#line 7 "C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vitis/solution1/directives.tcl"
+#pragma HLSDIRECTIVE TOP name=filt
+# 3 "filt.cpp"
+
+#pragma HLS INTERFACE m_axi depth=99 port=c
 #pragma HLS INTERFACE axis register both port=x
 #pragma HLS INTERFACE axis register both port=y
 #pragma HLS INTERFACE ap_ctrl_none port=return
 
 
- VITIS_LOOP_18_1: while(1) {
- static data_t shift_reg[11];
- acc_t acc;
+ int i = 0;
+ bool read_coefs = false;
+ bool read_signal = false;
+ bool output_signal = false;
+
+ acc_t accumulate;
  data_t data;
 
- acc=0;
- AXI_VAL tmp1;
- x.read(tmp1);
- short i;
- Shift_Accum_Loop:
- for (i = 11 - 1; i > 0; i--) {
-#pragma HLS UNROLL
- shift_reg[i] = shift_reg[i - 1];
-  acc += shift_reg[i] * c[i];
- }
+ AXI_VAL tmp;
+ AXI_VAL tmp_out;
+ static data_t signal_shift_reg[99];
 
- acc += tmp1.data.to_short() * c[0];
- shift_reg[0] = tmp1.data.to_short();
- AXI_VAL output;
- output.data = acc;
- output.keep = tmp1.keep;
- output.strb = tmp1.strb;
- output.last = tmp1.last;
- output.dest = tmp1.dest;
- output.id = tmp1.id;
- output.user = tmp1.user;
- y.write(output);
+ VITIS_LOOP_22_1: while(1) {
+  x.read(tmp);
 
- if (tmp1.last) {
-  break;
- }
+
+
+
+
+  VITIS_LOOP_29_2: while (read_coefs){
+   if (tmp.data.to_int() == 43962){
+    read_coefs = false;
+    output_signal = true;
+    x.read(tmp);
+    i = 0;
+    break;
+   }
+
+   c[i] = tmp.data.to_int();
+
+   x.read(tmp);
+   i += 1;
   }
+
+
+  accumulate = 0;
+  if (output_signal){
+   Shift_Accumulate_Loop:
+   for (i = 99 - 1; i > 0; i--){
+#pragma HLS UNROLL
+ signal_shift_reg[i] = signal_shift_reg[i - 1];
+    accumulate += signal_shift_reg[i] * c[i];
+   }
+
+   accumulate += tmp.data.to_int() * c[0];
+   signal_shift_reg[0] = tmp.data.to_int();
+
+   tmp_out.data = accumulate;
+   tmp_out.keep = tmp.keep;
+   tmp_out.strb = tmp.strb;
+   tmp_out.last = tmp.last;
+   tmp_out.dest = tmp.dest;
+   tmp_out.id = tmp.id;
+   tmp_out.user = tmp.user;
+
+   y.write(tmp_out);
+  }
+
+
+
+  if (tmp.data.to_int() == 48879){
+   read_coefs = true;
+   i -= 1;
+  }
+  i += 1;
+
+
+  if (tmp.last){
+   break;
+  }
+ }
 }

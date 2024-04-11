@@ -2,6 +2,9 @@
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
     <originFiles name="filt.cpp" path="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Test_Runs\FIR_Test\filt.cpp"/>
+    <originFiles name="filt.h" path="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Test_Runs\FIR_Test\filt.h"/>
   </source>
-  <testbench/>
+  <testbench>
+    <originFiles name="filt_test.cpp" path="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Test_Runs\FIR_Test\filt_test.cpp"/>
+  </testbench>
 </autopilotfilemapping:AutoPilotFileMapping>

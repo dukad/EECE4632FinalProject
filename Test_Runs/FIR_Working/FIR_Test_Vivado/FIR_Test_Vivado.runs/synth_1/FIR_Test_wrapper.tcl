@@ -71,6 +71,7 @@ proc create_report { reportName command } {
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 4
+set_msg_config -id {Common 17-41} -limit 10000000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg400-1
 
@@ -91,20 +92,20 @@ set_property ip_output_repo c:/Users/a01me/Documents/GitHub/College/EECE4632Fina
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-add_files c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/filt.coe
-read_verilog -library xil_defaultlib c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/hdl/FIR_Test_wrapper.v
+add_files C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/filt.coe
+read_verilog -library xil_defaultlib C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/hdl/FIR_Test_wrapper.v
 add_files C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.srcs/sources_1/bd/FIR_Test/FIR_Test.bd
 set_property used_in_implementation false [get_files -all c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/ip/FIR_Test_processing_system7_0_0/FIR_Test_processing_system7_0_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/ip/FIR_Test_axi_bram_ctrl_0_0/FIR_Test_axi_bram_ctrl_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/ip/FIR_Test_blk_mem_gen_0_0/FIR_Test_blk_mem_gen_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/ip/FIR_Test_rst_ps7_0_100M_0/FIR_Test_rst_ps7_0_100M_0_board.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/ip/FIR_Test_rst_ps7_0_100M_0/FIR_Test_rst_ps7_0_100M_0.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/ip/FIR_Test_rst_ps7_0_100M_0/FIR_Test_rst_ps7_0_100M_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/ip/FIR_Test_xbar_0/FIR_Test_xbar_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/ip/FIR_Test_axi_bram_ctrl_0_0/FIR_Test_axi_bram_ctrl_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/ip/FIR_Test_blk_mem_gen_0_0/FIR_Test_blk_mem_gen_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/ip/FIR_Test_axi_dma_0_0/FIR_Test_axi_dma_0_0.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/ip/FIR_Test_axi_dma_0_0/FIR_Test_axi_dma_0_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/ip/FIR_Test_axi_dma_0_0/FIR_Test_axi_dma_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/ip/FIR_Test_filt_0_2/constraints/filt_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/ip/FIR_Test_filt_0_16/constraints/filt_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/ip/FIR_Test_auto_pc_0/FIR_Test_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/ip/FIR_Test_auto_pc_1/FIR_Test_auto_pc_1_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test/FIR_Test_Vivado/FIR_Test_Vivado.gen/sources_1/bd/FIR_Test/FIR_Test_ooc.xdc]

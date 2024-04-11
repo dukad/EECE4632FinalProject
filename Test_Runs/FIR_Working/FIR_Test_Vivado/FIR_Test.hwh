@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Apr  1 16:57:18 2024" VIVADOVERSION="2023.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Apr 10 21:19:57 2024" VIVADOVERSION="2023.2">
 
   <SYSTEMINFO ARCH="zynq" BOARD="tul.com.tw:pynq-z2:part0:1.0" DEVICE="7z020" NAME="FIR_Test" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -69,7 +69,7 @@
         <CONNECTION INSTANCE="processing_system7_0" PORT="DDR_RAS_n"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="IO" NAME="DDR_reset_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="processing_system7_0_DDR_DRSTB">
+    <PORT DIR="IO" NAME="DDR_reset_n" SIGIS="rst" SIGNAME="processing_system7_0_DDR_DRSTB">
       <CONNECTIONS>
         <CONNECTION INSTANCE="processing_system7_0" PORT="DDR_DRSTB"/>
       </CONNECTIONS>
@@ -159,7 +159,788 @@
   </EXTERNALINTERFACES>
 
   <MODULES>
-    <MODULE COREREVISION="9" FULLNAME="/FIR/axi_bram_ctrl_0" HWVERSION="4.1" INSTANCE="FIR_axi_bram_ctrl_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="MEMORY_CNTLR" MODTYPE="axi_bram_ctrl" VLNV="xilinx.com:ip:axi_bram_ctrl:4.1">
+    <MODULE COREREVISION="30" FULLNAME="/axi_mem_intercon" HWVERSION="2.1" INSTANCE="axi_mem_intercon" IPTYPE="BUS" IS_ENABLE="1" MODCLASS="BUS" MODTYPE="axi_interconnect" VLNV="xilinx.com:ip:axi_interconnect:2.1">
+      <DOCUMENTS>
+        <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=axi_interconnect;v=v2_1;d=pg059-axi-interconnect.pdf"/>
+      </DOCUMENTS>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="FIR_Test_axi_mem_intercon_0"/>
+        <PARAMETER NAME="ENABLE_ADVANCED_OPTIONS" VALUE="0"/>
+        <PARAMETER NAME="ENABLE_PROTOCOL_CHECKERS" VALUE="0"/>
+        <PARAMETER NAME="M00_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="M00_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="M00_ISSUANCE" VALUE="0"/>
+        <PARAMETER NAME="M00_SECURE" VALUE="0"/>
+        <PARAMETER NAME="M01_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="M01_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="M01_ISSUANCE" VALUE="0"/>
+        <PARAMETER NAME="M01_SECURE" VALUE="0"/>
+        <PARAMETER NAME="M02_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="M02_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="M02_ISSUANCE" VALUE="0"/>
+        <PARAMETER NAME="M02_SECURE" VALUE="0"/>
+        <PARAMETER NAME="M03_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="M03_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="M03_ISSUANCE" VALUE="0"/>
+        <PARAMETER NAME="M03_SECURE" VALUE="0"/>
+        <PARAMETER NAME="M04_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="M04_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="M04_ISSUANCE" VALUE="0"/>
+        <PARAMETER NAME="M04_SECURE" VALUE="0"/>
+        <PARAMETER NAME="M05_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="M05_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="M05_ISSUANCE" VALUE="0"/>
+        <PARAMETER NAME="M05_SECURE" VALUE="0"/>
+        <PARAMETER NAME="M06_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="M06_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="M06_ISSUANCE" VALUE="0"/>
+        <PARAMETER NAME="M06_SECURE" VALUE="0"/>
+        <PARAMETER NAME="M07_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="M07_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="M07_ISSUANCE" VALUE="0"/>
+        <PARAMETER NAME="M07_SECURE" VALUE="0"/>
+        <PARAMETER NAME="M08_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="M08_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="M08_ISSUANCE" VALUE="0"/>
+        <PARAMETER NAME="M08_SECURE" VALUE="0"/>
+        <PARAMETER NAME="M09_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="M09_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="M09_ISSUANCE" VALUE="0"/>
+        <PARAMETER NAME="M09_SECURE" VALUE="0"/>
+        <PARAMETER NAME="M10_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="M10_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="M10_ISSUANCE" VALUE="0"/>
+        <PARAMETER NAME="M10_SECURE" VALUE="0"/>
+        <PARAMETER NAME="M11_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="M11_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="M11_ISSUANCE" VALUE="0"/>
+        <PARAMETER NAME="M11_SECURE" VALUE="0"/>
+        <PARAMETER NAME="M12_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="M12_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="M12_ISSUANCE" VALUE="0"/>
+        <PARAMETER NAME="M12_SECURE" VALUE="0"/>
+        <PARAMETER NAME="M13_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="M13_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="M13_ISSUANCE" VALUE="0"/>
+        <PARAMETER NAME="M13_SECURE" VALUE="0"/>
+        <PARAMETER NAME="M14_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="M14_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="M14_ISSUANCE" VALUE="0"/>
+        <PARAMETER NAME="M14_SECURE" VALUE="0"/>
+        <PARAMETER NAME="M15_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="M15_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="M15_ISSUANCE" VALUE="0"/>
+        <PARAMETER NAME="M15_SECURE" VALUE="0"/>
+        <PARAMETER NAME="M16_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="M16_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="M16_ISSUANCE" VALUE="0"/>
+        <PARAMETER NAME="M16_SECURE" VALUE="0"/>
+        <PARAMETER NAME="M17_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="M17_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="M17_ISSUANCE" VALUE="0"/>
+        <PARAMETER NAME="M17_SECURE" VALUE="0"/>
+        <PARAMETER NAME="M18_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="M18_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="M18_ISSUANCE" VALUE="0"/>
+        <PARAMETER NAME="M18_SECURE" VALUE="0"/>
+        <PARAMETER NAME="M19_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="M19_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="M19_ISSUANCE" VALUE="0"/>
+        <PARAMETER NAME="M19_SECURE" VALUE="0"/>
+        <PARAMETER NAME="M20_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="M20_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="M20_ISSUANCE" VALUE="0"/>
+        <PARAMETER NAME="M20_SECURE" VALUE="0"/>
+        <PARAMETER NAME="M21_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="M21_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="M21_ISSUANCE" VALUE="0"/>
+        <PARAMETER NAME="M21_SECURE" VALUE="0"/>
+        <PARAMETER NAME="M22_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="M22_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="M22_ISSUANCE" VALUE="0"/>
+        <PARAMETER NAME="M22_SECURE" VALUE="0"/>
+        <PARAMETER NAME="M23_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="M23_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="M23_ISSUANCE" VALUE="0"/>
+        <PARAMETER NAME="M23_SECURE" VALUE="0"/>
+        <PARAMETER NAME="M24_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="M24_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="M24_ISSUANCE" VALUE="0"/>
+        <PARAMETER NAME="M24_SECURE" VALUE="0"/>
+        <PARAMETER NAME="M25_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="M25_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="M25_ISSUANCE" VALUE="0"/>
+        <PARAMETER NAME="M25_SECURE" VALUE="0"/>
+        <PARAMETER NAME="M26_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="M26_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="M26_ISSUANCE" VALUE="0"/>
+        <PARAMETER NAME="M26_SECURE" VALUE="0"/>
+        <PARAMETER NAME="M27_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="M27_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="M27_ISSUANCE" VALUE="0"/>
+        <PARAMETER NAME="M27_SECURE" VALUE="0"/>
+        <PARAMETER NAME="M28_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="M28_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="M28_ISSUANCE" VALUE="0"/>
+        <PARAMETER NAME="M28_SECURE" VALUE="0"/>
+        <PARAMETER NAME="M29_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="M29_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="M29_ISSUANCE" VALUE="0"/>
+        <PARAMETER NAME="M29_SECURE" VALUE="0"/>
+        <PARAMETER NAME="M30_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="M30_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="M30_ISSUANCE" VALUE="0"/>
+        <PARAMETER NAME="M30_SECURE" VALUE="0"/>
+        <PARAMETER NAME="M31_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="M31_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="M31_ISSUANCE" VALUE="0"/>
+        <PARAMETER NAME="M31_SECURE" VALUE="0"/>
+        <PARAMETER NAME="M32_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="M32_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="M32_ISSUANCE" VALUE="0"/>
+        <PARAMETER NAME="M32_SECURE" VALUE="0"/>
+        <PARAMETER NAME="M33_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="M33_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="M33_ISSUANCE" VALUE="0"/>
+        <PARAMETER NAME="M33_SECURE" VALUE="0"/>
+        <PARAMETER NAME="M34_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="M34_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="M34_ISSUANCE" VALUE="0"/>
+        <PARAMETER NAME="M34_SECURE" VALUE="0"/>
+        <PARAMETER NAME="M35_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="M35_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="M35_ISSUANCE" VALUE="0"/>
+        <PARAMETER NAME="M35_SECURE" VALUE="0"/>
+        <PARAMETER NAME="M36_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="M36_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="M36_ISSUANCE" VALUE="0"/>
+        <PARAMETER NAME="M36_SECURE" VALUE="0"/>
+        <PARAMETER NAME="M37_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="M37_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="M37_ISSUANCE" VALUE="0"/>
+        <PARAMETER NAME="M37_SECURE" VALUE="0"/>
+        <PARAMETER NAME="M38_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="M38_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="M38_ISSUANCE" VALUE="0"/>
+        <PARAMETER NAME="M38_SECURE" VALUE="0"/>
+        <PARAMETER NAME="M39_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="M39_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="M39_ISSUANCE" VALUE="0"/>
+        <PARAMETER NAME="M39_SECURE" VALUE="0"/>
+        <PARAMETER NAME="M40_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="M40_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="M40_ISSUANCE" VALUE="0"/>
+        <PARAMETER NAME="M40_SECURE" VALUE="0"/>
+        <PARAMETER NAME="M41_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="M41_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="M41_ISSUANCE" VALUE="0"/>
+        <PARAMETER NAME="M41_SECURE" VALUE="0"/>
+        <PARAMETER NAME="M42_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="M42_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="M42_ISSUANCE" VALUE="0"/>
+        <PARAMETER NAME="M42_SECURE" VALUE="0"/>
+        <PARAMETER NAME="M43_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="M43_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="M43_ISSUANCE" VALUE="0"/>
+        <PARAMETER NAME="M43_SECURE" VALUE="0"/>
+        <PARAMETER NAME="M44_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="M44_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="M44_ISSUANCE" VALUE="0"/>
+        <PARAMETER NAME="M44_SECURE" VALUE="0"/>
+        <PARAMETER NAME="M45_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="M45_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="M45_ISSUANCE" VALUE="0"/>
+        <PARAMETER NAME="M45_SECURE" VALUE="0"/>
+        <PARAMETER NAME="M46_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="M46_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="M46_ISSUANCE" VALUE="0"/>
+        <PARAMETER NAME="M46_SECURE" VALUE="0"/>
+        <PARAMETER NAME="M47_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="M47_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="M47_ISSUANCE" VALUE="0"/>
+        <PARAMETER NAME="M47_SECURE" VALUE="0"/>
+        <PARAMETER NAME="M48_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="M48_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="M48_ISSUANCE" VALUE="0"/>
+        <PARAMETER NAME="M48_SECURE" VALUE="0"/>
+        <PARAMETER NAME="M49_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="M49_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="M49_ISSUANCE" VALUE="0"/>
+        <PARAMETER NAME="M49_SECURE" VALUE="0"/>
+        <PARAMETER NAME="M50_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="M50_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="M50_ISSUANCE" VALUE="0"/>
+        <PARAMETER NAME="M50_SECURE" VALUE="0"/>
+        <PARAMETER NAME="M51_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="M51_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="M51_ISSUANCE" VALUE="0"/>
+        <PARAMETER NAME="M51_SECURE" VALUE="0"/>
+        <PARAMETER NAME="M52_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="M52_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="M52_ISSUANCE" VALUE="0"/>
+        <PARAMETER NAME="M52_SECURE" VALUE="0"/>
+        <PARAMETER NAME="M53_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="M53_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="M53_ISSUANCE" VALUE="0"/>
+        <PARAMETER NAME="M53_SECURE" VALUE="0"/>
+        <PARAMETER NAME="M54_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="M54_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="M54_ISSUANCE" VALUE="0"/>
+        <PARAMETER NAME="M54_SECURE" VALUE="0"/>
+        <PARAMETER NAME="M55_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="M55_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="M55_ISSUANCE" VALUE="0"/>
+        <PARAMETER NAME="M55_SECURE" VALUE="0"/>
+        <PARAMETER NAME="M56_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="M56_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="M56_ISSUANCE" VALUE="0"/>
+        <PARAMETER NAME="M56_SECURE" VALUE="0"/>
+        <PARAMETER NAME="M57_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="M57_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="M57_ISSUANCE" VALUE="0"/>
+        <PARAMETER NAME="M57_SECURE" VALUE="0"/>
+        <PARAMETER NAME="M58_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="M58_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="M58_ISSUANCE" VALUE="0"/>
+        <PARAMETER NAME="M58_SECURE" VALUE="0"/>
+        <PARAMETER NAME="M59_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="M59_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="M59_ISSUANCE" VALUE="0"/>
+        <PARAMETER NAME="M59_SECURE" VALUE="0"/>
+        <PARAMETER NAME="M60_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="M60_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="M60_ISSUANCE" VALUE="0"/>
+        <PARAMETER NAME="M60_SECURE" VALUE="0"/>
+        <PARAMETER NAME="M61_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="M61_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="M61_ISSUANCE" VALUE="0"/>
+        <PARAMETER NAME="M61_SECURE" VALUE="0"/>
+        <PARAMETER NAME="M62_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="M62_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="M62_ISSUANCE" VALUE="0"/>
+        <PARAMETER NAME="M62_SECURE" VALUE="0"/>
+        <PARAMETER NAME="M63_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="M63_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="M63_ISSUANCE" VALUE="0"/>
+        <PARAMETER NAME="M63_SECURE" VALUE="0"/>
+        <PARAMETER NAME="NUM_MI" VALUE="1"/>
+        <PARAMETER NAME="NUM_SI" VALUE="2"/>
+        <PARAMETER NAME="PCHK_MAX_RD_BURSTS" VALUE="2"/>
+        <PARAMETER NAME="PCHK_MAX_WR_BURSTS" VALUE="2"/>
+        <PARAMETER NAME="PCHK_WAITS" VALUE="0"/>
+        <PARAMETER NAME="S00_ARB_PRIORITY" VALUE="0"/>
+        <PARAMETER NAME="S00_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="S00_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="S01_ARB_PRIORITY" VALUE="0"/>
+        <PARAMETER NAME="S01_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="S01_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="S02_ARB_PRIORITY" VALUE="0"/>
+        <PARAMETER NAME="S02_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="S02_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="S03_ARB_PRIORITY" VALUE="0"/>
+        <PARAMETER NAME="S03_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="S03_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="S04_ARB_PRIORITY" VALUE="0"/>
+        <PARAMETER NAME="S04_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="S04_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="S05_ARB_PRIORITY" VALUE="0"/>
+        <PARAMETER NAME="S05_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="S05_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="S06_ARB_PRIORITY" VALUE="0"/>
+        <PARAMETER NAME="S06_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="S06_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="S07_ARB_PRIORITY" VALUE="0"/>
+        <PARAMETER NAME="S07_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="S07_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="S08_ARB_PRIORITY" VALUE="0"/>
+        <PARAMETER NAME="S08_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="S08_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="S09_ARB_PRIORITY" VALUE="0"/>
+        <PARAMETER NAME="S09_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="S09_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="S10_ARB_PRIORITY" VALUE="0"/>
+        <PARAMETER NAME="S10_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="S10_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="S11_ARB_PRIORITY" VALUE="0"/>
+        <PARAMETER NAME="S11_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="S11_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="S12_ARB_PRIORITY" VALUE="0"/>
+        <PARAMETER NAME="S12_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="S12_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="S13_ARB_PRIORITY" VALUE="0"/>
+        <PARAMETER NAME="S13_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="S13_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="S14_ARB_PRIORITY" VALUE="0"/>
+        <PARAMETER NAME="S14_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="S14_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="S15_ARB_PRIORITY" VALUE="0"/>
+        <PARAMETER NAME="S15_HAS_DATA_FIFO" VALUE="0"/>
+        <PARAMETER NAME="S15_HAS_REGSLICE" VALUE="0"/>
+        <PARAMETER NAME="STRATEGY" VALUE="0"/>
+        <PARAMETER NAME="SYNCHRONIZATION_STAGES" VALUE="3"/>
+        <PARAMETER NAME="XBAR_DATA_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="ACLK" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ARESETN" SIGIS="rst" SIGNAME="rst_ps7_0_100M_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rst_ps7_0_100M" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M00_ACLK" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M00_ARESETN" SIGIS="rst" SIGNAME="rst_ps7_0_100M_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rst_ps7_0_100M" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M00_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_M00_AXI_araddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_GP0_ARADDR"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="M00_AXI_arburst" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_M00_AXI_arburst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_GP0_ARBURST"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="M00_AXI_arcache" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_M00_AXI_arcache">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_GP0_ARCACHE"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="M00_AXI_arid" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_M00_AXI_arid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_GP0_ARID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="M00_AXI_arlen" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_M00_AXI_arlen">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_GP0_ARLEN"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="M00_AXI_arlock" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_M00_AXI_arlock">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_GP0_ARLOCK"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="M00_AXI_arprot" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_M00_AXI_arprot">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_GP0_ARPROT"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="M00_AXI_arqos" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_M00_AXI_arqos">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_GP0_ARQOS"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M00_AXI_arready" SIGIS="undef" SIGNAME="axi_mem_intercon_M00_AXI_arready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_GP0_ARREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="M00_AXI_arsize" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_M00_AXI_arsize">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_GP0_ARSIZE"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M00_AXI_arvalid" SIGIS="undef" SIGNAME="axi_mem_intercon_M00_AXI_arvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_GP0_ARVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M00_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_M00_AXI_awaddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_GP0_AWADDR"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="M00_AXI_awburst" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_M00_AXI_awburst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_GP0_AWBURST"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="M00_AXI_awcache" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_M00_AXI_awcache">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_GP0_AWCACHE"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="M00_AXI_awid" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_M00_AXI_awid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_GP0_AWID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="M00_AXI_awlen" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_M00_AXI_awlen">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_GP0_AWLEN"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="M00_AXI_awlock" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_M00_AXI_awlock">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_GP0_AWLOCK"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="M00_AXI_awprot" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_M00_AXI_awprot">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_GP0_AWPROT"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="M00_AXI_awqos" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_M00_AXI_awqos">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_GP0_AWQOS"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M00_AXI_awready" SIGIS="undef" SIGNAME="axi_mem_intercon_M00_AXI_awready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_GP0_AWREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="M00_AXI_awsize" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_M00_AXI_awsize">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_GP0_AWSIZE"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M00_AXI_awvalid" SIGIS="undef" SIGNAME="axi_mem_intercon_M00_AXI_awvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_GP0_AWVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="5" NAME="M00_AXI_bid" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_M00_AXI_bid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_GP0_BID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M00_AXI_bready" SIGIS="undef" SIGNAME="axi_mem_intercon_M00_AXI_bready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_GP0_BREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="M00_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_M00_AXI_bresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_GP0_BRESP"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M00_AXI_bvalid" SIGIS="undef" SIGNAME="axi_mem_intercon_M00_AXI_bvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_GP0_BVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="M00_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_M00_AXI_rdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_GP0_RDATA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="5" NAME="M00_AXI_rid" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_M00_AXI_rid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_GP0_RID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M00_AXI_rlast" SIGIS="undef" SIGNAME="axi_mem_intercon_M00_AXI_rlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_GP0_RLAST"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M00_AXI_rready" SIGIS="undef" SIGNAME="axi_mem_intercon_M00_AXI_rready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_GP0_RREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="M00_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_M00_AXI_rresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_GP0_RRESP"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M00_AXI_rvalid" SIGIS="undef" SIGNAME="axi_mem_intercon_M00_AXI_rvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_GP0_RVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M00_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_M00_AXI_wdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_GP0_WDATA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="M00_AXI_wid" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_M00_AXI_wid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_GP0_WID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M00_AXI_wlast" SIGIS="undef" SIGNAME="axi_mem_intercon_M00_AXI_wlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_GP0_WLAST"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M00_AXI_wready" SIGIS="undef" SIGNAME="axi_mem_intercon_M00_AXI_wready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_GP0_WREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="M00_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_M00_AXI_wstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_GP0_WSTRB"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M00_AXI_wvalid" SIGIS="undef" SIGNAME="axi_mem_intercon_M00_AXI_wvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_GP0_WVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="S00_ACLK" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="S00_ARESETN" SIGIS="rst" SIGNAME="rst_ps7_0_100M_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rst_ps7_0_100M" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="S00_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_S00_AXI_araddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="filtDMA_axi_dma_0" PORT="m_axi_mm2s_araddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="S00_AXI_arburst" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_S00_AXI_arburst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="filtDMA_axi_dma_0" PORT="m_axi_mm2s_arburst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="S00_AXI_arcache" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_S00_AXI_arcache">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="filtDMA_axi_dma_0" PORT="m_axi_mm2s_arcache"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="S00_AXI_arlen" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_S00_AXI_arlen">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="filtDMA_axi_dma_0" PORT="m_axi_mm2s_arlen"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="S00_AXI_arprot" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_S00_AXI_arprot">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="filtDMA_axi_dma_0" PORT="m_axi_mm2s_arprot"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="S00_AXI_arready" SIGIS="undef" SIGNAME="axi_mem_intercon_S00_AXI_arready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="filtDMA_axi_dma_0" PORT="m_axi_mm2s_arready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="S00_AXI_arsize" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_S00_AXI_arsize">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="filtDMA_axi_dma_0" PORT="m_axi_mm2s_arsize"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="S00_AXI_arvalid" SIGIS="undef" SIGNAME="axi_mem_intercon_S00_AXI_arvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="filtDMA_axi_dma_0" PORT="m_axi_mm2s_arvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="S00_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_S00_AXI_rdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="filtDMA_axi_dma_0" PORT="m_axi_mm2s_rdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="S00_AXI_rlast" SIGIS="undef" SIGNAME="axi_mem_intercon_S00_AXI_rlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="filtDMA_axi_dma_0" PORT="m_axi_mm2s_rlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="S00_AXI_rready" SIGIS="undef" SIGNAME="axi_mem_intercon_S00_AXI_rready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="filtDMA_axi_dma_0" PORT="m_axi_mm2s_rready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="S00_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_S00_AXI_rresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="filtDMA_axi_dma_0" PORT="m_axi_mm2s_rresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="S00_AXI_rvalid" SIGIS="undef" SIGNAME="axi_mem_intercon_S00_AXI_rvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="filtDMA_axi_dma_0" PORT="m_axi_mm2s_rvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="S01_ACLK" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="S01_ARESETN" SIGIS="rst" SIGNAME="rst_ps7_0_100M_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rst_ps7_0_100M" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="S01_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_S01_AXI_awaddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="filtDMA_axi_dma_0" PORT="m_axi_s2mm_awaddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="S01_AXI_awburst" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_S01_AXI_awburst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="filtDMA_axi_dma_0" PORT="m_axi_s2mm_awburst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="S01_AXI_awcache" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_S01_AXI_awcache">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="filtDMA_axi_dma_0" PORT="m_axi_s2mm_awcache"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="S01_AXI_awlen" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_S01_AXI_awlen">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="filtDMA_axi_dma_0" PORT="m_axi_s2mm_awlen"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="S01_AXI_awprot" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_S01_AXI_awprot">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="filtDMA_axi_dma_0" PORT="m_axi_s2mm_awprot"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="S01_AXI_awready" SIGIS="undef" SIGNAME="axi_mem_intercon_S01_AXI_awready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="filtDMA_axi_dma_0" PORT="m_axi_s2mm_awready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="S01_AXI_awsize" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_S01_AXI_awsize">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="filtDMA_axi_dma_0" PORT="m_axi_s2mm_awsize"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="S01_AXI_awvalid" SIGIS="undef" SIGNAME="axi_mem_intercon_S01_AXI_awvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="filtDMA_axi_dma_0" PORT="m_axi_s2mm_awvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="S01_AXI_bready" SIGIS="undef" SIGNAME="axi_mem_intercon_S01_AXI_bready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="filtDMA_axi_dma_0" PORT="m_axi_s2mm_bready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="S01_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_S01_AXI_bresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="filtDMA_axi_dma_0" PORT="m_axi_s2mm_bresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="S01_AXI_bvalid" SIGIS="undef" SIGNAME="axi_mem_intercon_S01_AXI_bvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="filtDMA_axi_dma_0" PORT="m_axi_s2mm_bvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="S01_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_S01_AXI_wdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="filtDMA_axi_dma_0" PORT="m_axi_s2mm_wdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="S01_AXI_wlast" SIGIS="undef" SIGNAME="axi_mem_intercon_S01_AXI_wlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="filtDMA_axi_dma_0" PORT="m_axi_s2mm_wlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="S01_AXI_wready" SIGIS="undef" SIGNAME="axi_mem_intercon_S01_AXI_wready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="filtDMA_axi_dma_0" PORT="m_axi_s2mm_wready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="S01_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_S01_AXI_wstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="filtDMA_axi_dma_0" PORT="m_axi_s2mm_wstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="S01_AXI_wvalid" SIGIS="undef" SIGNAME="axi_mem_intercon_S01_AXI_wvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="filtDMA_axi_dma_0" PORT="m_axi_s2mm_wvalid"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="filtDMA_axi_dma_0_M_AXI_MM2S" DATAWIDTH="32" NAME="S00_AXI" TYPE="SLAVE" VLNV="xilinx.com:interface:aximm:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="ARADDR" PHYSICAL="S00_AXI_araddr"/>
+            <PORTMAP LOGICAL="ARBURST" PHYSICAL="S00_AXI_arburst"/>
+            <PORTMAP LOGICAL="ARCACHE" PHYSICAL="S00_AXI_arcache"/>
+            <PORTMAP LOGICAL="ARLEN" PHYSICAL="S00_AXI_arlen"/>
+            <PORTMAP LOGICAL="ARPROT" PHYSICAL="S00_AXI_arprot"/>
+            <PORTMAP LOGICAL="ARREADY" PHYSICAL="S00_AXI_arready"/>
+            <PORTMAP LOGICAL="ARSIZE" PHYSICAL="S00_AXI_arsize"/>
+            <PORTMAP LOGICAL="ARVALID" PHYSICAL="S00_AXI_arvalid"/>
+            <PORTMAP LOGICAL="RDATA" PHYSICAL="S00_AXI_rdata"/>
+            <PORTMAP LOGICAL="RLAST" PHYSICAL="S00_AXI_rlast"/>
+            <PORTMAP LOGICAL="RREADY" PHYSICAL="S00_AXI_rready"/>
+            <PORTMAP LOGICAL="RRESP" PHYSICAL="S00_AXI_rresp"/>
+            <PORTMAP LOGICAL="RVALID" PHYSICAL="S00_AXI_rvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="axi_mem_intercon_M00_AXI" DATAWIDTH="32" NAME="M00_AXI" TYPE="MASTER" VLNV="xilinx.com:interface:aximm:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="ARADDR" PHYSICAL="M00_AXI_araddr"/>
+            <PORTMAP LOGICAL="ARBURST" PHYSICAL="M00_AXI_arburst"/>
+            <PORTMAP LOGICAL="ARCACHE" PHYSICAL="M00_AXI_arcache"/>
+            <PORTMAP LOGICAL="ARID" PHYSICAL="M00_AXI_arid"/>
+            <PORTMAP LOGICAL="ARLEN" PHYSICAL="M00_AXI_arlen"/>
+            <PORTMAP LOGICAL="ARLOCK" PHYSICAL="M00_AXI_arlock"/>
+            <PORTMAP LOGICAL="ARPROT" PHYSICAL="M00_AXI_arprot"/>
+            <PORTMAP LOGICAL="ARQOS" PHYSICAL="M00_AXI_arqos"/>
+            <PORTMAP LOGICAL="ARREADY" PHYSICAL="M00_AXI_arready"/>
+            <PORTMAP LOGICAL="ARSIZE" PHYSICAL="M00_AXI_arsize"/>
+            <PORTMAP LOGICAL="ARVALID" PHYSICAL="M00_AXI_arvalid"/>
+            <PORTMAP LOGICAL="AWADDR" PHYSICAL="M00_AXI_awaddr"/>
+            <PORTMAP LOGICAL="AWBURST" PHYSICAL="M00_AXI_awburst"/>
+            <PORTMAP LOGICAL="AWCACHE" PHYSICAL="M00_AXI_awcache"/>
+            <PORTMAP LOGICAL="AWID" PHYSICAL="M00_AXI_awid"/>
+            <PORTMAP LOGICAL="AWLEN" PHYSICAL="M00_AXI_awlen"/>
+            <PORTMAP LOGICAL="AWLOCK" PHYSICAL="M00_AXI_awlock"/>
+            <PORTMAP LOGICAL="AWPROT" PHYSICAL="M00_AXI_awprot"/>
+            <PORTMAP LOGICAL="AWQOS" PHYSICAL="M00_AXI_awqos"/>
+            <PORTMAP LOGICAL="AWREADY" PHYSICAL="M00_AXI_awready"/>
+            <PORTMAP LOGICAL="AWSIZE" PHYSICAL="M00_AXI_awsize"/>
+            <PORTMAP LOGICAL="AWVALID" PHYSICAL="M00_AXI_awvalid"/>
+            <PORTMAP LOGICAL="BID" PHYSICAL="M00_AXI_bid"/>
+            <PORTMAP LOGICAL="BREADY" PHYSICAL="M00_AXI_bready"/>
+            <PORTMAP LOGICAL="BRESP" PHYSICAL="M00_AXI_bresp"/>
+            <PORTMAP LOGICAL="BVALID" PHYSICAL="M00_AXI_bvalid"/>
+            <PORTMAP LOGICAL="RDATA" PHYSICAL="M00_AXI_rdata"/>
+            <PORTMAP LOGICAL="RID" PHYSICAL="M00_AXI_rid"/>
+            <PORTMAP LOGICAL="RLAST" PHYSICAL="M00_AXI_rlast"/>
+            <PORTMAP LOGICAL="RREADY" PHYSICAL="M00_AXI_rready"/>
+            <PORTMAP LOGICAL="RRESP" PHYSICAL="M00_AXI_rresp"/>
+            <PORTMAP LOGICAL="RVALID" PHYSICAL="M00_AXI_rvalid"/>
+            <PORTMAP LOGICAL="WDATA" PHYSICAL="M00_AXI_wdata"/>
+            <PORTMAP LOGICAL="WID" PHYSICAL="M00_AXI_wid"/>
+            <PORTMAP LOGICAL="WLAST" PHYSICAL="M00_AXI_wlast"/>
+            <PORTMAP LOGICAL="WREADY" PHYSICAL="M00_AXI_wready"/>
+            <PORTMAP LOGICAL="WSTRB" PHYSICAL="M00_AXI_wstrb"/>
+            <PORTMAP LOGICAL="WVALID" PHYSICAL="M00_AXI_wvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="filtDMA_axi_dma_0_M_AXI_S2MM" DATAWIDTH="32" NAME="S01_AXI" TYPE="SLAVE" VLNV="xilinx.com:interface:aximm:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="AWADDR" PHYSICAL="S01_AXI_awaddr"/>
+            <PORTMAP LOGICAL="AWBURST" PHYSICAL="S01_AXI_awburst"/>
+            <PORTMAP LOGICAL="AWCACHE" PHYSICAL="S01_AXI_awcache"/>
+            <PORTMAP LOGICAL="AWLEN" PHYSICAL="S01_AXI_awlen"/>
+            <PORTMAP LOGICAL="AWPROT" PHYSICAL="S01_AXI_awprot"/>
+            <PORTMAP LOGICAL="AWREADY" PHYSICAL="S01_AXI_awready"/>
+            <PORTMAP LOGICAL="AWSIZE" PHYSICAL="S01_AXI_awsize"/>
+            <PORTMAP LOGICAL="AWVALID" PHYSICAL="S01_AXI_awvalid"/>
+            <PORTMAP LOGICAL="BREADY" PHYSICAL="S01_AXI_bready"/>
+            <PORTMAP LOGICAL="BRESP" PHYSICAL="S01_AXI_bresp"/>
+            <PORTMAP LOGICAL="BVALID" PHYSICAL="S01_AXI_bvalid"/>
+            <PORTMAP LOGICAL="WDATA" PHYSICAL="S01_AXI_wdata"/>
+            <PORTMAP LOGICAL="WLAST" PHYSICAL="S01_AXI_wlast"/>
+            <PORTMAP LOGICAL="WREADY" PHYSICAL="S01_AXI_wready"/>
+            <PORTMAP LOGICAL="WSTRB" PHYSICAL="S01_AXI_wstrb"/>
+            <PORTMAP LOGICAL="WVALID" PHYSICAL="S01_AXI_wvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE COREREVISION="9" FULLNAME="/filtDMA/axi_bram_ctrl_0" HWVERSION="4.1" INSTANCE="filtDMA_axi_bram_ctrl_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="MEMORY_CNTLR" MODTYPE="axi_bram_ctrl" VLNV="xilinx.com:ip:axi_bram_ctrl:4.1">
       <DOCUMENTS>
         <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=axi_bram_ctrl;v=v4_1;d=pg078-axi-bram-ctrl.pdf"/>
       </DOCUMENTS>
@@ -200,29 +981,39 @@
         <PARAMETER NAME="EDK_SPECIAL" VALUE="BRAM_CTRL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="O" LEFT="12" NAME="bram_addr_a" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_bram_ctrl_0_bram_addr_a">
+        <PORT DIR="O" LEFT="12" NAME="bram_addr_a" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_bram_addr_a">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_blk_mem_gen_0" PORT="addra"/>
+            <CONNECTION INSTANCE="filtDMA_blk_mem_gen_0" PORT="addra"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="bram_clk_a" SIGIS="clk" SIGNAME="FIR_axi_bram_ctrl_0_bram_clk_a">
+        <PORT DIR="O" NAME="bram_clk_a" SIGIS="clk" SIGNAME="filtDMA_axi_bram_ctrl_0_bram_clk_a">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_blk_mem_gen_0" PORT="clka"/>
+            <CONNECTION INSTANCE="filtDMA_blk_mem_gen_0" PORT="clka"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="bram_en_a" SIGIS="undef" SIGNAME="FIR_axi_bram_ctrl_0_bram_en_a">
+        <PORT DIR="O" NAME="bram_en_a" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_bram_en_a">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_blk_mem_gen_0" PORT="ena"/>
+            <CONNECTION INSTANCE="filtDMA_blk_mem_gen_0" PORT="ena"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="bram_rddata_a" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_bram_ctrl_0_bram_rddata_a">
+        <PORT DIR="I" LEFT="31" NAME="bram_rddata_a" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_bram_rddata_a">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_blk_mem_gen_0" PORT="douta"/>
+            <CONNECTION INSTANCE="filtDMA_blk_mem_gen_0" PORT="douta"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="bram_rst_a" SIGIS="rst" SIGNAME="FIR_axi_bram_ctrl_0_bram_rst_a">
+        <PORT DIR="O" NAME="bram_rst_a" SIGIS="rst" SIGNAME="filtDMA_axi_bram_ctrl_0_bram_rst_a">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_blk_mem_gen_0" PORT="rsta"/>
+            <CONNECTION INSTANCE="filtDMA_blk_mem_gen_0" PORT="rsta"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="bram_we_a" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_bram_we_a">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="filtDMA_blk_mem_gen_0" PORT="wea"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="bram_wrdata_a" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_bram_wrdata_a">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="filtDMA_blk_mem_gen_0" PORT="dina"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="I" NAME="s_axi_aclk" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
@@ -230,19 +1021,19 @@
             <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK0"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="12" NAME="s_axi_araddr" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_bram_ctrl_0_s_axi_araddr">
+        <PORT DIR="I" LEFT="12" NAME="s_axi_araddr" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_araddr">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_filt_0" PORT="m_axi_gmem_ARADDR"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="m_axi_gmem_ARADDR"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="1" NAME="s_axi_arburst" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_bram_ctrl_0_s_axi_arburst">
+        <PORT DIR="I" LEFT="1" NAME="s_axi_arburst" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_arburst">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_filt_0" PORT="m_axi_gmem_ARBURST"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="m_axi_gmem_ARBURST"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="3" NAME="s_axi_arcache" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_bram_ctrl_0_s_axi_arcache">
+        <PORT DIR="I" LEFT="3" NAME="s_axi_arcache" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_arcache">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_filt_0" PORT="m_axi_gmem_ARCACHE"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="m_axi_gmem_ARCACHE"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="s_axi_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="rst_ps7_0_100M_peripheral_aresetn">
@@ -250,169 +1041,169 @@
             <CONNECTION INSTANCE="rst_ps7_0_100M" PORT="peripheral_aresetn"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="0" NAME="s_axi_arid" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_bram_ctrl_0_s_axi_arid">
+        <PORT DIR="I" LEFT="0" NAME="s_axi_arid" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_arid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_filt_0" PORT="m_axi_gmem_ARID"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="m_axi_gmem_ARID"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="s_axi_arlen" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_bram_ctrl_0_s_axi_arlen">
+        <PORT DIR="I" LEFT="7" NAME="s_axi_arlen" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_arlen">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_filt_0" PORT="m_axi_gmem_ARLEN"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="m_axi_gmem_ARLEN"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="s_axi_arlock" SIGIS="undef" SIGNAME="FIR_axi_bram_ctrl_0_s_axi_arlock">
+        <PORT DIR="I" NAME="s_axi_arlock" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_arlock">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_filt_0" PORT="m_axi_gmem_ARLOCK"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="m_axi_gmem_ARLOCK"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="2" NAME="s_axi_arprot" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_bram_ctrl_0_s_axi_arprot">
+        <PORT DIR="I" LEFT="2" NAME="s_axi_arprot" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_arprot">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_filt_0" PORT="m_axi_gmem_ARPROT"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="m_axi_gmem_ARPROT"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="s_axi_arready" SIGIS="undef" SIGNAME="FIR_axi_bram_ctrl_0_s_axi_arready">
+        <PORT DIR="O" NAME="s_axi_arready" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_arready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_filt_0" PORT="m_axi_gmem_ARREADY"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="m_axi_gmem_ARREADY"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="2" NAME="s_axi_arsize" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_bram_ctrl_0_s_axi_arsize">
+        <PORT DIR="I" LEFT="2" NAME="s_axi_arsize" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_arsize">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_filt_0" PORT="m_axi_gmem_ARSIZE"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="m_axi_gmem_ARSIZE"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="s_axi_arvalid" SIGIS="undef" SIGNAME="FIR_axi_bram_ctrl_0_s_axi_arvalid">
+        <PORT DIR="I" NAME="s_axi_arvalid" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_arvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_filt_0" PORT="m_axi_gmem_ARVALID"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="m_axi_gmem_ARVALID"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="12" NAME="s_axi_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_bram_ctrl_0_s_axi_awaddr">
+        <PORT DIR="I" LEFT="12" NAME="s_axi_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_awaddr">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_filt_0" PORT="m_axi_gmem_AWADDR"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="m_axi_gmem_AWADDR"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="1" NAME="s_axi_awburst" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_bram_ctrl_0_s_axi_awburst">
+        <PORT DIR="I" LEFT="1" NAME="s_axi_awburst" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_awburst">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_filt_0" PORT="m_axi_gmem_AWBURST"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="m_axi_gmem_AWBURST"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="3" NAME="s_axi_awcache" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_bram_ctrl_0_s_axi_awcache">
+        <PORT DIR="I" LEFT="3" NAME="s_axi_awcache" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_awcache">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_filt_0" PORT="m_axi_gmem_AWCACHE"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="m_axi_gmem_AWCACHE"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="0" NAME="s_axi_awid" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_bram_ctrl_0_s_axi_awid">
+        <PORT DIR="I" LEFT="0" NAME="s_axi_awid" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_awid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_filt_0" PORT="m_axi_gmem_AWID"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="m_axi_gmem_AWID"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="s_axi_awlen" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_bram_ctrl_0_s_axi_awlen">
+        <PORT DIR="I" LEFT="7" NAME="s_axi_awlen" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_awlen">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_filt_0" PORT="m_axi_gmem_AWLEN"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="m_axi_gmem_AWLEN"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="s_axi_awlock" SIGIS="undef" SIGNAME="FIR_axi_bram_ctrl_0_s_axi_awlock">
+        <PORT DIR="I" NAME="s_axi_awlock" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_awlock">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_filt_0" PORT="m_axi_gmem_AWLOCK"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="m_axi_gmem_AWLOCK"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="2" NAME="s_axi_awprot" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_bram_ctrl_0_s_axi_awprot">
+        <PORT DIR="I" LEFT="2" NAME="s_axi_awprot" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_awprot">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_filt_0" PORT="m_axi_gmem_AWPROT"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="m_axi_gmem_AWPROT"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="s_axi_awready" SIGIS="undef" SIGNAME="FIR_axi_bram_ctrl_0_s_axi_awready">
+        <PORT DIR="O" NAME="s_axi_awready" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_awready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_filt_0" PORT="m_axi_gmem_AWREADY"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="m_axi_gmem_AWREADY"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="2" NAME="s_axi_awsize" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_bram_ctrl_0_s_axi_awsize">
+        <PORT DIR="I" LEFT="2" NAME="s_axi_awsize" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_awsize">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_filt_0" PORT="m_axi_gmem_AWSIZE"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="m_axi_gmem_AWSIZE"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="s_axi_awvalid" SIGIS="undef" SIGNAME="FIR_axi_bram_ctrl_0_s_axi_awvalid">
+        <PORT DIR="I" NAME="s_axi_awvalid" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_awvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_filt_0" PORT="m_axi_gmem_AWVALID"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="m_axi_gmem_AWVALID"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="0" NAME="s_axi_bid" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_bram_ctrl_0_s_axi_bid">
+        <PORT DIR="O" LEFT="0" NAME="s_axi_bid" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_bid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_filt_0" PORT="m_axi_gmem_BID"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="m_axi_gmem_BID"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="s_axi_bready" SIGIS="undef" SIGNAME="FIR_axi_bram_ctrl_0_s_axi_bready">
+        <PORT DIR="I" NAME="s_axi_bready" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_bready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_filt_0" PORT="m_axi_gmem_BREADY"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="m_axi_gmem_BREADY"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="1" NAME="s_axi_bresp" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_bram_ctrl_0_s_axi_bresp">
+        <PORT DIR="O" LEFT="1" NAME="s_axi_bresp" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_bresp">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_filt_0" PORT="m_axi_gmem_BRESP"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="m_axi_gmem_BRESP"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="s_axi_bvalid" SIGIS="undef" SIGNAME="FIR_axi_bram_ctrl_0_s_axi_bvalid">
+        <PORT DIR="O" NAME="s_axi_bvalid" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_bvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_filt_0" PORT="m_axi_gmem_BVALID"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="m_axi_gmem_BVALID"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="s_axi_rdata" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_bram_ctrl_0_s_axi_rdata">
+        <PORT DIR="O" LEFT="31" NAME="s_axi_rdata" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_rdata">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_filt_0" PORT="m_axi_gmem_RDATA"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="m_axi_gmem_RDATA"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="0" NAME="s_axi_rid" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_bram_ctrl_0_s_axi_rid">
+        <PORT DIR="O" LEFT="0" NAME="s_axi_rid" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_rid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_filt_0" PORT="m_axi_gmem_RID"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="m_axi_gmem_RID"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="s_axi_rlast" SIGIS="undef" SIGNAME="FIR_axi_bram_ctrl_0_s_axi_rlast">
+        <PORT DIR="O" NAME="s_axi_rlast" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_rlast">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_filt_0" PORT="m_axi_gmem_RLAST"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="m_axi_gmem_RLAST"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="s_axi_rready" SIGIS="undef" SIGNAME="FIR_axi_bram_ctrl_0_s_axi_rready">
+        <PORT DIR="I" NAME="s_axi_rready" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_rready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_filt_0" PORT="m_axi_gmem_RREADY"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="m_axi_gmem_RREADY"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="1" NAME="s_axi_rresp" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_bram_ctrl_0_s_axi_rresp">
+        <PORT DIR="O" LEFT="1" NAME="s_axi_rresp" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_rresp">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_filt_0" PORT="m_axi_gmem_RRESP"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="m_axi_gmem_RRESP"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="s_axi_rvalid" SIGIS="undef" SIGNAME="FIR_axi_bram_ctrl_0_s_axi_rvalid">
+        <PORT DIR="O" NAME="s_axi_rvalid" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_rvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_filt_0" PORT="m_axi_gmem_RVALID"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="m_axi_gmem_RVALID"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="s_axi_wdata" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_bram_ctrl_0_s_axi_wdata">
+        <PORT DIR="I" LEFT="31" NAME="s_axi_wdata" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_wdata">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_filt_0" PORT="m_axi_gmem_WDATA"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="m_axi_gmem_WDATA"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="s_axi_wlast" SIGIS="undef" SIGNAME="FIR_axi_bram_ctrl_0_s_axi_wlast">
+        <PORT DIR="I" NAME="s_axi_wlast" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_wlast">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_filt_0" PORT="m_axi_gmem_WLAST"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="m_axi_gmem_WLAST"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="s_axi_wready" SIGIS="undef" SIGNAME="FIR_axi_bram_ctrl_0_s_axi_wready">
+        <PORT DIR="O" NAME="s_axi_wready" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_wready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_filt_0" PORT="m_axi_gmem_WREADY"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="m_axi_gmem_WREADY"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="3" NAME="s_axi_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_bram_ctrl_0_s_axi_wstrb">
+        <PORT DIR="I" LEFT="3" NAME="s_axi_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_wstrb">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_filt_0" PORT="m_axi_gmem_WSTRB"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="m_axi_gmem_WSTRB"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="s_axi_wvalid" SIGIS="undef" SIGNAME="FIR_axi_bram_ctrl_0_s_axi_wvalid">
+        <PORT DIR="I" NAME="s_axi_wvalid" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_wvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_filt_0" PORT="m_axi_gmem_WVALID"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="m_axi_gmem_WVALID"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
       <BUSINTERFACES>
-        <BUSINTERFACE BUSNAME="FIR_filt_0_m_axi_gmem" DATAWIDTH="32" NAME="S_AXI" TYPE="SLAVE" VLNV="xilinx.com:interface:aximm:1.0">
+        <BUSINTERFACE BUSNAME="filtDMA_filt_0_m_axi_gmem" DATAWIDTH="32" NAME="S_AXI" TYPE="SLAVE" VLNV="xilinx.com:interface:aximm:1.0">
           <PARAMETER NAME="ADDR_WIDTH" VALUE="13"/>
           <PARAMETER NAME="ARUSER_WIDTH" VALUE="0"/>
           <PARAMETER NAME="AWUSER_WIDTH" VALUE="0"/>
@@ -482,24 +1273,26 @@
             <PORTMAP LOGICAL="WVALID" PHYSICAL="s_axi_wvalid"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="FIR_axi_bram_ctrl_0_BRAM_PORTA" NAME="BRAM_PORTA" TYPE="INITIATOR" VLNV="xilinx.com:interface:bram:1.0">
+        <BUSINTERFACE BUSNAME="filtDMA_axi_bram_ctrl_0_BRAM_PORTA" NAME="BRAM_PORTA" TYPE="INITIATOR" VLNV="xilinx.com:interface:bram:1.0">
           <PARAMETER NAME="MASTER_TYPE" VALUE="BRAM_CTRL"/>
           <PARAMETER NAME="MEM_ECC" VALUE="NONE"/>
           <PARAMETER NAME="MEM_SIZE" VALUE="8192"/>
           <PARAMETER NAME="MEM_WIDTH" VALUE="32"/>
           <PARAMETER NAME="READ_LATENCY" VALUE="1"/>
-          <PARAMETER NAME="READ_WRITE_MODE" VALUE="READ_ONLY"/>
+          <PARAMETER NAME="READ_WRITE_MODE" VALUE="READ_WRITE"/>
           <PORTMAPS>
             <PORTMAP LOGICAL="ADDR" PHYSICAL="bram_addr_a"/>
             <PORTMAP LOGICAL="CLK" PHYSICAL="bram_clk_a"/>
+            <PORTMAP LOGICAL="DIN" PHYSICAL="bram_wrdata_a"/>
             <PORTMAP LOGICAL="DOUT" PHYSICAL="bram_rddata_a"/>
             <PORTMAP LOGICAL="EN" PHYSICAL="bram_en_a"/>
             <PORTMAP LOGICAL="RST" PHYSICAL="bram_rst_a"/>
+            <PORTMAP LOGICAL="WE" PHYSICAL="bram_we_a"/>
           </PORTMAPS>
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="30" FULLNAME="/FIR/axi_dma_0" HWVERSION="7.1" INSTANCE="FIR_axi_dma_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="axi_dma" VLNV="xilinx.com:ip:axi_dma:7.1">
+    <MODULE COREREVISION="30" FULLNAME="/filtDMA/axi_dma_0" HWVERSION="7.1" INSTANCE="filtDMA_axi_dma_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="axi_dma" VLNV="xilinx.com:ip:axi_dma:7.1">
       <DOCUMENTS>
         <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=axi_dma;v=v7_1;d=pg021_axi_dma.pdf"/>
       </DOCUMENTS>
@@ -1334,7 +2127,7 @@
         <PARAMETER NAME="C_MICRO_DMA" VALUE="0"/>
         <PARAMETER NAME="C_MM2S_BURST_SIZE" VALUE="16"/>
         <PARAMETER NAME="C_M_AXIS_MM2S_CNTRL_TDATA_WIDTH" VALUE="32"/>
-        <PARAMETER NAME="C_M_AXIS_MM2S_TDATA_WIDTH" VALUE="16"/>
+        <PARAMETER NAME="C_M_AXIS_MM2S_TDATA_WIDTH" VALUE="32"/>
         <PARAMETER NAME="C_M_AXI_MM2S_ADDR_WIDTH" VALUE="32"/>
         <PARAMETER NAME="C_M_AXI_MM2S_DATA_WIDTH" VALUE="32"/>
         <PARAMETER NAME="C_M_AXI_S2MM_ADDR_WIDTH" VALUE="32"/>
@@ -1349,7 +2142,7 @@
         <PARAMETER NAME="C_SG_LENGTH_WIDTH" VALUE="14"/>
         <PARAMETER NAME="C_SG_USE_STSAPP_LENGTH" VALUE="0"/>
         <PARAMETER NAME="C_S_AXIS_S2MM_STS_TDATA_WIDTH" VALUE="32"/>
-        <PARAMETER NAME="C_S_AXIS_S2MM_TDATA_WIDTH" VALUE="16"/>
+        <PARAMETER NAME="C_S_AXIS_S2MM_TDATA_WIDTH" VALUE="32"/>
         <PARAMETER NAME="C_S_AXI_LITE_ADDR_WIDTH" VALUE="10"/>
         <PARAMETER NAME="C_S_AXI_LITE_DATA_WIDTH" VALUE="32"/>
         <PARAMETER NAME="Component_Name" VALUE="FIR_Test_axi_dma_0_0"/>
@@ -1366,14 +2159,14 @@
         <PARAMETER NAME="c_increase_throughput" VALUE="0"/>
         <PARAMETER NAME="c_m_axi_mm2s_data_width" VALUE="32"/>
         <PARAMETER NAME="c_m_axi_s2mm_data_width" VALUE="32"/>
-        <PARAMETER NAME="c_m_axis_mm2s_tdata_width" VALUE="16"/>
+        <PARAMETER NAME="c_m_axis_mm2s_tdata_width" VALUE="32"/>
         <PARAMETER NAME="c_micro_dma" VALUE="0"/>
         <PARAMETER NAME="c_mm2s_burst_size" VALUE="16"/>
         <PARAMETER NAME="c_num_mm2s_channels" VALUE="1"/>
         <PARAMETER NAME="c_num_s2mm_channels" VALUE="1"/>
         <PARAMETER NAME="c_prmry_is_aclk_async" VALUE="0"/>
         <PARAMETER NAME="c_s2mm_burst_size" VALUE="16"/>
-        <PARAMETER NAME="c_s_axis_s2mm_tdata_width" VALUE="16"/>
+        <PARAMETER NAME="c_s_axis_s2mm_tdata_width" VALUE="32"/>
         <PARAMETER NAME="c_sg_include_stscntrl_strm" VALUE="0"/>
         <PARAMETER NAME="c_sg_length_width" VALUE="14"/>
         <PARAMETER NAME="c_sg_use_stsapp_length" VALUE="0"/>
@@ -1393,67 +2186,67 @@
             <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK0"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="m_axi_mm2s_araddr" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_dma_0_m_axi_mm2s_araddr">
+        <PORT DIR="O" LEFT="31" NAME="m_axi_mm2s_araddr" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_S00_AXI_araddr">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_mem_intercon" PORT="S00_AXI_araddr"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="1" NAME="m_axi_mm2s_arburst" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_dma_0_m_axi_mm2s_arburst">
+        <PORT DIR="O" LEFT="1" NAME="m_axi_mm2s_arburst" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_S00_AXI_arburst">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_mem_intercon" PORT="S00_AXI_arburst"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="3" NAME="m_axi_mm2s_arcache" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_dma_0_m_axi_mm2s_arcache">
+        <PORT DIR="O" LEFT="3" NAME="m_axi_mm2s_arcache" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_S00_AXI_arcache">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_mem_intercon" PORT="S00_AXI_arcache"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="7" NAME="m_axi_mm2s_arlen" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_dma_0_m_axi_mm2s_arlen">
+        <PORT DIR="O" LEFT="7" NAME="m_axi_mm2s_arlen" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_S00_AXI_arlen">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_mem_intercon" PORT="S00_AXI_arlen"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="2" NAME="m_axi_mm2s_arprot" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_dma_0_m_axi_mm2s_arprot">
+        <PORT DIR="O" LEFT="2" NAME="m_axi_mm2s_arprot" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_S00_AXI_arprot">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_mem_intercon" PORT="S00_AXI_arprot"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="m_axi_mm2s_arready" SIGIS="undef" SIGNAME="FIR_axi_dma_0_m_axi_mm2s_arready">
+        <PORT DIR="I" NAME="m_axi_mm2s_arready" SIGIS="undef" SIGNAME="axi_mem_intercon_S00_AXI_arready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_mem_intercon" PORT="S00_AXI_arready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="2" NAME="m_axi_mm2s_arsize" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_dma_0_m_axi_mm2s_arsize">
+        <PORT DIR="O" LEFT="2" NAME="m_axi_mm2s_arsize" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_S00_AXI_arsize">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_mem_intercon" PORT="S00_AXI_arsize"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="m_axi_mm2s_arvalid" SIGIS="undef" SIGNAME="FIR_axi_dma_0_m_axi_mm2s_arvalid">
+        <PORT DIR="O" NAME="m_axi_mm2s_arvalid" SIGIS="undef" SIGNAME="axi_mem_intercon_S00_AXI_arvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_mem_intercon" PORT="S00_AXI_arvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="m_axi_mm2s_rdata" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_dma_0_m_axi_mm2s_rdata">
+        <PORT DIR="I" LEFT="31" NAME="m_axi_mm2s_rdata" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_S00_AXI_rdata">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_mem_intercon" PORT="S00_AXI_rdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="m_axi_mm2s_rlast" SIGIS="undef" SIGNAME="FIR_axi_dma_0_m_axi_mm2s_rlast">
+        <PORT DIR="I" NAME="m_axi_mm2s_rlast" SIGIS="undef" SIGNAME="axi_mem_intercon_S00_AXI_rlast">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_mem_intercon" PORT="S00_AXI_rlast"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="m_axi_mm2s_rready" SIGIS="undef" SIGNAME="FIR_axi_dma_0_m_axi_mm2s_rready">
+        <PORT DIR="O" NAME="m_axi_mm2s_rready" SIGIS="undef" SIGNAME="axi_mem_intercon_S00_AXI_rready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_mem_intercon" PORT="S00_AXI_rready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="1" NAME="m_axi_mm2s_rresp" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_dma_0_m_axi_mm2s_rresp">
+        <PORT DIR="I" LEFT="1" NAME="m_axi_mm2s_rresp" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_S00_AXI_rresp">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_mem_intercon" PORT="S00_AXI_rresp"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="m_axi_mm2s_rvalid" SIGIS="undef" SIGNAME="FIR_axi_dma_0_m_axi_mm2s_rvalid">
+        <PORT DIR="I" NAME="m_axi_mm2s_rvalid" SIGIS="undef" SIGNAME="axi_mem_intercon_S00_AXI_rvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_mem_intercon" PORT="S00_AXI_rvalid"/>
           </CONNECTIONS>
@@ -1463,109 +2256,109 @@
             <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK0"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="m_axi_s2mm_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_dma_0_m_axi_s2mm_awaddr">
+        <PORT DIR="O" LEFT="31" NAME="m_axi_s2mm_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_S01_AXI_awaddr">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_mem_intercon" PORT="S01_AXI_awaddr"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="1" NAME="m_axi_s2mm_awburst" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_dma_0_m_axi_s2mm_awburst">
+        <PORT DIR="O" LEFT="1" NAME="m_axi_s2mm_awburst" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_S01_AXI_awburst">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_mem_intercon" PORT="S01_AXI_awburst"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="3" NAME="m_axi_s2mm_awcache" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_dma_0_m_axi_s2mm_awcache">
+        <PORT DIR="O" LEFT="3" NAME="m_axi_s2mm_awcache" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_S01_AXI_awcache">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_mem_intercon" PORT="S01_AXI_awcache"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="7" NAME="m_axi_s2mm_awlen" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_dma_0_m_axi_s2mm_awlen">
+        <PORT DIR="O" LEFT="7" NAME="m_axi_s2mm_awlen" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_S01_AXI_awlen">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_mem_intercon" PORT="S01_AXI_awlen"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="2" NAME="m_axi_s2mm_awprot" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_dma_0_m_axi_s2mm_awprot">
+        <PORT DIR="O" LEFT="2" NAME="m_axi_s2mm_awprot" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_S01_AXI_awprot">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_mem_intercon" PORT="S01_AXI_awprot"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="m_axi_s2mm_awready" SIGIS="undef" SIGNAME="FIR_axi_dma_0_m_axi_s2mm_awready">
+        <PORT DIR="I" NAME="m_axi_s2mm_awready" SIGIS="undef" SIGNAME="axi_mem_intercon_S01_AXI_awready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_mem_intercon" PORT="S01_AXI_awready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="2" NAME="m_axi_s2mm_awsize" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_dma_0_m_axi_s2mm_awsize">
+        <PORT DIR="O" LEFT="2" NAME="m_axi_s2mm_awsize" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_S01_AXI_awsize">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_mem_intercon" PORT="S01_AXI_awsize"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="m_axi_s2mm_awvalid" SIGIS="undef" SIGNAME="FIR_axi_dma_0_m_axi_s2mm_awvalid">
+        <PORT DIR="O" NAME="m_axi_s2mm_awvalid" SIGIS="undef" SIGNAME="axi_mem_intercon_S01_AXI_awvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_mem_intercon" PORT="S01_AXI_awvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="m_axi_s2mm_bready" SIGIS="undef" SIGNAME="FIR_axi_dma_0_m_axi_s2mm_bready">
+        <PORT DIR="O" NAME="m_axi_s2mm_bready" SIGIS="undef" SIGNAME="axi_mem_intercon_S01_AXI_bready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_mem_intercon" PORT="S01_AXI_bready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="1" NAME="m_axi_s2mm_bresp" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_dma_0_m_axi_s2mm_bresp">
+        <PORT DIR="I" LEFT="1" NAME="m_axi_s2mm_bresp" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_S01_AXI_bresp">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_mem_intercon" PORT="S01_AXI_bresp"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="m_axi_s2mm_bvalid" SIGIS="undef" SIGNAME="FIR_axi_dma_0_m_axi_s2mm_bvalid">
+        <PORT DIR="I" NAME="m_axi_s2mm_bvalid" SIGIS="undef" SIGNAME="axi_mem_intercon_S01_AXI_bvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_mem_intercon" PORT="S01_AXI_bvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="m_axi_s2mm_wdata" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_dma_0_m_axi_s2mm_wdata">
+        <PORT DIR="O" LEFT="31" NAME="m_axi_s2mm_wdata" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_S01_AXI_wdata">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_mem_intercon" PORT="S01_AXI_wdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="m_axi_s2mm_wlast" SIGIS="undef" SIGNAME="FIR_axi_dma_0_m_axi_s2mm_wlast">
+        <PORT DIR="O" NAME="m_axi_s2mm_wlast" SIGIS="undef" SIGNAME="axi_mem_intercon_S01_AXI_wlast">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_mem_intercon" PORT="S01_AXI_wlast"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="m_axi_s2mm_wready" SIGIS="undef" SIGNAME="FIR_axi_dma_0_m_axi_s2mm_wready">
+        <PORT DIR="I" NAME="m_axi_s2mm_wready" SIGIS="undef" SIGNAME="axi_mem_intercon_S01_AXI_wready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_mem_intercon" PORT="S01_AXI_wready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="3" NAME="m_axi_s2mm_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_dma_0_m_axi_s2mm_wstrb">
+        <PORT DIR="O" LEFT="3" NAME="m_axi_s2mm_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_S01_AXI_wstrb">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_mem_intercon" PORT="S01_AXI_wstrb"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="m_axi_s2mm_wvalid" SIGIS="undef" SIGNAME="FIR_axi_dma_0_m_axi_s2mm_wvalid">
+        <PORT DIR="O" NAME="m_axi_s2mm_wvalid" SIGIS="undef" SIGNAME="axi_mem_intercon_S01_AXI_wvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_mem_intercon" PORT="S01_AXI_wvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="15" NAME="m_axis_mm2s_tdata" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_dma_0_m_axis_mm2s_tdata">
+        <PORT DIR="O" LEFT="31" NAME="m_axis_mm2s_tdata" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_dma_0_m_axis_mm2s_tdata">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_filt_0" PORT="x_TDATA"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="x_TDATA"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="1" NAME="m_axis_mm2s_tkeep" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_dma_0_m_axis_mm2s_tkeep">
+        <PORT DIR="O" LEFT="3" NAME="m_axis_mm2s_tkeep" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_dma_0_m_axis_mm2s_tkeep">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_filt_0" PORT="x_TKEEP"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="x_TKEEP"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="m_axis_mm2s_tlast" SIGIS="undef" SIGNAME="FIR_axi_dma_0_m_axis_mm2s_tlast">
+        <PORT DIR="O" NAME="m_axis_mm2s_tlast" SIGIS="undef" SIGNAME="filtDMA_axi_dma_0_m_axis_mm2s_tlast">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_filt_0" PORT="x_TLAST"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="x_TLAST"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="m_axis_mm2s_tready" SIGIS="undef" SIGNAME="FIR_axi_dma_0_m_axis_mm2s_tready">
+        <PORT DIR="I" NAME="m_axis_mm2s_tready" SIGIS="undef" SIGNAME="filtDMA_axi_dma_0_m_axis_mm2s_tready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_filt_0" PORT="x_TREADY"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="x_TREADY"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="m_axis_mm2s_tvalid" SIGIS="undef" SIGNAME="FIR_axi_dma_0_m_axis_mm2s_tvalid">
+        <PORT DIR="O" NAME="m_axis_mm2s_tvalid" SIGIS="undef" SIGNAME="filtDMA_axi_dma_0_m_axis_mm2s_tvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_filt_0" PORT="x_TVALID"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="x_TVALID"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="mm2s_introut" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT"/>
@@ -1577,109 +2370,109 @@
             <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK0"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="9" NAME="s_axi_lite_araddr" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_dma_0_s_axi_lite_araddr">
+        <PORT DIR="I" LEFT="9" NAME="s_axi_lite_araddr" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_dma_0_s_axi_lite_araddr">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M00_AXI_araddr"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="s_axi_lite_arready" SIGIS="undef" SIGNAME="FIR_axi_dma_0_s_axi_lite_arready">
+        <PORT DIR="O" NAME="s_axi_lite_arready" SIGIS="undef" SIGNAME="filtDMA_axi_dma_0_s_axi_lite_arready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M00_AXI_arready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="s_axi_lite_arvalid" SIGIS="undef" SIGNAME="FIR_axi_dma_0_s_axi_lite_arvalid">
+        <PORT DIR="I" NAME="s_axi_lite_arvalid" SIGIS="undef" SIGNAME="filtDMA_axi_dma_0_s_axi_lite_arvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M00_AXI_arvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="9" NAME="s_axi_lite_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_dma_0_s_axi_lite_awaddr">
+        <PORT DIR="I" LEFT="9" NAME="s_axi_lite_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_dma_0_s_axi_lite_awaddr">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M00_AXI_awaddr"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="s_axi_lite_awready" SIGIS="undef" SIGNAME="FIR_axi_dma_0_s_axi_lite_awready">
+        <PORT DIR="O" NAME="s_axi_lite_awready" SIGIS="undef" SIGNAME="filtDMA_axi_dma_0_s_axi_lite_awready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M00_AXI_awready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="s_axi_lite_awvalid" SIGIS="undef" SIGNAME="FIR_axi_dma_0_s_axi_lite_awvalid">
+        <PORT DIR="I" NAME="s_axi_lite_awvalid" SIGIS="undef" SIGNAME="filtDMA_axi_dma_0_s_axi_lite_awvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M00_AXI_awvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="s_axi_lite_bready" SIGIS="undef" SIGNAME="FIR_axi_dma_0_s_axi_lite_bready">
+        <PORT DIR="I" NAME="s_axi_lite_bready" SIGIS="undef" SIGNAME="filtDMA_axi_dma_0_s_axi_lite_bready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M00_AXI_bready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="1" NAME="s_axi_lite_bresp" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_dma_0_s_axi_lite_bresp">
+        <PORT DIR="O" LEFT="1" NAME="s_axi_lite_bresp" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_dma_0_s_axi_lite_bresp">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M00_AXI_bresp"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="s_axi_lite_bvalid" SIGIS="undef" SIGNAME="FIR_axi_dma_0_s_axi_lite_bvalid">
+        <PORT DIR="O" NAME="s_axi_lite_bvalid" SIGIS="undef" SIGNAME="filtDMA_axi_dma_0_s_axi_lite_bvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M00_AXI_bvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="s_axi_lite_rdata" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_dma_0_s_axi_lite_rdata">
+        <PORT DIR="O" LEFT="31" NAME="s_axi_lite_rdata" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_dma_0_s_axi_lite_rdata">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M00_AXI_rdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="s_axi_lite_rready" SIGIS="undef" SIGNAME="FIR_axi_dma_0_s_axi_lite_rready">
+        <PORT DIR="I" NAME="s_axi_lite_rready" SIGIS="undef" SIGNAME="filtDMA_axi_dma_0_s_axi_lite_rready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M00_AXI_rready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="1" NAME="s_axi_lite_rresp" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_dma_0_s_axi_lite_rresp">
+        <PORT DIR="O" LEFT="1" NAME="s_axi_lite_rresp" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_dma_0_s_axi_lite_rresp">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M00_AXI_rresp"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="s_axi_lite_rvalid" SIGIS="undef" SIGNAME="FIR_axi_dma_0_s_axi_lite_rvalid">
+        <PORT DIR="O" NAME="s_axi_lite_rvalid" SIGIS="undef" SIGNAME="filtDMA_axi_dma_0_s_axi_lite_rvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M00_AXI_rvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="s_axi_lite_wdata" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_dma_0_s_axi_lite_wdata">
+        <PORT DIR="I" LEFT="31" NAME="s_axi_lite_wdata" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_dma_0_s_axi_lite_wdata">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M00_AXI_wdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="s_axi_lite_wready" SIGIS="undef" SIGNAME="FIR_axi_dma_0_s_axi_lite_wready">
+        <PORT DIR="O" NAME="s_axi_lite_wready" SIGIS="undef" SIGNAME="filtDMA_axi_dma_0_s_axi_lite_wready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M00_AXI_wready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="s_axi_lite_wvalid" SIGIS="undef" SIGNAME="FIR_axi_dma_0_s_axi_lite_wvalid">
+        <PORT DIR="I" NAME="s_axi_lite_wvalid" SIGIS="undef" SIGNAME="filtDMA_axi_dma_0_s_axi_lite_wvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M00_AXI_wvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="15" NAME="s_axis_s2mm_tdata" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_dma_0_s_axis_s2mm_tdata">
+        <PORT DIR="I" LEFT="31" NAME="s_axis_s2mm_tdata" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_dma_0_s_axis_s2mm_tdata">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_filt_0" PORT="y_TDATA"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="y_TDATA"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="1" NAME="s_axis_s2mm_tkeep" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_dma_0_s_axis_s2mm_tkeep">
+        <PORT DIR="I" LEFT="3" NAME="s_axis_s2mm_tkeep" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_dma_0_s_axis_s2mm_tkeep">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_filt_0" PORT="y_TKEEP"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="y_TKEEP"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="s_axis_s2mm_tlast" SIGIS="undef" SIGNAME="FIR_axi_dma_0_s_axis_s2mm_tlast">
+        <PORT DIR="I" NAME="s_axis_s2mm_tlast" SIGIS="undef" SIGNAME="filtDMA_axi_dma_0_s_axis_s2mm_tlast">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_filt_0" PORT="y_TLAST"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="y_TLAST"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="s_axis_s2mm_tready" SIGIS="undef" SIGNAME="FIR_axi_dma_0_s_axis_s2mm_tready">
+        <PORT DIR="O" NAME="s_axis_s2mm_tready" SIGIS="undef" SIGNAME="filtDMA_axi_dma_0_s_axis_s2mm_tready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_filt_0" PORT="y_TREADY"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="y_TREADY"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="s_axis_s2mm_tvalid" SIGIS="undef" SIGNAME="FIR_axi_dma_0_s_axis_s2mm_tvalid">
+        <PORT DIR="I" NAME="s_axis_s2mm_tvalid" SIGIS="undef" SIGNAME="filtDMA_axi_dma_0_s_axis_s2mm_tvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_filt_0" PORT="y_TVALID"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="y_TVALID"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -1735,7 +2528,7 @@
             <PORTMAP LOGICAL="WVALID" PHYSICAL="s_axi_lite_wvalid"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="FIR_axi_dma_0_M_AXI_MM2S" DATAWIDTH="32" NAME="M_AXI_MM2S" TYPE="MASTER" VLNV="xilinx.com:interface:aximm:1.0">
+        <BUSINTERFACE BUSNAME="filtDMA_axi_dma_0_M_AXI_MM2S" DATAWIDTH="32" NAME="M_AXI_MM2S" TYPE="MASTER" VLNV="xilinx.com:interface:aximm:1.0">
           <PARAMETER NAME="ADDR_WIDTH" VALUE="32"/>
           <PARAMETER NAME="ARUSER_WIDTH" VALUE="0"/>
           <PARAMETER NAME="AWUSER_WIDTH" VALUE="0"/>
@@ -1783,7 +2576,7 @@
             <PORTMAP LOGICAL="RVALID" PHYSICAL="m_axi_mm2s_rvalid"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="FIR_axi_dma_0_M_AXI_S2MM" DATAWIDTH="32" NAME="M_AXI_S2MM" TYPE="MASTER" VLNV="xilinx.com:interface:aximm:1.0">
+        <BUSINTERFACE BUSNAME="filtDMA_axi_dma_0_M_AXI_S2MM" DATAWIDTH="32" NAME="M_AXI_S2MM" TYPE="MASTER" VLNV="xilinx.com:interface:aximm:1.0">
           <PARAMETER NAME="ADDR_WIDTH" VALUE="32"/>
           <PARAMETER NAME="ARUSER_WIDTH" VALUE="0"/>
           <PARAMETER NAME="AWUSER_WIDTH" VALUE="0"/>
@@ -1834,7 +2627,7 @@
             <PORTMAP LOGICAL="WVALID" PHYSICAL="m_axi_s2mm_wvalid"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="FIR_axi_dma_0_M_AXIS_MM2S" NAME="M_AXIS_MM2S" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
+        <BUSINTERFACE BUSNAME="filtDMA_axi_dma_0_M_AXIS_MM2S" NAME="M_AXIS_MM2S" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="CLK_DOMAIN" VALUE="FIR_Test_processing_system7_0_0_FCLK_CLK0"/>
           <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
           <PARAMETER NAME="HAS_BURST" VALUE="0"/>
@@ -1845,7 +2638,7 @@
           <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
           <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
           <PARAMETER NAME="PHASE" VALUE="0.0"/>
-          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="2"/>
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="4"/>
           <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
           <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
           <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
@@ -1857,7 +2650,7 @@
             <PORTMAP LOGICAL="TVALID" PHYSICAL="m_axis_mm2s_tvalid"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="FIR_filt_0_y" NAME="S_AXIS_S2MM" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+        <BUSINTERFACE BUSNAME="filtDMA_filt_0_y" NAME="S_AXIS_S2MM" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="CLK_DOMAIN" VALUE="FIR_Test_processing_system7_0_0_FCLK_CLK0"/>
           <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="1"/>
@@ -1867,7 +2660,7 @@
           <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
           <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
           <PARAMETER NAME="PHASE" VALUE="0.0"/>
-          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="2"/>
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="4"/>
           <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
           <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
           <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
@@ -1888,10 +2681,10 @@
       </MEMORYMAP>
       <PERIPHERALS>
         <PERIPHERAL INSTANCE="processing_system7_0"/>
-        <PERIPHERAL INSTANCE="FIR_filt_0"/>
+        <PERIPHERAL INSTANCE="filtDMA_filt_0"/>
       </PERIPHERALS>
     </MODULE>
-    <MODULE COREREVISION="7" FULLNAME="/FIR/blk_mem_gen_0" HWVERSION="8.4" INSTANCE="FIR_blk_mem_gen_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="MEMORY" MODTYPE="blk_mem_gen" VLNV="xilinx.com:ip:blk_mem_gen:8.4">
+    <MODULE COREREVISION="7" FULLNAME="/filtDMA/blk_mem_gen_0" HWVERSION="8.4" INSTANCE="filtDMA_blk_mem_gen_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="MEMORY" MODTYPE="blk_mem_gen" VLNV="xilinx.com:ip:blk_mem_gen:8.4">
       <DOCUMENTS>
         <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=blk_mem_gen;v=v8_4;d=pg058-blk-mem-gen.pdf"/>
       </DOCUMENTS>
@@ -1919,7 +2712,7 @@
         <PARAMETER NAME="C_EN_SAFETY_CKT" VALUE="1"/>
         <PARAMETER NAME="C_EN_SHUTDOWN_PIN" VALUE="0"/>
         <PARAMETER NAME="C_EN_SLEEP_PIN" VALUE="0"/>
-        <PARAMETER NAME="C_EST_POWER_SUMMARY" VALUE="Estimated Power for IP     :     4.8711 mW"/>
+        <PARAMETER NAME="C_EST_POWER_SUMMARY" VALUE="Estimated Power for IP     :     5.3746 mW"/>
         <PARAMETER NAME="C_FAMILY" VALUE="zynq"/>
         <PARAMETER NAME="C_HAS_AXI_ID" VALUE="0"/>
         <PARAMETER NAME="C_HAS_ENA" VALUE="1"/>
@@ -1938,10 +2731,10 @@
         <PARAMETER NAME="C_INITA_VAL" VALUE="0"/>
         <PARAMETER NAME="C_INITB_VAL" VALUE="0"/>
         <PARAMETER NAME="C_INIT_FILE" VALUE="NONE"/>
-        <PARAMETER NAME="C_INIT_FILE_NAME" VALUE="FIR_Test_blk_mem_gen_0_0.mif"/>
+        <PARAMETER NAME="C_INIT_FILE_NAME" VALUE="no_coe_file_loaded"/>
         <PARAMETER NAME="C_INTERFACE_TYPE" VALUE="0"/>
-        <PARAMETER NAME="C_LOAD_INIT_FILE" VALUE="1"/>
-        <PARAMETER NAME="C_MEM_TYPE" VALUE="3"/>
+        <PARAMETER NAME="C_LOAD_INIT_FILE" VALUE="0"/>
+        <PARAMETER NAME="C_MEM_TYPE" VALUE="0"/>
         <PARAMETER NAME="C_MUX_PIPELINE_STAGES" VALUE="0"/>
         <PARAMETER NAME="C_PRIM_TYPE" VALUE="1"/>
         <PARAMETER NAME="C_READ_DEPTH_A" VALUE="2048"/>
@@ -1956,14 +2749,14 @@
         <PARAMETER NAME="C_RST_PRIORITY_B" VALUE="CE"/>
         <PARAMETER NAME="C_SIM_COLLISION_CHECK" VALUE="ALL"/>
         <PARAMETER NAME="C_USE_BRAM_BLOCK" VALUE="1"/>
-        <PARAMETER NAME="C_USE_BYTE_WEA" VALUE="0"/>
-        <PARAMETER NAME="C_USE_BYTE_WEB" VALUE="0"/>
+        <PARAMETER NAME="C_USE_BYTE_WEA" VALUE="1"/>
+        <PARAMETER NAME="C_USE_BYTE_WEB" VALUE="1"/>
         <PARAMETER NAME="C_USE_DEFAULT_DATA" VALUE="0"/>
         <PARAMETER NAME="C_USE_ECC" VALUE="0"/>
         <PARAMETER NAME="C_USE_SOFTECC" VALUE="0"/>
         <PARAMETER NAME="C_USE_URAM" VALUE="0"/>
-        <PARAMETER NAME="C_WEA_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="C_WEB_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_WEA_WIDTH" VALUE="4"/>
+        <PARAMETER NAME="C_WEB_WIDTH" VALUE="4"/>
         <PARAMETER NAME="C_WRITE_DEPTH_A" VALUE="2048"/>
         <PARAMETER NAME="C_WRITE_DEPTH_B" VALUE="2048"/>
         <PARAMETER NAME="C_WRITE_MODE_A" VALUE="WRITE_FIRST"/>
@@ -1979,7 +2772,7 @@
         <PARAMETER NAME="Assume_Synchronous_Clk" VALUE="false"/>
         <PARAMETER NAME="Byte_Size" VALUE="8"/>
         <PARAMETER NAME="CTRL_ECC_ALGO" VALUE="NONE"/>
-        <PARAMETER NAME="Coe_File" VALUE="../../../../../../../filt.coe"/>
+        <PARAMETER NAME="Coe_File" VALUE="no_coe_file_loaded"/>
         <PARAMETER NAME="Collision_Warnings" VALUE="ALL"/>
         <PARAMETER NAME="Component_Name" VALUE="FIR_Test_blk_mem_gen_0_0"/>
         <PARAMETER NAME="Disable_Collision_Warnings" VALUE="false"/>
@@ -1996,9 +2789,9 @@
         <PARAMETER NAME="Error_Injection_Type" VALUE="Single_Bit_Error_Injection"/>
         <PARAMETER NAME="Fill_Remaining_Memory_Locations" VALUE="false"/>
         <PARAMETER NAME="Interface_Type" VALUE="Native"/>
-        <PARAMETER NAME="Load_Init_File" VALUE="true"/>
+        <PARAMETER NAME="Load_Init_File" VALUE="false"/>
         <PARAMETER NAME="MEM_FILE" VALUE="NONE"/>
-        <PARAMETER NAME="Memory_Type" VALUE="Single_Port_ROM"/>
+        <PARAMETER NAME="Memory_Type" VALUE="Single_Port_RAM"/>
         <PARAMETER NAME="Operating_Mode_A" VALUE="WRITE_FIRST"/>
         <PARAMETER NAME="Operating_Mode_B" VALUE="WRITE_FIRST"/>
         <PARAMETER NAME="Output_Reset_Value_A" VALUE="0"/>
@@ -2007,7 +2800,7 @@
         <PARAMETER NAME="Pipeline_Stages" VALUE="0"/>
         <PARAMETER NAME="Port_A_Clock" VALUE="100"/>
         <PARAMETER NAME="Port_A_Enable_Rate" VALUE="100"/>
-        <PARAMETER NAME="Port_A_Write_Rate" VALUE="0"/>
+        <PARAMETER NAME="Port_A_Write_Rate" VALUE="50"/>
         <PARAMETER NAME="Port_B_Clock" VALUE="0"/>
         <PARAMETER NAME="Port_B_Enable_Rate" VALUE="0"/>
         <PARAMETER NAME="Port_B_Write_Rate" VALUE="0"/>
@@ -2029,7 +2822,7 @@
         <PARAMETER NAME="Reset_Priority_B" VALUE="CE"/>
         <PARAMETER NAME="Reset_Type" VALUE="SYNC"/>
         <PARAMETER NAME="Use_AXI_ID" VALUE="false"/>
-        <PARAMETER NAME="Use_Byte_Write_Enable" VALUE="false"/>
+        <PARAMETER NAME="Use_Byte_Write_Enable" VALUE="true"/>
         <PARAMETER NAME="Use_Error_Injection_Pins" VALUE="false"/>
         <PARAMETER NAME="Use_REGCEA_Pin" VALUE="false"/>
         <PARAMETER NAME="Use_REGCEB_Pin" VALUE="false"/>
@@ -2046,52 +2839,64 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" LEFT="31" NAME="addra" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_bram_ctrl_0_bram_addr_a">
+        <PORT DIR="I" LEFT="31" NAME="addra" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_bram_addr_a">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_bram_ctrl_0" PORT="bram_addr_a"/>
+            <CONNECTION INSTANCE="filtDMA_axi_bram_ctrl_0" PORT="bram_addr_a"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="clka" SIGIS="clk" SIGNAME="FIR_axi_bram_ctrl_0_bram_clk_a">
+        <PORT DIR="I" NAME="clka" SIGIS="clk" SIGNAME="filtDMA_axi_bram_ctrl_0_bram_clk_a">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_bram_ctrl_0" PORT="bram_clk_a"/>
+            <CONNECTION INSTANCE="filtDMA_axi_bram_ctrl_0" PORT="bram_clk_a"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="douta" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_bram_ctrl_0_bram_rddata_a">
+        <PORT DIR="I" LEFT="31" NAME="dina" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_bram_wrdata_a">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_bram_ctrl_0" PORT="bram_rddata_a"/>
+            <CONNECTION INSTANCE="filtDMA_axi_bram_ctrl_0" PORT="bram_wrdata_a"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="ena" SIGIS="undef" SIGNAME="FIR_axi_bram_ctrl_0_bram_en_a">
+        <PORT DIR="O" LEFT="31" NAME="douta" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_bram_rddata_a">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_bram_ctrl_0" PORT="bram_en_a"/>
+            <CONNECTION INSTANCE="filtDMA_axi_bram_ctrl_0" PORT="bram_rddata_a"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="rsta" SIGIS="rst" SIGNAME="FIR_axi_bram_ctrl_0_bram_rst_a">
+        <PORT DIR="I" NAME="ena" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_bram_en_a">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_bram_ctrl_0" PORT="bram_rst_a"/>
+            <CONNECTION INSTANCE="filtDMA_axi_bram_ctrl_0" PORT="bram_en_a"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rsta" SIGIS="rst" SIGNAME="filtDMA_axi_bram_ctrl_0_bram_rst_a">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="filtDMA_axi_bram_ctrl_0" PORT="bram_rst_a"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="rsta_busy" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="3" NAME="wea" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_bram_we_a">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="filtDMA_axi_bram_ctrl_0" PORT="bram_we_a"/>
+          </CONNECTIONS>
+        </PORT>
       </PORTS>
       <BUSINTERFACES>
-        <BUSINTERFACE BUSNAME="FIR_axi_bram_ctrl_0_BRAM_PORTA" NAME="BRAM_PORTA" TYPE="TARGET" VLNV="xilinx.com:interface:bram:1.0">
+        <BUSINTERFACE BUSNAME="filtDMA_axi_bram_ctrl_0_BRAM_PORTA" NAME="BRAM_PORTA" TYPE="TARGET" VLNV="xilinx.com:interface:bram:1.0">
           <PARAMETER NAME="MASTER_TYPE" VALUE="BRAM_CTRL"/>
           <PARAMETER NAME="MEM_ECC" VALUE="NONE"/>
           <PARAMETER NAME="MEM_SIZE" VALUE="8192"/>
           <PARAMETER NAME="MEM_WIDTH" VALUE="32"/>
           <PARAMETER NAME="READ_LATENCY" VALUE="1"/>
-          <PARAMETER NAME="READ_WRITE_MODE" VALUE="READ_ONLY"/>
+          <PARAMETER NAME="READ_WRITE_MODE" VALUE="READ_WRITE"/>
           <PORTMAPS>
             <PORTMAP LOGICAL="ADDR" PHYSICAL="addra"/>
             <PORTMAP LOGICAL="CLK" PHYSICAL="clka"/>
+            <PORTMAP LOGICAL="DIN" PHYSICAL="dina"/>
             <PORTMAP LOGICAL="DOUT" PHYSICAL="douta"/>
             <PORTMAP LOGICAL="EN" PHYSICAL="ena"/>
             <PORTMAP LOGICAL="RST" PHYSICAL="rsta"/>
+            <PORTMAP LOGICAL="WE" PHYSICAL="wea"/>
           </PORTMAPS>
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="2113495554" FULLNAME="/FIR/filt_0" HWVERSION="1.0" INSTANCE="FIR_filt_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="filt" VLNV="xilinx.com:hls:filt:1.0">
+    <MODULE COREREVISION="2113508776" FULLNAME="/filtDMA/filt_0" HWVERSION="1.0" INSTANCE="filtDMA_filt_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="filt" VLNV="xilinx.com:hls:filt:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="C_M_AXI_GMEM_ADDR_WIDTH" VALUE="64"/>
@@ -2109,7 +2914,7 @@
         <PARAMETER NAME="C_S_AXI_CONTROL_DATA_WIDTH" VALUE="32"/>
         <PARAMETER NAME="C_M_AXI_GMEM_ENABLE_ID_PORTS" VALUE="true"/>
         <PARAMETER NAME="C_M_AXI_GMEM_ENABLE_USER_PORTS" VALUE="false"/>
-        <PARAMETER NAME="Component_Name" VALUE="FIR_Test_filt_0_2"/>
+        <PARAMETER NAME="Component_Name" VALUE="FIR_Test_filt_0_16"/>
         <PARAMETER NAME="II" VALUE="x"/>
         <PARAMETER NAME="clk_period" VALUE="10"/>
         <PARAMETER NAME="combinational" VALUE="0"/>
@@ -2128,179 +2933,179 @@
             <CONNECTION INSTANCE="rst_ps7_0_100M" PORT="peripheral_aresetn"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="63" NAME="m_axi_gmem_ARADDR" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_bram_ctrl_0_s_axi_araddr">
+        <PORT DIR="O" LEFT="63" NAME="m_axi_gmem_ARADDR" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_araddr">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_bram_ctrl_0" PORT="s_axi_araddr"/>
+            <CONNECTION INSTANCE="filtDMA_axi_bram_ctrl_0" PORT="s_axi_araddr"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="1" NAME="m_axi_gmem_ARBURST" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_bram_ctrl_0_s_axi_arburst">
+        <PORT DIR="O" LEFT="1" NAME="m_axi_gmem_ARBURST" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_arburst">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_bram_ctrl_0" PORT="s_axi_arburst"/>
+            <CONNECTION INSTANCE="filtDMA_axi_bram_ctrl_0" PORT="s_axi_arburst"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="3" NAME="m_axi_gmem_ARCACHE" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_bram_ctrl_0_s_axi_arcache">
+        <PORT DIR="O" LEFT="3" NAME="m_axi_gmem_ARCACHE" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_arcache">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_bram_ctrl_0" PORT="s_axi_arcache"/>
+            <CONNECTION INSTANCE="filtDMA_axi_bram_ctrl_0" PORT="s_axi_arcache"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="0" NAME="m_axi_gmem_ARID" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_bram_ctrl_0_s_axi_arid">
+        <PORT DIR="O" LEFT="0" NAME="m_axi_gmem_ARID" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_arid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_bram_ctrl_0" PORT="s_axi_arid"/>
+            <CONNECTION INSTANCE="filtDMA_axi_bram_ctrl_0" PORT="s_axi_arid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="7" NAME="m_axi_gmem_ARLEN" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_bram_ctrl_0_s_axi_arlen">
+        <PORT DIR="O" LEFT="7" NAME="m_axi_gmem_ARLEN" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_arlen">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_bram_ctrl_0" PORT="s_axi_arlen"/>
+            <CONNECTION INSTANCE="filtDMA_axi_bram_ctrl_0" PORT="s_axi_arlen"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="1" NAME="m_axi_gmem_ARLOCK" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_bram_ctrl_0_s_axi_arlock">
+        <PORT DIR="O" LEFT="1" NAME="m_axi_gmem_ARLOCK" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_arlock">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_bram_ctrl_0" PORT="s_axi_arlock"/>
+            <CONNECTION INSTANCE="filtDMA_axi_bram_ctrl_0" PORT="s_axi_arlock"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="2" NAME="m_axi_gmem_ARPROT" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_bram_ctrl_0_s_axi_arprot">
+        <PORT DIR="O" LEFT="2" NAME="m_axi_gmem_ARPROT" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_arprot">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_bram_ctrl_0" PORT="s_axi_arprot"/>
+            <CONNECTION INSTANCE="filtDMA_axi_bram_ctrl_0" PORT="s_axi_arprot"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="m_axi_gmem_ARREADY" SIGIS="undef" SIGNAME="FIR_axi_bram_ctrl_0_s_axi_arready">
+        <PORT DIR="I" NAME="m_axi_gmem_ARREADY" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_arready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_bram_ctrl_0" PORT="s_axi_arready"/>
+            <CONNECTION INSTANCE="filtDMA_axi_bram_ctrl_0" PORT="s_axi_arready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="2" NAME="m_axi_gmem_ARSIZE" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_bram_ctrl_0_s_axi_arsize">
+        <PORT DIR="O" LEFT="2" NAME="m_axi_gmem_ARSIZE" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_arsize">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_bram_ctrl_0" PORT="s_axi_arsize"/>
+            <CONNECTION INSTANCE="filtDMA_axi_bram_ctrl_0" PORT="s_axi_arsize"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="m_axi_gmem_ARVALID" SIGIS="undef" SIGNAME="FIR_axi_bram_ctrl_0_s_axi_arvalid">
+        <PORT DIR="O" NAME="m_axi_gmem_ARVALID" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_arvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_bram_ctrl_0" PORT="s_axi_arvalid"/>
+            <CONNECTION INSTANCE="filtDMA_axi_bram_ctrl_0" PORT="s_axi_arvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="63" NAME="m_axi_gmem_AWADDR" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_bram_ctrl_0_s_axi_awaddr">
+        <PORT DIR="O" LEFT="63" NAME="m_axi_gmem_AWADDR" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_awaddr">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_bram_ctrl_0" PORT="s_axi_awaddr"/>
+            <CONNECTION INSTANCE="filtDMA_axi_bram_ctrl_0" PORT="s_axi_awaddr"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="1" NAME="m_axi_gmem_AWBURST" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_bram_ctrl_0_s_axi_awburst">
+        <PORT DIR="O" LEFT="1" NAME="m_axi_gmem_AWBURST" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_awburst">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_bram_ctrl_0" PORT="s_axi_awburst"/>
+            <CONNECTION INSTANCE="filtDMA_axi_bram_ctrl_0" PORT="s_axi_awburst"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="3" NAME="m_axi_gmem_AWCACHE" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_bram_ctrl_0_s_axi_awcache">
+        <PORT DIR="O" LEFT="3" NAME="m_axi_gmem_AWCACHE" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_awcache">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_bram_ctrl_0" PORT="s_axi_awcache"/>
+            <CONNECTION INSTANCE="filtDMA_axi_bram_ctrl_0" PORT="s_axi_awcache"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="0" NAME="m_axi_gmem_AWID" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_bram_ctrl_0_s_axi_awid">
+        <PORT DIR="O" LEFT="0" NAME="m_axi_gmem_AWID" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_awid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_bram_ctrl_0" PORT="s_axi_awid"/>
+            <CONNECTION INSTANCE="filtDMA_axi_bram_ctrl_0" PORT="s_axi_awid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="7" NAME="m_axi_gmem_AWLEN" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_bram_ctrl_0_s_axi_awlen">
+        <PORT DIR="O" LEFT="7" NAME="m_axi_gmem_AWLEN" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_awlen">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_bram_ctrl_0" PORT="s_axi_awlen"/>
+            <CONNECTION INSTANCE="filtDMA_axi_bram_ctrl_0" PORT="s_axi_awlen"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="1" NAME="m_axi_gmem_AWLOCK" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_bram_ctrl_0_s_axi_awlock">
+        <PORT DIR="O" LEFT="1" NAME="m_axi_gmem_AWLOCK" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_awlock">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_bram_ctrl_0" PORT="s_axi_awlock"/>
+            <CONNECTION INSTANCE="filtDMA_axi_bram_ctrl_0" PORT="s_axi_awlock"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="2" NAME="m_axi_gmem_AWPROT" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_bram_ctrl_0_s_axi_awprot">
+        <PORT DIR="O" LEFT="2" NAME="m_axi_gmem_AWPROT" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_awprot">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_bram_ctrl_0" PORT="s_axi_awprot"/>
+            <CONNECTION INSTANCE="filtDMA_axi_bram_ctrl_0" PORT="s_axi_awprot"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="m_axi_gmem_AWREADY" SIGIS="undef" SIGNAME="FIR_axi_bram_ctrl_0_s_axi_awready">
+        <PORT DIR="I" NAME="m_axi_gmem_AWREADY" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_awready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_bram_ctrl_0" PORT="s_axi_awready"/>
+            <CONNECTION INSTANCE="filtDMA_axi_bram_ctrl_0" PORT="s_axi_awready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="2" NAME="m_axi_gmem_AWSIZE" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_bram_ctrl_0_s_axi_awsize">
+        <PORT DIR="O" LEFT="2" NAME="m_axi_gmem_AWSIZE" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_awsize">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_bram_ctrl_0" PORT="s_axi_awsize"/>
+            <CONNECTION INSTANCE="filtDMA_axi_bram_ctrl_0" PORT="s_axi_awsize"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="m_axi_gmem_AWVALID" SIGIS="undef" SIGNAME="FIR_axi_bram_ctrl_0_s_axi_awvalid">
+        <PORT DIR="O" NAME="m_axi_gmem_AWVALID" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_awvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_bram_ctrl_0" PORT="s_axi_awvalid"/>
+            <CONNECTION INSTANCE="filtDMA_axi_bram_ctrl_0" PORT="s_axi_awvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="0" NAME="m_axi_gmem_BID" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_bram_ctrl_0_s_axi_bid">
+        <PORT DIR="I" LEFT="0" NAME="m_axi_gmem_BID" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_bid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_bram_ctrl_0" PORT="s_axi_bid"/>
+            <CONNECTION INSTANCE="filtDMA_axi_bram_ctrl_0" PORT="s_axi_bid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="m_axi_gmem_BREADY" SIGIS="undef" SIGNAME="FIR_axi_bram_ctrl_0_s_axi_bready">
+        <PORT DIR="O" NAME="m_axi_gmem_BREADY" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_bready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_bram_ctrl_0" PORT="s_axi_bready"/>
+            <CONNECTION INSTANCE="filtDMA_axi_bram_ctrl_0" PORT="s_axi_bready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="1" NAME="m_axi_gmem_BRESP" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_bram_ctrl_0_s_axi_bresp">
+        <PORT DIR="I" LEFT="1" NAME="m_axi_gmem_BRESP" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_bresp">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_bram_ctrl_0" PORT="s_axi_bresp"/>
+            <CONNECTION INSTANCE="filtDMA_axi_bram_ctrl_0" PORT="s_axi_bresp"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="m_axi_gmem_BVALID" SIGIS="undef" SIGNAME="FIR_axi_bram_ctrl_0_s_axi_bvalid">
+        <PORT DIR="I" NAME="m_axi_gmem_BVALID" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_bvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_bram_ctrl_0" PORT="s_axi_bvalid"/>
+            <CONNECTION INSTANCE="filtDMA_axi_bram_ctrl_0" PORT="s_axi_bvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="m_axi_gmem_RDATA" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_bram_ctrl_0_s_axi_rdata">
+        <PORT DIR="I" LEFT="31" NAME="m_axi_gmem_RDATA" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_rdata">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_bram_ctrl_0" PORT="s_axi_rdata"/>
+            <CONNECTION INSTANCE="filtDMA_axi_bram_ctrl_0" PORT="s_axi_rdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="0" NAME="m_axi_gmem_RID" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_bram_ctrl_0_s_axi_rid">
+        <PORT DIR="I" LEFT="0" NAME="m_axi_gmem_RID" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_rid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_bram_ctrl_0" PORT="s_axi_rid"/>
+            <CONNECTION INSTANCE="filtDMA_axi_bram_ctrl_0" PORT="s_axi_rid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="m_axi_gmem_RLAST" SIGIS="undef" SIGNAME="FIR_axi_bram_ctrl_0_s_axi_rlast">
+        <PORT DIR="I" NAME="m_axi_gmem_RLAST" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_rlast">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_bram_ctrl_0" PORT="s_axi_rlast"/>
+            <CONNECTION INSTANCE="filtDMA_axi_bram_ctrl_0" PORT="s_axi_rlast"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="m_axi_gmem_RREADY" SIGIS="undef" SIGNAME="FIR_axi_bram_ctrl_0_s_axi_rready">
+        <PORT DIR="O" NAME="m_axi_gmem_RREADY" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_rready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_bram_ctrl_0" PORT="s_axi_rready"/>
+            <CONNECTION INSTANCE="filtDMA_axi_bram_ctrl_0" PORT="s_axi_rready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="1" NAME="m_axi_gmem_RRESP" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_bram_ctrl_0_s_axi_rresp">
+        <PORT DIR="I" LEFT="1" NAME="m_axi_gmem_RRESP" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_rresp">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_bram_ctrl_0" PORT="s_axi_rresp"/>
+            <CONNECTION INSTANCE="filtDMA_axi_bram_ctrl_0" PORT="s_axi_rresp"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="m_axi_gmem_RVALID" SIGIS="undef" SIGNAME="FIR_axi_bram_ctrl_0_s_axi_rvalid">
+        <PORT DIR="I" NAME="m_axi_gmem_RVALID" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_rvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_bram_ctrl_0" PORT="s_axi_rvalid"/>
+            <CONNECTION INSTANCE="filtDMA_axi_bram_ctrl_0" PORT="s_axi_rvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="m_axi_gmem_WDATA" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_bram_ctrl_0_s_axi_wdata">
+        <PORT DIR="O" LEFT="31" NAME="m_axi_gmem_WDATA" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_wdata">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_bram_ctrl_0" PORT="s_axi_wdata"/>
+            <CONNECTION INSTANCE="filtDMA_axi_bram_ctrl_0" PORT="s_axi_wdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="m_axi_gmem_WLAST" SIGIS="undef" SIGNAME="FIR_axi_bram_ctrl_0_s_axi_wlast">
+        <PORT DIR="O" NAME="m_axi_gmem_WLAST" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_wlast">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_bram_ctrl_0" PORT="s_axi_wlast"/>
+            <CONNECTION INSTANCE="filtDMA_axi_bram_ctrl_0" PORT="s_axi_wlast"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="m_axi_gmem_WREADY" SIGIS="undef" SIGNAME="FIR_axi_bram_ctrl_0_s_axi_wready">
+        <PORT DIR="I" NAME="m_axi_gmem_WREADY" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_wready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_bram_ctrl_0" PORT="s_axi_wready"/>
+            <CONNECTION INSTANCE="filtDMA_axi_bram_ctrl_0" PORT="s_axi_wready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="3" NAME="m_axi_gmem_WSTRB" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_bram_ctrl_0_s_axi_wstrb">
+        <PORT DIR="O" LEFT="3" NAME="m_axi_gmem_WSTRB" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_wstrb">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_bram_ctrl_0" PORT="s_axi_wstrb"/>
+            <CONNECTION INSTANCE="filtDMA_axi_bram_ctrl_0" PORT="s_axi_wstrb"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="m_axi_gmem_WVALID" SIGIS="undef" SIGNAME="FIR_axi_bram_ctrl_0_s_axi_wvalid">
+        <PORT DIR="O" NAME="m_axi_gmem_WVALID" SIGIS="undef" SIGNAME="filtDMA_axi_bram_ctrl_0_s_axi_wvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_bram_ctrl_0" PORT="s_axi_wvalid"/>
+            <CONNECTION INSTANCE="filtDMA_axi_bram_ctrl_0" PORT="s_axi_wvalid"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="4" NAME="s_axi_control_ARADDR" RIGHT="0" SIGIS="undef"/>
@@ -2320,54 +3125,54 @@
         <PORT DIR="O" NAME="s_axi_control_WREADY" SIGIS="undef"/>
         <PORT DIR="I" LEFT="3" NAME="s_axi_control_WSTRB" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="I" NAME="s_axi_control_WVALID" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="15" NAME="x_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_dma_0_m_axis_mm2s_tdata">
+        <PORT DIR="I" LEFT="31" NAME="x_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_dma_0_m_axis_mm2s_tdata">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_dma_0" PORT="m_axis_mm2s_tdata"/>
+            <CONNECTION INSTANCE="filtDMA_axi_dma_0" PORT="m_axis_mm2s_tdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="1" NAME="x_TKEEP" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_dma_0_m_axis_mm2s_tkeep">
+        <PORT DIR="I" LEFT="3" NAME="x_TKEEP" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_dma_0_m_axis_mm2s_tkeep">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_dma_0" PORT="m_axis_mm2s_tkeep"/>
+            <CONNECTION INSTANCE="filtDMA_axi_dma_0" PORT="m_axis_mm2s_tkeep"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="0" NAME="x_TLAST" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_dma_0_m_axis_mm2s_tlast">
+        <PORT DIR="I" LEFT="0" NAME="x_TLAST" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_dma_0_m_axis_mm2s_tlast">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_dma_0" PORT="m_axis_mm2s_tlast"/>
+            <CONNECTION INSTANCE="filtDMA_axi_dma_0" PORT="m_axis_mm2s_tlast"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="x_TREADY" SIGIS="undef" SIGNAME="FIR_axi_dma_0_m_axis_mm2s_tready">
+        <PORT DIR="O" NAME="x_TREADY" SIGIS="undef" SIGNAME="filtDMA_axi_dma_0_m_axis_mm2s_tready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_dma_0" PORT="m_axis_mm2s_tready"/>
+            <CONNECTION INSTANCE="filtDMA_axi_dma_0" PORT="m_axis_mm2s_tready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="x_TVALID" SIGIS="undef" SIGNAME="FIR_axi_dma_0_m_axis_mm2s_tvalid">
+        <PORT DIR="I" NAME="x_TVALID" SIGIS="undef" SIGNAME="filtDMA_axi_dma_0_m_axis_mm2s_tvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_dma_0" PORT="m_axis_mm2s_tvalid"/>
+            <CONNECTION INSTANCE="filtDMA_axi_dma_0" PORT="m_axis_mm2s_tvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="15" NAME="y_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_dma_0_s_axis_s2mm_tdata">
+        <PORT DIR="O" LEFT="31" NAME="y_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_dma_0_s_axis_s2mm_tdata">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_dma_0" PORT="s_axis_s2mm_tdata"/>
+            <CONNECTION INSTANCE="filtDMA_axi_dma_0" PORT="s_axis_s2mm_tdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="1" NAME="y_TKEEP" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_dma_0_s_axis_s2mm_tkeep">
+        <PORT DIR="O" LEFT="3" NAME="y_TKEEP" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_dma_0_s_axis_s2mm_tkeep">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_dma_0" PORT="s_axis_s2mm_tkeep"/>
+            <CONNECTION INSTANCE="filtDMA_axi_dma_0" PORT="s_axis_s2mm_tkeep"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="0" NAME="y_TLAST" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_dma_0_s_axis_s2mm_tlast">
+        <PORT DIR="O" LEFT="0" NAME="y_TLAST" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_dma_0_s_axis_s2mm_tlast">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_dma_0" PORT="s_axis_s2mm_tlast"/>
+            <CONNECTION INSTANCE="filtDMA_axi_dma_0" PORT="s_axis_s2mm_tlast"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="y_TREADY" SIGIS="undef" SIGNAME="FIR_axi_dma_0_s_axis_s2mm_tready">
+        <PORT DIR="I" NAME="y_TREADY" SIGIS="undef" SIGNAME="filtDMA_axi_dma_0_s_axis_s2mm_tready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_dma_0" PORT="s_axis_s2mm_tready"/>
+            <CONNECTION INSTANCE="filtDMA_axi_dma_0" PORT="s_axis_s2mm_tready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="y_TVALID" SIGIS="undef" SIGNAME="FIR_axi_dma_0_s_axis_s2mm_tvalid">
+        <PORT DIR="O" NAME="y_TVALID" SIGIS="undef" SIGNAME="filtDMA_axi_dma_0_s_axis_s2mm_tvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_dma_0" PORT="s_axis_s2mm_tvalid"/>
+            <CONNECTION INSTANCE="filtDMA_axi_dma_0" PORT="s_axis_s2mm_tvalid"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -2424,7 +3229,7 @@
             <PORTMAP LOGICAL="WVALID" PHYSICAL="s_axi_control_WVALID"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="FIR_filt_0_m_axi_gmem" DATAWIDTH="32" NAME="m_axi_gmem" TYPE="MASTER" VLNV="xilinx.com:interface:aximm:1.0">
+        <BUSINTERFACE BUSNAME="filtDMA_filt_0_m_axi_gmem" DATAWIDTH="32" NAME="m_axi_gmem" TYPE="MASTER" VLNV="xilinx.com:interface:aximm:1.0">
           <PARAMETER NAME="ADDR_WIDTH" VALUE="64"/>
           <PARAMETER NAME="ARUSER_WIDTH" VALUE="0"/>
           <PARAMETER NAME="AWUSER_WIDTH" VALUE="0"/>
@@ -2452,7 +3257,7 @@
           <PARAMETER NAME="NUM_WRITE_THREADS" VALUE="1"/>
           <PARAMETER NAME="PHASE" VALUE="0.0"/>
           <PARAMETER NAME="PROTOCOL" VALUE="AXI4"/>
-          <PARAMETER NAME="READ_WRITE_MODE" VALUE="READ_ONLY"/>
+          <PARAMETER NAME="READ_WRITE_MODE" VALUE="READ_WRITE"/>
           <PARAMETER NAME="RUSER_BITS_PER_BYTE" VALUE="0"/>
           <PARAMETER NAME="RUSER_WIDTH" VALUE="0"/>
           <PARAMETER NAME="SUPPORTS_NARROW_BURST" VALUE="0"/>
@@ -2496,7 +3301,7 @@
             <PORTMAP LOGICAL="WVALID" PHYSICAL="m_axi_gmem_WVALID"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="FIR_filt_0_y" NAME="y" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
+        <BUSINTERFACE BUSNAME="filtDMA_filt_0_y" NAME="y" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="CLK_DOMAIN" VALUE="FIR_Test_processing_system7_0_0_FCLK_CLK0"/>
           <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="1"/>
@@ -2506,7 +3311,7 @@
           <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
           <PARAMETER NAME="LAYERED_METADATA"/>
           <PARAMETER NAME="PHASE" VALUE="0.0"/>
-          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="2"/>
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="4"/>
           <PARAMETER NAME="TDEST_WIDTH" VALUE="1"/>
           <PARAMETER NAME="TID_WIDTH" VALUE="1"/>
           <PARAMETER NAME="TUSER_WIDTH" VALUE="1"/>
@@ -2518,7 +3323,7 @@
             <PORTMAP LOGICAL="TVALID" PHYSICAL="y_TVALID"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="FIR_axi_dma_0_M_AXIS_MM2S" NAME="x" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+        <BUSINTERFACE BUSNAME="filtDMA_axi_dma_0_M_AXIS_MM2S" NAME="x" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="CLK_DOMAIN" VALUE="FIR_Test_processing_system7_0_0_FCLK_CLK0"/>
           <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="1"/>
@@ -2528,7 +3333,7 @@
           <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
           <PARAMETER NAME="LAYERED_METADATA"/>
           <PARAMETER NAME="PHASE" VALUE="0.0"/>
-          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="2"/>
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="4"/>
           <PARAMETER NAME="TDEST_WIDTH" VALUE="1"/>
           <PARAMETER NAME="TID_WIDTH" VALUE="1"/>
           <PARAMETER NAME="TUSER_WIDTH" VALUE="1"/>
@@ -2543,795 +3348,26 @@
       </BUSINTERFACES>
       <MEMORYMAP/>
       <PERIPHERALS>
-        <PERIPHERAL INSTANCE="FIR_axi_bram_ctrl_0"/>
-        <PERIPHERAL INSTANCE="FIR_axi_dma_0"/>
+        <PERIPHERAL INSTANCE="filtDMA_axi_bram_ctrl_0"/>
+        <PERIPHERAL INSTANCE="filtDMA_axi_dma_0"/>
       </PERIPHERALS>
-    </MODULE>
-    <MODULE COREREVISION="30" FULLNAME="/axi_mem_intercon" HWVERSION="2.1" INSTANCE="axi_mem_intercon" IPTYPE="BUS" IS_ENABLE="1" MODCLASS="BUS" MODTYPE="axi_interconnect" VLNV="xilinx.com:ip:axi_interconnect:2.1">
-      <DOCUMENTS>
-        <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=axi_interconnect;v=v2_1;d=pg059-axi-interconnect.pdf"/>
-      </DOCUMENTS>
-      <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="FIR_Test_axi_mem_intercon_0"/>
-        <PARAMETER NAME="ENABLE_ADVANCED_OPTIONS" VALUE="0"/>
-        <PARAMETER NAME="ENABLE_PROTOCOL_CHECKERS" VALUE="0"/>
-        <PARAMETER NAME="M00_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="M00_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="M00_ISSUANCE" VALUE="0"/>
-        <PARAMETER NAME="M00_SECURE" VALUE="0"/>
-        <PARAMETER NAME="M01_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="M01_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="M01_ISSUANCE" VALUE="0"/>
-        <PARAMETER NAME="M01_SECURE" VALUE="0"/>
-        <PARAMETER NAME="M02_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="M02_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="M02_ISSUANCE" VALUE="0"/>
-        <PARAMETER NAME="M02_SECURE" VALUE="0"/>
-        <PARAMETER NAME="M03_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="M03_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="M03_ISSUANCE" VALUE="0"/>
-        <PARAMETER NAME="M03_SECURE" VALUE="0"/>
-        <PARAMETER NAME="M04_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="M04_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="M04_ISSUANCE" VALUE="0"/>
-        <PARAMETER NAME="M04_SECURE" VALUE="0"/>
-        <PARAMETER NAME="M05_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="M05_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="M05_ISSUANCE" VALUE="0"/>
-        <PARAMETER NAME="M05_SECURE" VALUE="0"/>
-        <PARAMETER NAME="M06_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="M06_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="M06_ISSUANCE" VALUE="0"/>
-        <PARAMETER NAME="M06_SECURE" VALUE="0"/>
-        <PARAMETER NAME="M07_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="M07_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="M07_ISSUANCE" VALUE="0"/>
-        <PARAMETER NAME="M07_SECURE" VALUE="0"/>
-        <PARAMETER NAME="M08_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="M08_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="M08_ISSUANCE" VALUE="0"/>
-        <PARAMETER NAME="M08_SECURE" VALUE="0"/>
-        <PARAMETER NAME="M09_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="M09_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="M09_ISSUANCE" VALUE="0"/>
-        <PARAMETER NAME="M09_SECURE" VALUE="0"/>
-        <PARAMETER NAME="M10_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="M10_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="M10_ISSUANCE" VALUE="0"/>
-        <PARAMETER NAME="M10_SECURE" VALUE="0"/>
-        <PARAMETER NAME="M11_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="M11_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="M11_ISSUANCE" VALUE="0"/>
-        <PARAMETER NAME="M11_SECURE" VALUE="0"/>
-        <PARAMETER NAME="M12_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="M12_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="M12_ISSUANCE" VALUE="0"/>
-        <PARAMETER NAME="M12_SECURE" VALUE="0"/>
-        <PARAMETER NAME="M13_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="M13_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="M13_ISSUANCE" VALUE="0"/>
-        <PARAMETER NAME="M13_SECURE" VALUE="0"/>
-        <PARAMETER NAME="M14_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="M14_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="M14_ISSUANCE" VALUE="0"/>
-        <PARAMETER NAME="M14_SECURE" VALUE="0"/>
-        <PARAMETER NAME="M15_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="M15_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="M15_ISSUANCE" VALUE="0"/>
-        <PARAMETER NAME="M15_SECURE" VALUE="0"/>
-        <PARAMETER NAME="M16_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="M16_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="M16_ISSUANCE" VALUE="0"/>
-        <PARAMETER NAME="M16_SECURE" VALUE="0"/>
-        <PARAMETER NAME="M17_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="M17_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="M17_ISSUANCE" VALUE="0"/>
-        <PARAMETER NAME="M17_SECURE" VALUE="0"/>
-        <PARAMETER NAME="M18_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="M18_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="M18_ISSUANCE" VALUE="0"/>
-        <PARAMETER NAME="M18_SECURE" VALUE="0"/>
-        <PARAMETER NAME="M19_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="M19_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="M19_ISSUANCE" VALUE="0"/>
-        <PARAMETER NAME="M19_SECURE" VALUE="0"/>
-        <PARAMETER NAME="M20_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="M20_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="M20_ISSUANCE" VALUE="0"/>
-        <PARAMETER NAME="M20_SECURE" VALUE="0"/>
-        <PARAMETER NAME="M21_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="M21_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="M21_ISSUANCE" VALUE="0"/>
-        <PARAMETER NAME="M21_SECURE" VALUE="0"/>
-        <PARAMETER NAME="M22_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="M22_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="M22_ISSUANCE" VALUE="0"/>
-        <PARAMETER NAME="M22_SECURE" VALUE="0"/>
-        <PARAMETER NAME="M23_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="M23_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="M23_ISSUANCE" VALUE="0"/>
-        <PARAMETER NAME="M23_SECURE" VALUE="0"/>
-        <PARAMETER NAME="M24_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="M24_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="M24_ISSUANCE" VALUE="0"/>
-        <PARAMETER NAME="M24_SECURE" VALUE="0"/>
-        <PARAMETER NAME="M25_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="M25_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="M25_ISSUANCE" VALUE="0"/>
-        <PARAMETER NAME="M25_SECURE" VALUE="0"/>
-        <PARAMETER NAME="M26_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="M26_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="M26_ISSUANCE" VALUE="0"/>
-        <PARAMETER NAME="M26_SECURE" VALUE="0"/>
-        <PARAMETER NAME="M27_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="M27_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="M27_ISSUANCE" VALUE="0"/>
-        <PARAMETER NAME="M27_SECURE" VALUE="0"/>
-        <PARAMETER NAME="M28_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="M28_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="M28_ISSUANCE" VALUE="0"/>
-        <PARAMETER NAME="M28_SECURE" VALUE="0"/>
-        <PARAMETER NAME="M29_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="M29_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="M29_ISSUANCE" VALUE="0"/>
-        <PARAMETER NAME="M29_SECURE" VALUE="0"/>
-        <PARAMETER NAME="M30_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="M30_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="M30_ISSUANCE" VALUE="0"/>
-        <PARAMETER NAME="M30_SECURE" VALUE="0"/>
-        <PARAMETER NAME="M31_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="M31_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="M31_ISSUANCE" VALUE="0"/>
-        <PARAMETER NAME="M31_SECURE" VALUE="0"/>
-        <PARAMETER NAME="M32_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="M32_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="M32_ISSUANCE" VALUE="0"/>
-        <PARAMETER NAME="M32_SECURE" VALUE="0"/>
-        <PARAMETER NAME="M33_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="M33_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="M33_ISSUANCE" VALUE="0"/>
-        <PARAMETER NAME="M33_SECURE" VALUE="0"/>
-        <PARAMETER NAME="M34_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="M34_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="M34_ISSUANCE" VALUE="0"/>
-        <PARAMETER NAME="M34_SECURE" VALUE="0"/>
-        <PARAMETER NAME="M35_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="M35_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="M35_ISSUANCE" VALUE="0"/>
-        <PARAMETER NAME="M35_SECURE" VALUE="0"/>
-        <PARAMETER NAME="M36_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="M36_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="M36_ISSUANCE" VALUE="0"/>
-        <PARAMETER NAME="M36_SECURE" VALUE="0"/>
-        <PARAMETER NAME="M37_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="M37_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="M37_ISSUANCE" VALUE="0"/>
-        <PARAMETER NAME="M37_SECURE" VALUE="0"/>
-        <PARAMETER NAME="M38_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="M38_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="M38_ISSUANCE" VALUE="0"/>
-        <PARAMETER NAME="M38_SECURE" VALUE="0"/>
-        <PARAMETER NAME="M39_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="M39_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="M39_ISSUANCE" VALUE="0"/>
-        <PARAMETER NAME="M39_SECURE" VALUE="0"/>
-        <PARAMETER NAME="M40_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="M40_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="M40_ISSUANCE" VALUE="0"/>
-        <PARAMETER NAME="M40_SECURE" VALUE="0"/>
-        <PARAMETER NAME="M41_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="M41_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="M41_ISSUANCE" VALUE="0"/>
-        <PARAMETER NAME="M41_SECURE" VALUE="0"/>
-        <PARAMETER NAME="M42_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="M42_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="M42_ISSUANCE" VALUE="0"/>
-        <PARAMETER NAME="M42_SECURE" VALUE="0"/>
-        <PARAMETER NAME="M43_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="M43_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="M43_ISSUANCE" VALUE="0"/>
-        <PARAMETER NAME="M43_SECURE" VALUE="0"/>
-        <PARAMETER NAME="M44_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="M44_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="M44_ISSUANCE" VALUE="0"/>
-        <PARAMETER NAME="M44_SECURE" VALUE="0"/>
-        <PARAMETER NAME="M45_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="M45_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="M45_ISSUANCE" VALUE="0"/>
-        <PARAMETER NAME="M45_SECURE" VALUE="0"/>
-        <PARAMETER NAME="M46_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="M46_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="M46_ISSUANCE" VALUE="0"/>
-        <PARAMETER NAME="M46_SECURE" VALUE="0"/>
-        <PARAMETER NAME="M47_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="M47_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="M47_ISSUANCE" VALUE="0"/>
-        <PARAMETER NAME="M47_SECURE" VALUE="0"/>
-        <PARAMETER NAME="M48_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="M48_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="M48_ISSUANCE" VALUE="0"/>
-        <PARAMETER NAME="M48_SECURE" VALUE="0"/>
-        <PARAMETER NAME="M49_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="M49_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="M49_ISSUANCE" VALUE="0"/>
-        <PARAMETER NAME="M49_SECURE" VALUE="0"/>
-        <PARAMETER NAME="M50_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="M50_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="M50_ISSUANCE" VALUE="0"/>
-        <PARAMETER NAME="M50_SECURE" VALUE="0"/>
-        <PARAMETER NAME="M51_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="M51_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="M51_ISSUANCE" VALUE="0"/>
-        <PARAMETER NAME="M51_SECURE" VALUE="0"/>
-        <PARAMETER NAME="M52_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="M52_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="M52_ISSUANCE" VALUE="0"/>
-        <PARAMETER NAME="M52_SECURE" VALUE="0"/>
-        <PARAMETER NAME="M53_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="M53_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="M53_ISSUANCE" VALUE="0"/>
-        <PARAMETER NAME="M53_SECURE" VALUE="0"/>
-        <PARAMETER NAME="M54_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="M54_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="M54_ISSUANCE" VALUE="0"/>
-        <PARAMETER NAME="M54_SECURE" VALUE="0"/>
-        <PARAMETER NAME="M55_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="M55_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="M55_ISSUANCE" VALUE="0"/>
-        <PARAMETER NAME="M55_SECURE" VALUE="0"/>
-        <PARAMETER NAME="M56_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="M56_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="M56_ISSUANCE" VALUE="0"/>
-        <PARAMETER NAME="M56_SECURE" VALUE="0"/>
-        <PARAMETER NAME="M57_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="M57_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="M57_ISSUANCE" VALUE="0"/>
-        <PARAMETER NAME="M57_SECURE" VALUE="0"/>
-        <PARAMETER NAME="M58_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="M58_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="M58_ISSUANCE" VALUE="0"/>
-        <PARAMETER NAME="M58_SECURE" VALUE="0"/>
-        <PARAMETER NAME="M59_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="M59_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="M59_ISSUANCE" VALUE="0"/>
-        <PARAMETER NAME="M59_SECURE" VALUE="0"/>
-        <PARAMETER NAME="M60_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="M60_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="M60_ISSUANCE" VALUE="0"/>
-        <PARAMETER NAME="M60_SECURE" VALUE="0"/>
-        <PARAMETER NAME="M61_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="M61_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="M61_ISSUANCE" VALUE="0"/>
-        <PARAMETER NAME="M61_SECURE" VALUE="0"/>
-        <PARAMETER NAME="M62_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="M62_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="M62_ISSUANCE" VALUE="0"/>
-        <PARAMETER NAME="M62_SECURE" VALUE="0"/>
-        <PARAMETER NAME="M63_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="M63_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="M63_ISSUANCE" VALUE="0"/>
-        <PARAMETER NAME="M63_SECURE" VALUE="0"/>
-        <PARAMETER NAME="NUM_MI" VALUE="1"/>
-        <PARAMETER NAME="NUM_SI" VALUE="2"/>
-        <PARAMETER NAME="PCHK_MAX_RD_BURSTS" VALUE="2"/>
-        <PARAMETER NAME="PCHK_MAX_WR_BURSTS" VALUE="2"/>
-        <PARAMETER NAME="PCHK_WAITS" VALUE="0"/>
-        <PARAMETER NAME="S00_ARB_PRIORITY" VALUE="0"/>
-        <PARAMETER NAME="S00_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="S00_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="S01_ARB_PRIORITY" VALUE="0"/>
-        <PARAMETER NAME="S01_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="S01_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="S02_ARB_PRIORITY" VALUE="0"/>
-        <PARAMETER NAME="S02_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="S02_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="S03_ARB_PRIORITY" VALUE="0"/>
-        <PARAMETER NAME="S03_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="S03_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="S04_ARB_PRIORITY" VALUE="0"/>
-        <PARAMETER NAME="S04_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="S04_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="S05_ARB_PRIORITY" VALUE="0"/>
-        <PARAMETER NAME="S05_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="S05_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="S06_ARB_PRIORITY" VALUE="0"/>
-        <PARAMETER NAME="S06_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="S06_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="S07_ARB_PRIORITY" VALUE="0"/>
-        <PARAMETER NAME="S07_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="S07_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="S08_ARB_PRIORITY" VALUE="0"/>
-        <PARAMETER NAME="S08_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="S08_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="S09_ARB_PRIORITY" VALUE="0"/>
-        <PARAMETER NAME="S09_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="S09_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="S10_ARB_PRIORITY" VALUE="0"/>
-        <PARAMETER NAME="S10_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="S10_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="S11_ARB_PRIORITY" VALUE="0"/>
-        <PARAMETER NAME="S11_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="S11_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="S12_ARB_PRIORITY" VALUE="0"/>
-        <PARAMETER NAME="S12_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="S12_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="S13_ARB_PRIORITY" VALUE="0"/>
-        <PARAMETER NAME="S13_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="S13_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="S14_ARB_PRIORITY" VALUE="0"/>
-        <PARAMETER NAME="S14_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="S14_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="S15_ARB_PRIORITY" VALUE="0"/>
-        <PARAMETER NAME="S15_HAS_DATA_FIFO" VALUE="0"/>
-        <PARAMETER NAME="S15_HAS_REGSLICE" VALUE="0"/>
-        <PARAMETER NAME="STRATEGY" VALUE="0"/>
-        <PARAMETER NAME="SYNCHRONIZATION_STAGES" VALUE="3"/>
-        <PARAMETER NAME="XBAR_DATA_WIDTH" VALUE="32"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
-      </PARAMETERS>
-      <PORTS>
-        <PORT DIR="I" NAME="ACLK" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK0"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="ARESETN" SIGIS="rst" SIGNAME="rst_ps7_0_100M_peripheral_aresetn">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="rst_ps7_0_100M" PORT="peripheral_aresetn"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M00_ACLK" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK0"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M00_ARESETN" SIGIS="rst" SIGNAME="rst_ps7_0_100M_peripheral_aresetn">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="rst_ps7_0_100M" PORT="peripheral_aresetn"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M00_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_M00_AXI_araddr">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_GP0_ARADDR"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="1" NAME="M00_AXI_arburst" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_M00_AXI_arburst">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_GP0_ARBURST"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="3" NAME="M00_AXI_arcache" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_M00_AXI_arcache">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_GP0_ARCACHE"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="0" NAME="M00_AXI_arid" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_M00_AXI_arid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_GP0_ARID"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="3" NAME="M00_AXI_arlen" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_M00_AXI_arlen">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_GP0_ARLEN"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="1" NAME="M00_AXI_arlock" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_M00_AXI_arlock">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_GP0_ARLOCK"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="2" NAME="M00_AXI_arprot" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_M00_AXI_arprot">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_GP0_ARPROT"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="3" NAME="M00_AXI_arqos" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_M00_AXI_arqos">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_GP0_ARQOS"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M00_AXI_arready" SIGIS="undef" SIGNAME="axi_mem_intercon_M00_AXI_arready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_GP0_ARREADY"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="2" NAME="M00_AXI_arsize" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_M00_AXI_arsize">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_GP0_ARSIZE"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M00_AXI_arvalid" SIGIS="undef" SIGNAME="axi_mem_intercon_M00_AXI_arvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_GP0_ARVALID"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M00_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_M00_AXI_awaddr">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_GP0_AWADDR"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="1" NAME="M00_AXI_awburst" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_M00_AXI_awburst">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_GP0_AWBURST"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="3" NAME="M00_AXI_awcache" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_M00_AXI_awcache">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_GP0_AWCACHE"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="0" NAME="M00_AXI_awid" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_M00_AXI_awid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_GP0_AWID"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="3" NAME="M00_AXI_awlen" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_M00_AXI_awlen">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_GP0_AWLEN"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="1" NAME="M00_AXI_awlock" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_M00_AXI_awlock">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_GP0_AWLOCK"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="2" NAME="M00_AXI_awprot" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_M00_AXI_awprot">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_GP0_AWPROT"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="3" NAME="M00_AXI_awqos" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_M00_AXI_awqos">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_GP0_AWQOS"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M00_AXI_awready" SIGIS="undef" SIGNAME="axi_mem_intercon_M00_AXI_awready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_GP0_AWREADY"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="2" NAME="M00_AXI_awsize" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_M00_AXI_awsize">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_GP0_AWSIZE"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M00_AXI_awvalid" SIGIS="undef" SIGNAME="axi_mem_intercon_M00_AXI_awvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_GP0_AWVALID"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="5" NAME="M00_AXI_bid" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_M00_AXI_bid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_GP0_BID"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M00_AXI_bready" SIGIS="undef" SIGNAME="axi_mem_intercon_M00_AXI_bready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_GP0_BREADY"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M00_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_M00_AXI_bresp">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_GP0_BRESP"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M00_AXI_bvalid" SIGIS="undef" SIGNAME="axi_mem_intercon_M00_AXI_bvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_GP0_BVALID"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="31" NAME="M00_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_M00_AXI_rdata">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_GP0_RDATA"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="5" NAME="M00_AXI_rid" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_M00_AXI_rid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_GP0_RID"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M00_AXI_rlast" SIGIS="undef" SIGNAME="axi_mem_intercon_M00_AXI_rlast">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_GP0_RLAST"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M00_AXI_rready" SIGIS="undef" SIGNAME="axi_mem_intercon_M00_AXI_rready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_GP0_RREADY"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M00_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_M00_AXI_rresp">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_GP0_RRESP"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M00_AXI_rvalid" SIGIS="undef" SIGNAME="axi_mem_intercon_M00_AXI_rvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_GP0_RVALID"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M00_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_M00_AXI_wdata">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_GP0_WDATA"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="0" NAME="M00_AXI_wid" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_M00_AXI_wid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_GP0_WID"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M00_AXI_wlast" SIGIS="undef" SIGNAME="axi_mem_intercon_M00_AXI_wlast">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_GP0_WLAST"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M00_AXI_wready" SIGIS="undef" SIGNAME="axi_mem_intercon_M00_AXI_wready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_GP0_WREADY"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="3" NAME="M00_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="axi_mem_intercon_M00_AXI_wstrb">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_GP0_WSTRB"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M00_AXI_wvalid" SIGIS="undef" SIGNAME="axi_mem_intercon_M00_AXI_wvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_GP0_WVALID"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="S00_ACLK" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK0"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="S00_ARESETN" SIGIS="rst" SIGNAME="rst_ps7_0_100M_peripheral_aresetn">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="rst_ps7_0_100M" PORT="peripheral_aresetn"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="31" NAME="S00_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_dma_0_m_axi_mm2s_araddr">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_dma_0" PORT="m_axi_mm2s_araddr"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="S00_AXI_arburst" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_dma_0_m_axi_mm2s_arburst">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_dma_0" PORT="m_axi_mm2s_arburst"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="3" NAME="S00_AXI_arcache" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_dma_0_m_axi_mm2s_arcache">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_dma_0" PORT="m_axi_mm2s_arcache"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="7" NAME="S00_AXI_arlen" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_dma_0_m_axi_mm2s_arlen">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_dma_0" PORT="m_axi_mm2s_arlen"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="2" NAME="S00_AXI_arprot" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_dma_0_m_axi_mm2s_arprot">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_dma_0" PORT="m_axi_mm2s_arprot"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="S00_AXI_arready" SIGIS="undef" SIGNAME="FIR_axi_dma_0_m_axi_mm2s_arready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_dma_0" PORT="m_axi_mm2s_arready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="2" NAME="S00_AXI_arsize" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_dma_0_m_axi_mm2s_arsize">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_dma_0" PORT="m_axi_mm2s_arsize"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="S00_AXI_arvalid" SIGIS="undef" SIGNAME="FIR_axi_dma_0_m_axi_mm2s_arvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_dma_0" PORT="m_axi_mm2s_arvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="S00_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_dma_0_m_axi_mm2s_rdata">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_dma_0" PORT="m_axi_mm2s_rdata"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="S00_AXI_rlast" SIGIS="undef" SIGNAME="FIR_axi_dma_0_m_axi_mm2s_rlast">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_dma_0" PORT="m_axi_mm2s_rlast"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="S00_AXI_rready" SIGIS="undef" SIGNAME="FIR_axi_dma_0_m_axi_mm2s_rready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_dma_0" PORT="m_axi_mm2s_rready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="1" NAME="S00_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_dma_0_m_axi_mm2s_rresp">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_dma_0" PORT="m_axi_mm2s_rresp"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="S00_AXI_rvalid" SIGIS="undef" SIGNAME="FIR_axi_dma_0_m_axi_mm2s_rvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_dma_0" PORT="m_axi_mm2s_rvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="S01_ACLK" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK0"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="S01_ARESETN" SIGIS="rst" SIGNAME="rst_ps7_0_100M_peripheral_aresetn">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="rst_ps7_0_100M" PORT="peripheral_aresetn"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="31" NAME="S01_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_dma_0_m_axi_s2mm_awaddr">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_dma_0" PORT="m_axi_s2mm_awaddr"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="S01_AXI_awburst" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_dma_0_m_axi_s2mm_awburst">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_dma_0" PORT="m_axi_s2mm_awburst"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="3" NAME="S01_AXI_awcache" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_dma_0_m_axi_s2mm_awcache">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_dma_0" PORT="m_axi_s2mm_awcache"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="7" NAME="S01_AXI_awlen" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_dma_0_m_axi_s2mm_awlen">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_dma_0" PORT="m_axi_s2mm_awlen"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="2" NAME="S01_AXI_awprot" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_dma_0_m_axi_s2mm_awprot">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_dma_0" PORT="m_axi_s2mm_awprot"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="S01_AXI_awready" SIGIS="undef" SIGNAME="FIR_axi_dma_0_m_axi_s2mm_awready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_dma_0" PORT="m_axi_s2mm_awready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="2" NAME="S01_AXI_awsize" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_dma_0_m_axi_s2mm_awsize">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_dma_0" PORT="m_axi_s2mm_awsize"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="S01_AXI_awvalid" SIGIS="undef" SIGNAME="FIR_axi_dma_0_m_axi_s2mm_awvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_dma_0" PORT="m_axi_s2mm_awvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="S01_AXI_bready" SIGIS="undef" SIGNAME="FIR_axi_dma_0_m_axi_s2mm_bready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_dma_0" PORT="m_axi_s2mm_bready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="1" NAME="S01_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_dma_0_m_axi_s2mm_bresp">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_dma_0" PORT="m_axi_s2mm_bresp"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="S01_AXI_bvalid" SIGIS="undef" SIGNAME="FIR_axi_dma_0_m_axi_s2mm_bvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_dma_0" PORT="m_axi_s2mm_bvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="31" NAME="S01_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_dma_0_m_axi_s2mm_wdata">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_dma_0" PORT="m_axi_s2mm_wdata"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="S01_AXI_wlast" SIGIS="undef" SIGNAME="FIR_axi_dma_0_m_axi_s2mm_wlast">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_dma_0" PORT="m_axi_s2mm_wlast"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="S01_AXI_wready" SIGIS="undef" SIGNAME="FIR_axi_dma_0_m_axi_s2mm_wready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_dma_0" PORT="m_axi_s2mm_wready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="3" NAME="S01_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_dma_0_m_axi_s2mm_wstrb">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_dma_0" PORT="m_axi_s2mm_wstrb"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="S01_AXI_wvalid" SIGIS="undef" SIGNAME="FIR_axi_dma_0_m_axi_s2mm_wvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_dma_0" PORT="m_axi_s2mm_wvalid"/>
-          </CONNECTIONS>
-        </PORT>
-      </PORTS>
-      <BUSINTERFACES>
-        <BUSINTERFACE BUSNAME="FIR_axi_dma_0_M_AXI_MM2S" DATAWIDTH="32" NAME="S00_AXI" TYPE="SLAVE" VLNV="xilinx.com:interface:aximm:1.0">
-          <PORTMAPS>
-            <PORTMAP LOGICAL="ARADDR" PHYSICAL="S00_AXI_araddr"/>
-            <PORTMAP LOGICAL="ARBURST" PHYSICAL="S00_AXI_arburst"/>
-            <PORTMAP LOGICAL="ARCACHE" PHYSICAL="S00_AXI_arcache"/>
-            <PORTMAP LOGICAL="ARLEN" PHYSICAL="S00_AXI_arlen"/>
-            <PORTMAP LOGICAL="ARPROT" PHYSICAL="S00_AXI_arprot"/>
-            <PORTMAP LOGICAL="ARREADY" PHYSICAL="S00_AXI_arready"/>
-            <PORTMAP LOGICAL="ARSIZE" PHYSICAL="S00_AXI_arsize"/>
-            <PORTMAP LOGICAL="ARVALID" PHYSICAL="S00_AXI_arvalid"/>
-            <PORTMAP LOGICAL="RDATA" PHYSICAL="S00_AXI_rdata"/>
-            <PORTMAP LOGICAL="RLAST" PHYSICAL="S00_AXI_rlast"/>
-            <PORTMAP LOGICAL="RREADY" PHYSICAL="S00_AXI_rready"/>
-            <PORTMAP LOGICAL="RRESP" PHYSICAL="S00_AXI_rresp"/>
-            <PORTMAP LOGICAL="RVALID" PHYSICAL="S00_AXI_rvalid"/>
-          </PORTMAPS>
-        </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="axi_mem_intercon_M00_AXI" DATAWIDTH="32" NAME="M00_AXI" TYPE="MASTER" VLNV="xilinx.com:interface:aximm:1.0">
-          <PORTMAPS>
-            <PORTMAP LOGICAL="ARADDR" PHYSICAL="M00_AXI_araddr"/>
-            <PORTMAP LOGICAL="ARBURST" PHYSICAL="M00_AXI_arburst"/>
-            <PORTMAP LOGICAL="ARCACHE" PHYSICAL="M00_AXI_arcache"/>
-            <PORTMAP LOGICAL="ARID" PHYSICAL="M00_AXI_arid"/>
-            <PORTMAP LOGICAL="ARLEN" PHYSICAL="M00_AXI_arlen"/>
-            <PORTMAP LOGICAL="ARLOCK" PHYSICAL="M00_AXI_arlock"/>
-            <PORTMAP LOGICAL="ARPROT" PHYSICAL="M00_AXI_arprot"/>
-            <PORTMAP LOGICAL="ARQOS" PHYSICAL="M00_AXI_arqos"/>
-            <PORTMAP LOGICAL="ARREADY" PHYSICAL="M00_AXI_arready"/>
-            <PORTMAP LOGICAL="ARSIZE" PHYSICAL="M00_AXI_arsize"/>
-            <PORTMAP LOGICAL="ARVALID" PHYSICAL="M00_AXI_arvalid"/>
-            <PORTMAP LOGICAL="AWADDR" PHYSICAL="M00_AXI_awaddr"/>
-            <PORTMAP LOGICAL="AWBURST" PHYSICAL="M00_AXI_awburst"/>
-            <PORTMAP LOGICAL="AWCACHE" PHYSICAL="M00_AXI_awcache"/>
-            <PORTMAP LOGICAL="AWID" PHYSICAL="M00_AXI_awid"/>
-            <PORTMAP LOGICAL="AWLEN" PHYSICAL="M00_AXI_awlen"/>
-            <PORTMAP LOGICAL="AWLOCK" PHYSICAL="M00_AXI_awlock"/>
-            <PORTMAP LOGICAL="AWPROT" PHYSICAL="M00_AXI_awprot"/>
-            <PORTMAP LOGICAL="AWQOS" PHYSICAL="M00_AXI_awqos"/>
-            <PORTMAP LOGICAL="AWREADY" PHYSICAL="M00_AXI_awready"/>
-            <PORTMAP LOGICAL="AWSIZE" PHYSICAL="M00_AXI_awsize"/>
-            <PORTMAP LOGICAL="AWVALID" PHYSICAL="M00_AXI_awvalid"/>
-            <PORTMAP LOGICAL="BID" PHYSICAL="M00_AXI_bid"/>
-            <PORTMAP LOGICAL="BREADY" PHYSICAL="M00_AXI_bready"/>
-            <PORTMAP LOGICAL="BRESP" PHYSICAL="M00_AXI_bresp"/>
-            <PORTMAP LOGICAL="BVALID" PHYSICAL="M00_AXI_bvalid"/>
-            <PORTMAP LOGICAL="RDATA" PHYSICAL="M00_AXI_rdata"/>
-            <PORTMAP LOGICAL="RID" PHYSICAL="M00_AXI_rid"/>
-            <PORTMAP LOGICAL="RLAST" PHYSICAL="M00_AXI_rlast"/>
-            <PORTMAP LOGICAL="RREADY" PHYSICAL="M00_AXI_rready"/>
-            <PORTMAP LOGICAL="RRESP" PHYSICAL="M00_AXI_rresp"/>
-            <PORTMAP LOGICAL="RVALID" PHYSICAL="M00_AXI_rvalid"/>
-            <PORTMAP LOGICAL="WDATA" PHYSICAL="M00_AXI_wdata"/>
-            <PORTMAP LOGICAL="WID" PHYSICAL="M00_AXI_wid"/>
-            <PORTMAP LOGICAL="WLAST" PHYSICAL="M00_AXI_wlast"/>
-            <PORTMAP LOGICAL="WREADY" PHYSICAL="M00_AXI_wready"/>
-            <PORTMAP LOGICAL="WSTRB" PHYSICAL="M00_AXI_wstrb"/>
-            <PORTMAP LOGICAL="WVALID" PHYSICAL="M00_AXI_wvalid"/>
-          </PORTMAPS>
-        </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="FIR_axi_dma_0_M_AXI_S2MM" DATAWIDTH="32" NAME="S01_AXI" TYPE="SLAVE" VLNV="xilinx.com:interface:aximm:1.0">
-          <PORTMAPS>
-            <PORTMAP LOGICAL="AWADDR" PHYSICAL="S01_AXI_awaddr"/>
-            <PORTMAP LOGICAL="AWBURST" PHYSICAL="S01_AXI_awburst"/>
-            <PORTMAP LOGICAL="AWCACHE" PHYSICAL="S01_AXI_awcache"/>
-            <PORTMAP LOGICAL="AWLEN" PHYSICAL="S01_AXI_awlen"/>
-            <PORTMAP LOGICAL="AWPROT" PHYSICAL="S01_AXI_awprot"/>
-            <PORTMAP LOGICAL="AWREADY" PHYSICAL="S01_AXI_awready"/>
-            <PORTMAP LOGICAL="AWSIZE" PHYSICAL="S01_AXI_awsize"/>
-            <PORTMAP LOGICAL="AWVALID" PHYSICAL="S01_AXI_awvalid"/>
-            <PORTMAP LOGICAL="BREADY" PHYSICAL="S01_AXI_bready"/>
-            <PORTMAP LOGICAL="BRESP" PHYSICAL="S01_AXI_bresp"/>
-            <PORTMAP LOGICAL="BVALID" PHYSICAL="S01_AXI_bvalid"/>
-            <PORTMAP LOGICAL="WDATA" PHYSICAL="S01_AXI_wdata"/>
-            <PORTMAP LOGICAL="WLAST" PHYSICAL="S01_AXI_wlast"/>
-            <PORTMAP LOGICAL="WREADY" PHYSICAL="S01_AXI_wready"/>
-            <PORTMAP LOGICAL="WSTRB" PHYSICAL="S01_AXI_wstrb"/>
-            <PORTMAP LOGICAL="WVALID" PHYSICAL="S01_AXI_wvalid"/>
-          </PORTMAPS>
-        </BUSINTERFACE>
-      </BUSINTERFACES>
     </MODULE>
     <MODULE CONFIGURABLE="TRUE" COREREVISION="6" FULLNAME="/processing_system7_0" HWVERSION="5.5" INSTANCE="processing_system7_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" IS_PL="FALSE" MODTYPE="processing_system7" VLNV="xilinx.com:ip:processing_system7:5.5">
       <DOCUMENTS>
         <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=processing_system7;v=v5_3;d=pg082-processing-system7.pdf"/>
       </DOCUMENTS>
+      <ADDRESSBLOCKS>
+        <ADDRESSBLOCK ACCESS="" INTERFACE="S_AXI_GP0" NAME="GP0_IOP" RANGE="0x00400000" USAGE="register"/>
+      </ADDRESSBLOCKS>
+      <ADDRESSBLOCKS>
+        <ADDRESSBLOCK ACCESS="" INTERFACE="S_AXI_GP0" NAME="GP0_M_AXI_GP0" RANGE="0x40000000" USAGE="register"/>
+      </ADDRESSBLOCKS>
+      <ADDRESSBLOCKS>
+        <ADDRESSBLOCK ACCESS="" INTERFACE="S_AXI_GP0" NAME="GP0_DDR_LOWOCM" RANGE="536870912" USAGE="memory"/>
+      </ADDRESSBLOCKS>
+      <ADDRESSBLOCKS>
+        <ADDRESSBLOCK ACCESS="" INTERFACE="S_AXI_GP0" NAME="GP0_QSPI_LINEAR" RANGE="16777216" USAGE="memory"/>
+      </ADDRESSBLOCKS>
       <PARAMETERS>
         <PARAMETER NAME="C_DM_WIDTH" VALUE="4"/>
         <PARAMETER NAME="C_DQS_WIDTH" VALUE="4"/>
@@ -4369,11 +4405,11 @@
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="S00_ACLK"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M00_ACLK"/>
             <CONNECTION INSTANCE="axi_mem_intercon" PORT="S01_ACLK"/>
-            <CONNECTION INSTANCE="FIR_axi_dma_0" PORT="m_axi_mm2s_aclk"/>
-            <CONNECTION INSTANCE="FIR_axi_dma_0" PORT="s_axi_lite_aclk"/>
-            <CONNECTION INSTANCE="FIR_axi_dma_0" PORT="m_axi_s2mm_aclk"/>
-            <CONNECTION INSTANCE="FIR_axi_bram_ctrl_0" PORT="s_axi_aclk"/>
-            <CONNECTION INSTANCE="FIR_filt_0" PORT="ap_clk"/>
+            <CONNECTION INSTANCE="filtDMA_axi_dma_0" PORT="m_axi_mm2s_aclk"/>
+            <CONNECTION INSTANCE="filtDMA_axi_dma_0" PORT="s_axi_lite_aclk"/>
+            <CONNECTION INSTANCE="filtDMA_axi_bram_ctrl_0" PORT="s_axi_aclk"/>
+            <CONNECTION INSTANCE="filtDMA_axi_dma_0" PORT="m_axi_s2mm_aclk"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="ap_clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="FCLK_RESET0_N" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="processing_system7_0_FCLK_RESET0_N">
@@ -4995,10 +5031,10 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
       <MEMORYMAP>
-        <MEMRANGE ADDRESSBLOCK="Reg" BASENAME="C_BASEADDR" BASEVALUE="0x41E00000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x41E0FFFF" INSTANCE="FIR_axi_dma_0" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MASTERBUSINTERFACE="M_AXI_GP0" MEMTYPE="REGISTER" SLAVEBUSINTERFACE="S_AXI_LITE"/>
+        <MEMRANGE ADDRESSBLOCK="Reg" BASENAME="C_BASEADDR" BASEVALUE="0x41E00000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x41E0FFFF" INSTANCE="filtDMA_axi_dma_0" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MASTERBUSINTERFACE="M_AXI_GP0" MEMTYPE="REGISTER" SLAVEBUSINTERFACE="S_AXI_LITE"/>
       </MEMORYMAP>
       <PERIPHERALS>
-        <PERIPHERAL INSTANCE="FIR_axi_dma_0"/>
+        <PERIPHERAL INSTANCE="filtDMA_axi_dma_0"/>
       </PERIPHERALS>
     </MODULE>
     <MODULE COREREVISION="30" FULLNAME="/ps7_0_axi_periph" HWVERSION="2.1" INSTANCE="ps7_0_axi_periph" IPTYPE="BUS" IS_ENABLE="1" MODCLASS="BUS" MODTYPE="axi_interconnect" VLNV="xilinx.com:ip:axi_interconnect:2.1">
@@ -5344,84 +5380,84 @@
             <CONNECTION INSTANCE="rst_ps7_0_100M" PORT="peripheral_aresetn"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M00_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_dma_0_s_axi_lite_araddr">
+        <PORT DIR="O" LEFT="31" NAME="M00_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_dma_0_s_axi_lite_araddr">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_dma_0" PORT="s_axi_lite_araddr"/>
+            <CONNECTION INSTANCE="filtDMA_axi_dma_0" PORT="s_axi_lite_araddr"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M00_AXI_arready" SIGIS="undef" SIGNAME="FIR_axi_dma_0_s_axi_lite_arready">
+        <PORT DIR="I" NAME="M00_AXI_arready" SIGIS="undef" SIGNAME="filtDMA_axi_dma_0_s_axi_lite_arready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_dma_0" PORT="s_axi_lite_arready"/>
+            <CONNECTION INSTANCE="filtDMA_axi_dma_0" PORT="s_axi_lite_arready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M00_AXI_arvalid" SIGIS="undef" SIGNAME="FIR_axi_dma_0_s_axi_lite_arvalid">
+        <PORT DIR="O" NAME="M00_AXI_arvalid" SIGIS="undef" SIGNAME="filtDMA_axi_dma_0_s_axi_lite_arvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_dma_0" PORT="s_axi_lite_arvalid"/>
+            <CONNECTION INSTANCE="filtDMA_axi_dma_0" PORT="s_axi_lite_arvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M00_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_dma_0_s_axi_lite_awaddr">
+        <PORT DIR="O" LEFT="31" NAME="M00_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_dma_0_s_axi_lite_awaddr">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_dma_0" PORT="s_axi_lite_awaddr"/>
+            <CONNECTION INSTANCE="filtDMA_axi_dma_0" PORT="s_axi_lite_awaddr"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M00_AXI_awready" SIGIS="undef" SIGNAME="FIR_axi_dma_0_s_axi_lite_awready">
+        <PORT DIR="I" NAME="M00_AXI_awready" SIGIS="undef" SIGNAME="filtDMA_axi_dma_0_s_axi_lite_awready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_dma_0" PORT="s_axi_lite_awready"/>
+            <CONNECTION INSTANCE="filtDMA_axi_dma_0" PORT="s_axi_lite_awready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M00_AXI_awvalid" SIGIS="undef" SIGNAME="FIR_axi_dma_0_s_axi_lite_awvalid">
+        <PORT DIR="O" NAME="M00_AXI_awvalid" SIGIS="undef" SIGNAME="filtDMA_axi_dma_0_s_axi_lite_awvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_dma_0" PORT="s_axi_lite_awvalid"/>
+            <CONNECTION INSTANCE="filtDMA_axi_dma_0" PORT="s_axi_lite_awvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M00_AXI_bready" SIGIS="undef" SIGNAME="FIR_axi_dma_0_s_axi_lite_bready">
+        <PORT DIR="O" NAME="M00_AXI_bready" SIGIS="undef" SIGNAME="filtDMA_axi_dma_0_s_axi_lite_bready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_dma_0" PORT="s_axi_lite_bready"/>
+            <CONNECTION INSTANCE="filtDMA_axi_dma_0" PORT="s_axi_lite_bready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M00_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_dma_0_s_axi_lite_bresp">
+        <PORT DIR="I" LEFT="1" NAME="M00_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_dma_0_s_axi_lite_bresp">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_dma_0" PORT="s_axi_lite_bresp"/>
+            <CONNECTION INSTANCE="filtDMA_axi_dma_0" PORT="s_axi_lite_bresp"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M00_AXI_bvalid" SIGIS="undef" SIGNAME="FIR_axi_dma_0_s_axi_lite_bvalid">
+        <PORT DIR="I" NAME="M00_AXI_bvalid" SIGIS="undef" SIGNAME="filtDMA_axi_dma_0_s_axi_lite_bvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_dma_0" PORT="s_axi_lite_bvalid"/>
+            <CONNECTION INSTANCE="filtDMA_axi_dma_0" PORT="s_axi_lite_bvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="M00_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_dma_0_s_axi_lite_rdata">
+        <PORT DIR="I" LEFT="31" NAME="M00_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_dma_0_s_axi_lite_rdata">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_dma_0" PORT="s_axi_lite_rdata"/>
+            <CONNECTION INSTANCE="filtDMA_axi_dma_0" PORT="s_axi_lite_rdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M00_AXI_rready" SIGIS="undef" SIGNAME="FIR_axi_dma_0_s_axi_lite_rready">
+        <PORT DIR="O" NAME="M00_AXI_rready" SIGIS="undef" SIGNAME="filtDMA_axi_dma_0_s_axi_lite_rready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_dma_0" PORT="s_axi_lite_rready"/>
+            <CONNECTION INSTANCE="filtDMA_axi_dma_0" PORT="s_axi_lite_rready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M00_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_dma_0_s_axi_lite_rresp">
+        <PORT DIR="I" LEFT="1" NAME="M00_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_dma_0_s_axi_lite_rresp">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_dma_0" PORT="s_axi_lite_rresp"/>
+            <CONNECTION INSTANCE="filtDMA_axi_dma_0" PORT="s_axi_lite_rresp"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M00_AXI_rvalid" SIGIS="undef" SIGNAME="FIR_axi_dma_0_s_axi_lite_rvalid">
+        <PORT DIR="I" NAME="M00_AXI_rvalid" SIGIS="undef" SIGNAME="filtDMA_axi_dma_0_s_axi_lite_rvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_dma_0" PORT="s_axi_lite_rvalid"/>
+            <CONNECTION INSTANCE="filtDMA_axi_dma_0" PORT="s_axi_lite_rvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M00_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="FIR_axi_dma_0_s_axi_lite_wdata">
+        <PORT DIR="O" LEFT="31" NAME="M00_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="filtDMA_axi_dma_0_s_axi_lite_wdata">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_dma_0" PORT="s_axi_lite_wdata"/>
+            <CONNECTION INSTANCE="filtDMA_axi_dma_0" PORT="s_axi_lite_wdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M00_AXI_wready" SIGIS="undef" SIGNAME="FIR_axi_dma_0_s_axi_lite_wready">
+        <PORT DIR="I" NAME="M00_AXI_wready" SIGIS="undef" SIGNAME="filtDMA_axi_dma_0_s_axi_lite_wready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_dma_0" PORT="s_axi_lite_wready"/>
+            <CONNECTION INSTANCE="filtDMA_axi_dma_0" PORT="s_axi_lite_wready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M00_AXI_wvalid" SIGIS="undef" SIGNAME="FIR_axi_dma_0_s_axi_lite_wvalid">
+        <PORT DIR="O" NAME="M00_AXI_wvalid" SIGIS="undef" SIGNAME="filtDMA_axi_dma_0_s_axi_lite_wvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIR_axi_dma_0" PORT="s_axi_lite_wvalid"/>
+            <CONNECTION INSTANCE="filtDMA_axi_dma_0" PORT="s_axi_lite_wvalid"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="S00_ACLK" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
@@ -5730,9 +5766,9 @@
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M00_ARESETN"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="ARESETN"/>
             <CONNECTION INSTANCE="axi_mem_intercon" PORT="S01_ARESETN"/>
-            <CONNECTION INSTANCE="FIR_axi_dma_0" PORT="axi_resetn"/>
-            <CONNECTION INSTANCE="FIR_axi_bram_ctrl_0" PORT="s_axi_aresetn"/>
-            <CONNECTION INSTANCE="FIR_filt_0" PORT="ap_rst_n"/>
+            <CONNECTION INSTANCE="filtDMA_axi_dma_0" PORT="axi_resetn"/>
+            <CONNECTION INSTANCE="filtDMA_axi_bram_ctrl_0" PORT="s_axi_aresetn"/>
+            <CONNECTION INSTANCE="filtDMA_filt_0" PORT="ap_rst_n"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="0" NAME="peripheral_reset" POLARITY="ACTIVE_HIGH" RIGHT="0" SIGIS="rst"/>
