@@ -7,7 +7,7 @@
 
 #define FRAME_RATE 88200
 #define LPF_FILTER_LENGTH 441
-#define DELAY_BUFFER_SIZE 44100
+#define DELAY_BUFFER_SIZE 88200
 #define WAH_BANDPASS_RESOLUTION 20
 #define BANDPASS_FILTER_LENGTH 100
 
@@ -16,9 +16,9 @@ typedef ap_fixed<16, -16> wah_mult;
 
 // function definitions
 int distortion(int input, int threshold, mult_float clip_factor);
-int compression(int input, int min_threshold, int max_threshold, int zero_threshold, int& current_level, int values_buffer[LPF_FILTER_LENGTH], int compression_buffer_index, int lpf_coefficients[LPF_FILTER_LENGTH], int current_sample);
-int delay(int input, int delay_samples, float delay_mult, int delay_buffer[DELAY_BUFFER_SIZE], int delay_buffer_index);
-int wah(int input, int tempo, int current_sample, int wah_buffer_index, int wah_values_buffer[BANDPASS_FILTER_LENGTH], wah_mult bandpass_coeffs[WAH_BANDPASS_RESOLUTION][BANDPASS_FILTER_LENGTH]);
+int compression(int input, int min_threshold, int max_threshold, int zero_threshold, int& current_level, int values_buffer[LPF_FILTER_LENGTH], int &compression_buffer_index, float lpf_coefficients[LPF_FILTER_LENGTH], int current_sample);
+int delay(int input, int delay_samples, float delay_mult, int delay_buffer[DELAY_BUFFER_SIZE], int &delay_buffer_index);
+int wah(int input, int tempo, int current_sample, int &wah_buffer_index, int wah_values_buffer[BANDPASS_FILTER_LENGTH], wah_mult bandpass_coeffs[WAH_BANDPASS_RESOLUTION][BANDPASS_FILTER_LENGTH]);
 
 void guitar_effects (
     hls::stream< ap_axis<32,2,5,6> > &INPUT,
@@ -59,8 +59,8 @@ void guitar_effects (
     int current_level = 0;
     int compression_buffer[LPF_FILTER_LENGTH] = {0};
     int compression_buffer_index = 0;
-    int lpf_coefficients[LPF_FILTER_LENGTH] = {0};
-    float filter_value = 3.0 / LPF_FILTER_LENGTH;
+    float lpf_coefficients[LPF_FILTER_LENGTH] = {0};
+    float filter_value = 1.0 / LPF_FILTER_LENGTH;
     for (int i = 0; i < LPF_FILTER_LENGTH; i++) {
     	lpf_coefficients[i] = filter_value;
     }
@@ -144,7 +144,7 @@ int distortion(int input, int threshold, mult_float clip_factor) {
 }
 
 //compression effect
-int compression(int input, int min_threshold, int max_threshold, int zero_threshold, int& current_level, int values_buffer[LPF_FILTER_LENGTH], int compression_buffer_index, int lpf_coefficients[LPF_FILTER_LENGTH], int current_sample) {
+int compression(int input, int min_threshold, int max_threshold, int zero_threshold, int &current_level, int values_buffer[LPF_FILTER_LENGTH], int &compression_buffer_index, float lpf_coefficients[LPF_FILTER_LENGTH], int current_sample) {
     // rectify the input signal and apply a low pass filter
 	int abs_in = input;
 	if (input < 0) {
@@ -154,7 +154,7 @@ int compression(int input, int min_threshold, int max_threshold, int zero_thresh
     //store input in buffer for future use
     values_buffer[compression_buffer_index] = abs_in;
     compression_buffer_index = (compression_buffer_index + 1) % LPF_FILTER_LENGTH; // update index
-
+    current_level = 0;
     // compute FIR out
     LPF_Loop : for (int i = 0; i < LPF_FILTER_LENGTH; i++) {
         //iterate through filter
@@ -173,7 +173,7 @@ int compression(int input, int min_threshold, int max_threshold, int zero_thresh
     if (current_level > max_threshold) {
     	if (current_level > 0) {
     		//realistically this will always be the case because max threshold will always be > 0
-    		compression_factor = (max_threshold) / current_level;
+    		compression_factor = (float)(max_threshold) / current_level;
     		output = (input * compression_factor);
     	} else {
     		output = input;
@@ -181,7 +181,7 @@ int compression(int input, int min_threshold, int max_threshold, int zero_thresh
 
     } else if ((current_level < min_threshold) && (current_level > zero_threshold))  {
     	if (current_level > 0) {
-    		compression_factor = (min_threshold) / current_level;
+    		compression_factor = (float)(min_threshold) / current_level;
     		output = (input * compression_factor);
     	} else {
     		output = input;
@@ -191,24 +191,23 @@ int compression(int input, int min_threshold, int max_threshold, int zero_thresh
         // dont change if within desired range
         output = input;
     }
-
     return output;
 }
 
 //delay effect
-int delay(int input, int delay_samples, float delay_mult, int delay_buffer[DELAY_BUFFER_SIZE], int delay_buffer_index) {
+int delay(int input, int delay_samples, float delay_mult, int delay_buffer[DELAY_BUFFER_SIZE], int &delay_buffer_index) {
     // add delayed output to input signal
     int output;
-    output = (input + (delay_buffer[(delay_buffer_index - delay_samples) % DELAY_BUFFER_SIZE]*delay_mult)); // add a previous sample to the input
+    output = (input + (int)(delay_buffer[(delay_buffer_index - delay_samples) % DELAY_BUFFER_SIZE]*delay_mult)); // add a previous sample to the input
 
     //store output in the buffer and update index
     delay_buffer[delay_buffer_index] = output;
     delay_buffer_index = (delay_buffer_index + 1) % DELAY_BUFFER_SIZE; // cycle if needed
-
+//    return delay_buffer[(delay_buffer_index - delay_samples - 1)%DELAY_BUFFER_SIZE];
     return output;
 }
 
-int wah(int input, int tempo, int current_sample, int wah_buffer_index, int wah_values_buffer[BANDPASS_FILTER_LENGTH], wah_mult bandpass_coeffs[WAH_BANDPASS_RESOLUTION][BANDPASS_FILTER_LENGTH]) {
+int wah(int input, int tempo, int current_sample, int &wah_buffer_index, int wah_values_buffer[BANDPASS_FILTER_LENGTH], wah_mult bandpass_coeffs[WAH_BANDPASS_RESOLUTION][BANDPASS_FILTER_LENGTH]) {
     // apply wah effect
     // taking filter coeffecients from bandpass_coeffs.coe
     // approximate the control signal as a sine wave based on sampling rate and tempo
@@ -226,7 +225,7 @@ int wah(int input, int tempo, int current_sample, int wah_buffer_index, int wah_
     int result;
     WAH_LOOP : for (int i = 0; i < BANDPASS_FILTER_LENGTH; i++) { // convolve, but change which filter to convolve with based on the control signal
         //iterate through filter
-        int coeff_index = (wah_buffer_index + i) % BANDPASS_FILTER_LENGTH; // get value to index the previous values by, essentially iterate though but loop if needed
+        int coeff_index = (wah_buffer_index - i) % BANDPASS_FILTER_LENGTH; // get value to index the previous values by, essentially iterate though but loop if needed
         result += (int)(wah_values_buffer[coeff_index] * bandpass_coeffs[control_signal][i]);
     }
 

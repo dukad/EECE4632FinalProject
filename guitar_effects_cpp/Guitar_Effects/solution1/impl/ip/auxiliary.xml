@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="guitar_effects" xd:componentRef="guitar_effects" xd:initiationInterval="x" xd:clockPeriod="10" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="guitar_effects" xd:componentRef="guitar_effects" xd:initiationInterval="x" xd:clockPeriod="15" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
   <xd:arg xd:name="INPUT" xd:originalName="INPUT" xd:direction="in" xd:interfaceRef="INPUT_r" xd:busTypeRef="axis" xd:dataWidth="32"/>
   <xd:arg xd:name="OUTPUT" xd:originalName="OUTPUT" xd:direction="out" xd:interfaceRef="OUTPUT_r" xd:busTypeRef="axis" xd:dataWidth="32"/>
   <xd:arg xd:name="*(axilite_out)" xd:originalName="axilite_out" xd:direction="out" xd:interfaceRef="s_axi_control_r" xd:busTypeRef="axilite" xd:offset="0x10" xd:statusOffset="0x14" xd:handshakeRef="ap_vld" xd:dataWidth="32"/>
@@ -15,5 +15,5 @@
   <xd:arg xd:name="*(wah_coeffs)" xd:originalName="wah_coeffs" xd:direction="inout" xd:interfaceRef="m_axi_gmem" xd:busTypeRef="aximm" xd:dataWidth="32" xd:bufferDirection="in"/>
   <xd:arg xd:name="wah_coeffs" xd:originalName="wah_coeffs" xd:direction="in" xd:interfaceRef="s_axi_control_r" xd:busTypeRef="axilite" xd:offset="0x68" xd:dataWidth="32" xd:aximmInterfaceRef="m_axi_gmem"/>
   <xd:latencyEstimates xd:best-case="undef" xd:worst-case="undef" xd:average-case="undef"/>
-  <xd:resourceEstimates xd:LUT="18263" xd:FF="13223" xd:BRAM="0" xd:DSP="78"/>
+  <xd:resourceEstimates xd:LUT="18531" xd:FF="10454" xd:BRAM="0" xd:DSP="78"/>
 </xd:acceleratorMap>

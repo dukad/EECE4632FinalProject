@@ -1,6 +1,6 @@
 
 set TopModule "guitar_effects"
-set ClockPeriod 10
+set ClockPeriod 15
 set ClockList ap_clk
 set HasVivadoClockPeriod 0
 set CombLogicFlag 0
@@ -44,13 +44,13 @@ set SCTraceOption all
 set TargetInfo xc7z020:-clg400:-1
 set SourceFiles {sc {} c ../../guitar_effects.cpp}
 set SourceFlags {sc {} c {{}}}
-set DirectiveFile C:/Users/du.kad/Desktop/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/solution1.directive
-set TBFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
+set DirectiveFile C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/solution1.directive
+set TBFiles {verilog ../../guitar_effects_tb.cpp bc ../../guitar_effects_tb.cpp vhdl ../../guitar_effects_tb.cpp sc ../../guitar_effects_tb.cpp cas ../../guitar_effects_tb.cpp c {}}
 set SpecLanguage C
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
 set TVOutFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
-set TBTops {bc "" c "" sc "" cas "" vhdl "" verilog ""}
-set TBInstNames {bc "" c "" sc "" cas "" vhdl "" verilog ""}
+set TBTops {verilog {} bc {} vhdl {} sc {} cas {} c {}}
+set TBInstNames {verilog {} bc {} vhdl {} sc {} cas {} c {}}
 set XDCFiles {}
 set ExtraGlobalOptions {"area_timing" 1 "clock_gate" 1 "impl_flow" map "power_gate" 0}
 set TBTVFileNotFound {}

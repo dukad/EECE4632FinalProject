@@ -7,8 +7,8 @@
 module guitar_effects_delay_buffer_RAM_AUTO_1R1W (address0, ce0, d0, we0, q0,  reset,clk);
 
 parameter DataWidth = 32;
-parameter AddressWidth = 16;
-parameter AddressRange = 44100;
+parameter AddressWidth = 17;
+parameter AddressRange = 88200;
 
 input[AddressWidth-1:0] address0;
 input ce0;
