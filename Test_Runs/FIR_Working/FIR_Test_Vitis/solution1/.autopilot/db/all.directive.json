@@ -16,7 +16,7 @@
       ]
     },
     "slx": false,
-    "sourceFile": "C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Testing/FIR_Test_Vitis/solution1/directives.tcl",
+    "sourceFile": "C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Working/FIR_Test_Vitis/solution1/directives.tcl",
     "sourceLine": 7,
     "success": true
   },
@@ -37,7 +37,7 @@
       ]
     },
     "slx": false,
-    "sourceFile": "C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Testing/FIR_Test_Vitis/solution1/csynth.tcl",
+    "sourceFile": "C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Working/FIR_Test_Vitis/solution1/csynth.tcl",
     "sourceLine": 17,
     "success": true
   }

@@ -1,5 +1,5 @@
 INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2023.2/bin/unwrapped/win64.o/vitis_hls.exe'
-INFO: [HLS 200-10] For user 'a01me' on host 'desktop-g7ja666' (Windows NT_amd64 version 6.2) on Thu Apr 11 20:16:37 -0400 2024
+INFO: [HLS 200-10] For user 'a01me' on host 'desktop-g7ja666' (Windows NT_amd64 version 6.2) on Thu Apr 11 22:26:21 -0400 2024
 INFO: [HLS 200-10] In directory 'C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Testing'
 INFO: [HLS 200-2053] The vitis_hls executable is being deprecated. Consider using vitis-run --mode hls --tcl
 Sourcing Tcl script 'C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Testing/FIR_Test_Vitis/solution1/csim.tcl'
@@ -27,7 +27,7 @@ INFO: [HLS 200-1510] Running: create_clock -period 30 -name default
 INFO: [HLS 200-1510] Running: config_export -format ip_catalog -output C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test -rtl verilog 
 INFO: [HLS 200-1510] Running: source ./FIR_Test_Vitis/solution1/directives.tcl
 INFO: [HLS 200-1510] Running: set_directive_top -name filt filt 
-INFO: [HLS 200-1510] Running: csim_design -setup -quiet 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
 INFO: [SIM 211-2] *************** CSIM start ***************
 INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
 INFO: [HLS 200-2036] Building debug C Simulation binaries
@@ -84,8 +84,122 @@ In file included from C:/Xilinx/Vitis_HLS/2023.2/include/hls_fpo.h:140:0,
 C:/Xilinx/Vitis_HLS/2023.2/include/floating_point_v7_1_bitacc_cmodel.h:142:0: note: this is the location of the previous definition
  #define __GMP_LIBGMP_DLL 1
  
-INFO: [HLS 200-2035] Skipping execution of C Simulation due to 'setup' option
-INFO: [SIM 211-1] CSim file generation done with 0 errors.
+In function
+Wrote to input buffer
+After function call
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+1.29723e+029
+484.8
+ERROR [HLS SIM]: an hls::stream is read while empty, which may result in RTL simulation hanging.
+If this is not expected, execute C simulation in debug mode in the GUI and examine the source code location of the blocked hls::stream::read() call to debug.
+If this is expected, add -DALLOW_EMPTY_HLS_STREAM_READS to -cflags to turn this error into a warning and allow empty hls::stream reads to return the default value for the data type.
+@E Simulation failed: Function 'main' returns nonzero value '3'.
+ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value.
 INFO: [SIM 211-3] *************** CSIM finish ***************
-INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 6.416 seconds; current allocated memory: 0.305 MB.
-INFO: [HLS 200-112] Total CPU user time: 3 seconds. Total CPU system time: 1 seconds. Total elapsed time: 10.56 seconds; peak allocated memory: 199.219 MB.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 10.446 seconds; current allocated memory: 0.395 MB.
+4
+    while executing
+"source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Testing/FIR_Test_Vitis/solution1/csim.tcl"
+    invoked from within
+"hls::main C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Testing/FIR_Test_Vitis/solution1/csim.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel 1 hls::main {*}$newargs"
+    (procedure "hls_proc" line 16)
+    invoked from within
+"hls_proc [info nameofexecutable] $argv"
+INFO: [HLS 200-112] Total CPU user time: 4 seconds. Total CPU system time: 1 seconds. Total elapsed time: 15.14 seconds; peak allocated memory: 198.121 MB.

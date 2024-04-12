@@ -5834,11 +5834,4 @@ always @ (posedge ap_clk) begin
     state_fu_314[31:13] <= 19'b0000000000000000000;
 end
 
-
-reg find_kernel_block = 0;
-// synthesis translate_off
-`include "filt_hls_deadlock_kernel_monitor_top.vh"
-// synthesis translate_on
-
 endmodule //filt
-

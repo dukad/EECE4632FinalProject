@@ -1316,7 +1316,7 @@
     </ModuleInformation>
     <FIFOInformation/>
     <UserConfigCommands>
-        <config_export output="C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test"/>
+        <config_export output="C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Working"/>
     </UserConfigCommands>
     <Args>
         <Arg ArgName="output" index="0" direction="out" srcType="stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 1, 1, 1, '8', false&gt;, 0&gt;&amp;" srcSize="96">

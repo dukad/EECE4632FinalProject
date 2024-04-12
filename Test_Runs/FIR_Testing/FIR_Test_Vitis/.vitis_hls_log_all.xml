@@ -6,7 +6,10 @@
       <simLog/>
       <mgLog/>
       <packageLog/>
-      <csimLog/>
+      <csimLog>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="FIR_Test_Vitis" solutionName="solution1" date="2024-04-11T22:26:35.837-0400"/>
+        <logs message="ERROR [HLS SIM]: an hls::stream is read while empty, which may result in RTL simulation hanging.&#xD;&#xA;If this is not expected, execute C simulation in debug mode in the GUI and examine the source code location of the blocked hls::stream::read() call to debug.&#xD;&#xA;If this is expected, add -DALLOW_EMPTY_HLS_STREAM_READS to -cflags to turn this error into a warning and allow empty hls::stream reads to return the default value for the data type.&#xD;&#xA;@E Simulation failed: Function 'main' returns nonzero value '3'." projectName="FIR_Test_Vitis" solutionName="solution1" date="2024-04-11T22:26:35.809-0400"/>
+      </csimLog>
     </logs>
   </errorLogs>
   <warningLogs>

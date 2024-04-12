@@ -5,6 +5,11 @@
                 <option name="name" value="filt"/>
             </pragma>
         </directive>
+        <directive functionName="filt" label="" functionLabel="">
+            <pragma name="TOP">
+                <option name="name" value="filt"/>
+            </pragma>
+        </directive>
     </sourceFile>
 </AutoPilot:ProjectResources>
 
