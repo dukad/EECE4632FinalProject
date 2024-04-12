@@ -37,7 +37,12 @@
 <TripCount>undef</TripCount>
 <Latency>undef</Latency>
 <AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
-<IterationLatency>undef</IterationLatency>
+<IterationLatency>
+<range>
+<min>2</min>
+<max>509</max>
+</range>
+</IterationLatency>
 <InstanceList>
 </InstanceList>
 </VITIS_LOOP_40_1>
@@ -45,7 +50,7 @@
 <SummaryOfViolations>
 <IssueType>-</IssueType>
 <ViolationType>-</ViolationType>
-<SourceLocation>filt.cpp:38</SourceLocation>
+<SourceLocation>filt.cpp:9</SourceLocation>
 <SummaryOfLoopViolations>
 <VITIS_LOOP_40_1>
 <Name>VITIS_LOOP_40_1</Name>
@@ -59,10 +64,10 @@
 
 <AreaEstimates>
 <Resources>
-<BRAM_18K>6</BRAM_18K>
+<BRAM_18K>5</BRAM_18K>
 <DSP>11</DSP>
-<FF>9963</FF>
-<LUT>7897</LUT>
+<FF>9153</FF>
+<LUT>7201</LUT>
 <URAM>0</URAM>
 </Resources>
 <AvailableResources>

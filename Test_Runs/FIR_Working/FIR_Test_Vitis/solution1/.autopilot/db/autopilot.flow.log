@@ -808,3 +808,319 @@ Command   export_design done; 46.802 sec.
 INFO: [HLS 200-111] Finished Command export_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 46.802 seconds; current allocated memory: 8.941 MB.
 Command ap_source done; 51.223 sec.
 Execute cleanup_all 
+INFO-FLOW: Workspace C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Working/FIR_Test_Vitis/solution1 opened at Thu Apr 11 20:21:41 -0400 2024
+Execute     ap_set_clock -name default -period 20 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 20ns.
+Execute     set_part xc7z020-clg400-1 
+Execute       create_platform xc7z020-clg400-1 -board  
+DBG:HLSDevice: Trying to load device library: C:/Xilinx/Vitis_HLS/2023.2\lib\win64.o\xv_hlsvwrap.dll
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: C:/Xilinx/Vivado/2023.2/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+Command       create_platform done; 2.777 sec.
+Execute       source C:/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/saxilite.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/util.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfft.gen 
+Command         ap_source done; 0.122 sec.
+Execute         source C:/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/DSP48/dsp48.gen 
+Command       ap_source done; 0.161 sec.
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 3.041 sec.
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute     send_msg_by_id INFO @200-1464@%s config_export -output=C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test 
+INFO: [HLS 200-1464] Running solution command: config_export -output=C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test
+Execute     config_export -output=C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test 
+Execute     send_msg_by_id INFO @200-1464@%s config_export -format=ip_catalog 
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+Execute     config_export -format=ip_catalog 
+Execute     send_msg_by_id INFO @200-1464@%s config_export -rtl=verilog 
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+Execute     config_export -rtl=verilog 
+Command   open_solution done; 3.242 sec.
+Execute   set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+Execute     create_platform xc7z020-clg400-1 -board  
+Command     create_platform done; 0.198 sec.
+Execute     source C:/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/common/xilinx.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/plb46.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/axi4.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/saxilite.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/util.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfft.gen 
+Command       ap_source done; 0.107 sec.
+Execute       source C:/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfir.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/DSP48/dsp48.gen 
+Command     ap_source done; 0.151 sec.
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
+Execute     config_compile -quiet -complex-mul-dsp=0 
+Command   set_part done; 0.45 sec.
+Execute   create_clock -period 20 -name default 
+INFO: [HLS 200-1510] Running: create_clock -period 20 -name default 
+Execute   config_export -format ip_catalog -output C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test -rtl verilog 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -output C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Test -rtl verilog 
+Execute   source ./FIR_Test_Vitis/solution1/directives.tcl 
+INFO: [HLS 200-1510] Running: source ./FIR_Test_Vitis/solution1/directives.tcl
+Execute     set_directive_top -name filt filt 
+INFO: [HLS 200-1510] Running: set_directive_top -name filt filt 
+Execute   csim_design -quiet 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO-FLOW: Running SLX 'csim' proc: ::SLX::run_csim
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Working/FIR_Test_Vitis/solution1/.autopilot/db/global.setting.tcl 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     send_msg_by_id INFO @200-2036@%s debug 
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
+Execute     source run_sim.tcl 
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command   csim_design done; 6.621 sec.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 6.621 seconds; current allocated memory: 0.570 MB.
+Command ap_source done; 10.451 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Working/FIR_Test_Vitis/solution1 opened at Thu Apr 11 20:24:04 -0400 2024
+Execute     ap_set_clock -name default -period 20 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 20ns.
+Execute     set_part xc7z020-clg400-1 
+Execute       create_platform xc7z020-clg400-1 -board  
+DBG:HLSDevice: Trying to load device library: C:/Xilinx/Vitis_HLS/2023.2\lib\win64.o\xv_hlsvwrap.dll
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: C:/Xilinx/Vivado/2023.2/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+Command       create_platform done; 2.622 sec.
+Execute       source C:/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/saxilite.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/util.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfft.gen 
+Command         ap_source done; 0.111 sec.
+Execute         source C:/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/DSP48/dsp48.gen 
+Command       ap_source done; 0.149 sec.
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 2.845 sec.
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute     send_msg_by_id INFO @200-1464@%s config_export -format=ip_catalog 
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+Execute     config_export -format=ip_catalog 
+Execute     send_msg_by_id INFO @200-1464@%s config_export -output=C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Working 
+INFO: [HLS 200-1464] Running solution command: config_export -output=C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Working
+Execute     config_export -output=C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Working 
+Execute     send_msg_by_id INFO @200-1464@%s config_export -rtl=verilog 
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+Execute     config_export -rtl=verilog 
+Command   open_solution done; 3.018 sec.
+Execute   set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+Execute     create_platform xc7z020-clg400-1 -board  
+Command     create_platform done; 0.166 sec.
+Execute     source C:/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/common/xilinx.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/plb46.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/axi4.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/saxilite.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/util.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfft.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfir.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/DSP48/dsp48.gen 
+Command     ap_source done; 0.136 sec.
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
+Execute     config_compile -quiet -complex-mul-dsp=0 
+Command   set_part done; 0.375 sec.
+Execute   create_clock -period 20 -name default 
+INFO: [HLS 200-1510] Running: create_clock -period 20 -name default 
+Execute   config_export -format ip_catalog -output C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Working -rtl verilog 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -output C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Working -rtl verilog 
+Execute   source ./FIR_Test_Vitis/solution1/directives.tcl 
+INFO: [HLS 200-1510] Running: source ./FIR_Test_Vitis/solution1/directives.tcl
+Execute     set_directive_top -name filt filt 
+INFO: [HLS 200-1510] Running: set_directive_top -name filt filt 
+Execute   export_design -rtl verilog -format ip_catalog -output C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Working 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog -output C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Working 
+Execute     config_export -format=ip_catalog -output=C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Working -rtl=verilog 
+INFO-FLOW: DBG:PUTS: export_design_wrap: -format ip_catalog -rtl verilog
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Working/FIR_Test_Vitis/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PUTS:   auto_impl: pack: -export -rtl verilog
+INFO-FLOW: DBG:PROC: ::AESL_AUTOIMPL::auto_impl args='-export -rtl verilog'
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Working/FIR_Test_Vitis/solution1/.autopilot/db/global.setting.tcl 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO-FLOW: DBG:PUTS: automg_wrap -export -pcore_version 1.00.a -rtl vlog -tool Vivado -impltomg_flag
+INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::auto_generate args='-export -pcore_version 1.00.a -rtl vlog -tool Vivado -impltomg_flag'
+INFO-FLOW: DBG:PUTS:     auto_generate -export -pcore_version 1.00.a -rtl vlog -tool Vivado -impltomg_flag
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Working/FIR_Test_Vitis/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PUTS: read_platform_lib C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Working/FIR_Test_Vitis/solution1/.autopilot/db/global.setting.tcl
+Execute     source C:/Xilinx/Vitis_HLS/2023.2/common/technology/generic/autopilot/common.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source C:/Xilinx/Vitis_HLS/2023.2/common/technology/generic/autopilot/op.gen 
+Execute     source C:/Xilinx/Vitis_HLS/2023.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source C:/Xilinx/Vitis_HLS/2023.2/common/technology/generic/autopilot/interface.gen 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Working/FIR_Test_Vitis/solution1/.autopilot/db/global.setting.tcl 
+Execute     source C:/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/common/xilinx.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/plb46.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/axi4.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/saxilite.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/util.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfft.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfir.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/DSP48/dsp48.gen 
+Command     ap_source done; 0.137 sec.
+INFO-FLOW: DBG:PUTS:   using AESL_AUTOCG::g_clock_period=20.000 (was NA)
+INFO-FLOW: DBG:PUTS:       initCTypeInfo top_module=filt xml_exists=1
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Working/FIR_Test_Vitis/solution1/.autopilot/db/filt.rtl_wrap.cfg.tcl 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Working/FIR_Test_Vitis/solution1/.autopilot/db/filt.rtl_wrap.cfg.tcl 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Working/FIR_Test_Vitis/solution1/.autopilot/db/filt.rtl_wrap.cfg.tcl 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Working/FIR_Test_Vitis/solution1/.autopilot/db/filt.tbgen.tcl 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Working/FIR_Test_Vitis/solution1/.autopilot/db/filt.tbgen.tcl 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Working/FIR_Test_Vitis/solution1/.autopilot/db/global.setting.tcl 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Working/FIR_Test_Vitis/solution1/.autopilot/db/filt.tbgen.tcl 
+INFO-FLOW: DBG:PUTS:       cosim_export_main adding deadlock detection to filt
+INFO-FLOW: DBG:PUTS: Skipping loadAnalyze_DB, #g_database=16
+INFO-FLOW: DBG:PUTS:       generate_json generate_bd_files=0 generate_xo_files=false #modelList=21 #gSsdmPorts=0
+INFO-FLOW: DBG:PROC: ::AP::DESIGN_DATA::generate_json generate_bd_files='0' generate_xo_files='false' modelList='filt_flow_control_loop_pipe_sequential_init
+filt_mul_32s_32s_32_1_1
+filt_signal_shift_reg_RAM_AUTO_1R1W
+filt_gmem_m_axi
+filt_control_s_axi
+filt_regslice_both
+filt_regslice_both
+filt_regslice_both
+filt_regslice_both
+filt_regslice_both
+filt_regslice_both
+filt_regslice_both
+filt_regslice_both
+filt_regslice_both
+filt_regslice_both
+filt_regslice_both
+filt_regslice_both
+filt_regslice_both
+filt_regslice_both
+filt_Pipeline_VITIS_LOOP_56_2
+filt
+' rtl_lang='vlog' bootstrap_tcl='false' outdir='' outfilename=''
+Execute     source C:/Xilinx/Vitis_HLS/2023.2/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute     source C:/Xilinx/Vitis_HLS/2023.2/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute       source C:/Xilinx/Vitis_HLS/2023.2/tps/tcl/tcllib1.11.1/try/try.tcl 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Working/FIR_Test_Vitis/solution1/.autopilot/db/global.setting.tcl 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Working/FIR_Test_Vitis/solution1/.autopilot/db/global.setting.tcl 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Working/FIR_Test_Vitis/solution1/.autopilot/db/top-io-be.tcl 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Working/FIR_Test_Vitis/solution1/.autopilot/db/filt.tbgen.tcl 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Working/FIR_Test_Vitis/solution1/.autopilot/db/filt.compgen.dataonly.tcl 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Working/FIR_Test_Vitis/solution1/.autopilot/db/filt.compgen.dataonly.tcl 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Working/FIR_Test_Vitis/solution1/.autopilot/db/filt.rtl_wrap.cfg.tcl 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Working/FIR_Test_Vitis/solution1/.autopilot/db/filt.compgen.dataonly.tcl 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Working/FIR_Test_Vitis/solution1/.autopilot/db/filt_Pipeline_VITIS_LOOP_56_2.tbgen.tcl 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Working/FIR_Test_Vitis/solution1/.autopilot/db/filt.tbgen.tcl 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Working/FIR_Test_Vitis/solution1/.autopilot/db/global.setting.tcl 
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Working/FIR_Test_Vitis/solution1/.autopilot/db/filt.constraint.tcl 
+Execute     sc_get_clocks filt 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Working/FIR_Test_Vitis/solution1/.autopilot/db/global.setting.tcl 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Working/FIR_Test_Vitis/solution1/.autopilot/db/global.setting.tcl 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Working/FIR_Test_Vitis/solution1/.autopilot/db/filt.tbgen.tcl 
+INFO-FLOW: DBG:PUTS:       cosim_export_main adding deadlock detection to filt
+INFO-FLOW: DBG:PUTS:       copy ip_driver_dir 1_0 C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Working/FIR_Test_Vitis/solution1/.autopilot/db/driver
+INFO-FLOW: DBG:PUTS:       generate_ip_script #gSsdmPorts=0 g_lang=vlog is_sdaccel=false is_sdsoc=true xo_file=
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Working/FIR_Test_Vitis/solution1/.autopilot/db/filt.tbgen.tcl 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Working/FIR_Test_Vitis/solution1/.autopilot/db/filt.compgen.dataonly.tcl 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Working/FIR_Test_Vitis/solution1/.autopilot/db/filt.compgen.dataonly.tcl 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Working/FIR_Test_Vitis/solution1/.autopilot/db/filt.tbgen.tcl 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Working/FIR_Test_Vitis/solution1/.autopilot/db/filt.tbgen.tcl 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Working/FIR_Test_Vitis/solution1/.autopilot/db/filt.tbgen.tcl 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Working/FIR_Test_Vitis/solution1/.autopilot/db/filt.tbgen.tcl 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Working/FIR_Test_Vitis/solution1/.autopilot/db/filt.tbgen.tcl 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Working/FIR_Test_Vitis/solution1/.autopilot/db/filt.tbgen.tcl 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Working/FIR_Test_Vitis/solution1/.autopilot/db/filt.tbgen.tcl 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Working/FIR_Test_Vitis/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PUTS:       generate_top_info
+INFO-FLOW: DBG:PUTS:       prepArgInfo -> loadAnalyze_DB top_module=filt
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Working/FIR_Test_Vitis/solution1/.autopilot/db/filt.rtl_wrap.cfg.tcl 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Working/FIR_Test_Vitis/solution1/.autopilot/db/filt.rtl_wrap.cfg.tcl 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Working/FIR_Test_Vitis/solution1/.autopilot/db/filt.rtl_wrap.cfg.tcl 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Working/FIR_Test_Vitis/solution1/.autopilot/db/filt.tbgen.tcl 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Working/FIR_Test_Vitis/solution1/.autopilot/db/filt.tbgen.tcl 
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Working/FIR_Test_Vitis/solution1/.autopilot/db/global.setting.tcl 
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Working/FIR_Test_Vitis/solution1/.autopilot/db/filt.tbgen.tcl 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Working/FIR_Test_Vitis/solution1/.autopilot/db/global.setting.tcl 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Working/FIR_Test_Vitis/solution1/.autopilot/db/filt.constraint.tcl 
+INFO-FLOW: DBG:PUTS:       generate_syn_sh
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Working/FIR_Test_Vitis/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PUTS:       generate_imp_constraints
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Working/FIR_Test_Vitis/solution1/.autopilot/db/filt.constraint.tcl 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Working/FIR_Test_Vitis/solution1/.autopilot/db/filt.tbgen.tcl 
+INFO-FLOW: DBG:PUTS:       delete-temp-dirs (skipped for debug)
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+INFO-FLOW: DBG:PUTS: read_platform_lib C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Working/FIR_Test_Vitis/solution1/.autopilot/db/global.setting.tcl
+Execute     source C:/Xilinx/Vitis_HLS/2023.2/common/technology/generic/autopilot/common.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source C:/Xilinx/Vitis_HLS/2023.2/common/technology/generic/autopilot/op.gen 
+Execute     source C:/Xilinx/Vitis_HLS/2023.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source C:/Xilinx/Vitis_HLS/2023.2/common/technology/generic/autopilot/interface.gen 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Working/FIR_Test_Vitis/solution1/.autopilot/db/global.setting.tcl 
+Execute     source C:/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/common/xilinx.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/plb46.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/axi4.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/saxilite.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/util.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfft.gen 
+Command       ap_source done; 0.101 sec.
+Execute       source C:/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfir.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/DSP48/dsp48.gen 
+Command     ap_source done; 0.141 sec.
+INFO-FLOW: DBG:PUTS:     IP package: exec C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Working/FIR_Test_Vitis/solution1/impl/ip/pack.bat
+INFO-FLOW: DBG:PUTS:     IP package: success C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Working/FIR_Test_Vitis/solution1/impl/ip/pack.bat
+Execute     send_msg_by_id INFO @200-802@%s export.zip 
+INFO: [HLS 200-802] Generated output file export.zip
+Command   export_design done; 22.075 sec.
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 22.075 seconds; current allocated memory: 9.340 MB.
+Command ap_source done; 25.557 sec.
+Execute cleanup_all 

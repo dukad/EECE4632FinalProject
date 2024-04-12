@@ -28,8 +28,8 @@ C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Test_Runs\FIR_Testi
  ^~~~~
  VITIS_LOOP_40_1: 
 C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Test_Runs\FIR_Testing\FIR_Test_Vitis\solution1\.autopilot\db\filt.pp.0.cpp:9808:2: note: FIX-IT applied suggested code changes
-C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Test_Runs\FIR_Testing\FIR_Test_Vitis\solution1\.autopilot\db\filt.pp.0.cpp:9831:5: warning: Added loop label VITIS_LOOP_74_2:   [xilinx-label-all-loops]
-    while(state == 0x0011){
-    ^~~~~
-    VITIS_LOOP_74_2: 
-C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Test_Runs\FIR_Testing\FIR_Test_Vitis\solution1\.autopilot\db\filt.pp.0.cpp:9831:5: note: FIX-IT applied suggested code changes
+C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Test_Runs\FIR_Testing\FIR_Test_Vitis\solution1\.autopilot\db\filt.pp.0.cpp:9827:5: warning: Added loop label VITIS_LOOP_77_2:   [xilinx-label-all-loops]
+    for (int j = 0; j < 99; j++){
+    ^~~
+    VITIS_LOOP_77_2: 
+C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Test_Runs\FIR_Testing\FIR_Test_Vitis\solution1\.autopilot\db\filt.pp.0.cpp:9827:5: note: FIX-IT applied suggested code changes

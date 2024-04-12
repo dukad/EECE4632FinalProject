@@ -9,10 +9,6 @@ module filt_signal_shift_reg_RAM_AUTO_1R1W (
     address0, ce0,
     d0, we0, 
     q0, 
-      
-    address1, ce1,
-    d1, we1, 
-    q1, 
      
     reset, clk);
 
@@ -25,12 +21,6 @@ input ce0;
 input[DataWidth-1:0] d0;
 input we0; 
 output reg[DataWidth-1:0] q0; 
- 
-input[AddressWidth-1:0] address1;
-input ce1;
-input[DataWidth-1:0] d1;
-input we1; 
-output reg[DataWidth-1:0] q1; 
 
 input reset;
 input clk;
@@ -54,23 +44,6 @@ begin
         if (we0) 
             ram[address0] <= d0; 
         q0 <= ram[address0];
-
-    end
-end 
- 
-  
-
-
-
-
-
-//read first
-always @(posedge clk)  
-begin 
-    if (ce1) begin
-        if (we1) 
-            ram[address1] <= d1; 
-        q1 <= ram[address1];
 
     end
 end 

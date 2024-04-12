@@ -34,9 +34,17 @@ int main(){
 	tmp1.id = 0;
 	tmp1.dest = 0;
 
+	int bef = 48879;
+	fpint beef;
+	beef.fval = bef;
+
+	int aba = 43962;
+	fpint abba;
+	abba.fval = aba;
+
 	// *** Send BEEF value (48879) ***
-	tmp1.data = 48879;
-	A.write(tmp1);
+//	tmp1.data = beef.ival;
+//	A.write(tmp1);
 
 	// *** Send filter coef parameters ***
 
@@ -56,8 +64,8 @@ int main(){
 	}
 
 	// *** Send ABBA value (43962) ***
-	tmp1.data = 43962;
-	A.write(tmp1);
+//	tmp1.data = abba.ival;
+//	A.write(tmp1);
 
 	// *** Give chance for output stream to run (Emulating a signal) ***
 	for (int j = 0; j < NUM_COEFS - 1; j++){

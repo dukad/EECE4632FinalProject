@@ -45,11 +45,13 @@ void filt (hls::stream<AXI_VAL>& output, coef_t coefs[NUM_COEFS], hls::stream<AX
 		switch (state){
 			case IDLE:
 				// Remains in idle state until 0xBEEF value is read on AXI stream
-				if (coef.ival == BEEF){
-					//state = READ_COEF_PARAMS;
-					state = READ_COEFS;
-					i -= 1;
-				}
+//				coef.fval = tmp.data;
+//				if (coef.ival == BEEF){
+//					//state = READ_COEF_PARAMS;
+//					state = READ_COEFS;
+//					i -= 1;
+//				}
+				state = READ_COEFS;
 				break;
 
 //			case READ_COEF_PARAMS:
@@ -71,19 +73,23 @@ void filt (hls::stream<AXI_VAL>& output, coef_t coefs[NUM_COEFS], hls::stream<AX
 //
 //				coef_scale = 0;
 
-				while(state == READ_COEFS){
-					if (coef.ival == ABBA){
-						state = OUTPUT_SIGNAL;
-						i = 0;
-						break;
-					}
+//				while(state == READ_COEFS){
+				for (int j = 0; j < NUM_COEFS; j++){
+//					coef.fval = tmp.data;
+//					if (coef.ival == ABBA){
+//						state = OUTPUT_SIGNAL;
+//						i = 0;
+//						break;
+//					}
+//					coef.ival = tmp.data;
 
 					coefs[i] = coef.ival;
 
 					input.read(tmp);
-					coef.ival = tmp.data.to_int();
+					coef.ival = tmp.data;
 					i += 1;
 				}
+				state = OUTPUT_SIGNAL;
 				break;
 
 			case OUTPUT_SIGNAL:

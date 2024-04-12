@@ -9813,34 +9813,26 @@ __attribute__((sdx_kernel("filt", 0))) void filt (hls::stream<AXI_VAL>& output, 
   switch (state){
    case 0x0000:
 
-    if (coef.ival == 48879){
 
-     state = 0x0011;
-     i -= 1;
-    }
+
+
+
+
+
+    state = 0x0011;
     break;
-# 66 "filt.cpp"
+# 68 "filt.cpp"
    case 0x0011:
-
-
-
-
-
-
-
-    VITIS_LOOP_74_2: while(state == 0x0011){
-     if (coef.ival == 43962){
-      state = 0x1000;
-      i = 0;
-      break;
-     }
-
+# 77 "filt.cpp"
+    VITIS_LOOP_77_2: for (int j = 0; j < 99; j++){
+# 86 "filt.cpp"
      coefs[i] = coef.ival;
 
      input.read(tmp);
-     coef.ival = tmp.data.to_int();
+     coef.ival = tmp.data;
      i += 1;
     }
+    state = 0x1000;
     break;
 
    case 0x1000:

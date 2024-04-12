@@ -47,11 +47,11 @@
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="filt.cpp:7:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="filt" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_ctrl_none port=return" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="filt.cpp:96:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="filt.cpp:102:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="filt" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="filt.cpp:3:0" msg_body="Unrolling loop 'Shift_Accumulate_Loop' (filt.cpp:95:5) in function 'filt' completely with a factor of 98">
-        <args Factor="98" LoopLoc="filt.cpp:95:5" LoopName="Shift_Accumulate_Loop"/>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="filt.cpp:3:0" msg_body="Unrolling loop 'Shift_Accumulate_Loop' (filt.cpp:101:5) in function 'filt' completely with a factor of 98">
+        <args Factor="98" LoopLoc="filt.cpp:101:5" LoopName="Shift_Accumulate_Loop"/>
     </msg>
 </xilinx:hls_fe_msgs>
 
