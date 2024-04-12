@@ -26853,9 +26853,9 @@ typedef ap_fixed<16, -16> wah_mult;
 
 
 int distortion(int input, int threshold, mult_float clip_factor);
-int compression(int input, int min_threshold, int max_threshold, int zero_threshold, int& current_level, int values_buffer[441], int compression_buffer_index, int lpf_coefficients[441], int current_sample);
-int delay(int input, int delay_samples, float delay_mult, int delay_buffer[44100], int delay_buffer_index);
-int wah(int input, int tempo, int current_sample, int wah_buffer_index, int wah_values_buffer[100], wah_mult bandpass_coeffs[20][100]);
+int compression(int input, int min_threshold, int max_threshold, int zero_threshold, int& current_level, int values_buffer[441], int &compression_buffer_index, float lpf_coefficients[441], int current_sample);
+int delay(int input, int delay_samples, float delay_mult, int delay_buffer[88200], int &delay_buffer_index);
+int wah(int input, int tempo, int current_sample, int &wah_buffer_index, int wah_values_buffer[100], wah_mult bandpass_coeffs[20][100]);
 
 __attribute__((sdx_kernel("guitar_effects", 0))) void guitar_effects (
     hls::stream< ap_axis<32,2,5,6> > &INPUT,
@@ -26872,11 +26872,11 @@ __attribute__((sdx_kernel("guitar_effects", 0))) void guitar_effects (
     int tempo,
     wah_mult wah_coeffs[20][100]
     ) {
-#line 15 "C:/Users/du.kad/Desktop/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/csynth.tcl"
+#line 17 "C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/csynth.tcl"
 #pragma HLSDIRECTIVE TOP name=guitar_effects
 # 37 "guitar_effects.cpp"
 
-#line 6 "C:/Users/du.kad/Desktop/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/directives.tcl"
+#line 6 "C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/directives.tcl"
 #pragma HLSDIRECTIVE TOP name=guitar_effects
 # 37 "guitar_effects.cpp"
 
@@ -26904,14 +26904,14 @@ __attribute__((sdx_kernel("guitar_effects", 0))) void guitar_effects (
  int current_level = 0;
     int compression_buffer[441] = {0};
     int compression_buffer_index = 0;
-    int lpf_coefficients[441] = {0};
-    float filter_value = 3.0 / 441;
+    float lpf_coefficients[441] = {0};
+    float filter_value = 1.0 / 441;
     VITIS_LOOP_64_1: for (int i = 0; i < 441; i++) {
      lpf_coefficients[i] = filter_value;
     }
 
 
-    int delay_buffer[44100] = {0};
+    int delay_buffer[88200] = {0};
     int delay_buffer_index = 0;
 
 
@@ -26951,7 +26951,7 @@ __attribute__((sdx_kernel("guitar_effects", 0))) void guitar_effects (
          tmp_int = wah(tmp_int, tempo, current_sample, wah_buffer_index, wah_values_buffer, wah_coeffs);
         }
 
-        current_sample ++;
+        current_sample++;
 
         tmp_out.data = (tmp_int);
         tmp_out.keep = tmp.keep;
@@ -26989,7 +26989,7 @@ int distortion(int input, int threshold, mult_float clip_factor) {
 }
 
 
-int compression(int input, int min_threshold, int max_threshold, int zero_threshold, int& current_level, int values_buffer[441], int compression_buffer_index, int lpf_coefficients[441], int current_sample) {
+int compression(int input, int min_threshold, int max_threshold, int zero_threshold, int &current_level, int values_buffer[441], int &compression_buffer_index, float lpf_coefficients[441], int current_sample) {
 
  int abs_in = input;
  if (input < 0) {
@@ -26999,7 +26999,7 @@ int compression(int input, int min_threshold, int max_threshold, int zero_thresh
 
     values_buffer[compression_buffer_index] = abs_in;
     compression_buffer_index = (compression_buffer_index + 1) % 441;
-
+    current_level = 0;
 
     LPF_Loop : for (int i = 0; i < 441; i++) {
 
@@ -27018,7 +27018,7 @@ int compression(int input, int min_threshold, int max_threshold, int zero_thresh
     if (current_level > max_threshold) {
      if (current_level > 0) {
 
-      compression_factor = (max_threshold) / current_level;
+      compression_factor = (float)(max_threshold) / current_level;
       output = (input * compression_factor);
      } else {
       output = input;
@@ -27026,7 +27026,7 @@ int compression(int input, int min_threshold, int max_threshold, int zero_thresh
 
     } else if ((current_level < min_threshold) && (current_level > zero_threshold)) {
      if (current_level > 0) {
-      compression_factor = (min_threshold) / current_level;
+      compression_factor = (float)(min_threshold) / current_level;
       output = (input * compression_factor);
      } else {
       output = input;
@@ -27036,24 +27036,23 @@ int compression(int input, int min_threshold, int max_threshold, int zero_thresh
 
         output = input;
     }
-
     return output;
 }
 
 
-int delay(int input, int delay_samples, float delay_mult, int delay_buffer[44100], int delay_buffer_index) {
+int delay(int input, int delay_samples, float delay_mult, int delay_buffer[88200], int &delay_buffer_index) {
 
     int output;
-    output = (input + (delay_buffer[(delay_buffer_index - delay_samples) % 44100]*delay_mult));
+    output = (input + (int)(delay_buffer[(delay_buffer_index - delay_samples) % 88200]*delay_mult));
 
 
     delay_buffer[delay_buffer_index] = output;
-    delay_buffer_index = (delay_buffer_index + 1) % 44100;
+    delay_buffer_index = (delay_buffer_index + 1) % 88200;
 
     return output;
 }
 
-int wah(int input, int tempo, int current_sample, int wah_buffer_index, int wah_values_buffer[100], wah_mult bandpass_coeffs[20][100]) {
+int wah(int input, int tempo, int current_sample, int &wah_buffer_index, int wah_values_buffer[100], wah_mult bandpass_coeffs[20][100]) {
 
 
 
@@ -27071,7 +27070,7 @@ int wah(int input, int tempo, int current_sample, int wah_buffer_index, int wah_
     int result;
     WAH_LOOP : for (int i = 0; i < 100; i++) {
 
-        int coeff_index = (wah_buffer_index + i) % 100;
+        int coeff_index = (wah_buffer_index - i) % 100;
         result += (int)(wah_values_buffer[coeff_index] * bandpass_coeffs[control_signal][i]);
     }
 

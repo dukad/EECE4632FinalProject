@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-| Date         : Thu Apr 11 18:40:36 2024
+| Date         : Thu Apr 11 21:50:43 2024
 | Host         : WFXB07B250A366D running 64-bit major release  (build 9200)
 | Command      : report_utilization -file guitar_effects_design_wrapper_utilization_placed.rpt -pb guitar_effects_design_wrapper_utilization_placed.pb
 | Design       : guitar_effects_design_wrapper
@@ -32,13 +32,13 @@ Table of Contents
 +----------------------------+-------+-------+------------+-----------+-------+
 |          Site Type         |  Used | Fixed | Prohibited | Available | Util% |
 +----------------------------+-------+-------+------------+-----------+-------+
-| Slice LUTs                 | 15385 |     0 |          0 |     53200 | 28.92 |
-|   LUT as Logic             | 15130 |     0 |          0 |     53200 | 28.44 |
-|   LUT as Memory            |   255 |     0 |          0 |     17400 |  1.47 |
-|     LUT as Distributed RAM |     8 |     0 |            |           |       |
-|     LUT as Shift Register  |   247 |     0 |            |           |       |
-| Slice Registers            | 12379 |     0 |          0 |    106400 | 11.63 |
-|   Register as Flip Flop    | 12379 |     0 |          0 |    106400 | 11.63 |
+| Slice LUTs                 | 15937 |     0 |          0 |     53200 | 29.96 |
+|   LUT as Logic             | 15636 |     0 |          0 |     53200 | 29.39 |
+|   LUT as Memory            |   301 |     0 |          0 |     17400 |  1.73 |
+|     LUT as Distributed RAM |    18 |     0 |            |           |       |
+|     LUT as Shift Register  |   283 |     0 |            |           |       |
+| Slice Registers            | 13457 |     0 |          0 |    106400 | 12.65 |
+|   Register as Flip Flop    | 13457 |     0 |          0 |    106400 | 12.65 |
 |   Register as Latch        |     0 |     0 |          0 |    106400 |  0.00 |
 | F7 Muxes                   |   406 |     0 |          0 |     26600 |  1.53 |
 | F8 Muxes                   |   181 |     0 |          0 |     13300 |  1.36 |
@@ -57,10 +57,10 @@ Table of Contents
 | 0     |            _ |         Set |            - |
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
-| 0     |          Yes |           - |          Set |
-| 3     |          Yes |           - |        Reset |
-| 238   |          Yes |         Set |            - |
-| 12138 |          Yes |       Reset |            - |
+| 33    |          Yes |           - |          Set |
+| 72    |          Yes |           - |        Reset |
+| 263   |          Yes |         Set |            - |
+| 13089 |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -70,28 +70,28 @@ Table of Contents
 +--------------------------------------------+-------+-------+------------+-----------+-------+
 |                  Site Type                 |  Used | Fixed | Prohibited | Available | Util% |
 +--------------------------------------------+-------+-------+------------+-----------+-------+
-| Slice                                      |  5333 |     0 |          0 |     13300 | 40.10 |
-|   SLICEL                                   |  3593 |     0 |            |           |       |
-|   SLICEM                                   |  1740 |     0 |            |           |       |
-| LUT as Logic                               | 15130 |     0 |          0 |     53200 | 28.44 |
+| Slice                                      |  5539 |     0 |          0 |     13300 | 41.65 |
+|   SLICEL                                   |  3671 |     0 |            |           |       |
+|   SLICEM                                   |  1868 |     0 |            |           |       |
+| LUT as Logic                               | 15636 |     0 |          0 |     53200 | 29.39 |
 |   using O5 output only                     |    25 |       |            |           |       |
-|   using O6 output only                     | 12887 |       |            |           |       |
-|   using O5 and O6                          |  2218 |       |            |           |       |
-| LUT as Memory                              |   255 |     0 |          0 |     17400 |  1.47 |
-|   LUT as Distributed RAM                   |     8 |     0 |            |           |       |
+|   using O6 output only                     | 13208 |       |            |           |       |
+|   using O5 and O6                          |  2403 |       |            |           |       |
+| LUT as Memory                              |   301 |     0 |          0 |     17400 |  1.73 |
+|   LUT as Distributed RAM                   |    18 |     0 |            |           |       |
 |     using O5 output only                   |     0 |       |            |           |       |
-|     using O6 output only                   |     0 |       |            |           |       |
-|     using O5 and O6                        |     8 |       |            |           |       |
-|   LUT as Shift Register                    |   247 |     0 |            |           |       |
-|     using O5 output only                   |     8 |       |            |           |       |
-|     using O6 output only                   |   169 |       |            |           |       |
-|     using O5 and O6                        |    70 |       |            |           |       |
-| Slice Registers                            | 12379 |     0 |          0 |    106400 | 11.63 |
-|   Register driven from within the Slice    |  7507 |       |            |           |       |
-|   Register driven from outside the Slice   |  4872 |       |            |           |       |
-|     LUT in front of the register is unused |  2762 |       |            |           |       |
-|     LUT in front of the register is used   |  2110 |       |            |           |       |
-| Unique Control Sets                        |   299 |       |          0 |     13300 |  2.25 |
+|     using O6 output only                   |     2 |       |            |           |       |
+|     using O5 and O6                        |    16 |       |            |           |       |
+|   LUT as Shift Register                    |   283 |     0 |            |           |       |
+|     using O5 output only                   |     9 |       |            |           |       |
+|     using O6 output only                   |   164 |       |            |           |       |
+|     using O5 and O6                        |   110 |       |            |           |       |
+| Slice Registers                            | 13457 |     0 |          0 |    106400 | 12.65 |
+|   Register driven from within the Slice    |  7978 |       |            |           |       |
+|   Register driven from outside the Slice   |  5479 |       |            |           |       |
+|     LUT in front of the register is unused |  3182 |       |            |           |       |
+|     LUT in front of the register is used   |  2297 |       |            |           |       |
+| Unique Control Sets                        |   337 |       |          0 |     13300 |  2.53 |
 +--------------------------------------------+-------+-------+------------+-----------+-------+
 * * Note: Available Control Sets calculated as Slice * 1, Review the Control Sets Report for more information regarding control sets.
 
@@ -184,26 +184,27 @@ Table of Contents
 +----------+-------+----------------------+
 | Ref Name |  Used |  Functional Category |
 +----------+-------+----------------------+
-| FDRE     | 12138 |         Flop & Latch |
-| LUT6     |  4506 |                  LUT |
-| LUT2     |  4484 |                  LUT |
-| LUT3     |  3652 |                  LUT |
-| LUT4     |  2225 |                  LUT |
-| LUT5     |  1980 |                  LUT |
-| CARRY4   |  1834 |           CarryLogic |
-| LUT1     |   501 |                  LUT |
+| FDRE     | 13089 |         Flop & Latch |
+| LUT2     |  4634 |                  LUT |
+| LUT6     |  4621 |                  LUT |
+| LUT3     |  3853 |                  LUT |
+| LUT4     |  2288 |                  LUT |
+| LUT5     |  2101 |                  LUT |
+| CARRY4   |  1859 |           CarryLogic |
+| LUT1     |   542 |                  LUT |
 | MUXF7    |   406 |                MuxFx |
-| FDSE     |   238 |         Flop & Latch |
-| SRL16E   |   231 |   Distributed Memory |
+| SRL16E   |   307 |   Distributed Memory |
+| FDSE     |   263 |         Flop & Latch |
 | MUXF8    |   181 |                MuxFx |
 | BIBUF    |   130 |                   IO |
 | DSP48E1  |   123 |     Block Arithmetic |
 | RAMB36E1 |   100 |         Block Memory |
 | SRLC32E  |    86 |   Distributed Memory |
-| RAMD32   |    12 |   Distributed Memory |
-| RAMS32   |     4 |   Distributed Memory |
+| FDCE     |    72 |         Flop & Latch |
+| FDPE     |    33 |         Flop & Latch |
+| RAMD32   |    26 |   Distributed Memory |
+| RAMS32   |     8 |   Distributed Memory |
 | RAMB18E1 |     3 |         Block Memory |
-| FDCE     |     3 |         Flop & Latch |
 | PS7      |     1 | Specialized Resource |
 | BUFG     |     1 |                Clock |
 +----------+-------+----------------------+
@@ -223,15 +224,16 @@ Table of Contents
 +----------------------------------------------+------+
 |                   Ref Name                   | Used |
 +----------------------------------------------+------+
-| guitar_effects_design_xbar_5                 |    1 |
-| guitar_effects_design_xbar_4                 |    1 |
-| guitar_effects_design_rst_ps7_0_50M_0        |    1 |
-| guitar_effects_design_processing_system7_0_3 |    1 |
-| guitar_effects_design_guitar_effects_0_25    |    1 |
-| guitar_effects_design_axi_dma_0_1            |    1 |
-| guitar_effects_design_axi_bram_ctrl_0_bram_1 |    1 |
-| guitar_effects_design_axi_bram_ctrl_0_1      |    1 |
-| guitar_effects_design_auto_pc_5              |    1 |
+| guitar_effects_design_xbar_7                 |    1 |
+| guitar_effects_design_xbar_6                 |    1 |
+| guitar_effects_design_rst_ps7_0_100M_0       |    1 |
+| guitar_effects_design_processing_system7_0_4 |    1 |
+| guitar_effects_design_guitar_effects_0_26    |    1 |
+| guitar_effects_design_blk_mem_gen_0_0        |    1 |
+| guitar_effects_design_axi_dma_0_2            |    1 |
+| guitar_effects_design_axi_bram_ctrl_0_2      |    1 |
+| guitar_effects_design_auto_pc_7              |    1 |
+| guitar_effects_design_auto_pc_6              |    1 |
 +----------------------------------------------+------+
 
 

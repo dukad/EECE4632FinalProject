@@ -1,27 +1,17 @@
 INFO: [SIM 2] *************** CSIM start ***************
 INFO: [SIM 4] CSIM will launch GCC as the compiler.
-   Compiling ../../../../guitar_effects_tb.cpp in debug mode
    Compiling ../../../../guitar_effects.cpp in debug mode
    Generating csim.exe
-Output signal: 100
-Output signal: 209
-Output signal: 320
-Output signal: 431
-Output signal: 542
-Output signal: 652
-Output signal: 763
-Output signal: 874
-Output signal: 985
-Output signal: 1096
-Output signal: 7
-Output signal: -200
-Output signal: -319
-Output signal: -431
-Output signal: -542
-Output signal: -652
-Output signal: -763
-Output signal: -874
-Output signal: -985
-Output signal: -1096
+Output signal: 1
+Output signal: -34
+Output signal: -34
+Output signal: -135
+Output signal: -135
+Output signal: 577
+Output signal: 570
+Output signal: 476
+Output signal: 476
+Output signal: 366
+Output signal: 342
 INFO: [SIM 1] CSim done with 0 errors.
 INFO: [SIM 3] *************** CSIM finish ***************

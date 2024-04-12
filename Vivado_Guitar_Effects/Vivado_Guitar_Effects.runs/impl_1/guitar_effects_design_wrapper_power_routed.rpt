@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-| Date             : Thu Apr 11 18:42:19 2024
+| Date             : Thu Apr 11 21:52:36 2024
 | Host             : WFXB07B250A366D running 64-bit major release  (build 9200)
 | Command          : report_power -file guitar_effects_design_wrapper_power_routed.rpt -pb guitar_effects_design_wrapper_power_summary_routed.pb -rpx guitar_effects_design_wrapper_power_routed.rpx
 | Design           : guitar_effects_design_wrapper
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.699        |
+| Total On-Chip Power (W)  | 1.698        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.548        |
+| Dynamic (W)              | 1.547        |
 | Device Static (W)        | 0.151        |
 | Effective TJA (C/W)      | 11.5         |
 | Max Ambient (C)          | 65.4         |
@@ -52,21 +52,21 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.046 |        3 |       --- |             --- |
-| Slice Logic              |     0.078 |    34749 |       --- |             --- |
-|   LUT as Logic           |     0.065 |    15130 |     53200 |           28.44 |
-|   CARRY4                 |     0.010 |     1834 |     13300 |           13.79 |
-|   Register               |     0.003 |    12379 |    106400 |           11.63 |
-|   LUT as Shift Register  |    <0.001 |      247 |     17400 |            1.42 |
+| Clocks                   |     0.049 |        3 |       --- |             --- |
+| Slice Logic              |     0.077 |    36703 |       --- |             --- |
+|   LUT as Logic           |     0.064 |    15636 |     53200 |           29.39 |
+|   CARRY4                 |     0.010 |     1859 |     13300 |           13.98 |
+|   Register               |     0.003 |    13474 |    106400 |           12.66 |
+|   LUT as Shift Register  |    <0.001 |      283 |     17400 |            1.63 |
 |   F7/F8 Muxes            |    <0.001 |      587 |     53200 |            1.10 |
-|   LUT as Distributed RAM |    <0.001 |        8 |     17400 |            0.05 |
-|   Others                 |     0.000 |     2268 |       --- |             --- |
-| Signals                  |     0.090 |    30194 |       --- |             --- |
+|   LUT as Distributed RAM |    <0.001 |       18 |     17400 |            0.10 |
+|   Others                 |     0.000 |     2317 |       --- |             --- |
+| Signals                  |     0.087 |    31694 |       --- |             --- |
 | Block RAM                |     0.045 |    101.5 |       140 |           72.50 |
 | DSPs                     |     0.033 |      123 |       220 |           55.91 |
 | PS7                      |     1.256 |        1 |       --- |             --- |
 | Static Power             |     0.151 |          |           |                 |
-| Total                    |     1.699 |          |           |                 |
+| Total                    |     1.698 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -76,7 +76,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.307 |       0.288 |      0.018 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.306 |       0.287 |      0.018 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.015 |       0.000 |      0.015 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -152,16 +152,19 @@ Table of Contents
 +-------------------------------+-----------+
 | Name                          | Power (W) |
 +-------------------------------+-----------+
-| guitar_effects_design_wrapper |     1.548 |
-|   guitar_effects_design_i     |     1.548 |
+| guitar_effects_design_wrapper |     1.547 |
+|   guitar_effects_design_i     |     1.547 |
 |     axi_bram_ctrl_0           |     0.001 |
 |       U0                      |     0.001 |
-|     axi_bram_ctrl_0_bram      |     0.003 |
+|     axi_dma_0                 |     0.008 |
+|       U0                      |     0.008 |
+|     axi_mem_intercon          |     0.002 |
+|       m00_couplers            |     0.001 |
+|       xbar                    |     0.001 |
+|     blk_mem_gen_0             |     0.003 |
 |       U0                      |     0.003 |
-|     axi_dma_0                 |     0.006 |
-|       U0                      |     0.006 |
-|     guitar_effects_0          |     0.275 |
-|       inst                    |     0.275 |
+|     guitar_effects_0          |     0.269 |
+|       inst                    |     0.269 |
 |     processing_system7_0      |     1.257 |
 |       inst                    |     1.257 |
 |     ps7_0_axi_periph          |     0.005 |

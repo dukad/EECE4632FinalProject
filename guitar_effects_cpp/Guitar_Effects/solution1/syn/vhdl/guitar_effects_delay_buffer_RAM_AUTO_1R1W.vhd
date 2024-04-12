@@ -12,8 +12,8 @@ entity guitar_effects_delay_buffer_RAM_AUTO_1R1W is
     generic(
             MEM_TYPE    : string := "auto"; 
             DataWidth     : integer := 32; 
-            AddressWidth     : integer := 16; 
-            AddressRange    : integer := 44100
+            AddressWidth     : integer := 17; 
+            AddressRange    : integer := 88200
     ); 
     port (
           address0     : in std_logic_vector(AddressWidth-1 downto 0); 

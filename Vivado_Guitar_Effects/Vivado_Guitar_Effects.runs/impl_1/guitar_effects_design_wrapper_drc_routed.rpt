@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-| Date         : Thu Apr 11 18:42:07 2024
+| Date         : Thu Apr 11 21:52:24 2024
 | Host         : WFXB07B250A366D running 64-bit major release  (build 9200)
 | Command      : report_drc -file guitar_effects_design_wrapper_drc_routed.rpt -pb guitar_effects_design_wrapper_drc_routed.pb -rpx guitar_effects_design_wrapper_drc_routed.rpx
 | Design       : guitar_effects_design_wrapper
@@ -24,14 +24,16 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 242
+             Violations found: 251
 +-----------+----------+-------------------------------------------------------------------+------------+
 | Rule      | Severity | Description                                                       | Violations |
 +-----------+----------+-------------------------------------------------------------------+------------+
-| DPIP-1    | Warning  | Input pipelining                                                  | 92         |
+| DPIP-1    | Warning  | Input pipelining                                                  | 97         |
 | DPOP-1    | Warning  | PREG Output pipelining                                            | 56         |
 | DPOP-2    | Warning  | MREG Output pipelining                                            | 67         |
 | DPREG-4   | Warning  | DSP48E1_PregDynOpmodeZmuxP:                                       | 1          |
+| PDCN-1569 | Warning  | LUT equation term check                                           | 3          |
+| RTSTAT-10 | Warning  | No routable loads                                                 | 1          |
 | AVAL-4    | Advisory | enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND | 18         |
 | AVAL-5    | Advisory | enum_USE_MULT_NONE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND   | 5          |
 | REQP-181  | Advisory | writefirst                                                        | 2          |
@@ -252,12 +254,12 @@ Related violations: <none>
 
 DPIP-1#43 Warning
 Input pipelining  
-DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_49ns_44s_93_1_1_U7/dout__6 input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_49ns_44s_93_1_1_U7/dout__6/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_49ns_44s_93_1_1_U7/dout__7 input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_49ns_44s_93_1_1_U7/dout__7/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#44 Warning
 Input pipelining  
-DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_49ns_44s_93_1_1_U7/dout__7 input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_49ns_44s_93_1_1_U7/dout__7/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_49ns_49ns_98_1_1_U3/dout__1 input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_49ns_49ns_98_1_1_U3/dout__1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#45 Warning
@@ -267,7 +269,7 @@ Related violations: <none>
 
 DPIP-1#46 Warning
 Input pipelining  
-DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_49ns_49ns_98_1_1_U4/dout input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_49ns_49ns_98_1_1_U4/dout/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_49ns_49ns_98_1_1_U3/dout__4 input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_49ns_49ns_98_1_1_U3/dout__4/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#47 Warning
@@ -297,205 +299,230 @@ Related violations: <none>
 
 DPIP-1#52 Warning
 Input pipelining  
-DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_49ns_49ns_98_1_1_U5/dout__0 input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_49ns_49ns_98_1_1_U5/dout__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_49ns_49ns_98_1_1_U5/dout input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_49ns_49ns_98_1_1_U5/dout/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#53 Warning
 Input pipelining  
-DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_49ns_49ns_98_1_1_U5/dout__0 input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_49ns_49ns_98_1_1_U5/dout__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_49ns_49ns_98_1_1_U5/dout input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_49ns_49ns_98_1_1_U5/dout/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#54 Warning
 Input pipelining  
-DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_49ns_49ns_98_1_1_U5/dout__1 input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_49ns_49ns_98_1_1_U5/dout__1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_49ns_49ns_98_1_1_U5/dout__0 input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_49ns_49ns_98_1_1_U5/dout__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#55 Warning
 Input pipelining  
-DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_49ns_49ns_98_1_1_U5/dout__1 input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_49ns_49ns_98_1_1_U5/dout__1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_49ns_49ns_98_1_1_U5/dout__0 input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_49ns_49ns_98_1_1_U5/dout__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#56 Warning
 Input pipelining  
-DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_49ns_49ns_98_1_1_U5/dout__3 input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_49ns_49ns_98_1_1_U5/dout__3/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_49ns_49ns_98_1_1_U5/dout__1 input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_49ns_49ns_98_1_1_U5/dout__1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#57 Warning
 Input pipelining  
-DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_49ns_49ns_98_1_1_U5/dout__4 input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_49ns_49ns_98_1_1_U5/dout__4/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_49ns_49ns_98_1_1_U5/dout__1 input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_49ns_49ns_98_1_1_U5/dout__1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#58 Warning
 Input pipelining  
-DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_49ns_49ns_98_1_1_U5/dout__4 input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_49ns_49ns_98_1_1_U5/dout__4/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_49ns_49ns_98_1_1_U5/dout__3 input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_49ns_49ns_98_1_1_U5/dout__3/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#59 Warning
 Input pipelining  
-DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_49ns_49ns_98_1_1_U5/dout__6 input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_49ns_49ns_98_1_1_U5/dout__6/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_49ns_49ns_98_1_1_U5/dout__3 input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_49ns_49ns_98_1_1_U5/dout__3/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#60 Warning
 Input pipelining  
-DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_49ns_49ns_98_1_1_U5/dout__7 input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_49ns_49ns_98_1_1_U5/dout__7/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_49ns_49ns_98_1_1_U5/dout__4 input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_49ns_49ns_98_1_1_U5/dout__4/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#61 Warning
 Input pipelining  
-DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_49ns_49ns_98_1_1_U5/dout__7 input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_49ns_49ns_98_1_1_U5/dout__7/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_49ns_49ns_98_1_1_U5/dout__4 input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_49ns_49ns_98_1_1_U5/dout__4/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#62 Warning
 Input pipelining  
-DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_56ns_52s_108_2_1_U6/dout_reg input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_56ns_52s_108_2_1_U6/dout_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_49ns_49ns_98_1_1_U5/dout__6 input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_49ns_49ns_98_1_1_U5/dout__6/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#63 Warning
 Input pipelining  
-DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_56ns_52s_108_2_1_U6/dout_reg input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_56ns_52s_108_2_1_U6/dout_reg/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_49ns_49ns_98_1_1_U5/dout__7 input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_49ns_49ns_98_1_1_U5/dout__7/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#64 Warning
 Input pipelining  
-DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_56ns_52s_108_2_1_U6/dout_reg__0 input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_56ns_52s_108_2_1_U6/dout_reg__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_49ns_49ns_98_1_1_U5/dout__7 input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_49ns_49ns_98_1_1_U5/dout__7/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#65 Warning
 Input pipelining  
-DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_56ns_52s_108_2_1_U6/dout_reg__1 input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_56ns_52s_108_2_1_U6/dout_reg__1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_56ns_52s_108_2_1_U6/dout_reg input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_56ns_52s_108_2_1_U6/dout_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#66 Warning
 Input pipelining  
-DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_56ns_52s_108_2_1_U6/tmp_product input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_56ns_52s_108_2_1_U6/tmp_product/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_56ns_52s_108_2_1_U6/dout_reg input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_56ns_52s_108_2_1_U6/dout_reg/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#67 Warning
 Input pipelining  
-DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_56ns_52s_108_2_1_U6/tmp_product input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_56ns_52s_108_2_1_U6/tmp_product/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_56ns_52s_108_2_1_U6/dout_reg__0 input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_56ns_52s_108_2_1_U6/dout_reg__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#68 Warning
 Input pipelining  
-DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_56ns_52s_108_2_1_U6/tmp_product__0 input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_56ns_52s_108_2_1_U6/tmp_product__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_56ns_52s_108_2_1_U6/dout_reg__1 input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_56ns_52s_108_2_1_U6/dout_reg__1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#69 Warning
 Input pipelining  
-DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_56ns_52s_108_2_1_U6/tmp_product__1 input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_56ns_52s_108_2_1_U6/tmp_product__1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_56ns_52s_108_2_1_U6/tmp_product input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_56ns_52s_108_2_1_U6/tmp_product/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#70 Warning
 Input pipelining  
-DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_56ns_52s_108_2_1_U6/tmp_product__1 input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_56ns_52s_108_2_1_U6/tmp_product__1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_56ns_52s_108_2_1_U6/tmp_product input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_56ns_52s_108_2_1_U6/tmp_product/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#71 Warning
 Input pipelining  
-DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_56ns_52s_108_2_1_U6/tmp_product__3 input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_56ns_52s_108_2_1_U6/tmp_product__3/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_56ns_52s_108_2_1_U6/tmp_product__0 input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_56ns_52s_108_2_1_U6/tmp_product__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#72 Warning
 Input pipelining  
-DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_56ns_52s_108_2_1_U6/tmp_product__4 input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_56ns_52s_108_2_1_U6/tmp_product__4/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_56ns_52s_108_2_1_U6/tmp_product__1 input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_56ns_52s_108_2_1_U6/tmp_product__1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#73 Warning
 Input pipelining  
-DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/dout_reg input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/dout_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_56ns_52s_108_2_1_U6/tmp_product__1 input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_56ns_52s_108_2_1_U6/tmp_product__1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#74 Warning
 Input pipelining  
-DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/dout_reg input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/dout_reg/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_56ns_52s_108_2_1_U6/tmp_product__2 input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_56ns_52s_108_2_1_U6/tmp_product__2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#75 Warning
 Input pipelining  
-DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/dout_reg__0 input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/dout_reg__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_56ns_52s_108_2_1_U6/tmp_product__3 input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_56ns_52s_108_2_1_U6/tmp_product__3/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#76 Warning
 Input pipelining  
-DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/dout_reg__1 input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/dout_reg__1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_56ns_52s_108_2_1_U6/tmp_product__4 input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_56ns_52s_108_2_1_U6/tmp_product__4/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#77 Warning
 Input pipelining  
-DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/dout_reg__2 input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/dout_reg__2/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/dout_reg input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/dout_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#78 Warning
 Input pipelining  
-DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/tmp_product input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/tmp_product/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/dout_reg input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/dout_reg/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#79 Warning
 Input pipelining  
-DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/tmp_product input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/tmp_product/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/dout_reg__0 input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/dout_reg__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#80 Warning
 Input pipelining  
-DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/tmp_product__0 input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/tmp_product__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/dout_reg__1 input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/dout_reg__1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#81 Warning
 Input pipelining  
-DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/tmp_product__1 input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/tmp_product__1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/dout_reg__2 input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/dout_reg__2/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#82 Warning
 Input pipelining  
-DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/tmp_product__1 input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/tmp_product__1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/tmp_product input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/tmp_product/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#83 Warning
 Input pipelining  
-DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/tmp_product__10 input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/tmp_product__10/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/tmp_product input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/tmp_product/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#84 Warning
 Input pipelining  
-DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/tmp_product__2 input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/tmp_product__2/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/tmp_product__0 input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/tmp_product__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#85 Warning
 Input pipelining  
-DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/tmp_product__3 input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/tmp_product__3/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/tmp_product__1 input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/tmp_product__1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#86 Warning
 Input pipelining  
-DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/tmp_product__3 input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/tmp_product__3/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/tmp_product__1 input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/tmp_product__1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#87 Warning
 Input pipelining  
-DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/tmp_product__4 input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/tmp_product__4/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/tmp_product__10 input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/tmp_product__10/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#88 Warning
 Input pipelining  
-DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/tmp_product__5 input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/tmp_product__5/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/tmp_product__2 input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/tmp_product__2/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#89 Warning
 Input pipelining  
-DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/tmp_product__6 input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/tmp_product__6/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/tmp_product__3 input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/tmp_product__3/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#90 Warning
 Input pipelining  
-DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/tmp_product__7 input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/tmp_product__7/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/tmp_product__3 input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/tmp_product__3/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#91 Warning
 Input pipelining  
-DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/tmp_product__8 input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/tmp_product__8/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/tmp_product__4 input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/tmp_product__4/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#92 Warning
+Input pipelining  
+DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/tmp_product__5 input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/tmp_product__5/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#93 Warning
+Input pipelining  
+DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/tmp_product__6 input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/tmp_product__6/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#94 Warning
+Input pipelining  
+DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/tmp_product__6 input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/tmp_product__6/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#95 Warning
+Input pipelining  
+DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/tmp_product__7 input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/tmp_product__7/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#96 Warning
+Input pipelining  
+DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/tmp_product__8 input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/tmp_product__8/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#97 Warning
 Input pipelining  
 DSP guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/tmp_product__9 input guitar_effects_design_i/guitar_effects_0/inst/grp_sin_or_cos_double_s_fu_774/mul_64s_63ns_126_2_1_U10/tmp_product__9/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
@@ -1118,6 +1145,41 @@ Related violations: <none>
 DPREG-4#1 Warning
 DSP48E1_PregDynOpmodeZmuxP:  
 The DSP48E1 cell guitar_effects_design_i/guitar_effects_0/inst/fadd_32ns_32ns_32_4_full_dsp_1_U33/guitar_effects_fadd_32ns_32ns_32_4_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP with the given dynamic OPMODE[6:0] connections may lead to an unregistered asynchronous feedback path without the PREG attribute enabled. Please refer to the user guide and if one of the internal P feedback opmodes is possible for this design the PREG attribute must be set to 1, currently set to 0
+Related violations: <none>
+
+PDCN-1569#1 Warning
+LUT equation term check  
+Used physical LUT pin 'A1' of cell guitar_effects_design_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin guitar_effects_design_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O6=(A6)+((~A6)*(~A2)*A5)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Related violations: <none>
+
+PDCN-1569#2 Warning
+LUT equation term check  
+Used physical LUT pin 'A3' of cell guitar_effects_design_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin guitar_effects_design_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O6=(A5)+((~A5)*(~A1)*A4)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Related violations: <none>
+
+PDCN-1569#3 Warning
+LUT equation term check  
+Used physical LUT pin 'A6' of cell guitar_effects_design_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin guitar_effects_design_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O6=(A5)+((~A5)*(~A1)*A3)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Related violations: <none>
+
+RTSTAT-10#1 Warning
+No routable loads  
+33 net(s) have no routable loads. The problem bus(es) and/or net(s) are guitar_effects_design_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i,
+guitar_effects_design_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb,
+guitar_effects_design_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_i,
+guitar_effects_design_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg[2:0],
+guitar_effects_design_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg[2:0],
+guitar_effects_design_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i,
+guitar_effects_design_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb,
+guitar_effects_design_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_i,
+guitar_effects_design_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg[2:0],
+guitar_effects_design_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg[2:0],
+guitar_effects_design_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i,
+guitar_effects_design_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb,
+guitar_effects_design_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_i,
+guitar_effects_design_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg[2:0],
+guitar_effects_design_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg[2:0]
+ (the first 15 of 21 listed nets/buses).
 Related violations: <none>
 
 AVAL-4#1 Advisory
