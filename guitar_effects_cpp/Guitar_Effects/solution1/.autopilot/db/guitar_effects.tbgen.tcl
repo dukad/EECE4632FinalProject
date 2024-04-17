@@ -39,6 +39,7 @@ set C_modelArgList {
 	{ delay_samples int 32 regular {axi_slave 0}  }
 	{ tempo int 32 regular {axi_slave 0}  }
 	{ wah_coeffs int 64 regular {axi_slave 0}  }
+	{ debug_output int 16 regular {axi_slave 1}  }
 }
 set C_modelArgMapList {[ 
 	{ "Name" : "gmem", "interface" : "axi_master", "bitwidth" : 16, "direction" : "READONLY", "bitSlice":[ {"cElement": [{"cName": "wah_coeffs","offset": { "type": "dynamic","port_name": "wah_coeffs","bundle": "control_r"},"direction": "READONLY"}]}]} , 
@@ -66,7 +67,8 @@ set C_modelArgMapList {[
  	{ "Name" : "delay_mult", "interface" : "axi_slave", "bundle":"control_r","type":"ap_none","bitwidth" : 32, "direction" : "READONLY", "offset" : {"in":80}, "offset_end" : {"in":87}} , 
  	{ "Name" : "delay_samples", "interface" : "axi_slave", "bundle":"control_r","type":"ap_none","bitwidth" : 32, "direction" : "READONLY", "offset" : {"in":88}, "offset_end" : {"in":95}} , 
  	{ "Name" : "tempo", "interface" : "axi_slave", "bundle":"control_r","type":"ap_none","bitwidth" : 32, "direction" : "READONLY", "offset" : {"in":96}, "offset_end" : {"in":103}} , 
- 	{ "Name" : "wah_coeffs", "interface" : "axi_slave", "bundle":"control_r","type":"ap_none","bitwidth" : 64, "direction" : "READONLY", "offset" : {"in":104}, "offset_end" : {"in":115}} ]}
+ 	{ "Name" : "wah_coeffs", "interface" : "axi_slave", "bundle":"control_r","type":"ap_none","bitwidth" : 64, "direction" : "READONLY", "offset" : {"in":104}, "offset_end" : {"in":115}} , 
+ 	{ "Name" : "debug_output", "interface" : "axi_slave", "bundle":"control_r","type":"ap_vld","bitwidth" : 16, "direction" : "WRITEONLY", "offset" : {"out":116}, "offset_end" : {"out":123}} ]}
 # RTL Port declarations: 
 set portNum 82
 set portList { 
@@ -161,7 +163,7 @@ set NewPortList {[
 	{ "name": "s_axi_control_r_WREADY", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "control_r", "role": "WREADY" } },
 	{ "name": "s_axi_control_r_WDATA", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "control_r", "role": "WDATA" } },
 	{ "name": "s_axi_control_r_WSTRB", "direction": "in", "datatype": "sc_lv", "bitwidth":4, "type": "signal", "bundle":{"name": "control_r", "role": "WSTRB" } },
-	{ "name": "s_axi_control_r_ARADDR", "direction": "in", "datatype": "sc_lv", "bitwidth":7, "type": "signal", "bundle":{"name": "control_r", "role": "ARADDR" },"address":[{"name":"axilite_out","role":"data","value":"16"}, {"name":"axilite_out","role":"valid","value":"20","valid_bit":"0"}] },
+	{ "name": "s_axi_control_r_ARADDR", "direction": "in", "datatype": "sc_lv", "bitwidth":7, "type": "signal", "bundle":{"name": "control_r", "role": "ARADDR" },"address":[{"name":"axilite_out","role":"data","value":"16"}, {"name":"axilite_out","role":"valid","value":"20","valid_bit":"0"},{"name":"debug_output","role":"data","value":"116"}, {"name":"debug_output","role":"valid","value":"120","valid_bit":"0"}] },
 	{ "name": "s_axi_control_r_ARVALID", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "control_r", "role": "ARVALID" } },
 	{ "name": "s_axi_control_r_ARREADY", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "control_r", "role": "ARREADY" } },
 	{ "name": "s_axi_control_r_RVALID", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "control_r", "role": "RVALID" } },
@@ -286,43 +288,44 @@ set RtlHierarchyInfo {[
 			{"Name" : "delay_samples", "Type" : "None", "Direction" : "I"},
 			{"Name" : "tempo", "Type" : "None", "Direction" : "I"},
 			{"Name" : "wah_coeffs", "Type" : "None", "Direction" : "I"},
+			{"Name" : "debug_output", "Type" : "Vld", "Direction" : "O"},
 			{"Name" : "lpf_coefficients", "Type" : "Memory", "Direction" : "I"},
 			{"Name" : "ref_4oPi_table_256_V", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "5", "SubInstance" : "grp_sin_or_cos_double_s_fu_774", "Port" : "ref_4oPi_table_256_V", "Inst_start_state" : "207", "Inst_end_state" : "208"}]},
+					{"ID" : "5", "SubInstance" : "grp_sin_or_cos_double_s_fu_810", "Port" : "ref_4oPi_table_256_V", "Inst_start_state" : "212", "Inst_end_state" : "213"}]},
 			{"Name" : "fourth_order_double_sin_cos_K0_V", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "5", "SubInstance" : "grp_sin_or_cos_double_s_fu_774", "Port" : "fourth_order_double_sin_cos_K0_V", "Inst_start_state" : "207", "Inst_end_state" : "208"}]},
+					{"ID" : "5", "SubInstance" : "grp_sin_or_cos_double_s_fu_810", "Port" : "fourth_order_double_sin_cos_K0_V", "Inst_start_state" : "212", "Inst_end_state" : "213"}]},
 			{"Name" : "fourth_order_double_sin_cos_K1_V", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "5", "SubInstance" : "grp_sin_or_cos_double_s_fu_774", "Port" : "fourth_order_double_sin_cos_K1_V", "Inst_start_state" : "207", "Inst_end_state" : "208"}]},
+					{"ID" : "5", "SubInstance" : "grp_sin_or_cos_double_s_fu_810", "Port" : "fourth_order_double_sin_cos_K1_V", "Inst_start_state" : "212", "Inst_end_state" : "213"}]},
 			{"Name" : "fourth_order_double_sin_cos_K2_V", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "5", "SubInstance" : "grp_sin_or_cos_double_s_fu_774", "Port" : "fourth_order_double_sin_cos_K2_V", "Inst_start_state" : "207", "Inst_end_state" : "208"}]},
+					{"ID" : "5", "SubInstance" : "grp_sin_or_cos_double_s_fu_810", "Port" : "fourth_order_double_sin_cos_K2_V", "Inst_start_state" : "212", "Inst_end_state" : "213"}]},
 			{"Name" : "fourth_order_double_sin_cos_K3_V", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "5", "SubInstance" : "grp_sin_or_cos_double_s_fu_774", "Port" : "fourth_order_double_sin_cos_K3_V", "Inst_start_state" : "207", "Inst_end_state" : "208"}]},
+					{"ID" : "5", "SubInstance" : "grp_sin_or_cos_double_s_fu_810", "Port" : "fourth_order_double_sin_cos_K3_V", "Inst_start_state" : "212", "Inst_end_state" : "213"}]},
 			{"Name" : "fourth_order_double_sin_cos_K4_V", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "5", "SubInstance" : "grp_sin_or_cos_double_s_fu_774", "Port" : "fourth_order_double_sin_cos_K4_V", "Inst_start_state" : "207", "Inst_end_state" : "208"}]}],
+					{"ID" : "5", "SubInstance" : "grp_sin_or_cos_double_s_fu_810", "Port" : "fourth_order_double_sin_cos_K4_V", "Inst_start_state" : "212", "Inst_end_state" : "213"}]}],
 		"Loop" : [
 			{"Name" : "Loop 1", "PipelineType" : "no",
-				"LoopDec" : {"FSMBitwidth" : "252", "FirstState" : "ap_ST_fsm_state2", "LastState" : ["ap_ST_fsm_state2"], "QuitState" : ["ap_ST_fsm_state2"], "PreState" : ["ap_ST_fsm_state1"], "PostState" : ["ap_ST_fsm_state3"], "OneDepthLoop" : "1", "OneStateBlock": "ap_ST_fsm_state2_blk"}},
+				"LoopDec" : {"FSMBitwidth" : "266", "FirstState" : "ap_ST_fsm_state2", "LastState" : ["ap_ST_fsm_state2"], "QuitState" : ["ap_ST_fsm_state2"], "PreState" : ["ap_ST_fsm_state1"], "PostState" : ["ap_ST_fsm_state3"], "OneDepthLoop" : "1", "OneStateBlock": "ap_ST_fsm_state2_blk"}},
 			{"Name" : "Loop 2", "PipelineType" : "no",
-				"LoopDec" : {"FSMBitwidth" : "252", "FirstState" : "ap_ST_fsm_state3", "LastState" : ["ap_ST_fsm_state3"], "QuitState" : ["ap_ST_fsm_state3"], "PreState" : ["ap_ST_fsm_state2"], "PostState" : ["ap_ST_fsm_state4"], "OneDepthLoop" : "1", "OneStateBlock": "ap_ST_fsm_state3_blk"}},
+				"LoopDec" : {"FSMBitwidth" : "266", "FirstState" : "ap_ST_fsm_state3", "LastState" : ["ap_ST_fsm_state3"], "QuitState" : ["ap_ST_fsm_state3"], "PreState" : ["ap_ST_fsm_state2"], "PostState" : ["ap_ST_fsm_state4"], "OneDepthLoop" : "1", "OneStateBlock": "ap_ST_fsm_state3_blk"}},
 			{"Name" : "Loop 3", "PipelineType" : "no",
-				"LoopDec" : {"FSMBitwidth" : "252", "FirstState" : "ap_ST_fsm_state4", "LastState" : ["ap_ST_fsm_state4"], "QuitState" : ["ap_ST_fsm_state4"], "PreState" : ["ap_ST_fsm_state3"], "PostState" : ["ap_ST_fsm_state5"], "OneDepthLoop" : "1", "OneStateBlock": "ap_ST_fsm_state4_blk"}},
+				"LoopDec" : {"FSMBitwidth" : "266", "FirstState" : "ap_ST_fsm_state4", "LastState" : ["ap_ST_fsm_state4"], "QuitState" : ["ap_ST_fsm_state4"], "PreState" : ["ap_ST_fsm_state3"], "PostState" : ["ap_ST_fsm_state5"], "OneDepthLoop" : "1", "OneStateBlock": "ap_ST_fsm_state4_blk"}},
 			{"Name" : "LPF_Loop", "PipelineType" : "no",
-				"LoopDec" : {"FSMBitwidth" : "252", "FirstState" : "ap_ST_fsm_state48", "LastState" : ["ap_ST_fsm_state75"], "QuitState" : ["ap_ST_fsm_state48"], "PreState" : ["ap_ST_fsm_state47"], "PostState" : ["ap_ST_fsm_state76", "ap_ST_fsm_state96", "ap_ST_fsm_state97"], "OneDepthLoop" : "0", "OneStateBlock": ""}},
+				"LoopDec" : {"FSMBitwidth" : "266", "FirstState" : "ap_ST_fsm_state53", "LastState" : ["ap_ST_fsm_state80"], "QuitState" : ["ap_ST_fsm_state53"], "PreState" : ["ap_ST_fsm_state52"], "PostState" : ["ap_ST_fsm_state81", "ap_ST_fsm_state101", "ap_ST_fsm_state102"], "OneDepthLoop" : "0", "OneStateBlock": ""}},
 			{"Name" : "WAH_LOOP", "PipelineType" : "no",
-				"LoopDec" : {"FSMBitwidth" : "252", "FirstState" : "ap_ST_fsm_state234", "LastState" : ["ap_ST_fsm_state249"], "QuitState" : ["ap_ST_fsm_state234"], "PreState" : ["ap_ST_fsm_state233"], "PostState" : ["ap_ST_fsm_state250"], "OneDepthLoop" : "0", "OneStateBlock": ""}},
-			{"Name" : "VITIS_LOOP_83_2", "PipelineType" : "no",
-				"LoopDec" : {"FSMBitwidth" : "252", "FirstState" : "ap_ST_fsm_state9", "LastState" : ["ap_ST_fsm_state251"], "QuitState" : ["ap_ST_fsm_state250"], "PreState" : ["ap_ST_fsm_state8"], "PostState" : ["ap_ST_fsm_state252"], "OneDepthLoop" : "0", "OneStateBlock": ""}}]},
+				"LoopDec" : {"FSMBitwidth" : "266", "FirstState" : "ap_ST_fsm_state239", "LastState" : ["ap_ST_fsm_state254"], "QuitState" : ["ap_ST_fsm_state239"], "PreState" : ["ap_ST_fsm_state238"], "PostState" : ["ap_ST_fsm_state255"], "OneDepthLoop" : "0", "OneStateBlock": ""}},
+			{"Name" : "VITIS_LOOP_88_2", "PipelineType" : "no",
+				"LoopDec" : {"FSMBitwidth" : "266", "FirstState" : "ap_ST_fsm_state14", "LastState" : ["ap_ST_fsm_state265"], "QuitState" : ["ap_ST_fsm_state264"], "PreState" : ["ap_ST_fsm_state13"], "PostState" : ["ap_ST_fsm_state266"], "OneDepthLoop" : "0", "OneStateBlock": ""}}]},
 	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.lpf_coefficients_U", "Parent" : "0"},
 	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.compression_buffer_U", "Parent" : "0"},
 	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.delay_buffer_U", "Parent" : "0"},
 	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.wah_values_buffer_U", "Parent" : "0"},
-	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_sin_or_cos_double_s_fu_774", "Parent" : "0", "Child" : ["6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25"],
+	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_sin_or_cos_double_s_fu_810", "Parent" : "0", "Child" : ["6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25"],
 		"CDFG" : "sin_or_cos_double_s",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
@@ -351,26 +354,26 @@ set RtlHierarchyInfo {[
 				"LoopDec" : {"FSMBitwidth" : "17", "FirstState" : "ap_ST_fsm_state15", "LastState" : ["ap_ST_fsm_state15"], "QuitState" : ["ap_ST_fsm_state15"], "PreState" : ["ap_ST_fsm_state13"], "PostState" : ["ap_ST_fsm_state16"], "OneDepthLoop" : "1", "OneStateBlock": "ap_ST_fsm_state15_blk"}},
 			{"Name" : "Loop 3", "PipelineType" : "no",
 				"LoopDec" : {"FSMBitwidth" : "17", "FirstState" : "ap_ST_fsm_state16", "LastState" : ["ap_ST_fsm_state17"], "QuitState" : ["ap_ST_fsm_state16"], "PreState" : ["ap_ST_fsm_state15"], "PostState" : ["ap_ST_fsm_state1"], "OneDepthLoop" : "0", "OneStateBlock": ""}}]},
-	{"ID" : "6", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_sin_or_cos_double_s_fu_774.ref_4oPi_table_256_V_U", "Parent" : "5"},
-	{"ID" : "7", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_sin_or_cos_double_s_fu_774.fourth_order_double_sin_cos_K0_V_U", "Parent" : "5"},
-	{"ID" : "8", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_sin_or_cos_double_s_fu_774.fourth_order_double_sin_cos_K1_V_U", "Parent" : "5"},
-	{"ID" : "9", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_sin_or_cos_double_s_fu_774.fourth_order_double_sin_cos_K2_V_U", "Parent" : "5"},
-	{"ID" : "10", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_sin_or_cos_double_s_fu_774.fourth_order_double_sin_cos_K3_V_U", "Parent" : "5"},
-	{"ID" : "11", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_sin_or_cos_double_s_fu_774.fourth_order_double_sin_cos_K4_V_U", "Parent" : "5"},
-	{"ID" : "12", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_sin_or_cos_double_s_fu_774.mul_170s_53ns_170_2_1_U1", "Parent" : "5"},
-	{"ID" : "13", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_sin_or_cos_double_s_fu_774.mux_83_1_1_1_U2", "Parent" : "5"},
-	{"ID" : "14", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_sin_or_cos_double_s_fu_774.mul_49ns_49ns_98_1_1_U3", "Parent" : "5"},
-	{"ID" : "15", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_sin_or_cos_double_s_fu_774.mul_49ns_49ns_98_1_1_U4", "Parent" : "5"},
-	{"ID" : "16", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_sin_or_cos_double_s_fu_774.mul_49ns_49ns_98_1_1_U5", "Parent" : "5"},
-	{"ID" : "17", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_sin_or_cos_double_s_fu_774.mul_56ns_52s_108_2_1_U6", "Parent" : "5"},
-	{"ID" : "18", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_sin_or_cos_double_s_fu_774.mul_49ns_44s_93_1_1_U7", "Parent" : "5"},
-	{"ID" : "19", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_sin_or_cos_double_s_fu_774.mul_42ns_33ns_75_1_1_U8", "Parent" : "5"},
-	{"ID" : "20", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_sin_or_cos_double_s_fu_774.mul_35ns_25ns_60_1_1_U9", "Parent" : "5"},
-	{"ID" : "21", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_sin_or_cos_double_s_fu_774.mul_64s_63ns_126_2_1_U10", "Parent" : "5"},
-	{"ID" : "22", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_sin_or_cos_double_s_fu_774.mux_42_32_1_1_U11", "Parent" : "5"},
-	{"ID" : "23", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_sin_or_cos_double_s_fu_774.mux_42_32_1_1_U12", "Parent" : "5"},
-	{"ID" : "24", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_sin_or_cos_double_s_fu_774.mux_164_1_1_1_U13", "Parent" : "5"},
-	{"ID" : "25", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_sin_or_cos_double_s_fu_774.mux_164_1_1_1_U14", "Parent" : "5"},
+	{"ID" : "6", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_sin_or_cos_double_s_fu_810.ref_4oPi_table_256_V_U", "Parent" : "5"},
+	{"ID" : "7", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_sin_or_cos_double_s_fu_810.fourth_order_double_sin_cos_K0_V_U", "Parent" : "5"},
+	{"ID" : "8", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_sin_or_cos_double_s_fu_810.fourth_order_double_sin_cos_K1_V_U", "Parent" : "5"},
+	{"ID" : "9", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_sin_or_cos_double_s_fu_810.fourth_order_double_sin_cos_K2_V_U", "Parent" : "5"},
+	{"ID" : "10", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_sin_or_cos_double_s_fu_810.fourth_order_double_sin_cos_K3_V_U", "Parent" : "5"},
+	{"ID" : "11", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_sin_or_cos_double_s_fu_810.fourth_order_double_sin_cos_K4_V_U", "Parent" : "5"},
+	{"ID" : "12", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_sin_or_cos_double_s_fu_810.mul_170s_53ns_170_2_1_U1", "Parent" : "5"},
+	{"ID" : "13", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_sin_or_cos_double_s_fu_810.mux_83_1_1_1_U2", "Parent" : "5"},
+	{"ID" : "14", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_sin_or_cos_double_s_fu_810.mul_49ns_49ns_98_1_1_U3", "Parent" : "5"},
+	{"ID" : "15", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_sin_or_cos_double_s_fu_810.mul_49ns_49ns_98_1_1_U4", "Parent" : "5"},
+	{"ID" : "16", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_sin_or_cos_double_s_fu_810.mul_49ns_49ns_98_1_1_U5", "Parent" : "5"},
+	{"ID" : "17", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_sin_or_cos_double_s_fu_810.mul_56ns_52s_108_2_1_U6", "Parent" : "5"},
+	{"ID" : "18", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_sin_or_cos_double_s_fu_810.mul_49ns_44s_93_1_1_U7", "Parent" : "5"},
+	{"ID" : "19", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_sin_or_cos_double_s_fu_810.mul_42ns_33ns_75_1_1_U8", "Parent" : "5"},
+	{"ID" : "20", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_sin_or_cos_double_s_fu_810.mul_35ns_25ns_60_1_1_U9", "Parent" : "5"},
+	{"ID" : "21", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_sin_or_cos_double_s_fu_810.mul_64s_63ns_126_2_1_U10", "Parent" : "5"},
+	{"ID" : "22", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_sin_or_cos_double_s_fu_810.mux_42_32_1_1_U11", "Parent" : "5"},
+	{"ID" : "23", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_sin_or_cos_double_s_fu_810.mux_42_32_1_1_U12", "Parent" : "5"},
+	{"ID" : "24", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_sin_or_cos_double_s_fu_810.mux_164_1_1_1_U13", "Parent" : "5"},
+	{"ID" : "25", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_sin_or_cos_double_s_fu_810.mux_164_1_1_1_U14", "Parent" : "5"},
 	{"ID" : "26", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.control_r_s_axi_U", "Parent" : "0"},
 	{"ID" : "27", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.gmem_m_axi_U", "Parent" : "0"},
 	{"ID" : "28", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.fadd_32ns_32ns_32_4_full_dsp_1_U33", "Parent" : "0"},
@@ -410,22 +413,22 @@ set RtlHierarchyInfo {[
 
 set ArgLastReadFirstWriteLatency {
 	guitar_effects {
-		gmem {Type I LastRead 198 FirstWrite -1}
-		INPUT_r_V_data_V {Type I LastRead 8 FirstWrite -1}
-		INPUT_r_V_keep_V {Type I LastRead 8 FirstWrite -1}
-		INPUT_r_V_strb_V {Type I LastRead 8 FirstWrite -1}
-		INPUT_r_V_user_V {Type I LastRead 8 FirstWrite -1}
-		INPUT_r_V_last_V {Type I LastRead 8 FirstWrite -1}
-		INPUT_r_V_id_V {Type I LastRead 8 FirstWrite -1}
-		INPUT_r_V_dest_V {Type I LastRead 8 FirstWrite -1}
-		OUTPUT_r_V_data_V {Type O LastRead -1 FirstWrite 186}
-		OUTPUT_r_V_keep_V {Type O LastRead -1 FirstWrite 186}
-		OUTPUT_r_V_strb_V {Type O LastRead -1 FirstWrite 186}
-		OUTPUT_r_V_user_V {Type O LastRead -1 FirstWrite 186}
-		OUTPUT_r_V_last_V {Type O LastRead -1 FirstWrite 186}
-		OUTPUT_r_V_id_V {Type O LastRead -1 FirstWrite 186}
-		OUTPUT_r_V_dest_V {Type O LastRead -1 FirstWrite 186}
-		axilite_out {Type O LastRead -1 FirstWrite 186}
+		gmem {Type I LastRead 203 FirstWrite -1}
+		INPUT_r_V_data_V {Type I LastRead 13 FirstWrite -1}
+		INPUT_r_V_keep_V {Type I LastRead 13 FirstWrite -1}
+		INPUT_r_V_strb_V {Type I LastRead 13 FirstWrite -1}
+		INPUT_r_V_user_V {Type I LastRead 13 FirstWrite -1}
+		INPUT_r_V_last_V {Type I LastRead 13 FirstWrite -1}
+		INPUT_r_V_id_V {Type I LastRead 13 FirstWrite -1}
+		INPUT_r_V_dest_V {Type I LastRead 13 FirstWrite -1}
+		OUTPUT_r_V_data_V {Type O LastRead -1 FirstWrite 200}
+		OUTPUT_r_V_keep_V {Type O LastRead -1 FirstWrite 200}
+		OUTPUT_r_V_strb_V {Type O LastRead -1 FirstWrite 200}
+		OUTPUT_r_V_user_V {Type O LastRead -1 FirstWrite 200}
+		OUTPUT_r_V_last_V {Type O LastRead -1 FirstWrite 200}
+		OUTPUT_r_V_id_V {Type O LastRead -1 FirstWrite 200}
+		OUTPUT_r_V_dest_V {Type O LastRead -1 FirstWrite 200}
+		axilite_out {Type O LastRead -1 FirstWrite 200}
 		control {Type I LastRead 0 FirstWrite -1}
 		distortion_threshold {Type I LastRead 0 FirstWrite -1}
 		distortion_clip_factor {Type I LastRead 0 FirstWrite -1}
@@ -436,6 +439,7 @@ set ArgLastReadFirstWriteLatency {
 		delay_samples {Type I LastRead 0 FirstWrite -1}
 		tempo {Type I LastRead 0 FirstWrite -1}
 		wah_coeffs {Type I LastRead 0 FirstWrite -1}
+		debug_output {Type O LastRead -1 FirstWrite 200}
 		lpf_coefficients {Type I LastRead -1 FirstWrite -1}
 		ref_4oPi_table_256_V {Type I LastRead -1 FirstWrite -1}
 		fourth_order_double_sin_cos_K0_V {Type I LastRead -1 FirstWrite -1}

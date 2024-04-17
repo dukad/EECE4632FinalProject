@@ -70,6 +70,11 @@
           <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="104"/>
         </hw>
       </arg>
+      <arg id="13" access_type="w" src_name="debug_output" src_type="ap_fixed&lt;16, -16, AP_TRN, AP_WRAP, 0&gt;&amp;" src_isptr="1" src_bitwidth="16" src_size_or_depth="1">
+        <hw hw_usage="data" hw_interface="S_AXILite" hw_name="control_r" hw_bitwidth="16" hw_size_or_depth="1" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="116"/>
+        </hw>
+      </arg>
     </args>
     <return src_type="void" src_bitwidth="0" offset="0x0">
       <hw hw_usage="data" hw_interface="" hw_name="" hw_bitwidth="0" hw_kernel_support="true"/>

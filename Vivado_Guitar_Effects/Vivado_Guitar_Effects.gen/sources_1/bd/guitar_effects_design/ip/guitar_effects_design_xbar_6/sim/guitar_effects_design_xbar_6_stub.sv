@@ -68,45 +68,45 @@ typedef bit bit_as_bool;
 module guitar_effects_design_xbar_6 (
   input bit_as_bool aclk,
   input bit_as_bool aresetn,
-  input bit [1 : 0] s_axi_awid,
-  input bit [63 : 0] s_axi_awaddr,
-  input bit [15 : 0] s_axi_awlen,
-  input bit [5 : 0] s_axi_awsize,
-  input bit [3 : 0] s_axi_awburst,
-  input bit [1 : 0] s_axi_awlock,
-  input bit [7 : 0] s_axi_awcache,
-  input bit [5 : 0] s_axi_awprot,
-  input bit [7 : 0] s_axi_awqos,
-  input bit [1 : 0] s_axi_awvalid,
-  output bit [1 : 0] s_axi_awready,
-  input bit [63 : 0] s_axi_wdata,
-  input bit [7 : 0] s_axi_wstrb,
-  input bit [1 : 0] s_axi_wlast,
-  input bit [1 : 0] s_axi_wvalid,
-  output bit [1 : 0] s_axi_wready,
-  output bit [1 : 0] s_axi_bid,
-  output bit [3 : 0] s_axi_bresp,
-  output bit [1 : 0] s_axi_bvalid,
-  input bit [1 : 0] s_axi_bready,
-  input bit [1 : 0] s_axi_arid,
-  input bit [63 : 0] s_axi_araddr,
-  input bit [15 : 0] s_axi_arlen,
-  input bit [5 : 0] s_axi_arsize,
-  input bit [3 : 0] s_axi_arburst,
-  input bit [1 : 0] s_axi_arlock,
-  input bit [7 : 0] s_axi_arcache,
-  input bit [5 : 0] s_axi_arprot,
-  input bit [7 : 0] s_axi_arqos,
-  input bit [1 : 0] s_axi_arvalid,
-  output bit [1 : 0] s_axi_arready,
-  output bit [1 : 0] s_axi_rid,
-  output bit [63 : 0] s_axi_rdata,
-  output bit [3 : 0] s_axi_rresp,
-  output bit [1 : 0] s_axi_rlast,
-  output bit [1 : 0] s_axi_rvalid,
-  input bit [1 : 0] s_axi_rready,
-  output bit [0 : 0] m_axi_awid,
-  output bit [31 : 0] m_axi_awaddr,
+  input bit [5 : 0] s_axi_awid,
+  input bit [191 : 0] s_axi_awaddr,
+  input bit [23 : 0] s_axi_awlen,
+  input bit [8 : 0] s_axi_awsize,
+  input bit [5 : 0] s_axi_awburst,
+  input bit [2 : 0] s_axi_awlock,
+  input bit [11 : 0] s_axi_awcache,
+  input bit [8 : 0] s_axi_awprot,
+  input bit [11 : 0] s_axi_awqos,
+  input bit [2 : 0] s_axi_awvalid,
+  output bit [2 : 0] s_axi_awready,
+  input bit [95 : 0] s_axi_wdata,
+  input bit [11 : 0] s_axi_wstrb,
+  input bit [2 : 0] s_axi_wlast,
+  input bit [2 : 0] s_axi_wvalid,
+  output bit [2 : 0] s_axi_wready,
+  output bit [5 : 0] s_axi_bid,
+  output bit [5 : 0] s_axi_bresp,
+  output bit [2 : 0] s_axi_bvalid,
+  input bit [2 : 0] s_axi_bready,
+  input bit [5 : 0] s_axi_arid,
+  input bit [191 : 0] s_axi_araddr,
+  input bit [23 : 0] s_axi_arlen,
+  input bit [8 : 0] s_axi_arsize,
+  input bit [5 : 0] s_axi_arburst,
+  input bit [2 : 0] s_axi_arlock,
+  input bit [11 : 0] s_axi_arcache,
+  input bit [8 : 0] s_axi_arprot,
+  input bit [11 : 0] s_axi_arqos,
+  input bit [2 : 0] s_axi_arvalid,
+  output bit [2 : 0] s_axi_arready,
+  output bit [5 : 0] s_axi_rid,
+  output bit [95 : 0] s_axi_rdata,
+  output bit [5 : 0] s_axi_rresp,
+  output bit [2 : 0] s_axi_rlast,
+  output bit [2 : 0] s_axi_rvalid,
+  input bit [2 : 0] s_axi_rready,
+  output bit [1 : 0] m_axi_awid,
+  output bit [63 : 0] m_axi_awaddr,
   output bit [7 : 0] m_axi_awlen,
   output bit [2 : 0] m_axi_awsize,
   output bit [1 : 0] m_axi_awburst,
@@ -122,12 +122,12 @@ module guitar_effects_design_xbar_6 (
   output bit [0 : 0] m_axi_wlast,
   output bit [0 : 0] m_axi_wvalid,
   input bit [0 : 0] m_axi_wready,
-  input bit [0 : 0] m_axi_bid,
+  input bit [1 : 0] m_axi_bid,
   input bit [1 : 0] m_axi_bresp,
   input bit [0 : 0] m_axi_bvalid,
   output bit [0 : 0] m_axi_bready,
-  output bit [0 : 0] m_axi_arid,
-  output bit [31 : 0] m_axi_araddr,
+  output bit [1 : 0] m_axi_arid,
+  output bit [63 : 0] m_axi_araddr,
   output bit [7 : 0] m_axi_arlen,
   output bit [2 : 0] m_axi_arsize,
   output bit [1 : 0] m_axi_arburst,
@@ -138,7 +138,7 @@ module guitar_effects_design_xbar_6 (
   output bit [3 : 0] m_axi_arqos,
   output bit [0 : 0] m_axi_arvalid,
   input bit [0 : 0] m_axi_arready,
-  input bit [0 : 0] m_axi_rid,
+  input bit [1 : 0] m_axi_rid,
   input bit [31 : 0] m_axi_rdata,
   input bit [1 : 0] m_axi_rresp,
   input bit [0 : 0] m_axi_rlast,
@@ -155,45 +155,45 @@ module guitar_effects_design_xbar_6 (aclk,aresetn,s_axi_awid,s_axi_awaddr,s_axi_
 *);
   input bit aclk;
   input bit aresetn;
-  input bit [1 : 0] s_axi_awid;
-  input bit [63 : 0] s_axi_awaddr;
-  input bit [15 : 0] s_axi_awlen;
-  input bit [5 : 0] s_axi_awsize;
-  input bit [3 : 0] s_axi_awburst;
-  input bit [1 : 0] s_axi_awlock;
-  input bit [7 : 0] s_axi_awcache;
-  input bit [5 : 0] s_axi_awprot;
-  input bit [7 : 0] s_axi_awqos;
-  input bit [1 : 0] s_axi_awvalid;
-  output wire [1 : 0] s_axi_awready;
-  input bit [63 : 0] s_axi_wdata;
-  input bit [7 : 0] s_axi_wstrb;
-  input bit [1 : 0] s_axi_wlast;
-  input bit [1 : 0] s_axi_wvalid;
-  output wire [1 : 0] s_axi_wready;
-  output wire [1 : 0] s_axi_bid;
-  output wire [3 : 0] s_axi_bresp;
-  output wire [1 : 0] s_axi_bvalid;
-  input bit [1 : 0] s_axi_bready;
-  input bit [1 : 0] s_axi_arid;
-  input bit [63 : 0] s_axi_araddr;
-  input bit [15 : 0] s_axi_arlen;
-  input bit [5 : 0] s_axi_arsize;
-  input bit [3 : 0] s_axi_arburst;
-  input bit [1 : 0] s_axi_arlock;
-  input bit [7 : 0] s_axi_arcache;
-  input bit [5 : 0] s_axi_arprot;
-  input bit [7 : 0] s_axi_arqos;
-  input bit [1 : 0] s_axi_arvalid;
-  output wire [1 : 0] s_axi_arready;
-  output wire [1 : 0] s_axi_rid;
-  output wire [63 : 0] s_axi_rdata;
-  output wire [3 : 0] s_axi_rresp;
-  output wire [1 : 0] s_axi_rlast;
-  output wire [1 : 0] s_axi_rvalid;
-  input bit [1 : 0] s_axi_rready;
-  output wire [0 : 0] m_axi_awid;
-  output wire [31 : 0] m_axi_awaddr;
+  input bit [5 : 0] s_axi_awid;
+  input bit [191 : 0] s_axi_awaddr;
+  input bit [23 : 0] s_axi_awlen;
+  input bit [8 : 0] s_axi_awsize;
+  input bit [5 : 0] s_axi_awburst;
+  input bit [2 : 0] s_axi_awlock;
+  input bit [11 : 0] s_axi_awcache;
+  input bit [8 : 0] s_axi_awprot;
+  input bit [11 : 0] s_axi_awqos;
+  input bit [2 : 0] s_axi_awvalid;
+  output wire [2 : 0] s_axi_awready;
+  input bit [95 : 0] s_axi_wdata;
+  input bit [11 : 0] s_axi_wstrb;
+  input bit [2 : 0] s_axi_wlast;
+  input bit [2 : 0] s_axi_wvalid;
+  output wire [2 : 0] s_axi_wready;
+  output wire [5 : 0] s_axi_bid;
+  output wire [5 : 0] s_axi_bresp;
+  output wire [2 : 0] s_axi_bvalid;
+  input bit [2 : 0] s_axi_bready;
+  input bit [5 : 0] s_axi_arid;
+  input bit [191 : 0] s_axi_araddr;
+  input bit [23 : 0] s_axi_arlen;
+  input bit [8 : 0] s_axi_arsize;
+  input bit [5 : 0] s_axi_arburst;
+  input bit [2 : 0] s_axi_arlock;
+  input bit [11 : 0] s_axi_arcache;
+  input bit [8 : 0] s_axi_arprot;
+  input bit [11 : 0] s_axi_arqos;
+  input bit [2 : 0] s_axi_arvalid;
+  output wire [2 : 0] s_axi_arready;
+  output wire [5 : 0] s_axi_rid;
+  output wire [95 : 0] s_axi_rdata;
+  output wire [5 : 0] s_axi_rresp;
+  output wire [2 : 0] s_axi_rlast;
+  output wire [2 : 0] s_axi_rvalid;
+  input bit [2 : 0] s_axi_rready;
+  output wire [1 : 0] m_axi_awid;
+  output wire [63 : 0] m_axi_awaddr;
   output wire [7 : 0] m_axi_awlen;
   output wire [2 : 0] m_axi_awsize;
   output wire [1 : 0] m_axi_awburst;
@@ -209,12 +209,12 @@ module guitar_effects_design_xbar_6 (aclk,aresetn,s_axi_awid,s_axi_awaddr,s_axi_
   output wire [0 : 0] m_axi_wlast;
   output wire [0 : 0] m_axi_wvalid;
   input bit [0 : 0] m_axi_wready;
-  input bit [0 : 0] m_axi_bid;
+  input bit [1 : 0] m_axi_bid;
   input bit [1 : 0] m_axi_bresp;
   input bit [0 : 0] m_axi_bvalid;
   output wire [0 : 0] m_axi_bready;
-  output wire [0 : 0] m_axi_arid;
-  output wire [31 : 0] m_axi_araddr;
+  output wire [1 : 0] m_axi_arid;
+  output wire [63 : 0] m_axi_araddr;
   output wire [7 : 0] m_axi_arlen;
   output wire [2 : 0] m_axi_arsize;
   output wire [1 : 0] m_axi_arburst;
@@ -225,7 +225,7 @@ module guitar_effects_design_xbar_6 (aclk,aresetn,s_axi_awid,s_axi_awaddr,s_axi_
   output wire [3 : 0] m_axi_arqos;
   output wire [0 : 0] m_axi_arvalid;
   input bit [0 : 0] m_axi_arready;
-  input bit [0 : 0] m_axi_rid;
+  input bit [1 : 0] m_axi_rid;
   input bit [31 : 0] m_axi_rdata;
   input bit [1 : 0] m_axi_rresp;
   input bit [0 : 0] m_axi_rlast;

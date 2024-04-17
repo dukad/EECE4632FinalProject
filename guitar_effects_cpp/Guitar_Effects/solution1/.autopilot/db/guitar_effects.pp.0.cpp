@@ -26855,7 +26855,7 @@ typedef ap_fixed<16, -16> wah_mult;
 int distortion(int input, int threshold, mult_float clip_factor);
 int compression(int input, int min_threshold, int max_threshold, int zero_threshold, int& current_level, int values_buffer[441], int &compression_buffer_index, float lpf_coefficients[441], int current_sample);
 int delay(int input, int delay_samples, float delay_mult, int delay_buffer[88200], int &delay_buffer_index);
-int wah(int input, int tempo, int current_sample, int &wah_buffer_index, int wah_values_buffer[100], wah_mult bandpass_coeffs[20][100]);
+int wah(int input, int tempo, int current_sample, int &wah_buffer_index, int wah_values_buffer[100], wah_mult bandpass_coeffs[20][100], wah_mult &debug);
 
 __attribute__((sdx_kernel("guitar_effects", 0))) void guitar_effects (
     hls::stream< ap_axis<32,2,5,6> > &INPUT,
@@ -26870,15 +26870,16 @@ __attribute__((sdx_kernel("guitar_effects", 0))) void guitar_effects (
     float delay_mult,
     int delay_samples,
     int tempo,
-    wah_mult wah_coeffs[20][100]
+    wah_mult wah_coeffs[20][100],
+ wah_mult &debug_output
     ) {
 #line 17 "C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/csynth.tcl"
 #pragma HLSDIRECTIVE TOP name=guitar_effects
-# 37 "guitar_effects.cpp"
+# 38 "guitar_effects.cpp"
 
 #line 6 "C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/directives.tcl"
 #pragma HLSDIRECTIVE TOP name=guitar_effects
-# 37 "guitar_effects.cpp"
+# 38 "guitar_effects.cpp"
 
 
 
@@ -26894,8 +26895,11 @@ __attribute__((sdx_kernel("guitar_effects", 0))) void guitar_effects (
 #pragma HLS INTERFACE s_axilite port=delay_samples
 #pragma HLS INTERFACE s_axilite port=axilite_out
 #pragma HLS INTERFACE s_axilite port=tempo
-#pragma HLS INTERFACE ap_ctrl_none port=return
+#pragma HLS INTERFACE s_axilite port=debug_output
 #pragma HLS INTERFACE m_axi depth=2000 port=wah_coeffs
+
+#pragma HLS INTERFACE ap_ctrl_none port=return
+
 
 
 
@@ -26906,7 +26910,7 @@ __attribute__((sdx_kernel("guitar_effects", 0))) void guitar_effects (
     int compression_buffer_index = 0;
     float lpf_coefficients[441] = {0};
     float filter_value = 1.0 / 441;
-    VITIS_LOOP_64_1: for (int i = 0; i < 441; i++) {
+    VITIS_LOOP_68_1: for (int i = 0; i < 441; i++) {
      lpf_coefficients[i] = filter_value;
     }
 
@@ -26923,9 +26927,11 @@ __attribute__((sdx_kernel("guitar_effects", 0))) void guitar_effects (
     ap_axis<32,2,5,6> tmp_out;
     int tmp_int;
     axilite_out = 0;
+    debug_output = wah_coeffs[0][0];
     int current_sample = 0;
 
-    VITIS_LOOP_83_2: while(1) {
+    VITIS_LOOP_88_2: while(1) {
+
         INPUT.read(tmp);
         tmp_int = tmp.data.to_int();
 
@@ -26948,7 +26954,7 @@ __attribute__((sdx_kernel("guitar_effects", 0))) void guitar_effects (
         if (control & 0b0001) {
 
          axilite_out = axilite_out | 0b0001;
-         tmp_int = wah(tmp_int, tempo, current_sample, wah_buffer_index, wah_values_buffer, wah_coeffs);
+         tmp_int = wah(tmp_int, tempo, current_sample, wah_buffer_index, wah_values_buffer, wah_coeffs, debug_output);
         }
 
         current_sample++;
@@ -27052,7 +27058,7 @@ int delay(int input, int delay_samples, float delay_mult, int delay_buffer[88200
     return output;
 }
 
-int wah(int input, int tempo, int current_sample, int &wah_buffer_index, int wah_values_buffer[100], wah_mult bandpass_coeffs[20][100]) {
+int wah(int input, int tempo, int current_sample, int &wah_buffer_index, int wah_values_buffer[100], wah_mult bandpass_coeffs[20][100], wah_mult &debug) {
 
 
 
@@ -27067,12 +27073,15 @@ int wah(int input, int tempo, int current_sample, int &wah_buffer_index, int wah
 
 
 
+
+
     int result;
     WAH_LOOP : for (int i = 0; i < 100; i++) {
 
         int coeff_index = (wah_buffer_index - i) % 100;
         result += (int)(wah_values_buffer[coeff_index] * bandpass_coeffs[control_signal][i]);
     }
+    debug = bandpass_coeffs[control_signal][0];
 
     return result;
 }

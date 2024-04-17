@@ -40,7 +40,9 @@ module guitar_effects_control_r_s_axi
     output wire [31:0]                   delay_mult,
     output wire [31:0]                   delay_samples,
     output wire [31:0]                   tempo,
-    output wire [63:0]                   wah_coeffs
+    output wire [63:0]                   wah_coeffs,
+    input  wire [15:0]                   debug_output,
+    input  wire                          debug_output_ap_vld
 );
 //------------------------Address Info-------------------
 // 0x00 : reserved
@@ -86,6 +88,12 @@ module guitar_effects_control_r_s_axi
 // 0x6c : Data signal of wah_coeffs
 //        bit 31~0 - wah_coeffs[63:32] (Read/Write)
 // 0x70 : reserved
+// 0x74 : Data signal of debug_output
+//        bit 15~0 - debug_output[15:0] (Read)
+//        others   - reserved
+// 0x78 : Control signal of debug_output
+//        bit 0  - debug_output_ap_vld (Read/COR)
+//        others - reserved
 // (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
 //------------------------Parameter----------------------
@@ -113,6 +121,8 @@ localparam
     ADDR_WAH_COEFFS_DATA_0                 = 7'h68,
     ADDR_WAH_COEFFS_DATA_1                 = 7'h6c,
     ADDR_WAH_COEFFS_CTRL                   = 7'h70,
+    ADDR_DEBUG_OUTPUT_DATA_0               = 7'h74,
+    ADDR_DEBUG_OUTPUT_CTRL                 = 7'h78,
     WRIDLE                                 = 2'd0,
     WRDATA                                 = 2'd1,
     WRRESP                                 = 2'd2,
@@ -147,6 +157,8 @@ localparam
     reg  [31:0]                   int_delay_samples = 'b0;
     reg  [31:0]                   int_tempo = 'b0;
     reg  [63:0]                   int_wah_coeffs = 'b0;
+    reg                           int_debug_output_ap_vld;
+    reg  [15:0]                   int_debug_output = 'b0;
 
 //------------------------Instantiation------------------
 
@@ -277,6 +289,12 @@ always @(posedge ACLK) begin
                 end
                 ADDR_WAH_COEFFS_DATA_1: begin
                     rdata <= int_wah_coeffs[63:32];
+                end
+                ADDR_DEBUG_OUTPUT_DATA_0: begin
+                    rdata <= int_debug_output[15:0];
+                end
+                ADDR_DEBUG_OUTPUT_CTRL: begin
+                    rdata[0] <= int_debug_output_ap_vld;
                 end
             endcase
         end
@@ -424,6 +442,28 @@ always @(posedge ACLK) begin
     else if (ACLK_EN) begin
         if (w_hs && waddr == ADDR_WAH_COEFFS_DATA_1)
             int_wah_coeffs[63:32] <= (WDATA[31:0] & wmask) | (int_wah_coeffs[63:32] & ~wmask);
+    end
+end
+
+// int_debug_output
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_debug_output <= 0;
+    else if (ACLK_EN) begin
+        if (debug_output_ap_vld)
+            int_debug_output <= debug_output;
+    end
+end
+
+// int_debug_output_ap_vld
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_debug_output_ap_vld <= 1'b0;
+    else if (ACLK_EN) begin
+        if (debug_output_ap_vld)
+            int_debug_output_ap_vld <= 1'b1;
+        else if (ar_hs && raddr == ADDR_DEBUG_OUTPUT_CTRL)
+            int_debug_output_ap_vld <= 1'b0; // clear on read
     end
 end
 

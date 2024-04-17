@@ -1,15 +1,15 @@
 INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2022.1/bin/unwrapped/win64.o/vitis_hls.exe'
-INFO: [HLS 200-10] For user 'du.kad' on host 'wfxb07b250a366d' (Windows NT_amd64 version 6.2) on Thu Apr 11 21:35:47 -0400 2024
+INFO: [HLS 200-10] For user 'du.kad' on host 'wfxb07b250a366d' (Windows NT_amd64 version 6.2) on Tue Apr 16 21:49:59 -0400 2024
 INFO: [HLS 200-10] In directory 'C:/EECE4632FinalProject/guitar_effects_cpp'
 Sourcing Tcl script 'C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/export.tcl'
 INFO: [HLS 200-1510] Running: source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/export.tcl
 INFO: [HLS 200-1510] Running: open_project Guitar_Effects 
 INFO: [HLS 200-10] Opening project 'C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects'.
 INFO: [HLS 200-1510] Running: set_top guitar_effects 
-INFO: [HLS 200-1510] Running: add_files guitar_effects.cpp 
-INFO: [HLS 200-10] Adding design file 'guitar_effects.cpp' to the project
 INFO: [HLS 200-1510] Running: add_files guitar_effects.h 
 INFO: [HLS 200-10] Adding design file 'guitar_effects.h' to the project
+INFO: [HLS 200-1510] Running: add_files guitar_effects.cpp 
+INFO: [HLS 200-10] Adding design file 'guitar_effects.cpp' to the project
 INFO: [HLS 200-1510] Running: add_files -tb guitar_effects_tb.cpp -cflags -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
 INFO: [HLS 200-10] Adding test bench file 'guitar_effects_tb.cpp' to the project
 INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
@@ -38,7 +38,6 @@ INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 
 source run_ippack.tcl -notrace
-create_project: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1637.574 ; gain = 0.000
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.1/data/ip'.
@@ -69,7 +68,7 @@ INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'guitar_effects_si
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.1/data/ip'.
-INFO: [Common 17-206] Exiting Vivado at Thu Apr 11 21:36:31 2024...
+INFO: [Common 17-206] Exiting Vivado at Tue Apr 16 21:50:42 2024...
 INFO: [HLS 200-802] Generated output file C:/Users/du.kad/Desktop/EECE4632FinalProject/guitar_effects_cpp.zip
-INFO: [HLS 200-111] Finished Command export_design CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 42.269 seconds; current allocated memory: 0.000 MB.
-INFO: [HLS 200-112] Total CPU user time: 4 seconds. Total CPU system time: 2 seconds. Total elapsed time: 44.97 seconds; peak allocated memory: 1.455 GB.
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 40.392 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 4 seconds. Total CPU system time: 2 seconds. Total elapsed time: 43.056 seconds; peak allocated memory: 1.452 GB.

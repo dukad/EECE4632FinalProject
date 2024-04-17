@@ -211,3 +211,23 @@ u64 XGuitar_effects_Get_wah_coeffs(XGuitar_effects *InstancePtr) {
     return Data;
 }
 
+u32 XGuitar_effects_Get_debug_output(XGuitar_effects *InstancePtr) {
+    u32 Data;
+
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    Data = XGuitar_effects_ReadReg(InstancePtr->Control_r_BaseAddress, XGUITAR_EFFECTS_CONTROL_R_ADDR_DEBUG_OUTPUT_DATA);
+    return Data;
+}
+
+u32 XGuitar_effects_Get_debug_output_vld(XGuitar_effects *InstancePtr) {
+    u32 Data;
+
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    Data = XGuitar_effects_ReadReg(InstancePtr->Control_r_BaseAddress, XGUITAR_EFFECTS_CONTROL_R_ADDR_DEBUG_OUTPUT_CTRL);
+    return Data & 0x1;
+}
+

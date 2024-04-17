@@ -47,6 +47,12 @@
 // 0x6c : Data signal of wah_coeffs
 //        bit 31~0 - wah_coeffs[63:32] (Read/Write)
 // 0x70 : reserved
+// 0x74 : Data signal of debug_output
+//        bit 15~0 - debug_output[15:0] (Read)
+//        others   - reserved
+// 0x78 : Control signal of debug_output
+//        bit 0  - debug_output_ap_vld (Read/COR)
+//        others - reserved
 // (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
 #define XGUITAR_EFFECTS_CONTROL_R_ADDR_AXILITE_OUT_DATA                0x10
@@ -72,4 +78,7 @@
 #define XGUITAR_EFFECTS_CONTROL_R_BITS_TEMPO_DATA                      32
 #define XGUITAR_EFFECTS_CONTROL_R_ADDR_WAH_COEFFS_DATA                 0x68
 #define XGUITAR_EFFECTS_CONTROL_R_BITS_WAH_COEFFS_DATA                 64
+#define XGUITAR_EFFECTS_CONTROL_R_ADDR_DEBUG_OUTPUT_DATA               0x74
+#define XGUITAR_EFFECTS_CONTROL_R_BITS_DEBUG_OUTPUT_DATA               16
+#define XGUITAR_EFFECTS_CONTROL_R_ADDR_DEBUG_OUTPUT_CTRL               0x78
 

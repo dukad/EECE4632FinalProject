@@ -2,8 +2,8 @@
 # Vivado v2022.1 (64-bit)
 # SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
 # IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
-# Start of session at: Thu Apr 11 21:35:53 2024
-# Process ID: 17020
+# Start of session at: Tue Apr 16 21:50:05 2024
+# Process ID: 18856
 # Current directory: C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/impl/ip
 # Command line: vivado.exe -notrace -mode batch -source run_ippack.tcl
 # Log file: C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/impl/ip/vivado.log
@@ -11,7 +11,6 @@
 # Running On: WFXB07B250A366D, OS: Windows, CPU Frequency: 2904 MHz, CPU Physical cores: 8, Host memory: 16881 MB
 #-----------------------------------------------------------
 source run_ippack.tcl -notrace
-create_project: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1637.574 ; gain = 0.000
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.1/data/ip'.
@@ -42,4 +41,4 @@ INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'guitar_effects_si
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.1/data/ip'.
-INFO: [Common 17-206] Exiting Vivado at Thu Apr 11 21:36:31 2024...
+INFO: [Common 17-206] Exiting Vivado at Tue Apr 16 21:50:42 2024...

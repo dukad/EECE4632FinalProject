@@ -18,7 +18,7 @@ typedef ap_fixed<16, -16> wah_mult;
 int distortion(int input, int threshold, mult_float clip_factor);
 int compression(int input, int min_threshold, int max_threshold, int zero_threshold, int& current_level, int values_buffer[LPF_FILTER_LENGTH], int &compression_buffer_index, float lpf_coefficients[LPF_FILTER_LENGTH], int current_sample);
 int delay(int input, int delay_samples, float delay_mult, int delay_buffer[DELAY_BUFFER_SIZE], int &delay_buffer_index);
-int wah(int input, int tempo, int current_sample, int &wah_buffer_index, int wah_values_buffer[BANDPASS_FILTER_LENGTH], wah_mult bandpass_coeffs[WAH_BANDPASS_RESOLUTION][BANDPASS_FILTER_LENGTH]);
+int wah(int input, int tempo, int current_sample, int &wah_buffer_index, int wah_values_buffer[BANDPASS_FILTER_LENGTH], wah_mult bandpass_coeffs[WAH_BANDPASS_RESOLUTION][BANDPASS_FILTER_LENGTH], wah_mult &debug);
 
 void guitar_effects (
     hls::stream< ap_axis<32,2,5,6> > &INPUT,
@@ -33,7 +33,8 @@ void guitar_effects (
     float delay_mult,
     int delay_samples,
     int tempo,
-    wah_mult wah_coeffs[WAH_BANDPASS_RESOLUTION][BANDPASS_FILTER_LENGTH]
+    wah_mult wah_coeffs[WAH_BANDPASS_RESOLUTION][BANDPASS_FILTER_LENGTH],
+	wah_mult &debug_output
     ) {
     
     // pragmas for all inputs/outputs
@@ -49,8 +50,11 @@ void guitar_effects (
 	#pragma HLS INTERFACE s_axilite port=delay_samples
 	#pragma HLS INTERFACE s_axilite port=axilite_out
     #pragma HLS INTERFACE s_axilite port=tempo
+	#pragma HLS INTERFACE s_axilite port=debug_output
+	#pragma HLS INTERFACE m_axi depth=2000 port=wah_coeffs
+
 	#pragma HLS INTERFACE ap_ctrl_none port=return
-    #pragma HLS INTERFACE m_axi depth=2000 port=wah_coeffs
+
 
 
     // declare all necessary variables
@@ -78,9 +82,11 @@ void guitar_effects (
     ap_axis<32,2,5,6> tmp_out;
     int tmp_int;
     axilite_out = 0;
+    debug_output = wah_coeffs[0][0];
     int current_sample = 0;
     // main loop to control all effects
     while(1) {   
+
         INPUT.read(tmp); // store input data to tmp
         tmp_int = tmp.data.to_int(); // convert tmp to int
         // use control input to determine which effect to use
@@ -103,7 +109,7 @@ void guitar_effects (
         if (control & 0b0001) {
             //apply wah function
         	axilite_out = axilite_out | 0b0001;
-        	tmp_int = wah(tmp_int, tempo, current_sample, wah_buffer_index, wah_values_buffer, wah_coeffs);
+        	tmp_int = wah(tmp_int, tempo, current_sample, wah_buffer_index, wah_values_buffer, wah_coeffs, debug_output);
         }
 
         current_sample++; // change the current sample to keep track of
@@ -207,7 +213,7 @@ int delay(int input, int delay_samples, float delay_mult, int delay_buffer[DELAY
     return output;
 }
 
-int wah(int input, int tempo, int current_sample, int &wah_buffer_index, int wah_values_buffer[BANDPASS_FILTER_LENGTH], wah_mult bandpass_coeffs[WAH_BANDPASS_RESOLUTION][BANDPASS_FILTER_LENGTH]) {
+int wah(int input, int tempo, int current_sample, int &wah_buffer_index, int wah_values_buffer[BANDPASS_FILTER_LENGTH], wah_mult bandpass_coeffs[WAH_BANDPASS_RESOLUTION][BANDPASS_FILTER_LENGTH], wah_mult &debug) {
     // apply wah effect
     // taking filter coeffecients from bandpass_coeffs.coe
     // approximate the control signal as a sine wave based on sampling rate and tempo
@@ -219,7 +225,9 @@ int wah(int input, int tempo, int current_sample, int &wah_buffer_index, int wah
 
     // calculate the control signal
     int control_signal = (int)(WAH_BANDPASS_RESOLUTION* (0.5 + 0.5*hls::sin(current_sample*2*3.14159*tempo/FRAME_RATE))); // map sine wave to 0->1 then multiply by bandpass resolution
-
+//    float control_signal_tmp = (WAH_BANDPASS_RESOLUTION*(0.5 + 0.5*hls::sin(current_sample*2*3.14159*tempo/FRAME_RATE))); // map sine wave to 0->1 then multiply by bandpass resolution
+//    std::cout << control_signal_tmp << std::endl;
+//    int control_signal = (int)(control_signal_tmp);
     // based on this control signal (int) use the bandpass filter coefficients to apply a bandpass filter to the input signal
     // this is done by convolving the input signal with the filter coefficients
     int result;
@@ -228,6 +236,7 @@ int wah(int input, int tempo, int current_sample, int &wah_buffer_index, int wah
         int coeff_index = (wah_buffer_index - i) % BANDPASS_FILTER_LENGTH; // get value to index the previous values by, essentially iterate though but loop if needed
         result += (int)(wah_values_buffer[coeff_index] * bandpass_coeffs[control_signal][i]);
     }
+    debug = bandpass_coeffs[control_signal][0];
 
     return result;
 }

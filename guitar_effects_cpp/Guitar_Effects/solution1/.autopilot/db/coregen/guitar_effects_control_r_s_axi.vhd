@@ -43,7 +43,9 @@ port (
     delay_mult            :out  STD_LOGIC_VECTOR(31 downto 0);
     delay_samples         :out  STD_LOGIC_VECTOR(31 downto 0);
     tempo                 :out  STD_LOGIC_VECTOR(31 downto 0);
-    wah_coeffs            :out  STD_LOGIC_VECTOR(63 downto 0)
+    wah_coeffs            :out  STD_LOGIC_VECTOR(63 downto 0);
+    debug_output          :in   STD_LOGIC_VECTOR(15 downto 0);
+    debug_output_ap_vld   :in   STD_LOGIC
 );
 end entity guitar_effects_control_r_s_axi;
 
@@ -91,6 +93,12 @@ end entity guitar_effects_control_r_s_axi;
 -- 0x6c : Data signal of wah_coeffs
 --        bit 31~0 - wah_coeffs[63:32] (Read/Write)
 -- 0x70 : reserved
+-- 0x74 : Data signal of debug_output
+--        bit 15~0 - debug_output[15:0] (Read)
+--        others   - reserved
+-- 0x78 : Control signal of debug_output
+--        bit 0  - debug_output_ap_vld (Read/COR)
+--        others - reserved
 -- (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
 architecture behave of guitar_effects_control_r_s_axi is
@@ -121,6 +129,8 @@ architecture behave of guitar_effects_control_r_s_axi is
     constant ADDR_WAH_COEFFS_DATA_0                 : INTEGER := 16#68#;
     constant ADDR_WAH_COEFFS_DATA_1                 : INTEGER := 16#6c#;
     constant ADDR_WAH_COEFFS_CTRL                   : INTEGER := 16#70#;
+    constant ADDR_DEBUG_OUTPUT_DATA_0               : INTEGER := 16#74#;
+    constant ADDR_DEBUG_OUTPUT_CTRL                 : INTEGER := 16#78#;
     constant ADDR_BITS         : INTEGER := 7;
 
     signal waddr               : UNSIGNED(ADDR_BITS-1 downto 0);
@@ -147,6 +157,8 @@ architecture behave of guitar_effects_control_r_s_axi is
     signal int_delay_samples   : UNSIGNED(31 downto 0) := (others => '0');
     signal int_tempo           : UNSIGNED(31 downto 0) := (others => '0');
     signal int_wah_coeffs      : UNSIGNED(63 downto 0) := (others => '0');
+    signal int_debug_output_ap_vld : STD_LOGIC;
+    signal int_debug_output    : UNSIGNED(15 downto 0) := (others => '0');
 
 
 begin
@@ -288,6 +300,10 @@ begin
                         rdata_data <= RESIZE(int_wah_coeffs(31 downto 0), 32);
                     when ADDR_WAH_COEFFS_DATA_1 =>
                         rdata_data <= RESIZE(int_wah_coeffs(63 downto 32), 32);
+                    when ADDR_DEBUG_OUTPUT_DATA_0 =>
+                        rdata_data <= RESIZE(int_debug_output(15 downto 0), 32);
+                    when ADDR_DEBUG_OUTPUT_CTRL =>
+                        rdata_data(0) <= int_debug_output_ap_vld;
                     when others =>
                         NULL;
                     end case;
@@ -452,6 +468,34 @@ begin
             if (ACLK_EN = '1') then
                 if (w_hs = '1' and waddr = ADDR_WAH_COEFFS_DATA_1) then
                     int_wah_coeffs(63 downto 32) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_wah_coeffs(63 downto 32));
+                end if;
+            end if;
+        end if;
+    end process;
+
+    process (ACLK)
+    begin
+        if (ACLK'event and ACLK = '1') then
+            if (ARESET = '1') then
+                int_debug_output <= (others => '0');
+            elsif (ACLK_EN = '1') then
+                if (debug_output_ap_vld = '1') then
+                    int_debug_output <= UNSIGNED(debug_output);
+                end if;
+            end if;
+        end if;
+    end process;
+
+    process (ACLK)
+    begin
+        if (ACLK'event and ACLK = '1') then
+            if (ARESET = '1') then
+                int_debug_output_ap_vld <= '0';
+            elsif (ACLK_EN = '1') then
+                if (debug_output_ap_vld = '1') then
+                    int_debug_output_ap_vld <= '1';
+                elsif (ar_hs = '1' and raddr = ADDR_DEBUG_OUTPUT_CTRL) then
+                    int_debug_output_ap_vld <= '0'; -- clear on read
                 end if;
             end if;
         end if;

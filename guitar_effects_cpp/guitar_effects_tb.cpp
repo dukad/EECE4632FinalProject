@@ -28,6 +28,7 @@ int main() {
     int delay_samples = 1;
     int tempo = 140;
     wah_mult wah_coeffs[WAH_BANDPASS_RESOLUTION][BANDPASS_FILTER_LENGTH] = {1};
+    wah_mult debug_output;
 
     // Initialize input stream
     for (int i = 0; i < numTestSamples; ++i) {
@@ -43,7 +44,7 @@ int main() {
     // Call your guitar_effects function
     int axilite_out;
     guitar_effects(inputSignal, outputSignal, axilite_out, control, distortion_threshold, distortion_clip_factor,
-                   compression_min_threshold, compression_max_threshold, compression_zero_threshold, delay_mult, delay_samples, tempo, wah_coeffs);
+                   compression_min_threshold, compression_max_threshold, compression_zero_threshold, delay_mult, delay_samples, tempo, wah_coeffs, debug_output);
 
 
 
@@ -51,6 +52,7 @@ int main() {
         ap_axis<32,2,5,6> output = outputSignal.read();
         // print all the output signals
         std::cout << "Output signal: " << output.data << std::endl;
+        std::cout << "Debug: " << debug << std::endl;
         }
     
 }

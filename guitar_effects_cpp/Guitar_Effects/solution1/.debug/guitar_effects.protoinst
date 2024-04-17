@@ -3,7 +3,7 @@
 	"modules": {
 		"guitar_effects": {
 			"proto_instances": {
-				"grp_sin_or_cos_double_s_fu_774/grp_sin_or_cos_double_s_fu_774_activity": {
+				"grp_sin_or_cos_double_s_fu_810/grp_sin_or_cos_double_s_fu_810_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},

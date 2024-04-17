@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'guitar_effects'" level="0">
-<item name = "Date">Thu Apr 11 21:35:01 2024
+<item name = "Date">Tue Apr 16 21:49:36 2024
 </item>
 <item name = "Version">2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)</item>
 <item name = "Project">Guitar_Effects</item>
@@ -38,7 +38,7 @@
 <column name="- Loop 1">441, 441, 1, -, -, 441, no</column>
 <column name="- Loop 2">88200, 88200, 1, -, -, 88200, no</column>
 <column name="- Loop 3">100, 100, 1, -, -, 100, no</column>
-<column name="- VITIS_LOOP_83_2">?, ?, 6 ~ 14162, -, -, ?, no</column>
+<column name="- VITIS_LOOP_88_2">?, ?, 6 ~ 14171, -, -, ?, no</column>
 <column name=" + LPF_Loop">12348, 12348, 28, -, -, 441, no</column>
 <column name=" + WAH_LOOP">1600, 1600, 16, -, -, 100, no</column>
 </table>

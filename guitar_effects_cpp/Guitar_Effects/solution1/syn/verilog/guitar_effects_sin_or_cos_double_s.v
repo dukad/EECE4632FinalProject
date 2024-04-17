@@ -295,7 +295,7 @@ wire   [0:0] results_sign_V_1_fu_1534_p2;
 wire   [0:0] and_ln300_1_fu_1547_p2;
 wire   [0:0] xor_ln300_fu_1553_p2;
 wire   [0:0] or_ln462_fu_1398_p2;
-wire   [10:0] empty_68_fu_1414_p1;
+wire   [10:0] empty_69_fu_1414_p1;
 wire   [0:0] or_ln300_fu_1567_p2;
 wire   [10:0] select_ln300_2_fu_1559_p3;
 wire   [10:0] select_ln300_1_fu_1573_p3;
@@ -1283,7 +1283,7 @@ assign din_exp_V_fu_390_p4 = {{data_V_fu_378_p1[62:52]}};
 
 assign din_sig_V_fu_400_p1 = data_V_fu_378_p1[51:0];
 
-assign empty_68_fu_1414_p1 = newexp_fu_1379_p2[10:0];
+assign empty_69_fu_1414_p1 = newexp_fu_1379_p2[10:0];
 
 assign fourth_order_double_sin_cos_K0_V_address0 = zext_ln541_reg_1778;
 
@@ -1461,7 +1461,7 @@ assign ret_V_8_fu_934_p2 = (ret_V_7_fu_925_p2 + zext_ln1347_fu_931_p1);
 
 assign ret_V_fu_943_p2 = (ret_V_8_fu_934_p2 + zext_ln1347_1_fu_940_p1);
 
-assign select_ln300_1_fu_1573_p3 = ((or_ln462_fu_1398_p2[0:0] == 1'b1) ? 11'd0 : empty_68_fu_1414_p1);
+assign select_ln300_1_fu_1573_p3 = ((or_ln462_fu_1398_p2[0:0] == 1'b1) ? 11'd0 : empty_69_fu_1414_p1);
 
 assign select_ln300_2_fu_1559_p3 = ((xor_ln300_fu_1553_p2[0:0] == 1'b1) ? 11'd2047 : 11'd0);
 

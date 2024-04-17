@@ -61,10 +61,10 @@ guitar_effects_design_xbar_6_sc::guitar_effects_design_xbar_6_sc(const sc_core::
 
   // initialize module
     xsc::common_cpp::properties model_param_props;
-    model_param_props.addLong("C_NUM_SLAVE_SLOTS", "2");
+    model_param_props.addLong("C_NUM_SLAVE_SLOTS", "3");
     model_param_props.addLong("C_NUM_MASTER_SLOTS", "1");
-    model_param_props.addLong("C_AXI_ID_WIDTH", "1");
-    model_param_props.addLong("C_AXI_ADDR_WIDTH", "32");
+    model_param_props.addLong("C_AXI_ID_WIDTH", "2");
+    model_param_props.addLong("C_AXI_ADDR_WIDTH", "64");
     model_param_props.addLong("C_AXI_DATA_WIDTH", "32");
     model_param_props.addLong("C_AXI_PROTOCOL", "0");
     model_param_props.addLong("C_NUM_ADDR_RANGES", "2");
@@ -79,16 +79,16 @@ guitar_effects_design_xbar_6_sc::guitar_effects_design_xbar_6_sc(const sc_core::
     model_param_props.addString("C_FAMILY", "zynq");
     model_param_props.addBitString("C_M_AXI_BASE_ADDR", "00000000000000000000000000000000111111000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000", 128);
     model_param_props.addBitString("C_M_AXI_ADDR_WIDTH", "0000000000000000000000000001100000000000000000000000000000011101", 64);
-    model_param_props.addBitString("C_S_AXI_BASE_ID", "0000000000000000000000000000000100000000000000000000000000000000", 64);
-    model_param_props.addBitString("C_S_AXI_THREAD_ID_WIDTH", "0000000000000000000000000000000000000000000000000000000000000000", 64);
+    model_param_props.addBitString("C_S_AXI_BASE_ID", "000000000000000000000000000000100000000000000000000000000000000100000000000000000000000000000000", 96);
+    model_param_props.addBitString("C_S_AXI_THREAD_ID_WIDTH", "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000", 96);
     model_param_props.addBitString("C_M_AXI_WRITE_CONNECTIVITY", "00000000000000000000000000000010", 32);
-    model_param_props.addBitString("C_M_AXI_READ_CONNECTIVITY", "00000000000000000000000000000001", 32);
-    model_param_props.addBitString("C_S_AXI_SINGLE_THREAD", "0000000000000000000000000000000000000000000000000000000000000000", 64);
-    model_param_props.addBitString("C_S_AXI_WRITE_ACCEPTANCE", "0000000000000000000000000000100000000000000000000000000000000010", 64);
-    model_param_props.addBitString("C_S_AXI_READ_ACCEPTANCE", "0000000000000000000000000000001000000000000000000000000000001000", 64);
+    model_param_props.addBitString("C_M_AXI_READ_CONNECTIVITY", "00000000000000000000000000000101", 32);
+    model_param_props.addBitString("C_S_AXI_SINGLE_THREAD", "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000", 96);
+    model_param_props.addBitString("C_S_AXI_WRITE_ACCEPTANCE", "000000000000000000000000000000100000000000000000000000000000100000000000000000000000000000000010", 96);
+    model_param_props.addBitString("C_S_AXI_READ_ACCEPTANCE", "000000000000000000000000000010000000000000000000000000000000001000000000000000000000000000001000", 96);
     model_param_props.addBitString("C_M_AXI_WRITE_ISSUING", "00000000000000000000000000001000", 32);
     model_param_props.addBitString("C_M_AXI_READ_ISSUING", "00000000000000000000000000001000", 32);
-    model_param_props.addBitString("C_S_AXI_ARB_PRIORITY", "0000000000000000000000000000000000000000000000000000000000000000", 64);
+    model_param_props.addBitString("C_S_AXI_ARB_PRIORITY", "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000", 96);
     model_param_props.addBitString("C_M_AXI_SECURE", "00000000000000000000000000000000", 32);
     model_param_props.addString("COMPONENT_NAME", "guitar_effects_design_xbar_6");
 
@@ -101,6 +101,8 @@ guitar_effects_design_xbar_6_sc::guitar_effects_design_xbar_6_sc(const sc_core::
   initiator_0_wr_socket = mp_impl->initiator_0_wr_socket;
   target_1_rd_socket = mp_impl->target_1_rd_socket;
   target_1_wr_socket = mp_impl->target_1_wr_socket;
+  target_2_rd_socket = mp_impl->target_2_rd_socket;
+  target_2_wr_socket = mp_impl->target_2_wr_socket;
 }
 
 guitar_effects_design_xbar_6_sc::~guitar_effects_design_xbar_6_sc()

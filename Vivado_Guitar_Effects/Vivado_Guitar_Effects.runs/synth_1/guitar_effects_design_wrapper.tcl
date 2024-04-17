@@ -70,6 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 4
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg400-1
 
@@ -93,7 +94,6 @@ add_files C:/EECE4632FinalProject/Wah_coeffs.coe
 read_verilog -library xil_defaultlib C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/hdl/guitar_effects_design_wrapper.v
 add_files C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd
 set_property used_in_implementation false [get_files -all c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_processing_system7_0_4/guitar_effects_design_processing_system7_0_4.xdc]
-set_property used_in_implementation false [get_files -all c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_guitar_effects_0_26/constraints/guitar_effects_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_axi_bram_ctrl_0_2/guitar_effects_design_axi_bram_ctrl_0_2_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_blk_mem_gen_0_0/guitar_effects_design_blk_mem_gen_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_rst_ps7_0_100M_0/guitar_effects_design_rst_ps7_0_100M_0_board.xdc]
@@ -103,9 +103,13 @@ set_property used_in_implementation false [get_files -all c:/EECE4632FinalProjec
 set_property used_in_implementation false [get_files -all c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_axi_dma_0_2/guitar_effects_design_axi_dma_0_2_clocks.xdc]
 set_property used_in_implementation false [get_files -all c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_axi_dma_0_2/guitar_effects_design_axi_dma_0_2_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_xbar_6/guitar_effects_design_xbar_6_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_auto_pc_6/guitar_effects_design_auto_pc_6_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_xbar_7/guitar_effects_design_xbar_7_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_auto_pc_7/guitar_effects_design_auto_pc_7_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_guitar_effects_0_27/constraints/guitar_effects_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_auto_pc_0/guitar_effects_design_auto_pc_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_s02_mmu_0/guitar_effects_design_s02_mmu_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_auto_pc_3/guitar_effects_design_auto_pc_3_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_auto_pc_1/guitar_effects_design_auto_pc_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_auto_pc_2/guitar_effects_design_auto_pc_2_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/guitar_effects_design_ooc.xdc]
 
 OPTRACE "Adding files" END { }

@@ -104,6 +104,8 @@ void XGuitar_effects_Set_tempo(XGuitar_effects *InstancePtr, u32 Data);
 u32 XGuitar_effects_Get_tempo(XGuitar_effects *InstancePtr);
 void XGuitar_effects_Set_wah_coeffs(XGuitar_effects *InstancePtr, u64 Data);
 u64 XGuitar_effects_Get_wah_coeffs(XGuitar_effects *InstancePtr);
+u32 XGuitar_effects_Get_debug_output(XGuitar_effects *InstancePtr);
+u32 XGuitar_effects_Get_debug_output_vld(XGuitar_effects *InstancePtr);
 
 #ifdef __cplusplus
 }

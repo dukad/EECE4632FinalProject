@@ -90,6 +90,14 @@ wah_coeffs {
 	offset 104
 	offset_end 115
 }
+debug_output { 
+	dir O
+	width 16
+	depth 1
+	mode ap_vld
+	offset 116
+	offset_end 123
+}
 }
 dict set axilite_register_dict control_r $port_control_r
 

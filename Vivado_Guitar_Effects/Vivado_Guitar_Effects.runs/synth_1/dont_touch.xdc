@@ -7,9 +7,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==guitar_effe
 # IP: bd/guitar_effects_design/ip/guitar_effects_design_processing_system7_0_4/guitar_effects_design_processing_system7_0_4.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==guitar_effects_design_processing_system7_0_4 || ORIG_REF_NAME==guitar_effects_design_processing_system7_0_4} -quiet] -quiet
 
-# IP: bd/guitar_effects_design/ip/guitar_effects_design_guitar_effects_0_26/guitar_effects_design_guitar_effects_0_26.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==guitar_effects_design_guitar_effects_0_26 || ORIG_REF_NAME==guitar_effects_design_guitar_effects_0_26} -quiet] -quiet
-
 # IP: bd/guitar_effects_design/ip/guitar_effects_design_axi_bram_ctrl_0_2/guitar_effects_design_axi_bram_ctrl_0_2.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==guitar_effects_design_axi_bram_ctrl_0_2 || ORIG_REF_NAME==guitar_effects_design_axi_bram_ctrl_0_2} -quiet] -quiet
 
@@ -28,16 +25,28 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==guitar_effe
 # IP: bd/guitar_effects_design/ip/guitar_effects_design_axi_mem_intercon_4/guitar_effects_design_axi_mem_intercon_4.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==guitar_effects_design_axi_mem_intercon_4 || ORIG_REF_NAME==guitar_effects_design_axi_mem_intercon_4} -quiet] -quiet
 
-# IP: bd/guitar_effects_design/ip/guitar_effects_design_ps7_0_axi_periph_4/guitar_effects_design_ps7_0_axi_periph_4.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==guitar_effects_design_ps7_0_axi_periph_4 || ORIG_REF_NAME==guitar_effects_design_ps7_0_axi_periph_4} -quiet] -quiet
-
-# IP: bd/guitar_effects_design/ip/guitar_effects_design_auto_pc_6/guitar_effects_design_auto_pc_6.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==guitar_effects_design_auto_pc_6 || ORIG_REF_NAME==guitar_effects_design_auto_pc_6} -quiet] -quiet
-
 # IP: bd/guitar_effects_design/ip/guitar_effects_design_xbar_7/guitar_effects_design_xbar_7.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==guitar_effects_design_xbar_7 || ORIG_REF_NAME==guitar_effects_design_xbar_7} -quiet] -quiet
 
-# IP: bd/guitar_effects_design/ip/guitar_effects_design_auto_pc_7/guitar_effects_design_auto_pc_7.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==guitar_effects_design_auto_pc_7 || ORIG_REF_NAME==guitar_effects_design_auto_pc_7} -quiet] -quiet
+# IP: bd/guitar_effects_design/ip/guitar_effects_design_ps7_0_axi_periph_4/guitar_effects_design_ps7_0_axi_periph_4.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==guitar_effects_design_ps7_0_axi_periph_4 || ORIG_REF_NAME==guitar_effects_design_ps7_0_axi_periph_4} -quiet] -quiet
+
+# IP: bd/guitar_effects_design/ip/guitar_effects_design_guitar_effects_0_27/guitar_effects_design_guitar_effects_0_27.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==guitar_effects_design_guitar_effects_0_27 || ORIG_REF_NAME==guitar_effects_design_guitar_effects_0_27} -quiet] -quiet
+
+# IP: bd/guitar_effects_design/ip/guitar_effects_design_auto_pc_0/guitar_effects_design_auto_pc_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==guitar_effects_design_auto_pc_0 || ORIG_REF_NAME==guitar_effects_design_auto_pc_0} -quiet] -quiet
+
+# IP: bd/guitar_effects_design/ip/guitar_effects_design_s02_mmu_0/guitar_effects_design_s02_mmu_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==guitar_effects_design_s02_mmu_0 || ORIG_REF_NAME==guitar_effects_design_s02_mmu_0} -quiet] -quiet
+
+# IP: bd/guitar_effects_design/ip/guitar_effects_design_auto_pc_3/guitar_effects_design_auto_pc_3.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==guitar_effects_design_auto_pc_3 || ORIG_REF_NAME==guitar_effects_design_auto_pc_3} -quiet] -quiet
+
+# IP: bd/guitar_effects_design/ip/guitar_effects_design_auto_pc_1/guitar_effects_design_auto_pc_1.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==guitar_effects_design_auto_pc_1 || ORIG_REF_NAME==guitar_effects_design_auto_pc_1} -quiet] -quiet
+
+# IP: bd/guitar_effects_design/ip/guitar_effects_design_auto_pc_2/guitar_effects_design_auto_pc_2.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==guitar_effects_design_auto_pc_2 || ORIG_REF_NAME==guitar_effects_design_auto_pc_2} -quiet] -quiet
 
 # XDC: c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/guitar_effects_design_ooc.xdc

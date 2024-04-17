@@ -65,13 +65,13 @@
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="0"/>
-    <Option Name="WTModelSimExportSim" Val="0"/>
-    <Option Name="WTQuestaExportSim" Val="0"/>
+    <Option Name="WTXSimExportSim" Val="1"/>
+    <Option Name="WTModelSimExportSim" Val="1"/>
+    <Option Name="WTQuestaExportSim" Val="1"/>
     <Option Name="WTIesExportSim" Val="0"/>
-    <Option Name="WTVcsExportSim" Val="0"/>
-    <Option Name="WTRivieraExportSim" Val="0"/>
-    <Option Name="WTActivehdlExportSim" Val="0"/>
+    <Option Name="WTVcsExportSim" Val="1"/>
+    <Option Name="WTRivieraExportSim" Val="1"/>
+    <Option Name="WTActivehdlExportSim" Val="1"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
     <Option Name="XSimTimeUnit" Val="ns"/>
@@ -95,8 +95,11 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="guitar_effects_design.bd" FileRelPathName="ip/guitar_effects_design_auto_pc_6/guitar_effects_design_auto_pc_6.xci">
-          <Proxy FileSetName="guitar_effects_design_auto_pc_6"/>
+        <CompFileExtendedInfo CompFileName="guitar_effects_design.bd" FileRelPathName="ip/guitar_effects_design_guitar_effects_0_27/guitar_effects_design_guitar_effects_0_27.xci">
+          <Proxy FileSetName="guitar_effects_design_guitar_effects_0_27"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="guitar_effects_design.bd" FileRelPathName="ip/guitar_effects_design_processing_system7_0_4/guitar_effects_design_processing_system7_0_4.xci">
+          <Proxy FileSetName="guitar_effects_design_processing_system7_0_4"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="guitar_effects_design.bd" FileRelPathName="ip/guitar_effects_design_blk_mem_gen_0_0/guitar_effects_design_blk_mem_gen_0_0.xci">
           <Proxy FileSetName="guitar_effects_design_blk_mem_gen_0_0"/>
@@ -104,8 +107,8 @@
         <CompFileExtendedInfo CompFileName="guitar_effects_design.bd" FileRelPathName="ip/guitar_effects_design_xbar_6/guitar_effects_design_xbar_6.xci">
           <Proxy FileSetName="guitar_effects_design_xbar_6"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="guitar_effects_design.bd" FileRelPathName="ip/guitar_effects_design_processing_system7_0_4/guitar_effects_design_processing_system7_0_4.xci">
-          <Proxy FileSetName="guitar_effects_design_processing_system7_0_4"/>
+        <CompFileExtendedInfo CompFileName="guitar_effects_design.bd" FileRelPathName="ip/guitar_effects_design_xbar_7/guitar_effects_design_xbar_7.xci">
+          <Proxy FileSetName="guitar_effects_design_xbar_7"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PGENDIR/sources_1/bd/guitar_effects_design/hdl/guitar_effects_design_wrapper.v">
@@ -188,12 +191,6 @@
         <Option Name="TopAutoSet" Val="TRUE"/>
       </Config>
     </FileSet>
-    <FileSet Name="guitar_effects_design_auto_pc_6" Type="BlockSrcs" RelSrcDir="$PSRCDIR/guitar_effects_design_auto_pc_6" RelGenDir="$PGENDIR/guitar_effects_design_auto_pc_6">
-      <Config>
-        <Option Name="TopModule" Val="guitar_effects_design_auto_pc_6"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
     <FileSet Name="guitar_effects_design_blk_mem_gen_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/guitar_effects_design_blk_mem_gen_0_0" RelGenDir="$PGENDIR/guitar_effects_design_blk_mem_gen_0_0">
       <Config>
         <Option Name="TopModule" Val="guitar_effects_design_blk_mem_gen_0_0"/>
@@ -209,6 +206,18 @@
     <FileSet Name="guitar_effects_design_processing_system7_0_4" Type="BlockSrcs" RelSrcDir="$PSRCDIR/guitar_effects_design_processing_system7_0_4" RelGenDir="$PGENDIR/guitar_effects_design_processing_system7_0_4">
       <Config>
         <Option Name="TopModule" Val="guitar_effects_design_processing_system7_0_4"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="guitar_effects_design_xbar_7" Type="BlockSrcs" RelSrcDir="$PSRCDIR/guitar_effects_design_xbar_7" RelGenDir="$PGENDIR/guitar_effects_design_xbar_7">
+      <Config>
+        <Option Name="TopModule" Val="guitar_effects_design_xbar_7"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="guitar_effects_design_guitar_effects_0_27" Type="BlockSrcs" RelSrcDir="$PSRCDIR/guitar_effects_design_guitar_effects_0_27" RelGenDir="$PGENDIR/guitar_effects_design_guitar_effects_0_27">
+      <Config>
+        <Option Name="TopModule" Val="guitar_effects_design_guitar_effects_0_27"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -242,23 +251,9 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="guitar_effects_design_auto_pc_6_synth_1" Type="Ft3:Synth" SrcSet="guitar_effects_design_auto_pc_6" Part="xc7z020clg400-1" ConstrsSet="guitar_effects_design_auto_pc_6" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/guitar_effects_design_auto_pc_6_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/guitar_effects_design_auto_pc_6_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/guitar_effects_design_auto_pc_6_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2022"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
     <Run Id="guitar_effects_design_blk_mem_gen_0_0_synth_1" Type="Ft3:Synth" SrcSet="guitar_effects_design_blk_mem_gen_0_0" Part="xc7z020clg400-1" ConstrsSet="guitar_effects_design_blk_mem_gen_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/guitar_effects_design_blk_mem_gen_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/guitar_effects_design_blk_mem_gen_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/guitar_effects_design_blk_mem_gen_0_0_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -268,9 +263,7 @@
     </Run>
     <Run Id="guitar_effects_design_xbar_6_synth_1" Type="Ft3:Synth" SrcSet="guitar_effects_design_xbar_6" Part="xc7z020clg400-1" ConstrsSet="guitar_effects_design_xbar_6" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/guitar_effects_design_xbar_6_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/guitar_effects_design_xbar_6_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/guitar_effects_design_xbar_6_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -279,6 +272,26 @@
       <RQSFiles/>
     </Run>
     <Run Id="guitar_effects_design_processing_system7_0_4_synth_1" Type="Ft3:Synth" SrcSet="guitar_effects_design_processing_system7_0_4" Part="xc7z020clg400-1" ConstrsSet="guitar_effects_design_processing_system7_0_4" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/guitar_effects_design_processing_system7_0_4_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/guitar_effects_design_processing_system7_0_4_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/guitar_effects_design_processing_system7_0_4_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2022"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="guitar_effects_design_xbar_7_synth_1" Type="Ft3:Synth" SrcSet="guitar_effects_design_xbar_7" Part="xc7z020clg400-1" ConstrsSet="guitar_effects_design_xbar_7" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/guitar_effects_design_xbar_7_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/guitar_effects_design_xbar_7_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/guitar_effects_design_xbar_7_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2022"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="guitar_effects_design_guitar_effects_0_27_synth_1" Type="Ft3:Synth" SrcSet="guitar_effects_design_guitar_effects_0_27" Part="xc7z020clg400-1" ConstrsSet="guitar_effects_design_guitar_effects_0_27" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/guitar_effects_design_guitar_effects_0_27_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/guitar_effects_design_guitar_effects_0_27_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/guitar_effects_design_guitar_effects_0_27_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -308,30 +321,9 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="guitar_effects_design_auto_pc_6_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="guitar_effects_design_auto_pc_6" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="guitar_effects_design_auto_pc_6_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/guitar_effects_design_auto_pc_6_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/guitar_effects_design_auto_pc_6_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2022"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
     <Run Id="guitar_effects_design_blk_mem_gen_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="guitar_effects_design_blk_mem_gen_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="guitar_effects_design_blk_mem_gen_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/guitar_effects_design_blk_mem_gen_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/guitar_effects_design_blk_mem_gen_0_0_impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -348,9 +340,7 @@
     </Run>
     <Run Id="guitar_effects_design_xbar_6_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="guitar_effects_design_xbar_6" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="guitar_effects_design_xbar_6_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/guitar_effects_design_xbar_6_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/guitar_effects_design_xbar_6_impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -366,6 +356,40 @@
       <RQSFiles/>
     </Run>
     <Run Id="guitar_effects_design_processing_system7_0_4_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="guitar_effects_design_processing_system7_0_4" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="guitar_effects_design_processing_system7_0_4_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/guitar_effects_design_processing_system7_0_4_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/guitar_effects_design_processing_system7_0_4_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2022"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="guitar_effects_design_xbar_7_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="guitar_effects_design_xbar_7" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="guitar_effects_design_xbar_7_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/guitar_effects_design_xbar_7_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/guitar_effects_design_xbar_7_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2022"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="guitar_effects_design_guitar_effects_0_27_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="guitar_effects_design_guitar_effects_0_27" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="guitar_effects_design_guitar_effects_0_27_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/guitar_effects_design_guitar_effects_0_27_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/guitar_effects_design_guitar_effects_0_27_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022">
           <Desc>Default settings for Implementation.</Desc>
