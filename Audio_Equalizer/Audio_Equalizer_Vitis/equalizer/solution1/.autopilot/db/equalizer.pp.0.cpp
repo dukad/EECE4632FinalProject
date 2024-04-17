@@ -6426,7 +6426,7 @@ typedef ap_axis<32,1,1,1> AXI_VAL;
 typedef int data_t;
 typedef int coef_t;
 typedef int acc_t;
-# 26 "./equalizer.h"
+# 31 "./equalizer.h"
 __attribute__((sdx_kernel("equalizer", 0))) void equalizer(hls::stream<AXI_VAL>& output, coef_t coefs[33], hls::stream<AXI_VAL>& input);
 # 2 "equalizer.cpp" 2
 
@@ -6445,8 +6445,8 @@ __attribute__((sdx_kernel("equalizer", 0))) void equalizer(hls::stream<AXI_VAL>&
 #pragma HLS INTERFACE ap_ctrl_none port=return
 
  int i = 0;
- int coef_scale = 0;
- int num_filters = 0;
+ int j = 0;
+ int k = 0;
 
  acc_t accumulate;
  data_t data;
@@ -6455,81 +6455,27 @@ __attribute__((sdx_kernel("equalizer", 0))) void equalizer(hls::stream<AXI_VAL>&
  AXI_VAL tmp_out;
  static data_t signal_shift_reg[33];
 
+ data_t coef_scale_reg[3];
+
  bool running = true;
 
  int state = 0x0000;
 
- VITIS_LOOP_24_1: while(running){
+ VITIS_LOOP_26_1: while(running){
   input.read(tmp);
 
   switch (state){
    case 0x0000:
-
     if (tmp.data.to_int() == 48879){
-
-     state = 0x0011;
-     i -= 1;
-    }
-    break;
-# 48 "equalizer.cpp"
-   case 0x0011:
-
-
-
-
-
-
-
-    VITIS_LOOP_56_2: while(state == 0x0011){
-     if (tmp.data.to_int() == 43962){
-      state = 0x1000;
-      i = 0;
-      break;
-     }
-
-     coefs[i] = tmp.data.to_int();
-
-     input.read(tmp);
-     i += 1;
-    }
-    break;
-
-   case 0x1000:
-
-
-    accumulate = 0;
-
-    Shift_Accumulate_Loop:
-    for (i = 33 - 1; i > 0; i--){
-#pragma HLS UNROLL
- signal_shift_reg[i] = signal_shift_reg[i - 1];
-     accumulate += signal_shift_reg[i] * coefs[i];
+     state = 0x0010;
     }
 
-    accumulate += tmp.data.to_int() * coefs[0];
-    signal_shift_reg[0] = tmp.data.to_int();
 
-    tmp_out.data = accumulate;
-    tmp_out.keep = tmp.keep;
-    tmp_out.strb = tmp.strb;
-    tmp_out.last = tmp.last;
-    tmp_out.dest = tmp.dest;
-    tmp_out.id = tmp.id;
-    tmp_out.user = tmp.user;
 
-    output.write(tmp_out);
+
 
     break;
+# 108 "equalizer.cpp"
   }
-
-  i += 1;
-
-
-  if (tmp.last){
-   running = false;
-  }
- }
- if (tmp.last){
-  running = false;
  }
 }
