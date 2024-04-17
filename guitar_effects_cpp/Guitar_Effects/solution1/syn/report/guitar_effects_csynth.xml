@@ -9,8 +9,8 @@
 <ProductFamily>zynq</ProductFamily>
 <Part>xc7z020-clg400-1</Part>
 <TopModelName>guitar_effects</TopModelName>
-<TargetClockPeriod>15.00</TargetClockPeriod>
-<ClockUncertainty>4.05</ClockUncertainty>
+<TargetClockPeriod>10.00</TargetClockPeriod>
+<ClockUncertainty>2.70</ClockUncertainty>
 <FlowTarget>vivado</FlowTarget>
 </UserAssignments>
 
@@ -18,7 +18,7 @@
 <PipelineType>no</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
-<EstimatedClockPeriod>10.950</EstimatedClockPeriod>
+<EstimatedClockPeriod>7.300</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
@@ -35,7 +35,7 @@
 <Loop1>
 <TripCount>441</TripCount>
 <Latency>441</Latency>
-<AbsoluteTimeLatency>6615</AbsoluteTimeLatency>
+<AbsoluteTimeLatency>4410</AbsoluteTimeLatency>
 <IterationLatency>1</IterationLatency>
 <InstanceList>
 </InstanceList>
@@ -43,7 +43,7 @@
 <Loop2>
 <TripCount>88200</TripCount>
 <Latency>88200</Latency>
-<AbsoluteTimeLatency>1323000</AbsoluteTimeLatency>
+<AbsoluteTimeLatency>882000</AbsoluteTimeLatency>
 <IterationLatency>1</IterationLatency>
 <InstanceList>
 </InstanceList>
@@ -51,7 +51,7 @@
 <Loop3>
 <TripCount>100</TripCount>
 <Latency>100</Latency>
-<AbsoluteTimeLatency>1500</AbsoluteTimeLatency>
+<AbsoluteTimeLatency>1000</AbsoluteTimeLatency>
 <IterationLatency>1</IterationLatency>
 <InstanceList>
 </InstanceList>
@@ -63,24 +63,16 @@
 <IterationLatency>
 <range>
 <min>6</min>
-<max>14171</max>
+<max>8636</max>
 </range>
 </IterationLatency>
 <InstanceList>
 </InstanceList>
-<LPF_Loop>
-<TripCount>441</TripCount>
-<Latency>12348</Latency>
-<AbsoluteTimeLatency>185220</AbsoluteTimeLatency>
-<IterationLatency>28</IterationLatency>
-<InstanceList>
-</InstanceList>
-</LPF_Loop>
 <WAH_LOOP>
 <TripCount>100</TripCount>
-<Latency>1600</Latency>
-<AbsoluteTimeLatency>24000</AbsoluteTimeLatency>
-<IterationLatency>16</IterationLatency>
+<Latency>1700</Latency>
+<AbsoluteTimeLatency>17000</AbsoluteTimeLatency>
+<IterationLatency>17</IterationLatency>
 <InstanceList>
 </InstanceList>
 </WAH_LOOP>
@@ -92,8 +84,8 @@
 <Resources>
 <BRAM_18K>267</BRAM_18K>
 <DSP>78</DSP>
-<FF>10554</FF>
-<LUT>18673</LUT>
+<FF>14492</FF>
+<LUT>19871</LUT>
 <URAM>0</URAM>
 </Resources>
 <AvailableResources>

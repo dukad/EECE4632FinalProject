@@ -5,8 +5,8 @@
 ############################################################
 open_project Guitar_Effects
 set_top guitar_effects
-add_files guitar_effects.h
 add_files guitar_effects.cpp
+add_files guitar_effects.h
 add_files -tb guitar_effects_tb.cpp -cflags "-Wno-unknown-pragmas" -csimflags "-Wno-unknown-pragmas"
 open_solution "solution1" -flow_target vivado
 set_part {xc7z020-clg400-1}

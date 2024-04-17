@@ -1,13 +1,13 @@
-INFO-FLOW: Workspace C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1 opened at Tue Apr 16 21:47:21 -0400 2024
-Execute     ap_set_clock -name default -period 15 -default=false 
-INFO: [SYN 201-201] Setting up clock 'default' with a period of 15ns.
+INFO-FLOW: Workspace C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1 opened at Wed Apr 17 16:19:44 -0400 2024
+Execute     ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 Execute     set_part xc7z020-clg400-1 
 Execute       create_platform xc7z020-clg400-1 -board  
 DBG:HLSDevice: Trying to load device library: C:/Xilinx/Vitis_HLS/2022.1\lib\win64.o\librdi_hlsvwrap.dll
 DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: C:/Xilinx/Vivado/2022.1/data/parts/arch.xml
 DBG:HLSDevice: init success
 INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
-Command       create_platform done; 1.937 sec.
+Command       create_platform done; 1.938 sec.
 Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/xilinx.gen 
 Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/plb46.gen 
 Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/axi4.gen 
@@ -22,7 +22,7 @@ Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xf
 Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/DSP48/dsp48.gen 
 Execute       ap_part_info -name xc7z020-clg400-1 -data info 
 Execute       config_compile -quiet -complex-mul-dsp=0 
-Command     set_part done; 2.061 sec.
+Command     set_part done; 2.065 sec.
 Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
 INFO: [HLS 200-1505] Using flow_target 'vivado'
 Execute     get_config_interface -m_axi_latency 
@@ -45,7 +45,7 @@ Execute     config_export -output=C:/Users/du.kad/Desktop/EECE4632FinalProject/g
 Execute     send_msg_by_id INFO @200-1464@%s config_export -rtl=verilog 
 INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
 Execute     config_export -rtl=verilog 
-Command   open_solution done; 2.079 sec.
+Command   open_solution done; 2.09 sec.
 Execute   set_part xc7z020-clg400-1 
 INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
 Execute     create_platform xc7z020-clg400-1 -board  
@@ -63,9 +63,9 @@ Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfir
 Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/DSP48/dsp48.gen 
 Execute     ap_part_info -name xc7z020-clg400-1 -data info 
 Execute     config_compile -quiet -complex-mul-dsp=0 
-Command   set_part done; 0.159 sec.
-Execute   create_clock -period 15 -name default 
-INFO: [HLS 200-1510] Running: create_clock -period 15 -name default 
+Command   set_part done; 0.13 sec.
+Execute   create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
 Execute   config_compile -pipeline_loops 0 
 INFO: [HLS 200-1510] Running: config_compile -pipeline_loops 0 
 Execute   config_export -format ip_catalog -output C:/Users/du.kad/Desktop/EECE4632FinalProject/guitar_effects_cpp -rtl verilog 
@@ -88,7 +88,7 @@ Execute     get_config_compile -skip_transform
 Execute     get_config_compile -pre_tcl 
 Execute     get_config_compile -keep_printf 
 Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
-INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.013 seconds; current allocated memory: 1.454 GB.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.012 seconds; current allocated memory: 1.452 GB.
 INFO: [HLS 200-10] Analyzing design file 'guitar_effects.cpp' ... 
 INFO-FLOW: Compiling one TU...
 Execute       get_config_compile -pragma_strict_mode 
@@ -97,40 +97,40 @@ Execute       ap_part_info -name xc7z020-clg400-1 -data info
 INFO-FLOW: Running: GCC PP 39
 INFO-FLOW: Source preprocessing
 Execute       ap_eval exec -ignorestderr C:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/clang guitar_effects.cpp -foptimization-record-file=C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info --sysroot C:/Xilinx/Vitis_HLS/2022.1/tps/mingw/8.3.0/win64.o/nt -fhls -fno-exceptions -E -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-mingw32 -fno-threadsafe-statics -fno-use-cxa-atexit -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot -I C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -I /usr/include/x86_64-linux-gnu -o C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects.pp.0.cpp -hls-platform-db-name=C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/platform.db -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 > C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects.cpp.clang.out.log 2> C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects.cpp.clang.err.log 
-Command       ap_eval done; 0.205 sec.
+Command       ap_eval done; 0.187 sec.
 INFO-FLOW: Done: GCC PP 39 time: 0.2 seconds per iteration
 Execute       set_directive_top guitar_effects -name=guitar_effects 
 Execute       source C:/Xilinx/Vitis_HLS/2022.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
 Execute       source C:/Xilinx/Vitis_HLS/2022.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
 INFO-FLOW: Source syntax check for synthesis
 Execute       ap_eval exec -ignorestderr C:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fsyntax-only -fhls -target fpga64-xilinx-linux-gnu C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects.pp.0.cpp -hls-platform-db-name=C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/platform.db -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 > C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/clang.out.log 2> C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/clang.err.log 
-Command       ap_eval done; 2.524 sec.
+Command       ap_eval done; 2.517 sec.
 Execute       clang_tidy xilinx-systemc-detector -desc systemc-detector C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects.pp.0.cpp std=gnu++14 -target fpga  -directive=C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/.systemc_flag 
 INFO-FLOW: exec C:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/.systemc_flag -fix-errors C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
-Command       clang_tidy done; 2.619 sec.
+Command       clang_tidy done; 2.624 sec.
 INFO-FLOW: Running: clang-tidy CDT preprocess 39
 Execute       clang_tidy xilinx-directive2pragma -desc directive2pragma C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects.pp.0.cpp std=gnu++14 -target fpga  -directive=C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/all.directive.json 
 INFO-FLOW: exec C:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/all.directive.json -fix-errors C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
-Command       clang_tidy done; 2.942 sec.
+Command       clang_tidy done; 2.937 sec.
 Execute       clang_tidy xilinx-remove-assert -desc remove-assert C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects.pp.0.cpp std=gnu++14 -target fpga  
 INFO-FLOW: exec C:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-remove-assert -fix-errors C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
-Command       clang_tidy done; 2.587 sec.
+Command       clang_tidy done; 2.599 sec.
 INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 5.5 seconds per iteration
 INFO-FLOW: Calling xilinx-label-all-loops ... 
 INFO-FLOW: Calling xilinx-aggregate-on-hls-vector ... 
 Execute       clang_tidy -errorcheck -desc loop-label xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects.pp.0.cpp std=gnu++14 -target fpga  
 Execute         ap_eval exec -ignorestderr C:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects.pp.0.cpp.clang-tidy.loop-label.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute -fix-errors C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects.pp.0.cpp.clang-tidy.loop-label.out.log 2> C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects.pp.0.cpp.clang-tidy.loop-label.err.log 
-Command         ap_eval done; 4.709 sec.
+Command         ap_eval done; 4.732 sec.
 Execute         source C:/Xilinx/Vitis_HLS/2022.1/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
-Command       clang_tidy done; 5.083 sec.
+Command       clang_tidy done; 5.099 sec.
 Execute       get_config_dataflow -strict_mode 
 Execute       ap_eval exec -ignorestderr C:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects.pp.0.cpp.xilinx-dataflow-lawyer.diag.yml C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects.pp.0.cpp.xilinx-dataflow-lawyer.out.log 2> C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects.pp.0.cpp.xilinx-dataflow-lawyer.err.log 
-Command       ap_eval done; 2.454 sec.
+Command       ap_eval done; 2.468 sec.
 Execute       ap_part_info -name xc7z020-clg400-1 -data info 
 INFO-FLOW: compiling source code to llvm bc
 Execute       ap_eval exec -ignorestderr C:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects.pp.0.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects.pp.0.cpp -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot -I C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects.bc -hls-platform-db-name=C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/platform.db -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 > C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects.pp.0.cpp.clang.out.log 2> C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects.pp.0.cpp.clang.err.log 
-Command       ap_eval done; 2.587 sec.
-INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 21.307 seconds; current allocated memory: 1.454 GB.
+Command       ap_eval done; 2.572 sec.
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 21.313 seconds; current allocated memory: 1.452 GB.
 INFO-FLOW: Linking Debug ...
 INFO-FLOW: Linking dut bc code.
 Execute       run_link_or_opt -out C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/a.g.ld.0.bc -args  "C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects.g.bc"  
@@ -142,24 +142,24 @@ INFO-FLOW:
 INFO-FLOW: Linking math bc lib
 Execute       run_link_or_opt -out C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/a.g.ld.2.m1.bc -args C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/a.g.ld.1.lower.bc -only-needed C:/Xilinx/Vitis_HLS/2022.1/win64/lib/libhlsm_39.bc C:/Xilinx/Vitis_HLS/2022.1/win64/lib/libhlsmc++_39.bc 
 Execute         ap_eval exec -ignorestderr C:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/llvm-link C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/a.g.ld.1.lower.bc -only-needed C:/Xilinx/Vitis_HLS/2022.1/win64/lib/libhlsm_39.bc C:/Xilinx/Vitis_HLS/2022.1/win64/lib/libhlsmc++_39.bc -o C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/a.g.ld.2.m1.bc > C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.out.log 2> C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.err.log 
-Command         ap_eval done; 2.052 sec.
+Command         ap_eval done; 2.069 sec.
 INFO-FLOW: 
-Command       run_link_or_opt done; 2.054 sec.
+Command       run_link_or_opt done; 2.07 sec.
 Execute       run_link_or_opt -opt -out C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/a.g.ld.3.fpc.bc -args C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=guitar_effects -reflow-float-conversion 
 Execute         ap_eval exec -ignorestderr C:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/a.g.ld.3.fpc.bc.opt.diag.yml C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=guitar_effects -reflow-float-conversion -o C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/a.g.ld.3.fpc.bc > C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/a.g.ld.3.fpc.bc.opt.out.log 2> C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/a.g.ld.3.fpc.bc.opt.err.log 
-Command         ap_eval done; 0.909 sec.
+Command         ap_eval done; 0.908 sec.
 INFO-FLOW: 
-Command       run_link_or_opt done; 0.911 sec.
+Command       run_link_or_opt done; 0.91 sec.
 Execute       run_link_or_opt -out C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/a.g.ld.4.m2.bc -args C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/a.g.ld.3.fpc.bc -only-needed C:/Xilinx/Vitis_HLS/2022.1/win64/lib/libfloatconversion_39.bc 
 Execute         ap_eval exec -ignorestderr C:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/llvm-link C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/a.g.ld.3.fpc.bc -only-needed C:/Xilinx/Vitis_HLS/2022.1/win64/lib/libfloatconversion_39.bc -o C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/a.g.ld.4.m2.bc > C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.out.log 2> C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.err.log 
-Command         ap_eval done; 0.29 sec.
+Command         ap_eval done; 0.305 sec.
 INFO-FLOW: 
-Command       run_link_or_opt done; 0.291 sec.
+Command       run_link_or_opt done; 0.306 sec.
 Execute       run_link_or_opt -opt -out C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/a.g.ld.5.gdce.bc -args C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=guitar_effects 
 Execute         ap_eval exec -ignorestderr C:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/a.g.ld.5.gdce.bc.opt.diag.yml C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=guitar_effects -o C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/a.g.ld.5.gdce.bc > C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/a.g.ld.5.gdce.bc.opt.out.log 2> C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/a.g.ld.5.gdce.bc.opt.err.log 
-Command         ap_eval done; 0.28 sec.
+Command         ap_eval done; 0.285 sec.
 INFO-FLOW: 
-Command       run_link_or_opt done; 0.283 sec.
+Command       run_link_or_opt done; 0.288 sec.
 Execute       get_solution -flow_target 
 Execute       get_config_export -xo 
 Execute       get_config_export -format 
@@ -203,7 +203,7 @@ Execute       is_m_axi_addr64
 Execute       get_clock_period -ns -default 
 INFO-FLOW: Doing LTO.
 Execute       ap_eval exec -ignorestderr C:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/a.g.ld.0.bc.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fhls -mllvm -hls-top-function-name=guitar_effects -mllvm -hls-db-dir -mllvm C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db -emit-llvm -c -target fpga64-xilinx-none -mllvm -xcl-xmlinfo=C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/kernel.internal.xml -mllvm -top-io-mapping-info=C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/top-io-fe.xml -mllvm -hls-bitcode-version=3.1 -mllvm -reflow-enable-slave-interface-default-setting=true -mllvm -gen-kernel-xml=false -mllvm -default-maxi-offset=slave -mllvm -maxi-latency=0 -mllvm -hls-maxi-data-size-in-bits=8 -mllvm -hls-maxi-max-data-size-in-bits=1024 -mllvm -hls-max-widen-size-in-bits=0 -mllvm -xcl-kernel-max-mem-ports=0 -mllvm -maxi-read-trans=16 -mllvm -maxi-write-trans=16 -mllvm -maxi-read-burst-len=16 -mllvm -maxi-write-burst-len=16 -mllvm -reflow-enable-saxi-64bits=0 -mllvm -reflow-basic-block-instr-threshold=200000 -mllvm -reflow-auto-pipeline-threshold=0 -mllvm -assume-maxi-align=0 -mllvm -no-unaligned-maxi-accesses -mllvm -reflow-pipeline-style-llvm-setting=2 -mllvm -reflow-enable-dataflow-strict-mode-checking=1 -mllvm -reflow-auto-array-partition-mode=default -mllvm -reflow-enable-auto-array-partition=true -mllvm -reflow-enable-auto-parallel-performance-driven=true -mllvm -reflow-enable-partition-for-automation=true -mllvm -reflow-aggregate-bitwidth-threshold=4096 -mllvm -hls -mllvm -disable-inlined-alloca-merging=true -x ir C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/a.g.ld.5.gdce.bc -o C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/a.g.lto.bc -hls-platform-db-name=C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/platform.db -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 > C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/a.g.ld.0.bc.clang.out.log 2> C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/a.g.ld.0.bc.clang.err.log 
-Command       ap_eval done; 3.561 sec.
+Command       ap_eval done; 3.567 sec.
 INFO: [HLS 214-131] Inlining function 'ap_fixed_base<60, 1, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base(char const*)' into 'ap_fixed<60, 1, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed(char const*)' (r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed.h:148:67)
 INFO: [HLS 214-131] Inlining function 'ap_fixed<60, 1, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed(char const*)' into '__cxx_global_var_init.644' (r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_hotbm_tables_double.h:143:5)
 INFO: [HLS 214-131] Inlining function 'ap_fixed<60, 1, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed(char const*)' into '__cxx_global_var_init.644' (r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_hotbm_tables_double.h:143:30)
@@ -3008,8 +3008,8 @@ INFO: [HLS 214-131] Inlining function 'ap_int_base<16, true>::RType<($_0)32, tru
 INFO: [HLS 214-131] Inlining function 'ap_fixed_base<48, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::to_ap_int_base(bool) const' into 'ap_fixed_base<48, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::to_int() const' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:1068:89)
 INFO: [HLS 214-131] Inlining function 'ap_int_base<16, true>::to_int() const' into 'ap_fixed_base<48, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::to_int() const' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:1068:106)
 INFO: [HLS 214-131] Inlining function 'ap_fixed_base<48, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::to_int() const' into 'ap_fixed_base<48, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator int() const' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:1243:91)
-INFO: [HLS 214-131] Inlining function 'ap_fixed_base<16, -16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::RType<($_0)32, ($_0)32, true>::mult operator*<16, -16, true, (ap_q_mode)5, (ap_o_mode)3, 0>(int, ap_fixed_base<16, -16, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'wah(int, int, int, int&, int*, ap_fixed<16, -16, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [100], ap_fixed<16, -16, (ap_q_mode)5, (ap_o_mode)3, 0>&)' (guitar_effects.cpp:237:56)
-INFO: [HLS 214-131] Inlining function 'ap_fixed_base<48, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator int() const' into 'wah(int, int, int, int&, int*, ap_fixed<16, -16, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [100], ap_fixed<16, -16, (ap_q_mode)5, (ap_o_mode)3, 0>&)' (guitar_effects.cpp:237:24)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<16, -16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::RType<($_0)32, ($_0)32, true>::mult operator*<16, -16, true, (ap_q_mode)5, (ap_o_mode)3, 0>(int, ap_fixed_base<16, -16, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'wah(int, int, int, int&, int*, ap_fixed<16, -16, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [100], ap_fixed<16, -16, (ap_q_mode)5, (ap_o_mode)3, 0>&)' (guitar_effects.cpp:241:56)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<48, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator int() const' into 'wah(int, int, int, int&, int*, ap_fixed<16, -16, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [100], ap_fixed<16, -16, (ap_q_mode)5, (ap_o_mode)3, 0>&)' (guitar_effects.cpp:241:24)
 INFO: [HLS 214-131] Inlining function 'hls::axis<ap_int<32>, 2ul, 5ul, 6ul>::get_user_ptr()' into 'hls::stream<hls::axis<ap_int<32>, 2ul, 5ul, 6ul>, 0>::write(hls::axis<ap_int<32>, 2ul, 5ul, 6ul> const&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h:304:51)
 INFO: [HLS 214-131] Inlining function 'hls::axis<ap_int<32>, 2ul, 5ul, 6ul>::get_dest_ptr()' into 'hls::stream<hls::axis<ap_int<32>, 2ul, 5ul, 6ul>, 0>::write(hls::axis<ap_int<32>, 2ul, 5ul, 6ul> const&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h:307:26)
 INFO: [HLS 214-131] Inlining function 'hls::axis<ap_int<32>, 2ul, 5ul, 6ul>::get_id_ptr()' into 'hls::stream<hls::axis<ap_int<32>, 2ul, 5ul, 6ul>, 0>::write(hls::axis<ap_int<32>, 2ul, 5ul, 6ul> const&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h:306:68)
@@ -3030,7 +3030,7 @@ INFO: [HLS 214-178] Inlining function 'fp_struct<float>::expv() const' into 'int
 INFO: [HLS 214-178] Inlining function 'fp_struct<float>::__signbit() const' into 'int generic_cast_IEEE754<int, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)' (r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:12:0)
 INFO: [HLS 214-178] Inlining function 'int generic_cast_IEEE754<int, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)' into 'int generic_cast_IEEE754<int, float>(float, bool)' (r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:116:0)
 INFO: [HLS 214-178] Inlining function 'int generic_cast_IEEE754<int, float>(float, bool)' into '__hls_fptosi_float_i32' (r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/src/lib_floatconversion.cpp:51:0)
-INFO: [HLS 214-178] Inlining function '__hls_fptosi_float_i32' into 'delay(int, int, float, int*, int&)' (guitar_effects.cpp:204:0)
+INFO: [HLS 214-178] Inlining function '__hls_fptosi_float_i32' into 'delay(int, int, float, int*, int&)' (guitar_effects.cpp:207:0)
 INFO: [HLS 214-178] Inlining function 'fp_struct<double>::fp_struct(double)' into 'void range_redux_payne_hanek_hotbm<61, double, 63, 63>(double, ap_uint<3>&, ap_ufixed<63, 0, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<63, 0, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_int<fp_struct<double>::EXP_BITS>&)' (r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_range_redux.h:466:0)
 INFO: [HLS 214-178] Inlining function 'fp_struct<double>::expv() const' into 'void range_redux_payne_hanek_hotbm<61, double, 63, 63>(double, ap_uint<3>&, ap_ufixed<63, 0, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<63, 0, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_int<fp_struct<double>::EXP_BITS>&)' (r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_range_redux.h:466:0)
 INFO: [HLS 214-178] Inlining function 'ap_uint<(((2) * ((52) + (1))) + (61)) + (3)> table_lookup_4oPi_hotbm<52, 61>(int, double)' into 'void range_redux_payne_hanek_hotbm<61, double, 63, 63>(double, ap_uint<3>&, ap_ufixed<63, 0, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<63, 0, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_int<fp_struct<double>::EXP_BITS>&)' (r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_range_redux.h:466:0)
@@ -3053,8 +3053,8 @@ INFO: [HLS 214-178] Inlining function 'fp_struct<double>::expv() const' into 'in
 INFO: [HLS 214-178] Inlining function 'fp_struct<double>::__signbit() const' into 'int generic_cast_IEEE754<int, (ap_q_mode)6, double>(double, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)' (r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:12:0)
 INFO: [HLS 214-178] Inlining function 'int generic_cast_IEEE754<int, (ap_q_mode)6, double>(double, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)' into 'int generic_cast_IEEE754<int, double>(double, bool)' (r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:116:0)
 INFO: [HLS 214-178] Inlining function 'int generic_cast_IEEE754<int, double>(double, bool)' into '__hls_fptosi_double_i32' (r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/src/lib_floatconversion.cpp:55:0)
-INFO: [HLS 214-178] Inlining function 'hls::sin(double)' into 'wah(int, int, int, int&, int*, ap_fixed<16, -16, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [100], ap_fixed<16, -16, (ap_q_mode)5, (ap_o_mode)3, 0>&)' (guitar_effects.cpp:216:0)
-INFO: [HLS 214-178] Inlining function '__hls_fptosi_double_i32' into 'wah(int, int, int, int&, int*, ap_fixed<16, -16, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [100], ap_fixed<16, -16, (ap_q_mode)5, (ap_o_mode)3, 0>&)' (guitar_effects.cpp:216:0)
+INFO: [HLS 214-178] Inlining function 'hls::sin(double)' into 'wah(int, int, int, int&, int*, ap_fixed<16, -16, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [100], ap_fixed<16, -16, (ap_q_mode)5, (ap_o_mode)3, 0>&)' (guitar_effects.cpp:219:0)
+INFO: [HLS 214-178] Inlining function '__hls_fptosi_double_i32' into 'wah(int, int, int, int&, int*, ap_fixed<16, -16, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [100], ap_fixed<16, -16, (ap_q_mode)5, (ap_o_mode)3, 0>&)' (guitar_effects.cpp:219:0)
 INFO: [HLS 214-178] Inlining function 'distortion(int, int, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'guitar_effects(hls::stream<hls::axis<ap_int<32>, 2ul, 5ul, 6ul>, 0>&, hls::stream<hls::axis<ap_int<32>, 2ul, 5ul, 6ul>, 0>&, int&, char, int, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, int, int, int, float, int, int, ap_fixed<16, -16, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [100], ap_fixed<16, -16, (ap_q_mode)5, (ap_o_mode)3, 0>&)' (guitar_effects.cpp:38:0)
 INFO: [HLS 214-178] Inlining function 'compression(int, int, int, int, int&, int*, int&, float*, int)' into 'guitar_effects(hls::stream<hls::axis<ap_int<32>, 2ul, 5ul, 6ul>, 0>&, hls::stream<hls::axis<ap_int<32>, 2ul, 5ul, 6ul>, 0>&, int&, char, int, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, int, int, int, float, int, int, ap_fixed<16, -16, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [100], ap_fixed<16, -16, (ap_q_mode)5, (ap_o_mode)3, 0>&)' (guitar_effects.cpp:38:0)
 INFO: [HLS 214-178] Inlining function 'delay(int, int, float, int*, int&)' into 'guitar_effects(hls::stream<hls::axis<ap_int<32>, 2ul, 5ul, 6ul>, 0>&, hls::stream<hls::axis<ap_int<32>, 2ul, 5ul, 6ul>, 0>&, int&, char, int, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, int, int, int, float, int, int, ap_fixed<16, -16, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [100], ap_fixed<16, -16, (ap_q_mode)5, (ap_o_mode)3, 0>&)' (guitar_effects.cpp:38:0)
@@ -3065,7 +3065,7 @@ INFO: [HLS 214-248] Applying array_partition to '_ZZN6hotbm_10sin_or_cosIdEET_S1
 INFO: [HLS 214-248] Applying array_partition to '_ZZN6hotbm_10sin_or_cosIdEET_S1_bbE10swap_table': Complete partitioning on dimension 1. (r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_hotbm.h:244:0)
 WARNING: [HLS 214-358] Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations. (r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_int_base.h:552:88)
 INFO: [HLS 214-241] Aggregating maxi variable 'wah_coeffs' with compact=none mode in 16-bits (guitar_effects.cpp:38:0)
-INFO: [HLS 214-115] Multiple burst reads of length 100 and bit width 16 in loop 'WAH_LOOP'(guitar_effects.cpp:234:16) has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (guitar_effects.cpp:234:16)
+INFO: [HLS 214-115] Multiple burst reads of length 100 and bit width 16 in loop 'WAH_LOOP'(guitar_effects.cpp:238:16) has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (guitar_effects.cpp:238:16)
 INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.none.s_struct.ap_int<32>s.i32' into 'guitar_effects(hls::stream<hls::axis<ap_int<32>, 2ul, 5ul, 6ul>, 0>&, hls::stream<hls::axis<ap_int<32>, 2ul, 5ul, 6ul>, 0>&, int&, char, int, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, int, int, int, float, int, int, ap_fixed<16, -16, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [100], ap_fixed<16, -16, (ap_q_mode)5, (ap_o_mode)3, 0>&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h:283:5)
 INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i6.s_struct.ap_uint<6>s' into 'guitar_effects(hls::stream<hls::axis<ap_int<32>, 2ul, 5ul, 6ul>, 0>&, hls::stream<hls::axis<ap_int<32>, 2ul, 5ul, 6ul>, 0>&, int&, char, int, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, int, int, int, float, int, int, ap_fixed<16, -16, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [100], ap_fixed<16, -16, (ap_q_mode)5, (ap_o_mode)3, 0>&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h:304:5)
 INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i5.s_struct.ap_uint<5>s' into 'guitar_effects(hls::stream<hls::axis<ap_int<32>, 2ul, 5ul, 6ul>, 0>&, hls::stream<hls::axis<ap_int<32>, 2ul, 5ul, 6ul>, 0>&, int&, char, int, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, int, int, int, float, int, int, ap_fixed<16, -16, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [100], ap_fixed<16, -16, (ap_q_mode)5, (ap_o_mode)3, 0>&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h:304:5)
@@ -3079,26 +3079,26 @@ INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.none.s_struct.ap_uint<1
 INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.none.s_struct.ap_uint<6>s.i6' into 'guitar_effects(hls::stream<hls::axis<ap_int<32>, 2ul, 5ul, 6ul>, 0>&, hls::stream<hls::axis<ap_int<32>, 2ul, 5ul, 6ul>, 0>&, int&, char, int, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, int, int, int, float, int, int, ap_fixed<16, -16, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [100], ap_fixed<16, -16, (ap_q_mode)5, (ap_o_mode)3, 0>&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h:283:5)
 INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.none.s_struct.ap_uint<5>s.i5' into 'guitar_effects(hls::stream<hls::axis<ap_int<32>, 2ul, 5ul, 6ul>, 0>&, hls::stream<hls::axis<ap_int<32>, 2ul, 5ul, 6ul>, 0>&, int&, char, int, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, int, int, int, float, int, int, ap_fixed<16, -16, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [100], ap_fixed<16, -16, (ap_q_mode)5, (ap_o_mode)3, 0>&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h:283:5)
 INFO-FLOW: DBG:PUTS: copy_raw_kernel_xml ap_link_39: kernel.xml not generated: C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/kernel.internal.xml
-INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 59 seconds. CPU system time: 5 seconds. Elapsed time: 101.197 seconds; current allocated memory: 1.454 GB.
-INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.003 seconds; current allocated memory: 1.454 GB.
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 58 seconds. CPU system time: 6 seconds. Elapsed time: 101.301 seconds; current allocated memory: 1.452 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.004 seconds; current allocated memory: 1.452 GB.
 Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
 Execute         cleanup_all_models 
 INFO: [HLS 200-10] Starting code transformations ...
 INFO-FLOW: Running Standard Transforms...
 Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top guitar_effects -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/a.g.0.bc -o C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
-Command         transform done; 1.466 sec.
-INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.544 seconds; current allocated memory: 1.454 GB.
+Command         transform done; 1.428 sec.
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.498 seconds; current allocated memory: 1.452 GB.
 INFO: [HLS 200-10] Checking synthesizability ...
 INFO-FLOW: Checking Synthesizability 1/2..
 Execute         transform -hls -syn-check -check-rec-only -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -array-seg-normalize -instcombine -dce -data-pack -instcombine -dce -inst-simplify -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/a.g.1.bc -o C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/a.g.2.prechk.bc -f 
-INFO: [XFORM 203-602] Inlining function '__hls_fptosi_float_i32' into 'guitar_effects' (guitar_effects.cpp:168) automatically.
-Command         transform done; 1.396 sec.
+INFO: [XFORM 203-602] Inlining function '__hls_fptosi_float_i32' into 'guitar_effects' (guitar_effects.cpp:171) automatically.
+Command         transform done; 1.408 sec.
 INFO-FLOW: Checking Synthesizability 2/2..
 Execute         transform -syn-check C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/a.g.2.prechk.bc -o C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
 WARNING: [SYNCHK 200-23] r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_ref.h:594: variable-indexed range selection may cause suboptimal QoR.
 INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
-Command         transform done; 0.606 sec.
-INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 2.054 seconds; current allocated memory: 1.454 GB.
+Command         transform done; 0.618 sec.
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 2.078 seconds; current allocated memory: 1.452 GB.
 INFO-FLOW: Compiler optimizing ...
 INFO-FLOW: Share syncheck's 1.bc for syn flow: copy C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/a.g.1.bc to C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/a.o.1.bc
 INFO-FLOW: Presyn 1...
@@ -3107,34 +3107,35 @@ INFO: [XFORM 203-102] Automatically partitioning small array 'out_bits.V' (r:/ci
 INFO: [XFORM 203-102] Automatically partitioning small array 'c' (r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_float_utils.h:442) completely based on array size.
 INFO: [XFORM 203-101] Partitioning array 'out_bits.V' (r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_float_utils.h:429) in dimension 1 completely.
 INFO: [XFORM 203-101] Partitioning array 'c' (r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_float_utils.h:442) in dimension 1 completely.
-INFO: [XFORM 203-602] Inlining function '__hls_fptosi_float_i32' into 'guitar_effects' (guitar_effects.cpp:168) automatically.
-Command         transform done; 1.864 sec.
+INFO: [XFORM 203-602] Inlining function '__hls_fptosi_float_i32' into 'guitar_effects' (guitar_effects.cpp:171) automatically.
+Command         transform done; 1.832 sec.
 INFO-FLOW: Presyn 2...
 Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin2 -bitwidthmin2 -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -barrier -norm-name C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/a.o.1.tmp.bc -o C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
 INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:488:31) to (r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_float_utils.h:430:5) in function 'hotbm_::sin_or_cos<double>'... converting 3 basic blocks.
 INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_float_utils.h:448:20) to (r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_hotbm.h:316:5) in function 'hotbm_::sin_or_cos<double>'... converting 8 basic blocks.
-INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (guitar_effects.cpp:233:9) to (guitar_effects.cpp:234:16) in function 'guitar_effects'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (guitar_effects.cpp:237:9) to (guitar_effects.cpp:238:16) in function 'guitar_effects'... converting 3 basic blocks.
 INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (guitar_effects.cpp:142:27) to (guitar_effects.cpp:143:5) in function 'guitar_effects'... converting 3 basic blocks.
 INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (guitar_effects.cpp:144:27) to (guitar_effects.cpp:145:5) in function 'guitar_effects'... converting 3 basic blocks.
-Command         transform done; 0.893 sec.
-INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 3 seconds. CPU system time: 0 seconds. Elapsed time: 2.766 seconds; current allocated memory: 1.454 GB.
+Command         transform done; 0.853 sec.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 2.693 seconds; current allocated memory: 1.452 GB.
 Execute         get_config_compile -enable_auto_rewind 
 Execute         get_config_compile -enable_loop_extract 
 INFO-FLOW: Building ssdm...
 Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -aggr-aa -licm -loop-dep -loop-bound -licm -loop-simplify -loop-sink-hoist -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -deadargelim -dce -canonicalize-dataflow -dce -deadargelim -globaldce -mem2reg -bram-byte-enable -load-elim -read-loop-dep -loop-simplify -loop-extract-inner -directive-preproc -bitwidthmin2 -bitwidthmin2 -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable-spec-prop -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -float-op-raise -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -float-op-raise -fma-raise -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -dyn-mem-reuse -dce -recurrence-min -dce -share-scalar-alloca -deadargelim -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dump-loop-dep-to-ir -check-all-ssdm -cdfg-build C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/a.o.2.bc -o C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_88_2' (guitar_effects.cpp:77:9) in function 'guitar_effects' more than one sub loop.
 INFO: [HLS 200-472] Inferring partial write operation for 'compression_buffer' 
 INFO: [HLS 200-472] Inferring partial write operation for 'delay_buffer' 
 INFO: [HLS 200-472] Inferring partial write operation for 'wah_values_buffer' 
-INFO: [HLS 200-472] Inferring partial write operation for 'compression_buffer' (guitar_effects.cpp:161:45)
-INFO: [HLS 200-472] Inferring partial write operation for 'delay_buffer' (guitar_effects.cpp:210:38)
-INFO: [HLS 200-472] Inferring partial write operation for 'wah_values_buffer' (guitar_effects.cpp:223:38)
-Command         transform done; 1.069 sec.
-INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.071 seconds; current allocated memory: 1.454 GB.
+INFO: [HLS 200-472] Inferring partial write operation for 'compression_buffer' (guitar_effects.cpp:163:45)
+INFO: [HLS 200-472] Inferring partial write operation for 'delay_buffer' (guitar_effects.cpp:213:38)
+INFO: [HLS 200-472] Inferring partial write operation for 'wah_values_buffer' (guitar_effects.cpp:226:38)
+Command         transform done; 1.119 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.127 seconds; current allocated memory: 1.452 GB.
 INFO-FLOW: Finish building internal data model.
-Command       opt_and_import_c done; 7.578 sec.
-Command     elaborate done; 130.181 sec.
+Command       opt_and_import_c done; 7.541 sec.
+Command     elaborate done; 130.25 sec.
 Execute     ap_eval exec zip -j C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/dut.hcp $dbDir/a.o.3.bc $dbDir/${topname}.rtl_wrap.cfg.tcl $dbDir/apatb_${topname}.cpp $dbDir/apatb_${topname}_util.cpp $dbDir/apatb_${topname}_ir.ll $dbDir/mapper_${topname}.cpp $dbDir/top-io-fe.xml $dbDir/kernel.internal.xml $workdir/../hls.app 
-Command     ap_eval done; 0.347 sec.
+Command     ap_eval done; 0.319 sec.
 Execute     autosyn -from_csynth_design=1 
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO-FLOW: Synthesizing C/C++ design ...
@@ -3144,15 +3145,23 @@ WARNING: [SYN 201-103] Legalizing function name 'sin_or_cos<double>' to 'sin_or_
 Execute       get_model_list guitar_effects -filter all-wo-channel -topdown 
 Execute       preproc_iomode -model guitar_effects 
 Execute       preproc_iomode -model sin_or_cos<double> 
+Execute       preproc_iomode -model guitar_effects_Pipeline_LPF_Loop 
 Execute       get_model_list guitar_effects -filter all-wo-channel 
-INFO-FLOW: Model list for configure: sin_or_cos<double> guitar_effects
+INFO-FLOW: Model list for configure: guitar_effects_Pipeline_LPF_Loop sin_or_cos<double> guitar_effects
+INFO-FLOW: Configuring Module : guitar_effects_Pipeline_LPF_Loop ...
+Execute       set_default_model guitar_effects_Pipeline_LPF_Loop 
+Execute       apply_spec_resource_limit guitar_effects_Pipeline_LPF_Loop 
 INFO-FLOW: Configuring Module : sin_or_cos<double> ...
 Execute       set_default_model sin_or_cos<double> 
 Execute       apply_spec_resource_limit sin_or_cos<double> 
 INFO-FLOW: Configuring Module : guitar_effects ...
 Execute       set_default_model guitar_effects 
 Execute       apply_spec_resource_limit guitar_effects 
-INFO-FLOW: Model list for preprocess: sin_or_cos<double> guitar_effects
+INFO-FLOW: Model list for preprocess: guitar_effects_Pipeline_LPF_Loop sin_or_cos<double> guitar_effects
+INFO-FLOW: Preprocessing Module: guitar_effects_Pipeline_LPF_Loop ...
+Execute       set_default_model guitar_effects_Pipeline_LPF_Loop 
+Execute       cdfg_preprocess -model guitar_effects_Pipeline_LPF_Loop 
+Execute       rtl_gen_preprocess guitar_effects_Pipeline_LPF_Loop 
 INFO-FLOW: Preprocessing Module: sin_or_cos<double> ...
 Execute       set_default_model sin_or_cos<double> 
 Execute       cdfg_preprocess -model sin_or_cos<double> 
@@ -3161,7 +3170,37 @@ INFO-FLOW: Preprocessing Module: guitar_effects ...
 Execute       set_default_model guitar_effects 
 Execute       cdfg_preprocess -model guitar_effects 
 Execute       rtl_gen_preprocess guitar_effects 
-INFO-FLOW: Model list for synthesis: sin_or_cos<double> guitar_effects
+INFO-FLOW: Model list for synthesis: guitar_effects_Pipeline_LPF_Loop sin_or_cos<double> guitar_effects
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'guitar_effects_Pipeline_LPF_Loop' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model guitar_effects_Pipeline_LPF_Loop 
+Execute       schedule -model guitar_effects_Pipeline_LPF_Loop 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'LPF_Loop'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 15, Final II = 15, Depth = 34, loop 'LPF_Loop'
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.248 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.881 seconds; current allocated memory: 1.452 GB.
+Execute       syn_report -verbosereport -o C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects_Pipeline_LPF_Loop.verbose.sched.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -o C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects_Pipeline_LPF_Loop.sched.adb -f 
+INFO-FLOW: Finish scheduling guitar_effects_Pipeline_LPF_Loop.
+Execute       set_default_model guitar_effects_Pipeline_LPF_Loop 
+Execute       bind -model guitar_effects_Pipeline_LPF_Loop 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.279 sec.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.376 seconds; current allocated memory: 1.452 GB.
+Execute       syn_report -verbosereport -o C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects_Pipeline_LPF_Loop.verbose.bind.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -o C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects_Pipeline_LPF_Loop.bind.adb -f 
+INFO-FLOW: Finish binding guitar_effects_Pipeline_LPF_Loop.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'sin_or_cos_double_s' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -3169,11 +3208,12 @@ Execute       set_default_model sin_or_cos<double>
 Execute       schedule -model sin_or_cos<double> 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-Command       schedule done; 0.234 sec.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.88 seconds; current allocated memory: 1.454 GB.
+Command       schedule done; 0.242 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.466 seconds; current allocated memory: 1.452 GB.
 Execute       syn_report -verbosereport -o C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/sin_or_cos_double_s.verbose.sched.rpt 
 Execute         AP::get_flow_target_display_name
 Execute           get_solution -flow_target 
+Command       syn_report done; 0.128 sec.
 Execute       db_write -o C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/sin_or_cos_double_s.sched.adb -f 
 INFO-FLOW: Finish scheduling sin_or_cos<double>.
 Execute       set_default_model sin_or_cos<double> 
@@ -3183,12 +3223,12 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-Command       bind done; 0.304 sec.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.422 seconds; current allocated memory: 1.454 GB.
+Command       bind done; 0.321 sec.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.481 seconds; current allocated memory: 1.452 GB.
 Execute       syn_report -verbosereport -o C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/sin_or_cos_double_s.verbose.bind.rpt 
 Execute         AP::get_flow_target_display_name
 Execute           get_solution -flow_target 
-Command       syn_report done; 0.218 sec.
+Command       syn_report done; 0.242 sec.
 Execute       db_write -o C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/sin_or_cos_double_s.bind.adb -f 
 INFO-FLOW: Finish binding sin_or_cos<double>.
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -3198,12 +3238,12 @@ Execute       set_default_model guitar_effects
 Execute       schedule -model guitar_effects 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-Command       schedule done; 0.643 sec.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.039 seconds; current allocated memory: 1.454 GB.
+Command       schedule done; 0.657 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.077 seconds; current allocated memory: 1.452 GB.
 Execute       syn_report -verbosereport -o C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects.verbose.sched.rpt 
 Execute         AP::get_flow_target_display_name
 Execute           get_solution -flow_target 
-Command       syn_report done; 0.679 sec.
+Command       syn_report done; 0.77 sec.
 Execute       db_write -o C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects.sched.adb -f 
 INFO-FLOW: Finish scheduling guitar_effects.
 Execute       set_default_model guitar_effects 
@@ -3213,19 +3253,51 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-Command       bind done; 0.629 sec.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 1.356 seconds; current allocated memory: 1.454 GB.
+Command       bind done; 0.679 sec.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 1.494 seconds; current allocated memory: 1.452 GB.
 Execute       syn_report -verbosereport -o C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects.verbose.bind.rpt 
 Execute         AP::get_flow_target_display_name
 Execute           get_solution -flow_target 
-Command       syn_report done; 0.667 sec.
+Command       syn_report done; 0.707 sec.
 Execute       db_write -o C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects.bind.adb -f 
 INFO-FLOW: Finish binding guitar_effects.
 Execute       get_model_list guitar_effects -filter all-wo-channel 
 INFO-FLOW: Preprocessing for RTLGen ...
+Execute       rtl_gen_preprocess guitar_effects_Pipeline_LPF_Loop 
 Execute       rtl_gen_preprocess sin_or_cos<double> 
 Execute       rtl_gen_preprocess guitar_effects 
-INFO-FLOW: Model list for RTL generation: sin_or_cos<double> guitar_effects
+INFO-FLOW: Model list for RTL generation: guitar_effects_Pipeline_LPF_Loop sin_or_cos<double> guitar_effects
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'guitar_effects_Pipeline_LPF_Loop' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model guitar_effects_Pipeline_LPF_Loop -top_prefix guitar_effects_ -sub_prefix guitar_effects_ -mg_file C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects_Pipeline_LPF_Loop.compgen.tcl 
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'guitar_effects_Pipeline_LPF_Loop' pipeline 'LPF_Loop' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sitofp_32ns_32_6_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'srem_11ns_10ns_9_15_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'guitar_effects_Pipeline_LPF_Loop'.
+Command       create_rtl_model done; 0.343 sec.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.258 seconds; current allocated memory: 1.452 GB.
+Execute       source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects.rtl_wrap.cfg.tcl 
+Execute       gen_rtl guitar_effects_Pipeline_LPF_Loop -style xilinx -f -lang vhdl -o C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/syn/vhdl/guitar_effects_guitar_effects_Pipeline_LPF_Loop 
+Execute       gen_rtl guitar_effects_Pipeline_LPF_Loop -style xilinx -f -lang vlog -o C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/syn/verilog/guitar_effects_guitar_effects_Pipeline_LPF_Loop 
+Execute       syn_report -csynth -model guitar_effects_Pipeline_LPF_Loop -o C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/syn/report/guitar_effects_Pipeline_LPF_Loop_csynth.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       syn_report -rtlxml -model guitar_effects_Pipeline_LPF_Loop -o C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/syn/report/guitar_effects_Pipeline_LPF_Loop_csynth.xml 
+Execute         get_solution -flow_target
+Execute           get_solution -flow_target 
+Execute       syn_report -verbosereport -model guitar_effects_Pipeline_LPF_Loop -o C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects_Pipeline_LPF_Loop.verbose.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -model guitar_effects_Pipeline_LPF_Loop -f -o C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects_Pipeline_LPF_Loop.adb 
+Execute       db_write -model guitar_effects_Pipeline_LPF_Loop -bindview -o C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/design.bindinfo.xml 
+Execute       gen_tb_info guitar_effects_Pipeline_LPF_Loop -p C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db -o C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects_Pipeline_LPF_Loop 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'sin_or_cos_double_s' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -3234,33 +3306,33 @@ Execute       get_config_rtl -module_auto_prefix
 Execute       get_config_rtl -module_prefix 
 Execute       get_config_rtl -module_auto_prefix 
 Execute       create_rtl_model sin_or_cos<double> -top_prefix guitar_effects_ -sub_prefix guitar_effects_ -mg_file C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/sin_or_cos_double_s.compgen.tcl 
-INFO: [RTGEN 206-100] Generating core module 'mul_170s_53ns_170_2_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mul_35ns_25ns_60_1_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mul_42ns_33ns_75_1_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mul_49ns_44s_93_1_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mul_49ns_49ns_98_1_1': 3 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mul_56ns_52s_108_2_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mul_64s_63ns_126_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_170s_53ns_170_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_35ns_25ns_60_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_42ns_33ns_75_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_49ns_44s_93_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_49ns_49ns_98_5_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_56ns_52s_108_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_64s_63ns_126_5_1': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'mux_164_1_1_1': 2 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'mux_42_32_1_1': 2 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'mux_83_1_1_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'sin_or_cos_double_s'.
-Command       create_rtl_model done; 0.675 sec.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.57 seconds; current allocated memory: 1.454 GB.
+Command       create_rtl_model done; 0.678 sec.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.99 seconds; current allocated memory: 1.452 GB.
 Execute       source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects.rtl_wrap.cfg.tcl 
 Execute       gen_rtl sin_or_cos<double> -style xilinx -f -lang vhdl -o C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/syn/vhdl/guitar_effects_sin_or_cos_double_s 
 Execute       gen_rtl sin_or_cos<double> -style xilinx -f -lang vlog -o C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/syn/verilog/guitar_effects_sin_or_cos_double_s 
 Execute       syn_report -csynth -model sin_or_cos<double> -o C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/syn/report/sin_or_cos_double_s_csynth.rpt 
 Execute         AP::get_flow_target_display_name
 Execute           get_solution -flow_target 
-Command       syn_report done; 0.114 sec.
+Command       syn_report done; 0.115 sec.
 Execute       syn_report -rtlxml -model sin_or_cos<double> -o C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/syn/report/sin_or_cos_double_s_csynth.xml 
 Execute         get_solution -flow_target
 Execute           get_solution -flow_target 
 Execute       syn_report -verbosereport -model sin_or_cos<double> -o C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/sin_or_cos_double_s.verbose.rpt 
 Execute         AP::get_flow_target_display_name
 Execute           get_solution -flow_target 
-Command       syn_report done; 0.278 sec.
+Command       syn_report done; 0.297 sec.
 Execute       db_write -model sin_or_cos<double> -f -o C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/sin_or_cos_double_s.adb 
 Execute       db_write -model sin_or_cos<double> -bindview -o C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/design.bindinfo.xml 
 Execute       gen_tb_info sin_or_cos<double> -p C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db -o C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/sin_or_cos_double_s 
@@ -3301,29 +3373,27 @@ INFO: [RTGEN 206-500] Setting interface mode on port 'guitar_effects/wah_coeffs'
 INFO: [RTGEN 206-500] Setting interface mode on port 'guitar_effects/debug_output' to 's_axilite & ap_vld'.
 INFO: [RTGEN 206-500] Setting interface mode on function 'guitar_effects' to 'ap_ctrl_none'.
 INFO: [RTGEN 206-100] Bundling port 'axilite_out', 'control', 'distortion_threshold', 'distortion_clip_factor', 'compression_min_threshold', 'compression_max_threshold', 'compression_zero_threshold', 'delay_mult', 'delay_samples', 'tempo', 'wah_coeffs' and 'debug_output' to AXI-Lite port control_r.
-INFO: [RTGEN 206-100] Generating core module 'dadd_64ns_64ns_64_5_full_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'ddiv_64ns_64ns_64_31_no_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_5_max_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_12_no_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mul_32s_16s_48_1_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mul_32s_8s_40_1_1': 2 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mul_32s_9ns_41_1_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'sitodp_32ns_64_5_no_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'sitofp_32ns_32_4_no_dsp_1': 2 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'srem_11ns_10ns_9_15_seq_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dadd_64ns_64ns_64_7_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'ddiv_64ns_64ns_64_59_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_7_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_16_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_16s_48_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_8s_40_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_9ns_41_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sitodp_32ns_64_6_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sitofp_32ns_32_6_no_dsp_1': 2 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'srem_32ns_10ns_32_36_seq_1': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'srem_32ns_18ns_17_36_seq_1': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'srem_32ns_18ns_32_36_seq_1': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'srem_32ns_8ns_32_36_seq_1': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'srem_9ns_8ns_7_13_seq_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'guitar_effects'.
-Command       create_rtl_model done; 2.816 sec.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 3.566 seconds; current allocated memory: 1.454 GB.
+Command       create_rtl_model done; 2.74 sec.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 3.514 seconds; current allocated memory: 1.452 GB.
 Execute       source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects.rtl_wrap.cfg.tcl 
 Execute       gen_rtl guitar_effects -istop -style xilinx -f -lang vhdl -o C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/syn/vhdl/guitar_effects 
-Command       gen_rtl done; 0.161 sec.
+Command       gen_rtl done; 0.145 sec.
 Execute       gen_rtl guitar_effects -istop -style xilinx -f -lang vlog -o C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/syn/verilog/guitar_effects 
 Execute       syn_report -csynth -model guitar_effects -o C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/syn/report/guitar_effects_csynth.rpt 
 Execute         AP::get_flow_target_display_name
@@ -3334,14 +3404,14 @@ Execute           get_solution -flow_target
 Execute       syn_report -verbosereport -model guitar_effects -o C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects.verbose.rpt 
 Execute         AP::get_flow_target_display_name
 Execute           get_solution -flow_target 
-Command       syn_report done; 0.728 sec.
+Command       syn_report done; 0.771 sec.
 Execute       db_write -model guitar_effects -f -o C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects.adb 
-Command       db_write done; 0.149 sec.
+Command       db_write done; 0.136 sec.
 Execute       db_write -model guitar_effects -bindview -o C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/design.bindinfo.xml 
 Execute       gen_tb_info guitar_effects -p C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db -o C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects 
 Execute       export_constraint_db -f -tool general -o C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects.constraint.tcl 
 Execute       syn_report -designview -model guitar_effects -o C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects.design.xml 
-Command       syn_report done; 0.258 sec.
+Command       syn_report done; 0.262 sec.
 Execute       syn_report -csynthDesign -model guitar_effects -o C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/syn/report/csynth.rpt 
 Execute         AP::get_flow_target_display_name
 Execute           get_solution -flow_target 
@@ -3355,25 +3425,35 @@ Execute       get_config_rtl -module_prefix
 Execute       get_config_rtl -module_prefix 
 Execute       get_config_rtl -module_auto_prefix 
 Execute       sc_get_portdomain guitar_effects 
-INFO-FLOW: Model list for RTL component generation: sin_or_cos<double> guitar_effects
+INFO-FLOW: Model list for RTL component generation: guitar_effects_Pipeline_LPF_Loop sin_or_cos<double> guitar_effects
+INFO-FLOW: Handling components in module [guitar_effects_Pipeline_LPF_Loop] ... 
+Execute       source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects_Pipeline_LPF_Loop.compgen.tcl 
+INFO-FLOW: Found component guitar_effects_fadd_32ns_32ns_32_5_full_dsp_1.
+INFO-FLOW: Append model guitar_effects_fadd_32ns_32ns_32_5_full_dsp_1
+INFO-FLOW: Found component guitar_effects_srem_11ns_10ns_9_15_1.
+INFO-FLOW: Append model guitar_effects_srem_11ns_10ns_9_15_1
+INFO-FLOW: Found component guitar_effects_guitar_effects_Pipeline_LPF_Loop_lpf_coefficients_ROM_AUTO_1R.
+INFO-FLOW: Append model guitar_effects_guitar_effects_Pipeline_LPF_Loop_lpf_coefficients_ROM_AUTO_1R
+INFO-FLOW: Found component guitar_effects_flow_control_loop_pipe_sequential_init.
+INFO-FLOW: Append model guitar_effects_flow_control_loop_pipe_sequential_init
 INFO-FLOW: Handling components in module [sin_or_cos_double_s] ... 
 Execute       source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/sin_or_cos_double_s.compgen.tcl 
-INFO-FLOW: Found component guitar_effects_mul_170s_53ns_170_2_1.
-INFO-FLOW: Append model guitar_effects_mul_170s_53ns_170_2_1
+INFO-FLOW: Found component guitar_effects_mul_170s_53ns_170_5_1.
+INFO-FLOW: Append model guitar_effects_mul_170s_53ns_170_5_1
+INFO-FLOW: Found component guitar_effects_mul_49ns_49ns_98_5_1.
+INFO-FLOW: Append model guitar_effects_mul_49ns_49ns_98_5_1
 INFO-FLOW: Found component guitar_effects_mux_83_1_1_1.
 INFO-FLOW: Append model guitar_effects_mux_83_1_1_1
-INFO-FLOW: Found component guitar_effects_mul_49ns_49ns_98_1_1.
-INFO-FLOW: Append model guitar_effects_mul_49ns_49ns_98_1_1
-INFO-FLOW: Found component guitar_effects_mul_56ns_52s_108_2_1.
-INFO-FLOW: Append model guitar_effects_mul_56ns_52s_108_2_1
-INFO-FLOW: Found component guitar_effects_mul_49ns_44s_93_1_1.
-INFO-FLOW: Append model guitar_effects_mul_49ns_44s_93_1_1
-INFO-FLOW: Found component guitar_effects_mul_42ns_33ns_75_1_1.
-INFO-FLOW: Append model guitar_effects_mul_42ns_33ns_75_1_1
-INFO-FLOW: Found component guitar_effects_mul_35ns_25ns_60_1_1.
-INFO-FLOW: Append model guitar_effects_mul_35ns_25ns_60_1_1
-INFO-FLOW: Found component guitar_effects_mul_64s_63ns_126_2_1.
-INFO-FLOW: Append model guitar_effects_mul_64s_63ns_126_2_1
+INFO-FLOW: Found component guitar_effects_mul_56ns_52s_108_5_1.
+INFO-FLOW: Append model guitar_effects_mul_56ns_52s_108_5_1
+INFO-FLOW: Found component guitar_effects_mul_49ns_44s_93_5_1.
+INFO-FLOW: Append model guitar_effects_mul_49ns_44s_93_5_1
+INFO-FLOW: Found component guitar_effects_mul_42ns_33ns_75_2_1.
+INFO-FLOW: Append model guitar_effects_mul_42ns_33ns_75_2_1
+INFO-FLOW: Found component guitar_effects_mul_35ns_25ns_60_2_1.
+INFO-FLOW: Append model guitar_effects_mul_35ns_25ns_60_2_1
+INFO-FLOW: Found component guitar_effects_mul_64s_63ns_126_5_1.
+INFO-FLOW: Append model guitar_effects_mul_64s_63ns_126_5_1
 INFO-FLOW: Found component guitar_effects_mux_42_32_1_1.
 INFO-FLOW: Append model guitar_effects_mux_42_32_1_1
 INFO-FLOW: Found component guitar_effects_mux_164_1_1_1.
@@ -3394,42 +3474,36 @@ INFO-FLOW: Found component guitar_effects_sin_or_cos_double_s_fourth_order_doubl
 INFO-FLOW: Append model guitar_effects_sin_or_cos_double_s_fourth_order_double_sin_cos_K4_V_ROM_1P_LUTRAM_1R
 INFO-FLOW: Handling components in module [guitar_effects] ... 
 Execute       source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects.compgen.tcl 
-INFO-FLOW: Found component guitar_effects_fadd_32ns_32ns_32_4_full_dsp_1.
-INFO-FLOW: Append model guitar_effects_fadd_32ns_32ns_32_4_full_dsp_1
-INFO-FLOW: Found component guitar_effects_fmul_32ns_32ns_32_3_max_dsp_1.
-INFO-FLOW: Append model guitar_effects_fmul_32ns_32ns_32_3_max_dsp_1
-INFO-FLOW: Found component guitar_effects_fdiv_32ns_32ns_32_12_no_dsp_1.
-INFO-FLOW: Append model guitar_effects_fdiv_32ns_32ns_32_12_no_dsp_1
-INFO-FLOW: Found component guitar_effects_sitofp_32ns_32_4_no_dsp_1.
-INFO-FLOW: Append model guitar_effects_sitofp_32ns_32_4_no_dsp_1
-INFO-FLOW: Found component guitar_effects_dadd_64ns_64ns_64_5_full_dsp_1.
-INFO-FLOW: Append model guitar_effects_dadd_64ns_64ns_64_5_full_dsp_1
-INFO-FLOW: Found component guitar_effects_dmul_64ns_64ns_64_5_max_dsp_1.
-INFO-FLOW: Append model guitar_effects_dmul_64ns_64ns_64_5_max_dsp_1
-INFO-FLOW: Found component guitar_effects_ddiv_64ns_64ns_64_31_no_dsp_1.
-INFO-FLOW: Append model guitar_effects_ddiv_64ns_64ns_64_31_no_dsp_1
-INFO-FLOW: Found component guitar_effects_sitodp_32ns_64_5_no_dsp_1.
-INFO-FLOW: Append model guitar_effects_sitodp_32ns_64_5_no_dsp_1
-INFO-FLOW: Found component guitar_effects_mul_32s_8s_40_1_1.
-INFO-FLOW: Append model guitar_effects_mul_32s_8s_40_1_1
+INFO-FLOW: Found component guitar_effects_fmul_32ns_32ns_32_4_max_dsp_1.
+INFO-FLOW: Append model guitar_effects_fmul_32ns_32ns_32_4_max_dsp_1
+INFO-FLOW: Found component guitar_effects_fdiv_32ns_32ns_32_16_no_dsp_1.
+INFO-FLOW: Append model guitar_effects_fdiv_32ns_32ns_32_16_no_dsp_1
+INFO-FLOW: Found component guitar_effects_sitofp_32ns_32_6_no_dsp_1.
+INFO-FLOW: Append model guitar_effects_sitofp_32ns_32_6_no_dsp_1
+INFO-FLOW: Found component guitar_effects_dadd_64ns_64ns_64_7_full_dsp_1.
+INFO-FLOW: Append model guitar_effects_dadd_64ns_64ns_64_7_full_dsp_1
+INFO-FLOW: Found component guitar_effects_dmul_64ns_64ns_64_7_max_dsp_1.
+INFO-FLOW: Append model guitar_effects_dmul_64ns_64ns_64_7_max_dsp_1
+INFO-FLOW: Found component guitar_effects_ddiv_64ns_64ns_64_59_no_dsp_1.
+INFO-FLOW: Append model guitar_effects_ddiv_64ns_64ns_64_59_no_dsp_1
+INFO-FLOW: Found component guitar_effects_sitodp_32ns_64_6_no_dsp_1.
+INFO-FLOW: Append model guitar_effects_sitodp_32ns_64_6_no_dsp_1
+INFO-FLOW: Found component guitar_effects_mul_32s_8s_40_2_1.
+INFO-FLOW: Append model guitar_effects_mul_32s_8s_40_2_1
 INFO-FLOW: Found component guitar_effects_srem_32ns_10ns_32_36_seq_1.
 INFO-FLOW: Append model guitar_effects_srem_32ns_10ns_32_36_seq_1
-INFO-FLOW: Found component guitar_effects_srem_11ns_10ns_9_15_seq_1.
-INFO-FLOW: Append model guitar_effects_srem_11ns_10ns_9_15_seq_1
 INFO-FLOW: Found component guitar_effects_srem_32ns_18ns_17_36_seq_1.
 INFO-FLOW: Append model guitar_effects_srem_32ns_18ns_17_36_seq_1
 INFO-FLOW: Found component guitar_effects_srem_32ns_18ns_32_36_seq_1.
 INFO-FLOW: Append model guitar_effects_srem_32ns_18ns_32_36_seq_1
 INFO-FLOW: Found component guitar_effects_srem_32ns_8ns_32_36_seq_1.
 INFO-FLOW: Append model guitar_effects_srem_32ns_8ns_32_36_seq_1
-INFO-FLOW: Found component guitar_effects_mul_32s_9ns_41_1_1.
-INFO-FLOW: Append model guitar_effects_mul_32s_9ns_41_1_1
+INFO-FLOW: Found component guitar_effects_mul_32s_9ns_41_2_1.
+INFO-FLOW: Append model guitar_effects_mul_32s_9ns_41_2_1
 INFO-FLOW: Found component guitar_effects_srem_9ns_8ns_7_13_seq_1.
 INFO-FLOW: Append model guitar_effects_srem_9ns_8ns_7_13_seq_1
-INFO-FLOW: Found component guitar_effects_mul_32s_16s_48_1_1.
-INFO-FLOW: Append model guitar_effects_mul_32s_16s_48_1_1
-INFO-FLOW: Found component guitar_effects_lpf_coefficients_ROM_AUTO_1R.
-INFO-FLOW: Append model guitar_effects_lpf_coefficients_ROM_AUTO_1R
+INFO-FLOW: Found component guitar_effects_mul_32s_16s_48_2_1.
+INFO-FLOW: Append model guitar_effects_mul_32s_16s_48_2_1
 INFO-FLOW: Found component guitar_effects_compression_buffer_RAM_AUTO_1R1W.
 INFO-FLOW: Append model guitar_effects_compression_buffer_RAM_AUTO_1R1W
 INFO-FLOW: Found component guitar_effects_delay_buffer_RAM_AUTO_1R1W.
@@ -3468,19 +3542,24 @@ INFO-FLOW: Found component guitar_effects_regslice_both.
 INFO-FLOW: Append model guitar_effects_regslice_both
 INFO-FLOW: Found component guitar_effects_regslice_both.
 INFO-FLOW: Append model guitar_effects_regslice_both
+INFO-FLOW: Append model guitar_effects_Pipeline_LPF_Loop
 INFO-FLOW: Append model sin_or_cos_double_s
 INFO-FLOW: Append model guitar_effects
 INFO-FLOW: Generating RTL model list ...
-INFO-FLOW: All models in this session: guitar_effects_mul_170s_53ns_170_2_1 guitar_effects_mux_83_1_1_1 guitar_effects_mul_49ns_49ns_98_1_1 guitar_effects_mul_56ns_52s_108_2_1 guitar_effects_mul_49ns_44s_93_1_1 guitar_effects_mul_42ns_33ns_75_1_1 guitar_effects_mul_35ns_25ns_60_1_1 guitar_effects_mul_64s_63ns_126_2_1 guitar_effects_mux_42_32_1_1 guitar_effects_mux_164_1_1_1 guitar_effects_mux_164_1_1_1 guitar_effects_sin_or_cos_double_s_ref_4oPi_table_256_V_ROM_AUTO_1R guitar_effects_sin_or_cos_double_s_fourth_order_double_sin_cos_K0_V_ROM_1P_LUTRAM_1R guitar_effects_sin_or_cos_double_s_fourth_order_double_sin_cos_K1_V_ROM_1P_LUTRAM_1R guitar_effects_sin_or_cos_double_s_fourth_order_double_sin_cos_K2_V_ROM_1P_LUTRAM_1R guitar_effects_sin_or_cos_double_s_fourth_order_double_sin_cos_K3_V_ROM_1P_LUTRAM_1R guitar_effects_sin_or_cos_double_s_fourth_order_double_sin_cos_K4_V_ROM_1P_LUTRAM_1R guitar_effects_fadd_32ns_32ns_32_4_full_dsp_1 guitar_effects_fmul_32ns_32ns_32_3_max_dsp_1 guitar_effects_fdiv_32ns_32ns_32_12_no_dsp_1 guitar_effects_sitofp_32ns_32_4_no_dsp_1 guitar_effects_dadd_64ns_64ns_64_5_full_dsp_1 guitar_effects_dmul_64ns_64ns_64_5_max_dsp_1 guitar_effects_ddiv_64ns_64ns_64_31_no_dsp_1 guitar_effects_sitodp_32ns_64_5_no_dsp_1 guitar_effects_mul_32s_8s_40_1_1 guitar_effects_srem_32ns_10ns_32_36_seq_1 guitar_effects_srem_11ns_10ns_9_15_seq_1 guitar_effects_srem_32ns_18ns_17_36_seq_1 guitar_effects_srem_32ns_18ns_32_36_seq_1 guitar_effects_srem_32ns_8ns_32_36_seq_1 guitar_effects_mul_32s_9ns_41_1_1 guitar_effects_srem_9ns_8ns_7_13_seq_1 guitar_effects_mul_32s_16s_48_1_1 guitar_effects_lpf_coefficients_ROM_AUTO_1R guitar_effects_compression_buffer_RAM_AUTO_1R1W guitar_effects_delay_buffer_RAM_AUTO_1R1W guitar_effects_wah_values_buffer_RAM_AUTO_1R1W guitar_effects_gmem_m_axi guitar_effects_control_r_s_axi guitar_effects_regslice_both guitar_effects_regslice_both guitar_effects_regslice_both guitar_effects_regslice_both guitar_effects_regslice_both guitar_effects_regslice_both guitar_effects_regslice_both guitar_effects_regslice_both guitar_effects_regslice_both guitar_effects_regslice_both guitar_effects_regslice_both guitar_effects_regslice_both guitar_effects_regslice_both guitar_effects_regslice_both sin_or_cos_double_s guitar_effects
+INFO-FLOW: All models in this session: guitar_effects_fadd_32ns_32ns_32_5_full_dsp_1 guitar_effects_srem_11ns_10ns_9_15_1 guitar_effects_guitar_effects_Pipeline_LPF_Loop_lpf_coefficients_ROM_AUTO_1R guitar_effects_flow_control_loop_pipe_sequential_init guitar_effects_mul_170s_53ns_170_5_1 guitar_effects_mul_49ns_49ns_98_5_1 guitar_effects_mux_83_1_1_1 guitar_effects_mul_56ns_52s_108_5_1 guitar_effects_mul_49ns_44s_93_5_1 guitar_effects_mul_42ns_33ns_75_2_1 guitar_effects_mul_35ns_25ns_60_2_1 guitar_effects_mul_64s_63ns_126_5_1 guitar_effects_mux_42_32_1_1 guitar_effects_mux_164_1_1_1 guitar_effects_mux_164_1_1_1 guitar_effects_sin_or_cos_double_s_ref_4oPi_table_256_V_ROM_AUTO_1R guitar_effects_sin_or_cos_double_s_fourth_order_double_sin_cos_K0_V_ROM_1P_LUTRAM_1R guitar_effects_sin_or_cos_double_s_fourth_order_double_sin_cos_K1_V_ROM_1P_LUTRAM_1R guitar_effects_sin_or_cos_double_s_fourth_order_double_sin_cos_K2_V_ROM_1P_LUTRAM_1R guitar_effects_sin_or_cos_double_s_fourth_order_double_sin_cos_K3_V_ROM_1P_LUTRAM_1R guitar_effects_sin_or_cos_double_s_fourth_order_double_sin_cos_K4_V_ROM_1P_LUTRAM_1R guitar_effects_fmul_32ns_32ns_32_4_max_dsp_1 guitar_effects_fdiv_32ns_32ns_32_16_no_dsp_1 guitar_effects_sitofp_32ns_32_6_no_dsp_1 guitar_effects_dadd_64ns_64ns_64_7_full_dsp_1 guitar_effects_dmul_64ns_64ns_64_7_max_dsp_1 guitar_effects_ddiv_64ns_64ns_64_59_no_dsp_1 guitar_effects_sitodp_32ns_64_6_no_dsp_1 guitar_effects_mul_32s_8s_40_2_1 guitar_effects_srem_32ns_10ns_32_36_seq_1 guitar_effects_srem_32ns_18ns_17_36_seq_1 guitar_effects_srem_32ns_18ns_32_36_seq_1 guitar_effects_srem_32ns_8ns_32_36_seq_1 guitar_effects_mul_32s_9ns_41_2_1 guitar_effects_srem_9ns_8ns_7_13_seq_1 guitar_effects_mul_32s_16s_48_2_1 guitar_effects_compression_buffer_RAM_AUTO_1R1W guitar_effects_delay_buffer_RAM_AUTO_1R1W guitar_effects_wah_values_buffer_RAM_AUTO_1R1W guitar_effects_gmem_m_axi guitar_effects_control_r_s_axi guitar_effects_regslice_both guitar_effects_regslice_both guitar_effects_regslice_both guitar_effects_regslice_both guitar_effects_regslice_both guitar_effects_regslice_both guitar_effects_regslice_both guitar_effects_regslice_both guitar_effects_regslice_both guitar_effects_regslice_both guitar_effects_regslice_both guitar_effects_regslice_both guitar_effects_regslice_both guitar_effects_regslice_both guitar_effects_Pipeline_LPF_Loop sin_or_cos_double_s guitar_effects
 INFO-FLOW: Generating C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/autopilot.rtl.models.txt file...
-INFO-FLOW: To file: write model guitar_effects_mul_170s_53ns_170_2_1
+INFO-FLOW: To file: write model guitar_effects_fadd_32ns_32ns_32_5_full_dsp_1
+INFO-FLOW: To file: write model guitar_effects_srem_11ns_10ns_9_15_1
+INFO-FLOW: To file: write model guitar_effects_guitar_effects_Pipeline_LPF_Loop_lpf_coefficients_ROM_AUTO_1R
+INFO-FLOW: To file: write model guitar_effects_flow_control_loop_pipe_sequential_init
+INFO-FLOW: To file: write model guitar_effects_mul_170s_53ns_170_5_1
+INFO-FLOW: To file: write model guitar_effects_mul_49ns_49ns_98_5_1
 INFO-FLOW: To file: write model guitar_effects_mux_83_1_1_1
-INFO-FLOW: To file: write model guitar_effects_mul_49ns_49ns_98_1_1
-INFO-FLOW: To file: write model guitar_effects_mul_56ns_52s_108_2_1
-INFO-FLOW: To file: write model guitar_effects_mul_49ns_44s_93_1_1
-INFO-FLOW: To file: write model guitar_effects_mul_42ns_33ns_75_1_1
-INFO-FLOW: To file: write model guitar_effects_mul_35ns_25ns_60_1_1
-INFO-FLOW: To file: write model guitar_effects_mul_64s_63ns_126_2_1
+INFO-FLOW: To file: write model guitar_effects_mul_56ns_52s_108_5_1
+INFO-FLOW: To file: write model guitar_effects_mul_49ns_44s_93_5_1
+INFO-FLOW: To file: write model guitar_effects_mul_42ns_33ns_75_2_1
+INFO-FLOW: To file: write model guitar_effects_mul_35ns_25ns_60_2_1
+INFO-FLOW: To file: write model guitar_effects_mul_64s_63ns_126_5_1
 INFO-FLOW: To file: write model guitar_effects_mux_42_32_1_1
 INFO-FLOW: To file: write model guitar_effects_mux_164_1_1_1
 INFO-FLOW: To file: write model guitar_effects_mux_164_1_1_1
@@ -3490,24 +3569,21 @@ INFO-FLOW: To file: write model guitar_effects_sin_or_cos_double_s_fourth_order_
 INFO-FLOW: To file: write model guitar_effects_sin_or_cos_double_s_fourth_order_double_sin_cos_K2_V_ROM_1P_LUTRAM_1R
 INFO-FLOW: To file: write model guitar_effects_sin_or_cos_double_s_fourth_order_double_sin_cos_K3_V_ROM_1P_LUTRAM_1R
 INFO-FLOW: To file: write model guitar_effects_sin_or_cos_double_s_fourth_order_double_sin_cos_K4_V_ROM_1P_LUTRAM_1R
-INFO-FLOW: To file: write model guitar_effects_fadd_32ns_32ns_32_4_full_dsp_1
-INFO-FLOW: To file: write model guitar_effects_fmul_32ns_32ns_32_3_max_dsp_1
-INFO-FLOW: To file: write model guitar_effects_fdiv_32ns_32ns_32_12_no_dsp_1
-INFO-FLOW: To file: write model guitar_effects_sitofp_32ns_32_4_no_dsp_1
-INFO-FLOW: To file: write model guitar_effects_dadd_64ns_64ns_64_5_full_dsp_1
-INFO-FLOW: To file: write model guitar_effects_dmul_64ns_64ns_64_5_max_dsp_1
-INFO-FLOW: To file: write model guitar_effects_ddiv_64ns_64ns_64_31_no_dsp_1
-INFO-FLOW: To file: write model guitar_effects_sitodp_32ns_64_5_no_dsp_1
-INFO-FLOW: To file: write model guitar_effects_mul_32s_8s_40_1_1
+INFO-FLOW: To file: write model guitar_effects_fmul_32ns_32ns_32_4_max_dsp_1
+INFO-FLOW: To file: write model guitar_effects_fdiv_32ns_32ns_32_16_no_dsp_1
+INFO-FLOW: To file: write model guitar_effects_sitofp_32ns_32_6_no_dsp_1
+INFO-FLOW: To file: write model guitar_effects_dadd_64ns_64ns_64_7_full_dsp_1
+INFO-FLOW: To file: write model guitar_effects_dmul_64ns_64ns_64_7_max_dsp_1
+INFO-FLOW: To file: write model guitar_effects_ddiv_64ns_64ns_64_59_no_dsp_1
+INFO-FLOW: To file: write model guitar_effects_sitodp_32ns_64_6_no_dsp_1
+INFO-FLOW: To file: write model guitar_effects_mul_32s_8s_40_2_1
 INFO-FLOW: To file: write model guitar_effects_srem_32ns_10ns_32_36_seq_1
-INFO-FLOW: To file: write model guitar_effects_srem_11ns_10ns_9_15_seq_1
 INFO-FLOW: To file: write model guitar_effects_srem_32ns_18ns_17_36_seq_1
 INFO-FLOW: To file: write model guitar_effects_srem_32ns_18ns_32_36_seq_1
 INFO-FLOW: To file: write model guitar_effects_srem_32ns_8ns_32_36_seq_1
-INFO-FLOW: To file: write model guitar_effects_mul_32s_9ns_41_1_1
+INFO-FLOW: To file: write model guitar_effects_mul_32s_9ns_41_2_1
 INFO-FLOW: To file: write model guitar_effects_srem_9ns_8ns_7_13_seq_1
-INFO-FLOW: To file: write model guitar_effects_mul_32s_16s_48_1_1
-INFO-FLOW: To file: write model guitar_effects_lpf_coefficients_ROM_AUTO_1R
+INFO-FLOW: To file: write model guitar_effects_mul_32s_16s_48_2_1
 INFO-FLOW: To file: write model guitar_effects_compression_buffer_RAM_AUTO_1R1W
 INFO-FLOW: To file: write model guitar_effects_delay_buffer_RAM_AUTO_1R1W
 INFO-FLOW: To file: write model guitar_effects_wah_values_buffer_RAM_AUTO_1R1W
@@ -3527,6 +3603,7 @@ INFO-FLOW: To file: write model guitar_effects_regslice_both
 INFO-FLOW: To file: write model guitar_effects_regslice_both
 INFO-FLOW: To file: write model guitar_effects_regslice_both
 INFO-FLOW: To file: write model guitar_effects_regslice_both
+INFO-FLOW: To file: write model guitar_effects_Pipeline_LPF_Loop
 INFO-FLOW: To file: write model sin_or_cos_double_s
 INFO-FLOW: To file: write model guitar_effects
 INFO-FLOW: Generating C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/autopilot.rtl.models.tcl file...
@@ -3561,15 +3638,20 @@ Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/ut
 Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfft.gen 
 Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfir.gen 
 Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/DSP48/dsp48.gen 
-INFO-FLOW: DBG:PUTS:   using AESL_AUTOCG::g_clock_period=15.000 (was NA)
-INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::generate_ip_cores gen_sim_model='1' gen_fp_models='0' gen_for_export='0' dstSCDir='' dstVhdlDir='C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/vhdl' dstVlogDir='C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/vlog' tclDir='C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db' modelList='guitar_effects_mul_170s_53ns_170_2_1
+Command       ap_source done; 0.144 sec.
+INFO-FLOW: DBG:PUTS:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
+INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::generate_ip_cores gen_sim_model='1' gen_fp_models='0' gen_for_export='0' dstSCDir='' dstVhdlDir='C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/vhdl' dstVlogDir='C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/vlog' tclDir='C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db' modelList='guitar_effects_fadd_32ns_32ns_32_5_full_dsp_1
+guitar_effects_srem_11ns_10ns_9_15_1
+guitar_effects_guitar_effects_Pipeline_LPF_Loop_lpf_coefficients_ROM_AUTO_1R
+guitar_effects_flow_control_loop_pipe_sequential_init
+guitar_effects_mul_170s_53ns_170_5_1
+guitar_effects_mul_49ns_49ns_98_5_1
 guitar_effects_mux_83_1_1_1
-guitar_effects_mul_49ns_49ns_98_1_1
-guitar_effects_mul_56ns_52s_108_2_1
-guitar_effects_mul_49ns_44s_93_1_1
-guitar_effects_mul_42ns_33ns_75_1_1
-guitar_effects_mul_35ns_25ns_60_1_1
-guitar_effects_mul_64s_63ns_126_2_1
+guitar_effects_mul_56ns_52s_108_5_1
+guitar_effects_mul_49ns_44s_93_5_1
+guitar_effects_mul_42ns_33ns_75_2_1
+guitar_effects_mul_35ns_25ns_60_2_1
+guitar_effects_mul_64s_63ns_126_5_1
 guitar_effects_mux_42_32_1_1
 guitar_effects_mux_164_1_1_1
 guitar_effects_mux_164_1_1_1
@@ -3579,24 +3661,21 @@ guitar_effects_sin_or_cos_double_s_fourth_order_double_sin_cos_K1_V_ROM_1P_LUTRA
 guitar_effects_sin_or_cos_double_s_fourth_order_double_sin_cos_K2_V_ROM_1P_LUTRAM_1R
 guitar_effects_sin_or_cos_double_s_fourth_order_double_sin_cos_K3_V_ROM_1P_LUTRAM_1R
 guitar_effects_sin_or_cos_double_s_fourth_order_double_sin_cos_K4_V_ROM_1P_LUTRAM_1R
-guitar_effects_fadd_32ns_32ns_32_4_full_dsp_1
-guitar_effects_fmul_32ns_32ns_32_3_max_dsp_1
-guitar_effects_fdiv_32ns_32ns_32_12_no_dsp_1
-guitar_effects_sitofp_32ns_32_4_no_dsp_1
-guitar_effects_dadd_64ns_64ns_64_5_full_dsp_1
-guitar_effects_dmul_64ns_64ns_64_5_max_dsp_1
-guitar_effects_ddiv_64ns_64ns_64_31_no_dsp_1
-guitar_effects_sitodp_32ns_64_5_no_dsp_1
-guitar_effects_mul_32s_8s_40_1_1
+guitar_effects_fmul_32ns_32ns_32_4_max_dsp_1
+guitar_effects_fdiv_32ns_32ns_32_16_no_dsp_1
+guitar_effects_sitofp_32ns_32_6_no_dsp_1
+guitar_effects_dadd_64ns_64ns_64_7_full_dsp_1
+guitar_effects_dmul_64ns_64ns_64_7_max_dsp_1
+guitar_effects_ddiv_64ns_64ns_64_59_no_dsp_1
+guitar_effects_sitodp_32ns_64_6_no_dsp_1
+guitar_effects_mul_32s_8s_40_2_1
 guitar_effects_srem_32ns_10ns_32_36_seq_1
-guitar_effects_srem_11ns_10ns_9_15_seq_1
 guitar_effects_srem_32ns_18ns_17_36_seq_1
 guitar_effects_srem_32ns_18ns_32_36_seq_1
 guitar_effects_srem_32ns_8ns_32_36_seq_1
-guitar_effects_mul_32s_9ns_41_1_1
+guitar_effects_mul_32s_9ns_41_2_1
 guitar_effects_srem_9ns_8ns_7_13_seq_1
-guitar_effects_mul_32s_16s_48_1_1
-guitar_effects_lpf_coefficients_ROM_AUTO_1R
+guitar_effects_mul_32s_16s_48_2_1
 guitar_effects_compression_buffer_RAM_AUTO_1R1W
 guitar_effects_delay_buffer_RAM_AUTO_1R1W
 guitar_effects_wah_values_buffer_RAM_AUTO_1R1W
@@ -3616,6 +3695,7 @@ guitar_effects_regslice_both
 guitar_effects_regslice_both
 guitar_effects_regslice_both
 guitar_effects_regslice_both
+guitar_effects_Pipeline_LPF_Loop
 sin_or_cos_double_s
 guitar_effects
 ' expOnly='0'
@@ -3624,6 +3704,15 @@ Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet
 Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
 Execute       source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/global.setting.tcl 
 Execute       source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/global.setting.tcl 
+Execute       source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects_Pipeline_LPF_Loop.compgen.tcl 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+INFO: [RTMG 210-279] Implementing memory 'guitar_effects_guitar_effects_Pipeline_LPF_Loop_lpf_coefficients_ROM_AUTO_1R' using auto ROMs.
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Command       ap_source done; 0.114 sec.
 Execute       source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/sin_or_cos_double_s.compgen.tcl 
 Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
 Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
@@ -3675,15 +3764,8 @@ Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet
 Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
 Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
 Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
-Command       ap_source done; 0.821 sec.
+Command       ap_source done; 0.843 sec.
 Execute       source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects.compgen.tcl 
-Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
-Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
-INFO: [RTMG 210-279] Implementing memory 'guitar_effects_lpf_coefficients_ROM_AUTO_1R' using auto ROMs.
-Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
-Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
-Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
-Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
 INFO: [RTMG 210-278] Implementing memory 'guitar_effects_compression_buffer_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
 Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
 Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
@@ -3694,8 +3776,8 @@ INFO: [RTMG 210-278] Implementing memory 'guitar_effects_wah_values_buffer_RAM_A
 Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
 Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
 Execute         source ./control_r.slave.tcl 
-Command       ap_source done; 0.425 sec.
-INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 3 seconds. CPU system time: 1 seconds. Elapsed time: 3.941 seconds; current allocated memory: 1.454 GB.
+Command       ap_source done; 0.31 sec.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 3 seconds. CPU system time: 1 seconds. Elapsed time: 3.99 seconds; current allocated memory: 1.452 GB.
 INFO-FLOW: DBG:PROC: ::HLSREPORTS::create_csynth_xml bind_info_var='bind_info' RtlSubPrefix='guitar_effects_' outfile=''
 INFO-FLOW: Running: create_csynth_xml read xml data
 INFO-FLOW: Done: create_csynth_xml read xml data time: 0 seconds per iteration
@@ -3877,14 +3959,18 @@ INFO-FLOW: Done: create_csynth_xml config info time: 0.1 seconds per iteration
 INFO-FLOW: Running: create_csynth_xml write xml
 INFO-FLOW: Done: create_csynth_xml write xml time: 0 seconds per iteration
 INFO-FLOW: DBG:PUTS:      create_csynth_xml wrote csynth_xml=C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/syn/report/csynth.xml
-INFO-FLOW: DBG:PROC: ::AP::DESIGN_DATA::generate_json generate_bd_files='0' generate_xo_files='0' modelList='guitar_effects_mul_170s_53ns_170_2_1
+INFO-FLOW: DBG:PROC: ::AP::DESIGN_DATA::generate_json generate_bd_files='0' generate_xo_files='0' modelList='guitar_effects_fadd_32ns_32ns_32_5_full_dsp_1
+guitar_effects_srem_11ns_10ns_9_15_1
+guitar_effects_guitar_effects_Pipeline_LPF_Loop_lpf_coefficients_ROM_AUTO_1R
+guitar_effects_flow_control_loop_pipe_sequential_init
+guitar_effects_mul_170s_53ns_170_5_1
+guitar_effects_mul_49ns_49ns_98_5_1
 guitar_effects_mux_83_1_1_1
-guitar_effects_mul_49ns_49ns_98_1_1
-guitar_effects_mul_56ns_52s_108_2_1
-guitar_effects_mul_49ns_44s_93_1_1
-guitar_effects_mul_42ns_33ns_75_1_1
-guitar_effects_mul_35ns_25ns_60_1_1
-guitar_effects_mul_64s_63ns_126_2_1
+guitar_effects_mul_56ns_52s_108_5_1
+guitar_effects_mul_49ns_44s_93_5_1
+guitar_effects_mul_42ns_33ns_75_2_1
+guitar_effects_mul_35ns_25ns_60_2_1
+guitar_effects_mul_64s_63ns_126_5_1
 guitar_effects_mux_42_32_1_1
 guitar_effects_mux_164_1_1_1
 guitar_effects_mux_164_1_1_1
@@ -3894,24 +3980,21 @@ guitar_effects_sin_or_cos_double_s_fourth_order_double_sin_cos_K1_V_ROM_1P_LUTRA
 guitar_effects_sin_or_cos_double_s_fourth_order_double_sin_cos_K2_V_ROM_1P_LUTRAM_1R
 guitar_effects_sin_or_cos_double_s_fourth_order_double_sin_cos_K3_V_ROM_1P_LUTRAM_1R
 guitar_effects_sin_or_cos_double_s_fourth_order_double_sin_cos_K4_V_ROM_1P_LUTRAM_1R
-guitar_effects_fadd_32ns_32ns_32_4_full_dsp_1
-guitar_effects_fmul_32ns_32ns_32_3_max_dsp_1
-guitar_effects_fdiv_32ns_32ns_32_12_no_dsp_1
-guitar_effects_sitofp_32ns_32_4_no_dsp_1
-guitar_effects_dadd_64ns_64ns_64_5_full_dsp_1
-guitar_effects_dmul_64ns_64ns_64_5_max_dsp_1
-guitar_effects_ddiv_64ns_64ns_64_31_no_dsp_1
-guitar_effects_sitodp_32ns_64_5_no_dsp_1
-guitar_effects_mul_32s_8s_40_1_1
+guitar_effects_fmul_32ns_32ns_32_4_max_dsp_1
+guitar_effects_fdiv_32ns_32ns_32_16_no_dsp_1
+guitar_effects_sitofp_32ns_32_6_no_dsp_1
+guitar_effects_dadd_64ns_64ns_64_7_full_dsp_1
+guitar_effects_dmul_64ns_64ns_64_7_max_dsp_1
+guitar_effects_ddiv_64ns_64ns_64_59_no_dsp_1
+guitar_effects_sitodp_32ns_64_6_no_dsp_1
+guitar_effects_mul_32s_8s_40_2_1
 guitar_effects_srem_32ns_10ns_32_36_seq_1
-guitar_effects_srem_11ns_10ns_9_15_seq_1
 guitar_effects_srem_32ns_18ns_17_36_seq_1
 guitar_effects_srem_32ns_18ns_32_36_seq_1
 guitar_effects_srem_32ns_8ns_32_36_seq_1
-guitar_effects_mul_32s_9ns_41_1_1
+guitar_effects_mul_32s_9ns_41_2_1
 guitar_effects_srem_9ns_8ns_7_13_seq_1
-guitar_effects_mul_32s_16s_48_1_1
-guitar_effects_lpf_coefficients_ROM_AUTO_1R
+guitar_effects_mul_32s_16s_48_2_1
 guitar_effects_compression_buffer_RAM_AUTO_1R1W
 guitar_effects_delay_buffer_RAM_AUTO_1R1W
 guitar_effects_wah_values_buffer_RAM_AUTO_1R1W
@@ -3931,6 +4014,7 @@ guitar_effects_regslice_both
 guitar_effects_regslice_both
 guitar_effects_regslice_both
 guitar_effects_regslice_both
+guitar_effects_Pipeline_LPF_Loop
 sin_or_cos_double_s
 guitar_effects
 ' rtl_lang='both' bootstrap_tcl='false' outdir='' outfilename=''
@@ -3953,6 +4037,7 @@ Execute       get_config_export -ipname
 Execute       get_config_export -taxonomy 
 Execute       get_config_export -description 
 Execute       get_config_export -display_name 
+Execute       source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects_Pipeline_LPF_Loop.tbgen.tcl 
 Execute       source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/sin_or_cos_double_s.tbgen.tcl 
 Execute       source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects.tbgen.tcl 
 Execute       source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/global.setting.tcl 
@@ -3969,15 +4054,15 @@ Execute       source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/s
 Execute       get_config_export -ip_xdc_file 
 Execute       get_config_export -ip_xdc_ooc_file 
 Execute       get_config_debug -directory 
-Execute       source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/impl/misc/guitar_effects_dadd_64ns_64ns_64_5_full_dsp_1_ip.tcl 
-Execute       source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/impl/misc/guitar_effects_ddiv_64ns_64ns_64_31_no_dsp_1_ip.tcl 
-Execute       source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/impl/misc/guitar_effects_dmul_64ns_64ns_64_5_max_dsp_1_ip.tcl 
-Execute       source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/impl/misc/guitar_effects_fadd_32ns_32ns_32_4_full_dsp_1_ip.tcl 
-Execute       source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/impl/misc/guitar_effects_fdiv_32ns_32ns_32_12_no_dsp_1_ip.tcl 
-Execute       source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/impl/misc/guitar_effects_fmul_32ns_32ns_32_3_max_dsp_1_ip.tcl 
-Execute       source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/impl/misc/guitar_effects_sitodp_32ns_64_5_no_dsp_1_ip.tcl 
-Execute       source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/impl/misc/guitar_effects_sitofp_32ns_32_4_no_dsp_1_ip.tcl 
-INFO-FLOW: DBG:PROC: ::HLSREPORTS::add_csynth_report_sections bind_info_dict='adapter_nodes {{BINDTYPE adapter DISPLAY {bind_adapter axilite} ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA yes RTLNAME control_r_s_axi_U SOURCE {} VARIABLE {} MODULE guitar_effects LOOP {} BUNDLEDNAME control_r DSP 0 BRAM 0 URAM 0} {BINDTYPE adapter DISPLAY {bind_adapter axi_master} ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA yes RTLNAME gmem_m_axi_U SOURCE {} VARIABLE {} MODULE guitar_effects LOOP {} BUNDLEDNAME gmem DSP 0 BRAM 0 URAM 0}} report_dict {TOPINST guitar_effects MODULE2INSTS {guitar_effects guitar_effects sin_or_cos_double_s grp_sin_or_cos_double_s_fu_810} INST2MODULE {guitar_effects guitar_effects grp_sin_or_cos_double_s_fu_810 sin_or_cos_double_s} INSTDATA {guitar_effects {DEPTH 1 CHILDREN grp_sin_or_cos_double_s_fu_810} grp_sin_or_cos_double_s_fu_810 {DEPTH 2 CHILDREN {}}} MODULEDATA {sin_or_cos_double_s {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME Ex_V_fu_595_p2 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_int_base.h:214} VARIABLE Ex_V LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln214_fu_414_p2 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_int_base.h:214} VARIABLE add_ln214 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_170s_53ns_170_2_1_U1 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_int_base.h:1494} VARIABLE ret_V_5 LOOP {} BUNDLEDNAME {} DSP 18 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME Mx_bits_V_1_fu_531_p2 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_base.h:813} VARIABLE Mx_bits_V_1 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME Ex_V_3_fu_628_p2 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_int_base.h:841} VARIABLE Ex_V_3 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln1512_fu_646_p2 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_base.h:1512} VARIABLE sub_ln1512 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_49ns_49ns_98_1_1_U3 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_base.h:1273} VARIABLE r_V_4 LOOP {} BUNDLEDNAME {} DSP 4 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_49ns_49ns_98_1_1_U4 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_base.h:1273} VARIABLE r_V_5 LOOP {} BUNDLEDNAME {} DSP 4 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_49ns_49ns_98_1_1_U5 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_base.h:1273} VARIABLE r_V_7 LOOP {} BUNDLEDNAME {} DSP 4 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_56ns_52s_108_2_1_U6 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_base.h:1273} VARIABLE r_V_9 LOOP {} BUNDLEDNAME {} DSP 5 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_49ns_44s_93_1_1_U7 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_base.h:1273} VARIABLE r_V_10 LOOP {} BUNDLEDNAME {} DSP 4 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_42ns_33ns_75_1_1_U8 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_base.h:1273} VARIABLE r_V_11 LOOP {} BUNDLEDNAME {} DSP 4 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_35ns_25ns_60_1_1_U9 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_base.h:1273} VARIABLE r_V_12 LOOP {} BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_64s_63ns_126_2_1_U10 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_base.h:1273} VARIABLE r_V_14 LOOP {} BUNDLEDNAME {} DSP 9 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME i_5_fu_980_p2 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_float_utils.h:430} VARIABLE i_5 LOOP {Loop 1} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln433_fu_994_p2 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_float_utils.h:433} VARIABLE sub_ln433 LOOP {Loop 1} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln594_fu_1000_p2 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_ref.h:594} VARIABLE sub_ln594 LOOP {Loop 1} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln594_1_fu_1021_p2 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_ref.h:594} VARIABLE sub_ln594_1 LOOP {Loop 1} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln594_2_fu_1027_p2 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_ref.h:594} VARIABLE sub_ln594_2 LOOP {Loop 1} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln594_3_fu_1033_p2 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_ref.h:594} VARIABLE sub_ln594_3 LOOP {Loop 1} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln594_4_fu_1062_p2 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_ref.h:594} VARIABLE sub_ln594_4 LOOP {Loop 1} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln443_fu_1160_p2 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_float_utils.h:443} VARIABLE add_ln443 LOOP {Loop 2} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln450_fu_1267_p2 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_float_utils.h:450} VARIABLE add_ln450 LOOP {Loop 3} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME shift_3_fu_1325_p2 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_float_utils.h:451} VARIABLE shift_3 LOOP {Loop 3} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln1512_1_fu_1311_p2 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_base.h:1512} VARIABLE sub_ln1512_1 LOOP {Loop 3} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln461_fu_1370_p2 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_float_utils.h:461} VARIABLE add_ln461 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME newexp_fu_1379_p2 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_float_utils.h:461} VARIABLE newexp LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME ref_4oPi_table_256_V_U SOURCE {} VARIABLE ref_4oPi_table_256_V LOOP {} BUNDLEDNAME {} DSP 0 BRAM 8 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL lutram LATENCY 1 OPTYPE rom_1p PRAGMA pragma RTLNAME fourth_order_double_sin_cos_K0_V_U SOURCE r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/src/common/hls_hotbm_double.cpp:16 VARIABLE fourth_order_double_sin_cos_K0_V LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL lutram LATENCY 1 OPTYPE rom_1p PRAGMA pragma RTLNAME fourth_order_double_sin_cos_K1_V_U SOURCE r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/src/common/hls_hotbm_double.cpp:17 VARIABLE fourth_order_double_sin_cos_K1_V LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL lutram LATENCY 1 OPTYPE rom_1p PRAGMA pragma RTLNAME fourth_order_double_sin_cos_K2_V_U SOURCE r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/src/common/hls_hotbm_double.cpp:18 VARIABLE fourth_order_double_sin_cos_K2_V LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL lutram LATENCY 1 OPTYPE rom_1p PRAGMA pragma RTLNAME fourth_order_double_sin_cos_K3_V_U SOURCE r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/src/common/hls_hotbm_double.cpp:19 VARIABLE fourth_order_double_sin_cos_K3_V LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL lutram LATENCY 1 OPTYPE rom_1p PRAGMA pragma RTLNAME fourth_order_double_sin_cos_K4_V_U SOURCE r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/src/common/hls_hotbm_double.cpp:20 VARIABLE fourth_order_double_sin_cos_K4_V LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}}} AREA {DSP 54 BRAM 8 URAM 0}} guitar_effects {BINDINFO {{BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME compression_buffer_U SOURCE guitar_effects.cpp:64 VARIABLE compression_buffer LOOP {} BUNDLEDNAME {} DSP 0 BRAM 1 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME delay_buffer_U SOURCE guitar_effects.cpp:73 VARIABLE delay_buffer LOOP {} BUNDLEDNAME {} DSP 0 BRAM 256 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME wah_values_buffer_U SOURCE guitar_effects.cpp:78 VARIABLE wah_values_buffer LOOP {} BUNDLEDNAME {} DSP 0 BRAM 1 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_71_fu_918_p2 SOURCE {} VARIABLE empty_71 LOOP {Loop 1} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_74_fu_948_p2 SOURCE {} VARIABLE empty_74 LOOP {Loop 2} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_77_fu_978_p2 SOURCE {} VARIABLE empty_77 LOOP {Loop 3} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME negative_threshold_fu_1060_p2 SOURCE guitar_effects.cpp:23 VARIABLE negative_threshold LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME current_sample_fu_1109_p2 SOURCE guitar_effects.cpp:115 VARIABLE current_sample LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME r_V_fu_1131_p2 SOURCE guitar_effects.cpp:144 VARIABLE r_V LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_32s_8s_40_1_1_U42 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:1319} VARIABLE r_V_49 LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME ret_V_10_fu_1176_p2 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:501} VARIABLE ret_V_10 LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME result_1_fu_1194_p2 SOURCE guitar_effects.cpp:144 VARIABLE result_1 LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME r_V_21_fu_1136_p2 SOURCE guitar_effects.cpp:142 VARIABLE r_V_21 LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_32s_8s_40_1_1_U44 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:1319} VARIABLE r_V_48 LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME ret_V_fu_1207_p2 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:501} VARIABLE ret_V LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME result_fu_1225_p2 SOURCE guitar_effects.cpp:142 VARIABLE result LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln157_fu_1282_p2 SOURCE guitar_effects.cpp:157 VARIABLE sub_ln157 LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME grp_fu_1240_p0 SOURCE guitar_effects.cpp:162 VARIABLE add_ln162 LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln165_fu_1326_p2 SOURCE guitar_effects.cpp:165 VARIABLE add_ln165 LOOP LPF_Loop BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME grp_fu_1341_p0 SOURCE guitar_effects.cpp:167 VARIABLE add_ln167 LOOP LPF_Loop BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U34 SOURCE guitar_effects.cpp:168 VARIABLE mul_i LOOP LPF_Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U33 SOURCE guitar_effects.cpp:168 VARIABLE dc LOOP LPF_Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln346_fu_1460_p2 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:346} VARIABLE add_ln346 LOOP LPF_Loop BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln1512_3_fu_1474_p2 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_base.h:1512} VARIABLE sub_ln1512_3 LOOP LPF_Loop BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME result_V_2_fu_1542_p2 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_base.h:813} VARIABLE result_V_2 LOOP LPF_Loop BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 11 OPTYPE fdiv PRAGMA {} RTLNAME fdiv_32ns_32ns_32_12_no_dsp_1_U35 SOURCE guitar_effects.cpp:190 VARIABLE compression_factor_1 LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op fdiv}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U34 SOURCE guitar_effects.cpp:191 VARIABLE dc_2 LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln346_2_fu_1600_p2 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:346} VARIABLE add_ln346_2 LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln1512_5_fu_1614_p2 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_base.h:1512} VARIABLE sub_ln1512_5 LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME result_V_8_fu_1682_p2 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_base.h:813} VARIABLE result_V_8 LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 11 OPTYPE fdiv PRAGMA {} RTLNAME fdiv_32ns_32ns_32_12_no_dsp_1_U35 SOURCE guitar_effects.cpp:182 VARIABLE compression_factor LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op fdiv}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U34 SOURCE guitar_effects.cpp:183 VARIABLE dc_1 LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln346_1_fu_1766_p2 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:346} VARIABLE add_ln346_1 LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln1512_4_fu_1780_p2 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_base.h:1512} VARIABLE sub_ln1512_4 LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME result_V_7_fu_1848_p2 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_base.h:813} VARIABLE result_V_7 LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME grp_fu_1704_p0 SOURCE guitar_effects.cpp:207 VARIABLE sub_ln207 LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U34 SOURCE guitar_effects.cpp:207 VARIABLE dc_3 LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln346_3_fu_1912_p2 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:346} VARIABLE add_ln346_3 LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln1512_fu_1926_p2 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_base.h:1512} VARIABLE sub_ln1512 LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME result_V_13_fu_2009_p2 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_base.h:813} VARIABLE result_V_13 LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME output_fu_2021_p2 SOURCE guitar_effects.cpp:207 VARIABLE output LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME grp_fu_1716_p0 SOURCE guitar_effects.cpp:211 VARIABLE add_ln211 LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME grp_fu_2053_p0 SOURCE guitar_effects.cpp:224 VARIABLE add_ln224 LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 4 OPTYPE dmul PRAGMA {} RTLNAME dmul_64ns_64ns_64_5_max_dsp_1_U39 SOURCE guitar_effects.cpp:227 VARIABLE mul1_i LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 11 BRAM 0 URAM 0 DISPNAME {bind_op dmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 4 OPTYPE dmul PRAGMA {} RTLNAME dmul_64ns_64ns_64_5_max_dsp_1_U39 SOURCE guitar_effects.cpp:227 VARIABLE mul3_i LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 11 BRAM 0 URAM 0 DISPNAME {bind_op dmul}} {BINDTYPE op ID {} IMPL fabric LATENCY 30 OPTYPE ddiv PRAGMA {} RTLNAME ddiv_64ns_64ns_64_31_no_dsp_1_U40 SOURCE guitar_effects.cpp:227 VARIABLE x_assign LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op ddiv}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 4 OPTYPE dmul PRAGMA {} RTLNAME dmul_64ns_64ns_64_5_max_dsp_1_U39 SOURCE guitar_effects.cpp:227 VARIABLE mul4_i LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 11 BRAM 0 URAM 0 DISPNAME {bind_op dmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 4 OPTYPE dadd PRAGMA {} RTLNAME dadd_64ns_64ns_64_5_full_dsp_1_U38 SOURCE guitar_effects.cpp:227 VARIABLE add5_i LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op dadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 4 OPTYPE dmul PRAGMA {} RTLNAME dmul_64ns_64ns_64_5_max_dsp_1_U39 SOURCE guitar_effects.cpp:227 VARIABLE dc_4 LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 11 BRAM 0 URAM 0 DISPNAME {bind_op dmul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln515_fu_2103_p2 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:515} VARIABLE add_ln515 LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln1512_2_fu_2117_p2 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_base.h:1512} VARIABLE sub_ln1512_2 LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME result_V_16_fu_2185_p2 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_base.h:813} VARIABLE result_V_16 LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_32s_9ns_41_1_1_U49 SOURCE guitar_effects.cpp:234 VARIABLE mul_ln234 LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln234_fu_2211_p2 SOURCE guitar_effects.cpp:234 VARIABLE add_ln234 LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln234_1_fu_2256_p2 SOURCE guitar_effects.cpp:234 VARIABLE add_ln234_1 LOOP WAH_LOOP BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME grp_fu_2271_p0 SOURCE guitar_effects.cpp:236 VARIABLE sub_ln236 LOOP WAH_LOOP BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_32s_16s_48_1_1_U51 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:1319} VARIABLE r_V_50 LOOP WAH_LOOP BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME ret_V_13_fu_2329_p2 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:501} VARIABLE ret_V_13 LOOP WAH_LOOP BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME result_3_fu_2352_p2 SOURCE guitar_effects.cpp:237 VARIABLE result_3 LOOP WAH_LOOP BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME lpf_coefficients_U SOURCE {} VARIABLE lpf_coefficients LOOP {} BUNDLEDNAME {} DSP 0 BRAM 1 URAM 0 DISPNAME {bind_storage rom_1p}}} AREA {DSP 78 BRAM 267 URAM 0}}}}'
+Execute       source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/impl/misc/guitar_effects_dadd_64ns_64ns_64_7_full_dsp_1_ip.tcl 
+Execute       source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/impl/misc/guitar_effects_ddiv_64ns_64ns_64_59_no_dsp_1_ip.tcl 
+Execute       source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/impl/misc/guitar_effects_dmul_64ns_64ns_64_7_max_dsp_1_ip.tcl 
+Execute       source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/impl/misc/guitar_effects_fadd_32ns_32ns_32_5_full_dsp_1_ip.tcl 
+Execute       source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/impl/misc/guitar_effects_fdiv_32ns_32ns_32_16_no_dsp_1_ip.tcl 
+Execute       source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/impl/misc/guitar_effects_fmul_32ns_32ns_32_4_max_dsp_1_ip.tcl 
+Execute       source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/impl/misc/guitar_effects_sitodp_32ns_64_6_no_dsp_1_ip.tcl 
+Execute       source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/impl/misc/guitar_effects_sitofp_32ns_32_6_no_dsp_1_ip.tcl 
+INFO-FLOW: DBG:PROC: ::HLSREPORTS::add_csynth_report_sections bind_info_dict='adapter_nodes {{BINDTYPE adapter DISPLAY {bind_adapter axilite} ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA yes RTLNAME control_r_s_axi_U SOURCE {} VARIABLE {} MODULE guitar_effects LOOP {} BUNDLEDNAME control_r DSP 0 BRAM 0 URAM 0} {BINDTYPE adapter DISPLAY {bind_adapter axi_master} ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA yes RTLNAME gmem_m_axi_U SOURCE {} VARIABLE {} MODULE guitar_effects LOOP {} BUNDLEDNAME gmem DSP 0 BRAM 0 URAM 0}} report_dict {TOPINST guitar_effects MODULE2INSTS {guitar_effects guitar_effects guitar_effects_Pipeline_LPF_Loop grp_guitar_effects_Pipeline_LPF_Loop_fu_768 sin_or_cos_double_s grp_sin_or_cos_double_s_fu_777} INST2MODULE {guitar_effects guitar_effects grp_guitar_effects_Pipeline_LPF_Loop_fu_768 guitar_effects_Pipeline_LPF_Loop grp_sin_or_cos_double_s_fu_777 sin_or_cos_double_s} INSTDATA {guitar_effects {DEPTH 1 CHILDREN {grp_guitar_effects_Pipeline_LPF_Loop_fu_768 grp_sin_or_cos_double_s_fu_777}} grp_guitar_effects_Pipeline_LPF_Loop_fu_768 {DEPTH 2 CHILDREN {}} grp_sin_or_cos_double_s_fu_777 {DEPTH 2 CHILDREN {}}} MODULEDATA {guitar_effects_Pipeline_LPF_Loop {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln167_fu_153_p2 SOURCE guitar_effects.cpp:167 VARIABLE add_ln167 LOOP LPF_Loop BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME grp_fu_169_p0 SOURCE guitar_effects.cpp:170 VARIABLE add_ln170 LOOP LPF_Loop BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 4 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_5_full_dsp_1_U1 SOURCE guitar_effects.cpp:171 VARIABLE dc LOOP LPF_Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln346_fu_226_p2 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:346} VARIABLE add_ln346 LOOP LPF_Loop BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln1512_fu_240_p2 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_base.h:1512} VARIABLE sub_ln1512 LOOP LPF_Loop BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME result_V_1_fu_319_p2 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_base.h:813} VARIABLE result_V_1 LOOP LPF_Loop BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME lpf_coefficients_U SOURCE {} VARIABLE lpf_coefficients LOOP {} BUNDLEDNAME {} DSP 0 BRAM 1 URAM 0 DISPNAME {bind_storage rom_1p}}} AREA {DSP 2 BRAM 1 URAM 0}} sin_or_cos_double_s {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME Ex_V_fu_594_p2 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_int_base.h:214} VARIABLE Ex_V LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln214_fu_414_p2 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_int_base.h:214} VARIABLE add_ln214 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL auto LATENCY 4 OPTYPE mul PRAGMA {} RTLNAME mul_170s_53ns_170_5_1_U11 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_int_base.h:1494} VARIABLE ret_V_5 LOOP {} BUNDLEDNAME {} DSP 18 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME Mx_bits_V_1_fu_530_p2 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_base.h:813} VARIABLE Mx_bits_V_1 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME Ex_V_3_fu_627_p2 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_int_base.h:841} VARIABLE Ex_V_3 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln1512_fu_644_p2 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_base.h:1512} VARIABLE sub_ln1512 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL auto LATENCY 4 OPTYPE mul PRAGMA {} RTLNAME mul_49ns_49ns_98_5_1_U12 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_base.h:1273} VARIABLE r_V_4 LOOP {} BUNDLEDNAME {} DSP 4 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 4 OPTYPE mul PRAGMA {} RTLNAME mul_49ns_49ns_98_5_1_U14 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_base.h:1273} VARIABLE r_V_5 LOOP {} BUNDLEDNAME {} DSP 4 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 4 OPTYPE mul PRAGMA {} RTLNAME mul_49ns_49ns_98_5_1_U15 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_base.h:1273} VARIABLE r_V_7 LOOP {} BUNDLEDNAME {} DSP 4 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 4 OPTYPE mul PRAGMA {} RTLNAME mul_56ns_52s_108_5_1_U16 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_base.h:1273} VARIABLE r_V_9 LOOP {} BUNDLEDNAME {} DSP 5 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 4 OPTYPE mul PRAGMA {} RTLNAME mul_49ns_44s_93_5_1_U17 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_base.h:1273} VARIABLE r_V_10 LOOP {} BUNDLEDNAME {} DSP 4 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_42ns_33ns_75_2_1_U18 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_base.h:1273} VARIABLE r_V_11 LOOP {} BUNDLEDNAME {} DSP 4 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_35ns_25ns_60_2_1_U19 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_base.h:1273} VARIABLE r_V_12 LOOP {} BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 4 OPTYPE mul PRAGMA {} RTLNAME mul_64s_63ns_126_5_1_U20 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_base.h:1273} VARIABLE r_V_14 LOOP {} BUNDLEDNAME {} DSP 9 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME i_5_fu_970_p2 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_float_utils.h:430} VARIABLE i_5 LOOP {Loop 1} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln433_fu_984_p2 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_float_utils.h:433} VARIABLE sub_ln433 LOOP {Loop 1} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln594_fu_990_p2 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_ref.h:594} VARIABLE sub_ln594 LOOP {Loop 1} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln594_1_fu_1037_p2 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_ref.h:594} VARIABLE sub_ln594_1 LOOP {Loop 1} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln594_2_fu_1041_p2 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_ref.h:594} VARIABLE sub_ln594_2 LOOP {Loop 1} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln594_3_fu_1046_p2 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_ref.h:594} VARIABLE sub_ln594_3 LOOP {Loop 1} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln594_4_fu_1072_p2 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_ref.h:594} VARIABLE sub_ln594_4 LOOP {Loop 1} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln443_fu_1142_p2 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_float_utils.h:443} VARIABLE add_ln443 LOOP {Loop 2} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln450_fu_1249_p2 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_float_utils.h:450} VARIABLE add_ln450 LOOP {Loop 3} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME shift_3_fu_1299_p2 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_float_utils.h:451} VARIABLE shift_3 LOOP {Loop 3} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln1512_1_fu_1293_p2 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_base.h:1512} VARIABLE sub_ln1512_1 LOOP {Loop 3} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln461_fu_1500_p2 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_float_utils.h:461} VARIABLE add_ln461 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME newexp_fu_1509_p2 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_float_utils.h:461} VARIABLE newexp LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME ref_4oPi_table_256_V_U SOURCE {} VARIABLE ref_4oPi_table_256_V LOOP {} BUNDLEDNAME {} DSP 0 BRAM 8 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL lutram LATENCY 1 OPTYPE rom_1p PRAGMA pragma RTLNAME fourth_order_double_sin_cos_K0_V_U SOURCE r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/src/common/hls_hotbm_double.cpp:16 VARIABLE fourth_order_double_sin_cos_K0_V LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL lutram LATENCY 1 OPTYPE rom_1p PRAGMA pragma RTLNAME fourth_order_double_sin_cos_K1_V_U SOURCE r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/src/common/hls_hotbm_double.cpp:17 VARIABLE fourth_order_double_sin_cos_K1_V LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL lutram LATENCY 1 OPTYPE rom_1p PRAGMA pragma RTLNAME fourth_order_double_sin_cos_K2_V_U SOURCE r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/src/common/hls_hotbm_double.cpp:18 VARIABLE fourth_order_double_sin_cos_K2_V LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL lutram LATENCY 1 OPTYPE rom_1p PRAGMA pragma RTLNAME fourth_order_double_sin_cos_K3_V_U SOURCE r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/src/common/hls_hotbm_double.cpp:19 VARIABLE fourth_order_double_sin_cos_K3_V LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL lutram LATENCY 1 OPTYPE rom_1p PRAGMA pragma RTLNAME fourth_order_double_sin_cos_K4_V_U SOURCE r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/src/common/hls_hotbm_double.cpp:20 VARIABLE fourth_order_double_sin_cos_K4_V LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}}} AREA {DSP 54 BRAM 8 URAM 0}} guitar_effects {BINDINFO {{BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME compression_buffer_U SOURCE guitar_effects.cpp:64 VARIABLE compression_buffer LOOP {} BUNDLEDNAME {} DSP 0 BRAM 1 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME delay_buffer_U SOURCE guitar_effects.cpp:73 VARIABLE delay_buffer LOOP {} BUNDLEDNAME {} DSP 0 BRAM 256 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME wah_values_buffer_U SOURCE guitar_effects.cpp:78 VARIABLE wah_values_buffer LOOP {} BUNDLEDNAME {} DSP 0 BRAM 1 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_71_fu_878_p2 SOURCE {} VARIABLE empty_71 LOOP {Loop 1} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_74_fu_908_p2 SOURCE {} VARIABLE empty_74 LOOP {Loop 2} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_77_fu_938_p2 SOURCE {} VARIABLE empty_77 LOOP {Loop 3} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME negative_threshold_fu_1015_p2 SOURCE {} VARIABLE negative_threshold LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME current_sample_fu_1069_p2 SOURCE guitar_effects.cpp:115 VARIABLE current_sample LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME r_V_fu_1091_p2 SOURCE guitar_effects.cpp:144 VARIABLE r_V LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_8s_40_2_1_U51 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:1319} VARIABLE r_V_36 LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME ret_V_10_fu_1135_p2 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:501} VARIABLE ret_V_10 LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME result_1_fu_1154_p2 SOURCE guitar_effects.cpp:144 VARIABLE result_1 LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME r_V_22_fu_1096_p2 SOURCE guitar_effects.cpp:142 VARIABLE r_V_22 LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_8s_40_2_1_U52 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:1319} VARIABLE r_V_35 LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME ret_V_fu_1193_p2 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:501} VARIABLE ret_V LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME result_fu_1212_p2 SOURCE guitar_effects.cpp:142 VARIABLE result LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln159_fu_1228_p2 SOURCE guitar_effects.cpp:159 VARIABLE sub_ln159 LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME grp_fu_1254_p0 SOURCE guitar_effects.cpp:164 VARIABLE add_ln164 LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 15 OPTYPE fdiv PRAGMA {} RTLNAME fdiv_32ns_32ns_32_16_no_dsp_1_U44 SOURCE guitar_effects.cpp:193 VARIABLE compression_factor_1 LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op fdiv}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 3 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_4_max_dsp_1_U43 SOURCE guitar_effects.cpp:194 VARIABLE dc_1 LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln346_1_fu_1364_p2 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:346} VARIABLE add_ln346_1 LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln1512_4_fu_1378_p2 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_base.h:1512} VARIABLE sub_ln1512_4 LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME result_V_6_fu_1457_p2 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_base.h:813} VARIABLE result_V_6 LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 15 OPTYPE fdiv PRAGMA {} RTLNAME fdiv_32ns_32ns_32_16_no_dsp_1_U44 SOURCE guitar_effects.cpp:185 VARIABLE compression_factor LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op fdiv}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 3 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_4_max_dsp_1_U43 SOURCE guitar_effects.cpp:186 VARIABLE dc LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln346_fu_1537_p2 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:346} VARIABLE add_ln346 LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln1512_3_fu_1551_p2 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_base.h:1512} VARIABLE sub_ln1512_3 LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME result_V_5_fu_1469_p2 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_base.h:813} VARIABLE result_V_5 LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME grp_fu_1489_p0 SOURCE guitar_effects.cpp:210 VARIABLE sub_ln210 LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 3 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_4_max_dsp_1_U43 SOURCE guitar_effects.cpp:210 VARIABLE dc_2 LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln346_2_fu_1665_p2 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:346} VARIABLE add_ln346_2 LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln1512_fu_1679_p2 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_base.h:1512} VARIABLE sub_ln1512 LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME result_V_9_fu_1758_p2 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_base.h:813} VARIABLE result_V_9 LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME output_fu_1785_p2 SOURCE guitar_effects.cpp:210 VARIABLE output LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME grp_fu_1501_p0 SOURCE guitar_effects.cpp:214 VARIABLE add_ln214 LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME grp_fu_1817_p0 SOURCE guitar_effects.cpp:227 VARIABLE add_ln227 LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 6 OPTYPE dmul PRAGMA {} RTLNAME dmul_64ns_64ns_64_7_max_dsp_1_U48 SOURCE guitar_effects.cpp:230 VARIABLE mul1_i LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 11 BRAM 0 URAM 0 DISPNAME {bind_op dmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 6 OPTYPE dmul PRAGMA {} RTLNAME dmul_64ns_64ns_64_7_max_dsp_1_U48 SOURCE guitar_effects.cpp:230 VARIABLE mul3_i LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 11 BRAM 0 URAM 0 DISPNAME {bind_op dmul}} {BINDTYPE op ID {} IMPL fabric LATENCY 58 OPTYPE ddiv PRAGMA {} RTLNAME ddiv_64ns_64ns_64_59_no_dsp_1_U49 SOURCE guitar_effects.cpp:230 VARIABLE x_assign LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op ddiv}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 6 OPTYPE dmul PRAGMA {} RTLNAME dmul_64ns_64ns_64_7_max_dsp_1_U48 SOURCE guitar_effects.cpp:230 VARIABLE mul4_i LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 11 BRAM 0 URAM 0 DISPNAME {bind_op dmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 6 OPTYPE dadd PRAGMA {} RTLNAME dadd_64ns_64ns_64_7_full_dsp_1_U47 SOURCE guitar_effects.cpp:230 VARIABLE add5_i LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op dadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 6 OPTYPE dmul PRAGMA {} RTLNAME dmul_64ns_64ns_64_7_max_dsp_1_U48 SOURCE guitar_effects.cpp:230 VARIABLE dc_3 LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 11 BRAM 0 URAM 0 DISPNAME {bind_op dmul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln515_fu_1867_p2 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:515} VARIABLE add_ln515 LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln1512_2_fu_1881_p2 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_base.h:1512} VARIABLE sub_ln1512_2 LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME result_V_12_fu_1949_p2 SOURCE {r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_base.h:813} VARIABLE result_V_12 LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_9ns_41_2_1_U57 SOURCE guitar_effects.cpp:238 VARIABLE mul_ln238 LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln238_fu_1972_p2 SOURCE guitar_effects.cpp:238 VARIABLE add_ln238 LOOP VITIS_LOOP_88_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln238_1_fu_2017_p2 SOURCE guitar_effects.cpp:238 VARIABLE add_ln238_1 LOOP WAH_LOOP BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME grp_fu_2032_p0 SOURCE guitar_effects.cpp:240 VARIABLE sub_ln240 LOOP WAH_LOOP BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_16s_48_2_1_U59 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:1319} VARIABLE r_V_37 LOOP WAH_LOOP BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME ret_V_13_fu_2090_p2 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:501} VARIABLE ret_V_13 LOOP WAH_LOOP BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME result_3_fu_2113_p2 SOURCE guitar_effects.cpp:241 VARIABLE result_3 LOOP WAH_LOOP BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 78 BRAM 267 URAM 0}}}}'
 INFO-FLOW: DBG:PUTS:      update_csynth_reports json2rpt_hw_sw_interfaces
 Execute       send_msg_by_id INFO @200-1603@%s  and missed bursts 
 INFO: [HLS 200-1603] Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
@@ -3985,355 +4070,15 @@ INFO-FLOW: Running: gen_csynth_sec_pragma
 INFO-FLOW: Done: gen_csynth_sec_pragma time: 0.4 seconds per iteration
 INFO-FLOW: DBG:PUTS:      update_csynth_reports wrote xml
 INFO-FLOW: DBG:PUTS:      update_csynth_reports appended to csynth rpt file
-INFO: [HLS 200-111] Finished Updating report files: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 2.017 seconds; current allocated memory: 1.454 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 2.02 seconds; current allocated memory: 1.452 GB.
 INFO: [VHDL 208-304] Generating VHDL RTL for guitar_effects.
 INFO: [VLOG 209-307] Generating Verilog RTL for guitar_effects.
 Execute       syn_report -model guitar_effects -printsummary 
 INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
-INFO: [HLS 200-789] **** Estimated Fmax: 91.32 MHz
-Command       syn_report done; 0.104 sec.
-Command     autosyn done; 14.974 sec.
-Command   csynth_design done; 145.511 sec.
-INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 78 seconds. CPU system time: 7 seconds. Elapsed time: 145.511 seconds; current allocated memory: 0.000 MB.
-Command ap_source done; 147.823 sec.
-Execute cleanup_all 
-INFO-FLOW: Workspace C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1 opened at Tue Apr 16 21:50:00 -0400 2024
-Execute     ap_set_clock -name default -period 15 -default=false 
-INFO: [SYN 201-201] Setting up clock 'default' with a period of 15ns.
-Execute     set_part xc7z020-clg400-1 
-Execute       create_platform xc7z020-clg400-1 -board  
-DBG:HLSDevice: Trying to load device library: C:/Xilinx/Vitis_HLS/2022.1\lib\win64.o\librdi_hlsvwrap.dll
-DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: C:/Xilinx/Vivado/2022.1/data/parts/arch.xml
-DBG:HLSDevice: init success
-INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
-Command       create_platform done; 1.94 sec.
-Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/xilinx.gen 
-Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/plb46.gen 
-Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/axi4.gen 
-Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/nativeAXI4.gen 
-Execute           source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/saxilite.gen 
-Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
-Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
-Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/dds_compiler.gen 
-Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/util.gen 
-Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfft.gen 
-Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfir.gen 
-Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/DSP48/dsp48.gen 
-Execute       ap_part_info -name xc7z020-clg400-1 -data info 
-Execute       config_compile -quiet -complex-mul-dsp=0 
-Command     set_part done; 2.073 sec.
-Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
-INFO: [HLS 200-1505] Using flow_target 'vivado'
-Execute     get_config_interface -m_axi_latency 
-Execute     get_config_interface -m_axi_alignment_byte_size 
-Execute     get_config_interface -m_axi_max_widen_bitwidth 
-Execute     get_config_interface -default_interface 
-Execute     get_config_rtl -register_reset_num 
-Execute     send_msg_by_id INFO @200-1464@%s config_compile -complex-mul-dsp=0 
-INFO: [HLS 200-1464] Running solution command: config_compile -complex-mul-dsp=0
-Execute     config_compile -complex-mul-dsp=0 
-Execute     send_msg_by_id INFO @200-1464@%s config_compile -pipeline_loops=0 
-INFO: [HLS 200-1464] Running solution command: config_compile -pipeline_loops=0
-Execute     config_compile -pipeline_loops=0 
-Execute     send_msg_by_id INFO @200-1464@%s config_export -format=ip_catalog 
-INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
-Execute     config_export -format=ip_catalog 
-Execute     send_msg_by_id INFO @200-1464@%s config_export -output=C:/Users/du.kad/Desktop/EECE4632FinalProject/guitar_effects_cpp 
-INFO: [HLS 200-1464] Running solution command: config_export -output=C:/Users/du.kad/Desktop/EECE4632FinalProject/guitar_effects_cpp
-Execute     config_export -output=C:/Users/du.kad/Desktop/EECE4632FinalProject/guitar_effects_cpp 
-Execute     send_msg_by_id INFO @200-1464@%s config_export -rtl=verilog 
-INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
-Execute     config_export -rtl=verilog 
-Command   open_solution done; 2.107 sec.
-Execute   set_part xc7z020-clg400-1 
-INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
-Execute     create_platform xc7z020-clg400-1 -board  
-Execute     source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/xilinx.gen 
-Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/plb46.gen 
-Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/axi4.gen 
-Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/nativeAXI4.gen 
-Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/saxilite.gen 
-Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
-Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
-Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/dds_compiler.gen 
-Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/util.gen 
-Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfft.gen 
-Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfir.gen 
-Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/DSP48/dsp48.gen 
-Execute     ap_part_info -name xc7z020-clg400-1 -data info 
-Execute     config_compile -quiet -complex-mul-dsp=0 
-Command   set_part done; 0.135 sec.
-Execute   create_clock -period 15 -name default 
-INFO: [HLS 200-1510] Running: create_clock -period 15 -name default 
-Execute   config_compile -pipeline_loops 0 
-INFO: [HLS 200-1510] Running: config_compile -pipeline_loops 0 
-Execute   config_export -format ip_catalog -output C:/Users/du.kad/Desktop/EECE4632FinalProject/guitar_effects_cpp -rtl verilog 
-INFO: [HLS 200-1510] Running: config_export -format ip_catalog -output C:/Users/du.kad/Desktop/EECE4632FinalProject/guitar_effects_cpp -rtl verilog 
-Execute   source ./Guitar_Effects/solution1/directives.tcl 
-INFO: [HLS 200-1510] Running: source ./Guitar_Effects/solution1/directives.tcl
-Execute     set_directive_top -name guitar_effects guitar_effects 
-INFO: [HLS 200-1510] Running: set_directive_top -name guitar_effects guitar_effects 
-Execute   export_design -rtl verilog -format ip_catalog -output C:/Users/du.kad/Desktop/EECE4632FinalProject/guitar_effects_cpp 
-INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog -output C:/Users/du.kad/Desktop/EECE4632FinalProject/guitar_effects_cpp 
-Execute     get_config_export -description 
-Execute     get_config_export -display_name 
-Execute     get_config_export -ipname 
-Execute     get_config_export -library 
-Execute     get_config_export -taxonomy 
-Execute     get_config_export -vendor 
-Execute     get_config_export -version 
-Execute     get_config_export -xo 
-Execute     config_export -format=ip_catalog -output=C:/Users/du.kad/Desktop/EECE4632FinalProject/guitar_effects_cpp -rtl=verilog 
-INFO-FLOW: DBG:PUTS: export_design_wrap: -format ip_catalog -rtl verilog
-Execute     source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/global.setting.tcl 
-Execute     get_config_export -vivado_clock 
-Execute     get_top 
-Execute     get_config_export -ipname 
-Execute     get_config_export -xo 
-Execute     get_config_export -format 
-Execute     get_config_rtl -module_auto_prefix 
-Execute     get_config_export -xo 
-Execute     get_config_export -format 
-Execute     get_solution -flow_target 
-Execute     get_config_export -xo 
-Execute     get_config_export -format 
-INFO-FLOW: DBG:PUTS:   auto_impl: pack: -export -rtl verilog
-INFO-FLOW: DBG:PROC: ::AESL_AUTOIMPL::auto_impl args='-export -rtl verilog'
-Execute     source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/global.setting.tcl 
-INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
-Execute     source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/global.setting.tcl 
-INFO-FLOW: DBG:PUTS: automg_wrap -export -pcore_version 1.00.a -rtl vlog -tool Vivado -impltomg_flag
-INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::auto_generate args='-export -pcore_version 1.00.a -rtl vlog -tool Vivado -impltomg_flag'
-INFO-FLOW: DBG:PUTS:     auto_generate -export -pcore_version 1.00.a -rtl vlog -tool Vivado -impltomg_flag
-Execute     get_config_export -xo 
-Execute     get_config_export -format 
-Execute     get_config_export -ip_xdc_file 
-Execute     get_config_export -ip_xdc_ooc_file 
-Execute     source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/global.setting.tcl 
-INFO-FLOW: DBG:PUTS: read_platform_lib C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/global.setting.tcl
-Execute     source C:/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/common.gen 
-Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/APCoreGen.gen 
-Execute     source C:/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/op.gen 
-Execute     source C:/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/op_simcore.gen 
-Execute     source C:/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/interface.gen 
-Execute     source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/global.setting.tcl 
-Execute     source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/xilinx.gen 
-Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/plb46.gen 
-Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/axi4.gen 
-Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/nativeAXI4.gen 
-Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/saxilite.gen 
-Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
-Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
-Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/dds_compiler.gen 
-Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/util.gen 
-Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfft.gen 
-Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfir.gen 
-Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/DSP48/dsp48.gen 
-INFO-FLOW: DBG:PUTS:   using AESL_AUTOCG::g_clock_period=15.000 (was NA)
-INFO-FLOW: DBG:PUTS:       initCTypeInfo top_module=guitar_effects xml_exists=0
-Execute     source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects.rtl_wrap.cfg.tcl 
-Execute     source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects.rtl_wrap.cfg.tcl 
-Execute     source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects.rtl_wrap.cfg.tcl 
-Execute     source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects.tbgen.tcl 
-Execute     source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects.tbgen.tcl 
-Execute     get_config_rtl -deadlock_detection 
-Execute     source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/global.setting.tcl 
-Execute     source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects.tbgen.tcl 
-Execute     get_config_rtl -module_prefix 
-INFO-FLOW: DBG:PUTS:       cosim_export_main adding deadlock detection to guitar_effects
-Execute     get_config_rtl -deadlock_detection 
-INFO-FLOW: DBG:PUTS: Skipping loadAnalyze_DB, #g_database=27
-INFO-FLOW: DBG:PUTS:       generate_json generate_bd_files=0 generate_xo_files=false #modelList=56 #gSsdmPorts=0
-INFO-FLOW: DBG:PROC: ::AP::DESIGN_DATA::generate_json generate_bd_files='0' generate_xo_files='false' modelList='guitar_effects_mul_170s_53ns_170_2_1
-guitar_effects_mux_83_1_1_1
-guitar_effects_mul_49ns_49ns_98_1_1
-guitar_effects_mul_56ns_52s_108_2_1
-guitar_effects_mul_49ns_44s_93_1_1
-guitar_effects_mul_42ns_33ns_75_1_1
-guitar_effects_mul_35ns_25ns_60_1_1
-guitar_effects_mul_64s_63ns_126_2_1
-guitar_effects_mux_42_32_1_1
-guitar_effects_mux_164_1_1_1
-guitar_effects_mux_164_1_1_1
-guitar_effects_sin_or_cos_double_s_ref_4oPi_table_256_V_ROM_AUTO_1R
-guitar_effects_sin_or_cos_double_s_fourth_order_double_sin_cos_K0_V_ROM_1P_LUTRAM_1R
-guitar_effects_sin_or_cos_double_s_fourth_order_double_sin_cos_K1_V_ROM_1P_LUTRAM_1R
-guitar_effects_sin_or_cos_double_s_fourth_order_double_sin_cos_K2_V_ROM_1P_LUTRAM_1R
-guitar_effects_sin_or_cos_double_s_fourth_order_double_sin_cos_K3_V_ROM_1P_LUTRAM_1R
-guitar_effects_sin_or_cos_double_s_fourth_order_double_sin_cos_K4_V_ROM_1P_LUTRAM_1R
-guitar_effects_fadd_32ns_32ns_32_4_full_dsp_1
-guitar_effects_fmul_32ns_32ns_32_3_max_dsp_1
-guitar_effects_fdiv_32ns_32ns_32_12_no_dsp_1
-guitar_effects_sitofp_32ns_32_4_no_dsp_1
-guitar_effects_dadd_64ns_64ns_64_5_full_dsp_1
-guitar_effects_dmul_64ns_64ns_64_5_max_dsp_1
-guitar_effects_ddiv_64ns_64ns_64_31_no_dsp_1
-guitar_effects_sitodp_32ns_64_5_no_dsp_1
-guitar_effects_mul_32s_8s_40_1_1
-guitar_effects_srem_32ns_10ns_32_36_seq_1
-guitar_effects_srem_11ns_10ns_9_15_seq_1
-guitar_effects_srem_32ns_18ns_17_36_seq_1
-guitar_effects_srem_32ns_18ns_32_36_seq_1
-guitar_effects_srem_32ns_8ns_32_36_seq_1
-guitar_effects_mul_32s_9ns_41_1_1
-guitar_effects_srem_9ns_8ns_7_13_seq_1
-guitar_effects_mul_32s_16s_48_1_1
-guitar_effects_lpf_coefficients_ROM_AUTO_1R
-guitar_effects_compression_buffer_RAM_AUTO_1R1W
-guitar_effects_delay_buffer_RAM_AUTO_1R1W
-guitar_effects_wah_values_buffer_RAM_AUTO_1R1W
-guitar_effects_gmem_m_axi
-guitar_effects_control_r_s_axi
-guitar_effects_regslice_both
-guitar_effects_regslice_both
-guitar_effects_regslice_both
-guitar_effects_regslice_both
-guitar_effects_regslice_both
-guitar_effects_regslice_both
-guitar_effects_regslice_both
-guitar_effects_regslice_both
-guitar_effects_regslice_both
-guitar_effects_regslice_both
-guitar_effects_regslice_both
-guitar_effects_regslice_both
-guitar_effects_regslice_both
-guitar_effects_regslice_both
-sin_or_cos_double_s
-guitar_effects
-' rtl_lang='vlog' bootstrap_tcl='false' outdir='' outfilename=''
-Execute     source C:/Xilinx/Vitis_HLS/2022.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
-Execute     source C:/Xilinx/Vitis_HLS/2022.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
-Execute     source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/global.setting.tcl 
-Execute     source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/global.setting.tcl 
-Execute     get_solution -flow_target 
-Execute     get_config_export -xo 
-Execute     get_config_export -format 
-Execute     source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/top-io-be.tcl 
-Execute     source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects.tbgen.tcl 
-Execute     source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects.compgen.dataonly.tcl 
-Execute     source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects.compgen.dataonly.tcl 
-Execute     source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects.rtl_wrap.cfg.tcl 
-Execute     source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects.compgen.dataonly.tcl 
-Execute     get_config_export -format 
-Execute     get_config_export -vendor 
-Execute     get_config_export -library 
-Execute     get_config_export -version 
-Execute     get_config_export -ipname 
-Execute     get_config_export -taxonomy 
-Execute     get_config_export -description 
-Execute     get_config_export -display_name 
-Execute     source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/sin_or_cos_double_s.tbgen.tcl 
-Execute     source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects.tbgen.tcl 
-Execute     source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/global.setting.tcl 
-Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
-Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
-Execute     get_solution -flow_target 
-Execute     get_config_rtl -kernel_profile 
-Execute     get_config_rtl -kernel_profile 
-Execute     get_config_rtl -stall_sig_gen 
-Execute     get_config_rtl -profile 
-Execute     source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects.constraint.tcl 
-Execute     sc_get_clocks guitar_effects 
-Execute     source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/global.setting.tcl 
-Execute     get_config_export -ip_xdc_file 
-Execute     get_config_export -ip_xdc_ooc_file 
-Execute     get_config_debug -directory 
-Execute     source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/impl/misc/guitar_effects_dadd_64ns_64ns_64_5_full_dsp_1_ip.tcl 
-Execute     source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/impl/misc/guitar_effects_ddiv_64ns_64ns_64_31_no_dsp_1_ip.tcl 
-Execute     source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/impl/misc/guitar_effects_dmul_64ns_64ns_64_5_max_dsp_1_ip.tcl 
-Execute     source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/impl/misc/guitar_effects_fadd_32ns_32ns_32_4_full_dsp_1_ip.tcl 
-Execute     source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/impl/misc/guitar_effects_fdiv_32ns_32ns_32_12_no_dsp_1_ip.tcl 
-Execute     source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/impl/misc/guitar_effects_fmul_32ns_32ns_32_3_max_dsp_1_ip.tcl 
-Execute     source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/impl/misc/guitar_effects_sitodp_32ns_64_5_no_dsp_1_ip.tcl 
-Execute     source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/impl/misc/guitar_effects_sitofp_32ns_32_4_no_dsp_1_ip.tcl 
-Execute     get_config_rtl -deadlock_detection 
-Execute     source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/global.setting.tcl 
-Execute     source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects.tbgen.tcl 
-Execute     get_config_rtl -module_prefix 
-INFO-FLOW: DBG:PUTS:       cosim_export_main adding deadlock detection to guitar_effects
-Execute     get_config_rtl -deadlock_detection 
-INFO-FLOW: DBG:PUTS:       copy ip_driver_dir 1_0 C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/driver
-Execute     get_config_export -format 
-INFO-FLOW: DBG:PUTS:       generate_ip_script #gSsdmPorts=0 g_lang=vlog is_sdaccel=false is_sdsoc=true xo_file=
-Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
-Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
-Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
-Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
-Execute     source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects.tbgen.tcl 
-Execute     source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects.compgen.dataonly.tcl 
-Execute     source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects.compgen.dataonly.tcl 
-Execute     source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects.tbgen.tcl 
-Execute     source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects.tbgen.tcl 
-Execute     source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects.tbgen.tcl 
-Execute     source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects.tbgen.tcl 
-Execute     source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects.tbgen.tcl 
-Execute     source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects.tbgen.tcl 
-Execute     source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects.tbgen.tcl 
-Execute     source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects.tbgen.tcl 
-Execute     source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects.tbgen.tcl 
-Execute     source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/global.setting.tcl 
-Execute     get_config_debug -directory 
-INFO-FLOW: DBG:PUTS:       generate_top_info
-INFO-FLOW: DBG:PUTS:       prepArgInfo -> loadAnalyze_DB top_module=guitar_effects
-Execute     source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects.rtl_wrap.cfg.tcl 
-Execute     source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects.rtl_wrap.cfg.tcl 
-Execute     source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects.rtl_wrap.cfg.tcl 
-Execute     source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects.tbgen.tcl 
-Execute     source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects.tbgen.tcl 
-Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
-Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
-Execute     source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/global.setting.tcl 
-Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
-Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
-Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
-Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
-Execute     source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects.tbgen.tcl 
-Execute     source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/global.setting.tcl 
-Execute     get_config_export -ip_xdc_ooc_file 
-Execute     get_config_export -ip_xdc_file 
-Execute     source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects.constraint.tcl 
-INFO-FLOW: DBG:PUTS:       generate_ipi_example_script
-Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
-Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
-Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
-Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
-INFO-FLOW: DBG:PUTS:       generate_syn_sh
-Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
-Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
-Execute     source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/global.setting.tcl 
-INFO-FLOW: DBG:PUTS:       generate_imp_constraints
-Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
-Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
-Execute     source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects.constraint.tcl 
-Execute     source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/guitar_effects.tbgen.tcl 
-INFO-FLOW: DBG:PUTS:       delete-temp-dirs (skipped for debug)
-Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
-Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
-INFO-FLOW: DBG:PUTS: read_platform_lib C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/global.setting.tcl
-Execute     source C:/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/common.gen 
-Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/APCoreGen.gen 
-Execute     source C:/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/op.gen 
-Execute     source C:/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/op_simcore.gen 
-Execute     source C:/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/interface.gen 
-Execute     source C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/.autopilot/db/global.setting.tcl 
-Execute     source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/xilinx.gen 
-Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/plb46.gen 
-Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/axi4.gen 
-Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/nativeAXI4.gen 
-Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/saxilite.gen 
-Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
-Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
-Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/dds_compiler.gen 
-Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/util.gen 
-Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfft.gen 
-Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfir.gen 
-Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/DSP48/dsp48.gen 
-INFO-FLOW: DBG:PUTS:     IP package: exec C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/impl/ip/pack.bat
-INFO-FLOW: DBG:PUTS:     IP package: success C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/impl/ip/pack.bat
-Execute     get_config_export -output 
-Execute     send_msg_by_id INFO @200-802@%s C:/Users/du.kad/Desktop/EECE4632FinalProject/guitar_effects_cpp.zip 
-INFO: [HLS 200-802] Generated output file C:/Users/du.kad/Desktop/EECE4632FinalProject/guitar_effects_cpp.zip
-Command   export_design done; 40.392 sec.
-INFO: [HLS 200-111] Finished Command export_design CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 40.392 seconds; current allocated memory: 0.000 MB.
-Command ap_source done; 42.687 sec.
+INFO: [HLS 200-789] **** Estimated Fmax: 136.99 MHz
+Command       syn_report done; 0.105 sec.
+Command     autosyn done; 16.883 sec.
+Command   csynth_design done; 147.465 sec.
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 80 seconds. CPU system time: 7 seconds. Elapsed time: 147.465 seconds; current allocated memory: 0.000 MB.
+Command ap_source done; 149.761 sec.
 Execute cleanup_all 

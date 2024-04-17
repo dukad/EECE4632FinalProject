@@ -152,6 +152,8 @@ int distortion(int input, int threshold, mult_float clip_factor) {
 //compression effect
 int compression(int input, int min_threshold, int max_threshold, int zero_threshold, int &current_level, int values_buffer[LPF_FILTER_LENGTH], int &compression_buffer_index, float lpf_coefficients[LPF_FILTER_LENGTH], int current_sample) {
     // rectify the input signal and apply a low pass filter
+
+
 	int abs_in = input;
 	if (input < 0) {
 		abs_in = -input;
@@ -163,6 +165,7 @@ int compression(int input, int min_threshold, int max_threshold, int zero_thresh
     current_level = 0;
     // compute FIR out
     LPF_Loop : for (int i = 0; i < LPF_FILTER_LENGTH; i++) {
+		#pragma HLS PIPELINE II=15
         //iterate through filter
         int coeff_index = (compression_buffer_index + i) % LPF_FILTER_LENGTH; // get value to index the previous values by, essentially iterate though but loop if needed
         current_level += values_buffer[coeff_index] * lpf_coefficients[i];
@@ -222,15 +225,16 @@ int wah(int input, int tempo, int current_sample, int &wah_buffer_index, int wah
 
 	wah_values_buffer[wah_buffer_index] = input;
 	wah_buffer_index = (wah_buffer_index + 1) % BANDPASS_FILTER_LENGTH; // update index
-
+//
     // calculate the control signal
     int control_signal = (int)(WAH_BANDPASS_RESOLUTION* (0.5 + 0.5*hls::sin(current_sample*2*3.14159*tempo/FRAME_RATE))); // map sine wave to 0->1 then multiply by bandpass resolution
-//    float control_signal_tmp = (WAH_BANDPASS_RESOLUTION*(0.5 + 0.5*hls::sin(current_sample*2*3.14159*tempo/FRAME_RATE))); // map sine wave to 0->1 then multiply by bandpass resolution
+//	int control_signal = 1;
+//	float control_signal_tmp = (WAH_BANDPASS_RESOLUTION*(0.5 + 0.5*hls::sin(current_sample*2*3.14159*tempo/FRAME_RATE))); // map sine wave to 0->1 then multiply by bandpass resolution
 //    std::cout << control_signal_tmp << std::endl;
 //    int control_signal = (int)(control_signal_tmp);
     // based on this control signal (int) use the bandpass filter coefficients to apply a bandpass filter to the input signal
     // this is done by convolving the input signal with the filter coefficients
-    int result;
+    int result = 0;
     WAH_LOOP : for (int i = 0; i < BANDPASS_FILTER_LENGTH; i++) { // convolve, but change which filter to convolve with based on the control signal
         //iterate through filter
         int coeff_index = (wah_buffer_index - i) % BANDPASS_FILTER_LENGTH; // get value to index the previous values by, essentially iterate though but loop if needed

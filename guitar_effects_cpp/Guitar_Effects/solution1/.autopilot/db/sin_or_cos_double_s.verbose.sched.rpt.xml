@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'sin_or_cos_double_s'" level="0">
-<item name = "Date">Tue Apr 16 21:49:35 2024
+<item name = "Date">Wed Apr 17 16:21:59 2024
 </item>
 <item name = "Version">2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)</item>
 <item name = "Project">Guitar_Effects</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">15.00 ns, 10.947 ns, 4.05 ns</column>
+<column name="ap_clk">10.00 ns, 7.046 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">26, 34, 0.390 us, 0.510 us, 26, 34, no</column>
+<column name="">47, 55, 0.470 us, 0.550 us, 47, 55, no</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,7 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- Loop 1">6, 6, 2, -, -, 3, no</column>
+<column name="- Loop 1">9, 9, 3, -, -, 3, no</column>
 <column name="- Loop 2">4, 4, 1, -, -, 4, no</column>
 <column name="- Loop 3">2, 9, 2, -, -, 1 ~ 4, no</column>
 </table>

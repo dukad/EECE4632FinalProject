@@ -26997,6 +26997,8 @@ int distortion(int input, int threshold, mult_float clip_factor) {
 
 int compression(int input, int min_threshold, int max_threshold, int zero_threshold, int &current_level, int values_buffer[441], int &compression_buffer_index, float lpf_coefficients[441], int current_sample) {
 
+
+
  int abs_in = input;
  if (input < 0) {
   abs_in = -input;
@@ -27008,8 +27010,9 @@ int compression(int input, int min_threshold, int max_threshold, int zero_thresh
     current_level = 0;
 
     LPF_Loop : for (int i = 0; i < 441; i++) {
+#pragma HLS PIPELINE II=15
 
-        int coeff_index = (compression_buffer_index + i) % 441;
+ int coeff_index = (compression_buffer_index + i) % 441;
         current_level += values_buffer[coeff_index] * lpf_coefficients[i];
     }
 
@@ -27075,7 +27078,8 @@ int wah(int input, int tempo, int current_sample, int &wah_buffer_index, int wah
 
 
 
-    int result;
+
+    int result = 0;
     WAH_LOOP : for (int i = 0; i < 100; i++) {
 
         int coeff_index = (wah_buffer_index - i) % 100;

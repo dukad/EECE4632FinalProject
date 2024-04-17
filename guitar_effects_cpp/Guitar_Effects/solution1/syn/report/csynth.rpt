@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'guitar_effects'
 ================================================================
 + General Information: 
-    * Date:           Tue Apr 16 21:49:44 2024
+    * Date:           Wed Apr 17 16:22:09 2024
     * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
     * Project:        Guitar_Effects
     * Solution:       solution1 (Vivado IP Flow Target)
@@ -15,22 +15,23 @@
 + Performance & Resource Estimates: 
     
     PS: '+' for module; 'o' for loop; '*' for dataflow
-    +-------------------------+------+-------+---------+-----------+----------+---------+-------+----------+-----------+----------+------------+-------------+-----+
-    |         Modules         | Issue|       | Latency |  Latency  | Iteration|         |  Trip |          |           |          |            |             |     |
-    |         & Loops         | Type | Slack | (cycles)|    (ns)   |  Latency | Interval| Count | Pipelined|   BRAM    |    DSP   |     FF     |     LUT     | URAM|
-    +-------------------------+------+-------+---------+-----------+----------+---------+-------+----------+-----------+----------+------------+-------------+-----+
-    |+ guitar_effects         |     -|   0.00|        -|          -|         -|        -|      -|        no|  267 (95%)|  78 (35%)|  10554 (9%)|  18673 (35%)|    -|
-    | o Loop 1                |     -|  10.95|      441|  6.615e+03|         1|        -|    441|        no|          -|         -|           -|            -|    -|
-    | o Loop 2                |     -|  10.95|    88200|  1.323e+06|         1|        -|  88200|        no|          -|         -|           -|            -|    -|
-    | o Loop 3                |     -|  10.95|      100|  1.500e+03|         1|        -|    100|        no|          -|         -|           -|            -|    -|
-    | o VITIS_LOOP_88_2       |     -|  10.95|        -|          -|     14171|        -|      -|        no|          -|         -|           -|            -|    -|
-    |  + sin_or_cos_double_s  |     -|   0.00|       34|    510.000|         -|       34|      -|        no|     8 (2%)|  54 (24%)|   3447 (3%)|   5917 (11%)|    -|
-    |   o Loop 1              |     -|  10.95|        6|     90.000|         2|        -|      3|        no|          -|         -|           -|            -|    -|
-    |   o Loop 2              |     -|  10.95|        4|     60.000|         1|        -|      4|        no|          -|         -|           -|            -|    -|
-    |   o Loop 3              |     -|  10.95|        9|    135.000|         2|        -|      4|        no|          -|         -|           -|            -|    -|
-    |  o LPF_Loop             |     -|  10.95|    12348|  1.852e+05|        28|        -|    441|        no|          -|         -|           -|            -|    -|
-    |  o WAH_LOOP             |     -|  10.95|     1600|  2.400e+04|        16|        -|    100|        no|          -|         -|           -|            -|    -|
-    +-------------------------+------+-------+---------+-----------+----------+---------+-------+----------+-----------+----------+------------+-------------+-----+
+    +--------------------------------------+------+------+---------+-----------+----------+---------+-------+----------+-----------+----------+-------------+-------------+-----+
+    |                Modules               | Issue|      | Latency |  Latency  | Iteration|         |  Trip |          |           |          |             |             |     |
+    |                & Loops               | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count | Pipelined|   BRAM    |    DSP   |      FF     |     LUT     | URAM|
+    +--------------------------------------+------+------+---------+-----------+----------+---------+-------+----------+-----------+----------+-------------+-------------+-----+
+    |+ guitar_effects                      |     -|  0.00|        -|          -|         -|        -|      -|        no|  267 (95%)|  78 (35%)|  14492 (13%)|  19871 (37%)|    -|
+    | o Loop 1                             |     -|  7.30|      441|  4.410e+03|         1|        -|    441|        no|          -|         -|            -|            -|    -|
+    | o Loop 2                             |     -|  7.30|    88200|  8.820e+05|         1|        -|  88200|        no|          -|         -|            -|            -|    -|
+    | o Loop 3                             |     -|  7.30|      100|  1.000e+03|         1|        -|    100|        no|          -|         -|            -|            -|    -|
+    | o VITIS_LOOP_88_2                    |     -|  7.30|        -|          -|      8636|        -|      -|        no|          -|         -|            -|            -|    -|
+    |  + guitar_effects_Pipeline_LPF_Loop  |     -|  0.04|     6635|  6.635e+04|         -|     6635|      -|        no|    1 (~0%)|   2 (~0%)|    875 (~0%)|    1447 (2%)|    -|
+    |   o LPF_Loop                         |     -|  7.30|     6633|  6.633e+04|        34|       15|    441|       yes|          -|         -|            -|            -|    -|
+    |  + sin_or_cos_double_s               |     -|  0.25|       55|    550.000|         -|       55|      -|        no|     8 (2%)|  54 (24%)|    5929 (5%)|   6460 (12%)|    -|
+    |   o Loop 1                           |     -|  7.30|        9|     90.000|         3|        -|      3|        no|          -|         -|            -|            -|    -|
+    |   o Loop 2                           |     -|  7.30|        4|     40.000|         1|        -|      4|        no|          -|         -|            -|            -|    -|
+    |   o Loop 3                           |     -|  7.30|        9|     90.000|         2|        -|      4|        no|          -|         -|            -|            -|    -|
+    |  o WAH_LOOP                          |     -|  7.30|     1700|  1.700e+04|        17|        -|    100|        no|          -|         -|            -|            -|    -|
+    +--------------------------------------+------+------+---------+-----------+----------+---------+-------+----------+-----------+----------+-------------+-------------+-----+
 
 
 ================================================================
@@ -147,14 +148,14 @@
 +--------------+----------+-----------+--------+-------+---------------------------+
 | HW Interface | Loop     | Direction | Length | Width | Location                  |
 +--------------+----------+-----------+--------+-------+---------------------------+
-| m_axi_gmem   | WAH_LOOP | read      | 100    | 16    | guitar_effects.cpp:234:16 |
+| m_axi_gmem   | WAH_LOOP | read      | 100    | 16    | guitar_effects.cpp:238:16 |
 +--------------+----------+-----------+--------+-------+---------------------------+
 
 * Inferred Bursts and Widening Missed
 +--------------+------------+----------+-------------------------------------------------------------------------------------------------------+------------+---------------------------+
 | HW Interface | Variable   | Loop     | Problem                                                                                               | Resolution | Location                  |
 +--------------+------------+----------+-------------------------------------------------------------------------------------------------------+------------+---------------------------+
-| m_axi_gmem   | wah_coeffs | WAH_LOOP | Could not widen since type i16 size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | guitar_effects.cpp:234:16 |
+| m_axi_gmem   | wah_coeffs | WAH_LOOP | Could not widen since type i16 size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | guitar_effects.cpp:238:16 |
 +--------------+------------+----------+-------------------------------------------------------------------------------------------------------+------------+---------------------------+
 
     * Resolution URL: www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=XXX-YYY.html (replace XXX-YYY with column value)
@@ -166,90 +167,90 @@
 | Name                                 | DSP | Pragma | Variable             | Op   | Impl    | Latency |
 +--------------------------------------+-----+--------+----------------------+------+---------+---------+
 | + guitar_effects                     | 78  |        |                      |      |         |         |
-|   empty_71_fu_918_p2                 | -   |        | empty_71             | add  | fabric  | 0       |
-|   empty_74_fu_948_p2                 | -   |        | empty_74             | add  | fabric  | 0       |
-|   empty_77_fu_978_p2                 | -   |        | empty_77             | add  | fabric  | 0       |
-|   negative_threshold_fu_1060_p2      | -   |        | negative_threshold   | sub  | fabric  | 0       |
-|   current_sample_fu_1109_p2          | -   |        | current_sample       | add  | fabric  | 0       |
-|   r_V_fu_1131_p2                     | -   |        | r_V                  | add  | fabric  | 0       |
-|   mul_32s_8s_40_1_1_U42              | 1   |        | r_V_49               | mul  | auto    | 0       |
-|   ret_V_10_fu_1176_p2                | -   |        | ret_V_10             | add  | fabric  | 0       |
-|   result_1_fu_1194_p2                | -   |        | result_1             | sub  | fabric  | 0       |
-|   r_V_21_fu_1136_p2                  | -   |        | r_V_21               | sub  | fabric  | 0       |
-|   mul_32s_8s_40_1_1_U44              | 1   |        | r_V_48               | mul  | auto    | 0       |
-|   ret_V_fu_1207_p2                   | -   |        | ret_V                | add  | fabric  | 0       |
-|   result_fu_1225_p2                  | -   |        | result               | add  | fabric  | 0       |
-|   sub_ln157_fu_1282_p2               | -   |        | sub_ln157            | sub  | fabric  | 0       |
-|   grp_fu_1240_p0                     | -   |        | add_ln162            | add  | fabric  | 0       |
-|   add_ln165_fu_1326_p2               | -   |        | add_ln165            | add  | fabric  | 0       |
-|   grp_fu_1341_p0                     | -   |        | add_ln167            | add  | fabric  | 0       |
-|   fmul_32ns_32ns_32_3_max_dsp_1_U34  | 3   |        | mul_i                | fmul | maxdsp  | 2       |
-|   fadd_32ns_32ns_32_4_full_dsp_1_U33 | 2   |        | dc                   | fadd | fulldsp | 3       |
-|   add_ln346_fu_1460_p2               | -   |        | add_ln346            | add  | fabric  | 0       |
-|   sub_ln1512_3_fu_1474_p2            | -   |        | sub_ln1512_3         | sub  | fabric  | 0       |
-|   result_V_2_fu_1542_p2              | -   |        | result_V_2           | sub  | fabric  | 0       |
-|   fdiv_32ns_32ns_32_12_no_dsp_1_U35  | -   |        | compression_factor_1 | fdiv | fabric  | 11      |
-|   fmul_32ns_32ns_32_3_max_dsp_1_U34  | 3   |        | dc_2                 | fmul | maxdsp  | 2       |
-|   add_ln346_2_fu_1600_p2             | -   |        | add_ln346_2          | add  | fabric  | 0       |
-|   sub_ln1512_5_fu_1614_p2            | -   |        | sub_ln1512_5         | sub  | fabric  | 0       |
-|   result_V_8_fu_1682_p2              | -   |        | result_V_8           | sub  | fabric  | 0       |
-|   fdiv_32ns_32ns_32_12_no_dsp_1_U35  | -   |        | compression_factor   | fdiv | fabric  | 11      |
-|   fmul_32ns_32ns_32_3_max_dsp_1_U34  | 3   |        | dc_1                 | fmul | maxdsp  | 2       |
-|   add_ln346_1_fu_1766_p2             | -   |        | add_ln346_1          | add  | fabric  | 0       |
-|   sub_ln1512_4_fu_1780_p2            | -   |        | sub_ln1512_4         | sub  | fabric  | 0       |
-|   result_V_7_fu_1848_p2              | -   |        | result_V_7           | sub  | fabric  | 0       |
-|   grp_fu_1704_p0                     | -   |        | sub_ln207            | sub  | fabric  | 0       |
-|   fmul_32ns_32ns_32_3_max_dsp_1_U34  | 3   |        | dc_3                 | fmul | maxdsp  | 2       |
-|   add_ln346_3_fu_1912_p2             | -   |        | add_ln346_3          | add  | fabric  | 0       |
-|   sub_ln1512_fu_1926_p2              | -   |        | sub_ln1512           | sub  | fabric  | 0       |
-|   result_V_13_fu_2009_p2             | -   |        | result_V_13          | sub  | fabric  | 0       |
-|   output_fu_2021_p2                  | -   |        | output               | add  | fabric  | 0       |
-|   grp_fu_1716_p0                     | -   |        | add_ln211            | add  | fabric  | 0       |
-|   grp_fu_2053_p0                     | -   |        | add_ln224            | add  | fabric  | 0       |
-|   dmul_64ns_64ns_64_5_max_dsp_1_U39  | 11  |        | mul1_i               | dmul | maxdsp  | 4       |
-|   dmul_64ns_64ns_64_5_max_dsp_1_U39  | 11  |        | mul3_i               | dmul | maxdsp  | 4       |
-|   ddiv_64ns_64ns_64_31_no_dsp_1_U40  | -   |        | x_assign             | ddiv | fabric  | 30      |
-|   dmul_64ns_64ns_64_5_max_dsp_1_U39  | 11  |        | mul4_i               | dmul | maxdsp  | 4       |
-|   dadd_64ns_64ns_64_5_full_dsp_1_U38 | 3   |        | add5_i               | dadd | fulldsp | 4       |
-|   dmul_64ns_64ns_64_5_max_dsp_1_U39  | 11  |        | dc_4                 | dmul | maxdsp  | 4       |
-|   add_ln515_fu_2103_p2               | -   |        | add_ln515            | add  | fabric  | 0       |
-|   sub_ln1512_2_fu_2117_p2            | -   |        | sub_ln1512_2         | sub  | fabric  | 0       |
-|   result_V_16_fu_2185_p2             | -   |        | result_V_16          | sub  | fabric  | 0       |
-|   mul_32s_9ns_41_1_1_U49             | 1   |        | mul_ln234            | mul  | auto    | 0       |
-|   add_ln234_fu_2211_p2               | -   |        | add_ln234            | add  | fabric  | 0       |
-|   add_ln234_1_fu_2256_p2             | -   |        | add_ln234_1          | add  | fabric  | 0       |
-|   grp_fu_2271_p0                     | -   |        | sub_ln236            | sub  | fabric  | 0       |
-|   mul_32s_16s_48_1_1_U51             | 2   |        | r_V_50               | mul  | auto    | 0       |
-|   ret_V_13_fu_2329_p2                | -   |        | ret_V_13             | add  | fabric  | 0       |
-|   result_3_fu_2352_p2                | -   |        | result_3             | add  | fabric  | 0       |
+|   empty_71_fu_878_p2                 | -   |        | empty_71             | add  | fabric  | 0       |
+|   empty_74_fu_908_p2                 | -   |        | empty_74             | add  | fabric  | 0       |
+|   empty_77_fu_938_p2                 | -   |        | empty_77             | add  | fabric  | 0       |
+|   negative_threshold_fu_1015_p2      | -   |        | negative_threshold   | sub  | fabric  | 0       |
+|   current_sample_fu_1069_p2          | -   |        | current_sample       | add  | fabric  | 0       |
+|   r_V_fu_1091_p2                     | -   |        | r_V                  | add  | fabric  | 0       |
+|   mul_32s_8s_40_2_1_U51              | 1   |        | r_V_36               | mul  | auto    | 1       |
+|   ret_V_10_fu_1135_p2                | -   |        | ret_V_10             | add  | fabric  | 0       |
+|   result_1_fu_1154_p2                | -   |        | result_1             | sub  | fabric  | 0       |
+|   r_V_22_fu_1096_p2                  | -   |        | r_V_22               | sub  | fabric  | 0       |
+|   mul_32s_8s_40_2_1_U52              | 1   |        | r_V_35               | mul  | auto    | 1       |
+|   ret_V_fu_1193_p2                   | -   |        | ret_V                | add  | fabric  | 0       |
+|   result_fu_1212_p2                  | -   |        | result               | add  | fabric  | 0       |
+|   sub_ln159_fu_1228_p2               | -   |        | sub_ln159            | sub  | fabric  | 0       |
+|   grp_fu_1254_p0                     | -   |        | add_ln164            | add  | fabric  | 0       |
+|   fdiv_32ns_32ns_32_16_no_dsp_1_U44  | -   |        | compression_factor_1 | fdiv | fabric  | 15      |
+|   fmul_32ns_32ns_32_4_max_dsp_1_U43  | 3   |        | dc_1                 | fmul | maxdsp  | 3       |
+|   add_ln346_1_fu_1364_p2             | -   |        | add_ln346_1          | add  | fabric  | 0       |
+|   sub_ln1512_4_fu_1378_p2            | -   |        | sub_ln1512_4         | sub  | fabric  | 0       |
+|   result_V_6_fu_1457_p2              | -   |        | result_V_6           | sub  | fabric  | 0       |
+|   fdiv_32ns_32ns_32_16_no_dsp_1_U44  | -   |        | compression_factor   | fdiv | fabric  | 15      |
+|   fmul_32ns_32ns_32_4_max_dsp_1_U43  | 3   |        | dc                   | fmul | maxdsp  | 3       |
+|   add_ln346_fu_1537_p2               | -   |        | add_ln346            | add  | fabric  | 0       |
+|   sub_ln1512_3_fu_1551_p2            | -   |        | sub_ln1512_3         | sub  | fabric  | 0       |
+|   result_V_5_fu_1469_p2              | -   |        | result_V_5           | sub  | fabric  | 0       |
+|   grp_fu_1489_p0                     | -   |        | sub_ln210            | sub  | fabric  | 0       |
+|   fmul_32ns_32ns_32_4_max_dsp_1_U43  | 3   |        | dc_2                 | fmul | maxdsp  | 3       |
+|   add_ln346_2_fu_1665_p2             | -   |        | add_ln346_2          | add  | fabric  | 0       |
+|   sub_ln1512_fu_1679_p2              | -   |        | sub_ln1512           | sub  | fabric  | 0       |
+|   result_V_9_fu_1758_p2              | -   |        | result_V_9           | sub  | fabric  | 0       |
+|   output_fu_1785_p2                  | -   |        | output               | add  | fabric  | 0       |
+|   grp_fu_1501_p0                     | -   |        | add_ln214            | add  | fabric  | 0       |
+|   grp_fu_1817_p0                     | -   |        | add_ln227            | add  | fabric  | 0       |
+|   dmul_64ns_64ns_64_7_max_dsp_1_U48  | 11  |        | mul1_i               | dmul | maxdsp  | 6       |
+|   dmul_64ns_64ns_64_7_max_dsp_1_U48  | 11  |        | mul3_i               | dmul | maxdsp  | 6       |
+|   ddiv_64ns_64ns_64_59_no_dsp_1_U49  | -   |        | x_assign             | ddiv | fabric  | 58      |
+|   dmul_64ns_64ns_64_7_max_dsp_1_U48  | 11  |        | mul4_i               | dmul | maxdsp  | 6       |
+|   dadd_64ns_64ns_64_7_full_dsp_1_U47 | 3   |        | add5_i               | dadd | fulldsp | 6       |
+|   dmul_64ns_64ns_64_7_max_dsp_1_U48  | 11  |        | dc_3                 | dmul | maxdsp  | 6       |
+|   add_ln515_fu_1867_p2               | -   |        | add_ln515            | add  | fabric  | 0       |
+|   sub_ln1512_2_fu_1881_p2            | -   |        | sub_ln1512_2         | sub  | fabric  | 0       |
+|   result_V_12_fu_1949_p2             | -   |        | result_V_12          | sub  | fabric  | 0       |
+|   mul_32s_9ns_41_2_1_U57             | 1   |        | mul_ln238            | mul  | auto    | 1       |
+|   add_ln238_fu_1972_p2               | -   |        | add_ln238            | add  | fabric  | 0       |
+|   add_ln238_1_fu_2017_p2             | -   |        | add_ln238_1          | add  | fabric  | 0       |
+|   grp_fu_2032_p0                     | -   |        | sub_ln240            | sub  | fabric  | 0       |
+|   mul_32s_16s_48_2_1_U59             | 2   |        | r_V_37               | mul  | auto    | 1       |
+|   ret_V_13_fu_2090_p2                | -   |        | ret_V_13             | add  | fabric  | 0       |
+|   result_3_fu_2113_p2                | -   |        | result_3             | add  | fabric  | 0       |
+|  + guitar_effects_Pipeline_LPF_Loop  | 2   |        |                      |      |         |         |
+|    add_ln167_fu_153_p2               | -   |        | add_ln167            | add  | fabric  | 0       |
+|    grp_fu_169_p0                     | -   |        | add_ln170            | add  | fabric  | 0       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U1 | 2   |        | dc                   | fadd | fulldsp | 4       |
+|    add_ln346_fu_226_p2               | -   |        | add_ln346            | add  | fabric  | 0       |
+|    sub_ln1512_fu_240_p2              | -   |        | sub_ln1512           | sub  | fabric  | 0       |
+|    result_V_1_fu_319_p2              | -   |        | result_V_1           | sub  | fabric  | 0       |
 |  + sin_or_cos_double_s               | 54  |        |                      |      |         |         |
-|    Ex_V_fu_595_p2                    | -   |        | Ex_V                 | add  | fabric  | 0       |
+|    Ex_V_fu_594_p2                    | -   |        | Ex_V                 | add  | fabric  | 0       |
 |    add_ln214_fu_414_p2               | -   |        | add_ln214            | add  | fabric  | 0       |
-|    mul_170s_53ns_170_2_1_U1          | 18  |        | ret_V_5              | mul  | auto    | 1       |
-|    Mx_bits_V_1_fu_531_p2             | -   |        | Mx_bits_V_1          | sub  | fabric  | 0       |
-|    Ex_V_3_fu_628_p2                  | -   |        | Ex_V_3               | sub  | fabric  | 0       |
-|    sub_ln1512_fu_646_p2              | -   |        | sub_ln1512           | sub  | fabric  | 0       |
-|    mul_49ns_49ns_98_1_1_U3           | 4   |        | r_V_4                | mul  | auto    | 0       |
-|    mul_49ns_49ns_98_1_1_U4           | 4   |        | r_V_5                | mul  | auto    | 0       |
-|    mul_49ns_49ns_98_1_1_U5           | 4   |        | r_V_7                | mul  | auto    | 0       |
-|    mul_56ns_52s_108_2_1_U6           | 5   |        | r_V_9                | mul  | auto    | 1       |
-|    mul_49ns_44s_93_1_1_U7            | 4   |        | r_V_10               | mul  | auto    | 0       |
-|    mul_42ns_33ns_75_1_1_U8           | 4   |        | r_V_11               | mul  | auto    | 0       |
-|    mul_35ns_25ns_60_1_1_U9           | 2   |        | r_V_12               | mul  | auto    | 0       |
-|    mul_64s_63ns_126_2_1_U10          | 9   |        | r_V_14               | mul  | auto    | 1       |
-|    i_5_fu_980_p2                     | -   |        | i_5                  | add  | fabric  | 0       |
-|    sub_ln433_fu_994_p2               | -   |        | sub_ln433            | sub  | fabric  | 0       |
-|    sub_ln594_fu_1000_p2              | -   |        | sub_ln594            | sub  | fabric  | 0       |
-|    sub_ln594_1_fu_1021_p2            | -   |        | sub_ln594_1          | sub  | fabric  | 0       |
-|    sub_ln594_2_fu_1027_p2            | -   |        | sub_ln594_2          | sub  | fabric  | 0       |
-|    sub_ln594_3_fu_1033_p2            | -   |        | sub_ln594_3          | sub  | fabric  | 0       |
-|    sub_ln594_4_fu_1062_p2            | -   |        | sub_ln594_4          | sub  | fabric  | 0       |
-|    add_ln443_fu_1160_p2              | -   |        | add_ln443            | add  | fabric  | 0       |
-|    add_ln450_fu_1267_p2              | -   |        | add_ln450            | add  | fabric  | 0       |
-|    shift_3_fu_1325_p2                | -   |        | shift_3              | add  | fabric  | 0       |
-|    sub_ln1512_1_fu_1311_p2           | -   |        | sub_ln1512_1         | sub  | fabric  | 0       |
-|    add_ln461_fu_1370_p2              | -   |        | add_ln461            | add  | fabric  | 0       |
-|    newexp_fu_1379_p2                 | -   |        | newexp               | sub  | fabric  | 0       |
+|    mul_170s_53ns_170_5_1_U11         | 18  |        | ret_V_5              | mul  | auto    | 4       |
+|    Mx_bits_V_1_fu_530_p2             | -   |        | Mx_bits_V_1          | sub  | fabric  | 0       |
+|    Ex_V_3_fu_627_p2                  | -   |        | Ex_V_3               | sub  | fabric  | 0       |
+|    sub_ln1512_fu_644_p2              | -   |        | sub_ln1512           | sub  | fabric  | 0       |
+|    mul_49ns_49ns_98_5_1_U12          | 4   |        | r_V_4                | mul  | auto    | 4       |
+|    mul_49ns_49ns_98_5_1_U14          | 4   |        | r_V_5                | mul  | auto    | 4       |
+|    mul_49ns_49ns_98_5_1_U15          | 4   |        | r_V_7                | mul  | auto    | 4       |
+|    mul_56ns_52s_108_5_1_U16          | 5   |        | r_V_9                | mul  | auto    | 4       |
+|    mul_49ns_44s_93_5_1_U17           | 4   |        | r_V_10               | mul  | auto    | 4       |
+|    mul_42ns_33ns_75_2_1_U18          | 4   |        | r_V_11               | mul  | auto    | 1       |
+|    mul_35ns_25ns_60_2_1_U19          | 2   |        | r_V_12               | mul  | auto    | 1       |
+|    mul_64s_63ns_126_5_1_U20          | 9   |        | r_V_14               | mul  | auto    | 4       |
+|    i_5_fu_970_p2                     | -   |        | i_5                  | add  | fabric  | 0       |
+|    sub_ln433_fu_984_p2               | -   |        | sub_ln433            | sub  | fabric  | 0       |
+|    sub_ln594_fu_990_p2               | -   |        | sub_ln594            | sub  | fabric  | 0       |
+|    sub_ln594_1_fu_1037_p2            | -   |        | sub_ln594_1          | sub  | fabric  | 0       |
+|    sub_ln594_2_fu_1041_p2            | -   |        | sub_ln594_2          | sub  | fabric  | 0       |
+|    sub_ln594_3_fu_1046_p2            | -   |        | sub_ln594_3          | sub  | fabric  | 0       |
+|    sub_ln594_4_fu_1072_p2            | -   |        | sub_ln594_4          | sub  | fabric  | 0       |
+|    add_ln443_fu_1142_p2              | -   |        | add_ln443            | add  | fabric  | 0       |
+|    add_ln450_fu_1249_p2              | -   |        | add_ln450            | add  | fabric  | 0       |
+|    shift_3_fu_1299_p2                | -   |        | shift_3              | add  | fabric  | 0       |
+|    sub_ln1512_1_fu_1293_p2           | -   |        | sub_ln1512_1         | sub  | fabric  | 0       |
+|    add_ln461_fu_1500_p2              | -   |        | add_ln461            | add  | fabric  | 0       |
+|    newexp_fu_1509_p2                 | -   |        | newexp               | sub  | fabric  | 0       |
 +--------------------------------------+-----+--------+----------------------+------+---------+---------+
 
 
@@ -263,7 +264,8 @@
 |   compression_buffer_U                | 1    | -    |        | compression_buffer               | ram_1p  | auto   | 1       |
 |   delay_buffer_U                      | 256  | -    |        | delay_buffer                     | ram_1p  | auto   | 1       |
 |   wah_values_buffer_U                 | 1    | -    |        | wah_values_buffer                | ram_1p  | auto   | 1       |
-|   lpf_coefficients_U                  | 1    | -    |        | lpf_coefficients                 | rom_1p  | auto   | 1       |
+|  + guitar_effects_Pipeline_LPF_Loop   | 1    | 0    |        |                                  |         |        |         |
+|    lpf_coefficients_U                 | 1    | -    |        | lpf_coefficients                 | rom_1p  | auto   | 1       |
 |  + sin_or_cos_double_s                | 8    | 0    |        |                                  |         |        |         |
 |    ref_4oPi_table_256_V_U             | 8    | -    |        | ref_4oPi_table_256_V             | rom_1p  | auto   | 1       |
 |    fourth_order_double_sin_cos_K0_V_U | -    | -    | pragma | fourth_order_double_sin_cos_K0_V | rom_1p  | lutram | 1       |
@@ -296,6 +298,7 @@
 | interface | s_axilite port=debug_output               | guitar_effects.cpp:53 in guitar_effects, debug_output               |
 | interface | m_axi depth=2000 port=wah_coeffs          | guitar_effects.cpp:54 in guitar_effects, wah_coeffs                 |
 | interface | ap_ctrl_none port=return                  | guitar_effects.cpp:56 in guitar_effects, return                     |
+| pipeline  | II=15                                     | guitar_effects.cpp:168 in compression                               |
 +-----------+-------------------------------------------+---------------------------------------------------------------------+
 
 
