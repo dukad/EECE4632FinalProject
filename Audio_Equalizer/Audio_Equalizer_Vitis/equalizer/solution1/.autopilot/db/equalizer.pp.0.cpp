@@ -6431,7 +6431,11 @@ __attribute__((sdx_kernel("equalizer", 0))) void equalizer(hls::stream<AXI_VAL>&
 # 2 "equalizer.cpp" 2
 
 __attribute__((sdx_kernel("equalizer", 0))) void equalizer(hls::stream<AXI_VAL>& output, coef_t coefs[33], hls::stream<AXI_VAL>& input) {
-#line 15 "C:/EECE4632FinalProject/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution1/csynth.tcl"
+#line 16 "C:/EECE4632FinalProject/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution1/csynth.tcl"
+#pragma HLSDIRECTIVE TOP name=equalizer
+# 3 "equalizer.cpp"
+
+#line 6 "C:/EECE4632FinalProject/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution1/directives.tcl"
 #pragma HLSDIRECTIVE TOP name=equalizer
 # 3 "equalizer.cpp"
 
@@ -6524,5 +6528,8 @@ __attribute__((sdx_kernel("equalizer", 0))) void equalizer(hls::stream<AXI_VAL>&
   if (tmp.last){
    running = false;
   }
+ }
+ if (tmp.last){
+  running = false;
  }
 }

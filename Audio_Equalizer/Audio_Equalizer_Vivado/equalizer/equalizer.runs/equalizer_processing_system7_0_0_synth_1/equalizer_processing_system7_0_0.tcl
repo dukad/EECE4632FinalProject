@@ -70,6 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "equalizer_processing_system7_0_0_synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 4
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 OPTRACE "Creating in-memory project" START { }
@@ -91,7 +92,7 @@ set_property ip_output_repo c:/EECE4632FinalProject/Audio_Equalizer/Audio_Equali
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_ip -quiet c:/EECE4632FinalProject/Audio_Equalizer/Audio_Equalizer_Vivado/equalizer/equalizer.srcs/sources_1/bd/equalizer/ip/equalizer_processing_system7_0_0/equalizer_processing_system7_0_0.xci
+read_ip -quiet C:/EECE4632FinalProject/Audio_Equalizer/Audio_Equalizer_Vivado/equalizer/equalizer.srcs/sources_1/bd/equalizer/ip/equalizer_processing_system7_0_0/equalizer_processing_system7_0_0.xci
 set_property used_in_implementation false [get_files -all c:/EECE4632FinalProject/Audio_Equalizer/Audio_Equalizer_Vivado/equalizer/equalizer.gen/sources_1/bd/equalizer/ip/equalizer_processing_system7_0_0/equalizer_processing_system7_0_0.xdc]
 
 OPTRACE "Adding files" END { }

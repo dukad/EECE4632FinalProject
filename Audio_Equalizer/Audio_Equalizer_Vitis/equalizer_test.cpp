@@ -47,7 +47,7 @@ int main(){
 	}
 
 	// *** Write final coef with last = 1 ***
-	tmp1.data = 0;
+	tmp1.data = 1;
 	tmp1.last = 1;
 	A.write(tmp1);
 

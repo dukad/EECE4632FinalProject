@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'equalizer'
 ================================================================
-* Date:           Thu Apr 11 21:22:36 2024
+* Date:           Tue Apr 16 16:21:02 2024
 
 * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
 * Project:        equalizer
@@ -486,7 +486,7 @@ ST_44 : Operation 313 [1/1] (0.00ns)   --->   "%i_2 = load i32 %i" [equalizer.cp
 ST_44 : Operation 314 [1/1] (2.55ns)   --->   "%i_3 = add i32 %i_2, i32 1" [equalizer.cpp:98]   --->   Operation 314 'add' 'i_3' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_44 : Operation 315 [1/1] (1.70ns)   --->   "%store_ln24 = store i32 %i_3, i32 %i" [equalizer.cpp:24]   --->   Operation 315 'store' 'store_ln24' <Predicate = true> <Delay = 1.70>
 ST_44 : Operation 316 [1/1] (0.00ns)   --->   "%br_ln24 = br i1 %tmp_last_V_3, void %while.body, void %while.end44" [equalizer.cpp:24]   --->   Operation 316 'br' 'br_ln24' <Predicate = true> <Delay = 0.00>
-ST_44 : Operation 317 [1/1] (0.00ns)   --->   "%ret_ln105 = ret" [equalizer.cpp:105]   --->   Operation 317 'ret' 'ret_ln105' <Predicate = (tmp_last_V_3)> <Delay = 0.00>
+ST_44 : Operation 317 [1/1] (0.00ns)   --->   "%ret_ln108 = ret" [equalizer.cpp:108]   --->   Operation 317 'ret' 'ret_ln108' <Predicate = (tmp_last_V_3)> <Delay = 0.00>
 
 State 45 <SV = 2> <Delay = 1.70>
 ST_45 : Operation 318 [1/1] (0.00ns)   --->   "%i_load_1 = load i32 %i"   --->   Operation 318 'load' 'i_load_1' <Predicate = true> <Delay = 0.00>
@@ -867,7 +867,7 @@ i_2                      (load         ) [ 0000000000000000000000000000000000000
 i_3                      (add          ) [ 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000]
 store_ln24               (store        ) [ 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000]
 br_ln24                  (br           ) [ 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000]
-ret_ln105                (ret          ) [ 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000]
+ret_ln108                (ret          ) [ 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000]
 i_load_1                 (load         ) [ 00000000000000000000000000000000000000000000001000000000000000000000000000000000000000]
 store_ln0                (store        ) [ 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000]
 call_ln283               (call         ) [ 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000]

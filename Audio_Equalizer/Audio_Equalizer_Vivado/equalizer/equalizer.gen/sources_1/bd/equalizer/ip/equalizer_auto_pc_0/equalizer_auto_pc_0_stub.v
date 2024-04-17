@@ -1,10 +1,10 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-// Date        : Thu Apr 11 21:33:11 2024
+// Date        : Tue Apr 16 17:00:18 2024
 // Host        : WFXA4BB6DB88619 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               c:/EECE4632FinalProject/Audio_Equalizer/Audio_Equalizer_Vivado/equalizer/equalizer.gen/sources_1/bd/equalizer/ip/equalizer_auto_pc_0/equalizer_auto_pc_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top equalizer_auto_pc_0 -prefix
+//               equalizer_auto_pc_0_ equalizer_auto_pc_0_stub.v
 // Design      : equalizer_auto_pc_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg400-1

@@ -4155,10 +4155,10 @@ sw.epilog:4 %br_ln24 = br i1 %tmp_last_V_3, void %while.body, void %while.end44
 
 <Node id="285" bw="0">
 <![CDATA[
-while.end44:0 %ret_ln105 = ret
+while.end44:0 %ret_ln108 = ret
 
 ]]></Node>
-<StgValue><ssdm name="ret_ln105"/></StgValue>
+<StgValue><ssdm name="ret_ln108"/></StgValue>
 </operation>
 </state>
 

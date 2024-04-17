@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1712898197856">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1713298864565">
   <ports id="1" name="gmem" type="PortType" coreId="1953391988" bitwidth="32" direction="DirInOut" iftype="IfTypeFifo">
     <dataInputObjs>getelementptr</dataInputObjs>
     <dataInputObjs>call</dataInputObjs>
@@ -12,33 +12,33 @@
   <ports id="3" name="output_r_V_keep_V" type="PortType" originalName="output" coreId="0" bitwidth="4" direction="DirOut">
     <dataInputObjs>write</dataInputObjs>
   </ports>
-  <ports id="4" name="output_r_V_strb_V" type="PortType" originalName="output" coreId="38" bitwidth="4" direction="DirOut">
+  <ports id="4" name="output_r_V_strb_V" type="PortType" originalName="output" coreId="1879222144" bitwidth="4" direction="DirOut">
     <dataInputObjs>write</dataInputObjs>
   </ports>
-  <ports id="5" name="output_r_V_user_V" type="PortType" originalName="output" coreId="410" bitwidth="1" direction="DirOut">
+  <ports id="5" name="output_r_V_user_V" type="PortType" originalName="output" coreId="1073741823" bitwidth="1" direction="DirOut">
     <dataInputObjs>write</dataInputObjs>
   </ports>
-  <ports id="6" name="output_r_V_last_V" type="PortType" originalName="output" coreId="2841930384" bitwidth="1" direction="DirOut">
+  <ports id="6" name="output_r_V_last_V" type="PortType" originalName="output" coreId="257" bitwidth="1" direction="DirOut">
     <dataInputObjs>write</dataInputObjs>
   </ports>
-  <ports id="7" name="output_r_V_id_V" type="PortType" originalName="output" coreId="658" bitwidth="1" direction="DirOut">
+  <ports id="7" name="output_r_V_id_V" type="PortType" originalName="output" coreId="1879189744" bitwidth="1" direction="DirOut">
     <dataInputObjs>write</dataInputObjs>
   </ports>
-  <ports id="8" name="output_r_V_dest_V" type="PortType" originalName="output" coreId="2753529856" bitwidth="1" direction="DirOut">
+  <ports id="8" name="output_r_V_dest_V" type="PortType" originalName="output" coreId="0" bitwidth="1" direction="DirOut">
     <dataInputObjs>write</dataInputObjs>
   </ports>
-  <ports id="9" name="coefs" type="PortType" originalName="coefs" coreId="286" bitwidth="64">
+  <ports id="9" name="coefs" type="PortType" originalName="coefs" coreId="4128061197" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="10" name="input_r_V_data_V" type="PortType" originalName="input" coreId="2176954496" bitwidth="32">
-    <dataOutputObjs>read</dataOutputObjs>
-    <dataOutputObjs>call</dataOutputObjs>
-  </ports>
-  <ports id="11" name="input_r_V_keep_V" type="PortType" originalName="input" coreId="6" bitwidth="4">
+  <ports id="10" name="input_r_V_data_V" type="PortType" originalName="input" coreId="2221752432" bitwidth="32">
     <dataOutputObjs>read</dataOutputObjs>
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="12" name="input_r_V_strb_V" type="PortType" originalName="input" coreId="2161906624" bitwidth="4">
+  <ports id="11" name="input_r_V_keep_V" type="PortType" originalName="input" coreId="0" bitwidth="4">
+    <dataOutputObjs>read</dataOutputObjs>
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="12" name="input_r_V_strb_V" type="PortType" originalName="input" coreId="0" bitwidth="4">
     <dataOutputObjs>read</dataOutputObjs>
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
@@ -46,15 +46,15 @@
     <dataOutputObjs>read</dataOutputObjs>
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="14" name="input_r_V_last_V" type="PortType" originalName="input" coreId="2841934128" bitwidth="1">
+  <ports id="14" name="input_r_V_last_V" type="PortType" originalName="input" coreId="0" bitwidth="1">
     <dataOutputObjs>read</dataOutputObjs>
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="15" name="input_r_V_id_V" type="PortType" originalName="input" coreId="2185947904" bitwidth="1">
+  <ports id="15" name="input_r_V_id_V" type="PortType" originalName="input" coreId="0" bitwidth="1">
     <dataOutputObjs>read</dataOutputObjs>
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="16" name="input_r_V_dest_V" type="PortType" originalName="input" coreId="70" bitwidth="1">
+  <ports id="16" name="input_r_V_dest_V" type="PortType" originalName="input" coreId="4294967295" bitwidth="1">
     <dataOutputObjs>read</dataOutputObjs>
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
@@ -523,7 +523,7 @@
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="50" name="i" originalName="i" coreId="0" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="50" name="i" originalName="i" coreId="3242829088" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
@@ -539,12 +539,12 @@
       <dataOutputObjs>partselect</dataOutputObjs>
       <dataOutputObjs>call</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="52" name="tmp_last_V_1_loc" coreId="895439701" bitwidth="1" opcode="alloca" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="52" name="tmp_last_V_1_loc" coreId="3242829088" bitwidth="1" opcode="alloca" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
       <dataOutputObjs>call</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="75" name="trunc_ln" lineNumber="79" fileName="equalizer.cpp" fileDirectory=".." rtlName="trunc_ln_fu_295_p4" coreId="2187748912" contextFuncName="equalizer" bitwidth="62" opcode="partselect" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="75" name="trunc_ln" lineNumber="79" fileName="equalizer.cpp" fileDirectory=".." rtlName="trunc_ln_fu_295_p4" coreId="2170269872" contextFuncName="equalizer" bitwidth="62" opcode="partselect" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="equalizer.cpp" linenumber="79" fileDirectory="C:\EECE4632FinalProject\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>sext</dataOutputObjs>
@@ -555,7 +555,7 @@
       <dataInputObjs>partselect</dataInputObjs>
       <dataOutputObjs>getelementptr</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="77" name="gmem_addr" lineNumber="79" fileName="equalizer.cpp" fileDirectory=".." coreId="1629888622" contextFuncName="equalizer" bitwidth="32" opcode="getelementptr" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="77" name="gmem_addr" lineNumber="79" fileName="equalizer.cpp" fileDirectory=".." coreId="0" contextFuncName="equalizer" bitwidth="32" opcode="getelementptr" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="equalizer.cpp" linenumber="79" fileDirectory="C:\EECE4632FinalProject\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataInputObjs>gmem</dataInputObjs>
       <dataInputObjs>sext</dataInputObjs>
@@ -600,12 +600,12 @@
       <dataInputObjs>alloca</dataInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="79" name="state_write_ln24" lineNumber="24" fileName="equalizer.cpp" fileDirectory=".." coreId="0" contextFuncName="equalizer" opcode="store" m_display="0" m_delay="1.7" m_topoIndex="9" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="79" name="state_write_ln24" lineNumber="24" fileName="equalizer.cpp" fileDirectory=".." coreId="2221683472" contextFuncName="equalizer" opcode="store" m_display="0" m_delay="1.7" m_topoIndex="9" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="equalizer.cpp" linenumber="24" fileDirectory="C:\EECE4632FinalProject\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataInputObjs>alloca</dataInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="80" name="br_ln0" coreId="81" opcode="br" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="80" name="br_ln0" coreId="0" opcode="br" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
       <controlInputObjs>while.body</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="equalizer.cpp">
@@ -645,7 +645,7 @@
       <dataOutputObjs>extractvalue</dataOutputObjs>
       <dataOutputObjs>extractvalue</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="85" name="tmp_data_V" lineNumber="283" originalName="tmp.data.V" fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h" fileDirectory=".." coreId="81" contextFuncName="read" bitwidth="32" opcode="extractvalue" nodeLabel="1.0" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="85" name="tmp_data_V" lineNumber="283" originalName="tmp.data.V" fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h" fileDirectory=".." coreId="0" contextFuncName="read" bitwidth="32" opcode="extractvalue" nodeLabel="1.0" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h" linenumber="283" fileDirectory="C:\EECE4632FinalProject\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="read"/>
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>icmp</dataOutputObjs>
@@ -658,12 +658,12 @@
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>write</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="87" name="tmp_strb_V" lineNumber="283" originalName="tmp.strb.V" fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h" fileDirectory=".." coreId="81" contextFuncName="read" bitwidth="4" opcode="extractvalue" nodeLabel="1.0" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="87" name="tmp_strb_V" lineNumber="283" originalName="tmp.strb.V" fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h" fileDirectory=".." coreId="0" contextFuncName="read" bitwidth="4" opcode="extractvalue" nodeLabel="1.0" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h" linenumber="283" fileDirectory="C:\EECE4632FinalProject\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="read"/>
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>write</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="88" name="tmp_user_V" lineNumber="283" originalName="tmp.user.V" fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h" fileDirectory=".." coreId="2187748912" contextFuncName="read" bitwidth="1" opcode="extractvalue" nodeLabel="1.0" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="88" name="tmp_user_V" lineNumber="283" originalName="tmp.user.V" fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h" fileDirectory=".." coreId="0" contextFuncName="read" bitwidth="1" opcode="extractvalue" nodeLabel="1.0" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h" linenumber="283" fileDirectory="C:\EECE4632FinalProject\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="read"/>
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>write</dataOutputObjs>
@@ -682,12 +682,12 @@
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>write</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="91" name="tmp_dest_V" lineNumber="283" originalName="tmp.dest.V" fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h" fileDirectory=".." coreId="0" contextFuncName="read" bitwidth="1" opcode="extractvalue" nodeLabel="1.0" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="91" name="tmp_dest_V" lineNumber="283" originalName="tmp.dest.V" fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h" fileDirectory=".." coreId="89" contextFuncName="read" bitwidth="1" opcode="extractvalue" nodeLabel="1.0" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h" linenumber="283" fileDirectory="C:\EECE4632FinalProject\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="read"/>
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>write</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="92" name="_ln27" lineNumber="27" fileName="equalizer.cpp" fileDirectory=".." coreId="0" contextFuncName="equalizer" opcode="switch" nodeLabel="1.0" m_display="0" m_delay="1.58" m_topoIndex="20" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="92" name="_ln27" lineNumber="27" fileName="equalizer.cpp" fileDirectory=".." coreId="824192059" contextFuncName="equalizer" opcode="switch" nodeLabel="1.0" m_display="0" m_delay="1.58" m_topoIndex="20" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="equalizer.cpp" linenumber="27" fileDirectory="C:\EECE4632FinalProject\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataInputObjs>load</dataInputObjs>
       <controlInputObjs>sw.epilog</controlInputObjs>
@@ -708,7 +708,7 @@
     <controlOutputObjs>switch</controlOutputObjs>
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>sw.epilog</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="94" name="signal_shift_reg_31_load" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="0" contextFuncName="equalizer" bitwidth="32" opcode="load" nodeLabel="41.0" m_display="0" m_topoIndex="186" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="94" name="signal_shift_reg_31_load" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="997420912" contextFuncName="equalizer" bitwidth="32" opcode="load" nodeLabel="41.0" m_display="0" m_topoIndex="186" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="equalizer.cpp" linenumber="78" fileDirectory="C:\EECE4632FinalProject\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataOutputObjs>mul</dataOutputObjs>
     </node_objs>
@@ -888,12 +888,12 @@
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="130" name="signal_shift_reg_30_load" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="1869903201" contextFuncName="equalizer" bitwidth="32" opcode="load" nodeLabel="39.0" m_display="0" m_topoIndex="180" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="130" name="signal_shift_reg_30_load" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="1819619616" contextFuncName="equalizer" bitwidth="32" opcode="load" nodeLabel="39.0" m_display="0" m_topoIndex="180" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="equalizer.cpp" linenumber="78" fileDirectory="C:\EECE4632FinalProject\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>mul</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="131" name="signal_shift_reg_31_write_ln78" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="410" contextFuncName="equalizer" opcode="store" nodeLabel="41.0" m_display="0" m_topoIndex="188" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="131" name="signal_shift_reg_31_write_ln78" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="539769716" contextFuncName="equalizer" opcode="store" nodeLabel="41.0" m_display="0" m_topoIndex="188" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="equalizer.cpp" linenumber="78" fileDirectory="C:\EECE4632FinalProject\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataInputObjs>load</dataInputObjs>
     </node_objs>
@@ -903,12 +903,12 @@
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="133" name="signal_shift_reg_29_load" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="644642097" contextFuncName="equalizer" bitwidth="32" opcode="load" nodeLabel="38.0" m_display="0" m_topoIndex="171" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="133" name="signal_shift_reg_29_load" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="1969188961" contextFuncName="equalizer" bitwidth="32" opcode="load" nodeLabel="38.0" m_display="0" m_topoIndex="171" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="equalizer.cpp" linenumber="78" fileDirectory="C:\EECE4632FinalProject\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>mul</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="134" name="signal_shift_reg_30_write_ln78" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="227" contextFuncName="equalizer" opcode="store" nodeLabel="39.0" m_display="0" m_topoIndex="181" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="134" name="signal_shift_reg_30_write_ln78" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="1953708602" contextFuncName="equalizer" opcode="store" nodeLabel="39.0" m_display="0" m_topoIndex="181" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="equalizer.cpp" linenumber="78" fileDirectory="C:\EECE4632FinalProject\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataInputObjs>load</dataInputObjs>
     </node_objs>
@@ -918,12 +918,12 @@
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="136" name="signal_shift_reg_28_load" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="1818770292" contextFuncName="equalizer" bitwidth="32" opcode="load" nodeLabel="38.0" m_display="0" m_topoIndex="172" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="136" name="signal_shift_reg_28_load" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="171847424" contextFuncName="equalizer" bitwidth="32" opcode="load" nodeLabel="38.0" m_display="0" m_topoIndex="172" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="equalizer.cpp" linenumber="78" fileDirectory="C:\EECE4632FinalProject\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>mul</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="137" name="signal_shift_reg_29_write_ln78" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="779314286" contextFuncName="equalizer" opcode="store" nodeLabel="38.0" m_display="0" m_topoIndex="173" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="137" name="signal_shift_reg_29_write_ln78" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="1852399472" contextFuncName="equalizer" opcode="store" nodeLabel="38.0" m_display="0" m_topoIndex="173" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="equalizer.cpp" linenumber="78" fileDirectory="C:\EECE4632FinalProject\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataInputObjs>load</dataInputObjs>
     </node_objs>
@@ -933,12 +933,12 @@
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="139" name="signal_shift_reg_27_load" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="539107901" contextFuncName="equalizer" bitwidth="32" opcode="load" nodeLabel="36.0" m_display="0" m_topoIndex="165" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="139" name="signal_shift_reg_27_load" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="570451809" contextFuncName="equalizer" bitwidth="32" opcode="load" nodeLabel="36.0" m_display="0" m_topoIndex="165" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="equalizer.cpp" linenumber="78" fileDirectory="C:\EECE4632FinalProject\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>mul</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="140" name="signal_shift_reg_28_write_ln78" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="539107901" contextFuncName="equalizer" opcode="store" nodeLabel="38.0" m_display="0" m_topoIndex="175" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="140" name="signal_shift_reg_28_write_ln78" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="1852403305" contextFuncName="equalizer" opcode="store" nodeLabel="38.0" m_display="0" m_topoIndex="175" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="equalizer.cpp" linenumber="78" fileDirectory="C:\EECE4632FinalProject\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataInputObjs>load</dataInputObjs>
     </node_objs>
@@ -948,12 +948,12 @@
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="142" name="signal_shift_reg_26_load" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="1819243365" contextFuncName="equalizer" bitwidth="32" opcode="load" nodeLabel="35.0" m_display="0" m_topoIndex="159" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="142" name="signal_shift_reg_26_load" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="1631206003" contextFuncName="equalizer" bitwidth="32" opcode="load" nodeLabel="35.0" m_display="0" m_topoIndex="159" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="equalizer.cpp" linenumber="78" fileDirectory="C:\EECE4632FinalProject\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>mul</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="143" name="signal_shift_reg_27_write_ln78" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="1936683105" contextFuncName="equalizer" opcode="store" nodeLabel="36.0" m_display="0" m_topoIndex="166" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="143" name="signal_shift_reg_27_write_ln78" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="893006896" contextFuncName="equalizer" opcode="store" nodeLabel="36.0" m_display="0" m_topoIndex="166" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="equalizer.cpp" linenumber="78" fileDirectory="C:\EECE4632FinalProject\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataInputObjs>load</dataInputObjs>
     </node_objs>
@@ -963,12 +963,12 @@
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="145" name="signal_shift_reg_25_load" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="1953394531" contextFuncName="equalizer" bitwidth="32" opcode="load" nodeLabel="34.0" m_display="0" m_topoIndex="152" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="145" name="signal_shift_reg_25_load" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="1631351657" contextFuncName="equalizer" bitwidth="32" opcode="load" nodeLabel="34.0" m_display="0" m_topoIndex="152" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="equalizer.cpp" linenumber="78" fileDirectory="C:\EECE4632FinalProject\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>mul</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="146" name="signal_shift_reg_26_write_ln78" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="1279795773" contextFuncName="equalizer" opcode="store" nodeLabel="35.0" m_display="0" m_topoIndex="160" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="146" name="signal_shift_reg_26_write_ln78" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="7630437" contextFuncName="equalizer" opcode="store" nodeLabel="35.0" m_display="0" m_topoIndex="160" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="equalizer.cpp" linenumber="78" fileDirectory="C:\EECE4632FinalProject\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataInputObjs>load</dataInputObjs>
     </node_objs>
@@ -978,12 +978,12 @@
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="148" name="signal_shift_reg_24_load" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="640824123" contextFuncName="equalizer" bitwidth="32" opcode="load" nodeLabel="34.0" m_display="0" m_topoIndex="153" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="148" name="signal_shift_reg_24_load" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="1852392994" contextFuncName="equalizer" bitwidth="32" opcode="load" nodeLabel="34.0" m_display="0" m_topoIndex="153" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="equalizer.cpp" linenumber="78" fileDirectory="C:\EECE4632FinalProject\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>mul</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="149" name="signal_shift_reg_25_write_ln78" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="639659631" contextFuncName="equalizer" opcode="store" nodeLabel="34.0" m_display="0" m_topoIndex="154" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="149" name="signal_shift_reg_25_write_ln78" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="824192108" contextFuncName="equalizer" opcode="store" nodeLabel="34.0" m_display="0" m_topoIndex="154" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="equalizer.cpp" linenumber="78" fileDirectory="C:\EECE4632FinalProject\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataInputObjs>load</dataInputObjs>
     </node_objs>
@@ -993,12 +993,12 @@
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="151" name="signal_shift_reg_23_load" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="1885420404" contextFuncName="equalizer" bitwidth="32" opcode="load" nodeLabel="32.0" m_display="0" m_topoIndex="145" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="151" name="signal_shift_reg_23_load" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="0" contextFuncName="equalizer" bitwidth="32" opcode="load" nodeLabel="32.0" m_display="0" m_topoIndex="145" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="equalizer.cpp" linenumber="78" fileDirectory="C:\EECE4632FinalProject\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>mul</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="152" name="signal_shift_reg_24_write_ln78" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="678585722" contextFuncName="equalizer" opcode="store" nodeLabel="34.0" m_display="0" m_topoIndex="156" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="152" name="signal_shift_reg_24_write_ln78" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="0" contextFuncName="equalizer" opcode="store" nodeLabel="34.0" m_display="0" m_topoIndex="156" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="equalizer.cpp" linenumber="78" fileDirectory="C:\EECE4632FinalProject\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataInputObjs>load</dataInputObjs>
     </node_objs>
@@ -1008,12 +1008,12 @@
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="154" name="signal_shift_reg_22_load" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="644642097" contextFuncName="equalizer" bitwidth="32" opcode="load" nodeLabel="31.0" m_display="0" m_topoIndex="141" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="154" name="signal_shift_reg_22_load" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="67" contextFuncName="equalizer" bitwidth="32" opcode="load" nodeLabel="31.0" m_display="0" m_topoIndex="141" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="equalizer.cpp" linenumber="78" fileDirectory="C:\EECE4632FinalProject\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>mul</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="155" name="signal_shift_reg_23_write_ln78" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="539109684" contextFuncName="equalizer" opcode="store" nodeLabel="32.0" m_display="0" m_topoIndex="146" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="155" name="signal_shift_reg_23_write_ln78" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="344" contextFuncName="equalizer" opcode="store" nodeLabel="32.0" m_display="0" m_topoIndex="146" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="equalizer.cpp" linenumber="78" fileDirectory="C:\EECE4632FinalProject\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataInputObjs>load</dataInputObjs>
     </node_objs>
@@ -1023,12 +1023,12 @@
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="157" name="signal_shift_reg_21_load" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="539782261" contextFuncName="equalizer" bitwidth="32" opcode="load" nodeLabel="30.0" m_display="0" m_topoIndex="132" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="157" name="signal_shift_reg_21_load" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="0" contextFuncName="equalizer" bitwidth="32" opcode="load" nodeLabel="30.0" m_display="0" m_topoIndex="132" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="equalizer.cpp" linenumber="78" fileDirectory="C:\EECE4632FinalProject\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>mul</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="158" name="signal_shift_reg_22_write_ln78" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="1601200443" contextFuncName="equalizer" opcode="store" nodeLabel="31.0" m_display="0" m_topoIndex="142" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="158" name="signal_shift_reg_22_write_ln78" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="94" contextFuncName="equalizer" opcode="store" nodeLabel="31.0" m_display="0" m_topoIndex="142" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="equalizer.cpp" linenumber="78" fileDirectory="C:\EECE4632FinalProject\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataInputObjs>load</dataInputObjs>
     </node_objs>
@@ -1038,12 +1038,12 @@
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="160" name="signal_shift_reg_20_load" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="1869488243" contextFuncName="equalizer" bitwidth="32" opcode="load" nodeLabel="30.0" m_display="0" m_topoIndex="133" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="160" name="signal_shift_reg_20_load" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="0" contextFuncName="equalizer" bitwidth="32" opcode="load" nodeLabel="30.0" m_display="0" m_topoIndex="133" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="equalizer.cpp" linenumber="78" fileDirectory="C:\EECE4632FinalProject\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>mul</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="161" name="signal_shift_reg_21_write_ln78" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="1699560457" contextFuncName="equalizer" opcode="store" nodeLabel="30.0" m_display="0" m_topoIndex="134" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="161" name="signal_shift_reg_21_write_ln78" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="73" contextFuncName="equalizer" opcode="store" nodeLabel="30.0" m_display="0" m_topoIndex="134" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="equalizer.cpp" linenumber="78" fileDirectory="C:\EECE4632FinalProject\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataInputObjs>load</dataInputObjs>
     </node_objs>
@@ -1053,12 +1053,12 @@
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="163" name="signal_shift_reg_19_load" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="1936617315" contextFuncName="equalizer" bitwidth="32" opcode="load" nodeLabel="28.0" m_display="0" m_topoIndex="126" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="163" name="signal_shift_reg_19_load" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="0" contextFuncName="equalizer" bitwidth="32" opcode="load" nodeLabel="28.0" m_display="0" m_topoIndex="126" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="equalizer.cpp" linenumber="78" fileDirectory="C:\EECE4632FinalProject\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>mul</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="164" name="signal_shift_reg_20_write_ln78" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="1819619616" contextFuncName="equalizer" opcode="store" nodeLabel="30.0" m_display="0" m_topoIndex="136" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="164" name="signal_shift_reg_20_write_ln78" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="0" contextFuncName="equalizer" opcode="store" nodeLabel="30.0" m_display="0" m_topoIndex="136" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="equalizer.cpp" linenumber="78" fileDirectory="C:\EECE4632FinalProject\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataInputObjs>load</dataInputObjs>
     </node_objs>
@@ -1068,12 +1068,12 @@
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="166" name="signal_shift_reg_18_load" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="1213932032" contextFuncName="equalizer" bitwidth="32" opcode="load" nodeLabel="27.0" m_display="0" m_topoIndex="120" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="166" name="signal_shift_reg_18_load" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="0" contextFuncName="equalizer" bitwidth="32" opcode="load" nodeLabel="27.0" m_display="0" m_topoIndex="120" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="equalizer.cpp" linenumber="78" fileDirectory="C:\EECE4632FinalProject\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>mul</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="167" name="signal_shift_reg_19_write_ln78" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="824192108" contextFuncName="equalizer" opcode="store" nodeLabel="28.0" m_display="0" m_topoIndex="127" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="167" name="signal_shift_reg_19_write_ln78" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="0" contextFuncName="equalizer" opcode="store" nodeLabel="28.0" m_display="0" m_topoIndex="127" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="equalizer.cpp" linenumber="78" fileDirectory="C:\EECE4632FinalProject\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataInputObjs>load</dataInputObjs>
     </node_objs>
@@ -1083,12 +1083,12 @@
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="169" name="signal_shift_reg_17_load" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="570451809" contextFuncName="equalizer" bitwidth="32" opcode="load" nodeLabel="26.0" m_display="0" m_topoIndex="111" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="169" name="signal_shift_reg_17_load" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="47" contextFuncName="equalizer" bitwidth="32" opcode="load" nodeLabel="26.0" m_display="0" m_topoIndex="111" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="equalizer.cpp" linenumber="78" fileDirectory="C:\EECE4632FinalProject\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>mul</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="170" name="signal_shift_reg_18_write_ln78" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="171847424" contextFuncName="equalizer" opcode="store" nodeLabel="27.0" m_display="0" m_topoIndex="121" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="170" name="signal_shift_reg_18_write_ln78" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="952" contextFuncName="equalizer" opcode="store" nodeLabel="27.0" m_display="0" m_topoIndex="121" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="equalizer.cpp" linenumber="78" fileDirectory="C:\EECE4632FinalProject\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataInputObjs>load</dataInputObjs>
     </node_objs>
@@ -1098,12 +1098,12 @@
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="172" name="signal_shift_reg_16_load" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="976909164" contextFuncName="equalizer" bitwidth="32" opcode="load" nodeLabel="26.0" m_display="0" m_topoIndex="112" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="172" name="signal_shift_reg_16_load" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="70" contextFuncName="equalizer" bitwidth="32" opcode="load" nodeLabel="26.0" m_display="0" m_topoIndex="112" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="equalizer.cpp" linenumber="78" fileDirectory="C:\EECE4632FinalProject\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>mul</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="173" name="signal_shift_reg_17_write_ln78" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="1819619616" contextFuncName="equalizer" opcode="store" nodeLabel="26.0" m_display="0" m_topoIndex="113" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="173" name="signal_shift_reg_17_write_ln78" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="1089" contextFuncName="equalizer" opcode="store" nodeLabel="26.0" m_display="0" m_topoIndex="113" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="equalizer.cpp" linenumber="78" fileDirectory="C:\EECE4632FinalProject\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataInputObjs>load</dataInputObjs>
     </node_objs>
@@ -1113,12 +1113,12 @@
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="175" name="signal_shift_reg_15_load" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="1752459639" contextFuncName="equalizer" bitwidth="32" opcode="load" nodeLabel="24.0" m_display="0" m_topoIndex="105" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="175" name="signal_shift_reg_15_load" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="128" contextFuncName="equalizer" bitwidth="32" opcode="load" nodeLabel="24.0" m_display="0" m_topoIndex="105" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="equalizer.cpp" linenumber="78" fileDirectory="C:\EECE4632FinalProject\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>mul</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="176" name="signal_shift_reg_16_write_ln78" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="1635017060" contextFuncName="equalizer" opcode="store" nodeLabel="26.0" m_display="0" m_topoIndex="115" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="176" name="signal_shift_reg_16_write_ln78" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="445" contextFuncName="equalizer" opcode="store" nodeLabel="26.0" m_display="0" m_topoIndex="115" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="equalizer.cpp" linenumber="78" fileDirectory="C:\EECE4632FinalProject\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataInputObjs>load</dataInputObjs>
     </node_objs>
@@ -1128,12 +1128,12 @@
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="178" name="signal_shift_reg_14_load" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="570456436" contextFuncName="equalizer" bitwidth="32" opcode="load" nodeLabel="23.0" m_display="0" m_topoIndex="101" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="178" name="signal_shift_reg_14_load" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="0" contextFuncName="equalizer" bitwidth="32" opcode="load" nodeLabel="23.0" m_display="0" m_topoIndex="101" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="equalizer.cpp" linenumber="78" fileDirectory="C:\EECE4632FinalProject\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>mul</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="179" name="signal_shift_reg_15_write_ln78" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="1819619616" contextFuncName="equalizer" opcode="store" nodeLabel="24.0" m_display="0" m_topoIndex="106" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="179" name="signal_shift_reg_15_write_ln78" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="462" contextFuncName="equalizer" opcode="store" nodeLabel="24.0" m_display="0" m_topoIndex="106" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="equalizer.cpp" linenumber="78" fileDirectory="C:\EECE4632FinalProject\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataInputObjs>load</dataInputObjs>
     </node_objs>
@@ -1143,12 +1143,12 @@
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="181" name="signal_shift_reg_13_load" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="640688172" contextFuncName="equalizer" bitwidth="32" opcode="load" nodeLabel="22.0" m_display="0" m_topoIndex="92" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="181" name="signal_shift_reg_13_load" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="0" contextFuncName="equalizer" bitwidth="32" opcode="load" nodeLabel="22.0" m_display="0" m_topoIndex="92" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="equalizer.cpp" linenumber="78" fileDirectory="C:\EECE4632FinalProject\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>mul</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="182" name="signal_shift_reg_14_write_ln78" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="1869488243" contextFuncName="equalizer" opcode="store" nodeLabel="23.0" m_display="0" m_topoIndex="102" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="182" name="signal_shift_reg_14_write_ln78" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="0" contextFuncName="equalizer" opcode="store" nodeLabel="23.0" m_display="0" m_topoIndex="102" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="equalizer.cpp" linenumber="78" fileDirectory="C:\EECE4632FinalProject\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataInputObjs>load</dataInputObjs>
     </node_objs>
@@ -1158,12 +1158,12 @@
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="184" name="signal_shift_reg_12_load" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="740703792" contextFuncName="equalizer" bitwidth="32" opcode="load" nodeLabel="22.0" m_display="0" m_topoIndex="93" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="184" name="signal_shift_reg_12_load" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="0" contextFuncName="equalizer" bitwidth="32" opcode="load" nodeLabel="22.0" m_display="0" m_topoIndex="93" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="equalizer.cpp" linenumber="78" fileDirectory="C:\EECE4632FinalProject\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>mul</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="185" name="signal_shift_reg_13_write_ln78" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="1852403305" contextFuncName="equalizer" opcode="store" nodeLabel="22.0" m_display="0" m_topoIndex="94" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="185" name="signal_shift_reg_13_write_ln78" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="0" contextFuncName="equalizer" opcode="store" nodeLabel="22.0" m_display="0" m_topoIndex="94" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="equalizer.cpp" linenumber="78" fileDirectory="C:\EECE4632FinalProject\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataInputObjs>load</dataInputObjs>
     </node_objs>
@@ -1173,12 +1173,12 @@
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="187" name="signal_shift_reg_11_load" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="1869182069" contextFuncName="equalizer" bitwidth="32" opcode="load" nodeLabel="20.0" m_display="0" m_topoIndex="83" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="187" name="signal_shift_reg_11_load" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="0" contextFuncName="equalizer" bitwidth="32" opcode="load" nodeLabel="20.0" m_display="0" m_topoIndex="83" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="equalizer.cpp" linenumber="78" fileDirectory="C:\EECE4632FinalProject\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>mul</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="188" name="signal_shift_reg_12_write_ln78" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="1852796269" contextFuncName="equalizer" opcode="store" nodeLabel="22.0" m_display="0" m_topoIndex="96" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="188" name="signal_shift_reg_12_write_ln78" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="0" contextFuncName="equalizer" opcode="store" nodeLabel="22.0" m_display="0" m_topoIndex="96" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="equalizer.cpp" linenumber="78" fileDirectory="C:\EECE4632FinalProject\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataInputObjs>load</dataInputObjs>
     </node_objs>
@@ -1188,12 +1188,12 @@
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="190" name="signal_shift_reg_10_load" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="1969627239" contextFuncName="equalizer" bitwidth="32" opcode="load" nodeLabel="20.0" m_display="0" m_topoIndex="84" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="190" name="signal_shift_reg_10_load" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="0" contextFuncName="equalizer" bitwidth="32" opcode="load" nodeLabel="20.0" m_display="0" m_topoIndex="84" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="equalizer.cpp" linenumber="78" fileDirectory="C:\EECE4632FinalProject\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>mul</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="191" name="signal_shift_reg_11_write_ln78" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="857750117" contextFuncName="equalizer" opcode="store" nodeLabel="20.0" m_display="0" m_topoIndex="85" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="191" name="signal_shift_reg_11_write_ln78" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="0" contextFuncName="equalizer" opcode="store" nodeLabel="20.0" m_display="0" m_topoIndex="85" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="equalizer.cpp" linenumber="78" fileDirectory="C:\EECE4632FinalProject\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataInputObjs>load</dataInputObjs>
     </node_objs>
@@ -1203,12 +1203,12 @@
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="193" name="signal_shift_reg_9_load" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="1685217636" contextFuncName="equalizer" bitwidth="32" opcode="load" nodeLabel="18.0" m_display="0" m_topoIndex="75" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="193" name="signal_shift_reg_9_load" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="0" contextFuncName="equalizer" bitwidth="32" opcode="load" nodeLabel="18.0" m_display="0" m_topoIndex="75" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="equalizer.cpp" linenumber="78" fileDirectory="C:\EECE4632FinalProject\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>mul</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="194" name="signal_shift_reg_10_write_ln78" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="825306420" contextFuncName="equalizer" opcode="store" nodeLabel="20.0" m_display="0" m_topoIndex="87" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="194" name="signal_shift_reg_10_write_ln78" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="0" contextFuncName="equalizer" opcode="store" nodeLabel="20.0" m_display="0" m_topoIndex="87" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="equalizer.cpp" linenumber="78" fileDirectory="C:\EECE4632FinalProject\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataInputObjs>load</dataInputObjs>
     </node_objs>
@@ -1218,7 +1218,7 @@
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="196" name="signal_shift_reg_8_load" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="1953391988" contextFuncName="equalizer" bitwidth="32" opcode="load" nodeLabel="17.0" m_display="0" m_topoIndex="71" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="196" name="signal_shift_reg_8_load" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="0" contextFuncName="equalizer" bitwidth="32" opcode="load" nodeLabel="17.0" m_display="0" m_topoIndex="71" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="equalizer.cpp" linenumber="78" fileDirectory="C:\EECE4632FinalProject\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>mul</dataOutputObjs>
@@ -1313,7 +1313,7 @@
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>mul</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="215" name="signal_shift_reg_3_write_ln78" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="773" contextFuncName="equalizer" opcode="store" nodeLabel="12.0" m_display="0" m_topoIndex="40" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="215" name="signal_shift_reg_3_write_ln78" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="0" contextFuncName="equalizer" opcode="store" nodeLabel="12.0" m_display="0" m_topoIndex="40" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="equalizer.cpp" linenumber="78" fileDirectory="C:\EECE4632FinalProject\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataInputObjs>load</dataInputObjs>
     </node_objs>
@@ -1323,7 +1323,7 @@
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="217" name="signal_shift_reg_1_load" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="1869376609" contextFuncName="equalizer" bitwidth="32" opcode="load" nodeLabel="12.0" m_display="0" m_topoIndex="42" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="217" name="signal_shift_reg_1_load" lineNumber="78" fileName="equalizer.cpp" fileDirectory=".." coreId="0" contextFuncName="equalizer" bitwidth="32" opcode="load" nodeLabel="12.0" m_display="0" m_topoIndex="42" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="equalizer.cpp" linenumber="78" fileDirectory="C:\EECE4632FinalProject\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>mul</dataOutputObjs>
@@ -1577,7 +1577,7 @@
       <dataInputObjs>alloca</dataInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="259" name="state_write_ln95" lineNumber="95" fileName="equalizer.cpp" fileDirectory=".." coreId="0" contextFuncName="equalizer" opcode="store" nodeLabel="43.0" m_display="0" m_delay="1.7" m_topoIndex="195" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="259" name="state_write_ln95" lineNumber="95" fileName="equalizer.cpp" fileDirectory=".." coreId="2223859808" contextFuncName="equalizer" opcode="store" nodeLabel="43.0" m_display="0" m_delay="1.7" m_topoIndex="195" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="equalizer.cpp" linenumber="95" fileDirectory="C:\EECE4632FinalProject\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataInputObjs>alloca</dataInputObjs>
       <constName>empty</constName>
@@ -1637,7 +1637,7 @@
       <dataInputObjs>alloca</dataInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="268" name="br_ln0" coreId="0" opcode="br" nodeLabel="84.0" m_display="0" m_delay="1.58" m_topoIndex="208" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="268" name="br_ln0" coreId="1380274255" opcode="br" nodeLabel="84.0" m_display="0" m_delay="1.58" m_topoIndex="208" m_clusterGroupNumber="-1">
       <controlInputObjs>sw.epilog</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h">
@@ -1681,12 +1681,12 @@
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="275" name="i_write_ln35" lineNumber="35" fileName="equalizer.cpp" fileDirectory=".." coreId="0" contextFuncName="equalizer" opcode="store" nodeLabel="1.0" m_display="0" m_delay="1.7" m_topoIndex="29" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="275" name="i_write_ln35" lineNumber="35" fileName="equalizer.cpp" fileDirectory=".." coreId="2053729377" contextFuncName="equalizer" opcode="store" nodeLabel="1.0" m_display="0" m_delay="1.7" m_topoIndex="29" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="equalizer.cpp" linenumber="35" fileDirectory="C:\EECE4632FinalProject\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataInputObjs>select</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="276" name="state_write_ln35" lineNumber="35" fileName="equalizer.cpp" fileDirectory=".." coreId="0" contextFuncName="equalizer" opcode="store" nodeLabel="1.0" m_display="0" m_delay="1.7" m_topoIndex="30" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="276" name="state_write_ln35" lineNumber="35" fileName="equalizer.cpp" fileDirectory=".." coreId="1752459634" contextFuncName="equalizer" opcode="store" nodeLabel="1.0" m_display="0" m_delay="1.7" m_topoIndex="30" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="equalizer.cpp" linenumber="35" fileDirectory="C:\EECE4632FinalProject\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataInputObjs>select</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
@@ -1713,7 +1713,7 @@
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>while.end44</controlOutputObjs>
     <controlOutputObjs>while.body</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="279" name="tmp_last_V_3" originalName="tmp.last.V" coreId="0" bitwidth="1" opcode="phi" nodeLabel="43.0" m_display="0" m_topoIndex="197" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="279" name="tmp_last_V_3" originalName="tmp.last.V" coreId="1197697383" bitwidth="1" opcode="phi" nodeLabel="43.0" m_display="0" m_topoIndex="197" m_clusterGroupNumber="-1">
       <dataInputObjs>extractvalue</dataInputObjs>
       <dataInputObjs>extractvalue</dataInputObjs>
       <dataInputObjs>load</dataInputObjs>
@@ -1735,12 +1735,12 @@
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="282" name="i_write_ln24" lineNumber="24" fileName="equalizer.cpp" fileDirectory=".." coreId="0" contextFuncName="equalizer" opcode="store" nodeLabel="43.0" m_display="0" m_delay="1.7" m_topoIndex="200" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="282" name="i_write_ln24" lineNumber="24" fileName="equalizer.cpp" fileDirectory=".." coreId="6029427" contextFuncName="equalizer" opcode="store" nodeLabel="43.0" m_display="0" m_delay="1.7" m_topoIndex="200" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="equalizer.cpp" linenumber="24" fileDirectory="C:\EECE4632FinalProject\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataInputObjs>add</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="283" name="br_ln24" lineNumber="24" fileName="equalizer.cpp" fileDirectory=".." coreId="0" contextFuncName="equalizer" opcode="br" nodeLabel="43.0" m_display="0" m_topoIndex="201" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="283" name="br_ln24" lineNumber="24" fileName="equalizer.cpp" fileDirectory=".." coreId="1197697383" contextFuncName="equalizer" opcode="br" nodeLabel="43.0" m_display="0" m_topoIndex="201" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="equalizer.cpp" linenumber="24" fileDirectory="C:\EECE4632FinalProject\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataInputObjs>phi</dataInputObjs>
       <controlInputObjs>while.body</controlInputObjs>
@@ -1754,11 +1754,11 @@
   <blocks id="286" name="while.end44" type="BlockType">
     <controlInputObjs>sw.epilog</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="285" name="_ln105" lineNumber="105" fileName="equalizer.cpp" fileDirectory=".." coreId="0" contextFuncName="equalizer" opcode="ret" nodeLabel="43.0" m_display="0" m_topoIndex="202" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="equalizer.cpp" linenumber="105" fileDirectory="C:\EECE4632FinalProject\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="285" name="_ln108" lineNumber="108" fileName="equalizer.cpp" fileDirectory=".." coreId="0" contextFuncName="equalizer" opcode="ret" nodeLabel="43.0" m_display="0" m_topoIndex="202" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="equalizer.cpp" linenumber="108" fileDirectory="C:\EECE4632FinalProject\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
     </node_objs>
     <fileValidLineNumbers fileName="equalizer.cpp">
-      <validLinenumbers>105</validLinenumbers>
+      <validLinenumbers>108</validLinenumbers>
     </fileValidLineNumbers>
   </blocks>
   <ScheduleInfo time="0"/>

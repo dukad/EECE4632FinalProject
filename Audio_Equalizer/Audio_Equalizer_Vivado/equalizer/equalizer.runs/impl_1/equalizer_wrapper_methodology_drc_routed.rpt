@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-| Date         : Thu Apr 11 21:36:54 2024
+| Date         : Tue Apr 16 19:57:13 2024
 | Host         : WFXA4BB6DB88619 running 64-bit major release  (build 9200)
 | Command      : report_methodology -file equalizer_wrapper_methodology_drc_routed.rpt -pb equalizer_wrapper_methodology_drc_routed.pb -rpx equalizer_wrapper_methodology_drc_routed.rpx
 | Design       : equalizer_wrapper
@@ -23,13 +23,12 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 16
-+-----------+----------+------------------------------+------------+
-| Rule      | Severity | Description                  | Violations |
-+-----------+----------+------------------------------+------------+
-| LUTAR-1   | Warning  | LUT drives async reset alert | 3          |
-| TIMING-16 | Warning  | Large setup violation        | 13         |
-+-----------+----------+------------------------------+------------+
+             Violations found: 3
++---------+----------+------------------------------+------------+
+| Rule    | Severity | Description                  | Violations |
++---------+----------+------------------------------+------------+
+| LUTAR-1 | Warning  | LUT drives async reset alert | 3          |
++---------+----------+------------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
@@ -91,71 +90,6 @@ equalizer_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_i
 equalizer_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_reg[3]/CLR,
 equalizer_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_reg[4]/CLR
  (the first 15 of 32 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
-Related violations: <none>
-
-TIMING-16#1 Warning
-Large setup violation  
-There is a large setup violation of -1.001 ns between equalizer_i/equalizerDMA/equalizer_0/inst/gmem_m_axi_U/load_unit/buff_rdata/U_fifo_mem/mem_reg/CLKARDCLK (clocked by clk_fpga_0) and equalizer_i/equalizerDMA/equalizer_0/inst/mul_32s_32s_32_1_1_U24/dout__0/A[13] (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#2 Warning
-Large setup violation  
-There is a large setup violation of -1.006 ns between equalizer_i/equalizerDMA/equalizer_0/inst/gmem_m_axi_U/load_unit/buff_rdata/U_fifo_mem/mem_reg/CLKARDCLK (clocked by clk_fpga_0) and equalizer_i/equalizerDMA/equalizer_0/inst/mul_32s_32s_32_1_1_U27/dout__0__0/B[13] (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#3 Warning
-Large setup violation  
-There is a large setup violation of -1.007 ns between equalizer_i/equalizerDMA/equalizer_0/inst/gmem_m_axi_U/load_unit/buff_rdata/U_fifo_mem/mem_reg/CLKARDCLK (clocked by clk_fpga_0) and equalizer_i/equalizerDMA/equalizer_0/inst/mul_32s_32s_32_1_1_U41/dout__0/A[11] (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#4 Warning
-Large setup violation  
-There is a large setup violation of -1.007 ns between equalizer_i/equalizerDMA/equalizer_0/inst/mul_32s_32s_32_1_1_U17/dout__0__0/CLK (clocked by clk_fpga_0) and equalizer_i/equalizerDMA/equalizer_0/inst/add_ln82_27_reg_1165_reg[26]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#5 Warning
-Large setup violation  
-There is a large setup violation of -1.010 ns between equalizer_i/equalizerDMA/equalizer_0/inst/gmem_m_axi_U/load_unit/buff_rdata/U_fifo_mem/mem_reg/CLKARDCLK (clocked by clk_fpga_0) and equalizer_i/equalizerDMA/equalizer_0/inst/mul_32s_32s_32_1_1_U41/dout__0__0/B[11] (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#6 Warning
-Large setup violation  
-There is a large setup violation of -1.030 ns between equalizer_i/equalizerDMA/equalizer_0/inst/gmem_m_axi_U/load_unit/buff_rdata/U_fifo_mem/mem_reg/CLKARDCLK (clocked by clk_fpga_0) and equalizer_i/equalizerDMA/equalizer_0/inst/mul_32s_32s_32_1_1_U40/dout__0__0/B[14] (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#7 Warning
-Large setup violation  
-There is a large setup violation of -1.083 ns between equalizer_i/equalizerDMA/equalizer_0/inst/mul_32s_32s_32_1_1_U17/dout__0__0/CLK (clocked by clk_fpga_0) and equalizer_i/equalizerDMA/equalizer_0/inst/add_ln82_27_reg_1165_reg[27]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#8 Warning
-Large setup violation  
-There is a large setup violation of -1.091 ns between equalizer_i/equalizerDMA/equalizer_0/inst/mul_32s_32s_32_1_1_U17/dout__0__0/CLK (clocked by clk_fpga_0) and equalizer_i/equalizerDMA/equalizer_0/inst/add_ln82_27_reg_1165_reg[25]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#9 Warning
-Large setup violation  
-There is a large setup violation of -1.095 ns between equalizer_i/equalizerDMA/equalizer_0/inst/gmem_m_axi_U/load_unit/buff_rdata/U_fifo_mem/mem_reg/CLKARDCLK (clocked by clk_fpga_0) and equalizer_i/equalizerDMA/equalizer_0/inst/mul_32s_32s_32_1_1_U26/dout__0__0/B[13] (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#10 Warning
-Large setup violation  
-There is a large setup violation of -1.105 ns between equalizer_i/equalizerDMA/equalizer_0/inst/mul_32s_32s_32_1_1_U17/dout__0__0/CLK (clocked by clk_fpga_0) and equalizer_i/equalizerDMA/equalizer_0/inst/add_ln82_27_reg_1165_reg[28]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#11 Warning
-Large setup violation  
-There is a large setup violation of -1.125 ns between equalizer_i/equalizerDMA/equalizer_0/inst/mul_32s_32s_32_1_1_U17/dout__0__0/CLK (clocked by clk_fpga_0) and equalizer_i/equalizerDMA/equalizer_0/inst/add_ln82_27_reg_1165_reg[30]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#12 Warning
-Large setup violation  
-There is a large setup violation of -1.201 ns between equalizer_i/equalizerDMA/equalizer_0/inst/mul_32s_32s_32_1_1_U17/dout__0__0/CLK (clocked by clk_fpga_0) and equalizer_i/equalizerDMA/equalizer_0/inst/add_ln82_27_reg_1165_reg[31]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#13 Warning
-Large setup violation  
-There is a large setup violation of -1.209 ns between equalizer_i/equalizerDMA/equalizer_0/inst/mul_32s_32s_32_1_1_U17/dout__0__0/CLK (clocked by clk_fpga_0) and equalizer_i/equalizerDMA/equalizer_0/inst/add_ln82_27_reg_1165_reg[29]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 

@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-| Date         : Thu Apr 11 21:34:32 2024
+| Date         : Tue Apr 16 19:55:12 2024
 | Host         : WFXA4BB6DB88619 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file equalizer_wrapper_utilization_synth.rpt -pb equalizer_wrapper_utilization_synth.pb
 | Design       : equalizer_wrapper
@@ -179,7 +179,7 @@ Table of Contents
 | equalizer_xbar_0                 |    1 |
 | equalizer_rst_ps7_0_100M_0       |    1 |
 | equalizer_processing_system7_0_0 |    1 |
-| equalizer_equalizer_0_0          |    1 |
+| equalizer_equalizer_0_1          |    1 |
 | equalizer_blk_mem_gen_0_0        |    1 |
 | equalizer_axi_dma_0_0            |    1 |
 | equalizer_axi_bram_ctrl_0_0      |    1 |

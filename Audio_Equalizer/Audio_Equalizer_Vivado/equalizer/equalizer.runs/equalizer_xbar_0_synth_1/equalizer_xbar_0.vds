@@ -2,8 +2,8 @@
 # Vivado v2022.1 (64-bit)
 # SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
 # IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
-# Start of session at: Thu Apr 11 21:31:20 2024
-# Process ID: 18236
+# Start of session at: Tue Apr 16 16:58:52 2024
+# Process ID: 6948
 # Current directory: C:/EECE4632FinalProject/Audio_Equalizer/Audio_Equalizer_Vivado/equalizer/equalizer.runs/equalizer_xbar_0_synth_1
 # Command line: vivado.exe -log equalizer_xbar_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source equalizer_xbar_0.tcl
 # Log file: C:/EECE4632FinalProject/Audio_Equalizer/Audio_Equalizer_Vivado/equalizer/equalizer.runs/equalizer_xbar_0_synth_1/equalizer_xbar_0.vds
@@ -11,7 +11,6 @@
 # Running On: WFXA4BB6DB88619, OS: Windows, CPU Frequency: 2904 MHz, CPU Physical cores: 8, Host memory: 16881 MB
 #-----------------------------------------------------------
 source equalizer_xbar_0.tcl -notrace
-create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 1637.359 ; gain = 0.000
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/EECE4632FinalProject/Audio_Equalizer/Audio_Equalizer_Vitis'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.1/data/ip'.
@@ -24,10 +23,10 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 12240
+INFO: [Synth 8-7075] Helper process launched with PID 11556
 WARNING: [Synth 8-9501] generate block is allowed only inside loop and conditional generate in SystemVerilog mode [C:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:4023]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:25 . Memory (MB): peak = 1637.359 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:19 . Memory (MB): peak = 1676.176 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'equalizer_xbar_0' [c:/EECE4632FinalProject/Audio_Equalizer/Audio_Equalizer_Vivado/equalizer/equalizer.gen/sources_1/bd/equalizer/ip/equalizer_xbar_0/synth/equalizer_xbar_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_27_axi_crossbar' [c:/EECE4632FinalProject/Audio_Equalizer/Audio_Equalizer_Vivado/equalizer/equalizer.gen/sources_1/bd/equalizer/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:4883]
@@ -233,18 +232,18 @@ WARNING: [Synth 8-7129] Port S_AXI_WDATA[14] in module axi_crossbar_v2_1_27_cros
 WARNING: [Synth 8-7129] Port S_AXI_WDATA[13] in module axi_crossbar_v2_1_27_crossbar is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:21 ; elapsed = 00:00:34 . Memory (MB): peak = 1795.699 ; gain = 158.340
+Finished RTL Elaboration : Time (s): cpu = 00:00:19 ; elapsed = 00:00:27 . Memory (MB): peak = 1794.008 ; gain = 117.832
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:34 . Memory (MB): peak = 1795.699 ; gain = 158.340
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:27 . Memory (MB): peak = 1794.008 ; gain = 117.832
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:34 . Memory (MB): peak = 1795.699 ; gain = 158.340
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:27 . Memory (MB): peak = 1794.008 ; gain = 117.832
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.094 . Memory (MB): peak = 1795.699 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.064 . Memory (MB): peak = 1794.008 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -255,28 +254,28 @@ Parsing XDC File [C:/EECE4632FinalProject/Audio_Equalizer/Audio_Equalizer_Vivado
 Finished Parsing XDC File [C:/EECE4632FinalProject/Audio_Equalizer/Audio_Equalizer_Vivado/equalizer/equalizer.runs/equalizer_xbar_0_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1795.699 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1858.141 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.074 . Memory (MB): peak = 1795.699 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.053 . Memory (MB): peak = 1860.465 ; gain = 2.324
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:31 ; elapsed = 00:00:45 . Memory (MB): peak = 1795.699 ; gain = 158.340
+Finished Constraint Validation : Time (s): cpu = 00:00:29 ; elapsed = 00:00:37 . Memory (MB): peak = 1860.465 ; gain = 184.289
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:31 ; elapsed = 00:00:45 . Memory (MB): peak = 1795.699 ; gain = 158.340
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:29 ; elapsed = 00:00:37 . Memory (MB): peak = 1860.465 ; gain = 184.289
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  C:/EECE4632FinalProject/Audio_Equalizer/Audio_Equalizer_Vivado/equalizer/equalizer.runs/equalizer_xbar_0_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:45 . Memory (MB): peak = 1795.699 ; gain = 158.340
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:37 . Memory (MB): peak = 1860.465 ; gain = 184.289
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'axi_data_fifo_v2_1_25_axic_reg_srl_fifo'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'axi_data_fifo_v2_1_25_axic_reg_srl_fifo__parameterized0'
@@ -318,7 +317,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'gen_axi.write_cs_reg' using encoding 'one-hot' in module 'axi_crossbar_v2_1_27_decerr_slave'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:32 ; elapsed = 00:00:46 . Memory (MB): peak = 1795.699 ; gain = 158.340
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:30 ; elapsed = 00:00:38 . Memory (MB): peak = 1860.465 ; gain = 184.289
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -371,25 +370,25 @@ INFO: [Synth 8-3332] Sequential element (gen_samd.crossbar_samd/gen_slave_slots[
 INFO: [Synth 8-3332] Sequential element (gen_samd.crossbar_samd/gen_master_slots[0].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[2]) is unused and will be removed from module axi_crossbar_v2_1_27_axi_crossbar.
 INFO: [Synth 8-3332] Sequential element (gen_samd.crossbar_samd/gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[2]) is unused and will be removed from module axi_crossbar_v2_1_27_axi_crossbar.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:50 . Memory (MB): peak = 1795.699 ; gain = 158.340
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:41 . Memory (MB): peak = 1860.465 ; gain = 184.289
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:43 ; elapsed = 00:00:57 . Memory (MB): peak = 1795.699 ; gain = 158.340
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:40 ; elapsed = 00:00:48 . Memory (MB): peak = 1860.465 ; gain = 184.289
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:44 ; elapsed = 00:00:58 . Memory (MB): peak = 1795.699 ; gain = 158.340
+Finished Timing Optimization : Time (s): cpu = 00:00:41 ; elapsed = 00:00:49 . Memory (MB): peak = 1860.465 ; gain = 184.289
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:45 ; elapsed = 00:00:59 . Memory (MB): peak = 1795.699 ; gain = 158.340
+Finished Technology Mapping : Time (s): cpu = 00:00:41 ; elapsed = 00:00:50 . Memory (MB): peak = 1860.465 ; gain = 184.289
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -407,37 +406,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:51 ; elapsed = 00:01:05 . Memory (MB): peak = 1795.699 ; gain = 158.340
+Finished IO Insertion : Time (s): cpu = 00:00:46 ; elapsed = 00:00:54 . Memory (MB): peak = 1860.465 ; gain = 184.289
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:51 ; elapsed = 00:01:05 . Memory (MB): peak = 1795.699 ; gain = 158.340
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:46 ; elapsed = 00:00:54 . Memory (MB): peak = 1860.465 ; gain = 184.289
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:51 ; elapsed = 00:01:05 . Memory (MB): peak = 1795.699 ; gain = 158.340
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:46 ; elapsed = 00:00:54 . Memory (MB): peak = 1860.465 ; gain = 184.289
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:51 ; elapsed = 00:01:05 . Memory (MB): peak = 1795.699 ; gain = 158.340
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:46 ; elapsed = 00:00:54 . Memory (MB): peak = 1860.465 ; gain = 184.289
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:51 ; elapsed = 00:01:05 . Memory (MB): peak = 1795.699 ; gain = 158.340
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:46 ; elapsed = 00:00:54 . Memory (MB): peak = 1860.465 ; gain = 184.289
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:51 ; elapsed = 00:01:05 . Memory (MB): peak = 1795.699 ; gain = 158.340
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:46 ; elapsed = 00:00:54 . Memory (MB): peak = 1860.465 ; gain = 184.289
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -464,16 +463,16 @@ Report Cell Usage:
 |9     |FDSE    |    16|
 +------+--------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:51 ; elapsed = 00:01:05 . Memory (MB): peak = 1795.699 ; gain = 158.340
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:46 ; elapsed = 00:00:54 . Memory (MB): peak = 1860.465 ; gain = 184.289
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 171 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:27 ; elapsed = 00:01:01 . Memory (MB): peak = 1795.699 ; gain = 158.340
-Synthesis Optimization Complete : Time (s): cpu = 00:00:51 ; elapsed = 00:01:05 . Memory (MB): peak = 1795.699 ; gain = 158.340
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:51 . Memory (MB): peak = 1860.465 ; gain = 117.832
+Synthesis Optimization Complete : Time (s): cpu = 00:00:46 ; elapsed = 00:00:54 . Memory (MB): peak = 1860.465 ; gain = 184.289
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 1795.699 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 1860.465 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1795.699 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1860.465 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
@@ -481,10 +480,10 @@ Synth Design complete, checksum: ab6fbf7f
 INFO: [Common 17-83] Releasing license: Synthesis
 112 Infos, 121 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:56 ; elapsed = 00:01:12 . Memory (MB): peak = 1795.699 ; gain = 158.340
+synth_design: Time (s): cpu = 00:00:51 ; elapsed = 00:01:00 . Memory (MB): peak = 1860.465 ; gain = 184.289
 INFO: [Common 17-1381] The checkpoint 'C:/EECE4632FinalProject/Audio_Equalizer/Audio_Equalizer_Vivado/equalizer/equalizer.runs/equalizer_xbar_0_synth_1/equalizer_xbar_0.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP equalizer_xbar_0, cache-ID = 27a2b43380b3658a
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP equalizer_xbar_0, cache-ID = 50da1d0a01b25f00
 INFO: [Coretcl 2-1174] Renamed 24 cell refs.
 INFO: [Common 17-1381] The checkpoint 'C:/EECE4632FinalProject/Audio_Equalizer/Audio_Equalizer_Vivado/equalizer/equalizer.runs/equalizer_xbar_0_synth_1/equalizer_xbar_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file equalizer_xbar_0_utilization_synth.rpt -pb equalizer_xbar_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Apr 11 21:33:08 2024...
+INFO: [Common 17-206] Exiting Vivado at Tue Apr 16 17:00:17 2024...

@@ -110,7 +110,10 @@
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h:425:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="write_nb" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/EECE4632FinalProject/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution1/csynth.tcl:15:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/EECE4632FinalProject/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution1/csynth.tcl:16:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="equalizer" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=equalizer" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/EECE4632FinalProject/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution1/directives.tcl:6:9" msg_body="HLS pragma dump">
         <args ARG_PragmaContext="directive" ARG_PragmaFunction="equalizer" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=equalizer" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="equalizer.cpp:4:9" msg_body="HLS pragma dump">
@@ -172,6 +175,9 @@
     </msg>
     <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="equalizer.cpp:25:9" msg_body="Inlining function 'hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 1ul, 1ul, 1ul&gt;, 0&gt;::read(hls::axis&lt;ap_int&lt;32&gt;, 1ul, 1ul, 1ul&gt;&amp;)' into 'equalizer(hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 1ul, 1ul, 1ul&gt;, 0&gt;&amp;, int*, hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 1ul, 1ul, 1ul&gt;, 0&gt;&amp;)'">
         <args Callee="hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 1ul, 1ul, 1ul&gt;, 0&gt;::read(hls::axis&lt;ap_int&lt;32&gt;, 1ul, 1ul, 1ul&gt;&amp;)" Caller="equalizer(hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 1ul, 1ul, 1ul&gt;, 0&gt;&amp;, int*, hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 1ul, 1ul, 1ul&gt;, 0&gt;&amp;)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="equalizer.cpp:105:6" msg_body="Inlining function 'ap_int_base&lt;1, false&gt;::operator unsigned long long() const' into 'equalizer(hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 1ul, 1ul, 1ul&gt;, 0&gt;&amp;, int*, hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 1ul, 1ul, 1ul&gt;, 0&gt;&amp;)'">
+        <args Callee="ap_int_base&lt;1, false&gt;::operator unsigned long long() const" Caller="equalizer(hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 1ul, 1ul, 1ul&gt;, 0&gt;&amp;, int*, hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 1ul, 1ul, 1ul&gt;, 0&gt;&amp;)"/>
     </msg>
     <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="equalizer.cpp:101:7" msg_body="Inlining function 'ap_int_base&lt;1, false&gt;::operator unsigned long long() const' into 'equalizer(hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 1ul, 1ul, 1ul&gt;, 0&gt;&amp;, int*, hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 1ul, 1ul, 1ul&gt;, 0&gt;&amp;)'">
         <args Callee="ap_int_base&lt;1, false&gt;::operator unsigned long long() const" Caller="equalizer(hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 1ul, 1ul, 1ul&gt;, 0&gt;&amp;, int*, hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 1ul, 1ul, 1ul&gt;, 0&gt;&amp;)"/>

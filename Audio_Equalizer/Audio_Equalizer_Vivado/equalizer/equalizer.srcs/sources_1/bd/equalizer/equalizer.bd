@@ -26,12 +26,10 @@
           "auto_pc": ""
         }
       },
-      "equalizerDMA": {
-        "axi_bram_ctrl_0": "",
-        "axi_dma_0": "",
-        "blk_mem_gen_0": "",
-        "equalizer_0": ""
-      }
+      "axi_bram_ctrl_0": "",
+      "axi_dma_0": "",
+      "blk_mem_gen_0": "",
+      "equalizer_0": ""
     },
     "interface_ports": {
       "DDR": {
@@ -121,7 +119,7 @@
             "value": "10.000000"
           },
           "PCW_ACT_DCI_PERIPHERAL_FREQMHZ": {
-            "value": "10.096154"
+            "value": "10.062893"
           },
           "PCW_ACT_ENET0_PERIPHERAL_FREQMHZ": {
             "value": "125.000000"
@@ -130,7 +128,7 @@
             "value": "10.000000"
           },
           "PCW_ACT_FPGA0_PERIPHERAL_FREQMHZ": {
-            "value": "100.000000"
+            "value": "50.000000"
           },
           "PCW_ACT_FPGA1_PERIPHERAL_FREQMHZ": {
             "value": "10.000000"
@@ -214,7 +212,7 @@
             "value": "0"
           },
           "PCW_CLK0_FREQ": {
-            "value": "100000000"
+            "value": "50000000"
           },
           "PCW_CLK1_FREQ": {
             "value": "10000000"
@@ -514,7 +512,7 @@
             "value": "TRUE"
           },
           "PCW_FPGA0_PERIPHERAL_FREQMHZ": {
-            "value": "100"
+            "value": "50"
           },
           "PCW_FPGA1_PERIPHERAL_FREQMHZ": {
             "value": "50"
@@ -557,6 +555,9 @@
           },
           "PCW_INCLUDE_ACP_TRANS_CHECK": {
             "value": "0"
+          },
+          "PCW_IRQ_F2P_MODE": {
+            "value": "DIRECT"
           },
           "PCW_MIO_0_IOTYPE": {
             "value": "LVCMOS 3.3V"
@@ -1189,7 +1190,7 @@
             "value": "200"
           },
           "PCW_PERIPHERAL_BOARD_PRESET": {
-            "value": "None"
+            "value": "part0"
           },
           "PCW_PLL_BYPASSMODE_ENABLE": {
             "value": "0"
@@ -1320,6 +1321,18 @@
           "PCW_S_AXI_GP0_ID_WIDTH": {
             "value": "6"
           },
+          "PCW_S_AXI_HP0_DATA_WIDTH": {
+            "value": "64"
+          },
+          "PCW_S_AXI_HP1_DATA_WIDTH": {
+            "value": "64"
+          },
+          "PCW_S_AXI_HP2_DATA_WIDTH": {
+            "value": "64"
+          },
+          "PCW_S_AXI_HP3_DATA_WIDTH": {
+            "value": "64"
+          },
           "PCW_TPIU_PERIPHERAL_CLKSRC": {
             "value": "External"
           },
@@ -1390,7 +1403,7 @@
             "value": "1"
           },
           "PCW_UIPARAM_ACT_DDR_FREQ_MHZ": {
-            "value": "525.000000"
+            "value": "400.000000"
           },
           "PCW_UIPARAM_DDR_ADV_ENABLE": {
             "value": "0"
@@ -1546,7 +1559,7 @@
             "value": "1"
           },
           "PCW_UIPARAM_DDR_FREQ_MHZ": {
-            "value": "525"
+            "value": "400"
           },
           "PCW_UIPARAM_DDR_HIGH_TEMP": {
             "value": "Normal (0-85)"
@@ -2451,203 +2464,140 @@
           }
         }
       },
-      "equalizerDMA": {
-        "interface_ports": {
-          "S_AXI_LITE": {
-            "mode": "Slave",
-            "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
-            "vlnv": "xilinx.com:interface:aximm_rtl:1.0"
+      "axi_bram_ctrl_0": {
+        "vlnv": "xilinx.com:ip:axi_bram_ctrl:4.1",
+        "xci_name": "equalizer_axi_bram_ctrl_0_0",
+        "xci_path": "ip\\equalizer_axi_bram_ctrl_0_0\\equalizer_axi_bram_ctrl_0_0.xci",
+        "inst_hier_path": "axi_bram_ctrl_0",
+        "parameters": {
+          "SINGLE_PORT_BRAM": {
+            "value": "1"
+          }
+        }
+      },
+      "axi_dma_0": {
+        "vlnv": "xilinx.com:ip:axi_dma:7.1",
+        "xci_name": "equalizer_axi_dma_0_0",
+        "xci_path": "ip\\equalizer_axi_dma_0_0\\equalizer_axi_dma_0_0.xci",
+        "inst_hier_path": "axi_dma_0",
+        "parameters": {
+          "c_include_s2mm": {
+            "value": "1"
           },
+          "c_include_sg": {
+            "value": "0"
+          },
+          "c_m_axi_mm2s_data_width": {
+            "value": "32"
+          },
+          "c_m_axis_mm2s_tdata_width": {
+            "value": "32"
+          },
+          "c_mm2s_burst_size": {
+            "value": "256"
+          },
+          "c_s2mm_burst_size": {
+            "value": "256"
+          },
+          "c_sg_length_width": {
+            "value": "26"
+          }
+        },
+        "interface_ports": {
           "M_AXI_MM2S": {
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
             "mode": "Master",
-            "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
-            "vlnv": "xilinx.com:interface:aximm_rtl:1.0"
+            "address_space_ref": "Data_MM2S",
+            "base_address": {
+              "minimum": "0x00000000",
+              "maximum": "0xFFFFFFFF",
+              "width": "32"
+            }
           },
           "M_AXI_S2MM": {
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
             "mode": "Master",
-            "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
-            "vlnv": "xilinx.com:interface:aximm_rtl:1.0"
-          }
-        },
-        "ports": {
-          "ap_clk": {
-            "type": "clk",
-            "direction": "I"
-          },
-          "ap_rst_n": {
-            "type": "rst",
-            "direction": "I"
-          }
-        },
-        "components": {
-          "axi_bram_ctrl_0": {
-            "vlnv": "xilinx.com:ip:axi_bram_ctrl:4.1",
-            "xci_name": "equalizer_axi_bram_ctrl_0_0",
-            "xci_path": "ip\\equalizer_axi_bram_ctrl_0_0\\equalizer_axi_bram_ctrl_0_0.xci",
-            "inst_hier_path": "equalizerDMA/axi_bram_ctrl_0",
-            "parameters": {
-              "SINGLE_PORT_BRAM": {
-                "value": "1"
-              }
-            }
-          },
-          "axi_dma_0": {
-            "vlnv": "xilinx.com:ip:axi_dma:7.1",
-            "xci_name": "equalizer_axi_dma_0_0",
-            "xci_path": "ip\\equalizer_axi_dma_0_0\\equalizer_axi_dma_0_0.xci",
-            "inst_hier_path": "equalizerDMA/axi_dma_0",
-            "parameters": {
-              "c_include_s2mm": {
-                "value": "1"
-              },
-              "c_include_sg": {
-                "value": "0"
-              }
-            },
-            "interface_ports": {
-              "M_AXI_MM2S": {
-                "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
-                "mode": "Master",
-                "address_space_ref": "Data_MM2S",
-                "base_address": {
-                  "minimum": "0x00000000",
-                  "maximum": "0xFFFFFFFF",
-                  "width": "32"
-                }
-              },
-              "M_AXI_S2MM": {
-                "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
-                "mode": "Master",
-                "address_space_ref": "Data_S2MM",
-                "base_address": {
-                  "minimum": "0x00000000",
-                  "maximum": "0xFFFFFFFF",
-                  "width": "32"
-                }
-              }
-            },
-            "addressing": {
-              "address_spaces": {
-                "Data_MM2S": {
-                  "range": "4G",
-                  "width": "32"
-                },
-                "Data_S2MM": {
-                  "range": "4G",
-                  "width": "32"
-                }
-              }
-            }
-          },
-          "blk_mem_gen_0": {
-            "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
-            "xci_name": "equalizer_blk_mem_gen_0_0",
-            "xci_path": "ip\\equalizer_blk_mem_gen_0_0\\equalizer_blk_mem_gen_0_0.xci",
-            "inst_hier_path": "equalizerDMA/blk_mem_gen_0"
-          },
-          "equalizer_0": {
-            "vlnv": "xilinx.com:hls:equalizer:1.0",
-            "xci_name": "equalizer_equalizer_0_0",
-            "xci_path": "ip\\equalizer_equalizer_0_0\\equalizer_equalizer_0_0.xci",
-            "inst_hier_path": "equalizerDMA/equalizer_0",
-            "interface_ports": {
-              "m_axi_gmem": {
-                "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
-                "mode": "Master",
-                "address_space_ref": "Data_m_axi_gmem",
-                "base_address": {
-                  "minimum": "0x00000000",
-                  "maximum": "0xFFFFFFFFFFFFFFFF",
-                  "width": "64"
-                }
-              }
-            },
-            "addressing": {
-              "address_spaces": {
-                "Data_m_axi_gmem": {
-                  "range": "16E",
-                  "width": "64"
-                }
-              }
+            "address_space_ref": "Data_S2MM",
+            "base_address": {
+              "minimum": "0x00000000",
+              "maximum": "0xFFFFFFFF",
+              "width": "32"
             }
           }
         },
-        "interface_nets": {
-          "axi_bram_ctrl_0_BRAM_PORTA": {
-            "interface_ports": [
-              "blk_mem_gen_0/BRAM_PORTA",
-              "axi_bram_ctrl_0/BRAM_PORTA"
-            ]
-          },
-          "axi_dma_0_M_AXIS_MM2S": {
-            "interface_ports": [
-              "equalizer_0/input_r",
-              "axi_dma_0/M_AXIS_MM2S"
-            ]
-          },
-          "axi_dma_0_M_AXI_MM2S": {
-            "interface_ports": [
-              "M_AXI_MM2S",
-              "axi_dma_0/M_AXI_MM2S"
-            ]
-          },
-          "axi_dma_0_M_AXI_S2MM": {
-            "interface_ports": [
-              "M_AXI_S2MM",
-              "axi_dma_0/M_AXI_S2MM"
-            ]
-          },
-          "equalizer_0_m_axi_gmem": {
-            "interface_ports": [
-              "equalizer_0/m_axi_gmem",
-              "axi_bram_ctrl_0/S_AXI"
-            ]
-          },
-          "equalizer_0_output_r": {
-            "interface_ports": [
-              "equalizer_0/output_r",
-              "axi_dma_0/S_AXIS_S2MM"
-            ]
-          },
-          "ps7_0_axi_periph_M00_AXI": {
-            "interface_ports": [
-              "S_AXI_LITE",
-              "axi_dma_0/S_AXI_LITE"
-            ]
+        "addressing": {
+          "address_spaces": {
+            "Data_MM2S": {
+              "range": "4G",
+              "width": "32"
+            },
+            "Data_S2MM": {
+              "range": "4G",
+              "width": "32"
+            }
+          }
+        }
+      },
+      "blk_mem_gen_0": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "xci_name": "equalizer_blk_mem_gen_0_0",
+        "xci_path": "ip\\equalizer_blk_mem_gen_0_0\\equalizer_blk_mem_gen_0_0.xci",
+        "inst_hier_path": "blk_mem_gen_0"
+      },
+      "equalizer_0": {
+        "vlnv": "xilinx.com:hls:equalizer:1.0",
+        "xci_name": "equalizer_equalizer_0_1",
+        "xci_path": "ip\\equalizer_equalizer_0_1\\equalizer_equalizer_0_1.xci",
+        "inst_hier_path": "equalizer_0",
+        "parameters": {
+          "C_M_AXI_GMEM_ENABLE_ID_PORTS": {
+            "value": "true"
           }
         },
-        "nets": {
-          "processing_system7_0_FCLK_CLK0": {
-            "ports": [
-              "ap_clk",
-              "equalizer_0/ap_clk",
-              "axi_dma_0/m_axi_mm2s_aclk",
-              "axi_dma_0/s_axi_lite_aclk",
-              "axi_dma_0/m_axi_s2mm_aclk",
-              "axi_bram_ctrl_0/s_axi_aclk"
-            ]
-          },
-          "rst_ps7_0_100M_peripheral_aresetn": {
-            "ports": [
-              "ap_rst_n",
-              "equalizer_0/ap_rst_n",
-              "axi_dma_0/axi_resetn",
-              "axi_bram_ctrl_0/s_axi_aresetn"
-            ]
+        "interface_ports": {
+          "m_axi_gmem": {
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "mode": "Master",
+            "address_space_ref": "Data_m_axi_gmem",
+            "base_address": {
+              "minimum": "0x00000000",
+              "maximum": "0xFFFFFFFFFFFFFFFF",
+              "width": "64"
+            }
+          }
+        },
+        "addressing": {
+          "address_spaces": {
+            "Data_m_axi_gmem": {
+              "range": "16E",
+              "width": "64"
+            }
           }
         }
       }
     },
     "interface_nets": {
+      "axi_bram_ctrl_0_BRAM_PORTA": {
+        "interface_ports": [
+          "blk_mem_gen_0/BRAM_PORTA",
+          "axi_bram_ctrl_0/BRAM_PORTA"
+        ]
+      },
+      "axi_dma_0_M_AXIS_MM2S": {
+        "interface_ports": [
+          "equalizer_0/input_r",
+          "axi_dma_0/M_AXIS_MM2S"
+        ]
+      },
       "axi_dma_0_M_AXI_MM2S": {
         "interface_ports": [
-          "equalizerDMA/M_AXI_MM2S",
+          "axi_dma_0/M_AXI_MM2S",
           "axi_mem_intercon/S00_AXI"
         ]
       },
       "axi_dma_0_M_AXI_S2MM": {
         "interface_ports": [
-          "equalizerDMA/M_AXI_S2MM",
+          "axi_dma_0/M_AXI_S2MM",
           "axi_mem_intercon/S01_AXI"
         ]
       },
@@ -2655,6 +2605,18 @@
         "interface_ports": [
           "axi_mem_intercon/M00_AXI",
           "processing_system7_0/S_AXI_GP0"
+        ]
+      },
+      "equalizer_0_m_axi_gmem": {
+        "interface_ports": [
+          "equalizer_0/m_axi_gmem",
+          "axi_bram_ctrl_0/S_AXI"
+        ]
+      },
+      "equalizer_0_output_r": {
+        "interface_ports": [
+          "equalizer_0/output_r",
+          "axi_dma_0/S_AXIS_S2MM"
         ]
       },
       "processing_system7_0_DDR": {
@@ -2678,7 +2640,7 @@
       "ps7_0_axi_periph_M00_AXI": {
         "interface_ports": [
           "ps7_0_axi_periph/M00_AXI",
-          "equalizerDMA/S_AXI_LITE"
+          "axi_dma_0/S_AXI_LITE"
         ]
       }
     },
@@ -2696,7 +2658,11 @@
           "ps7_0_axi_periph/S00_ACLK",
           "ps7_0_axi_periph/M00_ACLK",
           "axi_mem_intercon/S01_ACLK",
-          "equalizerDMA/ap_clk"
+          "axi_dma_0/m_axi_mm2s_aclk",
+          "axi_dma_0/s_axi_lite_aclk",
+          "axi_dma_0/m_axi_s2mm_aclk",
+          "axi_bram_ctrl_0/s_axi_aclk",
+          "equalizer_0/ap_clk"
         ]
       },
       "processing_system7_0_FCLK_RESET0_N": {
@@ -2715,7 +2681,9 @@
           "ps7_0_axi_periph/M00_ARESETN",
           "ps7_0_axi_periph/ARESETN",
           "axi_mem_intercon/S01_ARESETN",
-          "equalizerDMA/ap_rst_n"
+          "axi_dma_0/axi_resetn",
+          "axi_bram_ctrl_0/s_axi_aresetn",
+          "equalizer_0/ap_rst_n"
         ]
       }
     },
@@ -2725,7 +2693,7 @@
           "Data": {
             "segments": {
               "SEG_axi_dma_0_Reg": {
-                "address_block": "/equalizerDMA/axi_dma_0/S_AXI_LITE/Reg",
+                "address_block": "/axi_dma_0/S_AXI_LITE/Reg",
                 "offset": "0x41E00000",
                 "range": "64K"
               }
@@ -2733,7 +2701,7 @@
           }
         }
       },
-      "/equalizerDMA/axi_dma_0": {
+      "/axi_dma_0": {
         "address_spaces": {
           "Data_MM2S": {
             "segments": {
@@ -2784,19 +2752,6 @@
                 "address_block": "/processing_system7_0/S_AXI_GP0/GP0_QSPI_LINEAR",
                 "offset": "0xFC000000",
                 "range": "16M"
-              }
-            }
-          }
-        }
-      },
-      "/equalizerDMA/equalizer_0": {
-        "address_spaces": {
-          "Data_m_axi_gmem": {
-            "segments": {
-              "SEG_axi_bram_ctrl_0_Mem0": {
-                "address_block": "/equalizerDMA/axi_bram_ctrl_0/S_AXI/Mem0",
-                "offset": "0x00000000C0000000",
-                "range": "8K"
               }
             }
           }

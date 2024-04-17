@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
-    <originFiles name="equalizer.h" path="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Audio_Equalizer\Audio_Equalizer_Vitis\equalizer.h"/>
-    <originFiles name="equalizer.cpp" path="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Audio_Equalizer\Audio_Equalizer_Vitis\equalizer.cpp"/>
+    <originFiles name="equalizer.h" path="C:\EECE4632FinalProject\Audio_Equalizer\Audio_Equalizer_Vitis\equalizer.h"/>
+    <originFiles name="equalizer.cpp" path="C:\EECE4632FinalProject\Audio_Equalizer\Audio_Equalizer_Vitis\equalizer.cpp"/>
   </source>
   <testbench>
-    <originFiles name="equalizer_test.cpp" path="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Audio_Equalizer\Audio_Equalizer_Vitis\equalizer_test.cpp"/>
+    <originFiles name="equalizer_test.cpp" path="C:\EECE4632FinalProject\Audio_Equalizer\Audio_Equalizer_Vitis\equalizer_test.cpp"/>
   </testbench>
 </autopilotfilemapping:AutoPilotFileMapping>

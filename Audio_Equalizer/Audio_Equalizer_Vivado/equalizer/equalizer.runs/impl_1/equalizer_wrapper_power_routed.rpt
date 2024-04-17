@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-| Date             : Thu Apr 11 21:36:56 2024
+| Date             : Tue Apr 16 19:57:16 2024
 | Host             : WFXA4BB6DB88619 running 64-bit major release  (build 9200)
 | Command          : report_power -file equalizer_wrapper_power_routed.rpt -pb equalizer_wrapper_power_summary_routed.pb -rpx equalizer_wrapper_power_routed.rpx
 | Design           : equalizer_wrapper
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.430        |
+| Total On-Chip Power (W)  | 1.375        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.294        |
-| Device Static (W)        | 0.135        |
+| Dynamic (W)              | 1.241        |
+| Device Static (W)        | 0.134        |
 | Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 68.5         |
-| Junction Temperature (C) | 41.5         |
+| Max Ambient (C)          | 69.1         |
+| Junction Temperature (C) | 40.9         |
 | Confidence Level         | Medium       |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,21 +52,20 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.023 |        3 |       --- |             --- |
-| Slice Logic              |     0.005 |    13818 |       --- |             --- |
-|   LUT as Logic           |     0.004 |     4188 |     53200 |            7.87 |
-|   CARRY4                 |    <0.001 |      484 |     13300 |            3.64 |
-|   Register               |    <0.001 |     7022 |    106400 |            6.60 |
-|   LUT as Shift Register  |    <0.001 |      223 |     17400 |            1.28 |
-|   F7/F8 Muxes            |    <0.001 |        1 |     53200 |           <0.01 |
-|   Others                 |     0.000 |      624 |       --- |             --- |
-|   LUT as Distributed RAM |     0.000 |       18 |     17400 |            0.10 |
-| Signals                  |     0.006 |    13480 |       --- |             --- |
-| Block RAM                |     0.005 |        5 |       140 |            3.57 |
+| Clocks                   |     0.011 |        3 |       --- |             --- |
+| Slice Logic              |     0.002 |    14541 |       --- |             --- |
+|   LUT as Logic           |     0.002 |     4438 |     53200 |            8.34 |
+|   CARRY4                 |    <0.001 |      550 |     13300 |            4.14 |
+|   Register               |    <0.001 |     7351 |    106400 |            6.91 |
+|   LUT as Shift Register  |    <0.001 |      250 |     17400 |            1.44 |
+|   Others                 |     0.000 |      636 |       --- |             --- |
+|   LUT as Distributed RAM |     0.000 |       20 |     17400 |            0.11 |
+| Signals                  |     0.003 |    14016 |       --- |             --- |
+| Block RAM                |     0.005 |        8 |       140 |            5.71 |
 | DSPs                     |    <0.001 |       99 |       220 |           45.00 |
-| PS7                      |     1.256 |        1 |       --- |             --- |
-| Static Power             |     0.135 |          |           |                 |
-| Total                    |     1.430 |          |           |                 |
+| PS7                      |     1.219 |        1 |       --- |             --- |
+| Static Power             |     0.134 |          |           |                 |
+| Total                    |     1.375 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -76,7 +75,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.051 |       0.038 |      0.013 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.034 |       0.021 |      0.013 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.014 |       0.000 |      0.014 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -85,14 +84,14 @@ Table of Contents
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
-| Vccbram   |       1.000 |     0.001 |       0.000 |      0.001 |       NA    | Unspecified | NA         |
+| Vccbram   |       1.000 |     0.002 |       0.000 |      0.001 |       NA    | Unspecified | NA         |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
-| Vccpint   |       1.000 |     0.674 |       0.647 |      0.027 |       NA    | Unspecified | NA         |
-| Vccpaux   |       1.800 |     0.036 |       0.026 |      0.010 |       NA    | Unspecified | NA         |
-| Vccpll    |       1.800 |     0.017 |       0.014 |      0.003 |       NA    | Unspecified | NA         |
-| Vcco_ddr  |       1.500 |     0.354 |       0.352 |      0.002 |       NA    | Unspecified | NA         |
+| Vccpint   |       1.000 |     0.709 |       0.683 |      0.027 |       NA    | Unspecified | NA         |
+| Vccpaux   |       1.800 |     0.031 |       0.020 |      0.010 |       NA    | Unspecified | NA         |
+| Vccpll    |       1.800 |     0.018 |       0.015 |      0.003 |       NA    | Unspecified | NA         |
+| Vcco_ddr  |       1.500 |     0.311 |       0.309 |      0.002 |       NA    | Unspecified | NA         |
 | Vcco_mio0 |       3.300 |     0.003 |       0.002 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco_mio1 |       1.800 |     0.003 |       0.002 |      0.001 |       NA    | Unspecified | NA         |
 | Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |       NA    | Unspecified | NA         |
@@ -139,7 +138,7 @@ Table of Contents
 +------------+--------------------------------------------------------------+-----------------+
 | Clock      | Domain                                                       | Constraint (ns) |
 +------------+--------------------------------------------------------------+-----------------+
-| clk_fpga_0 | equalizer_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0] |            10.0 |
+| clk_fpga_0 | equalizer_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0] |            20.0 |
 +------------+--------------------------------------------------------------+-----------------+
 
 
@@ -152,20 +151,19 @@ Table of Contents
 +--------------------------+-----------+
 | Name                     | Power (W) |
 +--------------------------+-----------+
-| equalizer_wrapper        |     1.294 |
-|   equalizer_i            |     1.294 |
-|     axi_mem_intercon     |     0.002 |
-|       m00_couplers       |     0.001 |
-|       xbar               |     0.001 |
-|     equalizerDMA         |     0.032 |
-|       axi_bram_ctrl_0    |     0.002 |
-|       axi_dma_0          |     0.008 |
-|       blk_mem_gen_0      |     0.004 |
-|       equalizer_0        |     0.018 |
-|     processing_system7_0 |     1.257 |
-|       inst               |     1.257 |
-|     ps7_0_axi_periph     |     0.003 |
-|       s00_couplers       |     0.003 |
+| equalizer_wrapper        |     1.241 |
+|   equalizer_i            |     1.241 |
+|     axi_dma_0            |     0.006 |
+|       U0                 |     0.006 |
+|     axi_mem_intercon     |     0.001 |
+|     blk_mem_gen_0        |     0.002 |
+|       U0                 |     0.002 |
+|     equalizer_0          |     0.008 |
+|       inst               |     0.008 |
+|     processing_system7_0 |     1.220 |
+|       inst               |     1.220 |
+|     ps7_0_axi_periph     |     0.002 |
+|       s00_couplers       |     0.002 |
 +--------------------------+-----------+
 
 
