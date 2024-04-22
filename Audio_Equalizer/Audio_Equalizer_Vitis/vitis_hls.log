@@ -1,15 +1,15 @@
 INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2022.1/bin/unwrapped/win64.o/vitis_hls.exe'
-INFO: [HLS 200-10] For user 'meall.a' on host 'wfxa4bb6db88619' (Windows NT_amd64 version 6.2) on Tue Apr 16 16:55:31 -0400 2024
+INFO: [HLS 200-10] For user 'meall.a' on host 'wfxa4bb6db88619' (Windows NT_amd64 version 6.2) on Mon Apr 22 15:28:36 -0400 2024
 INFO: [HLS 200-10] In directory 'C:/EECE4632FinalProject/Audio_Equalizer/Audio_Equalizer_Vitis'
-Sourcing Tcl script 'C:/EECE4632FinalProject/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution1/export.tcl'
-INFO: [HLS 200-1510] Running: source C:/EECE4632FinalProject/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution1/export.tcl
+Sourcing Tcl script 'C:/EECE4632FinalProject/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution1/csim.tcl'
+INFO: [HLS 200-1510] Running: source C:/EECE4632FinalProject/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution1/csim.tcl
 INFO: [HLS 200-1510] Running: open_project equalizer 
 INFO: [HLS 200-10] Opening project 'C:/EECE4632FinalProject/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer'.
 INFO: [HLS 200-1510] Running: set_top equalizer 
-INFO: [HLS 200-1510] Running: add_files equalizer.h 
-INFO: [HLS 200-10] Adding design file 'equalizer.h' to the project
 INFO: [HLS 200-1510] Running: add_files equalizer.cpp 
 INFO: [HLS 200-10] Adding design file 'equalizer.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files equalizer.h 
+INFO: [HLS 200-10] Adding design file 'equalizer.h' to the project
 INFO: [HLS 200-1510] Running: add_files -tb equalizer_test.cpp -cflags -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
 INFO: [HLS 200-10] Adding test bench file 'equalizer_test.cpp' to the project
 INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
@@ -25,19 +25,101 @@ INFO: [HLS 200-1510] Running: create_clock -period 20 -name default
 INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog 
 INFO: [HLS 200-1510] Running: source ./equalizer/solution1/directives.tcl
 INFO: [HLS 200-1510] Running: set_directive_top -name equalizer equalizer 
-INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog 
-INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
-
-****** Vivado v2022.1 (64-bit)
-  **** SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
-  **** IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
-    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-
-source run_ippack.tcl -notrace
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.1/data/ip'.
-INFO: [Common 17-206] Exiting Vivado at Tue Apr 16 16:55:48 2024...
-INFO: [HLS 200-802] Generated output file equalizer/solution1/impl/export.zip
-INFO: [HLS 200-111] Finished Command export_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 13.144 seconds; current allocated memory: 0.000 MB.
-INFO: [HLS 200-112] Total CPU user time: 4 seconds. Total CPU system time: 2 seconds. Total elapsed time: 17.93 seconds; peak allocated memory: 1.373 GB.
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../equalizer_test.cpp in debug mode
+   Compiling ../../../../equalizer.cpp in debug mode
+   Generating csim.exe
+In file included from C:/Xilinx/Vitis_HLS/2022.1/include/floating_point_v7_0_bitacc_cmodel.h:144:0,
+                 from C:/Xilinx/Vitis_HLS/2022.1/include/hls_fpo.h:189,
+                 from C:/Xilinx/Vitis_HLS/2022.1/include/hls_half_fpo.h:64,
+                 from C:/Xilinx/Vitis_HLS/2022.1/include/hls_half.h:71,
+                 from C:/Xilinx/Vitis_HLS/2022.1/include/etc/ap_private.h:98,
+                 from C:/Xilinx/Vitis_HLS/2022.1/include/ap_common.h:710,
+                 from C:/Xilinx/Vitis_HLS/2022.1/include/ap_int.h:56,
+                 from C:/Xilinx/Vitis_HLS/2022.1/include/ap_axi_sdata.h:88,
+                 from ../../../../equalizer.h:5,
+                 from ../../../../equalizer_test.cpp:2:
+C:/Xilinx/Vitis_HLS/2022.1/include/gmp.h:63:0: warning: "__GMP_LIBGMP_DLL" redefined
+ #define __GMP_LIBGMP_DLL  0
+ 
+In file included from C:/Xilinx/Vitis_HLS/2022.1/include/hls_fpo.h:189:0,
+                 from C:/Xilinx/Vitis_HLS/2022.1/include/hls_half_fpo.h:64,
+                 from C:/Xilinx/Vitis_HLS/2022.1/include/hls_half.h:71,
+                 from C:/Xilinx/Vitis_HLS/2022.1/include/etc/ap_private.h:98,
+                 from C:/Xilinx/Vitis_HLS/2022.1/include/ap_common.h:710,
+                 from C:/Xilinx/Vitis_HLS/2022.1/include/ap_int.h:56,
+                 from C:/Xilinx/Vitis_HLS/2022.1/include/ap_axi_sdata.h:88,
+                 from ../../../../equalizer.h:5,
+                 from ../../../../equalizer_test.cpp:2:
+C:/Xilinx/Vitis_HLS/2022.1/include/floating_point_v7_0_bitacc_cmodel.h:136:0: note: this is the location of the previous definition
+ #define __GMP_LIBGMP_DLL 1
+ 
+In file included from C:/Xilinx/Vitis_HLS/2022.1/include/floating_point_v7_0_bitacc_cmodel.h:144:0,
+                 from C:/Xilinx/Vitis_HLS/2022.1/include/hls_fpo.h:189,
+                 from C:/Xilinx/Vitis_HLS/2022.1/include/hls_half_fpo.h:64,
+                 from C:/Xilinx/Vitis_HLS/2022.1/include/hls_half.h:71,
+                 from C:/Xilinx/Vitis_HLS/2022.1/include/etc/ap_private.h:98,
+                 from C:/Xilinx/Vitis_HLS/2022.1/include/ap_common.h:710,
+                 from C:/Xilinx/Vitis_HLS/2022.1/include/ap_int.h:56,
+                 from C:/Xilinx/Vitis_HLS/2022.1/include/ap_axi_sdata.h:88,
+                 from ../../../../equalizer.h:5,
+                 from ../../../../equalizer.cpp:1:
+C:/Xilinx/Vitis_HLS/2022.1/include/gmp.h:63:0: warning: "__GMP_LIBGMP_DLL" redefined
+ #define __GMP_LIBGMP_DLL  0
+ 
+In file included from C:/Xilinx/Vitis_HLS/2022.1/include/hls_fpo.h:189:0,
+                 from C:/Xilinx/Vitis_HLS/2022.1/include/hls_half_fpo.h:64,
+                 from C:/Xilinx/Vitis_HLS/2022.1/include/hls_half.h:71,
+                 from C:/Xilinx/Vitis_HLS/2022.1/include/etc/ap_private.h:98,
+                 from C:/Xilinx/Vitis_HLS/2022.1/include/ap_common.h:710,
+                 from C:/Xilinx/Vitis_HLS/2022.1/include/ap_int.h:56,
+                 from C:/Xilinx/Vitis_HLS/2022.1/include/ap_axi_sdata.h:88,
+                 from ../../../../equalizer.h:5,
+                 from ../../../../equalizer.cpp:1:
+C:/Xilinx/Vitis_HLS/2022.1/include/floating_point_v7_0_bitacc_cmodel.h:136:0: note: this is the location of the previous definition
+ #define __GMP_LIBGMP_DLL 1
+ 
+In function
+Wrote to input buffer
+After function call
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+Read from output buffer
+GREAT! YOU PASSED
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 8.238 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 3 seconds. Total CPU system time: 1 seconds. Total elapsed time: 10.972 seconds; peak allocated memory: 1.443 GB.

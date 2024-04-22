@@ -5,10 +5,10 @@
 <ModuleName>equalizer</ModuleName>
 <InstancesList>
 <Instance>
-<InstName>grp_equalizer_Pipeline_VITIS_LOOP_56_2_fu_258</InstName>
-<ModuleName>equalizer_Pipeline_VITIS_LOOP_56_2</ModuleName>
+<InstName>grp_equalizer_Pipeline_VITIS_LOOP_48_2_fu_229</InstName>
+<ModuleName>equalizer_Pipeline_VITIS_LOOP_48_2</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>258</ID>
+<ID>229</ID>
 </Instance>
 </InstancesList>
 </TopModule>
@@ -16,9 +16,9 @@
 
 <ModuleInformation>
 <Module>
-<Name>equalizer_Pipeline_VITIS_LOOP_56_2</Name>
+<Name>equalizer_Pipeline_VITIS_LOOP_48_2</Name>
 <Loops>
-<VITIS_LOOP_56_2></VITIS_LOOP_56_2>
+<VITIS_LOOP_48_2></VITIS_LOOP_48_2>
 </Loops>
 <PerformanceEstimates>
 <SummaryOfTimingAnalysis>
@@ -37,8 +37,8 @@
 <PipelineType>no</PipelineType>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
-<VITIS_LOOP_56_2>
-<Name>VITIS_LOOP_56_2</Name>
+<VITIS_LOOP_48_2>
+<Name>VITIS_LOOP_48_2</Name>
 <TripCount>undef</TripCount>
 <Latency>undef</Latency>
 <AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
@@ -47,7 +47,7 @@
 <PipelineType>yes</PipelineType>
 <InstanceList>
 </InstanceList>
-</VITIS_LOOP_56_2>
+</VITIS_LOOP_48_2>
 </SummaryOfLoopLatency>
 </PerformanceEstimates>
 <AreaEstimates>
@@ -72,7 +72,7 @@
 <InterfaceSummary>
 <RtlPorts>
 <name>ap_clk</name>
-<Object>equalizer_Pipeline_VITIS_LOOP_56_2</Object>
+<Object>equalizer_Pipeline_VITIS_LOOP_48_2</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -83,7 +83,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_rst</name>
-<Object>equalizer_Pipeline_VITIS_LOOP_56_2</Object>
+<Object>equalizer_Pipeline_VITIS_LOOP_48_2</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -94,7 +94,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_start</name>
-<Object>equalizer_Pipeline_VITIS_LOOP_56_2</Object>
+<Object>equalizer_Pipeline_VITIS_LOOP_48_2</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -105,7 +105,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_done</name>
-<Object>equalizer_Pipeline_VITIS_LOOP_56_2</Object>
+<Object>equalizer_Pipeline_VITIS_LOOP_48_2</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -116,7 +116,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_idle</name>
-<Object>equalizer_Pipeline_VITIS_LOOP_56_2</Object>
+<Object>equalizer_Pipeline_VITIS_LOOP_48_2</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -127,7 +127,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_ready</name>
-<Object>equalizer_Pipeline_VITIS_LOOP_56_2</Object>
+<Object>equalizer_Pipeline_VITIS_LOOP_48_2</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -665,8 +665,8 @@
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>sext_ln56</name>
-<Object>sext_ln56</Object>
+<name>sext_ln48</name>
+<Object>sext_ln48</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>
@@ -687,8 +687,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>tmp_data_V</name>
-<Object>tmp_data_V</Object>
+<name>tmp_data_V_3</name>
+<Object>tmp_data_V_3</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>
@@ -812,7 +812,7 @@
 <Module>
 <Name>equalizer</Name>
 <Loops>
-<VITIS_LOOP_24_1></VITIS_LOOP_24_1>
+<VITIS_LOOP_34_1></VITIS_LOOP_34_1>
 </Loops>
 <PerformanceEstimates>
 <SummaryOfTimingAnalysis>
@@ -831,8 +831,8 @@
 <PipelineType>no</PipelineType>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
-<VITIS_LOOP_24_1>
-<Name>VITIS_LOOP_24_1</Name>
+<VITIS_LOOP_34_1>
+<Name>VITIS_LOOP_34_1</Name>
 <TripCount>undef</TripCount>
 <Latency>undef</Latency>
 <AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
@@ -840,9 +840,9 @@
 <PipelineDepth>undef</PipelineDepth>
 <PipelineType>no</PipelineType>
 <InstanceList>
-<Instance>grp_equalizer_Pipeline_VITIS_LOOP_56_2_fu_258</Instance>
+<Instance>grp_equalizer_Pipeline_VITIS_LOOP_48_2_fu_229</Instance>
 </InstanceList>
-</VITIS_LOOP_24_1>
+</VITIS_LOOP_34_1>
 </SummaryOfLoopLatency>
 </PerformanceEstimates>
 <AreaEstimates>
@@ -850,15 +850,15 @@
 <BRAM_18K>0</BRAM_18K>
 <AVAIL_BRAM>280</AVAIL_BRAM>
 <UTIL_BRAM>0</UTIL_BRAM>
-<DSP>99</DSP>
-<AVAIL_DSP>220</AVAIL_DSP>
-<UTIL_DSP>45</UTIL_DSP>
-<FF>4175</FF>
+<FF>1365</FF>
 <AVAIL_FF>106400</AVAIL_FF>
-<UTIL_FF>3</UTIL_FF>
-<LUT>4279</LUT>
+<UTIL_FF>1</UTIL_FF>
+<LUT>2107</LUT>
 <AVAIL_LUT>53200</AVAIL_LUT>
-<UTIL_LUT>8</UTIL_LUT>
+<UTIL_LUT>3</UTIL_LUT>
+<DSP>0</DSP>
+<AVAIL_DSP>220</AVAIL_DSP>
+<UTIL_DSP>0</UTIL_DSP>
 <URAM>0</URAM>
 <AVAIL_URAM>0</AVAIL_URAM>
 <UTIL_URAM>0</UTIL_URAM>

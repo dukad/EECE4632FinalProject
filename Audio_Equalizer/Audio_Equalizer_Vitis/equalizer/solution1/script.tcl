@@ -5,8 +5,8 @@
 ############################################################
 open_project equalizer
 set_top equalizer
-add_files equalizer.h
 add_files equalizer.cpp
+add_files equalizer.h
 add_files -tb equalizer_test.cpp -cflags "-Wno-unknown-pragmas" -csimflags "-Wno-unknown-pragmas"
 open_solution "solution1" -flow_target vivado
 set_part {xc7z020-clg400-1}
