@@ -8,11 +8,11 @@
 #define FRAME_RATE 88200
 #define LPF_FILTER_LENGTH 441
 #define DELAY_BUFFER_SIZE 88200
-#define WAH_BANDPASS_RESOLUTION 20
+#define WAH_BANDPASS_RESOLUTION 10
 #define BANDPASS_FILTER_LENGTH 100
 
 typedef ap_fixed<8,1> mult_float;
-typedef ap_fixed<16, -16> wah_mult;
+typedef ap_fixed<32, -32> wah_mult;
 
 // function definitions
 int distortion(int input, int threshold, mult_float clip_factor);
@@ -51,7 +51,7 @@ void guitar_effects (
 	#pragma HLS INTERFACE s_axilite port=axilite_out
     #pragma HLS INTERFACE s_axilite port=tempo
 	#pragma HLS INTERFACE s_axilite port=debug_output
-	#pragma HLS INTERFACE m_axi depth=2000 port=wah_coeffs
+	#pragma HLS INTERFACE m_axi depth=1000 port=wah_coeffs
 
 	#pragma HLS INTERFACE ap_ctrl_none port=return
 

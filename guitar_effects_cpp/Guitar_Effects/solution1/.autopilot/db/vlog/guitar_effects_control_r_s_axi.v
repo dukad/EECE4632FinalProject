@@ -41,7 +41,7 @@ module guitar_effects_control_r_s_axi
     output wire [31:0]                   delay_samples,
     output wire [31:0]                   tempo,
     output wire [63:0]                   wah_coeffs,
-    input  wire [15:0]                   debug_output,
+    input  wire [31:0]                   debug_output,
     input  wire                          debug_output_ap_vld
 );
 //------------------------Address Info-------------------
@@ -89,8 +89,7 @@ module guitar_effects_control_r_s_axi
 //        bit 31~0 - wah_coeffs[63:32] (Read/Write)
 // 0x70 : reserved
 // 0x74 : Data signal of debug_output
-//        bit 15~0 - debug_output[15:0] (Read)
-//        others   - reserved
+//        bit 31~0 - debug_output[31:0] (Read)
 // 0x78 : Control signal of debug_output
 //        bit 0  - debug_output_ap_vld (Read/COR)
 //        others - reserved
@@ -158,7 +157,7 @@ localparam
     reg  [31:0]                   int_tempo = 'b0;
     reg  [63:0]                   int_wah_coeffs = 'b0;
     reg                           int_debug_output_ap_vld;
-    reg  [15:0]                   int_debug_output = 'b0;
+    reg  [31:0]                   int_debug_output = 'b0;
 
 //------------------------Instantiation------------------
 
@@ -291,7 +290,7 @@ always @(posedge ACLK) begin
                     rdata <= int_wah_coeffs[63:32];
                 end
                 ADDR_DEBUG_OUTPUT_DATA_0: begin
-                    rdata <= int_debug_output[15:0];
+                    rdata <= int_debug_output[31:0];
                 end
                 ADDR_DEBUG_OUTPUT_CTRL: begin
                     rdata[0] <= int_debug_output_ap_vld;

@@ -41,9 +41,9 @@ set SynModuleInfo {
       {MODELNAME guitar_effects_srem_32ns_18ns_17_36_seq_1 RTLNAME guitar_effects_srem_32ns_18ns_17_36_seq_1 BINDTYPE op TYPE srem IMPL auto_seq LATENCY 35 ALLOW_PRAGMA 1}
       {MODELNAME guitar_effects_srem_32ns_18ns_32_36_seq_1 RTLNAME guitar_effects_srem_32ns_18ns_32_36_seq_1 BINDTYPE op TYPE srem IMPL auto_seq LATENCY 35 ALLOW_PRAGMA 1}
       {MODELNAME guitar_effects_srem_32ns_8ns_32_36_seq_1 RTLNAME guitar_effects_srem_32ns_8ns_32_36_seq_1 BINDTYPE op TYPE srem IMPL auto_seq LATENCY 35 ALLOW_PRAGMA 1}
-      {MODELNAME guitar_effects_mul_32s_9ns_41_2_1 RTLNAME guitar_effects_mul_32s_9ns_41_2_1 BINDTYPE op TYPE mul IMPL auto LATENCY 1 ALLOW_PRAGMA 1}
+      {MODELNAME guitar_effects_mul_32s_10ns_42_2_1 RTLNAME guitar_effects_mul_32s_10ns_42_2_1 BINDTYPE op TYPE mul IMPL auto LATENCY 1 ALLOW_PRAGMA 1}
       {MODELNAME guitar_effects_srem_9ns_8ns_7_13_seq_1 RTLNAME guitar_effects_srem_9ns_8ns_7_13_seq_1 BINDTYPE op TYPE srem IMPL auto_seq LATENCY 12 ALLOW_PRAGMA 1}
-      {MODELNAME guitar_effects_mul_32s_16s_48_2_1 RTLNAME guitar_effects_mul_32s_16s_48_2_1 BINDTYPE op TYPE mul IMPL auto LATENCY 1 ALLOW_PRAGMA 1}
+      {MODELNAME guitar_effects_mul_32s_32s_64_2_1 RTLNAME guitar_effects_mul_32s_32s_64_2_1 BINDTYPE op TYPE mul IMPL auto LATENCY 1 ALLOW_PRAGMA 1}
       {MODELNAME guitar_effects_compression_buffer_RAM_AUTO_1R1W RTLNAME guitar_effects_compression_buffer_RAM_AUTO_1R1W BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
       {MODELNAME guitar_effects_delay_buffer_RAM_AUTO_1R1W RTLNAME guitar_effects_delay_buffer_RAM_AUTO_1R1W BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
       {MODELNAME guitar_effects_wah_values_buffer_RAM_AUTO_1R1W RTLNAME guitar_effects_wah_values_buffer_RAM_AUTO_1R1W BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}

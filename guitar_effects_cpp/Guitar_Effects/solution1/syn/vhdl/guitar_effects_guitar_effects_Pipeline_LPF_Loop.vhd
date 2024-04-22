@@ -23,13 +23,13 @@ port (
     compression_buffer_q0 : IN STD_LOGIC_VECTOR (31 downto 0);
     p_out : OUT STD_LOGIC_VECTOR (31 downto 0);
     p_out_ap_vld : OUT STD_LOGIC;
-    grp_fu_794_p_din0 : OUT STD_LOGIC_VECTOR (31 downto 0);
-    grp_fu_794_p_din1 : OUT STD_LOGIC_VECTOR (31 downto 0);
-    grp_fu_794_p_dout0 : IN STD_LOGIC_VECTOR (31 downto 0);
-    grp_fu_794_p_ce : OUT STD_LOGIC;
-    grp_fu_802_p_din0 : OUT STD_LOGIC_VECTOR (31 downto 0);
-    grp_fu_802_p_dout0 : IN STD_LOGIC_VECTOR (31 downto 0);
-    grp_fu_802_p_ce : OUT STD_LOGIC );
+    grp_fu_784_p_din0 : OUT STD_LOGIC_VECTOR (31 downto 0);
+    grp_fu_784_p_din1 : OUT STD_LOGIC_VECTOR (31 downto 0);
+    grp_fu_784_p_dout0 : IN STD_LOGIC_VECTOR (31 downto 0);
+    grp_fu_784_p_ce : OUT STD_LOGIC;
+    grp_fu_792_p_din0 : OUT STD_LOGIC_VECTOR (31 downto 0);
+    grp_fu_792_p_dout0 : IN STD_LOGIC_VECTOR (31 downto 0);
+    grp_fu_792_p_ce : OUT STD_LOGIC );
 end;
 
 
@@ -204,7 +204,7 @@ attribute shreg_extract : string;
     signal tmp_fu_290_p3 : STD_LOGIC_VECTOR (0 downto 0);
     signal r_V_21_fu_284_p2 : STD_LOGIC_VECTOR (78 downto 0);
     signal zext_ln818_fu_298_p1 : STD_LOGIC_VECTOR (31 downto 0);
-    signal tmp_6_fu_302_p4 : STD_LOGIC_VECTOR (31 downto 0);
+    signal tmp_5_fu_302_p4 : STD_LOGIC_VECTOR (31 downto 0);
     signal result_V_1_fu_319_p2 : STD_LOGIC_VECTOR (31 downto 0);
     signal ap_done_reg : STD_LOGIC := '0';
     signal ap_continue_int : STD_LOGIC;
@@ -527,7 +527,7 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if (((ap_const_boolean_0 = ap_block_pp0_stage9_11001) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage9))) then
-                conv8_i_reg_398 <= grp_fu_802_p_dout0;
+                conv8_i_reg_398 <= grp_fu_792_p_dout0;
             end if;
         end if;
     end process;
@@ -535,7 +535,7 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if (((ap_const_boolean_0 = ap_block_pp0_stage6_11001) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage6))) then
-                conv_i_reg_393 <= grp_fu_802_p_dout0;
+                conv_i_reg_393 <= grp_fu_792_p_dout0;
             end if;
         end if;
     end process;
@@ -555,7 +555,7 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if (((ap_const_boolean_0 = ap_block_pp0_stage10_11001) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage10))) then
-                mul_i_reg_403 <= grp_fu_794_p_dout0;
+                mul_i_reg_403 <= grp_fu_784_p_dout0;
             end if;
         end if;
     end process;
@@ -878,11 +878,11 @@ begin
 
     grp_fu_169_p0 <= std_logic_vector(unsigned(zext_ln170_fu_159_p1) + unsigned(sext_ln65_cast_fu_130_p1));
     grp_fu_169_p1 <= ap_const_lv11_1B9(10 - 1 downto 0);
-    grp_fu_794_p_ce <= ap_const_logic_1;
-    grp_fu_794_p_din0 <= conv_i_reg_393;
-    grp_fu_794_p_din1 <= lpf_coefficients_load_reg_383;
-    grp_fu_802_p_ce <= ap_const_logic_1;
-    grp_fu_802_p_din0 <= grp_fu_127_p0;
+    grp_fu_784_p_ce <= ap_const_logic_1;
+    grp_fu_784_p_din0 <= conv_i_reg_393;
+    grp_fu_784_p_din1 <= lpf_coefficients_load_reg_383;
+    grp_fu_792_p_ce <= ap_const_logic_1;
+    grp_fu_792_p_din0 <= grp_fu_127_p0;
     icmp_ln167_fu_147_p2 <= "1" when (ap_sig_allocacmp_i_7 = ap_const_lv9_1B9) else "0";
     isNeg_fu_232_p3 <= add_ln346_fu_226_p2(8 downto 8);
     lpf_coefficients_address0 <= zext_ln167_fu_189_p1(9 - 1 downto 0);
@@ -922,7 +922,7 @@ begin
         sext_ln65_cast_fu_130_p1 <= std_logic_vector(IEEE.numeric_std.resize(signed(sext_ln65),11));
 
     sub_ln1512_fu_240_p2 <= std_logic_vector(unsigned(ap_const_lv8_7F) - unsigned(xs_exp_V_fu_208_p4));
-    tmp_6_fu_302_p4 <= r_V_21_fu_284_p2(55 downto 24);
+    tmp_5_fu_302_p4 <= r_V_21_fu_284_p2(55 downto 24);
     tmp_fu_290_p3 <= r_V_fu_278_p2(24 downto 24);
     trunc_ln171_fu_180_p1 <= grp_fu_169_p2(9 - 1 downto 0);
     ush_fu_250_p3 <= 
@@ -930,7 +930,7 @@ begin
         add_ln346_fu_226_p2;
     val_fu_312_p3 <= 
         zext_ln818_fu_298_p1 when (isNeg_reg_423(0) = '1') else 
-        tmp_6_fu_302_p4;
+        tmp_5_fu_302_p4;
     xs_exp_V_fu_208_p4 <= data_V_fu_197_p1(30 downto 23);
     zext_ln1488_fu_274_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(sext_ln1488_fu_271_p1),79));
     zext_ln15_fu_267_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(mantissa_fu_258_p4),79));

@@ -44,7 +44,7 @@ port (
     delay_samples         :out  STD_LOGIC_VECTOR(31 downto 0);
     tempo                 :out  STD_LOGIC_VECTOR(31 downto 0);
     wah_coeffs            :out  STD_LOGIC_VECTOR(63 downto 0);
-    debug_output          :in   STD_LOGIC_VECTOR(15 downto 0);
+    debug_output          :in   STD_LOGIC_VECTOR(31 downto 0);
     debug_output_ap_vld   :in   STD_LOGIC
 );
 end entity guitar_effects_control_r_s_axi;
@@ -94,8 +94,7 @@ end entity guitar_effects_control_r_s_axi;
 --        bit 31~0 - wah_coeffs[63:32] (Read/Write)
 -- 0x70 : reserved
 -- 0x74 : Data signal of debug_output
---        bit 15~0 - debug_output[15:0] (Read)
---        others   - reserved
+--        bit 31~0 - debug_output[31:0] (Read)
 -- 0x78 : Control signal of debug_output
 --        bit 0  - debug_output_ap_vld (Read/COR)
 --        others - reserved
@@ -158,7 +157,7 @@ architecture behave of guitar_effects_control_r_s_axi is
     signal int_tempo           : UNSIGNED(31 downto 0) := (others => '0');
     signal int_wah_coeffs      : UNSIGNED(63 downto 0) := (others => '0');
     signal int_debug_output_ap_vld : STD_LOGIC;
-    signal int_debug_output    : UNSIGNED(15 downto 0) := (others => '0');
+    signal int_debug_output    : UNSIGNED(31 downto 0) := (others => '0');
 
 
 begin
@@ -301,7 +300,7 @@ begin
                     when ADDR_WAH_COEFFS_DATA_1 =>
                         rdata_data <= RESIZE(int_wah_coeffs(63 downto 32), 32);
                     when ADDR_DEBUG_OUTPUT_DATA_0 =>
-                        rdata_data <= RESIZE(int_debug_output(15 downto 0), 32);
+                        rdata_data <= RESIZE(int_debug_output(31 downto 0), 32);
                     when ADDR_DEBUG_OUTPUT_CTRL =>
                         rdata_data(0) <= int_debug_output_ap_vld;
                     when others =>

@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'sin_or_cos_double_s'
 ================================================================
-* Date:           Wed Apr 17 16:21:59 2024
+* Date:           Mon Apr 22 17:34:00 2024
 
 * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
 * Project:        Guitar_Effects
@@ -380,7 +380,7 @@ ST_32 : Operation 233 [1/1] (0.00ns)   --->   "%br_ln430 = br void %for.inc.i" [
 State 33 <SV = 30> <Delay = 3.23>
 ST_33 : Operation 234 [1/1] (0.00ns)   --->   "%i_4 = load i3 %i_1"   --->   Operation 234 'load' 'i_4' <Predicate = true> <Delay = 0.00>
 ST_33 : Operation 235 [1/1] (1.13ns)   --->   "%icmp_ln443 = icmp_eq  i3 %i_4, i3 4" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_float_utils.h:443]   --->   Operation 235 'icmp' 'icmp_ln443' <Predicate = true> <Delay = 1.13> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.13> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_33 : Operation 236 [1/1] (0.00ns)   --->   "%empty_67 = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 4, i64 4, i64 4"   --->   Operation 236 'speclooptripcount' 'empty_67' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 236 [1/1] (0.00ns)   --->   "%empty_65 = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 4, i64 4, i64 4"   --->   Operation 236 'speclooptripcount' 'empty_65' <Predicate = true> <Delay = 0.00>
 ST_33 : Operation 237 [1/1] (1.65ns)   --->   "%add_ln443 = add i3 %i_4, i3 1" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_float_utils.h:443]   --->   Operation 237 'add' 'add_ln443' <Predicate = true> <Delay = 1.65> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.65> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_33 : Operation 238 [1/1] (0.00ns)   --->   "%br_ln443 = br i1 %icmp_ln443, void %for.inc43.i.split, void %for.end45.i" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_float_utils.h:443]   --->   Operation 238 'br' 'br_ln443' <Predicate = true> <Delay = 0.00>
 ST_33 : Operation 239 [1/1] (0.00ns)   --->   "%out_bits_V_2_load = load i32 %out_bits_V_2"   --->   Operation 239 'load' 'out_bits_V_2_load' <Predicate = (!icmp_ln443)> <Delay = 0.00>
@@ -415,7 +415,7 @@ ST_34 : Operation 265 [1/1] (0.00ns)   --->   "%i_6 = load i3 %i_3" [r:/ci/prod/
 ST_34 : Operation 266 [1/1] (0.00ns)   --->   "%in_shift_V_2 = load i63 %in_shift_V"   --->   Operation 266 'load' 'in_shift_V_2' <Predicate = true> <Delay = 0.00>
 ST_34 : Operation 267 [1/1] (0.00ns)   --->   "%shift_2 = load i32 %shift" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_float_utils.h:451]   --->   Operation 267 'load' 'shift_2' <Predicate = true> <Delay = 0.00>
 ST_34 : Operation 268 [1/1] (1.13ns)   --->   "%icmp_ln450 = icmp_eq  i3 %i_6, i3 4" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_float_utils.h:450]   --->   Operation 268 'icmp' 'icmp_ln450' <Predicate = true> <Delay = 1.13> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.13> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_34 : Operation 269 [1/1] (0.00ns)   --->   "%empty_68 = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 1, i64 4, i64 2"   --->   Operation 269 'speclooptripcount' 'empty_68' <Predicate = true> <Delay = 0.00>
+ST_34 : Operation 269 [1/1] (0.00ns)   --->   "%empty_66 = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 1, i64 4, i64 2"   --->   Operation 269 'speclooptripcount' 'empty_66' <Predicate = true> <Delay = 0.00>
 ST_34 : Operation 270 [1/1] (1.65ns)   --->   "%add_ln450 = add i3 %i_6, i3 1" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_float_utils.h:450]   --->   Operation 270 'add' 'add_ln450' <Predicate = true> <Delay = 1.65> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.65> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_34 : Operation 271 [1/1] (1.58ns)   --->   "%br_ln450 = br i1 %icmp_ln450, void %for.body50.i.split, void %for.end62.i_ifconv" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_float_utils.h:450]   --->   Operation 271 'br' 'br_ln450' <Predicate = true> <Delay = 1.58>
 ST_34 : Operation 272 [1/1] (0.00ns)   --->   "%c_3_load = load i32 %c_3" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_float_utils.h:451]   --->   Operation 272 'load' 'c_3_load' <Predicate = (!icmp_ln450)> <Delay = 0.00>
@@ -465,9 +465,9 @@ ST_36 : Operation 311 [1/1] (2.55ns) (out node of the LUT)   --->   "%newexp = s
 ST_36 : Operation 312 [1/1] (0.00ns)   --->   "%tmp_10 = bitselect i1 @_ssdm_op_BitSelect.i1.i32.i32, i32 %newexp, i32 31" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_float_utils.h:462]   --->   Operation 312 'bitselect' 'tmp_10' <Predicate = true> <Delay = 0.00>
 ST_36 : Operation 313 [1/1] (0.97ns)   --->   "%or_ln462 = or i1 %tmp_10, i1 %icmp_ln1653" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_float_utils.h:462]   --->   Operation 313 'or' 'or_ln462' <Predicate = true> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
 ST_36 : Operation 314 [1/1] (0.00ns) (grouped into LUT with out node results_sig_V)   --->   "%phitmp8 = partselect i52 @_ssdm_op_PartSelect.i52.i63.i32.i32, i63 %p_Result_30_in_in, i32 10, i32 61"   --->   Operation 314 'partselect' 'phitmp8' <Predicate = (!or_ln300)> <Delay = 0.00>
-ST_36 : Operation 315 [1/1] (0.00ns) (grouped into LUT with out node results_exp_V)   --->   "%empty_69 = trunc i32 %newexp" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_float_utils.h:461]   --->   Operation 315 'trunc' 'empty_69' <Predicate = (!or_ln300)> <Delay = 0.00>
+ST_36 : Operation 315 [1/1] (0.00ns) (grouped into LUT with out node results_exp_V)   --->   "%empty_67 = trunc i32 %newexp" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_float_utils.h:461]   --->   Operation 315 'trunc' 'empty_67' <Predicate = (!or_ln300)> <Delay = 0.00>
 ST_36 : Operation 316 [1/1] (0.00ns) (grouped into LUT with out node results_exp_V)   --->   "%select_ln300_2 = select i1 %xor_ln300, i11 2047, i11 0" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_hotbm.h:300]   --->   Operation 316 'select' 'select_ln300_2' <Predicate = (or_ln300)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_36 : Operation 317 [1/1] (0.00ns) (grouped into LUT with out node results_exp_V)   --->   "%select_ln300_1 = select i1 %or_ln462, i11 0, i11 %empty_69" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_hotbm.h:300]   --->   Operation 317 'select' 'select_ln300_1' <Predicate = (!or_ln300)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_36 : Operation 317 [1/1] (0.00ns) (grouped into LUT with out node results_exp_V)   --->   "%select_ln300_1 = select i1 %or_ln462, i11 0, i11 %empty_67" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_hotbm.h:300]   --->   Operation 317 'select' 'select_ln300_1' <Predicate = (!or_ln300)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 ST_36 : Operation 318 [1/1] (0.99ns) (out node of the LUT)   --->   "%results_exp_V = select i1 %or_ln300, i11 %select_ln300_2, i11 %select_ln300_1" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_hotbm.h:300]   --->   Operation 318 'select' 'results_exp_V' <Predicate = true> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 ST_36 : Operation 319 [1/1] (0.00ns) (grouped into LUT with out node results_sig_V)   --->   "%select_ln300_5 = select i1 %xor_ln300, i52 4503599627370495, i52 0" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_hotbm.h:300]   --->   Operation 319 'select' 'select_ln300_5' <Predicate = (or_ln300)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 ST_36 : Operation 320 [1/1] (0.00ns) (grouped into LUT with out node results_sig_V)   --->   "%select_ln300_3 = select i1 %or_ln462, i52 0, i52 %phitmp8" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_hotbm.h:300]   --->   Operation 320 'select' 'select_ln300_3' <Predicate = (!or_ln300)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.95> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
@@ -664,7 +664,7 @@ store_ln430                           (store            ) [ 00000000000000000000
 br_ln430                              (br               ) [ 0000000000000000000000000000000000000]
 i_4                                   (load             ) [ 0000000000000000000000000000000000000]
 icmp_ln443                            (icmp             ) [ 0000000000000000000000000000000001000]
-empty_67                              (speclooptripcount) [ 0000000000000000000000000000000000000]
+empty_65                              (speclooptripcount) [ 0000000000000000000000000000000000000]
 add_ln443                             (add              ) [ 0000000000000000000000000000000000000]
 br_ln443                              (br               ) [ 0000000000000000000000000000000000000]
 out_bits_V_2_load                     (load             ) [ 0000000000000000000000000000000000000]
@@ -697,7 +697,7 @@ i_6                                   (load             ) [ 00000000000000000000
 in_shift_V_2                          (load             ) [ 0000000000000000000000000000000000111]
 shift_2                               (load             ) [ 0000000000000000000000000000000000111]
 icmp_ln450                            (icmp             ) [ 0000000000000000000000000000000000110]
-empty_68                              (speclooptripcount) [ 0000000000000000000000000000000000000]
+empty_66                              (speclooptripcount) [ 0000000000000000000000000000000000000]
 add_ln450                             (add              ) [ 0000000000000000000000000000000000010]
 br_ln450                              (br               ) [ 0000000000000000000000000000000000111]
 c_3_load                              (load             ) [ 0000000000000000000000000000000000000]
@@ -743,7 +743,7 @@ newexp                                (sub              ) [ 00000000000000000000
 tmp_10                                (bitselect        ) [ 0000000000000000000000000000000000000]
 or_ln462                              (or               ) [ 0000000000000000000000000000000000000]
 phitmp8                               (partselect       ) [ 0000000000000000000000000000000000000]
-empty_69                              (trunc            ) [ 0000000000000000000000000000000000000]
+empty_67                              (trunc            ) [ 0000000000000000000000000000000000000]
 select_ln300_2                        (select           ) [ 0000000000000000000000000000000000000]
 select_ln300_1                        (select           ) [ 0000000000000000000000000000000000000]
 results_exp_V                         (select           ) [ 0000000000000000000000000000000000000]
@@ -4464,14 +4464,14 @@ ret_ln316                             (ret              ) [ 00000000000000000000
 </bind>
 </comp>
 
-<comp id="1538" class="1004" name="empty_69_fu_1538">
+<comp id="1538" class="1004" name="empty_67_fu_1538">
 <pin_list>
 <pin id="1539" dir="0" index="0" bw="32" slack="0"/>
 <pin id="1540" dir="1" index="1" bw="11" slack="0"/>
 </pin_list>
 <bind>
 <opcode="trunc(33) " fcode="trunc"/>
-<opset="empty_69/36 "/>
+<opset="empty_67/36 "/>
 </bind>
 </comp>
 
@@ -6937,7 +6937,7 @@ ret_ln316                             (ret              ) [ 00000000000000000000
 		tmp_10 : 3
 		or_ln462 : 4
 		phitmp8 : 1
-		empty_69 : 3
+		empty_67 : 3
 		select_ln300_1 : 4
 		results_exp_V : 5
 		select_ln300_3 : 4
@@ -7092,7 +7092,7 @@ ret_ln316                             (ret              ) [ 00000000000000000000
 |          |    trunc_ln368_fu_1102   |    0    |    0    |    0    |
 |          |    trunc_ln553_fu_1157   |    0    |    0    |    0    |
 |          |    trunc_ln451_fu_1267   |    0    |    0    |    0    |
-|          |     empty_69_fu_1538     |    0    |    0    |    0    |
+|          |     empty_67_fu_1538     |    0    |    0    |    0    |
 |----------|--------------------------|---------|---------|---------|
 |          |     zext_ln668_fu_438    |    0    |    0    |    0    |
 |          |     zext_ln930_fu_452    |    0    |    0    |    0    |

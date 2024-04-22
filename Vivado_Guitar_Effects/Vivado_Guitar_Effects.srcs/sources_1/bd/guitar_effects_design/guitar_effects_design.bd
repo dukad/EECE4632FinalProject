@@ -14,30 +14,23 @@
       "processing_system7_0": "",
       "axi_bram_ctrl_0": "",
       "blk_mem_gen_0": "",
-      "rst_ps7_0_100M": "",
+      "rst_ps7_0_50M": "",
       "axi_dma_0": "",
       "axi_mem_intercon": {
         "xbar": "",
         "s00_couplers": {},
         "s01_couplers": {},
-        "s02_couplers": {},
         "m00_couplers": {
           "auto_pc": ""
-        },
-        "s02_mmu": ""
+        }
       },
       "ps7_0_axi_periph": {
         "xbar": "",
         "s00_couplers": {
           "auto_pc": ""
         },
-        "m00_couplers": {
-          "auto_pc": ""
-        },
-        "m01_couplers": {},
-        "m02_couplers": {
-          "auto_pc": ""
-        }
+        "m00_couplers": {},
+        "m01_couplers": {}
       },
       "guitar_effects_0": ""
     },
@@ -112,8 +105,8 @@
     "components": {
       "processing_system7_0": {
         "vlnv": "xilinx.com:ip:processing_system7:5.5",
-        "xci_name": "guitar_effects_design_processing_system7_0_4",
-        "xci_path": "ip\\guitar_effects_design_processing_system7_0_4\\guitar_effects_design_processing_system7_0_4.xci",
+        "xci_name": "guitar_effects_design_processing_system7_0_5",
+        "xci_path": "ip\\guitar_effects_design_processing_system7_0_5\\guitar_effects_design_processing_system7_0_5.xci",
         "inst_hier_path": "processing_system7_0",
         "parameters": {
           "PCW_ACT_APU_PERIPHERAL_FREQMHZ": {
@@ -555,7 +548,7 @@
             "value": "0"
           },
           "PCW_I2C_RESET_ENABLE": {
-            "value": "1"
+            "value": "0"
           },
           "PCW_I2C_RESET_POLARITY": {
             "value": "Active Low"
@@ -1832,43 +1825,23 @@
               }
             }
           }
-        },
-        "hdl_attributes": {
-          "BMM_INFO_PROCESSOR": {
-            "value": "arm > guitar_effects_design axi_bram_ctrl_0",
-            "value_src": "default"
-          },
-          "KEEP_HIERARCHY": {
-            "value": "yes",
-            "value_src": "default"
-          }
         }
       },
       "axi_bram_ctrl_0": {
         "vlnv": "xilinx.com:ip:axi_bram_ctrl:4.1",
-        "xci_name": "guitar_effects_design_axi_bram_ctrl_0_2",
-        "xci_path": "ip\\guitar_effects_design_axi_bram_ctrl_0_2\\guitar_effects_design_axi_bram_ctrl_0_2.xci",
+        "xci_name": "guitar_effects_design_axi_bram_ctrl_0_3",
+        "xci_path": "ip\\guitar_effects_design_axi_bram_ctrl_0_3\\guitar_effects_design_axi_bram_ctrl_0_3.xci",
         "inst_hier_path": "axi_bram_ctrl_0",
         "parameters": {
           "SINGLE_PORT_BRAM": {
             "value": "1"
           }
-        },
-        "hdl_attributes": {
-          "BMM_INFO_ADDRESS_SPACE": {
-            "value": "byte  0x40000000 32 > guitar_effects_design blk_mem_gen_0",
-            "value_src": "default"
-          },
-          "KEEP_HIERARCHY": {
-            "value": "yes",
-            "value_src": "default"
-          }
         }
       },
       "blk_mem_gen_0": {
         "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
-        "xci_name": "guitar_effects_design_blk_mem_gen_0_0",
-        "xci_path": "ip\\guitar_effects_design_blk_mem_gen_0_0\\guitar_effects_design_blk_mem_gen_0_0.xci",
+        "xci_name": "guitar_effects_design_blk_mem_gen_0_2",
+        "xci_path": "ip\\guitar_effects_design_blk_mem_gen_0_2\\guitar_effects_design_blk_mem_gen_0_2.xci",
         "inst_hier_path": "blk_mem_gen_0",
         "parameters": {
           "Coe_File": {
@@ -1885,16 +1858,16 @@
           }
         }
       },
-      "rst_ps7_0_100M": {
+      "rst_ps7_0_50M": {
         "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
-        "xci_name": "guitar_effects_design_rst_ps7_0_100M_0",
-        "xci_path": "ip\\guitar_effects_design_rst_ps7_0_100M_0\\guitar_effects_design_rst_ps7_0_100M_0.xci",
-        "inst_hier_path": "rst_ps7_0_100M"
+        "xci_name": "guitar_effects_design_rst_ps7_0_50M_0",
+        "xci_path": "ip\\guitar_effects_design_rst_ps7_0_50M_0\\guitar_effects_design_rst_ps7_0_50M_0.xci",
+        "inst_hier_path": "rst_ps7_0_50M"
       },
       "axi_dma_0": {
         "vlnv": "xilinx.com:ip:axi_dma:7.1",
-        "xci_name": "guitar_effects_design_axi_dma_0_2",
-        "xci_path": "ip\\guitar_effects_design_axi_dma_0_2\\guitar_effects_design_axi_dma_0_2.xci",
+        "xci_name": "guitar_effects_design_axi_dma_0_3",
+        "xci_path": "ip\\guitar_effects_design_axi_dma_0_3\\guitar_effects_design_axi_dma_0_3.xci",
         "inst_hier_path": "axi_dma_0",
         "parameters": {
           "c_include_sg": {
@@ -1938,15 +1911,15 @@
       },
       "axi_mem_intercon": {
         "vlnv": "xilinx.com:ip:axi_interconnect:2.1",
-        "xci_path": "ip\\guitar_effects_design_axi_mem_intercon_4\\guitar_effects_design_axi_mem_intercon_4.xci",
+        "xci_path": "ip\\guitar_effects_design_axi_mem_intercon_5\\guitar_effects_design_axi_mem_intercon_5.xci",
         "inst_hier_path": "axi_mem_intercon",
-        "xci_name": "guitar_effects_design_axi_mem_intercon_4",
+        "xci_name": "guitar_effects_design_axi_mem_intercon_5",
         "parameters": {
           "NUM_MI": {
             "value": "1"
           },
           "NUM_SI": {
-            "value": "3"
+            "value": "2"
           }
         },
         "interface_ports": {
@@ -1961,11 +1934,6 @@
             "vlnv": "xilinx.com:interface:aximm_rtl:1.0"
           },
           "S01_AXI": {
-            "mode": "Slave",
-            "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
-            "vlnv": "xilinx.com:interface:aximm_rtl:1.0"
-          },
-          "S02_AXI": {
             "mode": "Slave",
             "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
             "vlnv": "xilinx.com:interface:aximm_rtl:1.0"
@@ -2032,36 +2000,20 @@
           "S01_ARESETN": {
             "type": "rst",
             "direction": "I"
-          },
-          "S02_ACLK": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "ASSOCIATED_BUSIF": {
-                "value": "S02_AXI"
-              },
-              "ASSOCIATED_RESET": {
-                "value": "S02_ARESETN"
-              }
-            }
-          },
-          "S02_ARESETN": {
-            "type": "rst",
-            "direction": "I"
           }
         },
         "components": {
           "xbar": {
             "vlnv": "xilinx.com:ip:axi_crossbar:2.1",
-            "xci_name": "guitar_effects_design_xbar_6",
-            "xci_path": "ip\\guitar_effects_design_xbar_6\\guitar_effects_design_xbar_6.xci",
+            "xci_name": "guitar_effects_design_xbar_1",
+            "xci_path": "ip\\guitar_effects_design_xbar_1\\guitar_effects_design_xbar_1.xci",
             "inst_hier_path": "axi_mem_intercon/xbar",
             "parameters": {
               "NUM_MI": {
                 "value": "1"
               },
               "NUM_SI": {
-                "value": "3"
+                "value": "2"
               },
               "STRATEGY": {
                 "value": "0"
@@ -2076,13 +2028,6 @@
                 ]
               },
               "S01_AXI": {
-                "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
-                "mode": "Slave",
-                "bridges": [
-                  "M00_AXI"
-                ]
-              },
-              "S02_AXI": {
                 "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
                 "mode": "Slave",
                 "bridges": [
@@ -2203,62 +2148,6 @@
               }
             }
           },
-          "s02_couplers": {
-            "interface_ports": {
-              "M_AXI": {
-                "mode": "Master",
-                "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
-                "vlnv": "xilinx.com:interface:aximm_rtl:1.0"
-              },
-              "S_AXI": {
-                "mode": "Slave",
-                "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
-                "vlnv": "xilinx.com:interface:aximm_rtl:1.0"
-              }
-            },
-            "ports": {
-              "M_ACLK": {
-                "type": "clk",
-                "direction": "I",
-                "parameters": {
-                  "ASSOCIATED_BUSIF": {
-                    "value": "M_AXI"
-                  },
-                  "ASSOCIATED_RESET": {
-                    "value": "M_ARESETN"
-                  }
-                }
-              },
-              "M_ARESETN": {
-                "type": "rst",
-                "direction": "I"
-              },
-              "S_ACLK": {
-                "type": "clk",
-                "direction": "I",
-                "parameters": {
-                  "ASSOCIATED_BUSIF": {
-                    "value": "S_AXI"
-                  },
-                  "ASSOCIATED_RESET": {
-                    "value": "S_ARESETN"
-                  }
-                }
-              },
-              "S_ARESETN": {
-                "type": "rst",
-                "direction": "I"
-              }
-            },
-            "interface_nets": {
-              "s02_couplers_to_s02_couplers": {
-                "interface_ports": [
-                  "S_AXI",
-                  "M_AXI"
-                ]
-              }
-            }
-          },
           "m00_couplers": {
             "interface_ports": {
               "M_AXI": {
@@ -2359,30 +2248,9 @@
                 ]
               }
             }
-          },
-          "s02_mmu": {
-            "vlnv": "xilinx.com:ip:axi_mmu:2.1",
-            "xci_name": "guitar_effects_design_s02_mmu_0",
-            "xci_path": "ip\\guitar_effects_design_s02_mmu_0\\guitar_effects_design_s02_mmu_0.xci",
-            "inst_hier_path": "axi_mem_intercon/s02_mmu",
-            "interface_ports": {
-              "S_AXI": {
-                "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
-                "mode": "Slave",
-                "bridges": [
-                  "M_AXI"
-                ]
-              }
-            }
           }
         },
         "interface_nets": {
-          "S02_AXI_1": {
-            "interface_ports": [
-              "S02_AXI",
-              "s02_mmu/S_AXI"
-            ]
-          },
           "axi_mem_intercon_to_s00_couplers": {
             "interface_ports": [
               "S00_AXI",
@@ -2413,18 +2281,6 @@
               "xbar/S01_AXI"
             ]
           },
-          "s02_couplers_to_xbar": {
-            "interface_ports": [
-              "s02_couplers/M_AXI",
-              "xbar/S02_AXI"
-            ]
-          },
-          "s02_mmu_M_AXI": {
-            "interface_ports": [
-              "s02_mmu/M_AXI",
-              "s02_couplers/S_AXI"
-            ]
-          },
           "xbar_to_m00_couplers": {
             "interface_ports": [
               "xbar/M00_AXI",
@@ -2439,13 +2295,10 @@
               "xbar/aclk",
               "s00_couplers/S_ACLK",
               "s01_couplers/S_ACLK",
-              "s02_couplers/S_ACLK",
               "s00_couplers/M_ACLK",
               "s01_couplers/M_ACLK",
-              "s02_couplers/M_ACLK",
               "m00_couplers/M_ACLK",
-              "m00_couplers/S_ACLK",
-              "s02_mmu/aclk"
+              "m00_couplers/S_ACLK"
             ]
           },
           "axi_mem_intercon_ARESETN_net": {
@@ -2454,25 +2307,22 @@
               "xbar/aresetn",
               "s00_couplers/S_ARESETN",
               "s01_couplers/S_ARESETN",
-              "s02_couplers/S_ARESETN",
               "s00_couplers/M_ARESETN",
               "s01_couplers/M_ARESETN",
-              "s02_couplers/M_ARESETN",
               "m00_couplers/M_ARESETN",
-              "m00_couplers/S_ARESETN",
-              "s02_mmu/aresetn"
+              "m00_couplers/S_ARESETN"
             ]
           }
         }
       },
       "ps7_0_axi_periph": {
         "vlnv": "xilinx.com:ip:axi_interconnect:2.1",
-        "xci_path": "ip\\guitar_effects_design_ps7_0_axi_periph_4\\guitar_effects_design_ps7_0_axi_periph_4.xci",
+        "xci_path": "ip\\guitar_effects_design_ps7_0_axi_periph_5\\guitar_effects_design_ps7_0_axi_periph_5.xci",
         "inst_hier_path": "ps7_0_axi_periph",
-        "xci_name": "guitar_effects_design_ps7_0_axi_periph_4",
+        "xci_name": "guitar_effects_design_ps7_0_axi_periph_5",
         "parameters": {
           "NUM_MI": {
-            "value": "3"
+            "value": "2"
           }
         },
         "interface_ports": {
@@ -2487,11 +2337,6 @@
             "vlnv": "xilinx.com:interface:aximm_rtl:1.0"
           },
           "M01_AXI": {
-            "mode": "Master",
-            "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
-            "vlnv": "xilinx.com:interface:aximm_rtl:1.0"
-          },
-          "M02_AXI": {
             "mode": "Master",
             "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
             "vlnv": "xilinx.com:interface:aximm_rtl:1.0"
@@ -2558,33 +2403,17 @@
           "M01_ARESETN": {
             "type": "rst",
             "direction": "I"
-          },
-          "M02_ACLK": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "ASSOCIATED_BUSIF": {
-                "value": "M02_AXI"
-              },
-              "ASSOCIATED_RESET": {
-                "value": "M02_ARESETN"
-              }
-            }
-          },
-          "M02_ARESETN": {
-            "type": "rst",
-            "direction": "I"
           }
         },
         "components": {
           "xbar": {
             "vlnv": "xilinx.com:ip:axi_crossbar:2.1",
-            "xci_name": "guitar_effects_design_xbar_7",
-            "xci_path": "ip\\guitar_effects_design_xbar_7\\guitar_effects_design_xbar_7.xci",
+            "xci_name": "guitar_effects_design_xbar_2",
+            "xci_path": "ip\\guitar_effects_design_xbar_2\\guitar_effects_design_xbar_2.xci",
             "inst_hier_path": "ps7_0_axi_periph/xbar",
             "parameters": {
               "NUM_MI": {
-                "value": "3"
+                "value": "2"
               },
               "NUM_SI": {
                 "value": "1"
@@ -2599,8 +2428,7 @@
                 "mode": "Slave",
                 "bridges": [
                   "M00_AXI",
-                  "M01_AXI",
-                  "M02_AXI"
+                  "M01_AXI"
                 ]
               }
             }
@@ -2655,12 +2483,12 @@
             "components": {
               "auto_pc": {
                 "vlnv": "xilinx.com:ip:axi_protocol_converter:2.1",
-                "xci_name": "guitar_effects_design_auto_pc_3",
-                "xci_path": "ip\\guitar_effects_design_auto_pc_3\\guitar_effects_design_auto_pc_3.xci",
+                "xci_name": "guitar_effects_design_auto_pc_1",
+                "xci_path": "ip\\guitar_effects_design_auto_pc_1\\guitar_effects_design_auto_pc_1.xci",
                 "inst_hier_path": "ps7_0_axi_periph/s00_couplers/auto_pc",
                 "parameters": {
                   "MI_PROTOCOL": {
-                    "value": "AXI4"
+                    "value": "AXI4LITE"
                   },
                   "SI_PROTOCOL": {
                     "value": "AXI3"
@@ -2753,56 +2581,11 @@
                 "direction": "I"
               }
             },
-            "components": {
-              "auto_pc": {
-                "vlnv": "xilinx.com:ip:axi_protocol_converter:2.1",
-                "xci_name": "guitar_effects_design_auto_pc_1",
-                "xci_path": "ip\\guitar_effects_design_auto_pc_1\\guitar_effects_design_auto_pc_1.xci",
-                "inst_hier_path": "ps7_0_axi_periph/m00_couplers/auto_pc",
-                "parameters": {
-                  "MI_PROTOCOL": {
-                    "value": "AXI4LITE"
-                  },
-                  "SI_PROTOCOL": {
-                    "value": "AXI4"
-                  }
-                },
-                "interface_ports": {
-                  "S_AXI": {
-                    "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
-                    "mode": "Slave",
-                    "bridges": [
-                      "M_AXI"
-                    ]
-                  }
-                }
-              }
-            },
             "interface_nets": {
-              "auto_pc_to_m00_couplers": {
-                "interface_ports": [
-                  "M_AXI",
-                  "auto_pc/M_AXI"
-                ]
-              },
-              "m00_couplers_to_auto_pc": {
+              "m00_couplers_to_m00_couplers": {
                 "interface_ports": [
                   "S_AXI",
-                  "auto_pc/S_AXI"
-                ]
-              }
-            },
-            "nets": {
-              "S_ACLK_1": {
-                "ports": [
-                  "S_ACLK",
-                  "auto_pc/aclk"
-                ]
-              },
-              "S_ARESETN_1": {
-                "ports": [
-                  "S_ARESETN",
-                  "auto_pc/aresetn"
+                  "M_AXI"
                 ]
               }
             }
@@ -2862,107 +2645,6 @@
                 ]
               }
             }
-          },
-          "m02_couplers": {
-            "interface_ports": {
-              "M_AXI": {
-                "mode": "Master",
-                "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
-                "vlnv": "xilinx.com:interface:aximm_rtl:1.0"
-              },
-              "S_AXI": {
-                "mode": "Slave",
-                "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
-                "vlnv": "xilinx.com:interface:aximm_rtl:1.0"
-              }
-            },
-            "ports": {
-              "M_ACLK": {
-                "type": "clk",
-                "direction": "I",
-                "parameters": {
-                  "ASSOCIATED_BUSIF": {
-                    "value": "M_AXI"
-                  },
-                  "ASSOCIATED_RESET": {
-                    "value": "M_ARESETN"
-                  }
-                }
-              },
-              "M_ARESETN": {
-                "type": "rst",
-                "direction": "I"
-              },
-              "S_ACLK": {
-                "type": "clk",
-                "direction": "I",
-                "parameters": {
-                  "ASSOCIATED_BUSIF": {
-                    "value": "S_AXI"
-                  },
-                  "ASSOCIATED_RESET": {
-                    "value": "S_ARESETN"
-                  }
-                }
-              },
-              "S_ARESETN": {
-                "type": "rst",
-                "direction": "I"
-              }
-            },
-            "components": {
-              "auto_pc": {
-                "vlnv": "xilinx.com:ip:axi_protocol_converter:2.1",
-                "xci_name": "guitar_effects_design_auto_pc_2",
-                "xci_path": "ip\\guitar_effects_design_auto_pc_2\\guitar_effects_design_auto_pc_2.xci",
-                "inst_hier_path": "ps7_0_axi_periph/m02_couplers/auto_pc",
-                "parameters": {
-                  "MI_PROTOCOL": {
-                    "value": "AXI4LITE"
-                  },
-                  "SI_PROTOCOL": {
-                    "value": "AXI4"
-                  }
-                },
-                "interface_ports": {
-                  "S_AXI": {
-                    "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
-                    "mode": "Slave",
-                    "bridges": [
-                      "M_AXI"
-                    ]
-                  }
-                }
-              }
-            },
-            "interface_nets": {
-              "auto_pc_to_m02_couplers": {
-                "interface_ports": [
-                  "M_AXI",
-                  "auto_pc/M_AXI"
-                ]
-              },
-              "m02_couplers_to_auto_pc": {
-                "interface_ports": [
-                  "S_AXI",
-                  "auto_pc/S_AXI"
-                ]
-              }
-            },
-            "nets": {
-              "S_ACLK_1": {
-                "ports": [
-                  "S_ACLK",
-                  "auto_pc/aclk"
-                ]
-              },
-              "S_ARESETN_1": {
-                "ports": [
-                  "S_ARESETN",
-                  "auto_pc/aresetn"
-                ]
-              }
-            }
           }
         },
         "interface_nets": {
@@ -2976,12 +2658,6 @@
             "interface_ports": [
               "M01_AXI",
               "m01_couplers/M_AXI"
-            ]
-          },
-          "m02_couplers_to_ps7_0_axi_periph": {
-            "interface_ports": [
-              "M02_AXI",
-              "m02_couplers/M_AXI"
             ]
           },
           "ps7_0_axi_periph_to_s00_couplers": {
@@ -3007,12 +2683,6 @@
               "xbar/M01_AXI",
               "m01_couplers/S_AXI"
             ]
-          },
-          "xbar_to_m02_couplers": {
-            "interface_ports": [
-              "xbar/M02_AXI",
-              "m02_couplers/S_AXI"
-            ]
           }
         },
         "nets": {
@@ -3024,10 +2694,8 @@
               "s00_couplers/M_ACLK",
               "m00_couplers/M_ACLK",
               "m01_couplers/M_ACLK",
-              "m02_couplers/M_ACLK",
               "m00_couplers/S_ACLK",
-              "m01_couplers/S_ACLK",
-              "m02_couplers/S_ACLK"
+              "m01_couplers/S_ACLK"
             ]
           },
           "ps7_0_axi_periph_ARESETN_net": {
@@ -3038,18 +2706,16 @@
               "s00_couplers/M_ARESETN",
               "m00_couplers/M_ARESETN",
               "m01_couplers/M_ARESETN",
-              "m02_couplers/M_ARESETN",
               "m00_couplers/S_ARESETN",
-              "m01_couplers/S_ARESETN",
-              "m02_couplers/S_ARESETN"
+              "m01_couplers/S_ARESETN"
             ]
           }
         }
       },
       "guitar_effects_0": {
         "vlnv": "xilinx.com:hls:guitar_effects:1.0",
-        "xci_name": "guitar_effects_design_guitar_effects_0_27",
-        "xci_path": "ip\\guitar_effects_design_guitar_effects_0_27\\guitar_effects_design_guitar_effects_0_27.xci",
+        "xci_name": "guitar_effects_design_guitar_effects_0_32",
+        "xci_path": "ip\\guitar_effects_design_guitar_effects_0_32\\guitar_effects_design_guitar_effects_0_32.xci",
         "inst_hier_path": "guitar_effects_0",
         "interface_ports": {
           "m_axi_gmem": {
@@ -3113,7 +2779,7 @@
       "guitar_effects_0_m_axi_gmem": {
         "interface_ports": [
           "guitar_effects_0/m_axi_gmem",
-          "axi_mem_intercon/S02_AXI"
+          "axi_bram_ctrl_0/S_AXI"
         ]
       },
       "processing_system7_0_DDR": {
@@ -3143,12 +2809,6 @@
       "ps7_0_axi_periph_M01_AXI": {
         "interface_ports": [
           "ps7_0_axi_periph/M01_AXI",
-          "axi_bram_ctrl_0/S_AXI"
-        ]
-      },
-      "ps7_0_axi_periph_M02_AXI": {
-        "interface_ports": [
-          "ps7_0_axi_periph/M02_AXI",
           "guitar_effects_0/s_axi_control_r"
         ]
       }
@@ -3158,7 +2818,7 @@
         "ports": [
           "processing_system7_0/FCLK_CLK0",
           "axi_bram_ctrl_0/s_axi_aclk",
-          "rst_ps7_0_100M/slowest_sync_clk",
+          "rst_ps7_0_50M/slowest_sync_clk",
           "axi_dma_0/m_axi_mm2s_aclk",
           "axi_mem_intercon/S00_ACLK",
           "processing_system7_0/S_AXI_GP0_ACLK",
@@ -3172,20 +2832,18 @@
           "axi_dma_0/m_axi_s2mm_aclk",
           "axi_mem_intercon/S01_ACLK",
           "ps7_0_axi_periph/M01_ACLK",
-          "axi_mem_intercon/S02_ACLK",
-          "ps7_0_axi_periph/M02_ACLK",
           "guitar_effects_0/ap_clk"
         ]
       },
       "processing_system7_0_FCLK_RESET0_N": {
         "ports": [
           "processing_system7_0/FCLK_RESET0_N",
-          "rst_ps7_0_100M/ext_reset_in"
+          "rst_ps7_0_50M/ext_reset_in"
         ]
       },
-      "rst_ps7_0_100M_peripheral_aresetn": {
+      "rst_ps7_0_50M_peripheral_aresetn": {
         "ports": [
-          "rst_ps7_0_100M/peripheral_aresetn",
+          "rst_ps7_0_50M/peripheral_aresetn",
           "axi_bram_ctrl_0/s_axi_aresetn",
           "axi_mem_intercon/S00_ARESETN",
           "axi_mem_intercon/M00_ARESETN",
@@ -3196,8 +2854,6 @@
           "ps7_0_axi_periph/ARESETN",
           "axi_mem_intercon/S01_ARESETN",
           "ps7_0_axi_periph/M01_ARESETN",
-          "axi_mem_intercon/S02_ARESETN",
-          "ps7_0_axi_periph/M02_ARESETN",
           "guitar_effects_0/ap_rst_n"
         ]
       }
@@ -3207,11 +2863,6 @@
         "address_spaces": {
           "Data": {
             "segments": {
-              "SEG_axi_bram_ctrl_0_Mem0": {
-                "address_block": "/axi_bram_ctrl_0/S_AXI/Mem0",
-                "offset": "0x40000000",
-                "range": "8K"
-              },
               "SEG_axi_dma_0_Reg": {
                 "address_block": "/axi_dma_0/S_AXI_LITE/Reg",
                 "offset": "0x41E00000",
@@ -3219,7 +2870,7 @@
               },
               "SEG_guitar_effects_0_Reg": {
                 "address_block": "/guitar_effects_0/s_axi_control_r/Reg",
-                "offset": "0x40010000",
+                "offset": "0x40000000",
                 "range": "64K",
                 "offset_base_param": "C_S_AXI_CONTROL_R_BASEADDR",
                 "offset_high_param": "C_S_AXI_CONTROL_R_HIGHADDR"
@@ -3288,15 +2939,10 @@
         "address_spaces": {
           "Data_m_axi_gmem": {
             "segments": {
-              "SEG_processing_system7_0_GP0_DDR_LOWOCM": {
-                "address_block": "/processing_system7_0/S_AXI_GP0/GP0_DDR_LOWOCM",
-                "offset": "0x0000000000000000",
-                "range": "512M"
-              },
-              "SEG_processing_system7_0_GP0_QSPI_LINEAR": {
-                "address_block": "/processing_system7_0/S_AXI_GP0/GP0_QSPI_LINEAR",
-                "offset": "0x00000000FC000000",
-                "range": "16M"
+              "SEG_axi_bram_ctrl_0_Mem0": {
+                "address_block": "/axi_bram_ctrl_0/S_AXI/Mem0",
+                "offset": "0x00000000C0000000",
+                "range": "8K"
               }
             }
           }

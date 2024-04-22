@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'guitar_effects_Pipeline_LPF_Loop'
 ================================================================
-* Date:           Wed Apr 17 16:22:03 2024
+* Date:           Mon Apr 22 17:34:04 2024
 
 * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
 * Project:        Guitar_Effects
@@ -177,13 +177,13 @@
 |ap_done                      |  out|    1|  ap_ctrl_hs|  guitar_effects_Pipeline_LPF_Loop|  return value|
 |ap_idle                      |  out|    1|  ap_ctrl_hs|  guitar_effects_Pipeline_LPF_Loop|  return value|
 |ap_ready                     |  out|    1|  ap_ctrl_hs|  guitar_effects_Pipeline_LPF_Loop|  return value|
-|grp_fu_794_p_din0            |  out|   32|  ap_ctrl_hs|  guitar_effects_Pipeline_LPF_Loop|  return value|
-|grp_fu_794_p_din1            |  out|   32|  ap_ctrl_hs|  guitar_effects_Pipeline_LPF_Loop|  return value|
-|grp_fu_794_p_dout0           |   in|   32|  ap_ctrl_hs|  guitar_effects_Pipeline_LPF_Loop|  return value|
-|grp_fu_794_p_ce              |  out|    1|  ap_ctrl_hs|  guitar_effects_Pipeline_LPF_Loop|  return value|
-|grp_fu_802_p_din0            |  out|   32|  ap_ctrl_hs|  guitar_effects_Pipeline_LPF_Loop|  return value|
-|grp_fu_802_p_dout0           |   in|   32|  ap_ctrl_hs|  guitar_effects_Pipeline_LPF_Loop|  return value|
-|grp_fu_802_p_ce              |  out|    1|  ap_ctrl_hs|  guitar_effects_Pipeline_LPF_Loop|  return value|
+|grp_fu_784_p_din0            |  out|   32|  ap_ctrl_hs|  guitar_effects_Pipeline_LPF_Loop|  return value|
+|grp_fu_784_p_din1            |  out|   32|  ap_ctrl_hs|  guitar_effects_Pipeline_LPF_Loop|  return value|
+|grp_fu_784_p_dout0           |   in|   32|  ap_ctrl_hs|  guitar_effects_Pipeline_LPF_Loop|  return value|
+|grp_fu_784_p_ce              |  out|    1|  ap_ctrl_hs|  guitar_effects_Pipeline_LPF_Loop|  return value|
+|grp_fu_792_p_din0            |  out|   32|  ap_ctrl_hs|  guitar_effects_Pipeline_LPF_Loop|  return value|
+|grp_fu_792_p_dout0           |   in|   32|  ap_ctrl_hs|  guitar_effects_Pipeline_LPF_Loop|  return value|
+|grp_fu_792_p_ce              |  out|    1|  ap_ctrl_hs|  guitar_effects_Pipeline_LPF_Loop|  return value|
 |sext_ln65                    |   in|   10|     ap_none|                         sext_ln65|        scalar|
 |compression_buffer_address0  |  out|    9|   ap_memory|                compression_buffer|         array|
 |compression_buffer_ce0       |  out|    1|   ap_memory|                compression_buffer|         array|
@@ -411,8 +411,8 @@ ST_33 : Operation 112 [1/1] (0.00ns) (grouped into LUT with out node val)   --->
 ST_33 : Operation 113 [1/1] (0.00ns) (grouped into LUT with out node val)   --->   "%r_V_21 = shl i79 %zext_ln15, i79 %zext_ln1488"   --->   Operation 113 'shl' 'r_V_21' <Predicate = (!isNeg)> <Delay = 0.00> <CoreInst = "Shifter">   --->   Core 75 'Shifter' <Latency = 0> <II = 1> <Delay = 4.65> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
 ST_33 : Operation 114 [1/1] (0.00ns) (grouped into LUT with out node val)   --->   "%tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i79.i32, i79 %r_V, i32 24"   --->   Operation 114 'bitselect' 'tmp' <Predicate = (isNeg)> <Delay = 0.00>
 ST_33 : Operation 115 [1/1] (0.00ns) (grouped into LUT with out node val)   --->   "%zext_ln818 = zext i1 %tmp"   --->   Operation 115 'zext' 'zext_ln818' <Predicate = (isNeg)> <Delay = 0.00>
-ST_33 : Operation 116 [1/1] (0.00ns) (grouped into LUT with out node val)   --->   "%tmp_6 = partselect i32 @_ssdm_op_PartSelect.i32.i79.i32.i32, i79 %r_V_21, i32 24, i32 55"   --->   Operation 116 'partselect' 'tmp_6' <Predicate = (!isNeg)> <Delay = 0.00>
-ST_33 : Operation 117 [1/1] (4.42ns) (out node of the LUT)   --->   "%val = select i1 %isNeg, i32 %zext_ln818, i32 %tmp_6"   --->   Operation 117 'select' 'val' <Predicate = true> <Delay = 4.42> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_33 : Operation 116 [1/1] (0.00ns) (grouped into LUT with out node val)   --->   "%tmp_5 = partselect i32 @_ssdm_op_PartSelect.i32.i79.i32.i32, i79 %r_V_21, i32 24, i32 55"   --->   Operation 116 'partselect' 'tmp_5' <Predicate = (!isNeg)> <Delay = 0.00>
+ST_33 : Operation 117 [1/1] (4.42ns) (out node of the LUT)   --->   "%val = select i1 %isNeg, i32 %zext_ln818, i32 %tmp_5"   --->   Operation 117 'select' 'val' <Predicate = true> <Delay = 4.42> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 
 State 34 <SV = 33> <Delay = 4.83>
 ST_34 : Operation 118 [1/1] (0.00ns)   --->   "%specpipeline_ln168 = specpipeline void @_ssdm_op_SpecPipeline, i32 15, i32 0, i32 0, i32 0, void @empty_23" [guitar_effects.cpp:168]   --->   Operation 118 'specpipeline' 'specpipeline_ln168' <Predicate = true> <Delay = 0.00>
@@ -490,7 +490,7 @@ r_V                     (lshr             ) [ 0000000000000000000000000000000000
 r_V_21                  (shl              ) [ 00000000000000000000000000000000000]
 tmp                     (bitselect        ) [ 00000000000000000000000000000000000]
 zext_ln818              (zext             ) [ 00000000000000000000000000000000000]
-tmp_6                   (partselect       ) [ 00000000000000000000000000000000000]
+tmp_5                   (partselect       ) [ 00000000000000000000000000000000000]
 val                     (select           ) [ 00001000000000000000000000000000001]
 specpipeline_ln168      (specpipeline     ) [ 00000000000000000000000000000000000]
 specloopname_ln167      (specloopname     ) [ 00000000000000000000000000000000000]
@@ -1343,7 +1343,7 @@ ret_ln0                 (ret              ) [ 0000000000000000000000000000000000
 </bind>
 </comp>
 
-<comp id="302" class="1004" name="tmp_6_fu_302">
+<comp id="302" class="1004" name="tmp_5_fu_302">
 <pin_list>
 <pin id="303" dir="0" index="0" bw="32" slack="0"/>
 <pin id="304" dir="0" index="1" bw="79" slack="0"/>
@@ -1353,7 +1353,7 @@ ret_ln0                 (ret              ) [ 0000000000000000000000000000000000
 </pin_list>
 <bind>
 <opcode="partselect(1002) " fcode="partselect"/>
-<opset="tmp_6/33 "/>
+<opset="tmp_5/33 "/>
 </bind>
 </comp>
 
@@ -1923,7 +1923,7 @@ ret_ln0                 (ret              ) [ 0000000000000000000000000000000000
 		r_V_21 : 2
 		tmp : 3
 		zext_ln818 : 4
-		tmp_6 : 3
+		tmp_5 : 3
 		val : 5
 	State 34
 		result_V : 1
@@ -1987,7 +1987,7 @@ ret_ln0                 (ret              ) [ 0000000000000000000000000000000000
 |          |         tmp_fu_290        |    0    |    0    |    0    |
 |----------|---------------------------|---------|---------|---------|
 |partselect|      xs_exp_V_fu_208      |    0    |    0    |    0    |
-|          |        tmp_6_fu_302       |    0    |    0    |    0    |
+|          |        tmp_5_fu_302       |    0    |    0    |    0    |
 |----------|---------------------------|---------|---------|---------|
 |bitconcatenate|      mantissa_fu_258      |    0    |    0    |    0    |
 |----------|---------------------------|---------|---------|---------|

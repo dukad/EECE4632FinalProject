@@ -5,11 +5,6 @@
                 <option name="name" value="guitar_effects"/>
             </pragma>
         </directive>
-        <directive functionName="guitar_effects" label="" functionLabel="">
-            <pragma name="TOP">
-                <option name="name" value="guitar_effects"/>
-            </pragma>
-        </directive>
     </sourceFile>
 </AutoPilot:ProjectResources>
 

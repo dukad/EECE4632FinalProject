@@ -64,7 +64,7 @@ guitar_effects_design_auto_pc_0_sc::guitar_effects_design_auto_pc_0_sc(const sc_
     model_param_props.addLong("C_M_AXI_PROTOCOL", "1");
     model_param_props.addLong("C_S_AXI_PROTOCOL", "0");
     model_param_props.addLong("C_IGNORE_ID", "0");
-    model_param_props.addLong("C_AXI_ID_WIDTH", "2");
+    model_param_props.addLong("C_AXI_ID_WIDTH", "1");
     model_param_props.addLong("C_AXI_ADDR_WIDTH", "32");
     model_param_props.addLong("C_AXI_DATA_WIDTH", "32");
     model_param_props.addLong("C_AXI_SUPPORTS_WRITE", "1");

@@ -3,7 +3,7 @@
 	"modules": {
 		"guitar_effects": {
 			"proto_instances": {
-				"grp_guitar_effects_Pipeline_LPF_Loop_fu_768/grp_guitar_effects_Pipeline_LPF_Loop_fu_768_activity": {
+				"grp_guitar_effects_Pipeline_LPF_Loop_fu_758/grp_guitar_effects_Pipeline_LPF_Loop_fu_758_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
@@ -13,7 +13,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_sin_or_cos_double_s_fu_777/grp_sin_or_cos_double_s_fu_777_activity": {
+				"grp_sin_or_cos_double_s_fu_767/grp_sin_or_cos_double_s_fu_767_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},

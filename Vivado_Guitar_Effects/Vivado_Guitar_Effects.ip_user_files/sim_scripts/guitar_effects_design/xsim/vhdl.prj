@@ -1,6 +1,6 @@
 vhdl xil_defaultlib  \
-"../../../bd/guitar_effects_design/ip/guitar_effects_design_axi_bram_ctrl_0_2/sim/guitar_effects_design_axi_bram_ctrl_0_2.vhd" \
-"../../../bd/guitar_effects_design/ip/guitar_effects_design_rst_ps7_0_100M_0/sim/guitar_effects_design_rst_ps7_0_100M_0.vhd" \
-"../../../bd/guitar_effects_design/ip/guitar_effects_design_axi_dma_0_2/sim/guitar_effects_design_axi_dma_0_2.vhd" \
+"../../../bd/guitar_effects_design/ip/guitar_effects_design_axi_bram_ctrl_0_3/sim/guitar_effects_design_axi_bram_ctrl_0_3.vhd" \
+"../../../bd/guitar_effects_design/ip/guitar_effects_design_rst_ps7_0_50M_0/sim/guitar_effects_design_rst_ps7_0_50M_0.vhd" \
+"../../../bd/guitar_effects_design/ip/guitar_effects_design_axi_dma_0_3/sim/guitar_effects_design_axi_dma_0_3.vhd" \
 
 nosort

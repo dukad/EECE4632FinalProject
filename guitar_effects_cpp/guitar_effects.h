@@ -9,14 +9,14 @@
 #define FRAME_RATE 88200
 #define LPF_FILTER_LENGTH 441
 #define DELAY_BUFFER_SIZE 88200
-#define WAH_BANDPASS_RESOLUTION 20
+#define WAH_BANDPASS_RESOLUTION 10
 #define BANDPASS_FILTER_LENGTH 100
 
 // Type definitions
 typedef hls::stream< ap_axis<32,2,5,6> > axis_stream;
 
 typedef ap_fixed<8,1> mult_float;
-typedef ap_fixed<16, -16> wah_mult;
+typedef ap_fixed<32, -32> wah_mult;
 
 // Function prototypes
 int distortion(int input, int threshold, mult_float clip_factor);

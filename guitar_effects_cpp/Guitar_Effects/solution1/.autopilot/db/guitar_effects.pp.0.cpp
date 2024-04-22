@@ -26849,13 +26849,13 @@ private:
 # 5 "guitar_effects.cpp" 2
 # 14 "guitar_effects.cpp"
 typedef ap_fixed<8,1> mult_float;
-typedef ap_fixed<16, -16> wah_mult;
+typedef ap_fixed<32, -32> wah_mult;
 
 
 int distortion(int input, int threshold, mult_float clip_factor);
 int compression(int input, int min_threshold, int max_threshold, int zero_threshold, int& current_level, int values_buffer[441], int &compression_buffer_index, float lpf_coefficients[441], int current_sample);
 int delay(int input, int delay_samples, float delay_mult, int delay_buffer[88200], int &delay_buffer_index);
-int wah(int input, int tempo, int current_sample, int &wah_buffer_index, int wah_values_buffer[100], wah_mult bandpass_coeffs[20][100], wah_mult &debug);
+int wah(int input, int tempo, int current_sample, int &wah_buffer_index, int wah_values_buffer[100], wah_mult bandpass_coeffs[10][100], wah_mult &debug);
 
 __attribute__((sdx_kernel("guitar_effects", 0))) void guitar_effects (
     hls::stream< ap_axis<32,2,5,6> > &INPUT,
@@ -26870,7 +26870,7 @@ __attribute__((sdx_kernel("guitar_effects", 0))) void guitar_effects (
     float delay_mult,
     int delay_samples,
     int tempo,
-    wah_mult wah_coeffs[20][100],
+    wah_mult wah_coeffs[10][100],
  wah_mult &debug_output
     ) {
 #line 17 "C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/csynth.tcl"
@@ -26896,7 +26896,7 @@ __attribute__((sdx_kernel("guitar_effects", 0))) void guitar_effects (
 #pragma HLS INTERFACE s_axilite port=axilite_out
 #pragma HLS INTERFACE s_axilite port=tempo
 #pragma HLS INTERFACE s_axilite port=debug_output
-#pragma HLS INTERFACE m_axi depth=2000 port=wah_coeffs
+#pragma HLS INTERFACE m_axi depth=1000 port=wah_coeffs
 
 #pragma HLS INTERFACE ap_ctrl_none port=return
 
@@ -27061,7 +27061,7 @@ int delay(int input, int delay_samples, float delay_mult, int delay_buffer[88200
     return output;
 }
 
-int wah(int input, int tempo, int current_sample, int &wah_buffer_index, int wah_values_buffer[100], wah_mult bandpass_coeffs[20][100], wah_mult &debug) {
+int wah(int input, int tempo, int current_sample, int &wah_buffer_index, int wah_values_buffer[100], wah_mult bandpass_coeffs[10][100], wah_mult &debug) {
 
 
 
@@ -27072,7 +27072,7 @@ int wah(int input, int tempo, int current_sample, int &wah_buffer_index, int wah
  wah_buffer_index = (wah_buffer_index + 1) % 100;
 
 
-    int control_signal = (int)(20* (0.5 + 0.5*hls::sin(current_sample*2*3.14159*tempo/88200)));
+    int control_signal = (int)(10* (0.5 + 0.5*hls::sin(current_sample*2*3.14159*tempo/88200)));
 
 
 

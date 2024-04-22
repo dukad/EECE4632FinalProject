@@ -92,7 +92,7 @@ wah_coeffs {
 }
 debug_output { 
 	dir O
-	width 16
+	width 32
 	depth 1
 	mode ap_vld
 	offset 116

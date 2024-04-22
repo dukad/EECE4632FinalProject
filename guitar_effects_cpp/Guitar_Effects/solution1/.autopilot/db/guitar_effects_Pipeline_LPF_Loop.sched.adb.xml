@@ -1573,10 +1573,10 @@ for.inc.i.split:34 %zext_ln818 = zext i1 %tmp
 
 <Node id="54" bw="32" op_0_bw="32" op_1_bw="79" op_2_bw="32" op_3_bw="32">
 <![CDATA[
-for.inc.i.split:35 %tmp_6 = partselect i32 @_ssdm_op_PartSelect.i32.i79.i32.i32, i79 %r_V_21, i32 24, i32 55
+for.inc.i.split:35 %tmp_5 = partselect i32 @_ssdm_op_PartSelect.i32.i79.i32.i32, i79 %r_V_21, i32 24, i32 55
 
 ]]></Node>
-<StgValue><ssdm name="tmp_6"/></StgValue>
+<StgValue><ssdm name="tmp_5"/></StgValue>
 </operation>
 
 <operation id="117" st_id="33" stage="1" lat="1">
@@ -1588,7 +1588,7 @@ for.inc.i.split:35 %tmp_6 = partselect i32 @_ssdm_op_PartSelect.i32.i79.i32.i32,
 
 <Node id="55" bw="32" op_0_bw="1" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-for.inc.i.split:36 %val = select i1 %isNeg, i32 %zext_ln818, i32 %tmp_6
+for.inc.i.split:36 %val = select i1 %isNeg, i32 %zext_ln818, i32 %tmp_5
 
 ]]></Node>
 <StgValue><ssdm name="val"/></StgValue>

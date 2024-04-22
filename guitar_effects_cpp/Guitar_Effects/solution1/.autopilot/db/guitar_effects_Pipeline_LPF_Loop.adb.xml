@@ -1573,10 +1573,10 @@ for.inc.i.split:34 %zext_ln818 = zext i1 %tmp
 
 <Node id="54" bw="32" op_0_bw="32" op_1_bw="79" op_2_bw="32" op_3_bw="32">
 <![CDATA[
-for.inc.i.split:35 %tmp_6 = partselect i32 @_ssdm_op_PartSelect.i32.i79.i32.i32, i79 %r_V_21, i32 24, i32 55
+for.inc.i.split:35 %tmp_5 = partselect i32 @_ssdm_op_PartSelect.i32.i79.i32.i32, i79 %r_V_21, i32 24, i32 55
 
 ]]></Node>
-<StgValue><ssdm name="tmp_6"/></StgValue>
+<StgValue><ssdm name="tmp_5"/></StgValue>
 </operation>
 
 <operation id="117" st_id="33" stage="1" lat="1">
@@ -1588,7 +1588,7 @@ for.inc.i.split:35 %tmp_6 = partselect i32 @_ssdm_op_PartSelect.i32.i79.i32.i32,
 
 <Node id="55" bw="32" op_0_bw="1" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-for.inc.i.split:36 %val = select i1 %isNeg, i32 %zext_ln818, i32 %tmp_6
+for.inc.i.split:36 %val = select i1 %isNeg, i32 %zext_ln818, i32 %tmp_5
 
 ]]></Node>
 <StgValue><ssdm name="val"/></StgValue>
@@ -1978,19 +1978,19 @@ for.inc.i.split:41 %br_ln167 = br void %for.inc.i
 </dataflow>
 <dataflow id="361" from="tmp" to="zext_ln818" fromId="114" toId="115">
 </dataflow>
-<dataflow id="363" from="_ssdm_op_PartSelect.i32.i79.i32.i32" to="tmp_6" fromId="362" toId="116">
+<dataflow id="363" from="_ssdm_op_PartSelect.i32.i79.i32.i32" to="tmp_5" fromId="362" toId="116">
 </dataflow>
-<dataflow id="364" from="r_V_21" to="tmp_6" fromId="113" toId="116">
+<dataflow id="364" from="r_V_21" to="tmp_5" fromId="113" toId="116">
 </dataflow>
-<dataflow id="365" from="StgValue_359" to="tmp_6" fromId="359" toId="116">
+<dataflow id="365" from="StgValue_359" to="tmp_5" fromId="359" toId="116">
 </dataflow>
-<dataflow id="367" from="StgValue_366" to="tmp_6" fromId="366" toId="116">
+<dataflow id="367" from="StgValue_366" to="tmp_5" fromId="366" toId="116">
 </dataflow>
 <dataflow id="368" from="isNeg" to="val" fromId="104" toId="117">
 </dataflow>
 <dataflow id="369" from="zext_ln818" to="val" fromId="115" toId="117">
 </dataflow>
-<dataflow id="370" from="tmp_6" to="val" fromId="116" toId="117">
+<dataflow id="370" from="tmp_5" to="val" fromId="116" toId="117">
 </dataflow>
 <dataflow id="372" from="_ssdm_op_SpecPipeline" to="specpipeline_ln168" fromId="371" toId="118">
 </dataflow>

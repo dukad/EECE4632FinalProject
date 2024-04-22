@@ -20,13 +20,13 @@ module guitar_effects_guitar_effects_Pipeline_LPF_Loop (
         compression_buffer_q0,
         p_out,
         p_out_ap_vld,
-        grp_fu_794_p_din0,
-        grp_fu_794_p_din1,
-        grp_fu_794_p_dout0,
-        grp_fu_794_p_ce,
-        grp_fu_802_p_din0,
-        grp_fu_802_p_dout0,
-        grp_fu_802_p_ce
+        grp_fu_784_p_din0,
+        grp_fu_784_p_din1,
+        grp_fu_784_p_dout0,
+        grp_fu_784_p_ce,
+        grp_fu_792_p_din0,
+        grp_fu_792_p_dout0,
+        grp_fu_792_p_ce
 );
 
 parameter    ap_ST_fsm_pp0_stage0 = 15'd1;
@@ -57,13 +57,13 @@ output   compression_buffer_ce0;
 input  [31:0] compression_buffer_q0;
 output  [31:0] p_out;
 output   p_out_ap_vld;
-output  [31:0] grp_fu_794_p_din0;
-output  [31:0] grp_fu_794_p_din1;
-input  [31:0] grp_fu_794_p_dout0;
-output   grp_fu_794_p_ce;
-output  [31:0] grp_fu_802_p_din0;
-input  [31:0] grp_fu_802_p_dout0;
-output   grp_fu_802_p_ce;
+output  [31:0] grp_fu_784_p_din0;
+output  [31:0] grp_fu_784_p_din1;
+input  [31:0] grp_fu_784_p_dout0;
+output   grp_fu_784_p_ce;
+output  [31:0] grp_fu_792_p_din0;
+input  [31:0] grp_fu_792_p_dout0;
+output   grp_fu_792_p_ce;
 
 reg ap_idle;
 reg compression_buffer_ce0;
@@ -182,7 +182,7 @@ wire   [78:0] r_V_fu_278_p2;
 wire   [0:0] tmp_fu_290_p3;
 wire   [78:0] r_V_21_fu_284_p2;
 wire   [31:0] zext_ln818_fu_298_p1;
-wire   [31:0] tmp_6_fu_302_p4;
+wire   [31:0] tmp_5_fu_302_p4;
 wire   [31:0] result_V_1_fu_319_p2;
 reg    ap_done_reg;
 wire    ap_continue_int;
@@ -379,13 +379,13 @@ end
 
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage9_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage9))) begin
-        conv8_i_reg_398 <= grp_fu_802_p_dout0;
+        conv8_i_reg_398 <= grp_fu_792_p_dout0;
     end
 end
 
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage6_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage6))) begin
-        conv_i_reg_393 <= grp_fu_802_p_dout0;
+        conv_i_reg_393 <= grp_fu_792_p_dout0;
     end
 end
 
@@ -401,7 +401,7 @@ end
 
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage10_11001) & (1'b1 == ap_CS_fsm_pp0_stage10))) begin
-        mul_i_reg_403 <= grp_fu_794_p_dout0;
+        mul_i_reg_403 <= grp_fu_784_p_dout0;
     end
 end
 
@@ -814,15 +814,15 @@ assign grp_fu_169_p0 = ($signed(zext_ln170_fu_159_p1) + $signed(sext_ln65_cast_f
 
 assign grp_fu_169_p1 = 11'd441;
 
-assign grp_fu_794_p_ce = 1'b1;
+assign grp_fu_784_p_ce = 1'b1;
 
-assign grp_fu_794_p_din0 = conv_i_reg_393;
+assign grp_fu_784_p_din0 = conv_i_reg_393;
 
-assign grp_fu_794_p_din1 = lpf_coefficients_load_reg_383;
+assign grp_fu_784_p_din1 = lpf_coefficients_load_reg_383;
 
-assign grp_fu_802_p_ce = 1'b1;
+assign grp_fu_792_p_ce = 1'b1;
 
-assign grp_fu_802_p_din0 = grp_fu_127_p0;
+assign grp_fu_792_p_din0 = grp_fu_127_p0;
 
 assign icmp_ln167_fu_147_p2 = ((ap_sig_allocacmp_i_7 == 9'd441) ? 1'b1 : 1'b0);
 
@@ -852,7 +852,7 @@ assign sext_ln65_cast_fu_130_p1 = $signed(sext_ln65);
 
 assign sub_ln1512_fu_240_p2 = (8'd127 - xs_exp_V_fu_208_p4);
 
-assign tmp_6_fu_302_p4 = {{r_V_21_fu_284_p2[55:24]}};
+assign tmp_5_fu_302_p4 = {{r_V_21_fu_284_p2[55:24]}};
 
 assign tmp_fu_290_p3 = r_V_fu_278_p2[32'd24];
 
@@ -860,7 +860,7 @@ assign trunc_ln171_fu_180_p1 = grp_fu_169_p2[8:0];
 
 assign ush_fu_250_p3 = ((isNeg_fu_232_p3[0:0] == 1'b1) ? sext_ln1512_fu_246_p1 : add_ln346_fu_226_p2);
 
-assign val_fu_312_p3 = ((isNeg_reg_423[0:0] == 1'b1) ? zext_ln818_fu_298_p1 : tmp_6_fu_302_p4);
+assign val_fu_312_p3 = ((isNeg_reg_423[0:0] == 1'b1) ? zext_ln818_fu_298_p1 : tmp_5_fu_302_p4);
 
 assign xs_exp_V_fu_208_p4 = {{data_V_fu_197_p1[30:23]}};
 

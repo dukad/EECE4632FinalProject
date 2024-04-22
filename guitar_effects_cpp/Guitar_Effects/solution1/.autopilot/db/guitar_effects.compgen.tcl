@@ -72,7 +72,7 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 }
 
 
-set name guitar_effects_mul_32s_9ns_41_2_1
+set name guitar_effects_mul_32s_10ns_42_2_1
 if {${::AESL::PGuard_rtl_comp_handler}} {
 	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {mul} IMPL {auto} LATENCY 1 ALLOW_PRAGMA 1
 }
@@ -84,7 +84,7 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 }
 
 
-set name guitar_effects_mul_32s_16s_48_2_1
+set name guitar_effects_mul_32s_32s_64_2_1
 if {${::AESL::PGuard_rtl_comp_handler}} {
 	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {mul} IMPL {auto} LATENCY 1 ALLOW_PRAGMA 1
 }
@@ -432,7 +432,7 @@ wah_coeffs {
 }
 debug_output { 
 	dir O
-	width 16
+	width 32
 	depth 1
 	mode ap_vld
 	offset 116

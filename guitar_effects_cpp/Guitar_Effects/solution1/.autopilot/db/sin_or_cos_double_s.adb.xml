@@ -3362,10 +3362,10 @@ for.inc43.i:1 %icmp_ln443 = icmp_eq  i3 %i_4, i3 4
 
 <Node id="179" bw="32" op_0_bw="32" op_1_bw="64" op_2_bw="64" op_3_bw="64">
 <![CDATA[
-for.inc43.i:2 %empty_67 = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 4, i64 4, i64 4
+for.inc43.i:2 %empty_65 = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 4, i64 4, i64 4
 
 ]]></Node>
-<StgValue><ssdm name="empty_67"/></StgValue>
+<StgValue><ssdm name="empty_65"/></StgValue>
 </operation>
 
 <operation id="237" st_id="33" stage="1" lat="1">
@@ -3894,10 +3894,10 @@ for.body50.i:3 %icmp_ln450 = icmp_eq  i3 %i_6, i3 4
 
 <Node id="220" bw="32" op_0_bw="32" op_1_bw="64" op_2_bw="64" op_3_bw="64">
 <![CDATA[
-for.body50.i:4 %empty_68 = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 1, i64 4, i64 2
+for.body50.i:4 %empty_66 = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 1, i64 4, i64 2
 
 ]]></Node>
-<StgValue><ssdm name="empty_68"/></StgValue>
+<StgValue><ssdm name="empty_66"/></StgValue>
 </operation>
 
 <operation id="270" st_id="34" stage="1" lat="1">
@@ -4653,10 +4653,10 @@ for.end62.i_ifconv:8 %phitmp8 = partselect i52 @_ssdm_op_PartSelect.i52.i63.i32.
 
 <Node id="255" bw="11" op_0_bw="32">
 <![CDATA[
-for.end62.i_ifconv:9 %empty_69 = trunc i32 %newexp
+for.end62.i_ifconv:9 %empty_67 = trunc i32 %newexp
 
 ]]></Node>
-<StgValue><ssdm name="empty_69"/></StgValue>
+<StgValue><ssdm name="empty_67"/></StgValue>
 </operation>
 
 <operation id="316" st_id="36" stage="1" lat="1">
@@ -4685,7 +4685,7 @@ for.end62.i_ifconv:23 %select_ln300_2 = select i1 %xor_ln300, i11 2047, i11 0
 
 <Node id="271" bw="11" op_0_bw="1" op_1_bw="11" op_2_bw="11">
 <![CDATA[
-for.end62.i_ifconv:25 %select_ln300_1 = select i1 %or_ln462, i11 0, i11 %empty_69
+for.end62.i_ifconv:25 %select_ln300_1 = select i1 %or_ln462, i11 0, i11 %empty_67
 
 ]]></Node>
 <StgValue><ssdm name="select_ln300_1"/></StgValue>
@@ -5675,13 +5675,13 @@ for.end62.i_ifconv:32 %ret_ln316 = ret i64 %bitcast_ln526
 </dataflow>
 <dataflow id="881" from="StgValue_880" to="icmp_ln443" fromId="880" toId="235">
 </dataflow>
-<dataflow id="882" from="_ssdm_op_SpecLoopTripCount" to="empty_67" fromId="789" toId="236">
+<dataflow id="882" from="_ssdm_op_SpecLoopTripCount" to="empty_65" fromId="789" toId="236">
 </dataflow>
-<dataflow id="884" from="StgValue_883" to="empty_67" fromId="883" toId="236">
+<dataflow id="884" from="StgValue_883" to="empty_65" fromId="883" toId="236">
 </dataflow>
-<dataflow id="885" from="StgValue_883" to="empty_67" fromId="883" toId="236">
+<dataflow id="885" from="StgValue_883" to="empty_65" fromId="883" toId="236">
 </dataflow>
-<dataflow id="886" from="StgValue_883" to="empty_67" fromId="883" toId="236">
+<dataflow id="886" from="StgValue_883" to="empty_65" fromId="883" toId="236">
 </dataflow>
 <dataflow id="887" from="i_4" to="add_ln443" fromId="234" toId="237">
 </dataflow>
@@ -5781,13 +5781,13 @@ for.end62.i_ifconv:32 %ret_ln316 = ret i64 %bitcast_ln526
 </dataflow>
 <dataflow id="940" from="StgValue_880" to="icmp_ln450" fromId="880" toId="268">
 </dataflow>
-<dataflow id="941" from="_ssdm_op_SpecLoopTripCount" to="empty_68" fromId="789" toId="269">
+<dataflow id="941" from="_ssdm_op_SpecLoopTripCount" to="empty_66" fromId="789" toId="269">
 </dataflow>
-<dataflow id="943" from="StgValue_942" to="empty_68" fromId="942" toId="269">
+<dataflow id="943" from="StgValue_942" to="empty_66" fromId="942" toId="269">
 </dataflow>
-<dataflow id="944" from="StgValue_883" to="empty_68" fromId="883" toId="269">
+<dataflow id="944" from="StgValue_883" to="empty_66" fromId="883" toId="269">
 </dataflow>
-<dataflow id="946" from="StgValue_945" to="empty_68" fromId="945" toId="269">
+<dataflow id="946" from="StgValue_945" to="empty_66" fromId="945" toId="269">
 </dataflow>
 <dataflow id="947" from="i_6" to="add_ln450" fromId="265" toId="270">
 </dataflow>
@@ -6063,7 +6063,7 @@ for.end62.i_ifconv:32 %ret_ln316 = ret i64 %bitcast_ln526
 </dataflow>
 <dataflow id="1083" from="StgValue_495" to="phitmp8" fromId="495" toId="314">
 </dataflow>
-<dataflow id="1084" from="newexp" to="empty_69" fromId="311" toId="315">
+<dataflow id="1084" from="newexp" to="empty_67" fromId="311" toId="315">
 </dataflow>
 <dataflow id="1085" from="xor_ln300" to="select_ln300_2" fromId="305" toId="316">
 </dataflow>
@@ -6075,7 +6075,7 @@ for.end62.i_ifconv:32 %ret_ln316 = ret i64 %bitcast_ln526
 </dataflow>
 <dataflow id="1089" from="StgValue_514" to="select_ln300_1" fromId="514" toId="317">
 </dataflow>
-<dataflow id="1090" from="empty_69" to="select_ln300_1" fromId="315" toId="317">
+<dataflow id="1090" from="empty_67" to="select_ln300_1" fromId="315" toId="317">
 </dataflow>
 <dataflow id="1091" from="or_ln300" to="results_exp_V" fromId="306" toId="318">
 </dataflow>

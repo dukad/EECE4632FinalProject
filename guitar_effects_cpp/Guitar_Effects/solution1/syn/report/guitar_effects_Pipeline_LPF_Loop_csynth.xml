@@ -129,7 +129,7 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_794_p_din0</name>
+<name>grp_fu_784_p_din0</name>
 <Object>guitar_effects_Pipeline_LPF_Loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -140,7 +140,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_794_p_din1</name>
+<name>grp_fu_784_p_din1</name>
 <Object>guitar_effects_Pipeline_LPF_Loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -151,7 +151,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_794_p_dout0</name>
+<name>grp_fu_784_p_dout0</name>
 <Object>guitar_effects_Pipeline_LPF_Loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -162,7 +162,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_794_p_ce</name>
+<name>grp_fu_784_p_ce</name>
 <Object>guitar_effects_Pipeline_LPF_Loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -173,7 +173,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_802_p_din0</name>
+<name>grp_fu_792_p_din0</name>
 <Object>guitar_effects_Pipeline_LPF_Loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -184,7 +184,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_802_p_dout0</name>
+<name>grp_fu_792_p_dout0</name>
 <Object>guitar_effects_Pipeline_LPF_Loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -195,7 +195,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_802_p_ce</name>
+<name>grp_fu_792_p_ce</name>
 <Object>guitar_effects_Pipeline_LPF_Loop</Object>
 <Type>return value</Type>
 <Scope></Scope>

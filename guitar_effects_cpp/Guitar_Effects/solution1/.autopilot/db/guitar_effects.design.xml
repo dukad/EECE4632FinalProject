@@ -5,16 +5,16 @@
 <ModuleName>guitar_effects</ModuleName>
 <InstancesList>
 <Instance>
-<InstName>grp_guitar_effects_Pipeline_LPF_Loop_fu_768</InstName>
+<InstName>grp_guitar_effects_Pipeline_LPF_Loop_fu_758</InstName>
 <ModuleName>guitar_effects_Pipeline_LPF_Loop</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>768</ID>
+<ID>758</ID>
 </Instance>
 <Instance>
-<InstName>grp_sin_or_cos_double_s_fu_777</InstName>
+<InstName>grp_sin_or_cos_double_s_fu_767</InstName>
 <ModuleName>sin_or_cos_double_s</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>777</ID>
+<ID>767</ID>
 </Instance>
 </InstancesList>
 </TopModule>
@@ -143,7 +143,7 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_794_p_din0</name>
+<name>grp_fu_784_p_din0</name>
 <Object>guitar_effects_Pipeline_LPF_Loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -154,7 +154,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_794_p_din1</name>
+<name>grp_fu_784_p_din1</name>
 <Object>guitar_effects_Pipeline_LPF_Loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -165,7 +165,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_794_p_dout0</name>
+<name>grp_fu_784_p_dout0</name>
 <Object>guitar_effects_Pipeline_LPF_Loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -176,7 +176,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_794_p_ce</name>
+<name>grp_fu_784_p_ce</name>
 <Object>guitar_effects_Pipeline_LPF_Loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -187,7 +187,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_802_p_din0</name>
+<name>grp_fu_792_p_din0</name>
 <Object>guitar_effects_Pipeline_LPF_Loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -198,7 +198,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_802_p_dout0</name>
+<name>grp_fu_792_p_dout0</name>
 <Object>guitar_effects_Pipeline_LPF_Loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -209,7 +209,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_802_p_ce</name>
+<name>grp_fu_792_p_ce</name>
 <Object>guitar_effects_Pipeline_LPF_Loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -535,8 +535,8 @@
 <PipelineDepth>6 ~ 8636</PipelineDepth>
 <PipelineType>no</PipelineType>
 <InstanceList>
-<Instance>grp_guitar_effects_Pipeline_LPF_Loop_fu_768</Instance>
-<Instance>grp_sin_or_cos_double_s_fu_777</Instance>
+<Instance>grp_guitar_effects_Pipeline_LPF_Loop_fu_758</Instance>
+<Instance>grp_sin_or_cos_double_s_fu_767</Instance>
 </InstanceList>
 <WAH_LOOP>
 <Name>WAH_LOOP</Name>
@@ -557,13 +557,13 @@
 <BRAM_18K>267</BRAM_18K>
 <AVAIL_BRAM>280</AVAIL_BRAM>
 <UTIL_BRAM>95</UTIL_BRAM>
-<DSP>78</DSP>
+<DSP>79</DSP>
 <AVAIL_DSP>220</AVAIL_DSP>
 <UTIL_DSP>35</UTIL_DSP>
-<FF>14492</FF>
+<FF>14485</FF>
 <AVAIL_FF>106400</AVAIL_FF>
 <UTIL_FF>13</UTIL_FF>
-<LUT>19871</LUT>
+<LUT>19720</LUT>
 <AVAIL_LUT>53200</AVAIL_LUT>
 <UTIL_LUT>37</UTIL_LUT>
 <URAM>0</URAM>

@@ -62,9 +62,9 @@ guitar_effects_design_auto_pc_1_sc::guitar_effects_design_auto_pc_1_sc(const sc_
   // initialize module
     xsc::common_cpp::properties model_param_props;
     model_param_props.addLong("C_M_AXI_PROTOCOL", "2");
-    model_param_props.addLong("C_S_AXI_PROTOCOL", "0");
-    model_param_props.addLong("C_IGNORE_ID", "1");
-    model_param_props.addLong("C_AXI_ID_WIDTH", "1");
+    model_param_props.addLong("C_S_AXI_PROTOCOL", "1");
+    model_param_props.addLong("C_IGNORE_ID", "0");
+    model_param_props.addLong("C_AXI_ID_WIDTH", "12");
     model_param_props.addLong("C_AXI_ADDR_WIDTH", "32");
     model_param_props.addLong("C_AXI_DATA_WIDTH", "32");
     model_param_props.addLong("C_AXI_SUPPORTS_WRITE", "1");

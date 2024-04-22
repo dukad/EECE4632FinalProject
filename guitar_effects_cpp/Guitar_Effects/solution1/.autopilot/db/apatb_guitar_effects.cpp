@@ -475,7 +475,7 @@ void set_string(std::string list, std::string* class_list) {
 
 
 struct __cosim_s1__ { char data[1]; };
-struct __cosim_s2__ { char data[2]; };
+struct __cosim_s4__ { char data[4]; };
 extern "C" void guitar_effects_hw_stub_wrapper(volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, char, int, __cosim_s1__*, int, int, int, float, int, int, volatile void *, volatile void *);
 
 extern "C" void apatb_guitar_effects_hw(volatile void * __xlx_apatb_param_INPUT_V_data_V, volatile void * __xlx_apatb_param_INPUT_V_keep_V, volatile void * __xlx_apatb_param_INPUT_V_strb_V, volatile void * __xlx_apatb_param_INPUT_V_user_V, volatile void * __xlx_apatb_param_INPUT_V_last_V, volatile void * __xlx_apatb_param_INPUT_V_id_V, volatile void * __xlx_apatb_param_INPUT_V_dest_V, volatile void * __xlx_apatb_param_OUTPUT_V_data_V, volatile void * __xlx_apatb_param_OUTPUT_V_keep_V, volatile void * __xlx_apatb_param_OUTPUT_V_strb_V, volatile void * __xlx_apatb_param_OUTPUT_V_user_V, volatile void * __xlx_apatb_param_OUTPUT_V_last_V, volatile void * __xlx_apatb_param_OUTPUT_V_id_V, volatile void * __xlx_apatb_param_OUTPUT_V_dest_V, volatile void * __xlx_apatb_param_axilite_out, char __xlx_apatb_param_control, int __xlx_apatb_param_distortion_threshold, __cosim_s1__* __xlx_apatb_param_distortion_clip_factor, int __xlx_apatb_param_compression_min_threshold, int __xlx_apatb_param_compression_max_threshold, int __xlx_apatb_param_compression_zero_threshold, float __xlx_apatb_param_delay_mult, int __xlx_apatb_param_delay_samples, int __xlx_apatb_param_tempo, volatile void * __xlx_apatb_param_wah_coeffs, volatile void * __xlx_apatb_param_debug_output) {
@@ -981,7 +981,7 @@ char xlx_stream_elt_dest;
           exit(1);
         }
         if (atoi(AESL_num.c_str()) == AESL_transaction_pc) {
-          std::vector<sc_bv<16> > debug_output_pc_buffer(1);
+          std::vector<sc_bv<32> > debug_output_pc_buffer(1);
           int i = 0;
           bool has_unknown_value = false;
           rtl_tv_out_file >> AESL_token; //data
@@ -1005,8 +1005,10 @@ char xlx_stream_elt_dest;
                  << endl; 
           }
   
-          if (i > 0) {((char*)__xlx_apatb_param_debug_output)[0*2+0] = debug_output_pc_buffer[0].range(7, 0).to_int64();
-((char*)__xlx_apatb_param_debug_output)[0*2+1] = debug_output_pc_buffer[0].range(15, 8).to_int64();
+          if (i > 0) {((char*)__xlx_apatb_param_debug_output)[0*4+0] = debug_output_pc_buffer[0].range(7, 0).to_int64();
+((char*)__xlx_apatb_param_debug_output)[0*4+1] = debug_output_pc_buffer[0].range(15, 8).to_int64();
+((char*)__xlx_apatb_param_debug_output)[0*4+2] = debug_output_pc_buffer[0].range(23, 16).to_int64();
+((char*)__xlx_apatb_param_debug_output)[0*4+3] = debug_output_pc_buffer[0].range(31, 24).to_int64();
 }
         } // end transaction
       } // end file is good
@@ -1124,27 +1126,27 @@ std::vector<char> __xlx_apatb_param_OUTPUT_V_dest_V_stream_buf;
 #ifdef USE_BINARY_TV_FILE
 {
 aesl_fh.touch(AUTOTB_TVIN_gmem, 'b');
-transaction<16> tr(2000);
-__xlx_offset_byte_param_wah_coeffs = 0*2;
+transaction<32> tr(1000);
+__xlx_offset_byte_param_wah_coeffs = 0*4;
 if (__xlx_apatb_param_wah_coeffs) {
-  tr.import<2>((char*)__xlx_apatb_param_wah_coeffs, 2000, 0);
+  tr.import<4>((char*)__xlx_apatb_param_wah_coeffs, 1000, 0);
 }
 aesl_fh.write(AUTOTB_TVIN_gmem, tr.p, tr.tbytes);
-tcl_file.set_num(2000, &tcl_file.gmem_depth);
+tcl_file.set_num(1000, &tcl_file.gmem_depth);
 }
 #else
 aesl_fh.touch(AUTOTB_TVIN_gmem);
 {
 aesl_fh.write(AUTOTB_TVIN_gmem, begin_str(AESL_transaction));
-__xlx_offset_byte_param_wah_coeffs = 0*2;
+__xlx_offset_byte_param_wah_coeffs = 0*4;
 if (__xlx_apatb_param_wah_coeffs) {
-for (size_t i = 0; i < 2000; ++i) {
-unsigned char *pos = (unsigned char*)__xlx_apatb_param_wah_coeffs + i * 2;
-std::string s = formatData(pos, 16);
+for (size_t i = 0; i < 1000; ++i) {
+unsigned char *pos = (unsigned char*)__xlx_apatb_param_wah_coeffs + i * 4;
+std::string s = formatData(pos, 32);
 aesl_fh.write(AUTOTB_TVIN_gmem, s);
 }
 }
-tcl_file.set_num(2000, &tcl_file.gmem_depth);
+tcl_file.set_num(1000, &tcl_file.gmem_depth);
 aesl_fh.write(AUTOTB_TVIN_gmem, end_str());
 }
 #endif
@@ -1274,7 +1276,7 @@ aesl_fh.write(AUTOTB_TVIN_wah_coeffs, end_str());
 aesl_fh.write(AUTOTB_TVIN_debug_output, begin_str(AESL_transaction));
 {
 auto *pos = (unsigned char*)__xlx_apatb_param_debug_output;
-aesl_fh.write(AUTOTB_TVIN_debug_output, formatData(pos, 16));
+aesl_fh.write(AUTOTB_TVIN_debug_output, formatData(pos, 32));
 }
   tcl_file.set_num(1, &tcl_file.debug_output_depth);
 aesl_fh.write(AUTOTB_TVIN_debug_output, end_str());
@@ -1647,7 +1649,7 @@ aesl_fh.write(AUTOTB_TVOUT_axilite_out, end_str());
 aesl_fh.write(AUTOTB_TVOUT_debug_output, begin_str(AESL_transaction));
 {
 auto *pos = (unsigned char*)__xlx_apatb_param_debug_output;
-aesl_fh.write(AUTOTB_TVOUT_debug_output, formatData(pos, 16));
+aesl_fh.write(AUTOTB_TVOUT_debug_output, formatData(pos, 32));
 }
   tcl_file.set_num(1, &tcl_file.debug_output_depth);
 aesl_fh.write(AUTOTB_TVOUT_debug_output, end_str());
