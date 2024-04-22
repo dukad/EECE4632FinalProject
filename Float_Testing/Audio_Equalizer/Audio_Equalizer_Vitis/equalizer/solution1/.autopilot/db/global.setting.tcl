@@ -1,6 +1,6 @@
 
 set TopModule "equalizer"
-set ClockPeriod 20
+set ClockPeriod 10
 set ClockList ap_clk
 set HasVivadoClockPeriod 0
 set CombLogicFlag 0
@@ -44,7 +44,7 @@ set SCTraceOption all
 set TargetInfo xc7z020:-clg400:-1
 set SourceFiles {sc {} c ../../equalizer.cpp}
 set SourceFlags {sc {} c {{}}}
-set DirectiveFile C:/EECE4632FinalProject/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution1/solution1.directive
+set DirectiveFile C:/EECE4632FinalProject/Float_Testing/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution1/solution1.directive
 set TBFiles {verilog ../../equalizer_test.cpp bc ../../equalizer_test.cpp vhdl ../../equalizer_test.cpp sc ../../equalizer_test.cpp cas ../../equalizer_test.cpp c {}}
 set SpecLanguage C
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}

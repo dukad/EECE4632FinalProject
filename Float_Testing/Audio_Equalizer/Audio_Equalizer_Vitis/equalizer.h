@@ -12,6 +12,8 @@ typedef int acc_t;
 
 // *** COEFFICIENT ARRAY DEFINITIONS ***
 #define NUM_COEFS 33
+#define NUM_BANDS 3
+#define NUM_DATA_PER_CHUNK 4000 - 35
 
 // *** STATE DEFINITIONS ***
 #define IDLE 0x0000

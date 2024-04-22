@@ -6426,16 +6426,16 @@ typedef ap_axis<32,1,1,1> AXI_VAL;
 typedef int data_t;
 typedef int coef_t;
 typedef int acc_t;
-# 26 "./equalizer.h"
+# 28 "./equalizer.h"
 __attribute__((sdx_kernel("equalizer", 0))) void equalizer(hls::stream<AXI_VAL>& output, coef_t coefs[33], hls::stream<AXI_VAL>& input);
 # 2 "equalizer.cpp" 2
 
 __attribute__((sdx_kernel("equalizer", 0))) void equalizer(hls::stream<AXI_VAL>& output, coef_t coefs[33], hls::stream<AXI_VAL>& input) {
-#line 16 "C:/EECE4632FinalProject/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution1/csynth.tcl"
+#line 15 "C:/EECE4632FinalProject/Float_Testing/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution1/csynth.tcl"
 #pragma HLSDIRECTIVE TOP name=equalizer
 # 3 "equalizer.cpp"
 
-#line 6 "C:/EECE4632FinalProject/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution1/directives.tcl"
+#line 6 "C:/EECE4632FinalProject/Float_Testing/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution1/directives.tcl"
 #pragma HLSDIRECTIVE TOP name=equalizer
 # 3 "equalizer.cpp"
 
@@ -6448,6 +6448,9 @@ __attribute__((sdx_kernel("equalizer", 0))) void equalizer(hls::stream<AXI_VAL>&
  int coef_scale = 0;
  int num_filters = 0;
 
+ int m;
+ int n;
+
  acc_t accumulate;
  data_t data;
 
@@ -6459,7 +6462,8 @@ __attribute__((sdx_kernel("equalizer", 0))) void equalizer(hls::stream<AXI_VAL>&
 
  int state = 0x0000;
 
- VITIS_LOOP_24_1: while(running){
+ Run:
+ while(1){
   input.read(tmp);
 
   switch (state){
@@ -6471,7 +6475,7 @@ __attribute__((sdx_kernel("equalizer", 0))) void equalizer(hls::stream<AXI_VAL>&
      i -= 1;
     }
     break;
-# 48 "equalizer.cpp"
+# 52 "equalizer.cpp"
    case 0x0011:
 
 
@@ -6480,17 +6484,20 @@ __attribute__((sdx_kernel("equalizer", 0))) void equalizer(hls::stream<AXI_VAL>&
 
 
 
-    VITIS_LOOP_56_2: while(state == 0x0011){
+    Read_Coefs:
+
+    for (m = 33; m > 0; m--){
      if (tmp.data.to_int() == 43962){
       state = 0x1000;
       i = 0;
-      break;
+
      }
+     if (state == 0x0011){
+      coefs[i] = tmp.data.to_int();
 
-     coefs[i] = tmp.data.to_int();
-
-     input.read(tmp);
-     i += 1;
+      input.read(tmp);
+      i += 1;
+     }
     }
     break;
 
@@ -6526,10 +6533,10 @@ __attribute__((sdx_kernel("equalizer", 0))) void equalizer(hls::stream<AXI_VAL>&
 
 
   if (tmp.last){
-   running = false;
+   break;
   }
  }
- if (tmp.last){
-  running = false;
- }
+
+
+
 }

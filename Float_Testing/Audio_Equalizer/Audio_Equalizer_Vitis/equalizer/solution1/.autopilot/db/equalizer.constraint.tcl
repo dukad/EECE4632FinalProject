@@ -2,8 +2,8 @@ set clock_constraint { \
     name clk \
     module equalizer \
     port ap_clk \
-    period 20 \
-    uncertainty 5.4 \
+    period 10 \
+    uncertainty 2.7 \
 }
 
 set all_path {}

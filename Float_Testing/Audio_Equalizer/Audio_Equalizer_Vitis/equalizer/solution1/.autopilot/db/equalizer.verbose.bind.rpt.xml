@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'equalizer'" level="0">
-<item name = "Date">Tue Apr 16 16:21:02 2024
+<item name = "Date">Mon Apr 22 19:17:46 2024
 </item>
 <item name = "Version">2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)</item>
 <item name = "Project">equalizer</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">20.00 ns, 14.600 ns, 5.40 ns</column>
+<column name="ap_clk">10.00 ns, 7.300 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -31,12 +31,11 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_equalizer_Pipeline_VITIS_LOOP_56_2_fu_258">equalizer_Pipeline_VITIS_LOOP_56_2, ?, ?, ?, ?, ?, ?, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- VITIS_LOOP_24_1">?, ?, ?, -, -, ?, no</column>
+<column name="- Run">?, ?, 52, 44, 1, ?, yes</column>
 </table>
 </item>
 </section>

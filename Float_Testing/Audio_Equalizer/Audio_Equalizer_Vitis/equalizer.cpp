@@ -10,6 +10,9 @@ void equalizer(hls::stream<AXI_VAL>& output, coef_t coefs[NUM_COEFS], hls::strea
 	int coef_scale = 0;   // THIS NEEDS TO BE CHANGED TO FLOAT/DOUBLE/FIXED
 	int num_filters = 0;
 
+	int m;
+	int n;
+
 	acc_t accumulate;
 	data_t data;
 
@@ -21,7 +24,8 @@ void equalizer(hls::stream<AXI_VAL>& output, coef_t coefs[NUM_COEFS], hls::strea
 
 	int state = IDLE;
 
-	while(running){
+	Run:
+	while(1){
 		input.read(tmp);
 
 		switch (state){
@@ -53,17 +57,20 @@ void equalizer(hls::stream<AXI_VAL>& output, coef_t coefs[NUM_COEFS], hls::strea
 //
 //				coef_scale = 0;
 
-				while(state == READ_COEFS){
+				Read_Coefs:
+				//while(state == READ_COEFS){
+				for (m = NUM_COEFS; m > 0; m--){
 					if (tmp.data.to_int() == ABBA){
 						state = OUTPUT_SIGNAL;
 						i = 0;
-						break;
+						//break;
 					}
+					if (state == READ_COEFS){
+						coefs[i] = tmp.data.to_int();
 
-					coefs[i] = tmp.data.to_int();
-
-					input.read(tmp);
-					i += 1;
+						input.read(tmp);
+						i += 1;
+					}
 				}
 				break;
 
@@ -74,7 +81,7 @@ void equalizer(hls::stream<AXI_VAL>& output, coef_t coefs[NUM_COEFS], hls::strea
 
 				Shift_Accumulate_Loop:
 				for (i = NUM_COEFS - 1; i > 0; i--){
-				#pragma HLS UNROLL
+#pragma HLS UNROLL
 					signal_shift_reg[i] = signal_shift_reg[i - 1];
 					accumulate += signal_shift_reg[i] * coefs[i];
 				}
@@ -99,10 +106,10 @@ void equalizer(hls::stream<AXI_VAL>& output, coef_t coefs[NUM_COEFS], hls::strea
 
 		// *** LOOP BREAK ***
 		if (tmp.last){
-			running = false;
+			break;
 		}
 	}
-	if (tmp.last){
-		running = false;
-	}
+//	if (tmp.last){
+//		break;
+//	}
 }

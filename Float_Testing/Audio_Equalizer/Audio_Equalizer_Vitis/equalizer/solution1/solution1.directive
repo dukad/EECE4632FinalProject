@@ -5,6 +5,11 @@
                 <option name="name" value="equalizer"/>
             </pragma>
         </directive>
+        <directive functionName="equalizer" label="" functionLabel="">
+            <pragma name="TOP">
+                <option name="name" value="equalizer"/>
+            </pragma>
+        </directive>
     </sourceFile>
 </AutoPilot:ProjectResources>
 

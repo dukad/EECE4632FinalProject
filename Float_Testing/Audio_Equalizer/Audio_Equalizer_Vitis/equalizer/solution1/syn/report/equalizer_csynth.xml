@@ -9,8 +9,8 @@
 <ProductFamily>zynq</ProductFamily>
 <Part>xc7z020-clg400-1</Part>
 <TopModelName>equalizer</TopModelName>
-<TargetClockPeriod>20.00</TargetClockPeriod>
-<ClockUncertainty>5.40</ClockUncertainty>
+<TargetClockPeriod>10.00</TargetClockPeriod>
+<ClockUncertainty>2.70</ClockUncertainty>
 <FlowTarget>vivado</FlowTarget>
 </UserAssignments>
 
@@ -18,7 +18,7 @@
 <PipelineType>no</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
-<EstimatedClockPeriod>14.600</EstimatedClockPeriod>
+<EstimatedClockPeriod>7.300</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
@@ -32,14 +32,15 @@
 <Interval-max>undef</Interval-max>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
-<VITIS_LOOP_24_1>
+<Run>
 <TripCount>undef</TripCount>
 <Latency>undef</Latency>
 <AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
-<IterationLatency>undef</IterationLatency>
+<PipelineII>44</PipelineII>
+<PipelineDepth>52</PipelineDepth>
 <InstanceList>
 </InstanceList>
-</VITIS_LOOP_24_1>
+</Run>
 </SummaryOfLoopLatency>
 </PerformanceEstimates>
 
@@ -47,8 +48,8 @@
 <Resources>
 <BRAM_18K>0</BRAM_18K>
 <DSP>99</DSP>
-<FF>4175</FF>
-<LUT>4279</LUT>
+<FF>16185</FF>
+<LUT>12796</LUT>
 <URAM>0</URAM>
 </Resources>
 <AvailableResources>
