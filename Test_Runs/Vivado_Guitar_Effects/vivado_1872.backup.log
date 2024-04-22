@@ -1,0 +1,414 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Thu Apr 11 18:01:11 2024
+# Process ID: 1872
+# Current directory: C:/EECE4632FinalProject/Vivado_Guitar_Effects
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17404 C:\EECE4632FinalProject\Vivado_Guitar_Effects\Vivado_Guitar_Effects.xpr
+# Log file: C:/EECE4632FinalProject/Vivado_Guitar_Effects/vivado.log
+# Journal file: C:/EECE4632FinalProject/Vivado_Guitar_Effects\vivado.jou
+# Running On: WFXB07B250A366D, OS: Windows, CPU Frequency: 2904 MHz, CPU Physical cores: 8, Host memory: 16881 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.xpr
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at C:/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.0 available at C:/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at C:/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at C:/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at C:/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at C:/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/EECE4632FinalProject/guitar_effects_cpp'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.1/data/ip'.
+WARNING: [IP_Flow 19-3664] IP 'guitar_effects_design_guitar_effects_0_22' generated file not found 'c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_guitar_effects_0_22/hdl/verilog/guitar_effects_sin_or_cos_double_s_fourth_order_double_sin_cos_K0_V_ROM_1P_LUTRAM_1R.dat'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'guitar_effects_design_guitar_effects_0_22' generated file not found 'c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_guitar_effects_0_22/hdl/verilog/guitar_effects_sin_or_cos_double_s_fourth_order_double_sin_cos_K1_V_ROM_1P_LUTRAM_1R.dat'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'guitar_effects_design_guitar_effects_0_22' generated file not found 'c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_guitar_effects_0_22/hdl/verilog/guitar_effects_sin_or_cos_double_s_fourth_order_double_sin_cos_K2_V_ROM_1P_LUTRAM_1R.dat'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'guitar_effects_design_guitar_effects_0_22' generated file not found 'c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_guitar_effects_0_22/hdl/verilog/guitar_effects_sin_or_cos_double_s_fourth_order_double_sin_cos_K3_V_ROM_1P_LUTRAM_1R.dat'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'guitar_effects_design_guitar_effects_0_22' generated file not found 'c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_guitar_effects_0_22/hdl/verilog/guitar_effects_sin_or_cos_double_s_fourth_order_double_sin_cos_K4_V_ROM_1P_LUTRAM_1R.dat'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'guitar_effects_design_guitar_effects_0_22' generated file not found 'c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_guitar_effects_0_22/hdl/verilog/guitar_effects_sin_or_cos_double_s_ref_4oPi_table_256_V_ROM_AUTO_1R.dat'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'guitar_effects_design_guitar_effects_0_22' generated file not found 'c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_guitar_effects_0_22/hdl/verilog/guitar_effects_sin_or_cos_double_s_fourth_order_double_sin_cos_K0_V_ROM_1P_LUTRAM_1R.dat'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'guitar_effects_design_guitar_effects_0_22' generated file not found 'c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_guitar_effects_0_22/hdl/verilog/guitar_effects_sin_or_cos_double_s_fourth_order_double_sin_cos_K1_V_ROM_1P_LUTRAM_1R.dat'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'guitar_effects_design_guitar_effects_0_22' generated file not found 'c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_guitar_effects_0_22/hdl/verilog/guitar_effects_sin_or_cos_double_s_fourth_order_double_sin_cos_K2_V_ROM_1P_LUTRAM_1R.dat'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'guitar_effects_design_guitar_effects_0_22' generated file not found 'c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_guitar_effects_0_22/hdl/verilog/guitar_effects_sin_or_cos_double_s_fourth_order_double_sin_cos_K3_V_ROM_1P_LUTRAM_1R.dat'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'guitar_effects_design_guitar_effects_0_22' generated file not found 'c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_guitar_effects_0_22/hdl/verilog/guitar_effects_sin_or_cos_double_s_fourth_order_double_sin_cos_K4_V_ROM_1P_LUTRAM_1R.dat'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'guitar_effects_design_guitar_effects_0_22' generated file not found 'c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_guitar_effects_0_22/hdl/verilog/guitar_effects_sin_or_cos_double_s_ref_4oPi_table_256_V_ROM_AUTO_1R.dat'. Please regenerate to continue.
+WARNING: [BD 41-1661] One or more IPs have been locked in the design 'guitar_effects_design.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
+List of locked IPs:
+guitar_effects_design_guitar_effects_0_22
+
+open_project: Time (s): cpu = 00:00:24 ; elapsed = 00:00:13 . Memory (MB): peak = 1577.289 ; gain = 341.313
+update_compile_order -fileset sources_1
+open_bd_design {C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd}
+Reading block design file <C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd>...
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding component instance block -- xilinx.com:hls:guitar_effects:1.0 - GE
+Adding component instance block -- xilinx.com:ip:axi_bram_ctrl:4.1 - axi_bram_ctrl_0
+Adding component instance block -- xilinx.com:ip:blk_mem_gen:8.4 - axi_bram_ctrl_0_bram
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_100M
+Adding component instance block -- xilinx.com:ip:axi_dma:7.1 - axi_dma_0
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - axi_mem_intercon
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps7_0_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_S2MM.
+Successfully read diagram <guitar_effects_design> from block design file <C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd>
+open_bd_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:15 . Memory (MB): peak = 1708.895 ; gain = 111.395
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+set_property  ip_repo_paths  {} [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+set_property  ip_repo_paths  C:/Users/du.kad/Desktop/EECE4632FinalProject [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/du.kad/Desktop/EECE4632FinalProject'.
+set_property  ip_repo_paths  {} [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+set_property  ip_repo_paths  C:/EECE4632FinalProject [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/EECE4632FinalProject'.
+WARNING: [IP_Flow 19-3656] If you move the project, the path for repository 'c:/EECE4632FinalProject' may become invalid. A better location for the repository would be in a path adjacent to the project. (Current project location is 'c:/EECE4632FinalProject/Vivado_Guitar_Effects'.)
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:hls:guitar_effects:1.0 guitar_effects_0
+endgroup
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_xbar {/processing_system7_0/FCLK_CLK0 (100 MHz)} Master {/guitar_effects_0/m_axi_gmem} Slave {/processing_system7_0/S_AXI_HP0} ddr_seg {Auto} intc_ip {/axi_mem_intercon} master_apm {0}}  [get_bd_intf_pins guitar_effects_0/m_axi_gmem]
+Slave segment '/processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM' is being assigned into address space '/guitar_effects_0/Data_m_axi_gmem' at <0x0000_0000 [ 256M ]>.
+Slave segment '/processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM' is being assigned into address space '/guitar_effects_0/Data_m_axi_gmem' at <0x1000_0000 [ 256M ]>.
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (100 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/guitar_effects_0/s_axi_control_r} ddr_seg {Auto} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins guitar_effects_0/s_axi_control_r]
+Slave segment '/guitar_effects_0/s_axi_control_r/Reg' is being assigned into address space '/processing_system7_0/Data' at <0x4001_0000 [ 64K ]>.
+endgroup
+undo
+INFO: [Common 17-17] undo 'endgroup'
+INFO: [Common 17-17] undo 'apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (100 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/guitar_effects_0/s_axi_control_r} ddr_seg {Auto} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins guitar_effects_0/s_axi_control_r]'
+INFO: [Common 17-17] undo 'apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_xbar {/processing_system7_0/FCLK_CLK0 (100 MHz)} Master {/guitar_effects_0/m_axi_gmem} Slave {/processing_system7_0/S_AXI_HP0} ddr_seg {Auto} intc_ip {/axi_mem_intercon} master_apm {0}}  [get_bd_intf_pins guitar_effects_0/m_axi_gmem]'
+INFO: [Common 17-17] undo 'startgroup'
+undo
+INFO: [Common 17-17] undo 'endgroup'
+INFO: [Common 17-17] undo 'create_bd_cell -type ip -vlnv xilinx.com:hls:guitar_effects:1.0 guitar_effects_0'
+INFO: [Common 17-17] undo 'startgroup'
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:hls:guitar_effects:1.0 guitar_effects_0
+endgroup
+set_property location {1 106 634} [get_bd_cells guitar_effects_0]
+delete_bd_objs [get_bd_intf_nets ps7_0_axi_periph_M01_AXI] [get_bd_intf_nets guitar_effects_0_m_axi_gmem] [get_bd_intf_nets axi_dma_0_M_AXIS_MM2S] [get_bd_intf_nets guitar_effects_0_OUTPUT_r] [get_bd_cells GE]
+set_property location {3 822 654} [get_bd_cells guitar_effects_0]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_slave {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_xbar {/processing_system7_0/FCLK_CLK0 (100 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_bram_ctrl_0/S_AXI} ddr_seg {Auto} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins axi_bram_ctrl_0/S_AXI]
+Slave segment '/axi_bram_ctrl_0/S_AXI/Mem0' is being assigned into address space '/processing_system7_0/Data' at <0x4000_0000 [ 8K ]>.
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_xbar {/processing_system7_0/FCLK_CLK0 (100 MHz)} Master {/guitar_effects_0/m_axi_gmem} Slave {/processing_system7_0/S_AXI_HP0} ddr_seg {Auto} intc_ip {/axi_mem_intercon} master_apm {0}}  [get_bd_intf_pins guitar_effects_0/m_axi_gmem]
+Slave segment '/processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM' is being assigned into address space '/guitar_effects_0/Data_m_axi_gmem' at <0x0000_0000 [ 256M ]>.
+Slave segment '/processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM' is being assigned into address space '/guitar_effects_0/Data_m_axi_gmem' at <0x1000_0000 [ 256M ]>.
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (100 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/guitar_effects_0/s_axi_control_r} ddr_seg {Auto} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins guitar_effects_0/s_axi_control_r]
+Slave segment '/guitar_effects_0/s_axi_control_r/Reg' is being assigned into address space '/processing_system7_0/Data' at <0x4001_0000 [ 64K ]>.
+endgroup
+connect_bd_intf_net [get_bd_intf_pins guitar_effects_0/OUTPUT_r] [get_bd_intf_pins axi_dma_0/S_AXIS_S2MM]
+connect_bd_intf_net [get_bd_intf_pins axi_dma_0/M_AXIS_MM2S] [get_bd_intf_pins guitar_effects_0/INPUT_r]
+save_bd_design
+Wrote  : <C:\EECE4632FinalProject\Vivado_Guitar_Effects\Vivado_Guitar_Effects.srcs\sources_1\bd\guitar_effects_design\guitar_effects_design.bd> 
+Wrote  : <C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/ui/bd_aa970370.ui> 
+make_wrapper -files [get_files C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd] -top
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_S2MM.
+ERROR: [IP_Flow 19-3478] Validation failed for parameter 'My M00_A00_ADDR_WIDTH(M00_A00_ADDR_WIDTH)' with value '29' for BD Cell 'axi_mem_intercon/xbar'. PARAM_VALUE.M01_A00_BASE_ADDR overlaps with address segment PARAM_VALUE.M00_A00_BASE_ADDR
+INFO: [IP_Flow 19-3438] Customization errors found on 'axi_mem_intercon/xbar'. Restoring to previous valid configuration.
+ERROR: [Common 17-39] 'set_property' failed due to earlier errors.
+ERROR: [BD 41-1273] Error running post_propagate TCL procedure: ERROR: [Common 17-39] 'set_property' failed due to earlier errors.
+    ::xilinx.com_ip_axi_crossbar_2.1::post_propagate Line 57
+ERROR: [BD 41-1031] Hdl Generation failed for the IP Integrator design C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd 
+make_wrapper: Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1960.242 ; gain = 2.520
+ERROR: [Common 17-39] 'make_wrapper' failed due to earlier errors.
+save_bd_design
+Wrote  : <C:\EECE4632FinalProject\Vivado_Guitar_Effects\Vivado_Guitar_Effects.srcs\sources_1\bd\guitar_effects_design\guitar_effects_design.bd> 
+Wrote  : <C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/ui/bd_aa970370.ui> 
+reset_run synth_1
+INFO: [Project 1-1160] Copying file C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1/guitar_effects_design_wrapper.dcp to C:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/utils_1/imports/synth_1 and adding it to utils fileset
+reset_run guitar_effects_design_xbar_2_synth_1
+reset_run guitar_effects_design_xbar_3_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM from address space /axi_dma_0/Data_S2MM.
+ERROR: [IP_Flow 19-3478] Validation failed for parameter 'My M00_A00_ADDR_WIDTH(M00_A00_ADDR_WIDTH)' with value '29' for BD Cell 'axi_mem_intercon/xbar'. PARAM_VALUE.M01_A00_BASE_ADDR overlaps with address segment PARAM_VALUE.M00_A00_BASE_ADDR
+INFO: [IP_Flow 19-3438] Customization errors found on 'axi_mem_intercon/xbar'. Restoring to previous valid configuration.
+ERROR: [Common 17-39] 'set_property' failed due to earlier errors.
+ERROR: [BD 41-1273] Error running post_propagate TCL procedure: ERROR: [Common 17-39] 'set_property' failed due to earlier errors.
+    ::xilinx.com_ip_axi_crossbar_2.1::post_propagate Line 57
+ERROR: [BD 41-1031] Hdl Generation failed for the IP Integrator design C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd 
+ERROR: [Vivado 12-4756] Launch of runs aborted due to earlier errors while preparing sub-designs for run execution.
+startgroup
+delete_bd_objs [get_bd_intf_nets axi_dma_0_M_AXI_MM2S] [get_bd_intf_nets axi_bram_ctrl_0_BRAM_PORTA] [get_bd_intf_nets processing_system7_0_M_AXI_GP0] [get_bd_intf_nets axi_mem_intercon_M00_AXI] [get_bd_intf_nets axi_dma_0_M_AXI_S2MM] [get_bd_intf_nets ps7_0_axi_periph_M01_AXI] [get_bd_intf_nets guitar_effects_0_m_axi_gmem] [get_bd_intf_nets ps7_0_axi_periph_M00_AXI] [get_bd_intf_nets guitar_effects_0_OUTPUT_r] [get_bd_intf_nets axi_dma_0_M_AXIS_MM2S] [get_bd_intf_nets ps7_0_axi_periph_M02_AXI] [get_bd_intf_nets axi_mem_intercon_M01_AXI]
+delete_bd_objs [get_bd_nets processing_system7_0_FCLK_RESET0_N] [get_bd_nets rst_ps7_0_100M_peripheral_aresetn] [get_bd_nets processing_system7_0_FCLK_CLK0]
+delete_bd_objs [get_bd_cells axi_bram_ctrl_0] [get_bd_cells processing_system7_0] [get_bd_cells guitar_effects_0] [get_bd_cells axi_dma_0] [get_bd_cells axi_bram_ctrl_0_bram] [get_bd_cells rst_ps7_0_100M]
+delete_bd_objs [get_bd_cells axi_mem_intercon] [get_bd_cells ps7_0_axi_periph]
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:hls:guitar_effects:1.0 guitar_effects_0
+endgroup
+set_property location {1 14 -126} [get_bd_cells guitar_effects_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_bram_ctrl:4.1 axi_bram_ctrl_0
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.1-2] guitar_effects_design_axi_bram_ctrl_0_1: In IP Integrator, please note that memory depth value gets calculated based on the Data Width of the IP and Address range selected in the Address Editor.Incase a validation error occured on the range of this parameter, please check if the selected Data width and the Address Range are valid. For valid Data width and memory depth values, please refer to the AXI BRAM Controller Product Guide.
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.1-1] guitar_effects_design_axi_bram_ctrl_0_1: In IP Integrator, The Maximum address range supported is 2G. Selecting the address range more than 2G in the address editor may resets the value of Memory depth to default value (1024). please refer to the AXI BRAM Controller Product Guide.
+endgroup
+set_property location {2.5 618 -341} [get_bd_cells axi_bram_ctrl_0]
+apply_bd_automation -rule xilinx.com:bd_rule:bram_cntlr -config {BRAM "Auto" }  [get_bd_intf_pins axi_bram_ctrl_0/BRAM_PORTA]
+startgroup
+set_property -dict [list CONFIG.SINGLE_PORT_BRAM {1}] [get_bd_cells axi_bram_ctrl_0]
+endgroup
+set_property location {1 267 -324} [get_bd_cells guitar_effects_0]
+connect_bd_intf_net [get_bd_intf_pins guitar_effects_0/m_axi_gmem] [get_bd_intf_pins axi_bram_ctrl_0/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (50 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins axi_bram_ctrl_0/s_axi_aclk]
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+startgroup
+set_property -dict [list CONFIG.PCW_USE_S_AXI_GP0 {1}] [get_bd_cells processing_system7_0]
+endgroup
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_dma:7.1 axi_dma_0
+endgroup
+set_property -dict [list CONFIG.c_include_sg {0} CONFIG.c_sg_include_stscntrl_strm {0}] [get_bd_cells axi_dma_0]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/axi_dma_0/M_AXI_MM2S} Slave {/processing_system7_0/S_AXI_GP0} ddr_seg {Auto} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins processing_system7_0/S_AXI_GP0]
+Slave segment '/processing_system7_0/S_AXI_GP0/GP0_DDR_LOWOCM' is being assigned into address space '/axi_dma_0/Data_MM2S' at <0x0000_0000 [ 512M ]>.
+Slave segment '/processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0' is being assigned into address space '/axi_dma_0/Data_MM2S' at <0x4000_0000 [ 1G ]>.
+WARNING: [BD 41-1051] Slave segment '/processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0' with 'register' usage does not match address space '/axi_dma_0/Data_MM2S' with 'memory' usage so will be excluded from this address space. Please use the 'include_bd_addr_seg' command to override this precaution if required.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_dma_0/S_AXI_LITE} ddr_seg {Auto} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins axi_dma_0/S_AXI_LITE]
+Slave segment '/axi_dma_0/S_AXI_LITE/Reg' is being assigned into address space '/processing_system7_0/Data' at <0x41E0_0000 [ 64K ]>.
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {/processing_system7_0/FCLK_CLK0 (50 MHz)} Clk_xbar {/processing_system7_0/FCLK_CLK0 (50 MHz)} Master {/axi_dma_0/M_AXI_S2MM} Slave {/processing_system7_0/S_AXI_GP0} ddr_seg {Auto} intc_ip {/axi_mem_intercon} master_apm {0}}  [get_bd_intf_pins axi_dma_0/M_AXI_S2MM]
+Slave segment '/processing_system7_0/S_AXI_GP0/GP0_DDR_LOWOCM' is being assigned into address space '/axi_dma_0/Data_S2MM' at <0x0000_0000 [ 512M ]>.
+Slave segment '/processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0' is being assigned into address space '/axi_dma_0/Data_S2MM' at <0x4000_0000 [ 1G ]>.
+WARNING: [BD 41-1051] Slave segment '/processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0' with 'register' usage does not match address space '/axi_dma_0/Data_S2MM' with 'memory' usage so will be excluded from this address space. Please use the 'include_bd_addr_seg' command to override this precaution if required.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
+Slave segment '/axi_bram_ctrl_0/S_AXI/Mem0' is being assigned into address space '/guitar_effects_0/Data_m_axi_gmem' at <0xC000_0000 [ 8K ]>.
+connect_bd_intf_net [get_bd_intf_pins guitar_effects_0/OUTPUT_r] [get_bd_intf_pins axi_dma_0/S_AXIS_S2MM]
+connect_bd_intf_net [get_bd_intf_pins guitar_effects_0/INPUT_r] [get_bd_intf_pins axi_dma_0/M_AXIS_MM2S]
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/EECE4632FinalProject/Wah_coeffs.coe' provided. It will be converted relative to IP Instance files '../../../../../Wah_coeffs.coe'
+startgroup
+set_property -dict [list CONFIG.Memory_Type {Single_Port_ROM} CONFIG.Use_Byte_Write_Enable {false} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/EECE4632FinalProject/Wah_coeffs.coe} CONFIG.Port_A_Write_Rate {0}] [get_bd_cells axi_bram_ctrl_0_bram]
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/EECE4632FinalProject/Wah_coeffs.coe' provided. It will be converted relative to IP Instance files '../../../../../../../Wah_coeffs.coe'
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (50 MHz)} Clk_slave {/processing_system7_0/FCLK_CLK0 (50 MHz)} Clk_xbar {/processing_system7_0/FCLK_CLK0 (50 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/guitar_effects_0/s_axi_control_r} ddr_seg {Auto} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins guitar_effects_0/s_axi_control_r]
+Slave segment '/guitar_effects_0/s_axi_control_r/Reg' is being assigned into address space '/processing_system7_0/Data' at <0x4000_0000 [ 64K ]>.
+delete_bd_objs [get_bd_intf_nets processing_system7_0_M_AXI_GP0] [get_bd_intf_nets axi_mem_intercon_M00_AXI] [get_bd_nets processing_system7_0_FCLK_RESET0_N] [get_bd_cells processing_system7_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0
+endgroup
+set_property location {3 885 -102} [get_bd_cells processing_system7_0]
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+set_property -dict [list CONFIG.PCW_USE_S_AXI_GP0 {1}] [get_bd_cells processing_system7_0]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (50 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins axi_bram_ctrl_0/s_axi_aclk]
+INFO: [BD 5-455] Automation on '/axi_dma_0/m_axi_mm2s_aclk' will not be run, since it is obsolete due to previously run automations
+INFO: [BD 5-455] Automation on '/axi_dma_0/m_axi_s2mm_aclk' will not be run, since it is obsolete due to previously run automations
+INFO: [BD 5-455] Automation on '/axi_dma_0/s_axi_lite_aclk' will not be run, since it is obsolete due to previously run automations
+INFO: [BD 5-455] Automation on '/axi_mem_intercon/ACLK' will not be run, since it is obsolete due to previously run automations
+INFO: [BD 5-455] Automation on '/axi_mem_intercon/S00_ACLK' will not be run, since it is obsolete due to previously run automations
+INFO: [BD 5-455] Automation on '/axi_mem_intercon/S01_ACLK' will not be run, since it is obsolete due to previously run automations
+INFO: [BD 5-455] Automation on '/guitar_effects_0/ap_clk' will not be run, since it is obsolete due to previously run automations
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_dma_0/S_AXI_LITE} ddr_seg {Auto} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins processing_system7_0/M_AXI_GP0]
+Slave segment '/axi_dma_0/S_AXI_LITE/Reg' is being assigned into address space '/processing_system7_0/Data' at <0x41E0_0000 [ 64K ]>.
+Slave segment '/guitar_effects_0/s_axi_control_r/Reg' is being assigned into address space '/processing_system7_0/Data' at <0x4000_0000 [ 64K ]>.
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/axi_dma_0/M_AXI_MM2S} Slave {/processing_system7_0/S_AXI_GP0} ddr_seg {Auto} intc_ip {/axi_mem_intercon} master_apm {0}}  [get_bd_intf_pins processing_system7_0/S_AXI_GP0]
+Slave segment '/processing_system7_0/S_AXI_GP0/GP0_DDR_LOWOCM' is being assigned into address space '/axi_dma_0/Data_MM2S' at <0x0000_0000 [ 512M ]>.
+Slave segment '/processing_system7_0/S_AXI_GP0/GP0_DDR_LOWOCM' is being assigned into address space '/axi_dma_0/Data_S2MM' at <0x0000_0000 [ 512M ]>.
+Slave segment '/processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0' is being assigned into address space '/axi_dma_0/Data_MM2S' at <0x4000_0000 [ 1G ]>.
+WARNING: [BD 41-1051] Slave segment '/processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0' with 'register' usage does not match address space '/axi_dma_0/Data_MM2S' with 'memory' usage so will be excluded from this address space. Please use the 'include_bd_addr_seg' command to override this precaution if required.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
+Slave segment '/processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0' is being assigned into address space '/axi_dma_0/Data_S2MM' at <0x4000_0000 [ 1G ]>.
+WARNING: [BD 41-1051] Slave segment '/processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0' with 'register' usage does not match address space '/axi_dma_0/Data_S2MM' with 'memory' usage so will be excluded from this address space. Please use the 'include_bd_addr_seg' command to override this precaution if required.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
+INFO: [BD 5-455] Automation on '/ps7_0_axi_periph/ACLK' will not be run, since it is obsolete due to previously run automations
+INFO: [BD 5-455] Automation on '/ps7_0_axi_periph/M00_ACLK' will not be run, since it is obsolete due to previously run automations
+INFO: [BD 5-455] Automation on '/ps7_0_axi_periph/M01_ACLK' will not be run, since it is obsolete due to previously run automations
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Manual_Source {Auto}}  [get_bd_pins rst_ps7_0_50M/ext_reset_in]
+INFO: [BD 5-455] Automation on '/rst_ps7_0_50M/slowest_sync_clk' will not be run, since it is obsolete due to previously run automations
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:processing_system7 -config {make_external "FIXED_IO, DDR" apply_board_preset "1" Master "Disable" Slave "Disable" }  [get_bd_cells processing_system7_0]
+apply_bd_automation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2154.215 ; gain = 10.512
+make_wrapper -files [get_files C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd] -top
+WARNING: [BD 41-2670] Found an incomplete address path from address space '/axi_dma_0/Data_MM2S' to master interface '/axi_mem_intercon/M00_AXI'. Please either complete or remove this path to resolve.
+WARNING: [BD 41-2670] Found an incomplete address path from address space '/axi_dma_0/Data_S2MM' to master interface '/axi_mem_intercon/M00_AXI'. Please either complete or remove this path to resolve.
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -addressables -of_objects /processing_system7_0/FCLK_RESET0_N'
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -addressed -of_object /processing_system7_0/FCLK_RESET0_N'
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -addressable -of_object /processing_system7_0/FCLK_RESET0_N'
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -addressing -of_object /processing_system7_0/FCLK_RESET0_N'
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -addressed -of_object /processing_system7_0/FCLK_RESET0_N'
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -addressable -of_object /processing_system7_0/FCLK_RESET0_N'
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -addressing -of_object /processing_system7_0/FCLK_RESET0_N'
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter PCW_M_AXI_GP0_FREQMHZ(10) on '/processing_system7_0' with propagated value(100). Command ignored
+WARNING: [BD 41-2180] Resetting the memory initialization file of </axi_bram_ctrl_0_bram> to default.
+WARNING: [BD 41-2671] The dangling interface net <axi_mem_intercon_M00_AXI> will not be written out to the BD file.
+Wrote  : <C:\EECE4632FinalProject\Vivado_Guitar_Effects\Vivado_Guitar_Effects.srcs\sources_1\bd\guitar_effects_design\guitar_effects_design.bd> 
+Wrote  : <C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/ui/bd_aa970370.ui> 
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_bram_ctrl_0_bram/addra'(32) to pin: '/axi_bram_ctrl_0/bram_addr_a'(13) - Only lower order bits will be connected.
+Verilog Output written to : c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.v
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_bram_ctrl_0_bram/addra'(32) to pin: '/axi_bram_ctrl_0/bram_addr_a'(13) - Only lower order bits will be connected.
+Verilog Output written to : c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/sim/guitar_effects_design.v
+Verilog Output written to : c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/hdl/guitar_effects_design_wrapper.v
+make_wrapper: Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 2385.727 ; gain = 230.891
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+INFO: [BD 41-1662] The design 'guitar_effects_design.bd' is already validated. Therefore parameter propagation will not be re-run.
+Wrote  : <C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/ui/bd_aa970370.ui> 
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_bram_ctrl_0_bram/addra'(32) to pin: '/axi_bram_ctrl_0/bram_addr_a'(13) - Only lower order bits will be connected.
+Verilog Output written to : c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.v
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_bram_ctrl_0_bram/addra'(32) to pin: '/axi_bram_ctrl_0/bram_addr_a'(13) - Only lower order bits will be connected.
+Verilog Output written to : c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/sim/guitar_effects_design.v
+Verilog Output written to : c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/hdl/guitar_effects_design_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block guitar_effects_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_bram_ctrl_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_bram_ctrl_0_bram .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_dma_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_auto_pc_5/guitar_effects_design_auto_pc_5_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI_GP0'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+Exporting to file c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/hw_handoff/guitar_effects_design.hwh
+Generated Hardware Definition File c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP guitar_effects_design_auto_pc_5, cache-ID = 42ad08fd9091ea99; cache size = 196.210 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP guitar_effects_design_axi_bram_ctrl_0_1, cache-ID = 7cb5328a4fdc9619; cache size = 196.210 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP guitar_effects_design_axi_bram_ctrl_0_bram_1, cache-ID = 6cb2c9a5744d56d7; cache size = 196.210 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP guitar_effects_design_axi_dma_0_1, cache-ID = f9dc6c273f19ea32; cache size = 196.210 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP guitar_effects_design_rst_ps7_0_50M_0, cache-ID = 3e769be0b73e4f4b; cache size = 196.210 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP guitar_effects_design_xbar_5, cache-ID = 632d8c05f28de8bb; cache size = 196.210 MB.
+[Thu Apr 11 18:32:49 2024] Launched guitar_effects_design_processing_system7_0_3_synth_1, guitar_effects_design_xbar_4_synth_1, guitar_effects_design_guitar_effects_0_25_synth_1, synth_1...
+Run output will be captured here:
+guitar_effects_design_processing_system7_0_3_synth_1: C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/guitar_effects_design_processing_system7_0_3_synth_1/runme.log
+guitar_effects_design_xbar_4_synth_1: C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/guitar_effects_design_xbar_4_synth_1/runme.log
+guitar_effects_design_guitar_effects_0_25_synth_1: C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/guitar_effects_design_guitar_effects_0_25_synth_1/runme.log
+synth_1: C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1/runme.log
+[Thu Apr 11 18:32:50 2024] Launched impl_1...
+Run output will be captured here: C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:21 ; elapsed = 00:00:26 . Memory (MB): peak = 2429.422 ; gain = 43.695
+open_run impl_1
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.692 . Memory (MB): peak = 2622.656 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 2649 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2022.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF Files: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 3451.695 ; gain = 27.531
+Restored from archive | CPU: 2.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 3451.695 ; gain = 27.531
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 3451.695 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 4 instances were transformed.
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 2 instances
+  SRLC32E => SRL16E: 2 instances
+
+open_run: Time (s): cpu = 00:00:28 ; elapsed = 00:00:19 . Memory (MB): peak = 3674.793 ; gain = 1239.383
+open_report: Time (s): cpu = 00:00:24 ; elapsed = 00:00:12 . Memory (MB): peak = 3802.660 ; gain = 113.719
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
+open_bd_design {C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd}
+make_wrapper -files [get_files C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd] -top
+make_wrapper -files [get_files C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd] -top
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Apr 11 18:46:55 2024...

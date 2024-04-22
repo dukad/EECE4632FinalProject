@@ -15,7 +15,7 @@
         <PipelineType>no</PipelineType>
         <SummaryOfTimingAnalysis>
             <unit>ns</unit>
-            <EstimatedClockPeriod>0.000</EstimatedClockPeriod>
+            <EstimatedClockPeriod>14.600</EstimatedClockPeriod>
         </SummaryOfTimingAnalysis>
         <SummaryOfOverallLatency>
             <unit>clock cycles</unit>
@@ -29,21 +29,21 @@
             <Interval-max>undef</Interval-max>
         </SummaryOfOverallLatency>
         <SummaryOfLoopLatency>
-            <VITIS_LOOP_26_1>
-                <TripCount>inf</TripCount>
+            <VITIS_LOOP_24_1>
+                <TripCount>undef</TripCount>
                 <Latency>undef</Latency>
                 <AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
-                <IterationLatency>1</IterationLatency>
+                <IterationLatency>undef</IterationLatency>
                 <InstanceList/>
-            </VITIS_LOOP_26_1>
+            </VITIS_LOOP_24_1>
         </SummaryOfLoopLatency>
     </PerformanceEstimates>
     <AreaEstimates>
         <Resources>
             <BRAM_18K>0</BRAM_18K>
-            <FF>102</FF>
-            <LUT>191</LUT>
-            <DSP>0</DSP>
+            <DSP>99</DSP>
+            <FF>4175</FF>
+            <LUT>4279</LUT>
             <URAM>0</URAM>
         </Resources>
         <AvailableResources>
@@ -806,31 +806,19 @@
         </RtlPorts>
         <RtlPorts>
             <name>output_r_TDATA</name>
-            <Object>output_r</Object>
+            <Object>output_r_V_data_V</Object>
             <Type>pointer</Type>
             <Scope/>
             <IOProtocol>axis</IOProtocol>
             <IOConfig>register, both mode</IOConfig>
-            <Dir>in</Dir>
-            <Bits>96</Bits>
+            <Dir>out</Dir>
+            <Bits>32</Bits>
             <Attribute>data</Attribute>
             <CType>int</CType>
         </RtlPorts>
         <RtlPorts>
             <name>output_r_TVALID</name>
-            <Object>output_r</Object>
-            <Type>pointer</Type>
-            <Scope/>
-            <IOProtocol>axis</IOProtocol>
-            <IOConfig>register, both mode</IOConfig>
-            <Dir>in</Dir>
-            <Bits>1</Bits>
-            <Attribute>control</Attribute>
-            <CType>int</CType>
-        </RtlPorts>
-        <RtlPorts>
-            <name>output_r_TREADY</name>
-            <Object>output_r</Object>
+            <Object>output_r_V_dest_V</Object>
             <Type>pointer</Type>
             <Scope/>
             <IOProtocol>axis</IOProtocol>
@@ -838,6 +826,90 @@
             <Dir>out</Dir>
             <Bits>1</Bits>
             <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>output_r_TREADY</name>
+            <Object>output_r_V_dest_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>output_r_TDEST</name>
+            <Object>output_r_V_dest_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>output_r_TKEEP</name>
+            <Object>output_r_V_keep_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>4</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>output_r_TSTRB</name>
+            <Object>output_r_V_strb_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>4</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>output_r_TUSER</name>
+            <Object>output_r_V_user_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>output_r_TLAST</name>
+            <Object>output_r_V_last_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>output_r_TID</name>
+            <Object>output_r_V_id_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
             <CType>int</CType>
         </RtlPorts>
         <RtlPorts>
@@ -950,21 +1022,31 @@
         </RtlPorts>
     </InterfaceSummary>
     <RTLDesignHierarchy>
-        <TopModule MAX_DEPTH="1">
+        <TopModule MAX_DEPTH="3">
             <ModuleName>equalizer</ModuleName>
+            <InstancesList>
+                <Instance>
+                    <InstName>grp_equalizer_Pipeline_VITIS_LOOP_56_2_fu_258</InstName>
+                    <ModuleName>equalizer_Pipeline_VITIS_LOOP_56_2</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>258</ID>
+                    <BindInstances>add_ln63_fu_206_p2 add_ln66_fu_239_p2</BindInstances>
+                </Instance>
+            </InstancesList>
+            <BindInstances>mul_32s_32s_32_1_1_U46 mul_32s_32s_32_1_1_U45 mul_32s_32s_32_1_1_U44 mul_32s_32s_32_1_1_U42 mul_32s_32s_32_1_1_U43 mul_32s_32s_32_1_1_U41 mul_32s_32s_32_1_1_U40 mul_32s_32s_32_1_1_U39 mul_32s_32s_32_1_1_U38 mul_32s_32s_32_1_1_U37 mul_32s_32s_32_1_1_U36 mul_32s_32s_32_1_1_U34 mul_32s_32s_32_1_1_U35 mul_32s_32s_32_1_1_U33 mul_32s_32s_32_1_1_U32 mul_32s_32s_32_1_1_U30 mul_32s_32s_32_1_1_U31 mul_32s_32s_32_1_1_U29 mul_32s_32s_32_1_1_U28 mul_32s_32s_32_1_1_U26 mul_32s_32s_32_1_1_U27 mul_32s_32s_32_1_1_U24 mul_32s_32s_32_1_1_U25 mul_32s_32s_32_1_1_U23 mul_32s_32s_32_1_1_U22 mul_32s_32s_32_1_1_U20 mul_32s_32s_32_1_1_U21 mul_32s_32s_32_1_1_U19 mul_32s_32s_32_1_1_U18 mul_32s_32s_32_1_1_U15 mul_32s_32s_32_1_1_U16 mul_32s_32s_32_1_1_U17 mul_32s_32s_32_1_1_U14 add_ln82_fu_1014_p2 add_ln82_1_fu_994_p2 add_ln82_4_fu_929_p2 add_ln82_7_fu_887_p2 add_ln82_8_fu_852_p2 add_ln82_11_fu_778_p2 add_ln82_16_fu_695_p2 add_ln82_19_fu_620_p2 add_ln82_22_fu_576_p2 add_ln82_23_fu_542_p2 add_ln33_fu_367_p2 i_3_fu_1044_p2</BindInstances>
         </TopModule>
     </RTLDesignHierarchy>
     <ModuleInformation>
         <Module>
-            <Name>equalizer</Name>
+            <Name>equalizer_Pipeline_VITIS_LOOP_56_2</Name>
             <Loops>
-                <VITIS_LOOP_26_1/>
+                <VITIS_LOOP_56_2/>
             </Loops>
             <PerformanceEstimates>
                 <SummaryOfTimingAnalysis>
                     <TargetClockPeriod>20.00</TargetClockPeriod>
                     <ClockUncertainty>5.40</ClockUncertainty>
-                    <EstimatedClockPeriod>0.000</EstimatedClockPeriod>
+                    <EstimatedClockPeriod>14.600</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
                     <Best-caseLatency>undef</Best-caseLatency>
@@ -977,29 +1059,29 @@
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
-                    <VITIS_LOOP_26_1>
-                        <Name>VITIS_LOOP_26_1</Name>
-                        <TripCount>inf</TripCount>
+                    <VITIS_LOOP_56_2>
+                        <Name>VITIS_LOOP_56_2</Name>
+                        <TripCount>undef</TripCount>
                         <Latency>undef</Latency>
                         <AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
-                        <IterationLatency>1</IterationLatency>
-                        <PipelineDepth>1</PipelineDepth>
-                        <PipelineType>no</PipelineType>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>8</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
                         <InstanceList/>
-                    </VITIS_LOOP_26_1>
+                    </VITIS_LOOP_56_2>
                 </SummaryOfLoopLatency>
             </PerformanceEstimates>
             <AreaEstimates>
                 <Resources>
+                    <FF>371</FF>
+                    <AVAIL_FF>106400</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>337</LUT>
+                    <AVAIL_LUT>53200</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
                     <AVAIL_BRAM>280</AVAIL_BRAM>
                     <UTIL_BRAM>0</UTIL_BRAM>
-                    <FF>102</FF>
-                    <AVAIL_FF>106400</AVAIL_FF>
-                    <UTIL_FF>~0</UTIL_FF>
-                    <LUT>191</LUT>
-                    <AVAIL_LUT>53200</AVAIL_LUT>
-                    <UTIL_LUT>~0</UTIL_LUT>
                     <DSP>0</DSP>
                     <AVAIL_DSP>220</AVAIL_DSP>
                     <UTIL_DSP>0</UTIL_DSP>
@@ -1008,6 +1090,113 @@
                     <UTIL_URAM>0</UTIL_URAM>
                 </Resources>
             </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_56_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln63_fu_206_p2" SOURCE="equalizer.cpp:63" URAM="0" VARIABLE="add_ln63"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_56_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln66_fu_239_p2" SOURCE="equalizer.cpp:66" URAM="0" VARIABLE="add_ln66"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>equalizer</Name>
+            <Loops>
+                <VITIS_LOOP_24_1/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>20.00</TargetClockPeriod>
+                    <ClockUncertainty>5.40</ClockUncertainty>
+                    <EstimatedClockPeriod>14.600</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>undef</Best-caseLatency>
+                    <Average-caseLatency>undef</Average-caseLatency>
+                    <Worst-caseLatency>undef</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>undef</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_24_1>
+                        <Name>VITIS_LOOP_24_1</Name>
+                        <TripCount>undef</TripCount>
+                        <Latency>undef</Latency>
+                        <AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
+                        <IterationLatency>undef</IterationLatency>
+                        <PipelineDepth>undef</PipelineDepth>
+                        <PipelineType>no</PipelineType>
+                        <InstanceList>
+                            <Instance>grp_equalizer_Pipeline_VITIS_LOOP_56_2_fu_258</Instance>
+                        </InstanceList>
+                    </VITIS_LOOP_24_1>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>280</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>99</DSP>
+                    <AVAIL_DSP>220</AVAIL_DSP>
+                    <UTIL_DSP>45</UTIL_DSP>
+                    <FF>4175</FF>
+                    <AVAIL_FF>106400</AVAIL_FF>
+                    <UTIL_FF>3</UTIL_FF>
+                    <LUT>4279</LUT>
+                    <AVAIL_LUT>53200</AVAIL_LUT>
+                    <UTIL_LUT>8</UTIL_LUT>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_24_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U46" SOURCE="equalizer.cpp:79" URAM="0" VARIABLE="accumulate"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_24_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U45" SOURCE="equalizer.cpp:79" URAM="0" VARIABLE="mul_ln79"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_24_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U44" SOURCE="equalizer.cpp:79" URAM="0" VARIABLE="mul_ln79_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_24_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U42" SOURCE="equalizer.cpp:79" URAM="0" VARIABLE="mul_ln79_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_24_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U43" SOURCE="equalizer.cpp:79" URAM="0" VARIABLE="mul_ln79_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_24_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U41" SOURCE="equalizer.cpp:79" URAM="0" VARIABLE="mul_ln79_4"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_24_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U40" SOURCE="equalizer.cpp:79" URAM="0" VARIABLE="mul_ln79_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_24_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U39" SOURCE="equalizer.cpp:79" URAM="0" VARIABLE="mul_ln79_6"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_24_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U38" SOURCE="equalizer.cpp:79" URAM="0" VARIABLE="mul_ln79_7"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_24_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U37" SOURCE="equalizer.cpp:79" URAM="0" VARIABLE="mul_ln79_8"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_24_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U36" SOURCE="equalizer.cpp:79" URAM="0" VARIABLE="mul_ln79_9"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_24_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U34" SOURCE="equalizer.cpp:79" URAM="0" VARIABLE="mul_ln79_10"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_24_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U35" SOURCE="equalizer.cpp:79" URAM="0" VARIABLE="mul_ln79_11"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_24_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U33" SOURCE="equalizer.cpp:79" URAM="0" VARIABLE="mul_ln79_12"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_24_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U32" SOURCE="equalizer.cpp:79" URAM="0" VARIABLE="mul_ln79_13"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_24_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U30" SOURCE="equalizer.cpp:79" URAM="0" VARIABLE="mul_ln79_14"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_24_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U31" SOURCE="equalizer.cpp:79" URAM="0" VARIABLE="mul_ln79_15"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_24_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U29" SOURCE="equalizer.cpp:79" URAM="0" VARIABLE="mul_ln79_16"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_24_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U28" SOURCE="equalizer.cpp:79" URAM="0" VARIABLE="mul_ln79_17"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_24_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U26" SOURCE="equalizer.cpp:79" URAM="0" VARIABLE="mul_ln79_18"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_24_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U27" SOURCE="equalizer.cpp:79" URAM="0" VARIABLE="mul_ln79_19"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_24_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U24" SOURCE="equalizer.cpp:79" URAM="0" VARIABLE="mul_ln79_20"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_24_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U25" SOURCE="equalizer.cpp:79" URAM="0" VARIABLE="mul_ln79_21"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_24_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U23" SOURCE="equalizer.cpp:79" URAM="0" VARIABLE="mul_ln79_22"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_24_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U22" SOURCE="equalizer.cpp:79" URAM="0" VARIABLE="mul_ln79_23"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_24_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U20" SOURCE="equalizer.cpp:79" URAM="0" VARIABLE="mul_ln79_24"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_24_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U21" SOURCE="equalizer.cpp:79" URAM="0" VARIABLE="mul_ln79_25"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_24_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U19" SOURCE="equalizer.cpp:79" URAM="0" VARIABLE="mul_ln79_26"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_24_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U18" SOURCE="equalizer.cpp:79" URAM="0" VARIABLE="mul_ln79_27"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_24_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U15" SOURCE="equalizer.cpp:79" URAM="0" VARIABLE="mul_ln79_28"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_24_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U16" SOURCE="equalizer.cpp:79" URAM="0" VARIABLE="mul_ln79_29"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_24_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U17" SOURCE="equalizer.cpp:79" URAM="0" VARIABLE="mul_ln79_30"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_24_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U14" SOURCE="equalizer.cpp:82" URAM="0" VARIABLE="mul_ln82"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_24_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln82_fu_1014_p2" SOURCE="equalizer.cpp:82" URAM="0" VARIABLE="add_ln82"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_24_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln82_1_fu_994_p2" SOURCE="equalizer.cpp:82" URAM="0" VARIABLE="add_ln82_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_24_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln82_4_fu_929_p2" SOURCE="equalizer.cpp:82" URAM="0" VARIABLE="add_ln82_4"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_24_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln82_7_fu_887_p2" SOURCE="equalizer.cpp:82" URAM="0" VARIABLE="add_ln82_7"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_24_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln82_8_fu_852_p2" SOURCE="equalizer.cpp:82" URAM="0" VARIABLE="add_ln82_8"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_24_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln82_11_fu_778_p2" SOURCE="equalizer.cpp:82" URAM="0" VARIABLE="add_ln82_11"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_24_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln82_16_fu_695_p2" SOURCE="equalizer.cpp:82" URAM="0" VARIABLE="add_ln82_16"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_24_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln82_19_fu_620_p2" SOURCE="equalizer.cpp:82" URAM="0" VARIABLE="add_ln82_19"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_24_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln82_22_fu_576_p2" SOURCE="equalizer.cpp:82" URAM="0" VARIABLE="add_ln82_22"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_24_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln82_23_fu_542_p2" SOURCE="equalizer.cpp:82" URAM="0" VARIABLE="add_ln82_23"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_24_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln33_fu_367_p2" SOURCE="equalizer.cpp:33" URAM="0" VARIABLE="add_ln33"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_24_1" OPTYPE="add" PRAGMA="" RTLNAME="i_3_fu_1044_p2" SOURCE="equalizer.cpp:98" URAM="0" VARIABLE="i_3"/>
+            </BindNodes>
         </Module>
     </ModuleInformation>
     <FIFOInformation/>
@@ -1046,17 +1235,16 @@
         <config_storage>
             <ENTRY auto_srl_max_bits="1024 fifo" auto_srl_max_depth="2 fifo" impl="autosrl fifo" type="fifo"/>
         </config_storage>
-        <config_compile pipeline_loops="0"/>
     </UserConfigCommands>
     <Args>
-        <Arg ArgName="output" index="0" direction="unused" srcType="stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 1, 1, 1&gt;, 0&gt;&amp;" srcSize="96">
+        <Arg ArgName="output" index="0" direction="out" srcType="stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 1, 1, 1&gt;, 0&gt;&amp;" srcSize="96">
             <hwRefs>
-                <hwRef type="interface" interface="output_r" name="" usage="data" direction="unused"/>
+                <hwRef type="interface" interface="output_r" name="" usage="data" direction="out"/>
             </hwRefs>
         </Arg>
-        <Arg ArgName="coefs" index="1" direction="unused" srcType="int*" srcSize="32">
+        <Arg ArgName="coefs" index="1" direction="inout" srcType="int*" srcSize="32">
             <hwRefs>
-                <hwRef type="interface" interface="m_axi_gmem" name="" usage="data" direction="unused"/>
+                <hwRef type="interface" interface="m_axi_gmem" name="" usage="data" direction="inout"/>
                 <hwRef type="register" interface="s_axi_control" name="coefs_1" usage="address" direction="in"/>
                 <hwRef type="register" interface="s_axi_control" name="coefs_2" usage="address" direction="in"/>
             </hwRefs>
@@ -1135,7 +1323,7 @@
                 <busParam busParamName="MAX_WRITE_BURST_LENGTH">16</busParam>
                 <busParam busParamName="MAX_BURST_LENGTH">256</busParam>
                 <busParam busParamName="PROTOCOL">AXI4</busParam>
-                <busParam busParamName="READ_WRITE_MODE">READ_ONLY</busParam>
+                <busParam busParamName="READ_WRITE_MODE">READ_WRITE</busParam>
                 <busParam busParamName="HAS_BURST">0</busParam>
                 <busParam busParamName="SUPPORTS_NARROW_BURST">0</busParam>
             </busParams>
@@ -1191,10 +1379,16 @@
                 <constraint constraint_type="bitwidth" orig_bitwidth="32" final_bitwidth="32" argName="coefs"/>
             </constraints>
         </Interface>
-        <Interface InterfaceName="output_r" type="axi4stream" busTypeName="axis" mode="slave" dataWidth="96" portPrefix="output_r_">
+        <Interface InterfaceName="output_r" type="axi4stream" busTypeName="axis" mode="master" dataWidth="32" portPrefix="output_r_">
             <ports>
                 <port>output_r_TDATA</port>
+                <port>output_r_TDEST</port>
+                <port>output_r_TID</port>
+                <port>output_r_TKEEP</port>
+                <port>output_r_TLAST</port>
                 <port>output_r_TREADY</port>
+                <port>output_r_TSTRB</port>
+                <port>output_r_TUSER</port>
                 <port>output_r_TVALID</port>
             </ports>
             <constraints>
@@ -1243,7 +1437,7 @@
                 <table isCollapsed="0">
                     <keys size="11">Interface, Register Mode, TDATA, TDEST, TID, TKEEP, TLAST, TREADY, TSTRB, TUSER, TVALID</keys>
                     <column name="input_r">both, 32, 1, 1, 4, 1, 1, 4, 1, 1, </column>
-                    <column name="output_r">both, 96, , , , , 1, , , 1, </column>
+                    <column name="output_r">both, 32, 1, 1, 4, 1, 1, 4, 1, 1, </column>
                 </table>
             </item>
             <item name="TOP LEVEL CONTROL">
@@ -1261,8 +1455,8 @@
             <item name="Top Function Arguments">
                 <table isCollapsed="1">
                     <keys size="3">Argument, Direction, Datatype</keys>
-                    <column name="output">unused, stream&lt;hls::axis&lt;ap_int&lt;32&gt; 1 1 1&gt; 0&gt;&amp;</column>
-                    <column name="coefs">unused, int*</column>
+                    <column name="output">out, stream&lt;hls::axis&lt;ap_int&lt;32&gt; 1 1 1&gt; 0&gt;&amp;</column>
+                    <column name="coefs">inout, int*</column>
                     <column name="input">in, stream&lt;hls::axis&lt;ap_int&lt;32&gt; 1 1 1&gt; 0&gt;&amp;</column>
                 </table>
             </item>
@@ -1278,11 +1472,28 @@
             </item>
         </section>
     </ReportSWInterface>
+    <ReportBurst>
+        <section name="M_AXI Burst Information" level="0" HEADER_NOTE="Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.">
+            <item name="Inferred Burst Summary">
+                <table>
+                    <keys size="5">HW Interface, Direction, Length, Width, Location</keys>
+                    <column name="m_axi_gmem">read, 33, 32, equalizer.cpp:79:42</column>
+                </table>
+            </item>
+            <item name="Inferred Bursts and Widening Missed">
+                <table>
+                    <keys size="5">HW Interface, Variable, Problem, Resolution, Location</keys>
+                    <column name="m_axi_gmem">coefs, Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0, 214-353, equalizer.cpp:79:42</column>
+                </table>
+            </item>
+        </section>
+    </ReportBurst>
     <PragmaReport>
         <Pragma type="interface" location="equalizer.cpp:4" status="valid" parentFunction="equalizer" variable="coefs" isDirective="0" options="m_axi depth=99 port=coefs"/>
         <Pragma type="interface" location="equalizer.cpp:5" status="valid" parentFunction="equalizer" variable="input" isDirective="0" options="axis register both port=input"/>
         <Pragma type="interface" location="equalizer.cpp:6" status="valid" parentFunction="equalizer" variable="output" isDirective="0" options="axis register both port=output"/>
         <Pragma type="interface" location="equalizer.cpp:7" status="valid" parentFunction="equalizer" variable="return" isDirective="0" options="ap_ctrl_none port=return"/>
+        <Pragma type="unroll" location="equalizer.cpp:77" status="valid" parentFunction="equalizer" variable="" isDirective="0" options=""/>
     </PragmaReport>
 </profile>
 
