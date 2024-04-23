@@ -2797,3 +2797,43 @@ dismissDialog("Generate Bitstream"); // bA
 // TclEventType: RUN_STATUS_CHANGE
 // TclEventType: RUN_STEP_COMPLETED
 // TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// HMemoryUtils.trashcanNow. Engine heap size: 3,276 MB. GUI used memory: 195 MB. Current time: 4/23/24, 3:54:14 PM EDT
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 419 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Run Command: PAResourceCommand.PACommandNames_REPORTS_WINDOW
+dismissDialog("Bitstream Generation Completed"); // ag
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// Elapsed time: 99 seconds
+dismissDialog("Re-customize IP"); // r
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// Elapsed time: 285 seconds
+setText("Address Width (32-64)", "32"); // B
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Re-customize IP"); // r
+// Tcl Message: startgroup 
+// Tcl Message: endgroup 
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// Elapsed time: 236 seconds
+dismissDialog("Re-customize IP"); // N
+dismissDialog("Re-customize IP"); // r
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// Elapsed time: 15 seconds
+dismissDialog("Re-customize IP"); // N
+// Elapsed time: 59 seconds
+selectButton("PS-PL Configuration", "PS-PL Configuration"); // j
+selectButton("Peripheral I/O Pins", "Peripheral I/O Pins"); // j
+selectButton("MIO Configuration", "MIO Configuration"); // j
+selectButton("Clock Configuration", "Clock Configuration"); // j
+selectButton("DDR Configuration", "DDR Configuration"); // j
+selectButton("SMC Timing Calculation", "SMC Timing Calculation"); // j
+selectButton("Interrupts", "Interrupts"); // j
+// [GUI Memory]: 278 MB (+8154kb) [05:17:33]
+selectButton("Zynq Block Design", "Zynq Block Design"); // j
+dismissDialog("Re-customize IP"); // r
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// [GUI Memory]: 309 MB (+18450kb) [05:17:37]
+dismissDialog("Re-customize IP"); // r
