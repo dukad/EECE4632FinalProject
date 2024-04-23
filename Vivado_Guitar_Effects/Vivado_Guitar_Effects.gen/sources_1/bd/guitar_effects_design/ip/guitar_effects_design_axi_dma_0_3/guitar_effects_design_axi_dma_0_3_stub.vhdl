@@ -1,11 +1,11 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
--- Date        : Thu Apr 11 21:33:30 2024
--- Host        : WFXA4BB6DB88619 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub -rename_top guitar_effects_design_axi_dma_0_3 -prefix
---               guitar_effects_design_axi_dma_0_3_ equalizer_axi_dma_0_0_stub.vhdl
--- Design      : equalizer_axi_dma_0_0
+-- Date        : Tue Apr 23 15:49:44 2024
+-- Host        : WFXB07B250A366D running 64-bit major release  (build 9200)
+-- Command     : write_vhdl -force -mode synth_stub
+--               c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_axi_dma_0_3/guitar_effects_design_axi_dma_0_3_stub.vhdl
+-- Design      : guitar_effects_design_axi_dma_0_3
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg400-1
 -- --------------------------------------------------------------------------------

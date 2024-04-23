@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-//Date        : Mon Apr 22 17:37:29 2024
+//Date        : Tue Apr 23 14:02:18 2024
 //Host        : WFXB07B250A366D running 64-bit major release  (build 9200)
 //Command     : generate_target guitar_effects_design.bd
 //Design      : guitar_effects_design
@@ -492,10 +492,10 @@ module guitar_effects_design
         .m_axi_gmem_WREADY(guitar_effects_0_m_axi_gmem_WREADY),
         .m_axi_gmem_WSTRB(guitar_effects_0_m_axi_gmem_WSTRB),
         .m_axi_gmem_WVALID(guitar_effects_0_m_axi_gmem_WVALID),
-        .s_axi_control_r_ARADDR(ps7_0_axi_periph_M01_AXI_ARADDR[6:0]),
+        .s_axi_control_r_ARADDR(ps7_0_axi_periph_M01_AXI_ARADDR[7:0]),
         .s_axi_control_r_ARREADY(ps7_0_axi_periph_M01_AXI_ARREADY),
         .s_axi_control_r_ARVALID(ps7_0_axi_periph_M01_AXI_ARVALID),
-        .s_axi_control_r_AWADDR(ps7_0_axi_periph_M01_AXI_AWADDR[6:0]),
+        .s_axi_control_r_AWADDR(ps7_0_axi_periph_M01_AXI_AWADDR[7:0]),
         .s_axi_control_r_AWREADY(ps7_0_axi_periph_M01_AXI_AWREADY),
         .s_axi_control_r_AWVALID(ps7_0_axi_periph_M01_AXI_AWVALID),
         .s_axi_control_r_BREADY(ps7_0_axi_periph_M01_AXI_BREADY),

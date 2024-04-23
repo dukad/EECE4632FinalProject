@@ -29,92 +29,6 @@
 -makelib xcelium_lib/xil_defaultlib \
   "../../../bd/guitar_effects_design/ip/guitar_effects_design_processing_system7_0_5/sim/guitar_effects_design_processing_system7_0_5.v" \
 -endlib
--makelib xcelium_lib/xbip_utils_v3_0_10 \
-  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/364f/hdl/xbip_utils_v3_0_vh_rfs.vhd" \
--endlib
--makelib xcelium_lib/axi_utils_v2_0_6 \
-  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/1971/hdl/axi_utils_v2_0_vh_rfs.vhd" \
--endlib
--makelib xcelium_lib/xbip_pipe_v3_0_6 \
-  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd" \
--endlib
--makelib xcelium_lib/xbip_dsp48_wrapper_v3_0_4 \
-  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/cdbf/hdl/xbip_dsp48_wrapper_v3_0_vh_rfs.vhd" \
--endlib
--makelib xcelium_lib/xbip_dsp48_addsub_v3_0_6 \
-  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/910d/hdl/xbip_dsp48_addsub_v3_0_vh_rfs.vhd" \
--endlib
--makelib xcelium_lib/xbip_dsp48_multadd_v3_0_6 \
-  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/b0ac/hdl/xbip_dsp48_multadd_v3_0_vh_rfs.vhd" \
--endlib
--makelib xcelium_lib/xbip_bram18k_v3_0_6 \
-  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/d367/hdl/xbip_bram18k_v3_0_vh_rfs.vhd" \
--endlib
--makelib xcelium_lib/mult_gen_v12_0_18 \
-  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/ab19/hdl/mult_gen_v12_0_vh_rfs.vhd" \
--endlib
--makelib xcelium_lib/floating_point_v7_1_14 \
-  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/342a/hdl/floating_point_v7_1_rfs.vhd" \
--endlib
--makelib xcelium_lib/floating_point_v7_1_14 \
-  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/342a/hdl/floating_point_v7_1_rfs.v" \
--endlib
--makelib xcelium_lib/xil_defaultlib \
-  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/be63/hdl/verilog/guitar_effects_compression_buffer_RAM_AUTO_1R1W.v" \
-  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/be63/hdl/verilog/guitar_effects_control_r_s_axi.v" \
-  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/be63/hdl/verilog/guitar_effects_dadd_64ns_64ns_64_7_full_dsp_1.v" \
-  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/be63/hdl/verilog/guitar_effects_ddiv_64ns_64ns_64_59_no_dsp_1.v" \
-  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/be63/hdl/verilog/guitar_effects_delay_buffer_RAM_AUTO_1R1W.v" \
-  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/be63/hdl/verilog/guitar_effects_dmul_64ns_64ns_64_7_max_dsp_1.v" \
-  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/be63/hdl/verilog/guitar_effects_fadd_32ns_32ns_32_5_full_dsp_1.v" \
-  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/be63/hdl/verilog/guitar_effects_fdiv_32ns_32ns_32_16_no_dsp_1.v" \
-  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/be63/hdl/verilog/guitar_effects_flow_control_loop_pipe_sequential_init.v" \
-  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/be63/hdl/verilog/guitar_effects_fmul_32ns_32ns_32_4_max_dsp_1.v" \
-  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/be63/hdl/verilog/guitar_effects_gmem_m_axi.v" \
-  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/be63/hdl/verilog/guitar_effects_guitar_effects_Pipeline_LPF_Loop.v" \
-  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/be63/hdl/verilog/guitar_effects_guitar_effects_Pipeline_LPF_Loop_lpf_coefficients_ROM_AUTO_1R.v" \
-  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/be63/hdl/verilog/guitar_effects_hls_deadlock_idx0_monitor.v" \
-  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/be63/hdl/verilog/guitar_effects_mul_32s_8s_40_2_1.v" \
-  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/be63/hdl/verilog/guitar_effects_mul_32s_10ns_42_2_1.v" \
-  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/be63/hdl/verilog/guitar_effects_mul_32s_32s_64_2_1.v" \
-  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/be63/hdl/verilog/guitar_effects_mul_35ns_25ns_60_2_1.v" \
-  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/be63/hdl/verilog/guitar_effects_mul_42ns_33ns_75_2_1.v" \
-  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/be63/hdl/verilog/guitar_effects_mul_49ns_44s_93_5_1.v" \
-  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/be63/hdl/verilog/guitar_effects_mul_49ns_49ns_98_5_1.v" \
-  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/be63/hdl/verilog/guitar_effects_mul_56ns_52s_108_5_1.v" \
-  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/be63/hdl/verilog/guitar_effects_mul_64s_63ns_126_5_1.v" \
-  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/be63/hdl/verilog/guitar_effects_mul_170s_53ns_170_5_1.v" \
-  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/be63/hdl/verilog/guitar_effects_mux_42_32_1_1.v" \
-  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/be63/hdl/verilog/guitar_effects_mux_83_1_1_1.v" \
-  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/be63/hdl/verilog/guitar_effects_mux_164_1_1_1.v" \
-  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/be63/hdl/verilog/guitar_effects_regslice_both.v" \
-  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/be63/hdl/verilog/guitar_effects_sin_or_cos_double_s.v" \
-  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/be63/hdl/verilog/guitar_effects_sin_or_cos_double_s_fourth_order_double_sin_cos_K0_V_ROM_1P_LUTRAM_1R.v" \
-  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/be63/hdl/verilog/guitar_effects_sin_or_cos_double_s_fourth_order_double_sin_cos_K1_V_ROM_1P_LUTRAM_1R.v" \
-  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/be63/hdl/verilog/guitar_effects_sin_or_cos_double_s_fourth_order_double_sin_cos_K2_V_ROM_1P_LUTRAM_1R.v" \
-  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/be63/hdl/verilog/guitar_effects_sin_or_cos_double_s_fourth_order_double_sin_cos_K3_V_ROM_1P_LUTRAM_1R.v" \
-  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/be63/hdl/verilog/guitar_effects_sin_or_cos_double_s_fourth_order_double_sin_cos_K4_V_ROM_1P_LUTRAM_1R.v" \
-  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/be63/hdl/verilog/guitar_effects_sin_or_cos_double_s_ref_4oPi_table_256_V_ROM_AUTO_1R.v" \
-  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/be63/hdl/verilog/guitar_effects_sitodp_32ns_64_6_no_dsp_1.v" \
-  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/be63/hdl/verilog/guitar_effects_sitofp_32ns_32_6_no_dsp_1.v" \
-  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/be63/hdl/verilog/guitar_effects_srem_9ns_8ns_7_13_seq_1.v" \
-  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/be63/hdl/verilog/guitar_effects_srem_11ns_10ns_9_15_1.v" \
-  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/be63/hdl/verilog/guitar_effects_srem_32ns_8ns_32_36_seq_1.v" \
-  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/be63/hdl/verilog/guitar_effects_srem_32ns_10ns_32_36_seq_1.v" \
-  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/be63/hdl/verilog/guitar_effects_srem_32ns_18ns_17_36_seq_1.v" \
-  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/be63/hdl/verilog/guitar_effects_srem_32ns_18ns_32_36_seq_1.v" \
-  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/be63/hdl/verilog/guitar_effects_wah_values_buffer_RAM_AUTO_1R1W.v" \
-  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/be63/hdl/verilog/guitar_effects.v" \
-  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/be63/hdl/ip/guitar_effects_dadd_64ns_64ns_64_7_full_dsp_1_ip.v" \
-  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/be63/hdl/ip/guitar_effects_ddiv_64ns_64ns_64_59_no_dsp_1_ip.v" \
-  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/be63/hdl/ip/guitar_effects_dmul_64ns_64ns_64_7_max_dsp_1_ip.v" \
-  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/be63/hdl/ip/guitar_effects_fadd_32ns_32ns_32_5_full_dsp_1_ip.v" \
-  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/be63/hdl/ip/guitar_effects_fdiv_32ns_32ns_32_16_no_dsp_1_ip.v" \
-  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/be63/hdl/ip/guitar_effects_fmul_32ns_32ns_32_4_max_dsp_1_ip.v" \
-  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/be63/hdl/ip/guitar_effects_sitodp_32ns_64_6_no_dsp_1_ip.v" \
-  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/be63/hdl/ip/guitar_effects_sitofp_32ns_32_6_no_dsp_1_ip.v" \
-  "../../../bd/guitar_effects_design/ip/guitar_effects_design_guitar_effects_0_32/sim/guitar_effects_design_guitar_effects_0_32.v" \
--endlib
 -makelib xcelium_lib/axi_bram_ctrl_v4_1_6 \
   "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/3c31/hdl/axi_bram_ctrl_v4_1_rfs.vhd" \
 -endlib
@@ -181,6 +95,92 @@
 -makelib xcelium_lib/xil_defaultlib \
   "../../../bd/guitar_effects_design/ip/guitar_effects_design_xbar_1/sim/guitar_effects_design_xbar_1.v" \
   "../../../bd/guitar_effects_design/ip/guitar_effects_design_xbar_2/sim/guitar_effects_design_xbar_2.v" \
+-endlib
+-makelib xcelium_lib/xbip_utils_v3_0_10 \
+  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/364f/hdl/xbip_utils_v3_0_vh_rfs.vhd" \
+-endlib
+-makelib xcelium_lib/axi_utils_v2_0_6 \
+  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/1971/hdl/axi_utils_v2_0_vh_rfs.vhd" \
+-endlib
+-makelib xcelium_lib/xbip_pipe_v3_0_6 \
+  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd" \
+-endlib
+-makelib xcelium_lib/xbip_dsp48_wrapper_v3_0_4 \
+  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/cdbf/hdl/xbip_dsp48_wrapper_v3_0_vh_rfs.vhd" \
+-endlib
+-makelib xcelium_lib/xbip_dsp48_addsub_v3_0_6 \
+  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/910d/hdl/xbip_dsp48_addsub_v3_0_vh_rfs.vhd" \
+-endlib
+-makelib xcelium_lib/xbip_dsp48_multadd_v3_0_6 \
+  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/b0ac/hdl/xbip_dsp48_multadd_v3_0_vh_rfs.vhd" \
+-endlib
+-makelib xcelium_lib/xbip_bram18k_v3_0_6 \
+  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/d367/hdl/xbip_bram18k_v3_0_vh_rfs.vhd" \
+-endlib
+-makelib xcelium_lib/mult_gen_v12_0_18 \
+  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/ab19/hdl/mult_gen_v12_0_vh_rfs.vhd" \
+-endlib
+-makelib xcelium_lib/floating_point_v7_1_14 \
+  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/342a/hdl/floating_point_v7_1_rfs.vhd" \
+-endlib
+-makelib xcelium_lib/floating_point_v7_1_14 \
+  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/342a/hdl/floating_point_v7_1_rfs.v" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib \
+  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/8a68/hdl/verilog/guitar_effects_compression_buffer_RAM_AUTO_1R1W.v" \
+  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/8a68/hdl/verilog/guitar_effects_control_r_s_axi.v" \
+  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/8a68/hdl/verilog/guitar_effects_dadd_64ns_64ns_64_7_full_dsp_1.v" \
+  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/8a68/hdl/verilog/guitar_effects_ddiv_64ns_64ns_64_59_no_dsp_1.v" \
+  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/8a68/hdl/verilog/guitar_effects_delay_buffer_RAM_AUTO_1R1W.v" \
+  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/8a68/hdl/verilog/guitar_effects_dmul_64ns_64ns_64_7_max_dsp_1.v" \
+  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/8a68/hdl/verilog/guitar_effects_fadd_32ns_32ns_32_5_full_dsp_1.v" \
+  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/8a68/hdl/verilog/guitar_effects_fdiv_32ns_32ns_32_16_no_dsp_1.v" \
+  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/8a68/hdl/verilog/guitar_effects_flow_control_loop_pipe_sequential_init.v" \
+  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/8a68/hdl/verilog/guitar_effects_fmul_32ns_32ns_32_4_max_dsp_1.v" \
+  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/8a68/hdl/verilog/guitar_effects_gmem_m_axi.v" \
+  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/8a68/hdl/verilog/guitar_effects_guitar_effects_Pipeline_LPF_Loop.v" \
+  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/8a68/hdl/verilog/guitar_effects_guitar_effects_Pipeline_LPF_Loop_lpf_coefficients_ROM_AUTO_1R.v" \
+  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/8a68/hdl/verilog/guitar_effects_hls_deadlock_idx0_monitor.v" \
+  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/8a68/hdl/verilog/guitar_effects_mul_32s_8s_40_2_1.v" \
+  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/8a68/hdl/verilog/guitar_effects_mul_32s_10ns_42_2_1.v" \
+  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/8a68/hdl/verilog/guitar_effects_mul_35ns_25ns_60_2_1.v" \
+  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/8a68/hdl/verilog/guitar_effects_mul_42ns_33ns_75_2_1.v" \
+  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/8a68/hdl/verilog/guitar_effects_mul_49ns_44s_93_5_1.v" \
+  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/8a68/hdl/verilog/guitar_effects_mul_49ns_49ns_98_5_1.v" \
+  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/8a68/hdl/verilog/guitar_effects_mul_56ns_52s_108_5_1.v" \
+  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/8a68/hdl/verilog/guitar_effects_mul_64s_63ns_126_5_1.v" \
+  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/8a68/hdl/verilog/guitar_effects_mul_170s_53ns_170_5_1.v" \
+  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/8a68/hdl/verilog/guitar_effects_mux_42_32_1_1.v" \
+  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/8a68/hdl/verilog/guitar_effects_mux_83_1_1_1.v" \
+  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/8a68/hdl/verilog/guitar_effects_mux_164_1_1_1.v" \
+  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/8a68/hdl/verilog/guitar_effects_regslice_both.v" \
+  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/8a68/hdl/verilog/guitar_effects_sin_or_cos_double_s.v" \
+  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/8a68/hdl/verilog/guitar_effects_sin_or_cos_double_s_fourth_order_double_sin_cos_K0_V_ROM_1P_LUTRAM_1R.v" \
+  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/8a68/hdl/verilog/guitar_effects_sin_or_cos_double_s_fourth_order_double_sin_cos_K1_V_ROM_1P_LUTRAM_1R.v" \
+  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/8a68/hdl/verilog/guitar_effects_sin_or_cos_double_s_fourth_order_double_sin_cos_K2_V_ROM_1P_LUTRAM_1R.v" \
+  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/8a68/hdl/verilog/guitar_effects_sin_or_cos_double_s_fourth_order_double_sin_cos_K3_V_ROM_1P_LUTRAM_1R.v" \
+  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/8a68/hdl/verilog/guitar_effects_sin_or_cos_double_s_fourth_order_double_sin_cos_K4_V_ROM_1P_LUTRAM_1R.v" \
+  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/8a68/hdl/verilog/guitar_effects_sin_or_cos_double_s_ref_4oPi_table_256_V_ROM_AUTO_1R.v" \
+  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/8a68/hdl/verilog/guitar_effects_sitodp_32ns_64_6_no_dsp_1.v" \
+  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/8a68/hdl/verilog/guitar_effects_sitofp_32ns_32_6_no_dsp_1.v" \
+  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/8a68/hdl/verilog/guitar_effects_srem_9ns_8ns_7_13_seq_1.v" \
+  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/8a68/hdl/verilog/guitar_effects_srem_11ns_10ns_9_15_1.v" \
+  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/8a68/hdl/verilog/guitar_effects_srem_32ns_8ns_32_36_seq_1.v" \
+  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/8a68/hdl/verilog/guitar_effects_srem_32ns_10ns_32_36_seq_1.v" \
+  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/8a68/hdl/verilog/guitar_effects_srem_32ns_18ns_17_36_seq_1.v" \
+  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/8a68/hdl/verilog/guitar_effects_srem_32ns_18ns_32_36_seq_1.v" \
+  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/8a68/hdl/verilog/guitar_effects_wah.v" \
+  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/8a68/hdl/verilog/guitar_effects_wah_values_buffer_RAM_AUTO_1R1W.v" \
+  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/8a68/hdl/verilog/guitar_effects.v" \
+  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/8a68/hdl/ip/guitar_effects_dadd_64ns_64ns_64_7_full_dsp_1_ip.v" \
+  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/8a68/hdl/ip/guitar_effects_ddiv_64ns_64ns_64_59_no_dsp_1_ip.v" \
+  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/8a68/hdl/ip/guitar_effects_dmul_64ns_64ns_64_7_max_dsp_1_ip.v" \
+  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/8a68/hdl/ip/guitar_effects_fadd_32ns_32ns_32_5_full_dsp_1_ip.v" \
+  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/8a68/hdl/ip/guitar_effects_fdiv_32ns_32ns_32_16_no_dsp_1_ip.v" \
+  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/8a68/hdl/ip/guitar_effects_fmul_32ns_32ns_32_4_max_dsp_1_ip.v" \
+  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/8a68/hdl/ip/guitar_effects_sitodp_32ns_64_6_no_dsp_1_ip.v" \
+  "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/8a68/hdl/ip/guitar_effects_sitofp_32ns_32_6_no_dsp_1_ip.v" \
+  "../../../bd/guitar_effects_design/ip/guitar_effects_design_guitar_effects_0_32/sim/guitar_effects_design_guitar_effects_0_32.v" \
 -endlib
 -makelib xcelium_lib/axi_protocol_converter_v2_1_26 \
   "../../../../Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ipshared/90c8/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \
