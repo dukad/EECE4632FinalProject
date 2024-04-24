@@ -2725,3 +2725,11 @@ dismissDialog("Generate Bitstream"); // bA
 // TclEventType: RUN_STATUS_CHANGE
 // TclEventType: RUN_STEP_COMPLETED
 // TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 436 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Run Command: PAResourceCommand.PACommandNames_REPORTS_WINDOW
+dismissDialog("Bitstream Generation Completed"); // ag
+// HMemoryUtils.trashcanNow. Engine heap size: 2,709 MB. GUI used memory: 196 MB. Current time: 4/24/24, 5:18:29 PM EDT
