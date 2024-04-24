@@ -1,8 +1,8 @@
 INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2022.1/bin/unwrapped/win64.o/vitis_hls.exe'
-INFO: [HLS 200-10] For user 'a01me' on host 'desktop-g7ja666' (Windows NT_amd64 version 6.2) on Wed Apr 24 15:15:58 -0400 2024
+INFO: [HLS 200-10] For user 'a01me' on host 'desktop-g7ja666' (Windows NT_amd64 version 6.2) on Wed Apr 24 15:19:53 -0400 2024
 INFO: [HLS 200-10] In directory 'C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis'
-Sourcing Tcl script 'C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/csim.tcl'
-INFO: [HLS 200-1510] Running: source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/csim.tcl
+Sourcing Tcl script 'C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/export.tcl'
+INFO: [HLS 200-1510] Running: source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/export.tcl
 INFO: [HLS 200-1510] Running: open_project equalizer 
 INFO: [HLS 200-10] Opening project 'C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer'.
 INFO: [HLS 200-1510] Running: set_top equalizer 
@@ -25,148 +25,20 @@ INFO: [HLS 200-1510] Running: create_clock -period 10 -name default
 INFO: [HLS 200-1510] Running: config_compile -pipeline_loops 0 
 INFO: [HLS 200-1510] Running: source ./equalizer/solution11/directives.tcl
 INFO: [HLS 200-1510] Running: set_directive_top -name equalizer equalizer 
-INFO: [HLS 200-1510] Running: csim_design -quiet 
-INFO: [SIM 211-2] *************** CSIM start ***************
-INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
-   Compiling ../../../../equalizer.cpp in debug mode
-   Generating csim.exe
-In file included from C:/Xilinx/Vitis_HLS/2022.1/include/floating_point_v7_0_bitacc_cmodel.h:144:0,
-                 from C:/Xilinx/Vitis_HLS/2022.1/include/hls_fpo.h:189,
-                 from C:/Xilinx/Vitis_HLS/2022.1/include/hls_half_fpo.h:64,
-                 from C:/Xilinx/Vitis_HLS/2022.1/include/hls_half.h:71,
-                 from C:/Xilinx/Vitis_HLS/2022.1/include/etc/ap_private.h:98,
-                 from C:/Xilinx/Vitis_HLS/2022.1/include/ap_common.h:710,
-                 from C:/Xilinx/Vitis_HLS/2022.1/include/ap_int.h:56,
-                 from C:/Xilinx/Vitis_HLS/2022.1/include/ap_axi_sdata.h:88,
-                 from ../../../../equalizer.h:5,
-                 from ../../../../equalizer.cpp:1:
-C:/Xilinx/Vitis_HLS/2022.1/include/gmp.h:63:0: warning: "__GMP_LIBGMP_DLL" redefined
- #define __GMP_LIBGMP_DLL  0
- 
-In file included from C:/Xilinx/Vitis_HLS/2022.1/include/hls_fpo.h:189:0,
-                 from C:/Xilinx/Vitis_HLS/2022.1/include/hls_half_fpo.h:64,
-                 from C:/Xilinx/Vitis_HLS/2022.1/include/hls_half.h:71,
-                 from C:/Xilinx/Vitis_HLS/2022.1/include/etc/ap_private.h:98,
-                 from C:/Xilinx/Vitis_HLS/2022.1/include/ap_common.h:710,
-                 from C:/Xilinx/Vitis_HLS/2022.1/include/ap_int.h:56,
-                 from C:/Xilinx/Vitis_HLS/2022.1/include/ap_axi_sdata.h:88,
-                 from ../../../../equalizer.h:5,
-                 from ../../../../equalizer.cpp:1:
-C:/Xilinx/Vitis_HLS/2022.1/include/floating_point_v7_0_bitacc_cmodel.h:136:0: note: this is the location of the previous definition
- #define __GMP_LIBGMP_DLL 1
- 
-In function
-Sending coefs
-Sent scale
-Sent scale
-Sent scale
-Sent coefs
-Sent ABBA
-Wrote to input buffer
-After function call
-0
-6
-18
-36
-60
-90
-126
-168
-216
-270
-330
-396
-468
-546
-630
-720
-816
-918
-1026
-1140
-1260
-1386
-1518
-1656
-1800
-1950
-2106
-2268
-2436
-2610
-2790
-2976
-3168
-3366
-3570
-3780
-3996
-4218
-4446
-4680
-4920
-5166
-5418
-5676
-5940
-6210
-6486
-6768
-7056
-7350
-7650
-7956
-8268
-8586
-8910
-9240
-9576
-9918
-10266
-10620
-10980
-11346
-11718
-12096
-12480
-12870
-13266
-13668
-14076
-14490
-14910
-15336
-15768
-16206
-16650
-17100
-17556
-18018
-18486
-18960
-19440
-19926
-20418
-20916
-21420
-21930
-22446
-22968
-23496
-24030
-24570
-25116
-25668
-26226
-26790
-27360
-27936
-28518
-29106
-Read from output buffer
-GREAT! YOU PASSED
-WARNING: Hls::stream 'hls::stream<hls::axis<ap_int<32>, 1ull, 1ull, 1ull>, 0>1' contains leftover data, which may result in RTL simulation hanging.
-INFO: [SIM 211-1] CSim done with 0 errors.
-INFO: [SIM 211-3] *************** CSIM finish ***************
-INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.962 seconds; current allocated memory: 0.000 MB.
-INFO: [HLS 200-112] Total CPU user time: 8 seconds. Total CPU system time: 2 seconds. Total elapsed time: 9.261 seconds; peak allocated memory: 1.662 GB.
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2022.1 (64-bit)
+  **** SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+  **** IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+ipx::create_core: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1833.004 ; gain = 0.000
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.1/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Wed Apr 24 15:20:27 2024...
+INFO: [HLS 200-802] Generated output file equalizer/solution11/impl/export.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 28.907 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 10 seconds. Total CPU system time: 2 seconds. Total elapsed time: 35.448 seconds; peak allocated memory: 1.642 GB.

@@ -1007,3 +1007,299 @@ Command   csim_design done; 2.962 sec.
 INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.962 seconds; current allocated memory: 0.000 MB.
 Command ap_source done; 8.669 sec.
 Execute cleanup_all 
+INFO-FLOW: Workspace C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11 opened at Wed Apr 24 15:19:53 -0400 2024
+Execute     ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     set_part xc7z020-clg400-1 
+Execute       create_platform xc7z020-clg400-1 -board  
+DBG:HLSDevice: Trying to load device library: C:/Xilinx/Vitis_HLS/2022.1\lib\win64.o\librdi_hlsvwrap.dll
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: C:/Xilinx/Vivado/2022.1/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+Command       create_platform done; 5.248 sec.
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/saxilite.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/util.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfft.gen 
+Command         ap_source done; 0.11 sec.
+Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/DSP48/dsp48.gen 
+Command       ap_source done; 0.159 sec.
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 5.474 sec.
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute     get_config_interface -m_axi_latency 
+Execute     get_config_interface -m_axi_alignment_byte_size 
+Execute     get_config_interface -m_axi_max_widen_bitwidth 
+Execute     get_config_interface -default_interface 
+Execute     get_config_rtl -register_reset_num 
+Execute     send_msg_by_id INFO @200-1464@%s config_compile -complex-mul-dsp=0 
+INFO: [HLS 200-1464] Running solution command: config_compile -complex-mul-dsp=0
+Execute     config_compile -complex-mul-dsp=0 
+Execute     send_msg_by_id INFO @200-1464@%s config_compile -pipeline_loops=0 
+INFO: [HLS 200-1464] Running solution command: config_compile -pipeline_loops=0
+Execute     config_compile -pipeline_loops=0 
+Command   open_solution done; 5.537 sec.
+Execute   set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+Execute     create_platform xc7z020-clg400-1 -board  
+Execute     source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/xilinx.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/plb46.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/axi4.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/saxilite.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/util.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfft.gen 
+Command       ap_source done; 0.101 sec.
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfir.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/DSP48/dsp48.gen 
+Command     ap_source done; 0.148 sec.
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
+Execute     config_compile -quiet -complex-mul-dsp=0 
+Command   set_part done; 0.261 sec.
+Execute   create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+Execute   config_compile -pipeline_loops 0 
+INFO: [HLS 200-1510] Running: config_compile -pipeline_loops 0 
+Execute   source ./equalizer/solution11/directives.tcl 
+INFO: [HLS 200-1510] Running: source ./equalizer/solution11/directives.tcl
+Execute     set_directive_top -name equalizer equalizer 
+INFO: [HLS 200-1510] Running: set_directive_top -name equalizer equalizer 
+Execute   export_design -rtl verilog -format ip_catalog 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog 
+Execute     get_config_export -description 
+Execute     get_config_export -display_name 
+Execute     get_config_export -ipname 
+Execute     get_config_export -library 
+Execute     get_config_export -output 
+Execute     get_config_export -taxonomy 
+Execute     get_config_export -vendor 
+Execute     get_config_export -version 
+Execute     get_config_export -xo 
+Execute     config_export -format=ip_catalog -rtl=verilog 
+INFO-FLOW: DBG:PUTS: export_design_wrap: -format ip_catalog -rtl verilog
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/.autopilot/db/global.setting.tcl 
+Execute     get_config_export -vivado_clock 
+Execute     get_top 
+Execute     get_config_export -ipname 
+Execute     get_config_export -xo 
+Execute     get_config_export -format 
+Execute     get_config_rtl -module_auto_prefix 
+Execute     get_config_export -xo 
+Execute     get_config_export -format 
+Execute     get_solution -flow_target 
+Execute     get_config_export -xo 
+Execute     get_config_export -format 
+INFO-FLOW: DBG:PUTS:   auto_impl: pack: -export -rtl verilog
+INFO-FLOW: DBG:PROC: ::AESL_AUTOIMPL::auto_impl args='-export -rtl verilog'
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/.autopilot/db/global.setting.tcl 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PUTS: automg_wrap -export -pcore_version 1.00.a -rtl vlog -tool Vivado -impltomg_flag
+INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::auto_generate args='-export -pcore_version 1.00.a -rtl vlog -tool Vivado -impltomg_flag'
+INFO-FLOW: DBG:PUTS:     auto_generate -export -pcore_version 1.00.a -rtl vlog -tool Vivado -impltomg_flag
+Execute     get_config_export -xo 
+Execute     get_config_export -format 
+Execute     get_config_export -ip_xdc_file 
+Execute     get_config_export -ip_xdc_ooc_file 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PUTS: read_platform_lib C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/.autopilot/db/global.setting.tcl
+Execute     source C:/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/common.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source C:/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/op.gen 
+Execute     source C:/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source C:/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/interface.gen 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/.autopilot/db/global.setting.tcl 
+Execute     source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/xilinx.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/plb46.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/axi4.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/saxilite.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/util.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfft.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfir.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/DSP48/dsp48.gen 
+Command     ap_source done; 0.146 sec.
+INFO-FLOW: DBG:PUTS:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
+INFO-FLOW: DBG:PUTS:       initCTypeInfo top_module=equalizer xml_exists=0
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/.autopilot/db/equalizer.rtl_wrap.cfg.tcl 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/.autopilot/db/equalizer.rtl_wrap.cfg.tcl 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/.autopilot/db/equalizer.rtl_wrap.cfg.tcl 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/.autopilot/db/equalizer.tbgen.tcl 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/.autopilot/db/equalizer.tbgen.tcl 
+Execute     get_config_rtl -deadlock_detection 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/.autopilot/db/global.setting.tcl 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/.autopilot/db/equalizer.tbgen.tcl 
+Execute     get_config_rtl -module_prefix 
+INFO-FLOW: DBG:PUTS:       cosim_export_main adding deadlock detection to equalizer
+Execute     get_config_rtl -deadlock_detection 
+INFO-FLOW: DBG:PUTS: Skipping loadAnalyze_DB, #g_database=16
+INFO-FLOW: DBG:PUTS:       generate_json generate_bd_files=0 generate_xo_files=false #modelList=24 #gSsdmPorts=0
+INFO-FLOW: DBG:PROC: ::AP::DESIGN_DATA::generate_json generate_bd_files='0' generate_xo_files='false' modelList='equalizer_flow_control_loop_pipe_sequential_init
+equalizer_flow_control_loop_pipe_sequential_init
+equalizer_mul_32s_32s_32_2_1
+equalizer_signal_shift_reg_RAM_AUTO_1R1W
+equalizer_coefs_2_RAM_AUTO_1R1W
+equalizer_gmem_m_axi
+equalizer_control_s_axi
+equalizer_regslice_both
+equalizer_regslice_both
+equalizer_regslice_both
+equalizer_regslice_both
+equalizer_regslice_both
+equalizer_regslice_both
+equalizer_regslice_both
+equalizer_regslice_both
+equalizer_regslice_both
+equalizer_regslice_both
+equalizer_regslice_both
+equalizer_regslice_both
+equalizer_regslice_both
+equalizer_regslice_both
+equalizer_Pipeline_Shift_Accumulate_Loop
+equalizer_Pipeline_VITIS_LOOP_51_1
+equalizer
+' rtl_lang='vlog' bootstrap_tcl='false' outdir='' outfilename=''
+Execute     source C:/Xilinx/Vitis_HLS/2022.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute     source C:/Xilinx/Vitis_HLS/2022.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/.autopilot/db/global.setting.tcl 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/.autopilot/db/global.setting.tcl 
+Execute     get_solution -flow_target 
+Execute     get_config_export -xo 
+Execute     get_config_export -format 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/.autopilot/db/top-io-be.tcl 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/.autopilot/db/equalizer.tbgen.tcl 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/.autopilot/db/equalizer.compgen.dataonly.tcl 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/.autopilot/db/equalizer.compgen.dataonly.tcl 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/.autopilot/db/equalizer.rtl_wrap.cfg.tcl 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/.autopilot/db/equalizer.compgen.dataonly.tcl 
+Execute     get_config_export -format 
+Execute     get_config_export -vendor 
+Execute     get_config_export -library 
+Execute     get_config_export -version 
+Execute     get_config_export -ipname 
+Execute     get_config_export -taxonomy 
+Execute     get_config_export -description 
+Execute     get_config_export -display_name 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/.autopilot/db/equalizer_Pipeline_Shift_Accumulate_Loop.tbgen.tcl 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/.autopilot/db/equalizer_Pipeline_VITIS_LOOP_51_1.tbgen.tcl 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/.autopilot/db/equalizer.tbgen.tcl 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/.autopilot/db/global.setting.tcl 
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     get_solution -flow_target 
+Execute     get_config_rtl -kernel_profile 
+Execute     get_config_rtl -kernel_profile 
+Execute     get_config_rtl -stall_sig_gen 
+Execute     get_config_rtl -profile 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/.autopilot/db/equalizer.constraint.tcl 
+Execute     sc_get_clocks equalizer 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/.autopilot/db/global.setting.tcl 
+Execute     get_config_export -ip_xdc_file 
+Execute     get_config_export -ip_xdc_ooc_file 
+Execute     get_config_debug -directory 
+Execute     get_config_rtl -deadlock_detection 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/.autopilot/db/global.setting.tcl 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/.autopilot/db/equalizer.tbgen.tcl 
+Execute     get_config_rtl -module_prefix 
+INFO-FLOW: DBG:PUTS:       cosim_export_main adding deadlock detection to equalizer
+Execute     get_config_rtl -deadlock_detection 
+INFO-FLOW: DBG:PUTS:       copy ip_driver_dir 1_0 C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/.autopilot/db/driver
+Execute     get_config_export -format 
+INFO-FLOW: DBG:PUTS:       generate_ip_script #gSsdmPorts=0 g_lang=vlog is_sdaccel=false is_sdsoc=true xo_file=
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/.autopilot/db/equalizer.tbgen.tcl 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/.autopilot/db/equalizer.compgen.dataonly.tcl 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/.autopilot/db/equalizer.compgen.dataonly.tcl 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/.autopilot/db/equalizer.tbgen.tcl 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/.autopilot/db/equalizer.tbgen.tcl 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/.autopilot/db/equalizer.tbgen.tcl 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/.autopilot/db/equalizer.tbgen.tcl 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/.autopilot/db/equalizer.tbgen.tcl 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/.autopilot/db/equalizer.tbgen.tcl 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/.autopilot/db/equalizer.tbgen.tcl 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/.autopilot/db/global.setting.tcl 
+Execute     get_config_debug -directory 
+INFO-FLOW: DBG:PUTS:       generate_top_info
+INFO-FLOW: DBG:PUTS:       prepArgInfo -> loadAnalyze_DB top_module=equalizer
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/.autopilot/db/equalizer.rtl_wrap.cfg.tcl 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/.autopilot/db/equalizer.rtl_wrap.cfg.tcl 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/.autopilot/db/equalizer.rtl_wrap.cfg.tcl 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/.autopilot/db/equalizer.tbgen.tcl 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/.autopilot/db/equalizer.tbgen.tcl 
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/.autopilot/db/global.setting.tcl 
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/.autopilot/db/equalizer.tbgen.tcl 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/.autopilot/db/global.setting.tcl 
+Execute     get_config_export -ip_xdc_ooc_file 
+Execute     get_config_export -ip_xdc_file 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/.autopilot/db/equalizer.constraint.tcl 
+INFO-FLOW: DBG:PUTS:       generate_ipi_example_script
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+INFO-FLOW: DBG:PUTS:       generate_syn_sh
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PUTS:       generate_imp_constraints
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/.autopilot/db/equalizer.constraint.tcl 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/.autopilot/db/equalizer.tbgen.tcl 
+INFO-FLOW: DBG:PUTS:       delete-temp-dirs (skipped for debug)
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+INFO-FLOW: DBG:PUTS: read_platform_lib C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/.autopilot/db/global.setting.tcl
+Execute     source C:/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/common.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source C:/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/op.gen 
+Execute     source C:/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source C:/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/interface.gen 
+Execute     source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/.autopilot/db/global.setting.tcl 
+Execute     source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/xilinx.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/plb46.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/axi4.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/saxilite.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/util.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfft.gen 
+Command       ap_source done; 0.102 sec.
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfir.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/DSP48/dsp48.gen 
+Command     ap_source done; 0.15 sec.
+INFO-FLOW: DBG:PUTS:     IP package: exec C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/impl/ip/pack.bat
+INFO-FLOW: DBG:PUTS:     IP package: success C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/impl/ip/pack.bat
+Execute     get_config_export -output 
+Execute     send_msg_by_id INFO @200-802@%s equalizer/solution11/impl/export.zip 
+INFO: [HLS 200-802] Generated output file equalizer/solution11/impl/export.zip
+Command   export_design done; 28.907 sec.
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 28.907 seconds; current allocated memory: 0.000 MB.
+Command ap_source done; 34.854 sec.
+Execute cleanup_all 
