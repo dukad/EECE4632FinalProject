@@ -3,6 +3,7 @@
 
 #include <hls_stream.h>
 #include <ap_axi_sdata.h>
+#include <iostream>
 
 // *** DATA TYPE DEFINITIONS ***
 typedef ap_axis<32,1,1,1> AXI_VAL;
@@ -12,6 +13,7 @@ typedef int acc_t;
 
 // *** COEFFICIENT ARRAY DEFINITIONS ***
 #define NUM_COEFS 99
+#define NUM_BANDS 3
 
 // *** STATE DEFINITIONS ***
 #define IDLE 0x0000

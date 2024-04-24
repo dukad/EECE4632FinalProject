@@ -8,40 +8,60 @@ void equalizer(hls::stream<AXI_VAL>& output, coef_t coefs[NUM_COEFS], hls::strea
 
 	int i = 0;
 	int j = 0;
-	int coef_scale = 0;
 	int num_filters = 0;
 
 	acc_t accumulate;
 	data_t data;
+	coef_t coef_scale = 1;
 
 	AXI_VAL tmp;
 	AXI_VAL tmp_out;
 	static data_t signal_shift_reg[NUM_COEFS];
 
+	coef_t coefs_2[NUM_COEFS];
+
 	bool running = true;
+	bool read_coefs = false;
 
 	int state = IDLE;
 
 	Running_Loop:
 	while(running){
-#pragma HLS UNROLL
 		input.read(tmp);
 
 		switch (state){
 			case IDLE:
 				if (tmp.data.to_int() == BEEF){
 					state = READ_COEFS;
-					i -= 1;
 				}
 				break;
 
 			case READ_COEFS:
-				Coef_Read_Loop:
-				for (j = NUM_COEFS - 1; j > 0; j--){
-				#pragma HLS PIPELINE
-					coefs[j] = tmp.data.to_int();
+				if (!read_coefs){
+					Coef_Clear_Loop:
+					for (i = NUM_COEFS - 1; i >= 0; i--){
+						coefs[i] = 0;
+						coefs_2[i] = 0;
+					}
 
-					input.read(tmp);
+					Coef_Read_Loop:
+					for (j = 0; j < NUM_BANDS; j++){
+						coef_scale = tmp.data.to_int();
+
+						for (i = 0; i < NUM_COEFS; i++){
+						#pragma HLS PIPELINE
+							input.read(tmp);
+
+							int temporary = tmp.data.to_int();
+
+							coefs[i] += coef_scale * tmp.data.to_int();
+							coefs_2[i] += coef_scale * tmp.data.to_int();
+						}
+
+						input.read(tmp);
+					}
+
+					read_coefs = true;
 				}
 
 				if (tmp.data.to_int() == ABBA){
@@ -59,6 +79,8 @@ void equalizer(hls::stream<AXI_VAL>& output, coef_t coefs[NUM_COEFS], hls::strea
 					accumulate += signal_shift_reg[i] * coefs[i];
 				}
 
+				int temp = tmp.data.to_int();
+				int first_coef = coefs[0];
 				accumulate += tmp.data.to_int() * coefs[0];
 				signal_shift_reg[0] = tmp.data.to_int();
 
@@ -70,16 +92,10 @@ void equalizer(hls::stream<AXI_VAL>& output, coef_t coefs[NUM_COEFS], hls::strea
 				tmp_out.id = tmp.id;
 				tmp_out.user = tmp.user;
 
-				if (tmp.last){
-					break;
-				}
-
 				output.write(tmp_out);
 
 				break;
 		}
-
-		i += 1;
 
 		if (tmp.last){
 			break;

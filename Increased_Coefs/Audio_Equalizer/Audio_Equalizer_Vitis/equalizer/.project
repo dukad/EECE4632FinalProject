@@ -42,6 +42,16 @@
 			<location>C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution1/.tcls</location>
 		</link>
 		<link>
+			<name>solution10/constraints</name>
+			<type>2</type>
+			<location>C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution10/.tcls</location>
+		</link>
+		<link>
+			<name>solution11/constraints</name>
+			<type>2</type>
+			<location>C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/.tcls</location>
+		</link>
+		<link>
 			<name>solution2/constraints</name>
 			<type>2</type>
 			<location>C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution2/.tcls</location>
@@ -77,6 +87,11 @@
 			<location>C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution8/.tcls</location>
 		</link>
 		<link>
+			<name>solution9/constraints</name>
+			<type>2</type>
+			<location>C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution9/.tcls</location>
+		</link>
+		<link>
 			<name>source/equalizer.cpp</name>
 			<type>1</type>
 			<location>C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer.cpp</location>
@@ -105,6 +120,36 @@
 			<name>solution1/constraints/script.tcl</name>
 			<type>1</type>
 			<location>C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution1/script.tcl</location>
+		</link>
+		<link>
+			<name>solution10/constraints/.xml.directive</name>
+			<type>1</type>
+			<location>C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution10/solution10.directive</location>
+		</link>
+		<link>
+			<name>solution10/constraints/directives.tcl</name>
+			<type>1</type>
+			<location>C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution10/directives.tcl</location>
+		</link>
+		<link>
+			<name>solution10/constraints/script.tcl</name>
+			<type>1</type>
+			<location>C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution10/script.tcl</location>
+		</link>
+		<link>
+			<name>solution11/constraints/.xml.directive</name>
+			<type>1</type>
+			<location>C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/solution11.directive</location>
+		</link>
+		<link>
+			<name>solution11/constraints/directives.tcl</name>
+			<type>1</type>
+			<location>C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/directives.tcl</location>
+		</link>
+		<link>
+			<name>solution11/constraints/script.tcl</name>
+			<type>1</type>
+			<location>C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/script.tcl</location>
 		</link>
 		<link>
 			<name>solution2/constraints/.xml.directive</name>
@@ -210,6 +255,21 @@
 			<name>solution8/constraints/script.tcl</name>
 			<type>1</type>
 			<location>C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution8/script.tcl</location>
+		</link>
+		<link>
+			<name>solution9/constraints/.xml.directive</name>
+			<type>1</type>
+			<location>C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution9/solution9.directive</location>
+		</link>
+		<link>
+			<name>solution9/constraints/directives.tcl</name>
+			<type>1</type>
+			<location>C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution9/directives.tcl</location>
+		</link>
+		<link>
+			<name>solution9/constraints/script.tcl</name>
+			<type>1</type>
+			<location>C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution9/script.tcl</location>
 		</link>
 	</linkedResources>
 </projectDescription>

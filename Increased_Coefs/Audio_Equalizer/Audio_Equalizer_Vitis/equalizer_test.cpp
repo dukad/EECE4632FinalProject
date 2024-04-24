@@ -27,21 +27,32 @@ int main(){
 	A.write(tmp1);
 
 	// *** Send filter coef parameters ***
+	cout << "Sending coefs" << endl;
 
-
-	// *** Send 99 filter coefs ***
-	for (int i = 0; i < NUM_COEFS; i++){
-		tmp1.data = i;
-
+	for (int j = 0; j < NUM_BANDS; j++){
+		tmp1.data = j + 1;
 		A.write(tmp1);
+
+		cout << "Sent scale" << endl;
+
+		// *** Send 99 filter coefs ***
+		for (int i = 0; i < NUM_COEFS; i++){
+			tmp1.data = i;
+
+			A.write(tmp1);
+		}
 	}
+
+	cout << "Sent coefs" << endl;
 
 	// *** Send ABBA value (43962) ***
 	tmp1.data = 43962;
 	A.write(tmp1);
 
+	cout << "Sent ABBA" << endl;
+
 	// *** Give chance for output stream to run (Emulating a signal)***
-	for (int j = 0; j < NUM_COEFS - 1; j++){
+	for (int j = 0; j < NUM_COEFS; j++){
 		tmp1.data = 1;
 		A.write(tmp1);
 	}
