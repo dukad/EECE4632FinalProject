@@ -98,6 +98,14 @@ debug_output {
 	offset 116
 	offset_end 123
 }
+starting_sample { 
+	dir I
+	width 32
+	depth 1
+	mode ap_none
+	offset 132
+	offset_end 139
+}
 }
 dict set axilite_register_dict control_r $port_control_r
 

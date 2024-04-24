@@ -15,6 +15,7 @@
   <xd:arg xd:name="*(wah_coeffs)" xd:originalName="wah_coeffs" xd:direction="inout" xd:interfaceRef="m_axi_gmem" xd:busTypeRef="aximm" xd:dataWidth="32" xd:bufferDirection="in"/>
   <xd:arg xd:name="wah_coeffs" xd:originalName="wah_coeffs" xd:direction="in" xd:interfaceRef="s_axi_control_r" xd:busTypeRef="axilite" xd:offset="0x68" xd:dataWidth="32" xd:aximmInterfaceRef="m_axi_gmem"/>
   <xd:arg xd:name="*(debug_output)" xd:originalName="debug_output" xd:direction="out" xd:interfaceRef="s_axi_control_r" xd:busTypeRef="axilite" xd:offset="0x74" xd:statusOffset="0x78" xd:handshakeRef="ap_vld" xd:dataWidth="32"/>
+  <xd:arg xd:name="starting_sample" xd:originalName="starting_sample" xd:direction="in" xd:interfaceRef="s_axi_control_r" xd:busTypeRef="axilite" xd:offset="0x84" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
   <xd:latencyEstimates xd:best-case="undef" xd:worst-case="undef" xd:average-case="undef"/>
-  <xd:resourceEstimates xd:LUT="19720" xd:FF="14485" xd:BRAM="0" xd:DSP="79"/>
+  <xd:resourceEstimates xd:LUT="11765" xd:FF="7289" xd:BRAM="0" xd:DSP="24"/>
 </xd:acceleratorMap>

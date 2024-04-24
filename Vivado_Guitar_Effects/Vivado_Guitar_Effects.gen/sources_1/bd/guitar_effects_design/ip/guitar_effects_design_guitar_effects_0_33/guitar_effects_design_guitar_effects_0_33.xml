@@ -2001,11 +2001,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Apr 23 18:04:01 UTC 2024</spirit:value>
+            <spirit:value>Wed Apr 24 21:04:23 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:92974bd6</spirit:value>
+            <spirit:value>9:b83afade</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2016,7 +2016,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:92974bd6</spirit:value>
+            <spirit:value>9:b83afade</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2032,11 +2032,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Apr 23 18:04:01 UTC 2024</spirit:value>
+            <spirit:value>Wed Apr 24 21:04:23 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:92974bd6</spirit:value>
+            <spirit:value>9:b83afade</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2079,11 +2079,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Apr 23 18:04:01 UTC 2024</spirit:value>
+            <spirit:value>Wed Apr 24 21:04:23 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:2e146dd5</spirit:value>
+            <spirit:value>9:04b9dcdd</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2099,11 +2099,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Apr 23 18:04:01 UTC 2024</spirit:value>
+            <spirit:value>Wed Apr 24 21:04:23 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:2e146dd5</spirit:value>
+            <spirit:value>9:04b9dcdd</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2117,11 +2117,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Apr 23 18:04:01 UTC 2024</spirit:value>
+            <spirit:value>Wed Apr 24 21:04:23 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:92974bd6</spirit:value>
+            <spirit:value>9:b83afade</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2135,11 +2135,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Apr 23 18:08:18 UTC 2024</spirit:value>
+            <spirit:value>Wed Apr 24 21:07:13 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:92974bd6</spirit:value>
+            <spirit:value>9:b83afade</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -3781,35 +3781,27 @@
     <spirit:fileSet>
       <spirit:name>xilinx_verilogsynthesis_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/ip/guitar_effects_dadd_64ns_64ns_64_7_full_dsp_1_ip.v</spirit:name>
+        <spirit:name>../../ipshared/f039/hdl/ip/guitar_effects_dmul_64ns_64ns_64_7_max_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/ip/guitar_effects_ddiv_64ns_64ns_64_59_no_dsp_1_ip.v</spirit:name>
+        <spirit:name>../../ipshared/f039/hdl/ip/guitar_effects_fadd_32ns_32ns_32_5_full_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/ip/guitar_effects_dmul_64ns_64ns_64_7_max_dsp_1_ip.v</spirit:name>
+        <spirit:name>../../ipshared/f039/hdl/ip/guitar_effects_fdiv_32ns_32ns_32_16_no_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/ip/guitar_effects_fadd_32ns_32ns_32_5_full_dsp_1_ip.v</spirit:name>
+        <spirit:name>../../ipshared/f039/hdl/ip/guitar_effects_fmul_32ns_32ns_32_4_max_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/ip/guitar_effects_fdiv_32ns_32ns_32_16_no_dsp_1_ip.v</spirit:name>
+        <spirit:name>../../ipshared/f039/hdl/ip/guitar_effects_sitodp_32ns_64_6_no_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/ip/guitar_effects_fmul_32ns_32ns_32_4_max_dsp_1_ip.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/ip/guitar_effects_sitodp_32ns_64_6_no_dsp_1_ip.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/ip/guitar_effects_sitofp_32ns_32_6_no_dsp_1_ip.v</spirit:name>
+        <spirit:name>../../ipshared/f039/hdl/ip/guitar_effects_sitofp_32ns_32_6_no_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -3818,51 +3810,43 @@
         <spirit:userFileType>USED_IN_out_of_context</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_compression_buffer_RAM_AUTO_1R1W.v</spirit:name>
+        <spirit:name>../../ipshared/f039/hdl/verilog/guitar_effects_compression_buffer_RAM_AUTO_1R1W.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_control_r_s_axi.v</spirit:name>
+        <spirit:name>../../ipshared/f039/hdl/verilog/guitar_effects_control_r_s_axi.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_dadd_64ns_64ns_64_7_full_dsp_1.v</spirit:name>
+        <spirit:name>../../ipshared/f039/hdl/verilog/guitar_effects_delay_buffer_RAM_AUTO_1R1W.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_ddiv_64ns_64ns_64_59_no_dsp_1.v</spirit:name>
+        <spirit:name>../../ipshared/f039/hdl/verilog/guitar_effects_dmul_64ns_64ns_64_7_max_dsp_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_delay_buffer_RAM_AUTO_1R1W.v</spirit:name>
+        <spirit:name>../../ipshared/f039/hdl/verilog/guitar_effects_fadd_32ns_32ns_32_5_full_dsp_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_dmul_64ns_64ns_64_7_max_dsp_1.v</spirit:name>
+        <spirit:name>../../ipshared/f039/hdl/verilog/guitar_effects_fdiv_32ns_32ns_32_16_no_dsp_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_fadd_32ns_32ns_32_5_full_dsp_1.v</spirit:name>
+        <spirit:name>../../ipshared/f039/hdl/verilog/guitar_effects_flow_control_loop_pipe_sequential_init.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_fdiv_32ns_32ns_32_16_no_dsp_1.v</spirit:name>
+        <spirit:name>../../ipshared/f039/hdl/verilog/guitar_effects_fmul_32ns_32ns_32_4_max_dsp_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_flow_control_loop_pipe_sequential_init.v</spirit:name>
+        <spirit:name>../../ipshared/f039/hdl/verilog/guitar_effects_gmem_m_axi.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_fmul_32ns_32ns_32_4_max_dsp_1.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_gmem_m_axi.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_guitar_effects_Pipeline_LPF_Loop.v</spirit:name>
+        <spirit:name>../../ipshared/f039/hdl/verilog/guitar_effects_guitar_effects_Pipeline_LPF_Loop.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -3870,163 +3854,67 @@
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_guitar_effects_Pipeline_LPF_Loop_lpf_coefficients_ROM_AUTO_1R.v</spirit:name>
+        <spirit:name>../../ipshared/f039/hdl/verilog/guitar_effects_guitar_effects_Pipeline_LPF_Loop_lpf_coefficients_ROM_AUTO_1R.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_hls_deadlock_idx0_monitor.v</spirit:name>
+        <spirit:name>../../ipshared/f039/hdl/verilog/guitar_effects_hls_deadlock_idx0_monitor.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_hls_deadlock_kernel_monitor_top.vh</spirit:name>
+        <spirit:name>../../ipshared/f039/hdl/verilog/guitar_effects_hls_deadlock_kernel_monitor_top.vh</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_mul_32s_8s_40_2_1.v</spirit:name>
+        <spirit:name>../../ipshared/f039/hdl/verilog/guitar_effects_mul_5s_10ns_15_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_mul_32s_10ns_42_2_1.v</spirit:name>
+        <spirit:name>../../ipshared/f039/hdl/verilog/guitar_effects_mul_32s_8s_40_2_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_mul_35ns_25ns_60_2_1.v</spirit:name>
+        <spirit:name>../../ipshared/f039/hdl/verilog/guitar_effects_mul_32s_32s_32_2_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_mul_42ns_33ns_75_2_1.v</spirit:name>
+        <spirit:name>../../ipshared/f039/hdl/verilog/guitar_effects_mul_32s_34ns_65_2_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_mul_49ns_44s_93_5_1.v</spirit:name>
+        <spirit:name>../../ipshared/f039/hdl/verilog/guitar_effects_regslice_both.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_mul_49ns_49ns_98_5_1.v</spirit:name>
+        <spirit:name>../../ipshared/f039/hdl/verilog/guitar_effects_sitodp_32ns_64_6_no_dsp_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_mul_56ns_52s_108_5_1.v</spirit:name>
+        <spirit:name>../../ipshared/f039/hdl/verilog/guitar_effects_sitofp_32ns_32_6_no_dsp_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_mul_64s_63ns_126_5_1.v</spirit:name>
+        <spirit:name>../../ipshared/f039/hdl/verilog/guitar_effects_srem_11ns_10ns_9_15_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_mul_170s_53ns_170_5_1.v</spirit:name>
+        <spirit:name>../../ipshared/f039/hdl/verilog/guitar_effects_srem_32ns_5ns_32_36_seq_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_mux_42_32_1_1.v</spirit:name>
+        <spirit:name>../../ipshared/f039/hdl/verilog/guitar_effects_srem_32ns_10ns_32_36_seq_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_mux_83_1_1_1.v</spirit:name>
+        <spirit:name>../../ipshared/f039/hdl/verilog/guitar_effects_srem_32ns_18ns_17_36_seq_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_mux_164_1_1_1.v</spirit:name>
+        <spirit:name>../../ipshared/f039/hdl/verilog/guitar_effects_srem_32ns_18ns_32_36_seq_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_regslice_both.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_sin_or_cos_double_s.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/guitar_effects_sin_or_cos_double_s_fourth_order_double_sin_cos_K0_V_ROM_1P_LUTRAM_1R.dat</spirit:name>
-        <spirit:userFileType>mif</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_sin_or_cos_double_s_fourth_order_double_sin_cos_K0_V_ROM_1P_LUTRAM_1R.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/guitar_effects_sin_or_cos_double_s_fourth_order_double_sin_cos_K1_V_ROM_1P_LUTRAM_1R.dat</spirit:name>
-        <spirit:userFileType>mif</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_sin_or_cos_double_s_fourth_order_double_sin_cos_K1_V_ROM_1P_LUTRAM_1R.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/guitar_effects_sin_or_cos_double_s_fourth_order_double_sin_cos_K2_V_ROM_1P_LUTRAM_1R.dat</spirit:name>
-        <spirit:userFileType>mif</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_sin_or_cos_double_s_fourth_order_double_sin_cos_K2_V_ROM_1P_LUTRAM_1R.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/guitar_effects_sin_or_cos_double_s_fourth_order_double_sin_cos_K3_V_ROM_1P_LUTRAM_1R.dat</spirit:name>
-        <spirit:userFileType>mif</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_sin_or_cos_double_s_fourth_order_double_sin_cos_K3_V_ROM_1P_LUTRAM_1R.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/guitar_effects_sin_or_cos_double_s_fourth_order_double_sin_cos_K4_V_ROM_1P_LUTRAM_1R.dat</spirit:name>
-        <spirit:userFileType>mif</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_sin_or_cos_double_s_fourth_order_double_sin_cos_K4_V_ROM_1P_LUTRAM_1R.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/guitar_effects_sin_or_cos_double_s_ref_4oPi_table_256_V_ROM_AUTO_1R.dat</spirit:name>
-        <spirit:userFileType>mif</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_sin_or_cos_double_s_ref_4oPi_table_256_V_ROM_AUTO_1R.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_sitodp_32ns_64_6_no_dsp_1.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_sitofp_32ns_32_6_no_dsp_1.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_srem_9ns_8ns_7_13_seq_1.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_srem_11ns_10ns_9_15_1.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_srem_32ns_8ns_32_36_seq_1.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_srem_32ns_10ns_32_36_seq_1.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_srem_32ns_18ns_17_36_seq_1.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_srem_32ns_18ns_32_36_seq_1.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_wah.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_wah_values_buffer_RAM_AUTO_1R1W.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects.v</spirit:name>
+        <spirit:name>../../ipshared/f039/hdl/verilog/guitar_effects.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -4191,62 +4079,52 @@
     <spirit:fileSet>
       <spirit:name>xilinx_verilogbehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_compression_buffer_RAM_AUTO_1R1W.v</spirit:name>
+        <spirit:name>../../ipshared/f039/hdl/verilog/guitar_effects_compression_buffer_RAM_AUTO_1R1W.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_control_r_s_axi.v</spirit:name>
+        <spirit:name>../../ipshared/f039/hdl/verilog/guitar_effects_control_r_s_axi.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_dadd_64ns_64ns_64_7_full_dsp_1.v</spirit:name>
+        <spirit:name>../../ipshared/f039/hdl/verilog/guitar_effects_delay_buffer_RAM_AUTO_1R1W.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_ddiv_64ns_64ns_64_59_no_dsp_1.v</spirit:name>
+        <spirit:name>../../ipshared/f039/hdl/verilog/guitar_effects_dmul_64ns_64ns_64_7_max_dsp_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_delay_buffer_RAM_AUTO_1R1W.v</spirit:name>
+        <spirit:name>../../ipshared/f039/hdl/verilog/guitar_effects_fadd_32ns_32ns_32_5_full_dsp_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_dmul_64ns_64ns_64_7_max_dsp_1.v</spirit:name>
+        <spirit:name>../../ipshared/f039/hdl/verilog/guitar_effects_fdiv_32ns_32ns_32_16_no_dsp_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_fadd_32ns_32ns_32_5_full_dsp_1.v</spirit:name>
+        <spirit:name>../../ipshared/f039/hdl/verilog/guitar_effects_flow_control_loop_pipe_sequential_init.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_fdiv_32ns_32ns_32_16_no_dsp_1.v</spirit:name>
+        <spirit:name>../../ipshared/f039/hdl/verilog/guitar_effects_fmul_32ns_32ns_32_4_max_dsp_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_flow_control_loop_pipe_sequential_init.v</spirit:name>
+        <spirit:name>../../ipshared/f039/hdl/verilog/guitar_effects_gmem_m_axi.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_fmul_32ns_32ns_32_4_max_dsp_1.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_gmem_m_axi.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_guitar_effects_Pipeline_LPF_Loop.v</spirit:name>
+        <spirit:name>../../ipshared/f039/hdl/verilog/guitar_effects_guitar_effects_Pipeline_LPF_Loop.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -4255,236 +4133,112 @@
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_guitar_effects_Pipeline_LPF_Loop_lpf_coefficients_ROM_AUTO_1R.v</spirit:name>
+        <spirit:name>../../ipshared/f039/hdl/verilog/guitar_effects_guitar_effects_Pipeline_LPF_Loop_lpf_coefficients_ROM_AUTO_1R.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_hls_deadlock_idx0_monitor.v</spirit:name>
+        <spirit:name>../../ipshared/f039/hdl/verilog/guitar_effects_hls_deadlock_idx0_monitor.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_hls_deadlock_kernel_monitor_top.vh</spirit:name>
+        <spirit:name>../../ipshared/f039/hdl/verilog/guitar_effects_hls_deadlock_kernel_monitor_top.vh</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_mul_32s_8s_40_2_1.v</spirit:name>
+        <spirit:name>../../ipshared/f039/hdl/verilog/guitar_effects_mul_5s_10ns_15_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_mul_32s_10ns_42_2_1.v</spirit:name>
+        <spirit:name>../../ipshared/f039/hdl/verilog/guitar_effects_mul_32s_8s_40_2_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_mul_35ns_25ns_60_2_1.v</spirit:name>
+        <spirit:name>../../ipshared/f039/hdl/verilog/guitar_effects_mul_32s_32s_32_2_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_mul_42ns_33ns_75_2_1.v</spirit:name>
+        <spirit:name>../../ipshared/f039/hdl/verilog/guitar_effects_mul_32s_34ns_65_2_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_mul_49ns_44s_93_5_1.v</spirit:name>
+        <spirit:name>../../ipshared/f039/hdl/verilog/guitar_effects_regslice_both.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_mul_49ns_49ns_98_5_1.v</spirit:name>
+        <spirit:name>../../ipshared/f039/hdl/verilog/guitar_effects_sitodp_32ns_64_6_no_dsp_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_mul_56ns_52s_108_5_1.v</spirit:name>
+        <spirit:name>../../ipshared/f039/hdl/verilog/guitar_effects_sitofp_32ns_32_6_no_dsp_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_mul_64s_63ns_126_5_1.v</spirit:name>
+        <spirit:name>../../ipshared/f039/hdl/verilog/guitar_effects_srem_11ns_10ns_9_15_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_mul_170s_53ns_170_5_1.v</spirit:name>
+        <spirit:name>../../ipshared/f039/hdl/verilog/guitar_effects_srem_32ns_5ns_32_36_seq_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_mux_42_32_1_1.v</spirit:name>
+        <spirit:name>../../ipshared/f039/hdl/verilog/guitar_effects_srem_32ns_10ns_32_36_seq_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_mux_83_1_1_1.v</spirit:name>
+        <spirit:name>../../ipshared/f039/hdl/verilog/guitar_effects_srem_32ns_18ns_17_36_seq_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_mux_164_1_1_1.v</spirit:name>
+        <spirit:name>../../ipshared/f039/hdl/verilog/guitar_effects_srem_32ns_18ns_32_36_seq_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_regslice_both.v</spirit:name>
+        <spirit:name>../../ipshared/f039/hdl/verilog/guitar_effects.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_sin_or_cos_double_s.v</spirit:name>
+        <spirit:name>../../ipshared/f039/hdl/ip/guitar_effects_dmul_64ns_64ns_64_7_max_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/guitar_effects_sin_or_cos_double_s_fourth_order_double_sin_cos_K0_V_ROM_1P_LUTRAM_1R.dat</spirit:name>
-        <spirit:userFileType>mif</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_sin_or_cos_double_s_fourth_order_double_sin_cos_K0_V_ROM_1P_LUTRAM_1R.v</spirit:name>
+        <spirit:name>../../ipshared/f039/hdl/ip/guitar_effects_fadd_32ns_32ns_32_5_full_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/guitar_effects_sin_or_cos_double_s_fourth_order_double_sin_cos_K1_V_ROM_1P_LUTRAM_1R.dat</spirit:name>
-        <spirit:userFileType>mif</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_sin_or_cos_double_s_fourth_order_double_sin_cos_K1_V_ROM_1P_LUTRAM_1R.v</spirit:name>
+        <spirit:name>../../ipshared/f039/hdl/ip/guitar_effects_fdiv_32ns_32ns_32_16_no_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/guitar_effects_sin_or_cos_double_s_fourth_order_double_sin_cos_K2_V_ROM_1P_LUTRAM_1R.dat</spirit:name>
-        <spirit:userFileType>mif</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_sin_or_cos_double_s_fourth_order_double_sin_cos_K2_V_ROM_1P_LUTRAM_1R.v</spirit:name>
+        <spirit:name>../../ipshared/f039/hdl/ip/guitar_effects_fmul_32ns_32ns_32_4_max_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/guitar_effects_sin_or_cos_double_s_fourth_order_double_sin_cos_K3_V_ROM_1P_LUTRAM_1R.dat</spirit:name>
-        <spirit:userFileType>mif</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_sin_or_cos_double_s_fourth_order_double_sin_cos_K3_V_ROM_1P_LUTRAM_1R.v</spirit:name>
+        <spirit:name>../../ipshared/f039/hdl/ip/guitar_effects_sitodp_32ns_64_6_no_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/guitar_effects_sin_or_cos_double_s_fourth_order_double_sin_cos_K4_V_ROM_1P_LUTRAM_1R.dat</spirit:name>
-        <spirit:userFileType>mif</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_sin_or_cos_double_s_fourth_order_double_sin_cos_K4_V_ROM_1P_LUTRAM_1R.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/guitar_effects_sin_or_cos_double_s_ref_4oPi_table_256_V_ROM_AUTO_1R.dat</spirit:name>
-        <spirit:userFileType>mif</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_sin_or_cos_double_s_ref_4oPi_table_256_V_ROM_AUTO_1R.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_sitodp_32ns_64_6_no_dsp_1.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_sitofp_32ns_32_6_no_dsp_1.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_srem_9ns_8ns_7_13_seq_1.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_srem_11ns_10ns_9_15_1.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_srem_32ns_8ns_32_36_seq_1.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_srem_32ns_10ns_32_36_seq_1.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_srem_32ns_18ns_17_36_seq_1.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_srem_32ns_18ns_32_36_seq_1.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_wah.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects_wah_values_buffer_RAM_AUTO_1R1W.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/verilog/guitar_effects.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/ip/guitar_effects_dadd_64ns_64ns_64_7_full_dsp_1_ip.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/ip/guitar_effects_ddiv_64ns_64ns_64_59_no_dsp_1_ip.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/ip/guitar_effects_dmul_64ns_64ns_64_7_max_dsp_1_ip.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/ip/guitar_effects_fadd_32ns_32ns_32_5_full_dsp_1_ip.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/ip/guitar_effects_fdiv_32ns_32ns_32_16_no_dsp_1_ip.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/ip/guitar_effects_fmul_32ns_32ns_32_4_max_dsp_1_ip.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/ip/guitar_effects_sitodp_32ns_64_6_no_dsp_1_ip.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/8a68/hdl/ip/guitar_effects_sitofp_32ns_32_6_no_dsp_1_ip.v</spirit:name>
+        <spirit:name>../../ipshared/f039/hdl/ip/guitar_effects_sitofp_32ns_32_6_no_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -4744,7 +4498,7 @@
     <xilinx:coreExtensions>
       <xilinx:displayName>Guitar_effects</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>2113527060</xilinx:coreRevision>
+      <xilinx:coreRevision>2113528683</xilinx:coreRevision>
       <xilinx:sdxKernelAttributes>
         <xilinx:sdx_kernel>true</xilinx:sdx_kernel>
         <xilinx:sdx_kernel_type>hls</xilinx:sdx_kernel_type>
@@ -4853,7 +4607,7 @@
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="bd6b71c9"/>
       <xilinx:checksum xilinx:scope="addressSpaces" xilinx:value="2cb3236e"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="353b3f10"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="1648bd0d"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="26b3eb36"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="fcae2b01"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="4c02a99c"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="5381b269"/>

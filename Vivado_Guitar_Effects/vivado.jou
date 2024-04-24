@@ -2,10 +2,10 @@
 # Vivado v2022.1 (64-bit)
 # SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
 # IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
-# Start of session at: Tue Apr 23 10:49:37 2024
-# Process ID: 13020
+# Start of session at: Wed Apr 24 12:39:12 2024
+# Process ID: 24392
 # Current directory: C:/EECE4632FinalProject/Vivado_Guitar_Effects
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1880 C:\EECE4632FinalProject\Vivado_Guitar_Effects\Vivado_Guitar_Effects.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent18180 C:\EECE4632FinalProject\Vivado_Guitar_Effects\Vivado_Guitar_Effects.xpr
 # Log file: C:/EECE4632FinalProject/Vivado_Guitar_Effects/vivado.log
 # Journal file: C:/EECE4632FinalProject/Vivado_Guitar_Effects\vivado.jou
 # Running On: WFXB07B250A366D, OS: Windows, CPU Frequency: 2904 MHz, CPU Physical cores: 8, Host memory: 16881 MB
@@ -16,16 +16,16 @@ update_compile_order -fileset sources_1
 open_bd_design {C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd}
 update_ip_catalog -rebuild -scan_changes
 report_ip_status -name ip_status
-upgrade_ip -vlnv xilinx.com:hls:guitar_effects:1.0 [get_ips  guitar_effects_design_guitar_effects_0_32] -log ip_upgrade.log
-export_ip_user_files -of_objects [get_ips guitar_effects_design_guitar_effects_0_32] -no_script -sync -force -quiet
+upgrade_ip -vlnv xilinx.com:hls:guitar_effects:1.0 [get_ips  guitar_effects_design_guitar_effects_0_33] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips guitar_effects_design_guitar_effects_0_33] -no_script -sync -force -quiet
 generate_target all [get_files  C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd]
-catch { config_ip_cache -export [get_ips -all guitar_effects_design_guitar_effects_0_32] }
+catch { config_ip_cache -export [get_ips -all guitar_effects_design_guitar_effects_0_33] }
 catch { config_ip_cache -export [get_ips -all guitar_effects_design_auto_pc_0] }
 catch { config_ip_cache -export [get_ips -all guitar_effects_design_auto_pc_1] }
 export_ip_user_files -of_objects [get_files C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd] -no_script -sync -force -quiet
 create_ip_run [get_files -of_objects [get_fileset sources_1] C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd]
-launch_runs guitar_effects_design_guitar_effects_0_32_synth_1 -jobs 16
-wait_on_run guitar_effects_design_guitar_effects_0_32_synth_1
+launch_runs guitar_effects_design_guitar_effects_0_33_synth_1 -jobs 16
+wait_on_run guitar_effects_design_guitar_effects_0_33_synth_1
 export_simulation -of_objects [get_files C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd] -directory C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.ip_user_files/sim_scripts -ip_user_files_dir C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.ip_user_files -ipstatic_source_dir C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/modelsim} {questa=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/questa} {riviera=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/riviera} {activehdl=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
 report_ip_status -name ip_status 
 reset_run synth_1
@@ -35,16 +35,33 @@ open_run impl_1
 open_bd_design {C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd}
 update_ip_catalog -rebuild -scan_changes
 report_ip_status -name ip_status
-upgrade_ip -vlnv xilinx.com:hls:guitar_effects:1.0 [get_ips  guitar_effects_design_guitar_effects_0_32] -log ip_upgrade.log
-export_ip_user_files -of_objects [get_ips guitar_effects_design_guitar_effects_0_32] -no_script -sync -force -quiet
+upgrade_ip -vlnv xilinx.com:hls:guitar_effects:1.0 [get_ips  guitar_effects_design_guitar_effects_0_33] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips guitar_effects_design_guitar_effects_0_33] -no_script -sync -force -quiet
 generate_target all [get_files  C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd]
-catch { config_ip_cache -export [get_ips -all guitar_effects_design_guitar_effects_0_32] }
+catch { config_ip_cache -export [get_ips -all guitar_effects_design_guitar_effects_0_33] }
 catch { config_ip_cache -export [get_ips -all guitar_effects_design_auto_pc_0] }
 catch { config_ip_cache -export [get_ips -all guitar_effects_design_auto_pc_1] }
 export_ip_user_files -of_objects [get_files C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd] -no_script -sync -force -quiet
 create_ip_run [get_files -of_objects [get_fileset sources_1] C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd]
-launch_runs guitar_effects_design_guitar_effects_0_32_synth_1 -jobs 16
-wait_on_run guitar_effects_design_guitar_effects_0_32_synth_1
+launch_runs guitar_effects_design_guitar_effects_0_33_synth_1 -jobs 16
+wait_on_run guitar_effects_design_guitar_effects_0_33_synth_1
+export_simulation -of_objects [get_files C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd] -directory C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.ip_user_files/sim_scripts -ip_user_files_dir C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.ip_user_files -ipstatic_source_dir C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/modelsim} {questa=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/questa} {riviera=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/riviera} {activehdl=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+report_ip_status -name ip_status 
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+upgrade_ip -vlnv xilinx.com:hls:guitar_effects:1.0 [get_ips  guitar_effects_design_guitar_effects_0_33] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips guitar_effects_design_guitar_effects_0_33] -no_script -sync -force -quiet
+generate_target all [get_files  C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd]
+catch { config_ip_cache -export [get_ips -all guitar_effects_design_guitar_effects_0_33] }
+catch { config_ip_cache -export [get_ips -all guitar_effects_design_auto_pc_0] }
+catch { config_ip_cache -export [get_ips -all guitar_effects_design_auto_pc_1] }
+export_ip_user_files -of_objects [get_files C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd]
+launch_runs guitar_effects_design_guitar_effects_0_33_synth_1 -jobs 16
+wait_on_run guitar_effects_design_guitar_effects_0_33_synth_1
 export_simulation -of_objects [get_files C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd] -directory C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.ip_user_files/sim_scripts -ip_user_files_dir C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.ip_user_files -ipstatic_source_dir C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/modelsim} {questa=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/questa} {riviera=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/riviera} {activehdl=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
 report_ip_status -name ip_status 
 reset_run synth_1
@@ -52,75 +69,85 @@ launch_runs impl_1 -to_step write_bitstream -jobs 16
 wait_on_run impl_1
 update_ip_catalog -rebuild -scan_changes
 report_ip_status -name ip_status
-upgrade_ip -vlnv xilinx.com:hls:guitar_effects:1.0 [get_ips  guitar_effects_design_guitar_effects_0_32] -log ip_upgrade.log
-export_ip_user_files -of_objects [get_ips guitar_effects_design_guitar_effects_0_32] -no_script -sync -force -quiet
+upgrade_ip -vlnv xilinx.com:hls:guitar_effects:1.0 [get_ips  guitar_effects_design_guitar_effects_0_33] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips guitar_effects_design_guitar_effects_0_33] -no_script -sync -force -quiet
 generate_target all [get_files  C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd]
-catch { config_ip_cache -export [get_ips -all guitar_effects_design_guitar_effects_0_32] }
+catch { config_ip_cache -export [get_ips -all guitar_effects_design_guitar_effects_0_33] }
 catch { config_ip_cache -export [get_ips -all guitar_effects_design_auto_pc_0] }
 catch { config_ip_cache -export [get_ips -all guitar_effects_design_auto_pc_1] }
 export_ip_user_files -of_objects [get_files C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd] -no_script -sync -force -quiet
 create_ip_run [get_files -of_objects [get_fileset sources_1] C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd]
-launch_runs guitar_effects_design_guitar_effects_0_32_synth_1 -jobs 16
-wait_on_run guitar_effects_design_guitar_effects_0_32_synth_1
+launch_runs guitar_effects_design_guitar_effects_0_33_synth_1 -jobs 16
+wait_on_run guitar_effects_design_guitar_effects_0_33_synth_1
 export_simulation -of_objects [get_files C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd] -directory C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.ip_user_files/sim_scripts -ip_user_files_dir C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.ip_user_files -ipstatic_source_dir C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/modelsim} {questa=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/questa} {riviera=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/riviera} {activehdl=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
 reset_run synth_1
 launch_runs impl_1 -to_step write_bitstream -jobs 16
 wait_on_run impl_1
 update_ip_catalog -rebuild -scan_changes
 report_ip_status -name ip_status
-upgrade_ip -vlnv xilinx.com:hls:guitar_effects:1.0 [get_ips  guitar_effects_design_guitar_effects_0_32] -log ip_upgrade.log
-export_ip_user_files -of_objects [get_ips guitar_effects_design_guitar_effects_0_32] -no_script -sync -force -quiet
+upgrade_ip -vlnv xilinx.com:hls:guitar_effects:1.0 [get_ips  guitar_effects_design_guitar_effects_0_33] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips guitar_effects_design_guitar_effects_0_33] -no_script -sync -force -quiet
 generate_target all [get_files  C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd]
-catch { config_ip_cache -export [get_ips -all guitar_effects_design_blk_mem_gen_0_2] }
-catch { config_ip_cache -export [get_ips -all guitar_effects_design_guitar_effects_0_32] }
+catch { config_ip_cache -export [get_ips -all guitar_effects_design_guitar_effects_0_33] }
 catch { config_ip_cache -export [get_ips -all guitar_effects_design_auto_pc_0] }
 catch { config_ip_cache -export [get_ips -all guitar_effects_design_auto_pc_1] }
 export_ip_user_files -of_objects [get_files C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd] -no_script -sync -force -quiet
 create_ip_run [get_files -of_objects [get_fileset sources_1] C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd]
-launch_runs guitar_effects_design_blk_mem_gen_0_2_synth_1 guitar_effects_design_guitar_effects_0_32_synth_1 -jobs 16
-wait_on_run guitar_effects_design_blk_mem_gen_0_2_synth_1
-wait_on_run guitar_effects_design_guitar_effects_0_32_synth_1
+launch_runs guitar_effects_design_guitar_effects_0_33_synth_1 -jobs 16
+wait_on_run guitar_effects_design_guitar_effects_0_33_synth_1
 export_simulation -of_objects [get_files C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd] -directory C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.ip_user_files/sim_scripts -ip_user_files_dir C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.ip_user_files -ipstatic_source_dir C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/modelsim} {questa=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/questa} {riviera=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/riviera} {activehdl=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
 report_ip_status -name ip_status 
 reset_run synth_1
 launch_runs impl_1 -to_step write_bitstream -jobs 16
 wait_on_run impl_1
-open_run synth_1 -name synth_1
-open_bd_design {C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd}
 update_ip_catalog -rebuild -scan_changes
 report_ip_status -name ip_status
-upgrade_ip -vlnv xilinx.com:hls:guitar_effects:1.0 [get_ips  guitar_effects_design_guitar_effects_0_32] -log ip_upgrade.log
-export_ip_user_files -of_objects [get_ips guitar_effects_design_guitar_effects_0_32] -no_script -sync -force -quiet
+upgrade_ip -vlnv xilinx.com:hls:guitar_effects:1.0 [get_ips  guitar_effects_design_guitar_effects_0_33] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips guitar_effects_design_guitar_effects_0_33] -no_script -sync -force -quiet
 generate_target all [get_files  C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd]
-catch { config_ip_cache -export [get_ips -all guitar_effects_design_guitar_effects_0_32] }
+catch { config_ip_cache -export [get_ips -all guitar_effects_design_guitar_effects_0_33] }
 catch { config_ip_cache -export [get_ips -all guitar_effects_design_auto_pc_0] }
 catch { config_ip_cache -export [get_ips -all guitar_effects_design_auto_pc_1] }
 export_ip_user_files -of_objects [get_files C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd] -no_script -sync -force -quiet
 create_ip_run [get_files -of_objects [get_fileset sources_1] C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd]
-launch_runs guitar_effects_design_guitar_effects_0_32_synth_1 -jobs 16
-wait_on_run guitar_effects_design_guitar_effects_0_32_synth_1
+launch_runs guitar_effects_design_guitar_effects_0_33_synth_1 -jobs 16
+wait_on_run guitar_effects_design_guitar_effects_0_33_synth_1
 export_simulation -of_objects [get_files C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd] -directory C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.ip_user_files/sim_scripts -ip_user_files_dir C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.ip_user_files -ipstatic_source_dir C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/modelsim} {questa=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/questa} {riviera=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/riviera} {activehdl=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
 report_ip_status -name ip_status 
-delete_bd_objs [get_bd_intf_nets ps7_0_axi_periph_M01_AXI] [get_bd_intf_nets guitar_effects_0_m_axi_gmem] [get_bd_intf_nets axi_dma_0_M_AXIS_MM2S] [get_bd_intf_nets guitar_effects_0_OUTPUT_r] [get_bd_cells guitar_effects_0]
-startgroup
-create_bd_cell -type ip -vlnv xilinx.com:hls:guitar_effects:1.0 guitar_effects_0
-endgroup
-set_property location {2 429 -153} [get_bd_cells guitar_effects_0]
-connect_bd_intf_net [get_bd_intf_pins guitar_effects_0/m_axi_gmem] [get_bd_intf_pins axi_bram_ctrl_0/S_AXI]
-connect_bd_intf_net [get_bd_intf_pins guitar_effects_0/INPUT_r] [get_bd_intf_pins axi_dma_0/M_AXIS_MM2S]
-connect_bd_intf_net [get_bd_intf_pins guitar_effects_0/OUTPUT_r] [get_bd_intf_pins axi_dma_0/S_AXIS_S2MM]
-apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (100 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/guitar_effects_0/s_axi_control_r} ddr_seg {Auto} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins guitar_effects_0/s_axi_control_r]
-save_bd_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+upgrade_ip -vlnv xilinx.com:hls:guitar_effects:1.0 [get_ips  guitar_effects_design_guitar_effects_0_33] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips guitar_effects_design_guitar_effects_0_33] -no_script -sync -force -quiet
+generate_target all [get_files  C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd]
+catch { config_ip_cache -export [get_ips -all guitar_effects_design_guitar_effects_0_33] }
+catch { config_ip_cache -export [get_ips -all guitar_effects_design_auto_pc_0] }
+catch { config_ip_cache -export [get_ips -all guitar_effects_design_auto_pc_1] }
+export_ip_user_files -of_objects [get_files C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd]
+launch_runs guitar_effects_design_guitar_effects_0_33_synth_1 -jobs 16
+wait_on_run guitar_effects_design_guitar_effects_0_33_synth_1
+export_simulation -of_objects [get_files C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd] -directory C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.ip_user_files/sim_scripts -ip_user_files_dir C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.ip_user_files -ipstatic_source_dir C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/modelsim} {questa=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/questa} {riviera=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/riviera} {activehdl=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
 report_ip_status -name ip_status 
 reset_run synth_1
 launch_runs impl_1 -to_step write_bitstream -jobs 16
 wait_on_run impl_1
-startgroup
-set_property -dict [list CONFIG.c_sg_length_width {26}] [get_bd_cells axi_dma_0]
-endgroup
-save_bd_design
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+upgrade_ip -vlnv xilinx.com:hls:guitar_effects:1.0 [get_ips  guitar_effects_design_guitar_effects_0_33] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips guitar_effects_design_guitar_effects_0_33] -no_script -sync -force -quiet
+generate_target all [get_files  C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd]
+catch { config_ip_cache -export [get_ips -all guitar_effects_design_guitar_effects_0_33] }
+catch { config_ip_cache -export [get_ips -all guitar_effects_design_auto_pc_0] }
+catch { config_ip_cache -export [get_ips -all guitar_effects_design_auto_pc_1] }
+export_ip_user_files -of_objects [get_files C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd]
+launch_runs guitar_effects_design_guitar_effects_0_33_synth_1 -jobs 16
+wait_on_run guitar_effects_design_guitar_effects_0_33_synth_1
+export_simulation -of_objects [get_files C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd] -directory C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.ip_user_files/sim_scripts -ip_user_files_dir C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.ip_user_files -ipstatic_source_dir C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/modelsim} {questa=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/questa} {riviera=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/riviera} {activehdl=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+report_ip_status -name ip_status 
 reset_run synth_1
 launch_runs impl_1 -to_step write_bitstream -jobs 16
 wait_on_run impl_1
-startgroup
-endgroup

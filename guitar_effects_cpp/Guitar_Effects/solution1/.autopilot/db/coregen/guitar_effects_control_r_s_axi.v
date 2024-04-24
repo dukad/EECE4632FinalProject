@@ -6,7 +6,7 @@
 `timescale 1ns/1ps
 module guitar_effects_control_r_s_axi
 #(parameter
-    C_S_AXI_ADDR_WIDTH = 7,
+    C_S_AXI_ADDR_WIDTH = 8,
     C_S_AXI_DATA_WIDTH = 32
 )(
     input  wire                          ACLK,
@@ -42,7 +42,8 @@ module guitar_effects_control_r_s_axi
     output wire [31:0]                   tempo,
     output wire [63:0]                   wah_coeffs,
     input  wire [31:0]                   debug_output,
-    input  wire                          debug_output_ap_vld
+    input  wire                          debug_output_ap_vld,
+    output wire [31:0]                   starting_sample
 );
 //------------------------Address Info-------------------
 // 0x00 : reserved
@@ -93,35 +94,40 @@ module guitar_effects_control_r_s_axi
 // 0x78 : Control signal of debug_output
 //        bit 0  - debug_output_ap_vld (Read/COR)
 //        others - reserved
+// 0x84 : Data signal of starting_sample
+//        bit 31~0 - starting_sample[31:0] (Read/Write)
+// 0x88 : reserved
 // (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
 //------------------------Parameter----------------------
 localparam
-    ADDR_AXILITE_OUT_DATA_0                = 7'h10,
-    ADDR_AXILITE_OUT_CTRL                  = 7'h14,
-    ADDR_CONTROL_DATA_0                    = 7'h20,
-    ADDR_CONTROL_CTRL                      = 7'h24,
-    ADDR_DISTORTION_THRESHOLD_DATA_0       = 7'h28,
-    ADDR_DISTORTION_THRESHOLD_CTRL         = 7'h2c,
-    ADDR_DISTORTION_CLIP_FACTOR_DATA_0     = 7'h30,
-    ADDR_DISTORTION_CLIP_FACTOR_CTRL       = 7'h34,
-    ADDR_COMPRESSION_MIN_THRESHOLD_DATA_0  = 7'h38,
-    ADDR_COMPRESSION_MIN_THRESHOLD_CTRL    = 7'h3c,
-    ADDR_COMPRESSION_MAX_THRESHOLD_DATA_0  = 7'h40,
-    ADDR_COMPRESSION_MAX_THRESHOLD_CTRL    = 7'h44,
-    ADDR_COMPRESSION_ZERO_THRESHOLD_DATA_0 = 7'h48,
-    ADDR_COMPRESSION_ZERO_THRESHOLD_CTRL   = 7'h4c,
-    ADDR_DELAY_MULT_DATA_0                 = 7'h50,
-    ADDR_DELAY_MULT_CTRL                   = 7'h54,
-    ADDR_DELAY_SAMPLES_DATA_0              = 7'h58,
-    ADDR_DELAY_SAMPLES_CTRL                = 7'h5c,
-    ADDR_TEMPO_DATA_0                      = 7'h60,
-    ADDR_TEMPO_CTRL                        = 7'h64,
-    ADDR_WAH_COEFFS_DATA_0                 = 7'h68,
-    ADDR_WAH_COEFFS_DATA_1                 = 7'h6c,
-    ADDR_WAH_COEFFS_CTRL                   = 7'h70,
-    ADDR_DEBUG_OUTPUT_DATA_0               = 7'h74,
-    ADDR_DEBUG_OUTPUT_CTRL                 = 7'h78,
+    ADDR_AXILITE_OUT_DATA_0                = 8'h10,
+    ADDR_AXILITE_OUT_CTRL                  = 8'h14,
+    ADDR_CONTROL_DATA_0                    = 8'h20,
+    ADDR_CONTROL_CTRL                      = 8'h24,
+    ADDR_DISTORTION_THRESHOLD_DATA_0       = 8'h28,
+    ADDR_DISTORTION_THRESHOLD_CTRL         = 8'h2c,
+    ADDR_DISTORTION_CLIP_FACTOR_DATA_0     = 8'h30,
+    ADDR_DISTORTION_CLIP_FACTOR_CTRL       = 8'h34,
+    ADDR_COMPRESSION_MIN_THRESHOLD_DATA_0  = 8'h38,
+    ADDR_COMPRESSION_MIN_THRESHOLD_CTRL    = 8'h3c,
+    ADDR_COMPRESSION_MAX_THRESHOLD_DATA_0  = 8'h40,
+    ADDR_COMPRESSION_MAX_THRESHOLD_CTRL    = 8'h44,
+    ADDR_COMPRESSION_ZERO_THRESHOLD_DATA_0 = 8'h48,
+    ADDR_COMPRESSION_ZERO_THRESHOLD_CTRL   = 8'h4c,
+    ADDR_DELAY_MULT_DATA_0                 = 8'h50,
+    ADDR_DELAY_MULT_CTRL                   = 8'h54,
+    ADDR_DELAY_SAMPLES_DATA_0              = 8'h58,
+    ADDR_DELAY_SAMPLES_CTRL                = 8'h5c,
+    ADDR_TEMPO_DATA_0                      = 8'h60,
+    ADDR_TEMPO_CTRL                        = 8'h64,
+    ADDR_WAH_COEFFS_DATA_0                 = 8'h68,
+    ADDR_WAH_COEFFS_DATA_1                 = 8'h6c,
+    ADDR_WAH_COEFFS_CTRL                   = 8'h70,
+    ADDR_DEBUG_OUTPUT_DATA_0               = 8'h74,
+    ADDR_DEBUG_OUTPUT_CTRL                 = 8'h78,
+    ADDR_STARTING_SAMPLE_DATA_0            = 8'h84,
+    ADDR_STARTING_SAMPLE_CTRL              = 8'h88,
     WRIDLE                                 = 2'd0,
     WRDATA                                 = 2'd1,
     WRRESP                                 = 2'd2,
@@ -129,7 +135,7 @@ localparam
     RDIDLE                                 = 2'd0,
     RDDATA                                 = 2'd1,
     RDRESET                                = 2'd2,
-    ADDR_BITS                = 7;
+    ADDR_BITS                = 8;
 
 //------------------------Local signal-------------------
     reg  [1:0]                    wstate = WRRESET;
@@ -158,6 +164,7 @@ localparam
     reg  [63:0]                   int_wah_coeffs = 'b0;
     reg                           int_debug_output_ap_vld;
     reg  [31:0]                   int_debug_output = 'b0;
+    reg  [31:0]                   int_starting_sample = 'b0;
 
 //------------------------Instantiation------------------
 
@@ -295,6 +302,9 @@ always @(posedge ACLK) begin
                 ADDR_DEBUG_OUTPUT_CTRL: begin
                     rdata[0] <= int_debug_output_ap_vld;
                 end
+                ADDR_STARTING_SAMPLE_DATA_0: begin
+                    rdata <= int_starting_sample[31:0];
+                end
             endcase
         end
     end
@@ -312,6 +322,7 @@ assign delay_mult                 = int_delay_mult;
 assign delay_samples              = int_delay_samples;
 assign tempo                      = int_tempo;
 assign wah_coeffs                 = int_wah_coeffs;
+assign starting_sample            = int_starting_sample;
 // int_axilite_out
 always @(posedge ACLK) begin
     if (ARESET)
@@ -463,6 +474,16 @@ always @(posedge ACLK) begin
             int_debug_output_ap_vld <= 1'b1;
         else if (ar_hs && raddr == ADDR_DEBUG_OUTPUT_CTRL)
             int_debug_output_ap_vld <= 1'b0; // clear on read
+    end
+end
+
+// int_starting_sample[31:0]
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_starting_sample[31:0] <= 0;
+    else if (ACLK_EN) begin
+        if (w_hs && waddr == ADDR_STARTING_SAMPLE_DATA_0)
+            int_starting_sample[31:0] <= (WDATA[31:0] & wmask) | (int_starting_sample[31:0] & ~wmask);
     end
 end
 

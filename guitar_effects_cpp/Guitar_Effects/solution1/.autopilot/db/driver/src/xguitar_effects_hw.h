@@ -52,6 +52,9 @@
 // 0x78 : Control signal of debug_output
 //        bit 0  - debug_output_ap_vld (Read/COR)
 //        others - reserved
+// 0x84 : Data signal of starting_sample
+//        bit 31~0 - starting_sample[31:0] (Read/Write)
+// 0x88 : reserved
 // (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
 #define XGUITAR_EFFECTS_CONTROL_R_ADDR_AXILITE_OUT_DATA                0x10
@@ -80,4 +83,6 @@
 #define XGUITAR_EFFECTS_CONTROL_R_ADDR_DEBUG_OUTPUT_DATA               0x74
 #define XGUITAR_EFFECTS_CONTROL_R_BITS_DEBUG_OUTPUT_DATA               32
 #define XGUITAR_EFFECTS_CONTROL_R_ADDR_DEBUG_OUTPUT_CTRL               0x78
+#define XGUITAR_EFFECTS_CONTROL_R_ADDR_STARTING_SAMPLE_DATA            0x84
+#define XGUITAR_EFFECTS_CONTROL_R_BITS_STARTING_SAMPLE_DATA            32
 

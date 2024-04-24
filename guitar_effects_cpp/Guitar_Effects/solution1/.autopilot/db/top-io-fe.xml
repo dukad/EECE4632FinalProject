@@ -61,7 +61,7 @@
           <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="96"/>
         </hw>
       </arg>
-      <arg id="12" access_type="r" src_name="wah_coeffs" src_type="ap_fixed&lt;32, -32, AP_TRN, AP_WRAP, 0&gt;*" src_isptr="1" src_bitwidth="32" src_size_or_depth="1000">
+      <arg id="12" access_type="r" src_name="wah_coeffs" src_type="ap_fixed&lt;32, 8, AP_TRN, AP_WRAP, 0&gt;*" src_isptr="1" src_bitwidth="32" src_size_or_depth="1000">
         <hw hw_usage="data" hw_interface="MAXI" hw_name="gmem" hw_bitwidth="32" hw_size_or_depth="0" hw_kernel_support="true">
           <constraint constraint_type="pragma interface" mode="m_axi" register_option="0" offset="slave" latency="0" num_read_outstanding="16" num_write_outstanding="16" max_read_burst_length="16" max_write_burst_length="16" max_widen_bitwidth="0"/>
           <constraint constraint_type="bitwidth" orig_bitwidth="32" final_bitwidth="32"/>
@@ -70,9 +70,14 @@
           <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="104"/>
         </hw>
       </arg>
-      <arg id="13" access_type="w" src_name="debug_output" src_type="ap_fixed&lt;32, -32, AP_TRN, AP_WRAP, 0&gt;&amp;" src_isptr="1" src_bitwidth="32" src_size_or_depth="1">
+      <arg id="13" access_type="w" src_name="debug_output" src_type="ap_fixed&lt;32, 8, AP_TRN, AP_WRAP, 0&gt;&amp;" src_isptr="1" src_bitwidth="32" src_size_or_depth="1">
         <hw hw_usage="data" hw_interface="S_AXILite" hw_name="control_r" hw_bitwidth="32" hw_size_or_depth="1" hw_kernel_support="true">
           <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="116"/>
+        </hw>
+      </arg>
+      <arg id="14" access_type="r" src_name="starting_sample" src_type="int" src_isptr="0" src_bitwidth="32" src_size_or_depth="1">
+        <hw hw_usage="data" hw_interface="S_AXILite" hw_name="control_r" hw_bitwidth="32" hw_size_or_depth="1" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="132"/>
         </hw>
       </arg>
     </args>

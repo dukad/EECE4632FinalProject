@@ -16,7 +16,7 @@
             <Obj class_id="5" tracking_level="0" version="0">
               <type>1</type>
               <id>1</id>
-              <name>sext_ln65</name>
+              <name>sext_ln67</name>
               <fileName/>
               <fileDirectory/>
               <lineNumber>0</lineNumber>
@@ -34,7 +34,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>795046515</coreId>
+              <coreId>909260083</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>10</bitwidth>
@@ -106,7 +106,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>795108722</coreId>
+              <coreId>842412597</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -146,7 +146,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1868767273</coreId>
+              <coreId>1852793632</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -188,7 +188,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1936617315</coreId>
+              <coreId>741487420</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>9</bitwidth>
@@ -212,7 +212,7 @@
             <Obj>
               <type>0</type>
               <id>7</id>
-              <name>sext_ln65_read</name>
+              <name>sext_ln67_read</name>
               <fileName/>
               <fileDirectory/>
               <lineNumber>0</lineNumber>
@@ -230,7 +230,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1868767273</coreId>
+              <coreId>1852793632</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>10</bitwidth>
@@ -255,7 +255,7 @@
             <Obj>
               <type>0</type>
               <id>8</id>
-              <name>sext_ln65_cast</name>
+              <name>sext_ln67_cast</name>
               <fileName/>
               <fileDirectory/>
               <lineNumber>0</lineNumber>
@@ -266,14 +266,14 @@
                 <item_version>0</item_version>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>sext_ln65_cast_fu_130_p1</rtlName>
+              <rtlName>sext_ln67_cast_fu_130_p1</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1936617315</coreId>
+              <coreId>741487420</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>11</bitwidth>
@@ -315,7 +315,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1936617315</coreId>
+              <coreId>741487420</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -358,7 +358,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1936617315</coreId>
+              <coreId>741487420</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -425,10 +425,10 @@
             <Obj>
               <type>0</type>
               <id>13</id>
-              <name>i_7</name>
+              <name>i_1</name>
               <fileName>guitar_effects.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>167</lineNumber>
+              <lineNumber>173</lineNumber>
               <contextFuncName>compression</contextFuncName>
               <contextNormFuncName>compression</contextNormFuncName>
               <inlineStackInfo>
@@ -444,7 +444,7 @@
                         <first>guitar_effects.cpp</first>
                         <second>compression</second>
                       </first>
-                      <second>167</second>
+                      <second>173</second>
                     </item>
                   </second>
                 </item>
@@ -457,7 +457,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1936617315</coreId>
+              <coreId>1852793632</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>9</bitwidth>
@@ -482,10 +482,10 @@
             <Obj>
               <type>0</type>
               <id>14</id>
-              <name>icmp_ln167</name>
+              <name>icmp_ln173</name>
               <fileName>guitar_effects.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>167</lineNumber>
+              <lineNumber>173</lineNumber>
               <contextFuncName>compression</contextFuncName>
               <contextNormFuncName>compression</contextNormFuncName>
               <inlineStackInfo>
@@ -501,13 +501,13 @@
                         <first>guitar_effects.cpp</first>
                         <second>compression</second>
                       </first>
-                      <second>167</second>
+                      <second>173</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>icmp_ln167_fu_147_p2</rtlName>
+              <rtlName>icmp_ln173_fu_147_p2</rtlName>
               <control>auto</control>
               <opType>icmp</opType>
               <implIndex>auto</implIndex>
@@ -539,10 +539,10 @@
             <Obj>
               <type>0</type>
               <id>16</id>
-              <name>add_ln167</name>
+              <name>add_ln173</name>
               <fileName>guitar_effects.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>167</lineNumber>
+              <lineNumber>173</lineNumber>
               <contextFuncName>compression</contextFuncName>
               <contextNormFuncName>compression</contextNormFuncName>
               <inlineStackInfo>
@@ -558,13 +558,13 @@
                         <first>guitar_effects.cpp</first>
                         <second>compression</second>
                       </first>
-                      <second>167</second>
+                      <second>173</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>add_ln167_fu_153_p2</rtlName>
+              <rtlName>add_ln173_fu_153_p2</rtlName>
               <control>auto</control>
               <opType>add</opType>
               <implIndex>fabric</implIndex>
@@ -596,10 +596,10 @@
             <Obj>
               <type>0</type>
               <id>17</id>
-              <name>br_ln167</name>
+              <name>br_ln173</name>
               <fileName>guitar_effects.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>167</lineNumber>
+              <lineNumber>173</lineNumber>
               <contextFuncName>compression</contextFuncName>
               <contextNormFuncName>compression</contextNormFuncName>
               <inlineStackInfo>
@@ -615,7 +615,7 @@
                         <first>guitar_effects.cpp</first>
                         <second>compression</second>
                       </first>
-                      <second>167</second>
+                      <second>173</second>
                     </item>
                   </second>
                 </item>
@@ -628,7 +628,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1936617315</coreId>
+              <coreId>1852793632</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -657,7 +657,7 @@
               <name>ret_load_1</name>
               <fileName>guitar_effects.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>171</lineNumber>
+              <lineNumber>177</lineNumber>
               <contextFuncName>compression</contextFuncName>
               <contextNormFuncName>compression</contextNormFuncName>
               <inlineStackInfo>
@@ -673,7 +673,7 @@
                         <first>guitar_effects.cpp</first>
                         <second>compression</second>
                       </first>
-                      <second>171</second>
+                      <second>177</second>
                     </item>
                   </second>
                 </item>
@@ -686,7 +686,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1936617315</coreId>
+              <coreId>1852793632</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -711,10 +711,10 @@
             <Obj>
               <type>0</type>
               <id>20</id>
-              <name>zext_ln167</name>
+              <name>zext_ln173</name>
               <fileName>guitar_effects.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>167</lineNumber>
+              <lineNumber>173</lineNumber>
               <contextFuncName>compression</contextFuncName>
               <contextNormFuncName>compression</contextNormFuncName>
               <inlineStackInfo>
@@ -730,20 +730,20 @@
                         <first>guitar_effects.cpp</first>
                         <second>compression</second>
                       </first>
-                      <second>167</second>
+                      <second>173</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>zext_ln167_fu_189_p1</rtlName>
+              <rtlName>zext_ln173_fu_189_p1</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1936617315</coreId>
+              <coreId>1852793632</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>64</bitwidth>
@@ -767,10 +767,10 @@
             <Obj>
               <type>0</type>
               <id>23</id>
-              <name>zext_ln170</name>
+              <name>zext_ln176</name>
               <fileName>guitar_effects.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>170</lineNumber>
+              <lineNumber>176</lineNumber>
               <contextFuncName>compression</contextFuncName>
               <contextNormFuncName>compression</contextNormFuncName>
               <inlineStackInfo>
@@ -786,20 +786,20 @@
                         <first>guitar_effects.cpp</first>
                         <second>compression</second>
                       </first>
-                      <second>170</second>
+                      <second>176</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>zext_ln170_fu_159_p1</rtlName>
+              <rtlName>zext_ln176_fu_159_p1</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1936617315</coreId>
+              <coreId>1852793632</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>11</bitwidth>
@@ -823,10 +823,10 @@
             <Obj>
               <type>0</type>
               <id>24</id>
-              <name>add_ln170</name>
+              <name>add_ln176</name>
               <fileName>guitar_effects.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>170</lineNumber>
+              <lineNumber>176</lineNumber>
               <contextFuncName>compression</contextFuncName>
               <contextNormFuncName>compression</contextNormFuncName>
               <inlineStackInfo>
@@ -842,7 +842,7 @@
                         <first>guitar_effects.cpp</first>
                         <second>compression</second>
                       </first>
-                      <second>170</second>
+                      <second>176</second>
                     </item>
                   </second>
                 </item>
@@ -883,7 +883,7 @@
               <name>coeff_index</name>
               <fileName>guitar_effects.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>170</lineNumber>
+              <lineNumber>176</lineNumber>
               <contextFuncName>compression</contextFuncName>
               <contextNormFuncName>compression</contextNormFuncName>
               <inlineStackInfo>
@@ -899,7 +899,7 @@
                         <first>guitar_effects.cpp</first>
                         <second>compression</second>
                       </first>
-                      <second>170</second>
+                      <second>176</second>
                     </item>
                   </second>
                 </item>
@@ -937,10 +937,10 @@
             <Obj>
               <type>0</type>
               <id>26</id>
-              <name>trunc_ln171</name>
+              <name>trunc_ln177</name>
               <fileName>guitar_effects.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>171</lineNumber>
+              <lineNumber>177</lineNumber>
               <contextFuncName>compression</contextFuncName>
               <contextNormFuncName>compression</contextNormFuncName>
               <inlineStackInfo>
@@ -956,20 +956,20 @@
                         <first>guitar_effects.cpp</first>
                         <second>compression</second>
                       </first>
-                      <second>171</second>
+                      <second>177</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>trunc_ln171_fu_180_p1</rtlName>
+              <rtlName>trunc_ln177_fu_180_p1</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>2542302650</coreId>
+              <coreId>2289816666</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>9</bitwidth>
@@ -993,10 +993,10 @@
             <Obj>
               <type>0</type>
               <id>27</id>
-              <name>zext_ln171</name>
+              <name>zext_ln177</name>
               <fileName>guitar_effects.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>171</lineNumber>
+              <lineNumber>177</lineNumber>
               <contextFuncName>compression</contextFuncName>
               <contextNormFuncName>compression</contextNormFuncName>
               <inlineStackInfo>
@@ -1012,20 +1012,20 @@
                         <first>guitar_effects.cpp</first>
                         <second>compression</second>
                       </first>
-                      <second>171</second>
+                      <second>177</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>zext_ln171_fu_184_p1</rtlName>
+              <rtlName>zext_ln177_fu_184_p1</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>2542297610</coreId>
+              <coreId>2289820026</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>64</bitwidth>
@@ -1052,7 +1052,7 @@
               <name>compression_buffer_addr</name>
               <fileName>guitar_effects.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>171</lineNumber>
+              <lineNumber>177</lineNumber>
               <contextFuncName>compression</contextFuncName>
               <contextNormFuncName>compression</contextNormFuncName>
               <inlineStackInfo>
@@ -1068,7 +1068,7 @@
                         <first>guitar_effects.cpp</first>
                         <second>compression</second>
                       </first>
-                      <second>171</second>
+                      <second>177</second>
                     </item>
                   </second>
                 </item>
@@ -1081,7 +1081,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>2542299850</coreId>
+              <coreId>2289823386</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>9</bitwidth>
@@ -1110,7 +1110,7 @@
               <name>compression_buffer_load</name>
               <fileName>guitar_effects.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>171</lineNumber>
+              <lineNumber>177</lineNumber>
               <contextFuncName>compression</contextFuncName>
               <contextNormFuncName>compression</contextNormFuncName>
               <inlineStackInfo>
@@ -1126,7 +1126,7 @@
                         <first>guitar_effects.cpp</first>
                         <second>compression</second>
                       </first>
-                      <second>171</second>
+                      <second>177</second>
                     </item>
                   </second>
                 </item>
@@ -1166,7 +1166,7 @@
               <name>conv_i</name>
               <fileName>guitar_effects.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>171</lineNumber>
+              <lineNumber>177</lineNumber>
               <contextFuncName>compression</contextFuncName>
               <contextNormFuncName>compression</contextNormFuncName>
               <inlineStackInfo>
@@ -1182,7 +1182,7 @@
                         <first>guitar_effects.cpp</first>
                         <second>compression</second>
                       </first>
-                      <second>171</second>
+                      <second>177</second>
                     </item>
                   </second>
                 </item>
@@ -1222,7 +1222,7 @@
               <name>lpf_coefficients_addr</name>
               <fileName>guitar_effects.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>171</lineNumber>
+              <lineNumber>177</lineNumber>
               <contextFuncName>compression</contextFuncName>
               <contextNormFuncName>compression</contextNormFuncName>
               <inlineStackInfo>
@@ -1238,7 +1238,7 @@
                         <first>guitar_effects.cpp</first>
                         <second>compression</second>
                       </first>
-                      <second>171</second>
+                      <second>177</second>
                     </item>
                   </second>
                 </item>
@@ -1251,7 +1251,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>2542300410</coreId>
+              <coreId>2289822826</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>9</bitwidth>
@@ -1280,7 +1280,7 @@
               <name>lpf_coefficients_load</name>
               <fileName>guitar_effects.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>171</lineNumber>
+              <lineNumber>177</lineNumber>
               <contextFuncName>compression</contextFuncName>
               <contextNormFuncName>compression</contextNormFuncName>
               <inlineStackInfo>
@@ -1296,7 +1296,7 @@
                         <first>guitar_effects.cpp</first>
                         <second>compression</second>
                       </first>
-                      <second>171</second>
+                      <second>177</second>
                     </item>
                   </second>
                 </item>
@@ -1336,7 +1336,7 @@
               <name>mul_i</name>
               <fileName>guitar_effects.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>171</lineNumber>
+              <lineNumber>177</lineNumber>
               <contextFuncName>compression</contextFuncName>
               <contextNormFuncName>compression</contextNormFuncName>
               <inlineStackInfo>
@@ -1352,7 +1352,7 @@
                         <first>guitar_effects.cpp</first>
                         <second>compression</second>
                       </first>
-                      <second>171</second>
+                      <second>177</second>
                     </item>
                   </second>
                 </item>
@@ -1393,7 +1393,7 @@
               <name>conv8_i</name>
               <fileName>guitar_effects.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>171</lineNumber>
+              <lineNumber>177</lineNumber>
               <contextFuncName>compression</contextFuncName>
               <contextNormFuncName>compression</contextNormFuncName>
               <inlineStackInfo>
@@ -1409,7 +1409,7 @@
                         <first>guitar_effects.cpp</first>
                         <second>compression</second>
                       </first>
-                      <second>171</second>
+                      <second>177</second>
                     </item>
                   </second>
                 </item>
@@ -1449,7 +1449,7 @@
               <name>dc</name>
               <fileName>guitar_effects.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>171</lineNumber>
+              <lineNumber>177</lineNumber>
               <contextFuncName>compression</contextFuncName>
               <contextNormFuncName>compression</contextNormFuncName>
               <inlineStackInfo>
@@ -1465,7 +1465,7 @@
                         <first>guitar_effects.cpp</first>
                         <second>compression</second>
                       </first>
-                      <second>171</second>
+                      <second>177</second>
                     </item>
                   </second>
                 </item>
@@ -1535,7 +1535,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>2298695322</coreId>
+              <coreId>2289818906</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -1591,7 +1591,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>2295879496</coreId>
+              <coreId>2152861514</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -1649,7 +1649,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>2295876696</coreId>
+              <coreId>2295462266</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>8</bitwidth>
@@ -1676,7 +1676,7 @@
             <Obj>
               <type>0</type>
               <id>39</id>
-              <name>p_Result_28</name>
+              <name>p_Result_1</name>
               <fileName>r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_int_ref.h</fileName>
               <fileDirectory>R:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared</fileDirectory>
               <lineNumber>628</lineNumber>
@@ -1701,14 +1701,14 @@
                 </item>
               </inlineStackInfo>
               <originalName>__Result__</originalName>
-              <rtlName>p_Result_28_fu_218_p1</rtlName>
+              <rtlName>p_Result_1_fu_218_p1</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1852793632</coreId>
+              <coreId>3876645546</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>23</bitwidth>
@@ -1764,7 +1764,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1868767273</coreId>
+              <coreId>2295464506</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>25</bitwidth>
@@ -1823,7 +1823,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1936617315</coreId>
+              <coreId>2295462826</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>79</bitwidth>
@@ -1879,7 +1879,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>2295881176</coreId>
+              <coreId>2359963450</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>9</bitwidth>
@@ -1992,7 +1992,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1936617315</coreId>
+              <coreId>1851880031</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -2107,7 +2107,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1936617315</coreId>
+              <coreId>875772788</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>9</bitwidth>
@@ -2221,7 +2221,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>2789188394</coreId>
+              <coreId>909260338</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -2277,7 +2277,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>2789189514</coreId>
+              <coreId>539767072</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>79</bitwidth>
@@ -2358,7 +2358,7 @@
             <Obj>
               <type>0</type>
               <id>51</id>
-              <name>r_V_21</name>
+              <name>r_V_1</name>
               <fileName>r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_base.h</fileName>
               <fileDirectory>R:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared</fileDirectory>
               <lineNumber>1454</lineNumber>
@@ -2383,7 +2383,7 @@
                 </item>
               </inlineStackInfo>
               <originalName>r.V</originalName>
-              <rtlName>r_V_21_fu_284_p2</rtlName>
+              <rtlName>r_V_1_fu_284_p2</rtlName>
               <control>auto</control>
               <opType>shl</opType>
               <implIndex>auto_pipe</implIndex>
@@ -2447,7 +2447,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1717530721</coreId>
+              <coreId>1953708602</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -2505,7 +2505,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1953392928</coreId>
+              <coreId>1953521522</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -2529,7 +2529,7 @@
             <Obj>
               <type>0</type>
               <id>54</id>
-              <name>tmp_5</name>
+              <name>tmp_6</name>
               <fileName>r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files\ap_fixed_base.h</fileName>
               <fileDirectory>R:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared</fileDirectory>
               <lineNumber>818</lineNumber>
@@ -2554,14 +2554,14 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_5_fu_302_p4</rtlName>
+              <rtlName>tmp_6_fu_302_p4</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1936484399</coreId>
+              <coreId>909260338</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -2761,10 +2761,10 @@
             <Obj>
               <type>0</type>
               <id>58</id>
-              <name>i_write_ln167</name>
+              <name>i_write_ln173</name>
               <fileName>guitar_effects.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>167</lineNumber>
+              <lineNumber>173</lineNumber>
               <contextFuncName>compression</contextFuncName>
               <contextNormFuncName>compression</contextNormFuncName>
               <inlineStackInfo>
@@ -2780,7 +2780,7 @@
                         <first>guitar_effects.cpp</first>
                         <second>compression</second>
                       </first>
-                      <second>167</second>
+                      <second>173</second>
                     </item>
                   </second>
                 </item>
@@ -2793,7 +2793,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1851880031</coreId>
+              <coreId>1713384498</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -2820,10 +2820,10 @@
             <Obj>
               <type>0</type>
               <id>59</id>
-              <name>ret_write_ln167</name>
+              <name>ret_write_ln173</name>
               <fileName>guitar_effects.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>167</lineNumber>
+              <lineNumber>173</lineNumber>
               <contextFuncName>compression</contextFuncName>
               <contextNormFuncName>compression</contextNormFuncName>
               <inlineStackInfo>
@@ -2839,7 +2839,7 @@
                         <first>guitar_effects.cpp</first>
                         <second>compression</second>
                       </first>
-                      <second>167</second>
+                      <second>173</second>
                     </item>
                   </second>
                 </item>
@@ -2852,7 +2852,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1868525161</coreId>
+              <coreId>1664039538</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -2879,10 +2879,10 @@
             <Obj>
               <type>0</type>
               <id>60</id>
-              <name>br_ln167</name>
+              <name>br_ln173</name>
               <fileName>guitar_effects.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>167</lineNumber>
+              <lineNumber>173</lineNumber>
               <contextFuncName>compression</contextFuncName>
               <contextNormFuncName>compression</contextNormFuncName>
               <inlineStackInfo>
@@ -2898,7 +2898,7 @@
                         <first>guitar_effects.cpp</first>
                         <second>compression</second>
                       </first>
-                      <second>167</second>
+                      <second>173</second>
                     </item>
                   </second>
                 </item>
@@ -2911,7 +2911,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1768713801</coreId>
+              <coreId>1031301478</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -2953,7 +2953,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>694510703</coreId>
+              <coreId>673197157</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -2996,7 +2996,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1664054124</coreId>
+              <coreId>1869438833</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -3040,7 +3040,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1768713801</coreId>
+              <coreId>842150202</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -3126,7 +3126,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>842412597</coreId>
+              <coreId>842347359</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -3157,7 +3157,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>909260083</coreId>
+              <coreId>861878321</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>9</bitwidth>
@@ -3188,7 +3188,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1932485490</coreId>
+              <coreId>1730556467</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -3219,7 +3219,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>942759732</coreId>
+              <coreId>539780352</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>9</bitwidth>
@@ -3250,7 +3250,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1597255775</coreId>
+              <coreId>1852390260</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>9</bitwidth>
@@ -3281,7 +3281,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>842412598</coreId>
+              <coreId>1869438833</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>11</bitwidth>
@@ -3312,7 +3312,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1818767204</coreId>
+              <coreId>1953244788</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>64</bitwidth>
@@ -3343,7 +3343,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>842412597</coreId>
+              <coreId>539768892</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -3374,7 +3374,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1936484399</coreId>
+              <coreId>1701672302</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -3405,7 +3405,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>842412597</coreId>
+              <coreId>1668180271</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -3436,7 +3436,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>909260083</coreId>
+              <coreId>1746938988</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -3467,7 +3467,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1818767204</coreId>
+              <coreId>1818767202</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -3498,7 +3498,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1684370017</coreId>
+              <coreId>1920234335</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>9</bitwidth>
@@ -3529,7 +3529,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1818767204</coreId>
+              <coreId>792359464</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -3560,7 +3560,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>811545138</coreId>
+              <coreId>977171566</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>8</bitwidth>
@@ -3591,7 +3591,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1701994856</coreId>
+              <coreId>1869438831</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -3622,7 +3622,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>861878321</coreId>
+              <coreId>1764714612</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -3656,7 +3656,7 @@
             <coreName/>
             <isStorage>0</isStorage>
             <storageDepth>0</storageDepth>
-            <coreId>1852387176</coreId>
+            <coreId>1664054124</coreId>
             <rtlModuleName/>
           </Obj>
           <node_objs>
@@ -3693,7 +3693,7 @@
             <coreName/>
             <isStorage>0</isStorage>
             <storageDepth>0</storageDepth>
-            <coreId>1818439539</coreId>
+            <coreId>1664054124</coreId>
             <rtlModuleName/>
           </Obj>
           <node_objs>
@@ -3727,7 +3727,7 @@
             <coreName/>
             <isStorage>0</isStorage>
             <storageDepth>0</storageDepth>
-            <coreId>795108722</coreId>
+            <coreId>1664054124</coreId>
             <rtlModuleName/>
           </Obj>
           <node_objs>
@@ -3797,7 +3797,7 @@
             <coreName/>
             <isStorage>0</isStorage>
             <storageDepth>0</storageDepth>
-            <coreId>1868771121</coreId>
+            <coreId>1664054124</coreId>
             <rtlModuleName/>
           </Obj>
           <node_objs>
@@ -5863,7 +5863,7 @@
         <count>12</count>
         <item_version>0</item_version>
         <item>
-          <first>add_ln167_fu_153_p2 ( + ) </first>
+          <first>add_ln173_fu_153_p2 ( + ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -5955,7 +5955,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln167_fu_147_p2 ( icmp ) </first>
+          <first>icmp_ln173_fu_147_p2 ( icmp ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -5978,7 +5978,7 @@
           </second>
         </item>
         <item>
-          <first>r_V_21_fu_284_p2 ( shl ) </first>
+          <first>r_V_1_fu_284_p2 ( shl ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -6336,7 +6336,7 @@
           </second>
         </item>
         <item>
-          <first>ap_sig_allocacmp_i_7</first>
+          <first>ap_sig_allocacmp_i_1</first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -6622,7 +6622,7 @@
           </second>
         </item>
         <item>
-          <first>i_7_reg_354</first>
+          <first>i_1_reg_354</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -6660,7 +6660,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln167_reg_359</first>
+          <first>icmp_ln173_reg_359</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -6679,7 +6679,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln167_reg_359_pp0_iter1_reg</first>
+          <first>icmp_ln173_reg_359_pp0_iter1_reg</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -6755,7 +6755,7 @@
           </second>
         </item>
         <item>
-          <first>p_Result_28_reg_418</first>
+          <first>p_Result_1_reg_418</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -6899,7 +6899,7 @@
         <count>11</count>
         <item_version>0</item_version>
         <item>
-          <first>add_ln167_fu_153_p2 ( + ) </first>
+          <first>add_ln173_fu_153_p2 ( + ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -6923,7 +6923,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln167_fu_147_p2 ( icmp ) </first>
+          <first>icmp_ln173_fu_147_p2 ( icmp ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -6931,7 +6931,7 @@
           </second>
         </item>
         <item>
-          <first>r_V_21_fu_284_p2 ( shl ) </first>
+          <first>r_V_1_fu_284_p2 ( shl ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -7884,7 +7884,7 @@
       <count>34</count>
       <item_version>0</item_version>
       <item class_id="54" tracking_level="0" version="0">
-        <first>add_ln167_fu_153</first>
+        <first>add_ln173_fu_153</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -7892,7 +7892,7 @@
         </second>
       </item>
       <item>
-        <first>add_ln170_fu_163</first>
+        <first>add_ln176_fu_163</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -7932,7 +7932,7 @@
         </second>
       </item>
       <item>
-        <first>icmp_ln167_fu_147</first>
+        <first>icmp_ln173_fu_147</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -7964,7 +7964,7 @@
         </second>
       </item>
       <item>
-        <first>p_Result_28_fu_218</first>
+        <first>p_Result_1_fu_218</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -7980,7 +7980,7 @@
         </second>
       </item>
       <item>
-        <first>r_V_21_fu_284</first>
+        <first>r_V_1_fu_284</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -8036,7 +8036,7 @@
         </second>
       </item>
       <item>
-        <first>sext_ln65_cast_fu_130</first>
+        <first>sext_ln67_cast_fu_130</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -8052,7 +8052,7 @@
         </second>
       </item>
       <item>
-        <first>tmp_5_fu_302</first>
+        <first>tmp_6_fu_302</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -8068,7 +8068,7 @@
         </second>
       </item>
       <item>
-        <first>trunc_ln171_fu_180</first>
+        <first>trunc_ln177_fu_180</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -8116,7 +8116,7 @@
         </second>
       </item>
       <item>
-        <first>zext_ln167_fu_189</first>
+        <first>zext_ln173_fu_189</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -8124,7 +8124,7 @@
         </second>
       </item>
       <item>
-        <first>zext_ln170_fu_159</first>
+        <first>zext_ln176_fu_159</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -8132,7 +8132,7 @@
         </second>
       </item>
       <item>
-        <first>zext_ln171_fu_184</first>
+        <first>zext_ln177_fu_184</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -8228,7 +8228,7 @@
       <count>9</count>
       <item_version>0</item_version>
       <item>
-        <first>i_7_load_fu_144</first>
+        <first>i_1_load_fu_144</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -8252,7 +8252,7 @@
         </second>
       </item>
       <item>
-        <first>sext_ln65_read_read_fu_80</first>
+        <first>sext_ln67_read_read_fu_80</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -8276,7 +8276,7 @@
         </second>
       </item>
       <item>
-        <first>store_ln167_store_fu_175</first>
+        <first>store_ln173_store_fu_175</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -8284,7 +8284,7 @@
         </second>
       </item>
       <item>
-        <first>store_ln167_store_fu_330</first>
+        <first>store_ln173_store_fu_330</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -8492,7 +8492,7 @@
       <count>19</count>
       <item_version>0</item_version>
       <item>
-        <first>add_ln170_reg_363</first>
+        <first>add_ln176_reg_363</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -8540,7 +8540,7 @@
         </second>
       </item>
       <item>
-        <first>i_7_reg_354</first>
+        <first>i_1_reg_354</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -8556,7 +8556,7 @@
         </second>
       </item>
       <item>
-        <first>icmp_ln167_reg_359</first>
+        <first>icmp_ln173_reg_359</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -8596,7 +8596,7 @@
         </second>
       </item>
       <item>
-        <first>p_Result_28_reg_418</first>
+        <first>p_Result_1_reg_418</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -8687,7 +8687,7 @@
         </second>
       </item>
       <item>
-        <first>sext_ln65</first>
+        <first>sext_ln67</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>

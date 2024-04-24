@@ -9,7 +9,7 @@ use IEEE.NUMERIC_STD.all;
 
 entity guitar_effects_control_r_s_axi is
 generic (
-    C_S_AXI_ADDR_WIDTH    : INTEGER := 7;
+    C_S_AXI_ADDR_WIDTH    : INTEGER := 8;
     C_S_AXI_DATA_WIDTH    : INTEGER := 32);
 port (
     ACLK                  :in   STD_LOGIC;
@@ -45,7 +45,8 @@ port (
     tempo                 :out  STD_LOGIC_VECTOR(31 downto 0);
     wah_coeffs            :out  STD_LOGIC_VECTOR(63 downto 0);
     debug_output          :in   STD_LOGIC_VECTOR(31 downto 0);
-    debug_output_ap_vld   :in   STD_LOGIC
+    debug_output_ap_vld   :in   STD_LOGIC;
+    starting_sample       :out  STD_LOGIC_VECTOR(31 downto 0)
 );
 end entity guitar_effects_control_r_s_axi;
 
@@ -98,6 +99,9 @@ end entity guitar_effects_control_r_s_axi;
 -- 0x78 : Control signal of debug_output
 --        bit 0  - debug_output_ap_vld (Read/COR)
 --        others - reserved
+-- 0x84 : Data signal of starting_sample
+--        bit 31~0 - starting_sample[31:0] (Read/Write)
+-- 0x88 : reserved
 -- (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
 architecture behave of guitar_effects_control_r_s_axi is
@@ -130,7 +134,9 @@ architecture behave of guitar_effects_control_r_s_axi is
     constant ADDR_WAH_COEFFS_CTRL                   : INTEGER := 16#70#;
     constant ADDR_DEBUG_OUTPUT_DATA_0               : INTEGER := 16#74#;
     constant ADDR_DEBUG_OUTPUT_CTRL                 : INTEGER := 16#78#;
-    constant ADDR_BITS         : INTEGER := 7;
+    constant ADDR_STARTING_SAMPLE_DATA_0            : INTEGER := 16#84#;
+    constant ADDR_STARTING_SAMPLE_CTRL              : INTEGER := 16#88#;
+    constant ADDR_BITS         : INTEGER := 8;
 
     signal waddr               : UNSIGNED(ADDR_BITS-1 downto 0);
     signal wmask               : UNSIGNED(C_S_AXI_DATA_WIDTH-1 downto 0);
@@ -158,6 +164,7 @@ architecture behave of guitar_effects_control_r_s_axi is
     signal int_wah_coeffs      : UNSIGNED(63 downto 0) := (others => '0');
     signal int_debug_output_ap_vld : STD_LOGIC;
     signal int_debug_output    : UNSIGNED(31 downto 0) := (others => '0');
+    signal int_starting_sample : UNSIGNED(31 downto 0) := (others => '0');
 
 
 begin
@@ -303,6 +310,8 @@ begin
                         rdata_data <= RESIZE(int_debug_output(31 downto 0), 32);
                     when ADDR_DEBUG_OUTPUT_CTRL =>
                         rdata_data(0) <= int_debug_output_ap_vld;
+                    when ADDR_STARTING_SAMPLE_DATA_0 =>
+                        rdata_data <= RESIZE(int_starting_sample(31 downto 0), 32);
                     when others =>
                         NULL;
                     end case;
@@ -322,6 +331,7 @@ begin
     delay_samples        <= STD_LOGIC_VECTOR(int_delay_samples);
     tempo                <= STD_LOGIC_VECTOR(int_tempo);
     wah_coeffs           <= STD_LOGIC_VECTOR(int_wah_coeffs);
+    starting_sample      <= STD_LOGIC_VECTOR(int_starting_sample);
 
     process (ACLK)
     begin
@@ -495,6 +505,17 @@ begin
                     int_debug_output_ap_vld <= '1';
                 elsif (ar_hs = '1' and raddr = ADDR_DEBUG_OUTPUT_CTRL) then
                     int_debug_output_ap_vld <= '0'; -- clear on read
+                end if;
+            end if;
+        end if;
+    end process;
+
+    process (ACLK)
+    begin
+        if (ACLK'event and ACLK = '1') then
+            if (ACLK_EN = '1') then
+                if (w_hs = '1' and waddr = ADDR_STARTING_SAMPLE_DATA_0) then
+                    int_starting_sample(31 downto 0) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_starting_sample(31 downto 0));
                 end if;
             end if;
         end if;

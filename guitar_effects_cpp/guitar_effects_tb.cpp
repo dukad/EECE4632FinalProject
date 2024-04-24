@@ -13,7 +13,7 @@ void setControlSignals(int &control, int distortion_threshold, mult_float distor
 // Main testbench function
 int main() {
     // Test input signal (simplified example)
-    const int testInputSignal[] = {100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 100};
+    int testInputSignal[100000];
     const int numTestSamples = sizeof(testInputSignal) / sizeof(testInputSignal[0]);
 
     // Create HLS stream for input and output
@@ -27,8 +27,24 @@ int main() {
     float delay_mult = 0.1;
     int delay_samples = 1;
     int tempo = 140;
-    wah_mult wah_coeffs[WAH_BANDPASS_RESOLUTION][BANDPASS_FILTER_LENGTH] = {1};
+    wah_mult wah_coeffs[WAH_BANDPASS_RESOLUTION][BANDPASS_FILTER_LENGTH];
     wah_mult debug_output;
+    for (int i = 0; i < numTestSamples; i++ ) {
+    	testInputSignal[i] = i;
+    }
+    int starting_sample = 0;
+
+
+    // initialize wahcoeffs
+    for (int i = 0; i < WAH_BANDPASS_RESOLUTION; i++) {
+    	for (int j = 0; j < BANDPASS_FILTER_LENGTH; j++) {
+    		std::cout << "J things: " << j << " " << (j/10.0) << " " << (wah_mult)(j/10.0) << " ";
+    		wah_coeffs[i][j] = (j / 10.0);
+//    		wah_coeffs[i][j] = (wah_mult)(0x004FA909);
+    		std::cout << wah_coeffs[i][j] << " ";
+    	}
+    	std::cout << std::endl;
+    }
 
     // Initialize input stream
     for (int i = 0; i < numTestSamples; ++i) {
@@ -38,13 +54,14 @@ int main() {
         inputSignal.write(temp);
     }
 
+
     // Set control signals, this doesnt really do anything here
     setControlSignals(control, distortion_threshold, distortion_clip_factor, compression_min_threshold,
                       compression_max_threshold, compression_zero_threshold, delay_mult, delay_samples, tempo, wah_coeffs);
     // Call your guitar_effects function
     int axilite_out;
     guitar_effects(inputSignal, outputSignal, axilite_out, control, distortion_threshold, distortion_clip_factor,
-                   compression_min_threshold, compression_max_threshold, compression_zero_threshold, delay_mult, delay_samples, tempo, wah_coeffs, debug_output);
+                   compression_min_threshold, compression_max_threshold, compression_zero_threshold, delay_mult, delay_samples, tempo, wah_coeffs, debug_output, starting_sample);
 
 
 
@@ -52,7 +69,7 @@ int main() {
         ap_axis<32,2,5,6> output = outputSignal.read();
         // print all the output signals
         std::cout << "Output signal: " << output.data << std::endl;
-        std::cout << "Debug: " << debug << std::endl;
+        std::cout << "Debug: " << debug_output << std::endl;
         }
     
 }

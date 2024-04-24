@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-//Date        : Tue Apr 23 14:02:18 2024
+//Date        : Wed Apr 24 17:04:23 2024
 //Host        : WFXB07B250A366D running 64-bit major release  (build 9200)
 //Command     : generate_target guitar_effects_design.bd
 //Design      : guitar_effects_design
@@ -9,7 +9,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "guitar_effects_design,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=guitar_effects_design,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=18,numReposBlks=10,numNonXlnxBlks=0,numHierBlks=8,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=1,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=57,da_board_cnt=1,da_bram_cntlr_cnt=4,da_clkrst_cnt=5,da_ps7_cnt=4,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "guitar_effects_design.hwdef" *) 
+(* CORE_GENERATION_INFO = "guitar_effects_design,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=guitar_effects_design,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=18,numReposBlks=10,numNonXlnxBlks=0,numHierBlks=8,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=1,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=58,da_board_cnt=1,da_bram_cntlr_cnt=4,da_clkrst_cnt=5,da_ps7_cnt=4,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "guitar_effects_design.hwdef" *) 
 module guitar_effects_design
    (DDR_addr,
     DDR_ba,
@@ -444,7 +444,7 @@ module guitar_effects_design
         .douta(axi_bram_ctrl_0_BRAM_PORTA_DOUT),
         .ena(axi_bram_ctrl_0_BRAM_PORTA_EN),
         .rsta(axi_bram_ctrl_0_BRAM_PORTA_RST));
-  guitar_effects_design_guitar_effects_0_32 guitar_effects_0
+  guitar_effects_design_guitar_effects_0_33 guitar_effects_0
        (.INPUT_r_TDATA(axi_dma_0_M_AXIS_MM2S_TDATA),
         .INPUT_r_TDEST({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .INPUT_r_TID({1'b0,1'b0,1'b0,1'b0,1'b0}),

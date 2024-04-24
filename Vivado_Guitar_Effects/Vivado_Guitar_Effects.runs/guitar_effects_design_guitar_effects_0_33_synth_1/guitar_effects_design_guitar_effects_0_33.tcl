@@ -91,7 +91,7 @@ set_property ip_output_repo c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_ip -quiet c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_guitar_effects_0_33/guitar_effects_design_guitar_effects_0_33.xci
+read_ip -quiet C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_guitar_effects_0_33/guitar_effects_design_guitar_effects_0_33.xci
 set_property used_in_implementation false [get_files -all c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_guitar_effects_0_33/constraints/guitar_effects_ooc.xdc]
 
 OPTRACE "Adding files" END { }
