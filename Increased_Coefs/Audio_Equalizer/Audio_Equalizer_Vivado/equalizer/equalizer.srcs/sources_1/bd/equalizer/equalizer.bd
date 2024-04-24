@@ -2546,14 +2546,9 @@
       },
       "equalizer_0": {
         "vlnv": "xilinx.com:hls:equalizer:1.0",
-        "xci_name": "equalizer_equalizer_0_1",
-        "xci_path": "ip\\equalizer_equalizer_0_1\\equalizer_equalizer_0_1.xci",
+        "xci_name": "equalizer_equalizer_0_2",
+        "xci_path": "ip\\equalizer_equalizer_0_2\\equalizer_equalizer_0_2.xci",
         "inst_hier_path": "equalizer_0",
-        "parameters": {
-          "C_M_AXI_GMEM_ENABLE_ID_PORTS": {
-            "value": "true"
-          }
-        },
         "interface_ports": {
           "m_axi_gmem": {
             "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
@@ -2615,8 +2610,8 @@
       },
       "equalizer_0_output_r": {
         "interface_ports": [
-          "equalizer_0/output_r",
-          "axi_dma_0/S_AXIS_S2MM"
+          "axi_dma_0/S_AXIS_S2MM",
+          "equalizer_0/output_r"
         ]
       },
       "processing_system7_0_DDR": {

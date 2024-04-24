@@ -28,8 +28,8 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==equalizer_a
 # IP: bd/equalizer/ip/equalizer_blk_mem_gen_0_0/equalizer_blk_mem_gen_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==equalizer_blk_mem_gen_0_0 || ORIG_REF_NAME==equalizer_blk_mem_gen_0_0} -quiet] -quiet
 
-# IP: bd/equalizer/ip/equalizer_equalizer_0_1/equalizer_equalizer_0_1.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==equalizer_equalizer_0_1 || ORIG_REF_NAME==equalizer_equalizer_0_1} -quiet] -quiet
+# IP: bd/equalizer/ip/equalizer_equalizer_0_2/equalizer_equalizer_0_2.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==equalizer_equalizer_0_2 || ORIG_REF_NAME==equalizer_equalizer_0_2} -quiet] -quiet
 
 # IP: bd/equalizer/ip/equalizer_auto_pc_0/equalizer_auto_pc_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==equalizer_auto_pc_0 || ORIG_REF_NAME==equalizer_auto_pc_0} -quiet] -quiet
@@ -37,4 +37,4 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==equalizer_a
 # IP: bd/equalizer/ip/equalizer_auto_pc_1/equalizer_auto_pc_1.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==equalizer_auto_pc_1 || ORIG_REF_NAME==equalizer_auto_pc_1} -quiet] -quiet
 
-# XDC: c:/EECE4632FinalProject/Audio_Equalizer/Audio_Equalizer_Vivado/equalizer/equalizer.gen/sources_1/bd/equalizer/equalizer_ooc.xdc
+# XDC: c:/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vivado/equalizer/equalizer.gen/sources_1/bd/equalizer/equalizer_ooc.xdc

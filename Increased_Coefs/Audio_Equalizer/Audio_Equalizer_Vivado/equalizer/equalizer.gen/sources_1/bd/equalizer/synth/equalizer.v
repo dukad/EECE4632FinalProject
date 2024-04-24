@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-//Date        : Tue Apr 16 19:52:46 2024
+//Date        : Wed Apr 24 15:33:51 2024
 //Host        : WFXA4BB6DB88619 running 64-bit major release  (build 9200)
 //Command     : generate_target equalizer.bd
 //Design      : equalizer
@@ -136,7 +136,6 @@ module equalizer
   wire [63:0]equalizer_0_m_axi_gmem_ARADDR;
   wire [1:0]equalizer_0_m_axi_gmem_ARBURST;
   wire [3:0]equalizer_0_m_axi_gmem_ARCACHE;
-  wire [0:0]equalizer_0_m_axi_gmem_ARID;
   wire [7:0]equalizer_0_m_axi_gmem_ARLEN;
   wire [1:0]equalizer_0_m_axi_gmem_ARLOCK;
   wire [2:0]equalizer_0_m_axi_gmem_ARPROT;
@@ -146,19 +145,16 @@ module equalizer
   wire [63:0]equalizer_0_m_axi_gmem_AWADDR;
   wire [1:0]equalizer_0_m_axi_gmem_AWBURST;
   wire [3:0]equalizer_0_m_axi_gmem_AWCACHE;
-  wire [0:0]equalizer_0_m_axi_gmem_AWID;
   wire [7:0]equalizer_0_m_axi_gmem_AWLEN;
   wire [1:0]equalizer_0_m_axi_gmem_AWLOCK;
   wire [2:0]equalizer_0_m_axi_gmem_AWPROT;
   wire equalizer_0_m_axi_gmem_AWREADY;
   wire [2:0]equalizer_0_m_axi_gmem_AWSIZE;
   wire equalizer_0_m_axi_gmem_AWVALID;
-  wire [0:0]equalizer_0_m_axi_gmem_BID;
   wire equalizer_0_m_axi_gmem_BREADY;
   wire [1:0]equalizer_0_m_axi_gmem_BRESP;
   wire equalizer_0_m_axi_gmem_BVALID;
   wire [31:0]equalizer_0_m_axi_gmem_RDATA;
-  wire [0:0]equalizer_0_m_axi_gmem_RID;
   wire equalizer_0_m_axi_gmem_RLAST;
   wire equalizer_0_m_axi_gmem_RREADY;
   wire [1:0]equalizer_0_m_axi_gmem_RRESP;
@@ -265,7 +261,6 @@ module equalizer
         .s_axi_arburst(equalizer_0_m_axi_gmem_ARBURST),
         .s_axi_arcache(equalizer_0_m_axi_gmem_ARCACHE),
         .s_axi_aresetn(rst_ps7_0_100M_peripheral_aresetn),
-        .s_axi_arid(equalizer_0_m_axi_gmem_ARID),
         .s_axi_arlen(equalizer_0_m_axi_gmem_ARLEN),
         .s_axi_arlock(equalizer_0_m_axi_gmem_ARLOCK[0]),
         .s_axi_arprot(equalizer_0_m_axi_gmem_ARPROT),
@@ -275,19 +270,16 @@ module equalizer
         .s_axi_awaddr(equalizer_0_m_axi_gmem_AWADDR[12:0]),
         .s_axi_awburst(equalizer_0_m_axi_gmem_AWBURST),
         .s_axi_awcache(equalizer_0_m_axi_gmem_AWCACHE),
-        .s_axi_awid(equalizer_0_m_axi_gmem_AWID),
         .s_axi_awlen(equalizer_0_m_axi_gmem_AWLEN),
         .s_axi_awlock(equalizer_0_m_axi_gmem_AWLOCK[0]),
         .s_axi_awprot(equalizer_0_m_axi_gmem_AWPROT),
         .s_axi_awready(equalizer_0_m_axi_gmem_AWREADY),
         .s_axi_awsize(equalizer_0_m_axi_gmem_AWSIZE),
         .s_axi_awvalid(equalizer_0_m_axi_gmem_AWVALID),
-        .s_axi_bid(equalizer_0_m_axi_gmem_BID),
         .s_axi_bready(equalizer_0_m_axi_gmem_BREADY),
         .s_axi_bresp(equalizer_0_m_axi_gmem_BRESP),
         .s_axi_bvalid(equalizer_0_m_axi_gmem_BVALID),
         .s_axi_rdata(equalizer_0_m_axi_gmem_RDATA),
-        .s_axi_rid(equalizer_0_m_axi_gmem_RID),
         .s_axi_rlast(equalizer_0_m_axi_gmem_RLAST),
         .s_axi_rready(equalizer_0_m_axi_gmem_RREADY),
         .s_axi_rresp(equalizer_0_m_axi_gmem_RRESP),
@@ -441,7 +433,7 @@ module equalizer
         .ena(axi_bram_ctrl_0_BRAM_PORTA_EN),
         .rsta(axi_bram_ctrl_0_BRAM_PORTA_RST),
         .wea(axi_bram_ctrl_0_BRAM_PORTA_WE));
-  equalizer_equalizer_0_1 equalizer_0
+  equalizer_equalizer_0_2 equalizer_0
        (.ap_clk(processing_system7_0_FCLK_CLK0),
         .ap_rst_n(rst_ps7_0_100M_peripheral_aresetn),
         .input_r_TDATA(axi_dma_0_M_AXIS_MM2S_TDATA),
@@ -456,7 +448,6 @@ module equalizer
         .m_axi_gmem_ARADDR(equalizer_0_m_axi_gmem_ARADDR),
         .m_axi_gmem_ARBURST(equalizer_0_m_axi_gmem_ARBURST),
         .m_axi_gmem_ARCACHE(equalizer_0_m_axi_gmem_ARCACHE),
-        .m_axi_gmem_ARID(equalizer_0_m_axi_gmem_ARID),
         .m_axi_gmem_ARLEN(equalizer_0_m_axi_gmem_ARLEN),
         .m_axi_gmem_ARLOCK(equalizer_0_m_axi_gmem_ARLOCK),
         .m_axi_gmem_ARPROT(equalizer_0_m_axi_gmem_ARPROT),
@@ -466,19 +457,16 @@ module equalizer
         .m_axi_gmem_AWADDR(equalizer_0_m_axi_gmem_AWADDR),
         .m_axi_gmem_AWBURST(equalizer_0_m_axi_gmem_AWBURST),
         .m_axi_gmem_AWCACHE(equalizer_0_m_axi_gmem_AWCACHE),
-        .m_axi_gmem_AWID(equalizer_0_m_axi_gmem_AWID),
         .m_axi_gmem_AWLEN(equalizer_0_m_axi_gmem_AWLEN),
         .m_axi_gmem_AWLOCK(equalizer_0_m_axi_gmem_AWLOCK),
         .m_axi_gmem_AWPROT(equalizer_0_m_axi_gmem_AWPROT),
         .m_axi_gmem_AWREADY(equalizer_0_m_axi_gmem_AWREADY),
         .m_axi_gmem_AWSIZE(equalizer_0_m_axi_gmem_AWSIZE),
         .m_axi_gmem_AWVALID(equalizer_0_m_axi_gmem_AWVALID),
-        .m_axi_gmem_BID(equalizer_0_m_axi_gmem_BID),
         .m_axi_gmem_BREADY(equalizer_0_m_axi_gmem_BREADY),
         .m_axi_gmem_BRESP(equalizer_0_m_axi_gmem_BRESP),
         .m_axi_gmem_BVALID(equalizer_0_m_axi_gmem_BVALID),
         .m_axi_gmem_RDATA(equalizer_0_m_axi_gmem_RDATA),
-        .m_axi_gmem_RID(equalizer_0_m_axi_gmem_RID),
         .m_axi_gmem_RLAST(equalizer_0_m_axi_gmem_RLAST),
         .m_axi_gmem_RREADY(equalizer_0_m_axi_gmem_RREADY),
         .m_axi_gmem_RRESP(equalizer_0_m_axi_gmem_RRESP),

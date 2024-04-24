@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/EECE4632FinalProject/Audio_Equalizer/Audio_Equalizer_Vivado/equalizer/equalizer.runs/impl_1'
+HD_PWD='C:/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vivado/equalizer/equalizer.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

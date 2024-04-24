@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Apr 16 19:52:47 2024" VIVADOVERSION="2022.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Apr 24 15:33:53 2024" VIVADOVERSION="2022.1">
 
   <SYSTEMINFO ARCH="zynq" BOARD="tul.com.tw:pynq-z2:part0:1.0" DEVICE="7z020" NAME="equalizer" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -183,7 +183,7 @@
         <PARAMETER NAME="C_FAULT_INJECT" VALUE="0"/>
         <PARAMETER NAME="C_ECC_ONOFF_RESET_VALUE" VALUE="0"/>
         <PARAMETER NAME="DATA_WIDTH" VALUE="32"/>
-        <PARAMETER NAME="ID_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="ID_WIDTH" VALUE="0"/>
         <PARAMETER NAME="PROTOCOL" VALUE="AXI4"/>
         <PARAMETER NAME="SUPPORTS_NARROW_BURST" VALUE="0"/>
         <PARAMETER NAME="SINGLE_PORT_BRAM" VALUE="1"/>
@@ -208,11 +208,6 @@
         <PORT DIR="I" NAME="s_axi_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="rst_ps7_0_100M_peripheral_aresetn">
           <CONNECTIONS>
             <CONNECTION INSTANCE="rst_ps7_0_100M" PORT="peripheral_aresetn"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="0" NAME="s_axi_awid" RIGHT="0" SIGIS="undef" SIGNAME="axi_bram_ctrl_0_s_axi_awid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="equalizer_0" PORT="m_axi_gmem_AWID"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="12" NAME="s_axi_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="axi_bram_ctrl_0_s_axi_awaddr">
@@ -285,11 +280,6 @@
             <CONNECTION INSTANCE="equalizer_0" PORT="m_axi_gmem_WREADY"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="0" NAME="s_axi_bid" RIGHT="0" SIGIS="undef" SIGNAME="axi_bram_ctrl_0_s_axi_bid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="equalizer_0" PORT="m_axi_gmem_BID"/>
-          </CONNECTIONS>
-        </PORT>
         <PORT DIR="O" LEFT="1" NAME="s_axi_bresp" RIGHT="0" SIGIS="undef" SIGNAME="axi_bram_ctrl_0_s_axi_bresp">
           <CONNECTIONS>
             <CONNECTION INSTANCE="equalizer_0" PORT="m_axi_gmem_BRESP"/>
@@ -303,11 +293,6 @@
         <PORT DIR="I" NAME="s_axi_bready" SIGIS="undef" SIGNAME="axi_bram_ctrl_0_s_axi_bready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="equalizer_0" PORT="m_axi_gmem_BREADY"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="0" NAME="s_axi_arid" RIGHT="0" SIGIS="undef" SIGNAME="axi_bram_ctrl_0_s_axi_arid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="equalizer_0" PORT="m_axi_gmem_ARID"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="12" NAME="s_axi_araddr" RIGHT="0" SIGIS="undef" SIGNAME="axi_bram_ctrl_0_s_axi_araddr">
@@ -353,11 +338,6 @@
         <PORT DIR="O" NAME="s_axi_arready" SIGIS="undef" SIGNAME="axi_bram_ctrl_0_s_axi_arready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="equalizer_0" PORT="m_axi_gmem_ARREADY"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="0" NAME="s_axi_rid" RIGHT="0" SIGIS="undef" SIGNAME="axi_bram_ctrl_0_s_axi_rid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="equalizer_0" PORT="m_axi_gmem_RID"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="31" NAME="s_axi_rdata" RIGHT="0" SIGIS="undef" SIGNAME="axi_bram_ctrl_0_s_axi_rdata">
@@ -426,7 +406,7 @@
           <PARAMETER NAME="DATA_WIDTH" VALUE="32"/>
           <PARAMETER NAME="PROTOCOL" VALUE="AXI4"/>
           <PARAMETER NAME="FREQ_HZ" VALUE="50000000"/>
-          <PARAMETER NAME="ID_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="ID_WIDTH" VALUE="0"/>
           <PARAMETER NAME="ADDR_WIDTH" VALUE="13"/>
           <PARAMETER NAME="AWUSER_WIDTH" VALUE="0"/>
           <PARAMETER NAME="ARUSER_WIDTH" VALUE="0"/>
@@ -458,7 +438,6 @@
             <PORTMAP LOGICAL="ARADDR" PHYSICAL="s_axi_araddr"/>
             <PORTMAP LOGICAL="ARBURST" PHYSICAL="s_axi_arburst"/>
             <PORTMAP LOGICAL="ARCACHE" PHYSICAL="s_axi_arcache"/>
-            <PORTMAP LOGICAL="ARID" PHYSICAL="s_axi_arid"/>
             <PORTMAP LOGICAL="ARLEN" PHYSICAL="s_axi_arlen"/>
             <PORTMAP LOGICAL="ARLOCK" PHYSICAL="s_axi_arlock"/>
             <PORTMAP LOGICAL="ARPROT" PHYSICAL="s_axi_arprot"/>
@@ -468,19 +447,16 @@
             <PORTMAP LOGICAL="AWADDR" PHYSICAL="s_axi_awaddr"/>
             <PORTMAP LOGICAL="AWBURST" PHYSICAL="s_axi_awburst"/>
             <PORTMAP LOGICAL="AWCACHE" PHYSICAL="s_axi_awcache"/>
-            <PORTMAP LOGICAL="AWID" PHYSICAL="s_axi_awid"/>
             <PORTMAP LOGICAL="AWLEN" PHYSICAL="s_axi_awlen"/>
             <PORTMAP LOGICAL="AWLOCK" PHYSICAL="s_axi_awlock"/>
             <PORTMAP LOGICAL="AWPROT" PHYSICAL="s_axi_awprot"/>
             <PORTMAP LOGICAL="AWREADY" PHYSICAL="s_axi_awready"/>
             <PORTMAP LOGICAL="AWSIZE" PHYSICAL="s_axi_awsize"/>
             <PORTMAP LOGICAL="AWVALID" PHYSICAL="s_axi_awvalid"/>
-            <PORTMAP LOGICAL="BID" PHYSICAL="s_axi_bid"/>
             <PORTMAP LOGICAL="BREADY" PHYSICAL="s_axi_bready"/>
             <PORTMAP LOGICAL="BRESP" PHYSICAL="s_axi_bresp"/>
             <PORTMAP LOGICAL="BVALID" PHYSICAL="s_axi_bvalid"/>
             <PORTMAP LOGICAL="RDATA" PHYSICAL="s_axi_rdata"/>
-            <PORTMAP LOGICAL="RID" PHYSICAL="s_axi_rid"/>
             <PORTMAP LOGICAL="RLAST" PHYSICAL="s_axi_rlast"/>
             <PORTMAP LOGICAL="RREADY" PHYSICAL="s_axi_rready"/>
             <PORTMAP LOGICAL="RRESP" PHYSICAL="s_axi_rresp"/>
@@ -2986,7 +2962,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="2113517155" FULLNAME="/equalizer_0" HWVERSION="1.0" INSTANCE="equalizer_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="equalizer" VLNV="xilinx.com:hls:equalizer:1.0">
+    <MODULE COREREVISION="2113528580" FULLNAME="/equalizer_0" HWVERSION="1.0" INSTANCE="equalizer_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="equalizer" VLNV="xilinx.com:hls:equalizer:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="C_S_AXI_CONTROL_ADDR_WIDTH" VALUE="5"/>
@@ -3002,10 +2978,10 @@
         <PARAMETER NAME="C_M_AXI_GMEM_USER_VALUE" VALUE="0x00000000"/>
         <PARAMETER NAME="C_M_AXI_GMEM_PROT_VALUE" VALUE="&quot;000&quot;"/>
         <PARAMETER NAME="C_M_AXI_GMEM_CACHE_VALUE" VALUE="&quot;0011&quot;"/>
-        <PARAMETER NAME="C_M_AXI_GMEM_ENABLE_ID_PORTS" VALUE="true"/>
+        <PARAMETER NAME="C_M_AXI_GMEM_ENABLE_ID_PORTS" VALUE="false"/>
         <PARAMETER NAME="C_M_AXI_GMEM_ENABLE_USER_PORTS" VALUE="false"/>
-        <PARAMETER NAME="Component_Name" VALUE="equalizer_equalizer_0_1"/>
-        <PARAMETER NAME="clk_period" VALUE="20"/>
+        <PARAMETER NAME="Component_Name" VALUE="equalizer_equalizer_0_2"/>
+        <PARAMETER NAME="clk_period" VALUE="10"/>
         <PARAMETER NAME="machine" VALUE="64"/>
         <PARAMETER NAME="combinational" VALUE="0"/>
         <PARAMETER NAME="latency" VALUE="undef"/>
@@ -3038,11 +3014,6 @@
         <PORT DIR="I" NAME="ap_rst_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="rst_ps7_0_100M_peripheral_aresetn">
           <CONNECTIONS>
             <CONNECTION INSTANCE="rst_ps7_0_100M" PORT="peripheral_aresetn"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="0" NAME="m_axi_gmem_AWID" RIGHT="0" SIGIS="undef" SIGNAME="axi_bram_ctrl_0_s_axi_awid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_bram_ctrl_0" PORT="s_axi_awid"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="63" NAME="m_axi_gmem_AWADDR" RIGHT="0" SIGIS="undef" SIGNAME="axi_bram_ctrl_0_s_axi_awaddr">
@@ -3092,7 +3063,6 @@
             <CONNECTION INSTANCE="axi_bram_ctrl_0" PORT="s_axi_awready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="0" NAME="m_axi_gmem_WID" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="O" LEFT="31" NAME="m_axi_gmem_WDATA" RIGHT="0" SIGIS="undef" SIGNAME="axi_bram_ctrl_0_s_axi_wdata">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_bram_ctrl_0" PORT="s_axi_wdata"/>
@@ -3118,11 +3088,6 @@
             <CONNECTION INSTANCE="axi_bram_ctrl_0" PORT="s_axi_wready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="0" NAME="m_axi_gmem_BID" RIGHT="0" SIGIS="undef" SIGNAME="axi_bram_ctrl_0_s_axi_bid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_bram_ctrl_0" PORT="s_axi_bid"/>
-          </CONNECTIONS>
-        </PORT>
         <PORT DIR="I" LEFT="1" NAME="m_axi_gmem_BRESP" RIGHT="0" SIGIS="undef" SIGNAME="axi_bram_ctrl_0_s_axi_bresp">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_bram_ctrl_0" PORT="s_axi_bresp"/>
@@ -3136,11 +3101,6 @@
         <PORT DIR="O" NAME="m_axi_gmem_BREADY" SIGIS="undef" SIGNAME="axi_bram_ctrl_0_s_axi_bready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_bram_ctrl_0" PORT="s_axi_bready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="0" NAME="m_axi_gmem_ARID" RIGHT="0" SIGIS="undef" SIGNAME="axi_bram_ctrl_0_s_axi_arid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_bram_ctrl_0" PORT="s_axi_arid"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="63" NAME="m_axi_gmem_ARADDR" RIGHT="0" SIGIS="undef" SIGNAME="axi_bram_ctrl_0_s_axi_araddr">
@@ -3188,11 +3148,6 @@
         <PORT DIR="I" NAME="m_axi_gmem_ARREADY" SIGIS="undef" SIGNAME="axi_bram_ctrl_0_s_axi_arready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_bram_ctrl_0" PORT="s_axi_arready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="0" NAME="m_axi_gmem_RID" RIGHT="0" SIGIS="undef" SIGNAME="axi_bram_ctrl_0_s_axi_rid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_bram_ctrl_0" PORT="s_axi_rid"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="31" NAME="m_axi_gmem_RDATA" RIGHT="0" SIGIS="undef" SIGNAME="axi_bram_ctrl_0_s_axi_rdata">
@@ -3344,7 +3299,7 @@
           <PARAMETER NAME="SUPPORTS_NARROW_BURST" VALUE="0"/>
           <PARAMETER NAME="DATA_WIDTH" VALUE="32"/>
           <PARAMETER NAME="FREQ_HZ" VALUE="50000000"/>
-          <PARAMETER NAME="ID_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="ID_WIDTH" VALUE="0"/>
           <PARAMETER NAME="ADDR_WIDTH" VALUE="64"/>
           <PARAMETER NAME="AWUSER_WIDTH" VALUE="0"/>
           <PARAMETER NAME="ARUSER_WIDTH" VALUE="0"/>
@@ -3367,7 +3322,6 @@
           <PARAMETER NAME="WUSER_BITS_PER_BYTE" VALUE="0"/>
           <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
           <PORTMAPS>
-            <PORTMAP LOGICAL="AWID" PHYSICAL="m_axi_gmem_AWID"/>
             <PORTMAP LOGICAL="AWADDR" PHYSICAL="m_axi_gmem_AWADDR"/>
             <PORTMAP LOGICAL="AWLEN" PHYSICAL="m_axi_gmem_AWLEN"/>
             <PORTMAP LOGICAL="AWSIZE" PHYSICAL="m_axi_gmem_AWSIZE"/>
@@ -3379,17 +3333,14 @@
             <PORTMAP LOGICAL="AWQOS" PHYSICAL="m_axi_gmem_AWQOS"/>
             <PORTMAP LOGICAL="AWVALID" PHYSICAL="m_axi_gmem_AWVALID"/>
             <PORTMAP LOGICAL="AWREADY" PHYSICAL="m_axi_gmem_AWREADY"/>
-            <PORTMAP LOGICAL="WID" PHYSICAL="m_axi_gmem_WID"/>
             <PORTMAP LOGICAL="WDATA" PHYSICAL="m_axi_gmem_WDATA"/>
             <PORTMAP LOGICAL="WSTRB" PHYSICAL="m_axi_gmem_WSTRB"/>
             <PORTMAP LOGICAL="WLAST" PHYSICAL="m_axi_gmem_WLAST"/>
             <PORTMAP LOGICAL="WVALID" PHYSICAL="m_axi_gmem_WVALID"/>
             <PORTMAP LOGICAL="WREADY" PHYSICAL="m_axi_gmem_WREADY"/>
-            <PORTMAP LOGICAL="BID" PHYSICAL="m_axi_gmem_BID"/>
             <PORTMAP LOGICAL="BRESP" PHYSICAL="m_axi_gmem_BRESP"/>
             <PORTMAP LOGICAL="BVALID" PHYSICAL="m_axi_gmem_BVALID"/>
             <PORTMAP LOGICAL="BREADY" PHYSICAL="m_axi_gmem_BREADY"/>
-            <PORTMAP LOGICAL="ARID" PHYSICAL="m_axi_gmem_ARID"/>
             <PORTMAP LOGICAL="ARADDR" PHYSICAL="m_axi_gmem_ARADDR"/>
             <PORTMAP LOGICAL="ARLEN" PHYSICAL="m_axi_gmem_ARLEN"/>
             <PORTMAP LOGICAL="ARSIZE" PHYSICAL="m_axi_gmem_ARSIZE"/>
@@ -3401,7 +3352,6 @@
             <PORTMAP LOGICAL="ARQOS" PHYSICAL="m_axi_gmem_ARQOS"/>
             <PORTMAP LOGICAL="ARVALID" PHYSICAL="m_axi_gmem_ARVALID"/>
             <PORTMAP LOGICAL="ARREADY" PHYSICAL="m_axi_gmem_ARREADY"/>
-            <PORTMAP LOGICAL="RID" PHYSICAL="m_axi_gmem_RID"/>
             <PORTMAP LOGICAL="RDATA" PHYSICAL="m_axi_gmem_RDATA"/>
             <PORTMAP LOGICAL="RRESP" PHYSICAL="m_axi_gmem_RRESP"/>
             <PORTMAP LOGICAL="RLAST" PHYSICAL="m_axi_gmem_RLAST"/>

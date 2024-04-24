@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "C:/EECE4632FinalProject/Audio_Equalizer/Audio_Equalizer_Vivado/equalizer/equalizer.runs/impl_1/equalizer_wrapper.tcl"
+  variable script "C:/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vivado/equalizer/equalizer.runs/impl_1/equalizer_wrapper.tcl"
   variable category "vivado_impl"
 }
 
@@ -130,19 +130,19 @@ OPTRACE "create in-memory project" START { }
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir C:/EECE4632FinalProject/Audio_Equalizer/Audio_Equalizer_Vivado/equalizer/equalizer.cache/wt [current_project]
-  set_property parent.project_path C:/EECE4632FinalProject/Audio_Equalizer/Audio_Equalizer_Vivado/equalizer/equalizer.xpr [current_project]
-  set_property ip_repo_paths C:/EECE4632FinalProject/Audio_Equalizer/Audio_Equalizer_Vitis [current_project]
+  set_property webtalk.parent_dir C:/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vivado/equalizer/equalizer.cache/wt [current_project]
+  set_property parent.project_path C:/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vivado/equalizer/equalizer.xpr [current_project]
+  set_property ip_repo_paths C:/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis [current_project]
   update_ip_catalog
-  set_property ip_output_repo C:/EECE4632FinalProject/Audio_Equalizer/Audio_Equalizer_Vivado/equalizer/equalizer.cache/ip [current_project]
+  set_property ip_output_repo C:/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vivado/equalizer/equalizer.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet C:/EECE4632FinalProject/Audio_Equalizer/Audio_Equalizer_Vivado/equalizer/equalizer.runs/synth_1/equalizer_wrapper.dcp
+  add_files -quiet C:/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vivado/equalizer/equalizer.runs/synth_1/equalizer_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files C:/EECE4632FinalProject/Audio_Equalizer/Audio_Equalizer_Vivado/equalizer/equalizer.srcs/sources_1/bd/equalizer/equalizer.bd
+  add_files C:/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vivado/equalizer/equalizer.srcs/sources_1/bd/equalizer/equalizer.bd
   set_param project.isImplRun false
 OPTRACE "read constraints: implementation" START { }
 OPTRACE "read constraints: implementation" END { }

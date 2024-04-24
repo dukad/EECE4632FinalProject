@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-| Date         : Tue Apr 16 19:57:13 2024
+| Date         : Wed Apr 24 15:37:24 2024
 | Host         : WFXA4BB6DB88619 running 64-bit major release  (build 9200)
 | Command      : report_methodology -file equalizer_wrapper_methodology_drc_routed.rpt -pb equalizer_wrapper_methodology_drc_routed.pb -rpx equalizer_wrapper_methodology_drc_routed.rpx
 | Design       : equalizer_wrapper

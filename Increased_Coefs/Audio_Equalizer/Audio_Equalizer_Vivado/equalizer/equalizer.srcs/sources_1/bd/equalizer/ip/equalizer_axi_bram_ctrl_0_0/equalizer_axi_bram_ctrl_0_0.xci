@@ -43,7 +43,7 @@
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.S_AXI.HAS_REGION">0</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.S_AXI.HAS_RRESP">1</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.S_AXI.HAS_WSTRB">1</spirit:configurableElementValue>
-        <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.S_AXI.ID_WIDTH">1</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.S_AXI.ID_WIDTH">0</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.S_AXI.INSERT_VIP">0</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.S_AXI.MAX_BURST_LENGTH">256</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.S_AXI.NUM_READ_OUTSTANDING">16</spirit:configurableElementValue>
@@ -113,7 +113,7 @@
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.ECC_ONOFF_RESET_VALUE">0</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.ECC_TYPE">0</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.FAULT_INJECT">0</spirit:configurableElementValue>
-        <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.ID_WIDTH">1</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.ID_WIDTH">0</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.MEM_DEPTH">2048</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.PROTOCOL">AXI4</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.RD_CMD_OPTIMIZATION">0</spirit:configurableElementValue>
@@ -204,7 +204,6 @@
                 &quot;ports&quot;: {
                   &quot;s_axi_aclk&quot;: [ { &quot;direction&quot;: &quot;in&quot; } ],
                   &quot;s_axi_aresetn&quot;: [ { &quot;direction&quot;: &quot;in&quot; } ],
-                  &quot;s_axi_awid&quot;: [ { &quot;direction&quot;: &quot;in&quot;, &quot;size_left&quot;: &quot;0&quot;, &quot;size_right&quot;: &quot;0&quot;, &quot;driver_value&quot;: &quot;0&quot; } ],
                   &quot;s_axi_awaddr&quot;: [ { &quot;direction&quot;: &quot;in&quot;, &quot;size_left&quot;: &quot;12&quot;, &quot;size_right&quot;: &quot;0&quot;, &quot;driver_value&quot;: &quot;0&quot; } ],
                   &quot;s_axi_awlen&quot;: [ { &quot;direction&quot;: &quot;in&quot;, &quot;size_left&quot;: &quot;7&quot;, &quot;size_right&quot;: &quot;0&quot;, &quot;driver_value&quot;: &quot;0&quot; } ],
                   &quot;s_axi_awsize&quot;: [ { &quot;direction&quot;: &quot;in&quot;, &quot;size_left&quot;: &quot;2&quot;, &quot;size_right&quot;: &quot;0&quot;, &quot;driver_value&quot;: &quot;0&quot; } ],
@@ -219,11 +218,9 @@
                   &quot;s_axi_wlast&quot;: [ { &quot;direction&quot;: &quot;in&quot;, &quot;driver_value&quot;: &quot;0&quot; } ],
                   &quot;s_axi_wvalid&quot;: [ { &quot;direction&quot;: &quot;in&quot;, &quot;driver_value&quot;: &quot;0&quot; } ],
                   &quot;s_axi_wready&quot;: [ { &quot;direction&quot;: &quot;out&quot; } ],
-                  &quot;s_axi_bid&quot;: [ { &quot;direction&quot;: &quot;out&quot;, &quot;size_left&quot;: &quot;0&quot;, &quot;size_right&quot;: &quot;0&quot; } ],
                   &quot;s_axi_bresp&quot;: [ { &quot;direction&quot;: &quot;out&quot;, &quot;size_left&quot;: &quot;1&quot;, &quot;size_right&quot;: &quot;0&quot; } ],
                   &quot;s_axi_bvalid&quot;: [ { &quot;direction&quot;: &quot;out&quot; } ],
                   &quot;s_axi_bready&quot;: [ { &quot;direction&quot;: &quot;in&quot;, &quot;driver_value&quot;: &quot;0&quot; } ],
-                  &quot;s_axi_arid&quot;: [ { &quot;direction&quot;: &quot;in&quot;, &quot;size_left&quot;: &quot;0&quot;, &quot;size_right&quot;: &quot;0&quot;, &quot;driver_value&quot;: &quot;0&quot; } ],
                   &quot;s_axi_araddr&quot;: [ { &quot;direction&quot;: &quot;in&quot;, &quot;size_left&quot;: &quot;12&quot;, &quot;size_right&quot;: &quot;0&quot;, &quot;driver_value&quot;: &quot;0&quot; } ],
                   &quot;s_axi_arlen&quot;: [ { &quot;direction&quot;: &quot;in&quot;, &quot;size_left&quot;: &quot;7&quot;, &quot;size_right&quot;: &quot;0&quot;, &quot;driver_value&quot;: &quot;0&quot; } ],
                   &quot;s_axi_arsize&quot;: [ { &quot;direction&quot;: &quot;in&quot;, &quot;size_left&quot;: &quot;2&quot;, &quot;size_right&quot;: &quot;0&quot;, &quot;driver_value&quot;: &quot;0&quot; } ],
@@ -233,7 +230,6 @@
                   &quot;s_axi_arprot&quot;: [ { &quot;direction&quot;: &quot;in&quot;, &quot;size_left&quot;: &quot;2&quot;, &quot;size_right&quot;: &quot;0&quot;, &quot;driver_value&quot;: &quot;0&quot; } ],
                   &quot;s_axi_arvalid&quot;: [ { &quot;direction&quot;: &quot;in&quot;, &quot;driver_value&quot;: &quot;0&quot; } ],
                   &quot;s_axi_arready&quot;: [ { &quot;direction&quot;: &quot;out&quot; } ],
-                  &quot;s_axi_rid&quot;: [ { &quot;direction&quot;: &quot;out&quot;, &quot;size_left&quot;: &quot;0&quot;, &quot;size_right&quot;: &quot;0&quot; } ],
                   &quot;s_axi_rdata&quot;: [ { &quot;direction&quot;: &quot;out&quot;, &quot;size_left&quot;: &quot;31&quot;, &quot;size_right&quot;: &quot;0&quot; } ],
                   &quot;s_axi_rresp&quot;: [ { &quot;direction&quot;: &quot;out&quot;, &quot;size_left&quot;: &quot;1&quot;, &quot;size_right&quot;: &quot;0&quot; } ],
                   &quot;s_axi_rlast&quot;: [ { &quot;direction&quot;: &quot;out&quot;, &quot;driver_value&quot;: &quot;0&quot; } ],
@@ -257,7 +253,7 @@
                       &quot;DATA_WIDTH&quot;: [ { &quot;value&quot;: &quot;32&quot;, &quot;value_src&quot;: &quot;auto&quot;, &quot;value_permission&quot;: &quot;bd&quot;, &quot;resolve_type&quot;: &quot;generated&quot;, &quot;format&quot;: &quot;long&quot;, &quot;usage&quot;: &quot;simulation.tlm&quot;, &quot;is_static_object&quot;: false } ],
                       &quot;PROTOCOL&quot;: [ { &quot;value&quot;: &quot;AXI4&quot;, &quot;value_src&quot;: &quot;auto&quot;, &quot;value_permission&quot;: &quot;bd&quot;, &quot;resolve_type&quot;: &quot;generated&quot;, &quot;usage&quot;: &quot;simulation.tlm&quot;, &quot;is_static_object&quot;: false } ],
                       &quot;FREQ_HZ&quot;: [ { &quot;value&quot;: &quot;50000000&quot;, &quot;value_src&quot;: &quot;user_prop&quot;, &quot;value_permission&quot;: &quot;bd&quot;, &quot;resolve_type&quot;: &quot;generated&quot;, &quot;format&quot;: &quot;long&quot;, &quot;usage&quot;: &quot;simulation.tlm&quot;, &quot;is_static_object&quot;: false } ],
-                      &quot;ID_WIDTH&quot;: [ { &quot;value&quot;: &quot;1&quot;, &quot;value_src&quot;: &quot;auto_prop&quot;, &quot;value_permission&quot;: &quot;bd&quot;, &quot;resolve_type&quot;: &quot;generated&quot;, &quot;format&quot;: &quot;long&quot;, &quot;usage&quot;: &quot;simulation.tlm&quot;, &quot;is_static_object&quot;: false } ],
+                      &quot;ID_WIDTH&quot;: [ { &quot;value&quot;: &quot;0&quot;, &quot;value_src&quot;: &quot;auto_prop&quot;, &quot;value_permission&quot;: &quot;bd&quot;, &quot;resolve_type&quot;: &quot;generated&quot;, &quot;format&quot;: &quot;long&quot;, &quot;usage&quot;: &quot;simulation.tlm&quot;, &quot;is_static_object&quot;: false } ],
                       &quot;ADDR_WIDTH&quot;: [ { &quot;value&quot;: &quot;13&quot;, &quot;value_src&quot;: &quot;auto&quot;, &quot;value_permission&quot;: &quot;bd&quot;, &quot;resolve_type&quot;: &quot;generated&quot;, &quot;format&quot;: &quot;long&quot;, &quot;usage&quot;: &quot;simulation.tlm&quot;, &quot;is_static_object&quot;: false } ],
                       &quot;AWUSER_WIDTH&quot;: [ { &quot;value&quot;: &quot;0&quot;, &quot;value_src&quot;: &quot;constant&quot;, &quot;value_permission&quot;: &quot;bd&quot;, &quot;resolve_type&quot;: &quot;generated&quot;, &quot;format&quot;: &quot;long&quot;, &quot;usage&quot;: &quot;simulation.tlm&quot;, &quot;is_static_object&quot;: false } ],
                       &quot;ARUSER_WIDTH&quot;: [ { &quot;value&quot;: &quot;0&quot;, &quot;value_src&quot;: &quot;constant&quot;, &quot;value_permission&quot;: &quot;bd&quot;, &quot;resolve_type&quot;: &quot;generated&quot;, &quot;format&quot;: &quot;long&quot;, &quot;usage&quot;: &quot;simulation.tlm&quot;, &quot;is_static_object&quot;: false } ],
@@ -290,7 +286,6 @@
                       &quot;ARADDR&quot;: [ { &quot;physical_name&quot;: &quot;s_axi_araddr&quot; } ],
                       &quot;ARBURST&quot;: [ { &quot;physical_name&quot;: &quot;s_axi_arburst&quot; } ],
                       &quot;ARCACHE&quot;: [ { &quot;physical_name&quot;: &quot;s_axi_arcache&quot; } ],
-                      &quot;ARID&quot;: [ { &quot;physical_name&quot;: &quot;s_axi_arid&quot; } ],
                       &quot;ARLEN&quot;: [ { &quot;physical_name&quot;: &quot;s_axi_arlen&quot; } ],
                       &quot;ARLOCK&quot;: [ { &quot;physical_name&quot;: &quot;s_axi_arlock&quot; } ],
                       &quot;ARPROT&quot;: [ { &quot;physical_name&quot;: &quot;s_axi_arprot&quot; } ],
@@ -300,19 +295,16 @@
                       &quot;AWADDR&quot;: [ { &quot;physical_name&quot;: &quot;s_axi_awaddr&quot; } ],
                       &quot;AWBURST&quot;: [ { &quot;physical_name&quot;: &quot;s_axi_awburst&quot; } ],
                       &quot;AWCACHE&quot;: [ { &quot;physical_name&quot;: &quot;s_axi_awcache&quot; } ],
-                      &quot;AWID&quot;: [ { &quot;physical_name&quot;: &quot;s_axi_awid&quot; } ],
                       &quot;AWLEN&quot;: [ { &quot;physical_name&quot;: &quot;s_axi_awlen&quot; } ],
                       &quot;AWLOCK&quot;: [ { &quot;physical_name&quot;: &quot;s_axi_awlock&quot; } ],
                       &quot;AWPROT&quot;: [ { &quot;physical_name&quot;: &quot;s_axi_awprot&quot; } ],
                       &quot;AWREADY&quot;: [ { &quot;physical_name&quot;: &quot;s_axi_awready&quot; } ],
                       &quot;AWSIZE&quot;: [ { &quot;physical_name&quot;: &quot;s_axi_awsize&quot; } ],
                       &quot;AWVALID&quot;: [ { &quot;physical_name&quot;: &quot;s_axi_awvalid&quot; } ],
-                      &quot;BID&quot;: [ { &quot;physical_name&quot;: &quot;s_axi_bid&quot; } ],
                       &quot;BREADY&quot;: [ { &quot;physical_name&quot;: &quot;s_axi_bready&quot; } ],
                       &quot;BRESP&quot;: [ { &quot;physical_name&quot;: &quot;s_axi_bresp&quot; } ],
                       &quot;BVALID&quot;: [ { &quot;physical_name&quot;: &quot;s_axi_bvalid&quot; } ],
                       &quot;RDATA&quot;: [ { &quot;physical_name&quot;: &quot;s_axi_rdata&quot; } ],
-                      &quot;RID&quot;: [ { &quot;physical_name&quot;: &quot;s_axi_rid&quot; } ],
                       &quot;RLAST&quot;: [ { &quot;physical_name&quot;: &quot;s_axi_rlast&quot; } ],
                       &quot;RREADY&quot;: [ { &quot;physical_name&quot;: &quot;s_axi_rready&quot; } ],
                       &quot;RRESP&quot;: [ { &quot;physical_name&quot;: &quot;s_axi_rresp&quot; } ],
