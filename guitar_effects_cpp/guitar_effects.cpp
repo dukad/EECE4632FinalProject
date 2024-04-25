@@ -13,12 +13,13 @@
 
 typedef ap_fixed<8,1> mult_float;
 typedef ap_fixed<32, 8> wah_mult;
+typedef ap_fixed<32, 16> custom_float;
 
 // function definitions
-int distortion(int input, int threshold, mult_float clip_factor);
-int compression(int input, int min_threshold, int max_threshold, int zero_threshold, int& current_level, int values_buffer[LPF_FILTER_LENGTH], int &compression_buffer_index, float lpf_coefficients[LPF_FILTER_LENGTH], int current_sample);
-int delay(int input, int delay_samples, float delay_mult, int delay_buffer[DELAY_BUFFER_SIZE], int &delay_buffer_index);
-int wah(int input, int tempo, int &current_sample, int &wah_buffer_index, int wah_values_buffer[BANDPASS_FILTER_LENGTH], wah_mult bandpass_coeffs[WAH_BANDPASS_RESOLUTION][BANDPASS_FILTER_LENGTH], wah_mult &debug, int control_signal_buffer[BANDPASS_FILTER_LENGTH]);
+short distortion(short input, int threshold, mult_float clip_factor);
+short compression(short input, int min_threshold, int max_threshold, int zero_threshold, short& current_level, short values_buffer[LPF_FILTER_LENGTH], short &compression_buffer_index, custom_float lpf_coefficients[LPF_FILTER_LENGTH], int current_sample);
+short delay(short input, int delay_samples, float delay_mult, short delay_buffer[DELAY_BUFFER_SIZE], int &delay_buffer_index);
+short wah(short input, int tempo, int &current_sample, short &wah_buffer_index, short wah_values_buffer[BANDPASS_FILTER_LENGTH], wah_mult bandpass_coeffs[WAH_BANDPASS_RESOLUTION][BANDPASS_FILTER_LENGTH], wah_mult &debug, short control_signal_buffer[BANDPASS_FILTER_LENGTH]);
 
 void guitar_effects (
     hls::stream< ap_axis<32,2,5,6> > &INPUT,
@@ -62,25 +63,25 @@ void guitar_effects (
     // declare all necessary variables
 
     //compression vars
-    int current_level = 0;
-    int compression_buffer[LPF_FILTER_LENGTH] = {0};
-    int compression_buffer_index = 0;
-    float lpf_coefficients[LPF_FILTER_LENGTH] = {0};
-    float filter_value = 1.0 / LPF_FILTER_LENGTH;
-    for (int i = 0; i < LPF_FILTER_LENGTH; i++) {
+    short current_level = 0;
+    short compression_buffer[LPF_FILTER_LENGTH] = {0};
+    short compression_buffer_index = 0;
+    custom_float lpf_coefficients[LPF_FILTER_LENGTH] = {0};
+    custom_float filter_value = (custom_float)(1.0) / LPF_FILTER_LENGTH;
+    for (short i = 0; i < LPF_FILTER_LENGTH; i++) {
     	lpf_coefficients[i] = filter_value;
     }
 
     //delay vars
-    int delay_buffer[DELAY_BUFFER_SIZE] = {0};
+    short delay_buffer[DELAY_BUFFER_SIZE] = {0};
     int delay_buffer_index = 0;
 
     //wah vars
-    int wah_buffer_index = 0;
-    int wah_values_buffer[BANDPASS_FILTER_LENGTH];
-    int control_signals_buffer[BANDPASS_FILTER_LENGTH];
+    short wah_buffer_index = 0;
+    short wah_values_buffer[BANDPASS_FILTER_LENGTH];
+    short control_signals_buffer[BANDPASS_FILTER_LENGTH];
 
-    for (int i = 0; i< BANDPASS_FILTER_LENGTH; i++) {
+    for (short i = 0; i< BANDPASS_FILTER_LENGTH; i++) {
     	wah_values_buffer[i] = 0;
     	control_signals_buffer[i] = 0;
     }
@@ -88,7 +89,7 @@ void guitar_effects (
 
     ap_axis<32,2,5,6> tmp;
     ap_axis<32,2,5,6> tmp_out;
-    int tmp_int;
+    short tmp_short;
     axilite_out = 0;
     debug_output = wah_coeffs[0][0];
     int current_sample = 0;
@@ -96,31 +97,31 @@ void guitar_effects (
     while(1) {   
 
         INPUT.read(tmp); // store input data to tmp
-        tmp_int = tmp.data.to_int(); // convert tmp to int
+        tmp_short = tmp.data.to_short(); // convert tmp to short
         // use control input to determine which effect to use
         // 4 effects, with bool states each in order distortion, compression, delay, wah
         // if the first bit is 1, apply distortion
         if (control & 0b1000) {
         	axilite_out = axilite_out | 0b1000;
-            tmp_int = distortion(tmp_int, distortion_threshold, distortion_clip_factor);
+            tmp_short = distortion(tmp_short, distortion_threshold, distortion_clip_factor);
         }
         if (control & 0b0100) {
             // apply compression function
         	axilite_out = axilite_out | 0b0100;
-            tmp_int = compression(tmp_int, compression_min_threshold, compression_max_threshold, compression_zero_threshold, current_level, compression_buffer, compression_buffer_index, lpf_coefficients, current_sample);
+            tmp_short = compression(tmp_short, compression_min_threshold, compression_max_threshold, compression_zero_threshold, current_level, compression_buffer, compression_buffer_index, lpf_coefficients, current_sample);
         }
         if (control & 0b0010) {
             //apply delay function
         	axilite_out = axilite_out | 0b0010;
-            tmp_int = delay(tmp_int, delay_samples, delay_mult, delay_buffer, delay_buffer_index);
+            tmp_short = delay(tmp_short, delay_samples, delay_mult, delay_buffer, delay_buffer_index);
         }
         if (control & 0b0001) {
             //apply wah function
         	axilite_out = axilite_out | 0b0001;
-        	tmp_int = wah(tmp_int, tempo, current_sample, wah_buffer_index, wah_values_buffer, wah_coeffs, debug_output, control_signals_buffer);
+        	tmp_short = wah(tmp_short, tempo, current_sample, wah_buffer_index, wah_values_buffer, wah_coeffs, debug_output, control_signals_buffer);
         }
         current_sample++;
-        tmp_out.data = (tmp_int);
+        tmp_out.data = (tmp_short);
         tmp_out.keep = tmp.keep;
         tmp_out.strb = tmp.strb;
         tmp_out.last = 0;
@@ -139,15 +140,15 @@ void guitar_effects (
 
 }
 
-//distortion effect, returns array of ints not a vector
-int distortion(int input, int threshold, mult_float clip_factor) {
-    // linear operation, so just take one input int at a time
-    int result;
-    int negative_threshold = -threshold;
+//distortion effect, returns array of shorts not a vector
+short distortion(short input, int threshold, mult_float clip_factor) {
+    // linear operation, so just take one input short at a time
+    short result;
+    short negative_threshold = -threshold;
     if (input > threshold) {
-        result = (((input - threshold)*clip_factor).to_int() + threshold);
+        result = ((short)((input - threshold)*clip_factor) + threshold);
     } else if (input < negative_threshold) {
-        result = (((input + threshold)*clip_factor).to_int() - threshold);
+        result = ((short)((input + threshold)*clip_factor) - threshold);
     } else {
         result = input;
     }
@@ -156,11 +157,11 @@ int distortion(int input, int threshold, mult_float clip_factor) {
 }
 
 //compression effect
-int compression(int input, int min_threshold, int max_threshold, int zero_threshold, int &current_level, int values_buffer[LPF_FILTER_LENGTH], int &compression_buffer_index, float lpf_coefficients[LPF_FILTER_LENGTH], int current_sample) {
+short compression(short input, int min_threshold, int max_threshold, int zero_threshold, short &current_level, short values_buffer[LPF_FILTER_LENGTH], short &compression_buffer_index, custom_float lpf_coefficients[LPF_FILTER_LENGTH], int current_sample) {
     // rectify the input signal and apply a low pass filter
 
 
-	int abs_in = input;
+	short abs_in = input;
 	if (input < 0) {
 		abs_in = -input;
 	}
@@ -170,11 +171,11 @@ int compression(int input, int min_threshold, int max_threshold, int zero_thresh
     compression_buffer_index = (compression_buffer_index + 1) % LPF_FILTER_LENGTH; // update index
     current_level = 0;
     // compute FIR out
-    LPF_Loop : for (int i = 0; i < LPF_FILTER_LENGTH; i++) {
-		#pragma HLS PIPELINE II=15
+    LPF_Loop : for (short i = 0; i < LPF_FILTER_LENGTH; i++) {
+		#pragma HLS PIPELINE II=14
         //iterate through filter
-        int coeff_index = (compression_buffer_index + i) % LPF_FILTER_LENGTH; // get value to index the previous values by, essentially iterate though but loop if needed
-        current_level += values_buffer[coeff_index] * lpf_coefficients[i];
+        short coeff_index = (compression_buffer_index + i) % LPF_FILTER_LENGTH; // get value to index the previous values by, essentially iterate though but loop if needed
+        current_level += (short)(values_buffer[coeff_index] * lpf_coefficients[i]);
     }
     // dont amplify the signal at the beginning to avoid spike
     if (current_sample < LPF_FILTER_LENGTH) {
@@ -182,16 +183,16 @@ int compression(int input, int min_threshold, int max_threshold, int zero_thresh
     }
 
     // apply dynamic range compression
-    int output;
+    short output;
     // if the current level is above the max threshold, then scale the input down
     float compression_factor;
     if (current_level > max_threshold) {
 		//realistically this will always be the case because max threshold will always be > 0
-		compression_factor = (float)(max_threshold) / current_level;
+		compression_factor = (custom_float)(max_threshold) / current_level;
 		output = (input * compression_factor);
 
     } else if ((current_level < min_threshold) && (current_level > zero_threshold))  {
-		compression_factor = (float)(min_threshold) / current_level;
+		compression_factor = (custom_float)(min_threshold) / current_level;
 		output = (input * compression_factor);
     } else {
         // dont change if within desired range
@@ -202,10 +203,10 @@ int compression(int input, int min_threshold, int max_threshold, int zero_thresh
 }
 
 //delay effect
-int delay(int input, int delay_samples, float delay_mult, int delay_buffer[DELAY_BUFFER_SIZE], int &delay_buffer_index) {
+short delay(short input, int delay_samples, float delay_mult, short delay_buffer[DELAY_BUFFER_SIZE], int &delay_buffer_index) {
     // add delayed output to input signal
-    int output;
-    output = (input + (int)(delay_buffer[(delay_buffer_index - delay_samples) % DELAY_BUFFER_SIZE]*delay_mult)); // add a previous sample to the input
+    short output;
+    output = (input + (short)(delay_buffer[(delay_buffer_index - delay_samples) % DELAY_BUFFER_SIZE]*delay_mult)); // add a previous sample to the input
 
     //store output in the buffer and update index
     delay_buffer[delay_buffer_index] = output;
@@ -214,7 +215,7 @@ int delay(int input, int delay_samples, float delay_mult, int delay_buffer[DELAY
     return output;
 }
 
-int wah(int input, int tempo, int &current_sample, int &wah_buffer_index, int wah_values_buffer[BANDPASS_FILTER_LENGTH], wah_mult bandpass_coeffs[WAH_BANDPASS_RESOLUTION][BANDPASS_FILTER_LENGTH], wah_mult &debug, int control_signal_buffer[BANDPASS_FILTER_LENGTH]) {
+short wah(short input, int tempo, int &current_sample, short &wah_buffer_index, short wah_values_buffer[BANDPASS_FILTER_LENGTH], wah_mult bandpass_coeffs[WAH_BANDPASS_RESOLUTION][BANDPASS_FILTER_LENGTH], wah_mult &debug, short control_signal_buffer[BANDPASS_FILTER_LENGTH]) {
     // apply wah effect
     // taking filter coeffecients from bandpass_coeffs.coe
     // approximate the control signal as a sine wave based on sampling rate and tempo
@@ -223,24 +224,24 @@ int wah(int input, int tempo, int &current_sample, int &wah_buffer_index, int wa
 
 	wah_values_buffer[wah_buffer_index] = input;
 	// define and save the control signal to be used in the convolution
-	int control_signal = (14*current_sample / FRAME_RATE) % WAH_BANDPASS_RESOLUTION;
+	short control_signal = (14*current_sample / FRAME_RATE) % WAH_BANDPASS_RESOLUTION;
 
 	control_signal_buffer[wah_buffer_index] = control_signal;
 
 	wah_buffer_index = (wah_buffer_index + 1) % BANDPASS_FILTER_LENGTH; // update index
 
 
-    // based on this control signal (int) use the bandpass filter coefficients to apply a bandpass filter to the input signal
+    // based on this control signal (short) use the bandpass filter coefficients to apply a bandpass filter to the input signal
     // this is done by convolving the input signal with the filter coefficients
     float temp_result = 0.0;
-    int result = 0;
-    WAH_LOOP : for (int i = 0; i < BANDPASS_FILTER_LENGTH; i++) { // convolve, but change which filter to convolve with based on the control signal
+    short result = 0;
+    WAH_LOOP : for (short i = 0; i < BANDPASS_FILTER_LENGTH; i++) { // convolve, but change which filter to convolve with based on the control signal
         //iterate through filter
-        int coeff_index = ((wah_buffer_index - i + BANDPASS_FILTER_LENGTH) % BANDPASS_FILTER_LENGTH); // get value to index the previous values by, essentially iterate though but loop if needed
+        short coeff_index = ((wah_buffer_index - i + BANDPASS_FILTER_LENGTH) % BANDPASS_FILTER_LENGTH); // get value to index the previous values by, essentially iterate though but loop if needed
         temp_result += (float)(wah_values_buffer[coeff_index] * (float)(bandpass_coeffs[control_signal_buffer[coeff_index]][i])); // use the control signal appropriate to the samples value, not the current sample
     }
 
-    result = (int)(temp_result);
+    result = (short)(temp_result);
     debug = 0b1111; // for debugging purposes
 
     return result;

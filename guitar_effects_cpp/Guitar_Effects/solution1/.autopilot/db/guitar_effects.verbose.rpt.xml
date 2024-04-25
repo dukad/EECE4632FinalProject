@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'guitar_effects'" level="0">
-<item name = "Date">Thu Apr 25 12:54:27 2024
+<item name = "Date">Thu Apr 25 14:01:23 2024
 </item>
 <item name = "Version">2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)</item>
 <item name = "Project">Guitar_Effects</item>
@@ -32,7 +32,7 @@
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
 <column name="grp_guitar_effects_Pipeline_LPF_Loop_fu_572">guitar_effects_Pipeline_LPF_Loop, 6635, 6635, 66.350 us, 66.350 us, 6635, 6635, no</column>
-<column name="grp_wah_fu_581">wah, 3738, 3738, 37.380 us, 37.380 us, 3738, 3738, no</column>
+<column name="grp_wah_fu_581">wah, 672, 672, 6.720 us, 6.720 us, 672, 672, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
@@ -40,7 +40,7 @@
 <column name="- Loop 1">441, 441, 1, -, -, 441, no</column>
 <column name="- Loop 2">88200, 88200, 1, -, -, 88200, no</column>
 <column name="- VITIS_LOOP_83_2">100, 100, 1, -, -, 100, no</column>
-<column name="- VITIS_LOOP_96_3">?, ?, 9 ~ 10497, -, -, ?, no</column>
+<column name="- VITIS_LOOP_96_3">?, ?, 9 ~ 7431, -, -, ?, no</column>
 </table>
 </item>
 </section>
@@ -55,12 +55,12 @@
 <column name="DSP">-, -, -, -, -</column>
 <column name="Expression">-, -, 0, 3034, -</column>
 <column name="FIFO">-, -, -, -, -</column>
-<column name="Instance">1, 10, 5416, 7721, -</column>
+<column name="Instance">1, 10, 5658, 7914, -</column>
 <column name="Memory">258, -, 5, 8, 0</column>
 <column name="Multiplexer">-, -, -, 1543, -</column>
 <column name="Register">-, -, 1948, -, -</column>
 <specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
-<specialColumn name="Utilization (%)">92, 4, 6, 23, 0</specialColumn>
+<specialColumn name="Utilization (%)">92, 4, 7, 23, 0</specialColumn>
 </table>
 </item>
 <item name = "Detail">
@@ -68,19 +68,19 @@
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
 <column name="control_r_s_axi_U">control_r_s_axi, 0, 0, 508, 840, 0</column>
-<column name="fadd_32ns_32ns_32_5_full_dsp_1_U39">fadd_32ns_32ns_32_5_full_dsp_1, 0, 2, 205, 390, 0</column>
-<column name="fdiv_32ns_32ns_32_16_no_dsp_1_U31">fdiv_32ns_32ns_32_16_no_dsp_1, 0, 0, 0, 0, 0</column>
-<column name="fmul_32ns_32ns_32_4_max_dsp_1_U30">fmul_32ns_32ns_32_4_max_dsp_1, 0, 3, 143, 321, 0</column>
+<column name="fadd_32ns_32ns_32_5_full_dsp_1_U48">fadd_32ns_32ns_32_5_full_dsp_1, 0, 2, 205, 390, 0</column>
+<column name="fdiv_32ns_32ns_32_16_no_dsp_1_U40">fdiv_32ns_32ns_32_16_no_dsp_1, 0, 0, 0, 0, 0</column>
+<column name="fmul_32ns_32ns_32_4_max_dsp_1_U39">fmul_32ns_32ns_32_4_max_dsp_1, 0, 3, 143, 321, 0</column>
 <column name="gmem_m_axi_U">gmem_m_axi, 0, 0, 718, 1318, 0</column>
 <column name="grp_guitar_effects_Pipeline_LPF_Loop_fu_572">guitar_effects_Pipeline_LPF_Loop, 1, 0, 670, 1057, 0</column>
-<column name="mul_32s_8s_40_2_1_U34">mul_32s_8s_40_2_1, 0, 1, 165, 50, 0</column>
-<column name="mul_32s_8s_40_2_1_U35">mul_32s_8s_40_2_1, 0, 1, 165, 50, 0</column>
-<column name="sitofp_32ns_32_6_no_dsp_1_U32">sitofp_32ns_32_6_no_dsp_1, 0, 0, 0, 0, 0</column>
-<column name="sitofp_32ns_32_6_no_dsp_1_U33">sitofp_32ns_32_6_no_dsp_1, 0, 0, 0, 0, 0</column>
-<column name="srem_32ns_10ns_32_36_seq_1_U36">srem_32ns_10ns_32_36_seq_1, 0, 0, 394, 238, 0</column>
-<column name="srem_32ns_18ns_17_36_seq_1_U37">srem_32ns_18ns_17_36_seq_1, 0, 0, 394, 238, 0</column>
-<column name="srem_32ns_18ns_32_36_seq_1_U38">srem_32ns_18ns_32_36_seq_1, 0, 0, 394, 238, 0</column>
-<column name="grp_wah_fu_581">wah, 0, 3, 1660, 2981, 0</column>
+<column name="mul_32s_8s_40_2_1_U43">mul_32s_8s_40_2_1, 0, 1, 165, 50, 0</column>
+<column name="mul_32s_8s_40_2_1_U44">mul_32s_8s_40_2_1, 0, 1, 165, 50, 0</column>
+<column name="sitofp_32ns_32_6_no_dsp_1_U41">sitofp_32ns_32_6_no_dsp_1, 0, 0, 0, 0, 0</column>
+<column name="sitofp_32ns_32_6_no_dsp_1_U42">sitofp_32ns_32_6_no_dsp_1, 0, 0, 0, 0, 0</column>
+<column name="srem_32ns_10ns_32_36_seq_1_U45">srem_32ns_10ns_32_36_seq_1, 0, 0, 394, 238, 0</column>
+<column name="srem_32ns_18ns_17_36_seq_1_U46">srem_32ns_18ns_17_36_seq_1, 0, 0, 394, 238, 0</column>
+<column name="srem_32ns_18ns_32_36_seq_1_U47">srem_32ns_18ns_32_36_seq_1, 0, 0, 394, 238, 0</column>
+<column name="grp_wah_fu_581">wah, 0, 3, 1902, 3174, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -277,11 +277,11 @@
 <column name="negative_threshold_reg_1807">32, 0, 32, 0</column>
 <column name="or_ln109_reg_1974">31, 0, 32, 1</column>
 <column name="or_ln149_reg_1877">1, 0, 1, 0</column>
-<column name="p_Result_20_reg_2035">1, 0, 1, 0</column>
-<column name="p_Result_21_reg_2040">23, 0, 23, 0</column>
-<column name="p_Result_22_reg_1994">1, 0, 1, 0</column>
-<column name="p_Result_23_reg_1999">23, 0, 23, 0</column>
-<column name="p_Result_25_reg_2081">23, 0, 23, 0</column>
+<column name="p_Result_19_reg_2035">1, 0, 1, 0</column>
+<column name="p_Result_20_reg_2040">23, 0, 23, 0</column>
+<column name="p_Result_21_reg_1994">1, 0, 1, 0</column>
+<column name="p_Result_22_reg_1999">23, 0, 23, 0</column>
+<column name="p_Result_24_reg_2081">23, 0, 23, 0</column>
 <column name="r_V_12_reg_1892">40, 0, 40, 0</column>
 <column name="r_V_13_reg_1909">40, 0, 40, 0</column>
 <column name="r_V_3_reg_1867">32, 0, 32, 0</column>
@@ -295,8 +295,8 @@
 <column name="ret_V_cast_reg_1897">32, 0, 32, 0</column>
 <column name="rev_reg_1802">1, 0, 1, 0</column>
 <column name="srem_ln208_reg_2061">17, 0, 17, 0</column>
-<column name="tmp_13_reg_1783">1, 0, 1, 0</column>
-<column name="tmp_15_reg_1787">1, 0, 1, 0</column>
+<column name="tmp_11_reg_1783">1, 0, 1, 0</column>
+<column name="tmp_12_reg_1787">1, 0, 1, 0</column>
 <column name="tmp_data_V_1_reg_1828">32, 0, 32, 0</column>
 <column name="tmp_dest_V_reg_1857">6, 0, 6, 0</column>
 <column name="tmp_id_V_reg_1852">5, 0, 5, 0</column>

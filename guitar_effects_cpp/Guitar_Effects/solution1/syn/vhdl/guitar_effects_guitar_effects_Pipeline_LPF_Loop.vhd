@@ -147,8 +147,8 @@ attribute shreg_extract : string;
     signal ap_block_pp0_stage10_11001 : BOOLEAN;
     signal dc_reg_408 : STD_LOGIC_VECTOR (31 downto 0);
     signal p_Result_s_reg_413 : STD_LOGIC_VECTOR (0 downto 0);
-    signal p_Result_9_fu_218_p1 : STD_LOGIC_VECTOR (22 downto 0);
-    signal p_Result_9_reg_418 : STD_LOGIC_VECTOR (22 downto 0);
+    signal p_Result_8_fu_218_p1 : STD_LOGIC_VECTOR (22 downto 0);
+    signal p_Result_8_reg_418 : STD_LOGIC_VECTOR (22 downto 0);
     signal isNeg_fu_232_p3 : STD_LOGIC_VECTOR (0 downto 0);
     signal isNeg_reg_423 : STD_LOGIC_VECTOR (0 downto 0);
     signal ush_fu_250_p3 : STD_LOGIC_VECTOR (8 downto 0);
@@ -536,7 +536,7 @@ begin
             if (((ap_const_boolean_0 = ap_block_pp0_stage1_11001) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage1))) then
                 isNeg_reg_423 <= add_ln346_fu_226_p2(8 downto 8);
                 lpf_coefficients_load_reg_383 <= lpf_coefficients_q0;
-                p_Result_9_reg_418 <= p_Result_9_fu_218_p1;
+                p_Result_8_reg_418 <= p_Result_8_fu_218_p1;
                 p_Result_s_reg_413 <= data_V_fu_197_p1(31 downto 31);
                 ush_reg_428 <= ush_fu_250_p3;
             end if;
@@ -892,8 +892,8 @@ begin
         end if; 
     end process;
 
-    mantissa_fu_258_p4 <= ((ap_const_lv1_1 & p_Result_9_reg_418) & ap_const_lv1_0);
-    p_Result_9_fu_218_p1 <= data_V_fu_197_p1(23 - 1 downto 0);
+    mantissa_fu_258_p4 <= ((ap_const_lv1_1 & p_Result_8_reg_418) & ap_const_lv1_0);
+    p_Result_8_fu_218_p1 <= data_V_fu_197_p1(23 - 1 downto 0);
     p_out <= ret_fu_72;
 
     p_out_ap_vld_assign_proc : process(icmp_ln173_reg_359_pp0_iter1_reg, ap_CS_fsm_pp0_stage3, ap_block_pp0_stage3_11001)

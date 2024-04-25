@@ -10,7 +10,9 @@
         <file name="guitar_effects.cpp" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>
     </files>
     <solutions xmlns="">
-        <solution name="solution1" status="active"/>
+        <solution name="solution1" status="inactive"/>
+        <solution name="pipeline5" status="inactive"/>
+        <solution name="int_to_short" status="active"/>
     </solutions>
 </project>
 

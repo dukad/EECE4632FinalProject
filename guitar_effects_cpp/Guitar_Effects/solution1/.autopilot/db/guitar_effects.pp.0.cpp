@@ -27127,6 +27127,10 @@ int wah(int input, int tempo, int &current_sample, int &wah_buffer_index, int wa
     float temp_result = 0.0;
     int result = 0;
     WAH_LOOP : for (int i = 0; i < 100; i++) {
+#line 7 "C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/directives.tcl"
+#pragma HLSDIRECTIVE PIPELINE II=6
+# 237 "guitar_effects.cpp"
+
 
         int coeff_index = ((wah_buffer_index - i + 100) % 100);
         temp_result += (float)(wah_values_buffer[coeff_index] * (float)(bandpass_coeffs[control_signal_buffer[coeff_index]][i]));

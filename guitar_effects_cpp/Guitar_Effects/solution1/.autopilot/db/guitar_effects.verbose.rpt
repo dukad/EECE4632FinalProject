@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'guitar_effects'
 ================================================================
-* Date:           Thu Apr 25 12:54:27 2024
+* Date:           Thu Apr 25 14:01:23 2024
 
 * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
 * Project:        Guitar_Effects
@@ -39,19 +39,19 @@
         |                   Instance                  |              Module              |   min   |   max   |    min    |    max    |  min |  max |   Type  |
         +---------------------------------------------+----------------------------------+---------+---------+-----------+-----------+------+------+---------+
         |grp_guitar_effects_Pipeline_LPF_Loop_fu_572  |guitar_effects_Pipeline_LPF_Loop  |     6635|     6635|  66.350 us|  66.350 us|  6635|  6635|       no|
-        |grp_wah_fu_581                               |wah                               |     3738|     3738|  37.380 us|  37.380 us|  3738|  3738|       no|
+        |grp_wah_fu_581                               |wah                               |      672|      672|   6.720 us|   6.720 us|   672|   672|       no|
         +---------------------------------------------+----------------------------------+---------+---------+-----------+-----------+------+------+---------+
 
         * Loop: 
-        +-------------------+---------+---------+-----------+-----------+-----------+-------+----------+
-        |                   |  Latency (cycles) | Iteration |  Initiation Interval  |  Trip |          |
-        |     Loop Name     |   min   |   max   |  Latency  |  achieved |   target  | Count | Pipelined|
-        +-------------------+---------+---------+-----------+-----------+-----------+-------+----------+
-        |- Loop 1           |      441|      441|          1|          -|          -|    441|        no|
-        |- Loop 2           |    88200|    88200|          1|          -|          -|  88200|        no|
-        |- VITIS_LOOP_83_2  |      100|      100|          1|          -|          -|    100|        no|
-        |- VITIS_LOOP_96_3  |        ?|        ?|  9 ~ 10497|          -|          -|      ?|        no|
-        +-------------------+---------+---------+-----------+-----------+-----------+-------+----------+
+        +-------------------+---------+---------+----------+-----------+-----------+-------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  |  Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count | Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+-------+----------+
+        |- Loop 1           |      441|      441|         1|          -|          -|    441|        no|
+        |- Loop 2           |    88200|    88200|         1|          -|          -|  88200|        no|
+        |- VITIS_LOOP_83_2  |      100|      100|         1|          -|          -|    100|        no|
+        |- VITIS_LOOP_96_3  |        ?|        ?|  9 ~ 7431|          -|          -|      ?|        no|
+        +-------------------+---------+---------+----------+-----------+-----------+-------+----------+
 
 
 
@@ -65,16 +65,16 @@
 |DSP              |        -|    -|       -|      -|    -|
 |Expression       |        -|    -|       0|   3034|    -|
 |FIFO             |        -|    -|       -|      -|    -|
-|Instance         |        1|   10|    5416|   7721|    -|
+|Instance         |        1|   10|    5658|   7914|    -|
 |Memory           |      258|    -|       5|      8|    0|
 |Multiplexer      |        -|    -|       -|   1543|    -|
 |Register         |        -|    -|    1948|      -|    -|
 +-----------------+---------+-----+--------+-------+-----+
-|Total            |      259|   10|    7369|  12306|    0|
+|Total            |      259|   10|    7611|  12499|    0|
 +-----------------+---------+-----+--------+-------+-----+
 |Available        |      280|  220|  106400|  53200|    0|
 +-----------------+---------+-----+--------+-------+-----+
-|Utilization (%)  |       92|    4|       6|     23|    0|
+|Utilization (%)  |       92|    4|       7|     23|    0|
 +-----------------+---------+-----+--------+-------+-----+
 
 + Detail: 
@@ -83,21 +83,21 @@
     |                   Instance                  |              Module              | BRAM_18K| DSP|  FF  |  LUT | URAM|
     +---------------------------------------------+----------------------------------+---------+----+------+------+-----+
     |control_r_s_axi_U                            |control_r_s_axi                   |        0|   0|   508|   840|    0|
-    |fadd_32ns_32ns_32_5_full_dsp_1_U39           |fadd_32ns_32ns_32_5_full_dsp_1    |        0|   2|   205|   390|    0|
-    |fdiv_32ns_32ns_32_16_no_dsp_1_U31            |fdiv_32ns_32ns_32_16_no_dsp_1     |        0|   0|     0|     0|    0|
-    |fmul_32ns_32ns_32_4_max_dsp_1_U30            |fmul_32ns_32ns_32_4_max_dsp_1     |        0|   3|   143|   321|    0|
+    |fadd_32ns_32ns_32_5_full_dsp_1_U48           |fadd_32ns_32ns_32_5_full_dsp_1    |        0|   2|   205|   390|    0|
+    |fdiv_32ns_32ns_32_16_no_dsp_1_U40            |fdiv_32ns_32ns_32_16_no_dsp_1     |        0|   0|     0|     0|    0|
+    |fmul_32ns_32ns_32_4_max_dsp_1_U39            |fmul_32ns_32ns_32_4_max_dsp_1     |        0|   3|   143|   321|    0|
     |gmem_m_axi_U                                 |gmem_m_axi                        |        0|   0|   718|  1318|    0|
     |grp_guitar_effects_Pipeline_LPF_Loop_fu_572  |guitar_effects_Pipeline_LPF_Loop  |        1|   0|   670|  1057|    0|
-    |mul_32s_8s_40_2_1_U34                        |mul_32s_8s_40_2_1                 |        0|   1|   165|    50|    0|
-    |mul_32s_8s_40_2_1_U35                        |mul_32s_8s_40_2_1                 |        0|   1|   165|    50|    0|
-    |sitofp_32ns_32_6_no_dsp_1_U32                |sitofp_32ns_32_6_no_dsp_1         |        0|   0|     0|     0|    0|
-    |sitofp_32ns_32_6_no_dsp_1_U33                |sitofp_32ns_32_6_no_dsp_1         |        0|   0|     0|     0|    0|
-    |srem_32ns_10ns_32_36_seq_1_U36               |srem_32ns_10ns_32_36_seq_1        |        0|   0|   394|   238|    0|
-    |srem_32ns_18ns_17_36_seq_1_U37               |srem_32ns_18ns_17_36_seq_1        |        0|   0|   394|   238|    0|
-    |srem_32ns_18ns_32_36_seq_1_U38               |srem_32ns_18ns_32_36_seq_1        |        0|   0|   394|   238|    0|
-    |grp_wah_fu_581                               |wah                               |        0|   3|  1660|  2981|    0|
+    |mul_32s_8s_40_2_1_U43                        |mul_32s_8s_40_2_1                 |        0|   1|   165|    50|    0|
+    |mul_32s_8s_40_2_1_U44                        |mul_32s_8s_40_2_1                 |        0|   1|   165|    50|    0|
+    |sitofp_32ns_32_6_no_dsp_1_U41                |sitofp_32ns_32_6_no_dsp_1         |        0|   0|     0|     0|    0|
+    |sitofp_32ns_32_6_no_dsp_1_U42                |sitofp_32ns_32_6_no_dsp_1         |        0|   0|     0|     0|    0|
+    |srem_32ns_10ns_32_36_seq_1_U45               |srem_32ns_10ns_32_36_seq_1        |        0|   0|   394|   238|    0|
+    |srem_32ns_18ns_17_36_seq_1_U46               |srem_32ns_18ns_17_36_seq_1        |        0|   0|   394|   238|    0|
+    |srem_32ns_18ns_32_36_seq_1_U47               |srem_32ns_18ns_32_36_seq_1        |        0|   0|   394|   238|    0|
+    |grp_wah_fu_581                               |wah                               |        0|   3|  1902|  3174|    0|
     +---------------------------------------------+----------------------------------+---------+----+------+------+-----+
-    |Total                                        |                                  |        1|  10|  5416|  7721|    0|
+    |Total                                        |                                  |        1|  10|  5658|  7914|    0|
     +---------------------------------------------+----------------------------------+---------+----+------+------+-----+
 
     * DSP: 
@@ -306,11 +306,11 @@
     |negative_threshold_reg_1807                               |   32|   0|   32|          0|
     |or_ln109_reg_1974                                         |   31|   0|   32|          1|
     |or_ln149_reg_1877                                         |    1|   0|    1|          0|
-    |p_Result_20_reg_2035                                      |    1|   0|    1|          0|
-    |p_Result_21_reg_2040                                      |   23|   0|   23|          0|
-    |p_Result_22_reg_1994                                      |    1|   0|    1|          0|
-    |p_Result_23_reg_1999                                      |   23|   0|   23|          0|
-    |p_Result_25_reg_2081                                      |   23|   0|   23|          0|
+    |p_Result_19_reg_2035                                      |    1|   0|    1|          0|
+    |p_Result_20_reg_2040                                      |   23|   0|   23|          0|
+    |p_Result_21_reg_1994                                      |    1|   0|    1|          0|
+    |p_Result_22_reg_1999                                      |   23|   0|   23|          0|
+    |p_Result_24_reg_2081                                      |   23|   0|   23|          0|
     |r_V_12_reg_1892                                           |   40|   0|   40|          0|
     |r_V_13_reg_1909                                           |   40|   0|   40|          0|
     |r_V_3_reg_1867                                            |   32|   0|   32|          0|
@@ -324,8 +324,8 @@
     |ret_V_cast_reg_1897                                       |   32|   0|   32|          0|
     |rev_reg_1802                                              |    1|   0|    1|          0|
     |srem_ln208_reg_2061                                       |   17|   0|   17|          0|
-    |tmp_13_reg_1783                                           |    1|   0|    1|          0|
-    |tmp_15_reg_1787                                           |    1|   0|    1|          0|
+    |tmp_11_reg_1783                                           |    1|   0|    1|          0|
+    |tmp_12_reg_1787                                           |    1|   0|    1|          0|
     |tmp_data_V_1_reg_1828                                     |   32|   0|   32|          0|
     |tmp_dest_V_reg_1857                                       |    6|   0|    6|          0|
     |tmp_id_V_reg_1852                                         |    5|   0|    5|          0|
@@ -775,8 +775,8 @@ ST_4 : Operation 284 [1/1] (0.00ns)   --->   "%compression_buffer_index = alloca
 ST_4 : Operation 285 [1/1] (0.00ns)   --->   "%wah_buffer_index_1 = alloca i32 1"   --->   Operation 285 'alloca' 'wah_buffer_index_1' <Predicate = (icmp_ln83)> <Delay = 0.00>
 ST_4 : Operation 286 [1/1] (0.00ns)   --->   "%debug_output_local_0 = alloca i32 1"   --->   Operation 286 'alloca' 'debug_output_local_0' <Predicate = (icmp_ln83)> <Delay = 0.00>
 ST_4 : Operation 287 [1/1] (0.00ns)   --->   "%tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i8.i32, i8 %control_read, i32 3"   --->   Operation 287 'bitselect' 'tmp' <Predicate = (icmp_ln83)> <Delay = 0.00>
-ST_4 : Operation 288 [1/1] (0.00ns)   --->   "%tmp_13 = bitselect i1 @_ssdm_op_BitSelect.i1.i8.i32, i8 %control_read, i32 2"   --->   Operation 288 'bitselect' 'tmp_13' <Predicate = (icmp_ln83)> <Delay = 0.00>
-ST_4 : Operation 289 [1/1] (0.00ns)   --->   "%tmp_15 = bitselect i1 @_ssdm_op_BitSelect.i1.i8.i32, i8 %control_read, i32 1"   --->   Operation 289 'bitselect' 'tmp_15' <Predicate = (icmp_ln83)> <Delay = 0.00>
+ST_4 : Operation 288 [1/1] (0.00ns)   --->   "%tmp_11 = bitselect i1 @_ssdm_op_BitSelect.i1.i8.i32, i8 %control_read, i32 2"   --->   Operation 288 'bitselect' 'tmp_11' <Predicate = (icmp_ln83)> <Delay = 0.00>
+ST_4 : Operation 289 [1/1] (0.00ns)   --->   "%tmp_12 = bitselect i1 @_ssdm_op_BitSelect.i1.i8.i32, i8 %control_read, i32 1"   --->   Operation 289 'bitselect' 'tmp_12' <Predicate = (icmp_ln83)> <Delay = 0.00>
 ST_4 : Operation 290 [1/1] (1.58ns)   --->   "%store_ln96 = store i32 0, i32 %wah_buffer_index_1" [guitar_effects.cpp:96]   --->   Operation 290 'store' 'store_ln96' <Predicate = (icmp_ln83)> <Delay = 1.58>
 ST_4 : Operation 291 [1/1] (1.58ns)   --->   "%store_ln96 = store i32 0, i32 %compression_buffer_index" [guitar_effects.cpp:96]   --->   Operation 291 'store' 'store_ln96' <Predicate = (icmp_ln83)> <Delay = 1.58>
 ST_4 : Operation 292 [1/1] (1.58ns)   --->   "%store_ln96 = store i32 0, i32 %delay_buffer_index" [guitar_effects.cpp:96]   --->   Operation 292 'store' 'store_ln96' <Predicate = (icmp_ln83)> <Delay = 1.58>
@@ -868,11 +868,11 @@ ST_17 : Operation 351 [1/1] (2.55ns)   --->   "%ret_V = add i32 %ret_V_cast, i32
 ST_17 : Operation 352 [1/1] (0.00ns) (grouped into LUT with out node result)   --->   "%select_ln1048 = select i1 %icmp_ln1049, i32 %ret_V_cast, i32 %ret_V"   --->   Operation 352 'select' 'select_ln1048' <Predicate = (!or_ln149)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 ST_17 : Operation 353 [1/1] (0.00ns) (grouped into LUT with out node result)   --->   "%ret_V_1 = select i1 %p_Result_s, i32 %select_ln1048, i32 %ret_V_cast"   --->   Operation 353 'select' 'ret_V_1' <Predicate = (!or_ln149)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 ST_17 : Operation 354 [1/1] (2.55ns) (out node of the LUT)   --->   "%result = add i32 %ret_V_1, i32 %distortion_threshold_read" [guitar_effects.cpp:148]   --->   Operation 354 'add' 'result' <Predicate = (!or_ln149)> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_17 : Operation 355 [1/1] (0.00ns) (grouped into LUT with out node result_1)   --->   "%p_Result_10 = bitselect i1 @_ssdm_op_BitSelect.i1.i40.i32, i40 %r_V_13, i32 39"   --->   Operation 355 'bitselect' 'p_Result_10' <Predicate = (!or_ln149)> <Delay = 0.00>
+ST_17 : Operation 355 [1/1] (0.00ns) (grouped into LUT with out node result_1)   --->   "%p_Result_9 = bitselect i1 @_ssdm_op_BitSelect.i1.i40.i32, i40 %r_V_13, i32 39"   --->   Operation 355 'bitselect' 'p_Result_9' <Predicate = (!or_ln149)> <Delay = 0.00>
 ST_17 : Operation 356 [1/1] (1.48ns)   --->   "%icmp_ln1049_1 = icmp_eq  i7 %trunc_ln1049_1, i7 0"   --->   Operation 356 'icmp' 'icmp_ln1049_1' <Predicate = (!or_ln149)> <Delay = 1.48> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 ST_17 : Operation 357 [1/1] (2.55ns)   --->   "%ret_V_2 = add i32 %ret_V_3_cast, i32 1"   --->   Operation 357 'add' 'ret_V_2' <Predicate = (!or_ln149)> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_17 : Operation 358 [1/1] (0.00ns) (grouped into LUT with out node result_1)   --->   "%select_ln1048_1 = select i1 %icmp_ln1049_1, i32 %ret_V_3_cast, i32 %ret_V_2"   --->   Operation 358 'select' 'select_ln1048_1' <Predicate = (!or_ln149)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_17 : Operation 359 [1/1] (0.00ns) (grouped into LUT with out node result_1)   --->   "%ret_V_3 = select i1 %p_Result_10, i32 %select_ln1048_1, i32 %ret_V_3_cast"   --->   Operation 359 'select' 'ret_V_3' <Predicate = (!or_ln149)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_17 : Operation 359 [1/1] (0.00ns) (grouped into LUT with out node result_1)   --->   "%ret_V_3 = select i1 %p_Result_9, i32 %select_ln1048_1, i32 %ret_V_3_cast"   --->   Operation 359 'select' 'ret_V_3' <Predicate = (!or_ln149)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 ST_17 : Operation 360 [1/1] (2.55ns) (out node of the LUT)   --->   "%result_1 = sub i32 %ret_V_3, i32 %distortion_threshold_read" [guitar_effects.cpp:150]   --->   Operation 360 'sub' 'result_1' <Predicate = (!or_ln149)> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_17 : Operation 361 [1/1] (0.00ns) (grouped into LUT with out node result_4)   --->   "%and_ln147 = and i1 %icmp_ln147, i1 %tmp" [guitar_effects.cpp:147]   --->   Operation 361 'and' 'and_ln147' <Predicate = (!or_ln149)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
 ST_17 : Operation 362 [1/1] (0.00ns) (grouped into LUT with out node result_4)   --->   "%result_2 = select i1 %and_ln147, i32 %result, i32 %result_1" [guitar_effects.cpp:147]   --->   Operation 362 'select' 'result_2' <Predicate = (!or_ln149)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
@@ -886,17 +886,17 @@ ST_18 : Operation 367 [1/1] (0.00ns)   --->   "%specloopname_ln76 = specloopname
 ST_18 : Operation 368 [1/1] (0.00ns) (grouped into LUT with out node empty_53)   --->   "%or_ln104 = or i32 %p_load70, i32 8" [guitar_effects.cpp:104]   --->   Operation 368 'or' 'or_ln104' <Predicate = (tmp)> <Delay = 0.00>
 ST_18 : Operation 369 [1/1] (0.69ns) (out node of the LUT)   --->   "%empty_53 = select i1 %tmp, i32 %or_ln104, i32 %p_load70" [guitar_effects.cpp:104]   --->   Operation 369 'select' 'empty_53' <Predicate = true> <Delay = 0.69> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 ST_18 : Operation 370 [1/1] (2.55ns)   --->   "%current_sample = add i32 %current_sample_assign_load, i32 1" [guitar_effects.cpp:122]   --->   Operation 370 'add' 'current_sample' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_18 : Operation 371 [1/1] (1.70ns)   --->   "%br_ln107 = br i1 %tmp_13, void %if.end24, void %if.then20" [guitar_effects.cpp:107]   --->   Operation 371 'br' 'br_ln107' <Predicate = true> <Delay = 1.70>
-ST_18 : Operation 372 [1/1] (0.00ns)   --->   "%compression_buffer_index_load = load i32 %compression_buffer_index" [guitar_effects.cpp:170]   --->   Operation 372 'load' 'compression_buffer_index_load' <Predicate = (tmp_13)> <Delay = 0.00>
-ST_18 : Operation 373 [1/1] (0.00ns)   --->   "%tmp_19 = bitselect i1 @_ssdm_op_BitSelect.i1.i32.i32, i32 %result_4, i32 31" [guitar_effects.cpp:164]   --->   Operation 373 'bitselect' 'tmp_19' <Predicate = (tmp_13)> <Delay = 0.00>
-ST_18 : Operation 374 [1/1] (2.55ns)   --->   "%sub_ln165 = sub i32 0, i32 %result_4" [guitar_effects.cpp:165]   --->   Operation 374 'sub' 'sub_ln165' <Predicate = (tmp_13)> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_18 : Operation 375 [1/1] (0.69ns)   --->   "%abs_in_1 = select i1 %tmp_19, i32 %sub_ln165, i32 %result_4" [guitar_effects.cpp:164]   --->   Operation 375 'select' 'abs_in_1' <Predicate = (tmp_13)> <Delay = 0.69> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_18 : Operation 376 [1/1] (0.00ns)   --->   "%zext_ln169 = zext i32 %compression_buffer_index_load" [guitar_effects.cpp:169]   --->   Operation 376 'zext' 'zext_ln169' <Predicate = (tmp_13)> <Delay = 0.00>
-ST_18 : Operation 377 [1/1] (0.00ns)   --->   "%compression_buffer_addr_1 = getelementptr i32 %compression_buffer, i64 0, i64 %zext_ln169" [guitar_effects.cpp:169]   --->   Operation 377 'getelementptr' 'compression_buffer_addr_1' <Predicate = (tmp_13)> <Delay = 0.00>
-ST_18 : Operation 378 [1/1] (3.25ns)   --->   "%store_ln169 = store i32 %abs_in_1, i9 %compression_buffer_addr_1" [guitar_effects.cpp:169]   --->   Operation 378 'store' 'store_ln169' <Predicate = (tmp_13)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 441> <RAM>
-ST_18 : Operation 379 [1/1] (2.55ns)   --->   "%add_ln170 = add i32 %compression_buffer_index_load, i32 1" [guitar_effects.cpp:170]   --->   Operation 379 'add' 'add_ln170' <Predicate = (tmp_13)> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_18 : Operation 380 [36/36] (4.13ns)   --->   "%compression_buffer_index_1 = srem i32 %add_ln170, i32 441" [guitar_effects.cpp:170]   --->   Operation 380 'srem' 'compression_buffer_index_1' <Predicate = (tmp_13)> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
-ST_18 : Operation 381 [1/1] (2.47ns)   --->   "%icmp_ln180 = icmp_slt  i32 %current_sample_assign_load, i32 441" [guitar_effects.cpp:180]   --->   Operation 381 'icmp' 'icmp_ln180' <Predicate = (tmp_13)> <Delay = 2.47> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 371 [1/1] (1.70ns)   --->   "%br_ln107 = br i1 %tmp_11, void %if.end24, void %if.then20" [guitar_effects.cpp:107]   --->   Operation 371 'br' 'br_ln107' <Predicate = true> <Delay = 1.70>
+ST_18 : Operation 372 [1/1] (0.00ns)   --->   "%compression_buffer_index_load = load i32 %compression_buffer_index" [guitar_effects.cpp:170]   --->   Operation 372 'load' 'compression_buffer_index_load' <Predicate = (tmp_11)> <Delay = 0.00>
+ST_18 : Operation 373 [1/1] (0.00ns)   --->   "%tmp_16 = bitselect i1 @_ssdm_op_BitSelect.i1.i32.i32, i32 %result_4, i32 31" [guitar_effects.cpp:164]   --->   Operation 373 'bitselect' 'tmp_16' <Predicate = (tmp_11)> <Delay = 0.00>
+ST_18 : Operation 374 [1/1] (2.55ns)   --->   "%sub_ln165 = sub i32 0, i32 %result_4" [guitar_effects.cpp:165]   --->   Operation 374 'sub' 'sub_ln165' <Predicate = (tmp_11)> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 375 [1/1] (0.69ns)   --->   "%abs_in_1 = select i1 %tmp_16, i32 %sub_ln165, i32 %result_4" [guitar_effects.cpp:164]   --->   Operation 375 'select' 'abs_in_1' <Predicate = (tmp_11)> <Delay = 0.69> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_18 : Operation 376 [1/1] (0.00ns)   --->   "%zext_ln169 = zext i32 %compression_buffer_index_load" [guitar_effects.cpp:169]   --->   Operation 376 'zext' 'zext_ln169' <Predicate = (tmp_11)> <Delay = 0.00>
+ST_18 : Operation 377 [1/1] (0.00ns)   --->   "%compression_buffer_addr_1 = getelementptr i32 %compression_buffer, i64 0, i64 %zext_ln169" [guitar_effects.cpp:169]   --->   Operation 377 'getelementptr' 'compression_buffer_addr_1' <Predicate = (tmp_11)> <Delay = 0.00>
+ST_18 : Operation 378 [1/1] (3.25ns)   --->   "%store_ln169 = store i32 %abs_in_1, i9 %compression_buffer_addr_1" [guitar_effects.cpp:169]   --->   Operation 378 'store' 'store_ln169' <Predicate = (tmp_11)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 441> <RAM>
+ST_18 : Operation 379 [1/1] (2.55ns)   --->   "%add_ln170 = add i32 %compression_buffer_index_load, i32 1" [guitar_effects.cpp:170]   --->   Operation 379 'add' 'add_ln170' <Predicate = (tmp_11)> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 380 [36/36] (4.13ns)   --->   "%compression_buffer_index_1 = srem i32 %add_ln170, i32 441" [guitar_effects.cpp:170]   --->   Operation 380 'srem' 'compression_buffer_index_1' <Predicate = (tmp_11)> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 381 [1/1] (2.47ns)   --->   "%icmp_ln180 = icmp_slt  i32 %current_sample_assign_load, i32 441" [guitar_effects.cpp:180]   --->   Operation 381 'icmp' 'icmp_ln180' <Predicate = (tmp_11)> <Delay = 2.47> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 
 State 19 <SV = 18> <Delay = 4.13>
 ST_19 : Operation 382 [35/36] (4.13ns)   --->   "%compression_buffer_index_1 = srem i32 %add_ln170, i32 441" [guitar_effects.cpp:170]   --->   Operation 382 'srem' 'compression_buffer_index_1' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
@@ -1110,9 +1110,9 @@ ST_81 : Operation 465 [1/4] (5.70ns)   --->   "%dc_1 = fmul i32 %conv27_i, i32 %
 
 State 82 <SV = 81> <Delay = 2.88>
 ST_82 : Operation 466 [1/1] (0.00ns)   --->   "%data_V_1 = bitcast i32 %dc_1" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:317]   --->   Operation 466 'bitcast' 'data_V_1' <Predicate = true> <Delay = 0.00>
-ST_82 : Operation 467 [1/1] (0.00ns)   --->   "%p_Result_22 = bitselect i1 @_ssdm_op_BitSelect.i1.i32.i32, i32 %data_V_1, i32 31"   --->   Operation 467 'bitselect' 'p_Result_22' <Predicate = true> <Delay = 0.00>
+ST_82 : Operation 467 [1/1] (0.00ns)   --->   "%p_Result_21 = bitselect i1 @_ssdm_op_BitSelect.i1.i32.i32, i32 %data_V_1, i32 31"   --->   Operation 467 'bitselect' 'p_Result_21' <Predicate = true> <Delay = 0.00>
 ST_82 : Operation 468 [1/1] (0.00ns)   --->   "%xs_exp_V_1 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %data_V_1, i32 23, i32 30"   --->   Operation 468 'partselect' 'xs_exp_V_1' <Predicate = true> <Delay = 0.00>
-ST_82 : Operation 469 [1/1] (0.00ns)   --->   "%p_Result_23 = trunc i32 %data_V_1"   --->   Operation 469 'trunc' 'p_Result_23' <Predicate = true> <Delay = 0.00>
+ST_82 : Operation 469 [1/1] (0.00ns)   --->   "%p_Result_22 = trunc i32 %data_V_1"   --->   Operation 469 'trunc' 'p_Result_22' <Predicate = true> <Delay = 0.00>
 ST_82 : Operation 470 [1/1] (0.00ns)   --->   "%zext_ln346_1 = zext i8 %xs_exp_V_1" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:346]   --->   Operation 470 'zext' 'zext_ln346_1' <Predicate = true> <Delay = 0.00>
 ST_82 : Operation 471 [1/1] (1.91ns)   --->   "%add_ln346_1 = add i9 %zext_ln346_1, i9 385" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:346]   --->   Operation 471 'add' 'add_ln346_1' <Predicate = true> <Delay = 1.91> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_82 : Operation 472 [1/1] (0.00ns)   --->   "%isNeg_1 = bitselect i1 @_ssdm_op_BitSelect.i1.i9.i32, i9 %add_ln346_1, i32 8"   --->   Operation 472 'bitselect' 'isNeg_1' <Predicate = true> <Delay = 0.00>
@@ -1121,32 +1121,32 @@ ST_82 : Operation 474 [1/1] (0.00ns)   --->   "%sext_ln1512_1 = sext i8 %sub_ln1
 ST_82 : Operation 475 [1/1] (0.96ns)   --->   "%ush_1 = select i1 %isNeg_1, i9 %sext_ln1512_1, i9 %add_ln346_1"   --->   Operation 475 'select' 'ush_1' <Predicate = true> <Delay = 0.96> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 
 State 83 <SV = 82> <Delay = 4.42>
-ST_83 : Operation 476 [1/1] (0.00ns)   --->   "%mantissa_1 = bitconcatenate i25 @_ssdm_op_BitConcatenate.i25.i1.i23.i1, i1 1, i23 %p_Result_23, i1 0" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:15]   --->   Operation 476 'bitconcatenate' 'mantissa_1' <Predicate = true> <Delay = 0.00>
+ST_83 : Operation 476 [1/1] (0.00ns)   --->   "%mantissa_1 = bitconcatenate i25 @_ssdm_op_BitConcatenate.i25.i1.i23.i1, i1 1, i23 %p_Result_22, i1 0" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:15]   --->   Operation 476 'bitconcatenate' 'mantissa_1' <Predicate = true> <Delay = 0.00>
 ST_83 : Operation 477 [1/1] (0.00ns)   --->   "%zext_ln15_1 = zext i25 %mantissa_1" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:15]   --->   Operation 477 'zext' 'zext_ln15_1' <Predicate = true> <Delay = 0.00>
 ST_83 : Operation 478 [1/1] (0.00ns)   --->   "%sext_ln1488_1 = sext i9 %ush_1"   --->   Operation 478 'sext' 'sext_ln1488_1' <Predicate = true> <Delay = 0.00>
 ST_83 : Operation 479 [1/1] (0.00ns)   --->   "%zext_ln1488_1 = zext i32 %sext_ln1488_1"   --->   Operation 479 'zext' 'zext_ln1488_1' <Predicate = true> <Delay = 0.00>
 ST_83 : Operation 480 [1/1] (0.00ns) (grouped into LUT with out node val_1)   --->   "%r_V_8 = lshr i79 %zext_ln15_1, i79 %zext_ln1488_1"   --->   Operation 480 'lshr' 'r_V_8' <Predicate = (isNeg_1)> <Delay = 0.00> <CoreInst = "Shifter">   --->   Core 75 'Shifter' <Latency = 0> <II = 1> <Delay = 4.65> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
 ST_83 : Operation 481 [1/1] (0.00ns) (grouped into LUT with out node val_1)   --->   "%r_V_9 = shl i79 %zext_ln15_1, i79 %zext_ln1488_1"   --->   Operation 481 'shl' 'r_V_9' <Predicate = (!isNeg_1)> <Delay = 0.00> <CoreInst = "Shifter">   --->   Core 75 'Shifter' <Latency = 0> <II = 1> <Delay = 4.65> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
-ST_83 : Operation 482 [1/1] (0.00ns) (grouped into LUT with out node val_1)   --->   "%tmp_28 = bitselect i1 @_ssdm_op_BitSelect.i1.i79.i32, i79 %r_V_8, i32 24"   --->   Operation 482 'bitselect' 'tmp_28' <Predicate = (isNeg_1)> <Delay = 0.00>
-ST_83 : Operation 483 [1/1] (0.00ns) (grouped into LUT with out node val_1)   --->   "%zext_ln818_1 = zext i1 %tmp_28"   --->   Operation 483 'zext' 'zext_ln818_1' <Predicate = (isNeg_1)> <Delay = 0.00>
+ST_83 : Operation 482 [1/1] (0.00ns) (grouped into LUT with out node val_1)   --->   "%tmp_26 = bitselect i1 @_ssdm_op_BitSelect.i1.i79.i32, i79 %r_V_8, i32 24"   --->   Operation 482 'bitselect' 'tmp_26' <Predicate = (isNeg_1)> <Delay = 0.00>
+ST_83 : Operation 483 [1/1] (0.00ns) (grouped into LUT with out node val_1)   --->   "%zext_ln818_1 = zext i1 %tmp_26"   --->   Operation 483 'zext' 'zext_ln818_1' <Predicate = (isNeg_1)> <Delay = 0.00>
 ST_83 : Operation 484 [1/1] (0.00ns) (grouped into LUT with out node val_1)   --->   "%tmp_1 = partselect i32 @_ssdm_op_PartSelect.i32.i79.i32.i32, i79 %r_V_9, i32 24, i32 55"   --->   Operation 484 'partselect' 'tmp_1' <Predicate = (!isNeg_1)> <Delay = 0.00>
 ST_83 : Operation 485 [1/1] (4.42ns) (out node of the LUT)   --->   "%val_1 = select i1 %isNeg_1, i32 %zext_ln818_1, i32 %tmp_1"   --->   Operation 485 'select' 'val_1' <Predicate = true> <Delay = 4.42> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 
 State 84 <SV = 83> <Delay = 6.68>
-ST_84 : Operation 486 [1/1] (2.55ns)   --->   "%result_V_9 = sub i32 0, i32 %val_1"   --->   Operation 486 'sub' 'result_V_9' <Predicate = (tmp_13 & !icmp_ln188 & and_ln193 & p_Result_22)> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_84 : Operation 487 [1/1] (0.69ns)   --->   "%result_V_13 = select i1 %p_Result_22, i32 %result_V_9, i32 %val_1" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:59]   --->   Operation 487 'select' 'result_V_13' <Predicate = (tmp_13 & !icmp_ln188 & and_ln193)> <Delay = 0.69> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_84 : Operation 488 [1/1] (1.70ns)   --->   "%br_ln196 = br void %if.end24" [guitar_effects.cpp:196]   --->   Operation 488 'br' 'br_ln196' <Predicate = (tmp_13 & !icmp_ln188 & and_ln193)> <Delay = 1.70>
-ST_84 : Operation 489 [1/1] (2.55ns)   --->   "%result_V_6 = sub i32 0, i32 %val"   --->   Operation 489 'sub' 'result_V_6' <Predicate = (tmp_13 & icmp_ln188 & p_Result_20)> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_84 : Operation 490 [1/1] (0.69ns)   --->   "%result_V_12 = select i1 %p_Result_20, i32 %result_V_6, i32 %val" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:59]   --->   Operation 490 'select' 'result_V_12' <Predicate = (tmp_13 & icmp_ln188)> <Delay = 0.69> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_84 : Operation 491 [1/1] (1.70ns)   --->   "%br_ln193 = br void %if.end24" [guitar_effects.cpp:193]   --->   Operation 491 'br' 'br_ln193' <Predicate = (tmp_13 & icmp_ln188)> <Delay = 1.70>
+ST_84 : Operation 486 [1/1] (2.55ns)   --->   "%result_V_9 = sub i32 0, i32 %val_1"   --->   Operation 486 'sub' 'result_V_9' <Predicate = (tmp_11 & !icmp_ln188 & and_ln193 & p_Result_21)> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_84 : Operation 487 [1/1] (0.69ns)   --->   "%result_V_13 = select i1 %p_Result_21, i32 %result_V_9, i32 %val_1" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:59]   --->   Operation 487 'select' 'result_V_13' <Predicate = (tmp_11 & !icmp_ln188 & and_ln193)> <Delay = 0.69> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_84 : Operation 488 [1/1] (1.70ns)   --->   "%br_ln196 = br void %if.end24" [guitar_effects.cpp:196]   --->   Operation 488 'br' 'br_ln196' <Predicate = (tmp_11 & !icmp_ln188 & and_ln193)> <Delay = 1.70>
+ST_84 : Operation 489 [1/1] (2.55ns)   --->   "%result_V_6 = sub i32 0, i32 %val"   --->   Operation 489 'sub' 'result_V_6' <Predicate = (tmp_11 & icmp_ln188 & p_Result_19)> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_84 : Operation 490 [1/1] (0.69ns)   --->   "%result_V_12 = select i1 %p_Result_19, i32 %result_V_6, i32 %val" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:59]   --->   Operation 490 'select' 'result_V_12' <Predicate = (tmp_11 & icmp_ln188)> <Delay = 0.69> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_84 : Operation 491 [1/1] (1.70ns)   --->   "%br_ln193 = br void %if.end24" [guitar_effects.cpp:193]   --->   Operation 491 'br' 'br_ln193' <Predicate = (tmp_11 & icmp_ln188)> <Delay = 1.70>
 ST_84 : Operation 492 [1/1] (0.00ns)   --->   "%empty_54 = phi i32 %or_ln109, void %if.then15.i, i32 %or_ln109, void %if.then23.i, i32 %empty_53, void %while.body_ifconv, i32 %or_ln109, void %if.else.i292.if.end24_crit_edge" [guitar_effects.cpp:109]   --->   Operation 492 'phi' 'empty_54' <Predicate = true> <Delay = 0.00>
 ST_84 : Operation 493 [1/1] (0.00ns)   --->   "%tmp_int = phi i32 %result_V_12, void %if.then15.i, i32 %result_V_13, void %if.then23.i, i32 %result_4, void %while.body_ifconv, i32 %result_4, void %if.else.i292.if.end24_crit_edge"   --->   Operation 493 'phi' 'tmp_int' <Predicate = true> <Delay = 0.00>
-ST_84 : Operation 494 [1/1] (1.58ns)   --->   "%br_ln112 = br i1 %tmp_15, void %if.end32, void %if.then28" [guitar_effects.cpp:112]   --->   Operation 494 'br' 'br_ln112' <Predicate = true> <Delay = 1.58>
-ST_84 : Operation 495 [1/1] (0.00ns)   --->   "%delay_buffer_index_load = load i32 %delay_buffer_index" [guitar_effects.cpp:212]   --->   Operation 495 'load' 'delay_buffer_index_load' <Predicate = (tmp_15)> <Delay = 0.00>
-ST_84 : Operation 496 [1/1] (2.55ns)   --->   "%sub_ln208 = sub i32 %delay_buffer_index_load, i32 %delay_samples_read" [guitar_effects.cpp:208]   --->   Operation 496 'sub' 'sub_ln208' <Predicate = (tmp_15)> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_84 : Operation 497 [36/36] (4.13ns)   --->   "%srem_ln208 = srem i32 %sub_ln208, i32 88200" [guitar_effects.cpp:208]   --->   Operation 497 'srem' 'srem_ln208' <Predicate = (tmp_15)> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 17> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
-ST_84 : Operation 498 [1/1] (2.55ns)   --->   "%add_ln212 = add i32 %delay_buffer_index_load, i32 1" [guitar_effects.cpp:212]   --->   Operation 498 'add' 'add_ln212' <Predicate = (tmp_15)> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_84 : Operation 499 [36/36] (4.13ns)   --->   "%delay_buffer_index_1 = srem i32 %add_ln212, i32 88200" [guitar_effects.cpp:212]   --->   Operation 499 'srem' 'delay_buffer_index_1' <Predicate = (tmp_15)> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_84 : Operation 494 [1/1] (1.58ns)   --->   "%br_ln112 = br i1 %tmp_12, void %if.end32, void %if.then28" [guitar_effects.cpp:112]   --->   Operation 494 'br' 'br_ln112' <Predicate = true> <Delay = 1.58>
+ST_84 : Operation 495 [1/1] (0.00ns)   --->   "%delay_buffer_index_load = load i32 %delay_buffer_index" [guitar_effects.cpp:212]   --->   Operation 495 'load' 'delay_buffer_index_load' <Predicate = (tmp_12)> <Delay = 0.00>
+ST_84 : Operation 496 [1/1] (2.55ns)   --->   "%sub_ln208 = sub i32 %delay_buffer_index_load, i32 %delay_samples_read" [guitar_effects.cpp:208]   --->   Operation 496 'sub' 'sub_ln208' <Predicate = (tmp_12)> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_84 : Operation 497 [36/36] (4.13ns)   --->   "%srem_ln208 = srem i32 %sub_ln208, i32 88200" [guitar_effects.cpp:208]   --->   Operation 497 'srem' 'srem_ln208' <Predicate = (tmp_12)> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 17> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_84 : Operation 498 [1/1] (2.55ns)   --->   "%add_ln212 = add i32 %delay_buffer_index_load, i32 1" [guitar_effects.cpp:212]   --->   Operation 498 'add' 'add_ln212' <Predicate = (tmp_12)> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_84 : Operation 499 [36/36] (4.13ns)   --->   "%delay_buffer_index_1 = srem i32 %add_ln212, i32 88200" [guitar_effects.cpp:212]   --->   Operation 499 'srem' 'delay_buffer_index_1' <Predicate = (tmp_12)> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
 
 State 85 <SV = 56> <Delay = 6.41>
 ST_85 : Operation 500 [5/6] (6.41ns)   --->   "%conv17_i = sitofp i32 %current_level" [guitar_effects.cpp:190]   --->   Operation 500 'sitofp' 'conv17_i' <Predicate = true> <Delay = 6.41> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 5> <II = 1> <Delay = 6.41> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
@@ -1231,9 +1231,9 @@ ST_109 : Operation 530 [1/4] (5.70ns)   --->   "%dc = fmul i32 %conv18_i, i32 %c
 
 State 110 <SV = 81> <Delay = 2.88>
 ST_110 : Operation 531 [1/1] (0.00ns)   --->   "%data_V = bitcast i32 %dc" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:317]   --->   Operation 531 'bitcast' 'data_V' <Predicate = true> <Delay = 0.00>
-ST_110 : Operation 532 [1/1] (0.00ns)   --->   "%p_Result_20 = bitselect i1 @_ssdm_op_BitSelect.i1.i32.i32, i32 %data_V, i32 31"   --->   Operation 532 'bitselect' 'p_Result_20' <Predicate = true> <Delay = 0.00>
+ST_110 : Operation 532 [1/1] (0.00ns)   --->   "%p_Result_19 = bitselect i1 @_ssdm_op_BitSelect.i1.i32.i32, i32 %data_V, i32 31"   --->   Operation 532 'bitselect' 'p_Result_19' <Predicate = true> <Delay = 0.00>
 ST_110 : Operation 533 [1/1] (0.00ns)   --->   "%xs_exp_V = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %data_V, i32 23, i32 30"   --->   Operation 533 'partselect' 'xs_exp_V' <Predicate = true> <Delay = 0.00>
-ST_110 : Operation 534 [1/1] (0.00ns)   --->   "%p_Result_21 = trunc i32 %data_V"   --->   Operation 534 'trunc' 'p_Result_21' <Predicate = true> <Delay = 0.00>
+ST_110 : Operation 534 [1/1] (0.00ns)   --->   "%p_Result_20 = trunc i32 %data_V"   --->   Operation 534 'trunc' 'p_Result_20' <Predicate = true> <Delay = 0.00>
 ST_110 : Operation 535 [1/1] (0.00ns)   --->   "%zext_ln346 = zext i8 %xs_exp_V" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:346]   --->   Operation 535 'zext' 'zext_ln346' <Predicate = true> <Delay = 0.00>
 ST_110 : Operation 536 [1/1] (1.91ns)   --->   "%add_ln346 = add i9 %zext_ln346, i9 385" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:346]   --->   Operation 536 'add' 'add_ln346' <Predicate = true> <Delay = 1.91> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_110 : Operation 537 [1/1] (0.00ns)   --->   "%isNeg = bitselect i1 @_ssdm_op_BitSelect.i1.i9.i32, i9 %add_ln346, i32 8"   --->   Operation 537 'bitselect' 'isNeg' <Predicate = true> <Delay = 0.00>
@@ -1242,14 +1242,14 @@ ST_110 : Operation 539 [1/1] (0.00ns)   --->   "%sext_ln1512 = sext i8 %sub_ln15
 ST_110 : Operation 540 [1/1] (0.96ns)   --->   "%ush = select i1 %isNeg, i9 %sext_ln1512, i9 %add_ln346"   --->   Operation 540 'select' 'ush' <Predicate = true> <Delay = 0.96> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 
 State 111 <SV = 82> <Delay = 4.42>
-ST_111 : Operation 541 [1/1] (0.00ns)   --->   "%mantissa = bitconcatenate i25 @_ssdm_op_BitConcatenate.i25.i1.i23.i1, i1 1, i23 %p_Result_21, i1 0" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:15]   --->   Operation 541 'bitconcatenate' 'mantissa' <Predicate = true> <Delay = 0.00>
+ST_111 : Operation 541 [1/1] (0.00ns)   --->   "%mantissa = bitconcatenate i25 @_ssdm_op_BitConcatenate.i25.i1.i23.i1, i1 1, i23 %p_Result_20, i1 0" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:15]   --->   Operation 541 'bitconcatenate' 'mantissa' <Predicate = true> <Delay = 0.00>
 ST_111 : Operation 542 [1/1] (0.00ns)   --->   "%zext_ln15 = zext i25 %mantissa" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:15]   --->   Operation 542 'zext' 'zext_ln15' <Predicate = true> <Delay = 0.00>
 ST_111 : Operation 543 [1/1] (0.00ns)   --->   "%sext_ln1488 = sext i9 %ush"   --->   Operation 543 'sext' 'sext_ln1488' <Predicate = true> <Delay = 0.00>
 ST_111 : Operation 544 [1/1] (0.00ns)   --->   "%zext_ln1488 = zext i32 %sext_ln1488"   --->   Operation 544 'zext' 'zext_ln1488' <Predicate = true> <Delay = 0.00>
 ST_111 : Operation 545 [1/1] (0.00ns) (grouped into LUT with out node val)   --->   "%r_V_6 = lshr i79 %zext_ln15, i79 %zext_ln1488"   --->   Operation 545 'lshr' 'r_V_6' <Predicate = (isNeg)> <Delay = 0.00> <CoreInst = "Shifter">   --->   Core 75 'Shifter' <Latency = 0> <II = 1> <Delay = 4.65> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
 ST_111 : Operation 546 [1/1] (0.00ns) (grouped into LUT with out node val)   --->   "%r_V_7 = shl i79 %zext_ln15, i79 %zext_ln1488"   --->   Operation 546 'shl' 'r_V_7' <Predicate = (!isNeg)> <Delay = 0.00> <CoreInst = "Shifter">   --->   Core 75 'Shifter' <Latency = 0> <II = 1> <Delay = 4.65> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
-ST_111 : Operation 547 [1/1] (0.00ns) (grouped into LUT with out node val)   --->   "%tmp_24 = bitselect i1 @_ssdm_op_BitSelect.i1.i79.i32, i79 %r_V_6, i32 24"   --->   Operation 547 'bitselect' 'tmp_24' <Predicate = (isNeg)> <Delay = 0.00>
-ST_111 : Operation 548 [1/1] (0.00ns) (grouped into LUT with out node val)   --->   "%zext_ln818 = zext i1 %tmp_24"   --->   Operation 548 'zext' 'zext_ln818' <Predicate = (isNeg)> <Delay = 0.00>
+ST_111 : Operation 547 [1/1] (0.00ns) (grouped into LUT with out node val)   --->   "%tmp_22 = bitselect i1 @_ssdm_op_BitSelect.i1.i79.i32, i79 %r_V_6, i32 24"   --->   Operation 547 'bitselect' 'tmp_22' <Predicate = (isNeg)> <Delay = 0.00>
+ST_111 : Operation 548 [1/1] (0.00ns) (grouped into LUT with out node val)   --->   "%zext_ln818 = zext i1 %tmp_22"   --->   Operation 548 'zext' 'zext_ln818' <Predicate = (isNeg)> <Delay = 0.00>
 ST_111 : Operation 549 [1/1] (0.00ns) (grouped into LUT with out node val)   --->   "%tmp_s = partselect i32 @_ssdm_op_PartSelect.i32.i79.i32.i32, i79 %r_V_7, i32 24, i32 55"   --->   Operation 549 'partselect' 'tmp_s' <Predicate = (!isNeg)> <Delay = 0.00>
 ST_111 : Operation 550 [1/1] (4.42ns) (out node of the LUT)   --->   "%val = select i1 %isNeg, i32 %zext_ln818, i32 %tmp_s"   --->   Operation 550 'select' 'val' <Predicate = true> <Delay = 4.42> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 
@@ -1436,7 +1436,7 @@ ST_158 : Operation 636 [1/4] (5.70ns)   --->   "%dc_2 = fmul i32 %conv_i1, i32 %
 State 159 <SV = 131> <Delay = 2.88>
 ST_159 : Operation 637 [1/1] (0.00ns)   --->   "%data_V_2 = bitcast i32 %dc_2" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:317]   --->   Operation 637 'bitcast' 'data_V_2' <Predicate = true> <Delay = 0.00>
 ST_159 : Operation 638 [1/1] (0.00ns)   --->   "%xs_exp_V_3 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %data_V_2, i32 23, i32 30"   --->   Operation 638 'partselect' 'xs_exp_V_3' <Predicate = true> <Delay = 0.00>
-ST_159 : Operation 639 [1/1] (0.00ns)   --->   "%p_Result_25 = trunc i32 %data_V_2"   --->   Operation 639 'trunc' 'p_Result_25' <Predicate = true> <Delay = 0.00>
+ST_159 : Operation 639 [1/1] (0.00ns)   --->   "%p_Result_24 = trunc i32 %data_V_2"   --->   Operation 639 'trunc' 'p_Result_24' <Predicate = true> <Delay = 0.00>
 ST_159 : Operation 640 [1/1] (0.00ns)   --->   "%zext_ln346_2 = zext i8 %xs_exp_V_3" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:346]   --->   Operation 640 'zext' 'zext_ln346_2' <Predicate = true> <Delay = 0.00>
 ST_159 : Operation 641 [1/1] (1.91ns)   --->   "%add_ln346_2 = add i9 %zext_ln346_2, i9 385" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:346]   --->   Operation 641 'add' 'add_ln346_2' <Predicate = true> <Delay = 1.91> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_159 : Operation 642 [1/1] (0.00ns)   --->   "%isNeg_2 = bitselect i1 @_ssdm_op_BitSelect.i1.i9.i32, i9 %add_ln346_2, i32 8"   --->   Operation 642 'bitselect' 'isNeg_2' <Predicate = true> <Delay = 0.00>
@@ -1445,22 +1445,22 @@ ST_159 : Operation 644 [1/1] (0.00ns)   --->   "%sext_ln1512_2 = sext i8 %sub_ln
 ST_159 : Operation 645 [1/1] (0.96ns)   --->   "%ush_2 = select i1 %isNeg_2, i9 %sext_ln1512_2, i9 %add_ln346_2"   --->   Operation 645 'select' 'ush_2' <Predicate = true> <Delay = 0.96> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 
 State 160 <SV = 132> <Delay = 6.97>
-ST_160 : Operation 646 [1/1] (0.00ns)   --->   "%mantissa_2 = bitconcatenate i25 @_ssdm_op_BitConcatenate.i25.i1.i23.i1, i1 1, i23 %p_Result_25, i1 0" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:15]   --->   Operation 646 'bitconcatenate' 'mantissa_2' <Predicate = true> <Delay = 0.00>
+ST_160 : Operation 646 [1/1] (0.00ns)   --->   "%mantissa_2 = bitconcatenate i25 @_ssdm_op_BitConcatenate.i25.i1.i23.i1, i1 1, i23 %p_Result_24, i1 0" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:15]   --->   Operation 646 'bitconcatenate' 'mantissa_2' <Predicate = true> <Delay = 0.00>
 ST_160 : Operation 647 [1/1] (0.00ns)   --->   "%zext_ln15_2 = zext i25 %mantissa_2" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:15]   --->   Operation 647 'zext' 'zext_ln15_2' <Predicate = true> <Delay = 0.00>
 ST_160 : Operation 648 [1/1] (0.00ns)   --->   "%sext_ln1488_2 = sext i9 %ush_2"   --->   Operation 648 'sext' 'sext_ln1488_2' <Predicate = true> <Delay = 0.00>
 ST_160 : Operation 649 [1/1] (0.00ns)   --->   "%zext_ln1488_2 = zext i32 %sext_ln1488_2"   --->   Operation 649 'zext' 'zext_ln1488_2' <Predicate = true> <Delay = 0.00>
 ST_160 : Operation 650 [1/1] (0.00ns) (grouped into LUT with out node val_2)   --->   "%r_V_10 = lshr i79 %zext_ln15_2, i79 %zext_ln1488_2"   --->   Operation 650 'lshr' 'r_V_10' <Predicate = (isNeg_2)> <Delay = 0.00> <CoreInst = "Shifter">   --->   Core 75 'Shifter' <Latency = 0> <II = 1> <Delay = 4.65> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
 ST_160 : Operation 651 [1/1] (0.00ns) (grouped into LUT with out node val_2)   --->   "%r_V_11 = shl i79 %zext_ln15_2, i79 %zext_ln1488_2"   --->   Operation 651 'shl' 'r_V_11' <Predicate = (!isNeg_2)> <Delay = 0.00> <CoreInst = "Shifter">   --->   Core 75 'Shifter' <Latency = 0> <II = 1> <Delay = 4.65> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
-ST_160 : Operation 652 [1/1] (0.00ns) (grouped into LUT with out node val_2)   --->   "%tmp_32 = bitselect i1 @_ssdm_op_BitSelect.i1.i79.i32, i79 %r_V_10, i32 24"   --->   Operation 652 'bitselect' 'tmp_32' <Predicate = (isNeg_2)> <Delay = 0.00>
-ST_160 : Operation 653 [1/1] (0.00ns) (grouped into LUT with out node val_2)   --->   "%zext_ln818_2 = zext i1 %tmp_32"   --->   Operation 653 'zext' 'zext_ln818_2' <Predicate = (isNeg_2)> <Delay = 0.00>
+ST_160 : Operation 652 [1/1] (0.00ns) (grouped into LUT with out node val_2)   --->   "%tmp_30 = bitselect i1 @_ssdm_op_BitSelect.i1.i79.i32, i79 %r_V_10, i32 24"   --->   Operation 652 'bitselect' 'tmp_30' <Predicate = (isNeg_2)> <Delay = 0.00>
+ST_160 : Operation 653 [1/1] (0.00ns) (grouped into LUT with out node val_2)   --->   "%zext_ln818_2 = zext i1 %tmp_30"   --->   Operation 653 'zext' 'zext_ln818_2' <Predicate = (isNeg_2)> <Delay = 0.00>
 ST_160 : Operation 654 [1/1] (0.00ns) (grouped into LUT with out node val_2)   --->   "%tmp_2 = partselect i32 @_ssdm_op_PartSelect.i32.i79.i32.i32, i79 %r_V_11, i32 24, i32 55"   --->   Operation 654 'partselect' 'tmp_2' <Predicate = (!isNeg_2)> <Delay = 0.00>
 ST_160 : Operation 655 [1/1] (4.42ns) (out node of the LUT)   --->   "%val_2 = select i1 %isNeg_2, i32 %zext_ln818_2, i32 %tmp_2"   --->   Operation 655 'select' 'val_2' <Predicate = true> <Delay = 4.42> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 ST_160 : Operation 656 [1/1] (2.55ns)   --->   "%result_V_10 = sub i32 0, i32 %val_2"   --->   Operation 656 'sub' 'result_V_10' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 
 State 161 <SV = 133> <Delay = 5.80>
 ST_161 : Operation 657 [1/1] (0.00ns)   --->   "%or_ln114 = or i32 %empty_54, i32 2" [guitar_effects.cpp:114]   --->   Operation 657 'or' 'or_ln114' <Predicate = true> <Delay = 0.00>
-ST_161 : Operation 658 [1/1] (0.00ns) (grouped into LUT with out node output)   --->   "%p_Result_24 = bitselect i1 @_ssdm_op_BitSelect.i1.i32.i32, i32 %data_V_2, i32 31"   --->   Operation 658 'bitselect' 'p_Result_24' <Predicate = true> <Delay = 0.00>
-ST_161 : Operation 659 [1/1] (0.00ns) (grouped into LUT with out node output)   --->   "%result_V = select i1 %p_Result_24, i32 %result_V_10, i32 %val_2" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:59]   --->   Operation 659 'select' 'result_V' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_161 : Operation 658 [1/1] (0.00ns) (grouped into LUT with out node output)   --->   "%p_Result_23 = bitselect i1 @_ssdm_op_BitSelect.i1.i32.i32, i32 %data_V_2, i32 31"   --->   Operation 658 'bitselect' 'p_Result_23' <Predicate = true> <Delay = 0.00>
+ST_161 : Operation 659 [1/1] (0.00ns) (grouped into LUT with out node output)   --->   "%result_V = select i1 %p_Result_23, i32 %result_V_10, i32 %val_2" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:59]   --->   Operation 659 'select' 'result_V' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 ST_161 : Operation 660 [1/1] (2.55ns) (out node of the LUT)   --->   "%output = add i32 %result_V, i32 %tmp_int" [guitar_effects.cpp:208]   --->   Operation 660 'add' 'output' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_161 : Operation 661 [1/1] (0.00ns)   --->   "%zext_ln211 = zext i32 %delay_buffer_index_load" [guitar_effects.cpp:211]   --->   Operation 661 'zext' 'zext_ln211' <Predicate = true> <Delay = 0.00>
 ST_161 : Operation 662 [1/1] (0.00ns)   --->   "%delay_buffer_addr_2 = getelementptr i32 %delay_buffer, i64 0, i64 %zext_ln211" [guitar_effects.cpp:211]   --->   Operation 662 'getelementptr' 'delay_buffer_addr_2' <Predicate = true> <Delay = 0.00>
@@ -1670,8 +1670,8 @@ compression_buffer_index        (alloca           ) [ 00001111111111111111111111
 wah_buffer_index_1              (alloca           ) [ 0000111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110]
 debug_output_local_0            (alloca           ) [ 0000011111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110]
 tmp                             (bitselect        ) [ 0000011111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110]
-tmp_13                          (bitselect        ) [ 0000011111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110]
-tmp_15                          (bitselect        ) [ 0000011111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110]
+tmp_11                          (bitselect        ) [ 0000011111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110]
+tmp_12                          (bitselect        ) [ 0000011111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110]
 store_ln96                      (store            ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000]
 store_ln96                      (store            ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000]
 store_ln96                      (store            ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000]
@@ -1719,7 +1719,7 @@ ret_V                           (add              ) [ 00000000000000000000000000
 select_ln1048                   (select           ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000]
 ret_V_1                         (select           ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000]
 result                          (add              ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000]
-p_Result_10                     (bitselect        ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000]
+p_Result_9                      (bitselect        ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000]
 icmp_ln1049_1                   (icmp             ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000]
 ret_V_2                         (add              ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000]
 select_ln1048_1                 (select           ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000]
@@ -1737,7 +1737,7 @@ empty_53                        (select           ) [ 00000000000000111111111111
 current_sample                  (add              ) [ 0000000000000000000111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111100]
 br_ln107                        (br               ) [ 0000000000000011111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110]
 compression_buffer_index_load   (load             ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000]
-tmp_19                          (bitselect        ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000]
+tmp_16                          (bitselect        ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000]
 sub_ln165                       (sub              ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000]
 abs_in_1                        (select           ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000]
 zext_ln169                      (zext             ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000]
@@ -1766,9 +1766,9 @@ compression_factor_1            (fdiv             ) [ 00000000000000000000000000
 conv27_i                        (sitofp           ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000001111000000000000000000000000000000000000000000000000000000000000000000000000000000000000]
 dc_1                            (fmul             ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000]
 data_V_1                        (bitcast          ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000]
-p_Result_22                     (bitselect        ) [ 0000000000000011111111111111111111111111111111111111111110000000000000000000000000011111111111111111111111111111111111111111111111111111111111111111111111111111111110]
+p_Result_21                     (bitselect        ) [ 0000000000000011111111111111111111111111111111111111111110000000000000000000000000011111111111111111111111111111111111111111111111111111111111111111111111111111111110]
 xs_exp_V_1                      (partselect       ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000]
-p_Result_23                     (trunc            ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000]
+p_Result_22                     (trunc            ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000]
 zext_ln346_1                    (zext             ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000]
 add_ln346_1                     (add              ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000]
 isNeg_1                         (bitselect        ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000]
@@ -1781,7 +1781,7 @@ sext_ln1488_1                   (sext             ) [ 00000000000000000000000000
 zext_ln1488_1                   (zext             ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000]
 r_V_8                           (lshr             ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000]
 r_V_9                           (shl              ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000]
-tmp_28                          (bitselect        ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000]
+tmp_26                          (bitselect        ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000]
 zext_ln818_1                    (zext             ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000]
 tmp_1                           (partselect       ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000]
 val_1                           (select           ) [ 0000000000000011111111111111111111111111111111111111111110000000000000000000000000001111111111111111111111111111111111111111111111111111111111111111111111111111111110]
@@ -1802,9 +1802,9 @@ compression_factor              (fdiv             ) [ 00000000000000000000000000
 conv18_i                        (sitofp           ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000111100000000000000000000000000000000000000000000000000000000]
 dc                              (fmul             ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000]
 data_V                          (bitcast          ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000]
-p_Result_20                     (bitselect        ) [ 0000000000000011111111111111111111111111111111111111111111111111111111111111111111111000000000000000000000000001111111111111111111111111111111111111111111111111111110]
+p_Result_19                     (bitselect        ) [ 0000000000000011111111111111111111111111111111111111111111111111111111111111111111111000000000000000000000000001111111111111111111111111111111111111111111111111111110]
 xs_exp_V                        (partselect       ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000]
-p_Result_21                     (trunc            ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000]
+p_Result_20                     (trunc            ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000]
 zext_ln346                      (zext             ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000]
 add_ln346                       (add              ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000]
 isNeg                           (bitselect        ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000]
@@ -1817,7 +1817,7 @@ sext_ln1488                     (sext             ) [ 00000000000000000000000000
 zext_ln1488                     (zext             ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000]
 r_V_6                           (lshr             ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000]
 r_V_7                           (shl              ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000]
-tmp_24                          (bitselect        ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000]
+tmp_22                          (bitselect        ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000]
 zext_ln818                      (zext             ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000]
 tmp_s                           (partselect       ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000]
 val                             (select           ) [ 0000000000000011111111111111111111111111111111111111111111111111111111111111111111111000000000000000000000000000111111111111111111111111111111111111111111111111111110]
@@ -1832,7 +1832,7 @@ conv_i1                         (sitofp           ) [ 00000000000000000000000000
 dc_2                            (fmul             ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000]
 data_V_2                        (bitcast          ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000110000]
 xs_exp_V_3                      (partselect       ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000]
-p_Result_25                     (trunc            ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000]
+p_Result_24                     (trunc            ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000]
 zext_ln346_2                    (zext             ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000]
 add_ln346_2                     (add              ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000]
 isNeg_2                         (bitselect        ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000]
@@ -1845,13 +1845,13 @@ sext_ln1488_2                   (sext             ) [ 00000000000000000000000000
 zext_ln1488_2                   (zext             ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000]
 r_V_10                          (lshr             ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000]
 r_V_11                          (shl              ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000]
-tmp_32                          (bitselect        ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000]
+tmp_30                          (bitselect        ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000]
 zext_ln818_2                    (zext             ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000]
 tmp_2                           (partselect       ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000]
 val_2                           (select           ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000]
 result_V_10                     (sub              ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000]
 or_ln114                        (or               ) [ 0000000000000011111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110]
-p_Result_24                     (bitselect        ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000]
+p_Result_23                     (bitselect        ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000]
 result_V                        (select           ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000]
 output                          (add              ) [ 0000000000000011111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110]
 zext_ln211                      (zext             ) [ 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000]
@@ -3677,7 +3677,7 @@ ret_ln140                       (ret              ) [ 00000000000000000000000000
 </pin_list>
 <bind>
 <opcode="fmul(13) " fcode="fmul"/>
-<opset="dc_1/78 dc/106 dc_2/155 mul_i/23 mul/64 "/>
+<opset="dc_1/78 dc/106 dc_2/155 mul_i/23 mul/28 "/>
 </bind>
 </comp>
 
@@ -3700,7 +3700,7 @@ ret_ln140                       (ret              ) [ 00000000000000000000000000
 </pin_list>
 <bind>
 <opcode="sitofp(39) " fcode="sitofp"/>
-<opset="conv16_i/8 conv25_i/56 conv17_i/56 conv27_i/72 conv18_i/100 conv_i1/149 conv_i/17 conv8_i/20 conv/58 "/>
+<opset="conv16_i/8 conv25_i/56 conv17_i/56 conv27_i/72 conv18_i/100 conv_i1/149 conv_i/17 conv8_i/20 conv/22 "/>
 </bind>
 </comp>
 
@@ -3979,7 +3979,7 @@ ret_ln140                       (ret              ) [ 00000000000000000000000000
 </bind>
 </comp>
 
-<comp id="725" class="1004" name="tmp_13_fu_725">
+<comp id="725" class="1004" name="tmp_11_fu_725">
 <pin_list>
 <pin id="726" dir="0" index="0" bw="1" slack="0"/>
 <pin id="727" dir="0" index="1" bw="8" slack="3"/>
@@ -3988,11 +3988,11 @@ ret_ln140                       (ret              ) [ 00000000000000000000000000
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="tmp_13/4 "/>
+<opset="tmp_11/4 "/>
 </bind>
 </comp>
 
-<comp id="732" class="1004" name="tmp_15_fu_732">
+<comp id="732" class="1004" name="tmp_12_fu_732">
 <pin_list>
 <pin id="733" dir="0" index="0" bw="1" slack="0"/>
 <pin id="734" dir="0" index="1" bw="8" slack="3"/>
@@ -4001,7 +4001,7 @@ ret_ln140                       (ret              ) [ 00000000000000000000000000
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="tmp_15/4 "/>
+<opset="tmp_12/4 "/>
 </bind>
 </comp>
 
@@ -4493,7 +4493,7 @@ ret_ln140                       (ret              ) [ 00000000000000000000000000
 </bind>
 </comp>
 
-<comp id="952" class="1004" name="p_Result_10_fu_952">
+<comp id="952" class="1004" name="p_Result_9_fu_952">
 <pin_list>
 <pin id="953" dir="0" index="0" bw="1" slack="0"/>
 <pin id="954" dir="0" index="1" bw="40" slack="1"/>
@@ -4502,7 +4502,7 @@ ret_ln140                       (ret              ) [ 00000000000000000000000000
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="p_Result_10/17 "/>
+<opset="p_Result_9/17 "/>
 </bind>
 </comp>
 
@@ -4687,7 +4687,7 @@ ret_ln140                       (ret              ) [ 00000000000000000000000000
 </bind>
 </comp>
 
-<comp id="1038" class="1004" name="tmp_19_fu_1038">
+<comp id="1038" class="1004" name="tmp_16_fu_1038">
 <pin_list>
 <pin id="1039" dir="0" index="0" bw="1" slack="0"/>
 <pin id="1040" dir="0" index="1" bw="32" slack="1"/>
@@ -4696,7 +4696,7 @@ ret_ln140                       (ret              ) [ 00000000000000000000000000
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="tmp_19/18 "/>
+<opset="tmp_16/18 "/>
 </bind>
 </comp>
 
@@ -4914,7 +4914,7 @@ ret_ln140                       (ret              ) [ 00000000000000000000000000
 </bind>
 </comp>
 
-<comp id="1137" class="1004" name="p_Result_22_fu_1137">
+<comp id="1137" class="1004" name="p_Result_21_fu_1137">
 <pin_list>
 <pin id="1138" dir="0" index="0" bw="1" slack="0"/>
 <pin id="1139" dir="0" index="1" bw="32" slack="0"/>
@@ -4923,7 +4923,7 @@ ret_ln140                       (ret              ) [ 00000000000000000000000000
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="p_Result_22/82 "/>
+<opset="p_Result_21/82 "/>
 </bind>
 </comp>
 
@@ -4941,14 +4941,14 @@ ret_ln140                       (ret              ) [ 00000000000000000000000000
 </bind>
 </comp>
 
-<comp id="1155" class="1004" name="p_Result_23_fu_1155">
+<comp id="1155" class="1004" name="p_Result_22_fu_1155">
 <pin_list>
 <pin id="1156" dir="0" index="0" bw="32" slack="0"/>
 <pin id="1157" dir="1" index="1" bw="23" slack="1"/>
 </pin_list>
 <bind>
 <opcode="trunc(33) " fcode="trunc"/>
-<opset="p_Result_23/82 "/>
+<opset="p_Result_22/82 "/>
 </bind>
 </comp>
 
@@ -5095,7 +5095,7 @@ ret_ln140                       (ret              ) [ 00000000000000000000000000
 </bind>
 </comp>
 
-<comp id="1227" class="1004" name="tmp_28_fu_1227">
+<comp id="1227" class="1004" name="tmp_26_fu_1227">
 <pin_list>
 <pin id="1228" dir="0" index="0" bw="1" slack="0"/>
 <pin id="1229" dir="0" index="1" bw="79" slack="0"/>
@@ -5104,7 +5104,7 @@ ret_ln140                       (ret              ) [ 00000000000000000000000000
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="tmp_28/83 "/>
+<opset="tmp_26/83 "/>
 </bind>
 </comp>
 
@@ -5266,7 +5266,7 @@ ret_ln140                       (ret              ) [ 00000000000000000000000000
 </bind>
 </comp>
 
-<comp id="1310" class="1004" name="p_Result_20_fu_1310">
+<comp id="1310" class="1004" name="p_Result_19_fu_1310">
 <pin_list>
 <pin id="1311" dir="0" index="0" bw="1" slack="0"/>
 <pin id="1312" dir="0" index="1" bw="32" slack="0"/>
@@ -5275,7 +5275,7 @@ ret_ln140                       (ret              ) [ 00000000000000000000000000
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="p_Result_20/110 "/>
+<opset="p_Result_19/110 "/>
 </bind>
 </comp>
 
@@ -5293,14 +5293,14 @@ ret_ln140                       (ret              ) [ 00000000000000000000000000
 </bind>
 </comp>
 
-<comp id="1328" class="1004" name="p_Result_21_fu_1328">
+<comp id="1328" class="1004" name="p_Result_20_fu_1328">
 <pin_list>
 <pin id="1329" dir="0" index="0" bw="32" slack="0"/>
 <pin id="1330" dir="1" index="1" bw="23" slack="1"/>
 </pin_list>
 <bind>
 <opcode="trunc(33) " fcode="trunc"/>
-<opset="p_Result_21/110 "/>
+<opset="p_Result_20/110 "/>
 </bind>
 </comp>
 
@@ -5447,7 +5447,7 @@ ret_ln140                       (ret              ) [ 00000000000000000000000000
 </bind>
 </comp>
 
-<comp id="1400" class="1004" name="tmp_24_fu_1400">
+<comp id="1400" class="1004" name="tmp_22_fu_1400">
 <pin_list>
 <pin id="1401" dir="0" index="0" bw="1" slack="0"/>
 <pin id="1402" dir="0" index="1" bw="79" slack="0"/>
@@ -5456,7 +5456,7 @@ ret_ln140                       (ret              ) [ 00000000000000000000000000
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="tmp_24/111 "/>
+<opset="tmp_22/111 "/>
 </bind>
 </comp>
 
@@ -5557,14 +5557,14 @@ ret_ln140                       (ret              ) [ 00000000000000000000000000
 </bind>
 </comp>
 
-<comp id="1456" class="1004" name="p_Result_25_fu_1456">
+<comp id="1456" class="1004" name="p_Result_24_fu_1456">
 <pin_list>
 <pin id="1457" dir="0" index="0" bw="32" slack="0"/>
 <pin id="1458" dir="1" index="1" bw="23" slack="1"/>
 </pin_list>
 <bind>
 <opcode="trunc(33) " fcode="trunc"/>
-<opset="p_Result_25/159 "/>
+<opset="p_Result_24/159 "/>
 </bind>
 </comp>
 
@@ -5711,7 +5711,7 @@ ret_ln140                       (ret              ) [ 00000000000000000000000000
 </bind>
 </comp>
 
-<comp id="1528" class="1004" name="tmp_32_fu_1528">
+<comp id="1528" class="1004" name="tmp_30_fu_1528">
 <pin_list>
 <pin id="1529" dir="0" index="0" bw="1" slack="0"/>
 <pin id="1530" dir="0" index="1" bw="79" slack="0"/>
@@ -5720,7 +5720,7 @@ ret_ln140                       (ret              ) [ 00000000000000000000000000
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="tmp_32/160 "/>
+<opset="tmp_30/160 "/>
 </bind>
 </comp>
 
@@ -5786,7 +5786,7 @@ ret_ln140                       (ret              ) [ 00000000000000000000000000
 </bind>
 </comp>
 
-<comp id="1569" class="1004" name="p_Result_24_fu_1569">
+<comp id="1569" class="1004" name="p_Result_23_fu_1569">
 <pin_list>
 <pin id="1570" dir="0" index="0" bw="1" slack="0"/>
 <pin id="1571" dir="0" index="1" bw="32" slack="2"/>
@@ -5795,7 +5795,7 @@ ret_ln140                       (ret              ) [ 00000000000000000000000000
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="p_Result_24/161 "/>
+<opset="p_Result_23/161 "/>
 </bind>
 </comp>
 
@@ -6149,23 +6149,23 @@ ret_ln140                       (ret              ) [ 00000000000000000000000000
 </bind>
 </comp>
 
-<comp id="1783" class="1005" name="tmp_13_reg_1783">
+<comp id="1783" class="1005" name="tmp_11_reg_1783">
 <pin_list>
 <pin id="1784" dir="0" index="0" bw="1" slack="14"/>
 <pin id="1785" dir="1" index="1" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<opset="tmp_13 "/>
+<opset="tmp_11 "/>
 </bind>
 </comp>
 
-<comp id="1787" class="1005" name="tmp_15_reg_1787">
+<comp id="1787" class="1005" name="tmp_12_reg_1787">
 <pin_list>
 <pin id="1788" dir="0" index="0" bw="1" slack="80"/>
 <pin id="1789" dir="1" index="1" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<opset="tmp_15 "/>
+<opset="tmp_12 "/>
 </bind>
 </comp>
 
@@ -6549,23 +6549,23 @@ ret_ln140                       (ret              ) [ 00000000000000000000000000
 </bind>
 </comp>
 
-<comp id="1994" class="1005" name="p_Result_22_reg_1994">
+<comp id="1994" class="1005" name="p_Result_21_reg_1994">
 <pin_list>
 <pin id="1995" dir="0" index="0" bw="1" slack="2"/>
 <pin id="1996" dir="1" index="1" bw="1" slack="2"/>
 </pin_list>
 <bind>
-<opset="p_Result_22 "/>
+<opset="p_Result_21 "/>
 </bind>
 </comp>
 
-<comp id="1999" class="1005" name="p_Result_23_reg_1999">
+<comp id="1999" class="1005" name="p_Result_22_reg_1999">
 <pin_list>
 <pin id="2000" dir="0" index="0" bw="23" slack="1"/>
 <pin id="2001" dir="1" index="1" bw="23" slack="1"/>
 </pin_list>
 <bind>
-<opset="p_Result_23 "/>
+<opset="p_Result_22 "/>
 </bind>
 </comp>
 
@@ -6629,23 +6629,23 @@ ret_ln140                       (ret              ) [ 00000000000000000000000000
 </bind>
 </comp>
 
-<comp id="2035" class="1005" name="p_Result_20_reg_2035">
+<comp id="2035" class="1005" name="p_Result_19_reg_2035">
 <pin_list>
 <pin id="2036" dir="0" index="0" bw="1" slack="2"/>
 <pin id="2037" dir="1" index="1" bw="1" slack="2"/>
 </pin_list>
 <bind>
-<opset="p_Result_20 "/>
+<opset="p_Result_19 "/>
 </bind>
 </comp>
 
-<comp id="2040" class="1005" name="p_Result_21_reg_2040">
+<comp id="2040" class="1005" name="p_Result_20_reg_2040">
 <pin_list>
 <pin id="2041" dir="0" index="0" bw="23" slack="1"/>
 <pin id="2042" dir="1" index="1" bw="23" slack="1"/>
 </pin_list>
 <bind>
-<opset="p_Result_21 "/>
+<opset="p_Result_20 "/>
 </bind>
 </comp>
 
@@ -6719,13 +6719,13 @@ ret_ln140                       (ret              ) [ 00000000000000000000000000
 </bind>
 </comp>
 
-<comp id="2081" class="1005" name="p_Result_25_reg_2081">
+<comp id="2081" class="1005" name="p_Result_24_reg_2081">
 <pin_list>
 <pin id="2082" dir="0" index="0" bw="23" slack="1"/>
 <pin id="2083" dir="1" index="1" bw="23" slack="1"/>
 </pin_list>
 <bind>
-<opset="p_Result_25 "/>
+<opset="p_Result_24 "/>
 </bind>
 </comp>
 
@@ -6797,7 +6797,7 @@ ret_ln140                       (ret              ) [ 00000000000000000000000000
 </pin_list>
 <bind>
 <opcode="fadd(9) " fcode="fadd"/>
-<opset="dc/27 temp_result_1/68 "/>
+<opset="dc/27 temp_result_1/32 "/>
 </bind>
 </comp>
 
@@ -8193,9 +8193,9 @@ ret_ln140                       (ret              ) [ 00000000000000000000000000
 	State 80
 	State 81
 	State 82
-		p_Result_22 : 1
+		p_Result_21 : 1
 		xs_exp_V_1 : 1
-		p_Result_23 : 1
+		p_Result_22 : 1
 		zext_ln346_1 : 2
 		add_ln346_1 : 3
 		isNeg_1 : 4
@@ -8207,7 +8207,7 @@ ret_ln140                       (ret              ) [ 00000000000000000000000000
 		zext_ln1488_1 : 1
 		r_V_8 : 2
 		r_V_9 : 2
-		tmp_28 : 3
+		tmp_26 : 3
 		zext_ln818_1 : 4
 		tmp_1 : 3
 		val_1 : 5
@@ -8246,9 +8246,9 @@ ret_ln140                       (ret              ) [ 00000000000000000000000000
 	State 108
 	State 109
 	State 110
-		p_Result_20 : 1
+		p_Result_19 : 1
 		xs_exp_V : 1
-		p_Result_21 : 1
+		p_Result_20 : 1
 		zext_ln346 : 2
 		add_ln346 : 3
 		isNeg : 4
@@ -8260,7 +8260,7 @@ ret_ln140                       (ret              ) [ 00000000000000000000000000
 		zext_ln1488 : 1
 		r_V_6 : 2
 		r_V_7 : 2
-		tmp_24 : 3
+		tmp_22 : 3
 		zext_ln818 : 4
 		tmp_s : 3
 		val : 5
@@ -8317,7 +8317,7 @@ ret_ln140                       (ret              ) [ 00000000000000000000000000
 	State 158
 	State 159
 		xs_exp_V_3 : 1
-		p_Result_25 : 1
+		p_Result_24 : 1
 		zext_ln346_2 : 2
 		add_ln346_2 : 3
 		isNeg_2 : 4
@@ -8329,7 +8329,7 @@ ret_ln140                       (ret              ) [ 00000000000000000000000000
 		zext_ln1488_2 : 1
 		r_V_10 : 2
 		r_V_11 : 2
-		tmp_32 : 3
+		tmp_30 : 3
 		zext_ln818_2 : 4
 		tmp_2 : 3
 		val_2 : 5
@@ -8365,7 +8365,7 @@ ret_ln140                       (ret              ) [ 00000000000000000000000000
 | Operation|               Functional Unit               |   DSP   |  Delay  |    FF   |   LUT   |
 |----------|---------------------------------------------|---------|---------|---------|---------|
 |   call   | grp_guitar_effects_Pipeline_LPF_Loop_fu_572 |    5    |  6.4713 |   1058  |   1374  |
-|          |                grp_wah_fu_581               |    8    |  9.7666 |   2152  |   2791  |
+|          |                grp_wah_fu_581               |    13   |  11.116 |   2780  |   3608  |
 |----------|---------------------------------------------|---------|---------|---------|---------|
 |          |                 grp_fu_1069                 |    0    |    0    |   394   |   238   |
 |   srem   |                 grp_fu_1288                 |    0    |    0    |   394   |   238   |
@@ -8486,10 +8486,10 @@ ret_ln140                       (ret              ) [ 00000000000000000000000000
 |          |            trunc_ln1049_1_fu_912            |    0    |    0    |    0    |    0    |
 |          |              trunc_ln76_fu_1012             |    0    |    0    |    0    |    0    |
 |   trunc  |              trunc_ln67_fu_1081             |    0    |    0    |    0    |    0    |
-|          |             p_Result_23_fu_1155             |    0    |    0    |    0    |    0    |
-|          |             p_Result_21_fu_1328             |    0    |    0    |    0    |    0    |
+|          |             p_Result_22_fu_1155             |    0    |    0    |    0    |    0    |
+|          |             p_Result_20_fu_1328             |    0    |    0    |    0    |    0    |
 |          |             trunc_ln208_fu_1434             |    0    |    0    |    0    |    0    |
-|          |             p_Result_25_fu_1456             |    0    |    0    |    0    |    0    |
+|          |             p_Result_24_fu_1456             |    0    |    0    |    0    |    0    |
 |----------|---------------------------------------------|---------|---------|---------|---------|
 |          |                p_cast_fu_635                |    0    |    0    |    0    |    0    |
 |          |               p_cast11_fu_665               |    0    |    0    |    0    |    0    |
@@ -8511,20 +8511,20 @@ ret_ln140                       (ret              ) [ 00000000000000000000000000
 |          |              zext_ln211_fu_1589             |    0    |    0    |    0    |    0    |
 |----------|---------------------------------------------|---------|---------|---------|---------|
 |          |                  tmp_fu_718                 |    0    |    0    |    0    |    0    |
-|          |                tmp_13_fu_725                |    0    |    0    |    0    |    0    |
-|          |                tmp_15_fu_732                |    0    |    0    |    0    |    0    |
+|          |                tmp_11_fu_725                |    0    |    0    |    0    |    0    |
+|          |                tmp_12_fu_732                |    0    |    0    |    0    |    0    |
 |          |              p_Result_s_fu_916              |    0    |    0    |    0    |    0    |
-|          |              p_Result_10_fu_952             |    0    |    0    |    0    |    0    |
-|          |                tmp_19_fu_1038               |    0    |    0    |    0    |    0    |
-|          |             p_Result_22_fu_1137             |    0    |    0    |    0    |    0    |
+|          |              p_Result_9_fu_952              |    0    |    0    |    0    |    0    |
+|          |                tmp_16_fu_1038               |    0    |    0    |    0    |    0    |
+|          |             p_Result_21_fu_1137             |    0    |    0    |    0    |    0    |
 | bitselect|               isNeg_1_fu_1169               |    0    |    0    |    0    |    0    |
-|          |                tmp_28_fu_1227               |    0    |    0    |    0    |    0    |
-|          |             p_Result_20_fu_1310             |    0    |    0    |    0    |    0    |
+|          |                tmp_26_fu_1227               |    0    |    0    |    0    |    0    |
+|          |             p_Result_19_fu_1310             |    0    |    0    |    0    |    0    |
 |          |                isNeg_fu_1342                |    0    |    0    |    0    |    0    |
-|          |                tmp_24_fu_1400               |    0    |    0    |    0    |    0    |
+|          |                tmp_22_fu_1400               |    0    |    0    |    0    |    0    |
 |          |               isNeg_2_fu_1470               |    0    |    0    |    0    |    0    |
-|          |                tmp_32_fu_1528               |    0    |    0    |    0    |    0    |
-|          |             p_Result_24_fu_1569             |    0    |    0    |    0    |    0    |
+|          |                tmp_30_fu_1528               |    0    |    0    |    0    |    0    |
+|          |             p_Result_23_fu_1569             |    0    |    0    |    0    |    0    |
 |----------|---------------------------------------------|---------|---------|---------|---------|
 |          |               trunc_ln4_fu_764              |    0    |    0    |    0    |    0    |
 |          |              ret_V_cast_fu_888              |    0    |    0    |    0    |    0    |
@@ -8561,7 +8561,7 @@ ret_ln140                       (ret              ) [ 00000000000000000000000000
 |bitconcatenate|               mantissa_fu_1368              |    0    |    0    |    0    |    0    |
 |          |              mantissa_2_fu_1496             |    0    |    0    |    0    |    0    |
 |----------|---------------------------------------------|---------|---------|---------|---------|
-|   Total  |                                             |    20   | 16.2379 |   5070  |   7739  |
+|   Total  |                                             |    25   | 17.5873 |   5698  |   8556  |
 |----------|---------------------------------------------|---------|---------|---------|---------|
 
 Memories:
@@ -8627,11 +8627,11 @@ Memories:
 |            or_ln114_reg_2106           |   32   |
 |            or_ln149_reg_1877           |    1   |
 |             output_reg_2111            |   32   |
-|          p_Result_20_reg_2035          |    1   |
-|          p_Result_21_reg_2040          |   23   |
-|          p_Result_22_reg_1994          |    1   |
-|          p_Result_23_reg_1999          |   23   |
-|          p_Result_25_reg_2081          |   23   |
+|          p_Result_19_reg_2035          |    1   |
+|          p_Result_20_reg_2040          |   23   |
+|          p_Result_21_reg_1994          |    1   |
+|          p_Result_22_reg_1999          |   23   |
+|          p_Result_24_reg_2081          |   23   |
 |             p_loc_reg_1699             |   32   |
 |             r_V_12_reg_1892            |   40   |
 |             r_V_13_reg_1909            |   40   |
@@ -8649,8 +8649,8 @@ Memories:
 |          sext_ln1317_reg_1882          |   40   |
 |           srem_ln208_reg_2061          |   17   |
 |           sub_ln208_reg_2025           |   32   |
-|             tmp_13_reg_1783            |    1   |
-|             tmp_15_reg_1787            |    1   |
+|             tmp_11_reg_1783            |    1   |
+|             tmp_12_reg_1787            |    1   |
 |          tmp_data_V_1_reg_1828         |   32   |
 |           tmp_dest_V_reg_1857          |    6   |
 |            tmp_id_V_reg_1852           |    5   |
@@ -8708,10 +8708,10 @@ Memories:
 +-----------+--------+--------+--------+--------+--------+--------+
 |           |  BRAM  |   DSP  |  Delay |   FF   |   LUT  |  URAM  |
 +-----------+--------+--------+--------+--------+--------+--------+
-|  Function |    -   |   20   |   16   |  5070  |  7739  |    -   |
+|  Function |    -   |   25   |   17   |  5698  |  8556  |    -   |
 |   Memory  |   259  |    -   |    -   |    5   |    8   |    0   |
 |Multiplexer|    -   |    -   |   24   |    -   |   153  |    -   |
 |  Register |    -   |    -   |    -   |  2135  |    -   |    -   |
 +-----------+--------+--------+--------+--------+--------+--------+
-|   Total   |   259  |   20   |   40   |  7210  |  7900  |    0   |
+|   Total   |   259  |   25   |   42   |  7838  |  8717  |    0   |
 +-----------+--------+--------+--------+--------+--------+--------+

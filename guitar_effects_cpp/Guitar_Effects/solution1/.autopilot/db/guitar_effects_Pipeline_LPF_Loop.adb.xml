@@ -1340,10 +1340,10 @@ for.inc.i.split:19 %xs_exp_V = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32
 
 <Node id="39" bw="23" op_0_bw="32">
 <![CDATA[
-for.inc.i.split:20 %p_Result_9 = trunc i32 %data_V
+for.inc.i.split:20 %p_Result_8 = trunc i32 %data_V
 
 ]]></Node>
-<StgValue><ssdm name="p_Result_9"/></StgValue>
+<StgValue><ssdm name="p_Result_8"/></StgValue>
 </operation>
 
 <operation id="102" st_id="32" stage="1" lat="1">
@@ -1448,7 +1448,7 @@ for.inc.i.split:28 %ush = select i1 %isNeg, i9 %sext_ln1512, i9 %add_ln346
 
 <Node id="40" bw="25" op_0_bw="25" op_1_bw="1" op_2_bw="23" op_3_bw="1">
 <![CDATA[
-for.inc.i.split:21 %mantissa = bitconcatenate i25 @_ssdm_op_BitConcatenate.i25.i1.i23.i1, i1 1, i23 %p_Result_9, i1 0
+for.inc.i.split:21 %mantissa = bitconcatenate i25 @_ssdm_op_BitConcatenate.i25.i1.i23.i1, i1 1, i23 %p_Result_8, i1 0
 
 ]]></Node>
 <StgValue><ssdm name="mantissa"/></StgValue>
@@ -1922,7 +1922,7 @@ for.inc.i.split:41 %br_ln173 = br void %for.inc.i
 </dataflow>
 <dataflow id="324" from="StgValue_323" to="xs_exp_V" fromId="323" toId="100">
 </dataflow>
-<dataflow id="325" from="data_V" to="p_Result_9" fromId="98" toId="101">
+<dataflow id="325" from="data_V" to="p_Result_8" fromId="98" toId="101">
 </dataflow>
 <dataflow id="326" from="xs_exp_V" to="zext_ln346" fromId="100" toId="102">
 </dataflow>
@@ -1952,7 +1952,7 @@ for.inc.i.split:41 %br_ln173 = br void %for.inc.i
 </dataflow>
 <dataflow id="345" from="StgValue_344" to="mantissa" fromId="344" toId="108">
 </dataflow>
-<dataflow id="346" from="p_Result_9" to="mantissa" fromId="101" toId="108">
+<dataflow id="346" from="p_Result_8" to="mantissa" fromId="101" toId="108">
 </dataflow>
 <dataflow id="348" from="StgValue_347" to="mantissa" fromId="347" toId="108">
 </dataflow>

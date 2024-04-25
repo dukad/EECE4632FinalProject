@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:hls:guitar_effects:1.0
-// IP Revision: 2113529876
+// IP Revision: 2113530076
 
 `timescale 1ns/1ps
 

@@ -63,7 +63,7 @@
 <IterationLatency>
 <range>
 <min>9</min>
-<max>10497</max>
+<max>7431</max>
 </range>
 </IterationLatency>
 <InstanceList>
@@ -76,8 +76,8 @@
 <Resources>
 <BRAM_18K>259</BRAM_18K>
 <DSP>10</DSP>
-<FF>7369</FF>
-<LUT>12306</LUT>
+<FF>7611</FF>
+<LUT>12499</LUT>
 <URAM>0</URAM>
 </Resources>
 <AvailableResources>

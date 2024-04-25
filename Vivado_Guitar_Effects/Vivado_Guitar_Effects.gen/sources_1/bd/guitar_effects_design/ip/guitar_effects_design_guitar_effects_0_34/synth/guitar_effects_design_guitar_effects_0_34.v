@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:hls:guitar_effects:1.0
-// IP Revision: 2113529876
+// IP Revision: 2113530076
 
 (* X_CORE_INFO = "guitar_effects,Vivado 2022.1" *)
 (* CHECK_LICENSE_TYPE = "guitar_effects_design_guitar_effects_0_34,guitar_effects,{}" *)
-(* CORE_GENERATION_INFO = "guitar_effects_design_guitar_effects_0_34,guitar_effects,{x_ipProduct=Vivado 2022.1,x_ipVendor=xilinx.com,x_ipLibrary=hls,x_ipName=guitar_effects,x_ipVersion=1.0,x_ipCoreRevision=2113529876,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S_AXI_CONTROL_R_ADDR_WIDTH=8,C_S_AXI_CONTROL_R_DATA_WIDTH=32,C_M_AXI_GMEM_ID_WIDTH=1,C_M_AXI_GMEM_ADDR_WIDTH=64,C_M_AXI_GMEM_DATA_WIDTH=32,C_M_AXI_GMEM_AWUSER_WIDTH=1,C_M_AXI_GMEM_ARUSER_WIDTH=1,C_M_AXI_GMEM_WUSER_WIDTH=1,C_M_AXI_GMEM_RUSER_WIDTH=1,C_M_AXI_GMEM_BUS\
+(* CORE_GENERATION_INFO = "guitar_effects_design_guitar_effects_0_34,guitar_effects,{x_ipProduct=Vivado 2022.1,x_ipVendor=xilinx.com,x_ipLibrary=hls,x_ipName=guitar_effects,x_ipVersion=1.0,x_ipCoreRevision=2113530076,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S_AXI_CONTROL_R_ADDR_WIDTH=8,C_S_AXI_CONTROL_R_DATA_WIDTH=32,C_M_AXI_GMEM_ID_WIDTH=1,C_M_AXI_GMEM_ADDR_WIDTH=64,C_M_AXI_GMEM_DATA_WIDTH=32,C_M_AXI_GMEM_AWUSER_WIDTH=1,C_M_AXI_GMEM_ARUSER_WIDTH=1,C_M_AXI_GMEM_WUSER_WIDTH=1,C_M_AXI_GMEM_RUSER_WIDTH=1,C_M_AXI_GMEM_BUS\
 ER_WIDTH=1,C_M_AXI_GMEM_USER_VALUE=0x00000000,C_M_AXI_GMEM_PROT_VALUE=000,C_M_AXI_GMEM_CACHE_VALUE=0011}" *)
 (* IP_DEFINITION_SOURCE = "HLS" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)

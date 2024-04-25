@@ -132,8 +132,8 @@ wire    ap_block_state26_pp0_stage10_iter1;
 wire    ap_block_pp0_stage10_11001;
 reg   [31:0] dc_reg_408;
 reg   [0:0] p_Result_s_reg_413;
-wire   [22:0] p_Result_9_fu_218_p1;
-reg   [22:0] p_Result_9_reg_418;
+wire   [22:0] p_Result_8_fu_218_p1;
+reg   [22:0] p_Result_8_reg_418;
 wire   [0:0] isNeg_fu_232_p3;
 reg   [0:0] isNeg_reg_423;
 wire   [8:0] ush_fu_250_p3;
@@ -388,7 +388,7 @@ always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage1_11001) & (1'b1 == ap_CS_fsm_pp0_stage1))) begin
         isNeg_reg_423 <= add_ln346_fu_226_p2[32'd8];
         lpf_coefficients_load_reg_383 <= lpf_coefficients_q0;
-        p_Result_9_reg_418 <= p_Result_9_fu_218_p1;
+        p_Result_8_reg_418 <= p_Result_8_fu_218_p1;
         p_Result_s_reg_413 <= data_V_fu_197_p1[32'd31];
         ush_reg_428 <= ush_fu_250_p3;
     end
@@ -835,9 +835,9 @@ assign isNeg_fu_232_p3 = add_ln346_fu_226_p2[32'd8];
 
 assign lpf_coefficients_address0 = zext_ln173_fu_189_p1;
 
-assign mantissa_fu_258_p4 = {{{{1'd1}, {p_Result_9_reg_418}}}, {1'd0}};
+assign mantissa_fu_258_p4 = {{{{1'd1}, {p_Result_8_reg_418}}}, {1'd0}};
 
-assign p_Result_9_fu_218_p1 = data_V_fu_197_p1[22:0];
+assign p_Result_8_fu_218_p1 = data_V_fu_197_p1[22:0];
 
 assign p_out = ret_fu_72;
 

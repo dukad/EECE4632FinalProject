@@ -773,6 +773,9 @@
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="guitar_effects.cpp:174:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="compression" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=15" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/directives.tcl:7:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="wah" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=6" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
     <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h:283:50" msg_body="Inlining function 'hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;::get_user_ptr()' into 'hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;, 0&gt;::read(hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;&amp;)'">
         <args Callee="hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;::get_user_ptr()" Caller="hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;, 0&gt;::read(hls::axis&lt;ap_int&lt;32&gt;, 2ul, 5ul, 6ul&gt;&amp;)"/>
     </msg>

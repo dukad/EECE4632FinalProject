@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-| Date         : Thu Apr 25 13:00:24 2024
+| Date         : Thu Apr 25 16:21:26 2024
 | Host         : WFXB07B250A366D running 64-bit major release  (build 9200)
 | Command      : report_utilization -file guitar_effects_design_guitar_effects_0_34_utilization_synth.rpt -pb guitar_effects_design_guitar_effects_0_34_utilization_synth.pb
 | Design       : guitar_effects_design_guitar_effects_0_34
@@ -31,16 +31,16 @@ Table of Contents
 +----------------------------+------+-------+------------+-----------+-------+
 |          Site Type         | Used | Fixed | Prohibited | Available | Util% |
 +----------------------------+------+-------+------------+-----------+-------+
-| Slice LUTs*                | 6150 |     0 |          0 |     53200 | 11.56 |
-|   LUT as Logic             | 6018 |     0 |          0 |     53200 | 11.31 |
-|   LUT as Memory            |  132 |     0 |          0 |     17400 |  0.76 |
+| Slice LUTs*                | 5232 |     0 |          0 |     53200 |  9.83 |
+|   LUT as Logic             | 5116 |     0 |          0 |     53200 |  9.62 |
+|   LUT as Memory            |  116 |     0 |          0 |     17400 |  0.67 |
 |     LUT as Distributed RAM |   15 |     0 |            |           |       |
-|     LUT as Shift Register  |  117 |     0 |            |           |       |
-| Slice Registers            | 6413 |     0 |          0 |    106400 |  6.03 |
-|   Register as Flip Flop    | 6413 |     0 |          0 |    106400 |  6.03 |
+|     LUT as Shift Register  |  101 |     0 |            |           |       |
+| Slice Registers            | 5380 |     0 |          0 |    106400 |  5.06 |
+|   Register as Flip Flop    | 5380 |     0 |          0 |    106400 |  5.06 |
 |   Register as Latch        |    0 |     0 |          0 |    106400 |  0.00 |
-| F7 Muxes                   |   11 |     0 |          0 |     26600 |  0.04 |
-| F8 Muxes                   |    1 |     0 |          0 |     13300 | <0.01 |
+| F7 Muxes                   |   15 |     0 |          0 |     26600 |  0.06 |
+| F8 Muxes                   |    5 |     0 |          0 |     13300 |  0.04 |
 +----------------------------+------+-------+------------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
 
@@ -59,8 +59,8 @@ Table of Contents
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
-| 9     |          Yes |         Set |            - |
-| 6404  |          Yes |       Reset |            - |
+| 11    |          Yes |         Set |            - |
+| 5369  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -70,9 +70,9 @@ Table of Contents
 +-------------------+------+-------+------------+-----------+-------+
 |     Site Type     | Used | Fixed | Prohibited | Available | Util% |
 +-------------------+------+-------+------------+-----------+-------+
-| Block RAM Tile    | 97.5 |     0 |          0 |       140 | 69.64 |
-|   RAMB36/FIFO*    |   96 |     0 |          0 |       140 | 68.57 |
-|     RAMB36E1 only |   96 |       |            |           |       |
+| Block RAM Tile    | 49.5 |     0 |          0 |       140 | 35.36 |
+|   RAMB36/FIFO*    |   48 |     0 |          0 |       140 | 34.29 |
+|     RAMB36E1 only |   48 |       |            |           |       |
 |   RAMB18          |    3 |     0 |          0 |       280 |  1.07 |
 |     RAMB18E1 only |    3 |       |            |           |       |
 +-------------------+------+-------+------------+-----------+-------+
@@ -85,8 +85,8 @@ Table of Contents
 +----------------+------+-------+------------+-----------+-------+
 |    Site Type   | Used | Fixed | Prohibited | Available | Util% |
 +----------------+------+-------+------------+-----------+-------+
-| DSPs           |   13 |     0 |          0 |       220 |  5.91 |
-|   DSP48E1 only |   13 |       |            |           |       |
+| DSPs           |   14 |     0 |          0 |       220 |  6.36 |
+|   DSP48E1 only |   14 |       |            |           |       |
 +----------------+------+-------+------------+-----------+-------+
 
 
@@ -152,24 +152,24 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     | 6404 |        Flop & Latch |
-| LUT3     | 2353 |                 LUT |
-| LUT6     | 1486 |                 LUT |
-| LUT2     | 1036 |                 LUT |
-| LUT4     |  902 |                 LUT |
-| LUT5     |  876 |                 LUT |
-| CARRY4   |  710 |          CarryLogic |
-| LUT1     |  499 |                 LUT |
-| SRL16E   |  114 |  Distributed Memory |
-| RAMB36E1 |   96 |        Block Memory |
-| DSP48E1  |   13 |    Block Arithmetic |
-| MUXF7    |   11 |               MuxFx |
+| FDRE     | 5369 |        Flop & Latch |
+| LUT3     | 1828 |                 LUT |
+| LUT6     | 1338 |                 LUT |
+| LUT2     |  918 |                 LUT |
+| LUT4     |  835 |                 LUT |
+| LUT5     |  811 |                 LUT |
+| LUT1     |  593 |                 LUT |
+| CARRY4   |  523 |          CarryLogic |
+| SRL16E   |   98 |  Distributed Memory |
+| RAMB36E1 |   48 |        Block Memory |
+| MUXF7    |   15 |               MuxFx |
+| DSP48E1  |   14 |    Block Arithmetic |
+| FDSE     |   11 |        Flop & Latch |
 | RAMS32   |   10 |  Distributed Memory |
-| FDSE     |    9 |        Flop & Latch |
 | RAMS64E  |    5 |  Distributed Memory |
+| MUXF8    |    5 |               MuxFx |
 | SRLC32E  |    3 |  Distributed Memory |
 | RAMB18E1 |    3 |        Block Memory |
-| MUXF8    |    1 |               MuxFx |
 +----------+------+---------------------+
 
 
