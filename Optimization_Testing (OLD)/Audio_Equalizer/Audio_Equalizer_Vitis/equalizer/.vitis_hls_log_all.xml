@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Register 'signal_shift_reg_0' is power-on initialization." projectName="equalizer" solutionName="solution1" date="2024-04-22T19:17:47.872-0400" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'signal_shift_reg_1' is power-on initialization." projectName="equalizer" solutionName="solution1" date="2024-04-22T19:17:47.820-0400" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'signal_shift_reg_2' is power-on initialization." projectName="equalizer" solutionName="solution1" date="2024-04-22T19:17:47.812-0400" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'signal_shift_reg_3' is power-on initialization." projectName="equalizer" solutionName="solution1" date="2024-04-22T19:17:47.801-0400" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'signal_shift_reg_4' is power-on initialization." projectName="equalizer" solutionName="solution1" date="2024-04-22T19:17:47.792-0400" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'signal_shift_reg_5' is power-on initialization." projectName="equalizer" solutionName="solution1" date="2024-04-22T19:17:47.779-0400" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'signal_shift_reg_6' is power-on initialization." projectName="equalizer" solutionName="solution1" date="2024-04-22T19:17:47.770-0400" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'signal_shift_reg_7' is power-on initialization." projectName="equalizer" solutionName="solution1" date="2024-04-22T19:17:47.758-0400" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'signal_shift_reg_8' is power-on initialization." projectName="equalizer" solutionName="solution1" date="2024-04-22T19:17:47.749-0400" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'signal_shift_reg_9' is power-on initialization." projectName="equalizer" solutionName="solution1" date="2024-04-22T19:17:47.738-0400" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'signal_shift_reg_10' is power-on initialization." projectName="equalizer" solutionName="solution1" date="2024-04-22T19:17:47.729-0400" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'signal_shift_reg_11' is power-on initialization." projectName="equalizer" solutionName="solution1" date="2024-04-22T19:17:47.719-0400" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'signal_shift_reg_12' is power-on initialization." projectName="equalizer" solutionName="solution1" date="2024-04-22T19:17:47.710-0400" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'signal_shift_reg_13' is power-on initialization." projectName="equalizer" solutionName="solution1" date="2024-04-22T19:17:47.693-0400" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'signal_shift_reg_14' is power-on initialization." projectName="equalizer" solutionName="solution1" date="2024-04-22T19:17:47.683-0400" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'signal_shift_reg_15' is power-on initialization." projectName="equalizer" solutionName="solution1" date="2024-04-22T19:17:47.674-0400" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'signal_shift_reg_16' is power-on initialization." projectName="equalizer" solutionName="solution1" date="2024-04-22T19:17:47.666-0400" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'signal_shift_reg_17' is power-on initialization." projectName="equalizer" solutionName="solution1" date="2024-04-22T19:17:47.653-0400" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'signal_shift_reg_18' is power-on initialization." projectName="equalizer" solutionName="solution1" date="2024-04-22T19:17:47.644-0400" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'signal_shift_reg_19' is power-on initialization." projectName="equalizer" solutionName="solution1" date="2024-04-22T19:17:47.636-0400" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'signal_shift_reg_20' is power-on initialization." projectName="equalizer" solutionName="solution1" date="2024-04-22T19:17:47.628-0400" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'signal_shift_reg_21' is power-on initialization." projectName="equalizer" solutionName="solution1" date="2024-04-22T19:17:47.618-0400" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'signal_shift_reg_22' is power-on initialization." projectName="equalizer" solutionName="solution1" date="2024-04-22T19:17:47.610-0400" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'signal_shift_reg_23' is power-on initialization." projectName="equalizer" solutionName="solution1" date="2024-04-22T19:17:47.599-0400" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'signal_shift_reg_24' is power-on initialization." projectName="equalizer" solutionName="solution1" date="2024-04-22T19:17:47.590-0400" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'signal_shift_reg_25' is power-on initialization." projectName="equalizer" solutionName="solution1" date="2024-04-22T19:17:47.580-0400" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'signal_shift_reg_26' is power-on initialization." projectName="equalizer" solutionName="solution1" date="2024-04-22T19:17:47.571-0400" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'signal_shift_reg_27' is power-on initialization." projectName="equalizer" solutionName="solution1" date="2024-04-22T19:17:47.560-0400" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'signal_shift_reg_28' is power-on initialization." projectName="equalizer" solutionName="solution1" date="2024-04-22T19:17:47.552-0400" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'signal_shift_reg_29' is power-on initialization." projectName="equalizer" solutionName="solution1" date="2024-04-22T19:17:47.538-0400" type="Warning"/>
+      </synLog>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

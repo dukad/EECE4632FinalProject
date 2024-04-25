@@ -1,0 +1,167 @@
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2022.1/bin/unwrapped/win64.o/vitis_hls.exe'
+INFO: [HLS 200-10] For user 'meall.a' on host 'wfxa4bb6db88619' (Windows NT_amd64 version 6.2) on Mon Apr 22 19:17:28 -0400 2024
+INFO: [HLS 200-10] In directory 'C:/EECE4632FinalProject/Float_Testing/Audio_Equalizer/Audio_Equalizer_Vitis'
+Sourcing Tcl script 'C:/EECE4632FinalProject/Float_Testing/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution1/csynth.tcl'
+INFO: [HLS 200-1510] Running: source C:/EECE4632FinalProject/Float_Testing/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution1/csynth.tcl
+INFO: [HLS 200-1510] Running: open_project equalizer 
+INFO: [HLS 200-10] Opening project 'C:/EECE4632FinalProject/Float_Testing/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer'.
+INFO: [HLS 200-1510] Running: set_top equalizer 
+INFO: [HLS 200-1510] Running: add_files equalizer.cpp 
+INFO: [HLS 200-10] Adding design file 'equalizer.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files equalizer.h 
+INFO: [HLS 200-10] Adding design file 'equalizer.h' to the project
+INFO: [HLS 200-1510] Running: add_files -tb equalizer_test.cpp -cflags -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file 'equalizer_test.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Opening solution 'C:/EECE4632FinalProject/Float_Testing/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: source ./equalizer/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name equalizer equalizer 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.014 seconds; current allocated memory: 1.443 GB.
+INFO: [HLS 200-10] Analyzing design file 'equalizer.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 3.588 seconds; current allocated memory: 1.443 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-131] Inlining function 'hls::axis<ap_int<32>, 1ul, 1ul, 1ul>::get_user_ptr()' into 'hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>::read(hls::axis<ap_int<32>, 1ul, 1ul, 1ul>&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h:283:50)
+INFO: [HLS 214-131] Inlining function 'hls::axis<ap_int<32>, 1ul, 1ul, 1ul>::get_dest_ptr()' into 'hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>::read(hls::axis<ap_int<32>, 1ul, 1ul, 1ul>&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h:286:25)
+INFO: [HLS 214-131] Inlining function 'hls::axis<ap_int<32>, 1ul, 1ul, 1ul>::get_id_ptr()' into 'hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>::read(hls::axis<ap_int<32>, 1ul, 1ul, 1ul>&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h:285:67)
+INFO: [HLS 214-131] Inlining function 'hls::axis<ap_int<32>, 1ul, 1ul, 1ul>::get_user_ptr()' into 'hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>::read(hls::axis<ap_int<32>, 1ul, 1ul, 1ul>&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h:285:36)
+INFO: [HLS 214-131] Inlining function 'hls::axis<ap_int<32>, 1ul, 1ul, 1ul>::get_dest_ptr()' into 'hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>::read(hls::axis<ap_int<32>, 1ul, 1ul, 1ul>&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h:284:39)
+INFO: [HLS 214-131] Inlining function 'hls::axis<ap_int<32>, 1ul, 1ul, 1ul>::get_id_ptr()' into 'hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>::read(hls::axis<ap_int<32>, 1ul, 1ul, 1ul>&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h:284:23)
+INFO: [HLS 214-131] Inlining function 'ssdm_int<32, true>::ssdm_int(int)' into 'ap_int_base<32, true>::ap_int_base(int)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:260:67)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::ap_int_base(int)' into 'ap_int<32>::ap_int(int)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int.h:179:57)
+INFO: [HLS 214-131] Inlining function 'hls::axis<ap_int<32>, 1ul, 1ul, 1ul>::get_user_ptr()' into 'hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>::write(hls::axis<ap_int<32>, 1ul, 1ul, 1ul> const&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h:304:51)
+INFO: [HLS 214-131] Inlining function 'hls::axis<ap_int<32>, 1ul, 1ul, 1ul>::get_dest_ptr()' into 'hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>::write(hls::axis<ap_int<32>, 1ul, 1ul, 1ul> const&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h:307:26)
+INFO: [HLS 214-131] Inlining function 'hls::axis<ap_int<32>, 1ul, 1ul, 1ul>::get_id_ptr()' into 'hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>::write(hls::axis<ap_int<32>, 1ul, 1ul, 1ul> const&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h:306:68)
+INFO: [HLS 214-131] Inlining function 'hls::axis<ap_int<32>, 1ul, 1ul, 1ul>::get_user_ptr()' into 'hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>::write(hls::axis<ap_int<32>, 1ul, 1ul, 1ul> const&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h:306:37)
+INFO: [HLS 214-131] Inlining function 'hls::axis<ap_int<32>, 1ul, 1ul, 1ul>::get_dest_ptr()' into 'hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>::write(hls::axis<ap_int<32>, 1ul, 1ul, 1ul> const&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h:305:40)
+INFO: [HLS 214-131] Inlining function 'hls::axis<ap_int<32>, 1ul, 1ul, 1ul>::get_id_ptr()' into 'hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>::write(hls::axis<ap_int<32>, 1ul, 1ul, 1ul> const&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h:305:24)
+INFO: [HLS 214-131] Inlining function 'hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>::read(hls::axis<ap_int<32>, 1ul, 1ul, 1ul>&)' into 'equalizer(hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&, int*, hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&)' (equalizer.cpp:29:9)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<1, false>::operator unsigned long long() const' into 'equalizer(hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&, int*, hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&)' (equalizer.cpp:108:7)
+INFO: [HLS 214-131] Inlining function 'hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>::write(hls::axis<ap_int<32>, 1ul, 1ul, 1ul> const&)' into 'equalizer(hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&, int*, hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&)' (equalizer.cpp:100:12)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::to_int() const' into 'equalizer(hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&, int*, hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&)' (equalizer.cpp:90:36)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::to_int() const' into 'equalizer(hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&, int*, hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&)' (equalizer.cpp:89:28)
+INFO: [HLS 214-131] Inlining function 'hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>::read(hls::axis<ap_int<32>, 1ul, 1ul, 1ul>&)' into 'equalizer(hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&, int*, hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&)' (equalizer.cpp:71:13)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::to_int() const' into 'equalizer(hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&, int*, hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&)' (equalizer.cpp:69:27)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::to_int() const' into 'equalizer(hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&, int*, hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&)' (equalizer.cpp:63:19)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::to_int() const' into 'equalizer(hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&, int*, hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&)' (equalizer.cpp:34:18)
+INFO: [HLS 214-186] Unrolling loop 'Shift_Accumulate_Loop' (equalizer.cpp:83:5) in function 'equalizer' completely with a factor of 32 (equalizer.cpp:3:0)
+INFO: [HLS 214-115] Multiple burst reads of length 33 and bit width 32 has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (equalizer.cpp:86:42)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.none.s_struct.ap_int<32>s.i32' into 'equalizer(hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&, int*, hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h:283:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i1.s_struct.ap_uint<1>s' into 'equalizer(hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&, int*, hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h:304:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i4.s_struct.ap_uint<4>s' into 'equalizer(hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&, int*, hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h:304:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i32.s_struct.ap_int<32>s' into 'equalizer(hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&, int*, hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h:304:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.none.s_struct.ap_uint<1>s.i1' into 'equalizer(hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&, int*, hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h:283:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.none.s_struct.ap_uint<4>s.i4' into 'equalizer(hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&, int*, hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h:283:5)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 3.838 seconds; current allocated memory: 1.443 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.002 seconds; current allocated memory: 1.443 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.073 seconds; current allocated memory: 1.443 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.087 seconds; current allocated memory: 1.443 GB.
+INFO: [XFORM 203-510] Pipelining loop 'Run' (equalizer.cpp:25) in function 'equalizer' automatically.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Run' (equalizer.cpp:25) in function 'equalizer' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'Read_Coefs' (equalizer.cpp:19) in function 'equalizer' completely with a factor of 33.
+INFO: [XFORM 203-102] Partitioning array 'signal_shift_reg' automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'equalizer' (equalizer.cpp:3:6)...32 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.297 seconds; current allocated memory: 1.443 GB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.365 seconds; current allocated memory: 1.443 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'equalizer' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'equalizer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Run'.
+WARNING: [HLS 200-878] Unable to schedule the loop exit test ('phi' operation ('tmp.last.V') with incoming values : ('tmp.last.V') ('input_r_V_last_V_val') ('input_r_V_last_V_val1') ('input_r_V_last_V_val2') ('input_r_V_last_V_val3') ('input_r_V_last_V_val4') ('input_r_V_last_V_val5') ('input_r_V_last_V_val6') ('input_r_V_last_V_val7') ('input_r_V_last_V_val8') ('input_r_V_last_V_val9') ('input_r_V_last_V_val10') ('input_r_V_last_V_val11') ('input_r_V_last_V_val12') ('input_r_V_last_V_val13') ('input_r_V_last_V_val14') ('input_r_V_last_V_val15') ('input_r_V_last_V_val16') ('input_r_V_last_V_val17') ('input_r_V_last_V_val18') ('input_r_V_last_V_val19') ('input_r_V_last_V_val20') ('input_r_V_last_V_val21') ('input_r_V_last_V_val22') ('input_r_V_last_V_val23') ('input_r_V_last_V_val24') ('input_r_V_last_V_val25') ('input_r_V_last_V_val26') ('input_r_V_last_V_val27') ('input_r_V_last_V_val28') ('input_r_V_last_V_val29') ('input_r_V_last_V_val30') ('input_r_V_last_V_val31') ('input_r_V_last_V_val32')) in the first pipeline iteration (II = 1 cycles).
+Resolution: For help on HLS 200-878 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-878.html
+WARNING: [HLS 200-878] Unable to schedule the loop exit test ('phi' operation ('tmp.last.V') with incoming values : ('tmp.last.V') ('input_r_V_last_V_val') ('input_r_V_last_V_val1') ('input_r_V_last_V_val2') ('input_r_V_last_V_val3') ('input_r_V_last_V_val4') ('input_r_V_last_V_val5') ('input_r_V_last_V_val6') ('input_r_V_last_V_val7') ('input_r_V_last_V_val8') ('input_r_V_last_V_val9') ('input_r_V_last_V_val10') ('input_r_V_last_V_val11') ('input_r_V_last_V_val12') ('input_r_V_last_V_val13') ('input_r_V_last_V_val14') ('input_r_V_last_V_val15') ('input_r_V_last_V_val16') ('input_r_V_last_V_val17') ('input_r_V_last_V_val18') ('input_r_V_last_V_val19') ('input_r_V_last_V_val20') ('input_r_V_last_V_val21') ('input_r_V_last_V_val22') ('input_r_V_last_V_val23') ('input_r_V_last_V_val24') ('input_r_V_last_V_val25') ('input_r_V_last_V_val26') ('input_r_V_last_V_val27') ('input_r_V_last_V_val28') ('input_r_V_last_V_val29') ('input_r_V_last_V_val30') ('input_r_V_last_V_val31') ('input_r_V_last_V_val32')) in the first pipeline iteration (II = 2 cycles).
+Resolution: For help on HLS 200-878 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-878.html
+WARNING: [HLS 200-878] Unable to schedule the loop exit test ('phi' operation ('tmp.last.V') with incoming values : ('tmp.last.V') ('input_r_V_last_V_val') ('input_r_V_last_V_val1') ('input_r_V_last_V_val2') ('input_r_V_last_V_val3') ('input_r_V_last_V_val4') ('input_r_V_last_V_val5') ('input_r_V_last_V_val6') ('input_r_V_last_V_val7') ('input_r_V_last_V_val8') ('input_r_V_last_V_val9') ('input_r_V_last_V_val10') ('input_r_V_last_V_val11') ('input_r_V_last_V_val12') ('input_r_V_last_V_val13') ('input_r_V_last_V_val14') ('input_r_V_last_V_val15') ('input_r_V_last_V_val16') ('input_r_V_last_V_val17') ('input_r_V_last_V_val18') ('input_r_V_last_V_val19') ('input_r_V_last_V_val20') ('input_r_V_last_V_val21') ('input_r_V_last_V_val22') ('input_r_V_last_V_val23') ('input_r_V_last_V_val24') ('input_r_V_last_V_val25') ('input_r_V_last_V_val26') ('input_r_V_last_V_val27') ('input_r_V_last_V_val28') ('input_r_V_last_V_val29') ('input_r_V_last_V_val30') ('input_r_V_last_V_val31') ('input_r_V_last_V_val32')) in the first pipeline iteration (II = 3 cycles).
+Resolution: For help on HLS 200-878 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-878.html
+WARNING: [HLS 200-878] Unable to schedule the loop exit test ('phi' operation ('tmp.last.V') with incoming values : ('tmp.last.V') ('input_r_V_last_V_val') ('input_r_V_last_V_val1') ('input_r_V_last_V_val2') ('input_r_V_last_V_val3') ('input_r_V_last_V_val4') ('input_r_V_last_V_val5') ('input_r_V_last_V_val6') ('input_r_V_last_V_val7') ('input_r_V_last_V_val8') ('input_r_V_last_V_val9') ('input_r_V_last_V_val10') ('input_r_V_last_V_val11') ('input_r_V_last_V_val12') ('input_r_V_last_V_val13') ('input_r_V_last_V_val14') ('input_r_V_last_V_val15') ('input_r_V_last_V_val16') ('input_r_V_last_V_val17') ('input_r_V_last_V_val18') ('input_r_V_last_V_val19') ('input_r_V_last_V_val20') ('input_r_V_last_V_val21') ('input_r_V_last_V_val22') ('input_r_V_last_V_val23') ('input_r_V_last_V_val24') ('input_r_V_last_V_val25') ('input_r_V_last_V_val26') ('input_r_V_last_V_val27') ('input_r_V_last_V_val28') ('input_r_V_last_V_val29') ('input_r_V_last_V_val30') ('input_r_V_last_V_val31') ('input_r_V_last_V_val32')) in the first pipeline iteration (II = 4 cycles).
+Resolution: For help on HLS 200-878 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-878.html
+WARNING: [HLS 200-878] Unable to schedule the loop exit test ('phi' operation ('tmp.last.V') with incoming values : ('tmp.last.V') ('input_r_V_last_V_val') ('input_r_V_last_V_val1') ('input_r_V_last_V_val2') ('input_r_V_last_V_val3') ('input_r_V_last_V_val4') ('input_r_V_last_V_val5') ('input_r_V_last_V_val6') ('input_r_V_last_V_val7') ('input_r_V_last_V_val8') ('input_r_V_last_V_val9') ('input_r_V_last_V_val10') ('input_r_V_last_V_val11') ('input_r_V_last_V_val12') ('input_r_V_last_V_val13') ('input_r_V_last_V_val14') ('input_r_V_last_V_val15') ('input_r_V_last_V_val16') ('input_r_V_last_V_val17') ('input_r_V_last_V_val18') ('input_r_V_last_V_val19') ('input_r_V_last_V_val20') ('input_r_V_last_V_val21') ('input_r_V_last_V_val22') ('input_r_V_last_V_val23') ('input_r_V_last_V_val24') ('input_r_V_last_V_val25') ('input_r_V_last_V_val26') ('input_r_V_last_V_val27') ('input_r_V_last_V_val28') ('input_r_V_last_V_val29') ('input_r_V_last_V_val30') ('input_r_V_last_V_val31') ('input_r_V_last_V_val32')) in the first pipeline iteration (II = 35 cycles).
+Resolution: For help on HLS 200-878 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-878.html
+WARNING: [HLS 200-878] Unable to schedule the loop exit test ('phi' operation ('tmp.last.V') with incoming values : ('tmp.last.V') ('input_r_V_last_V_val') ('input_r_V_last_V_val1') ('input_r_V_last_V_val2') ('input_r_V_last_V_val3') ('input_r_V_last_V_val4') ('input_r_V_last_V_val5') ('input_r_V_last_V_val6') ('input_r_V_last_V_val7') ('input_r_V_last_V_val8') ('input_r_V_last_V_val9') ('input_r_V_last_V_val10') ('input_r_V_last_V_val11') ('input_r_V_last_V_val12') ('input_r_V_last_V_val13') ('input_r_V_last_V_val14') ('input_r_V_last_V_val15') ('input_r_V_last_V_val16') ('input_r_V_last_V_val17') ('input_r_V_last_V_val18') ('input_r_V_last_V_val19') ('input_r_V_last_V_val20') ('input_r_V_last_V_val21') ('input_r_V_last_V_val22') ('input_r_V_last_V_val23') ('input_r_V_last_V_val24') ('input_r_V_last_V_val25') ('input_r_V_last_V_val26') ('input_r_V_last_V_val27') ('input_r_V_last_V_val28') ('input_r_V_last_V_val29') ('input_r_V_last_V_val30') ('input_r_V_last_V_val31') ('input_r_V_last_V_val32')) in the first pipeline iteration (II = 43 cycles).
+Resolution: For help on HLS 200-878 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-878.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 44, Depth = 52, loop 'Run'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 4 seconds. CPU system time: 0 seconds. Elapsed time: 6.539 seconds; current allocated memory: 1.443 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.708 seconds; current allocated memory: 1.443 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'equalizer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'equalizer/gmem' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'equalizer/output_r_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'equalizer/output_r_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'equalizer/output_r_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'equalizer/output_r_V_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'equalizer/output_r_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'equalizer/output_r_V_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'equalizer/output_r_V_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'equalizer/coefs' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'equalizer/input_r_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'equalizer/input_r_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'equalizer/input_r_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'equalizer/input_r_V_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'equalizer/input_r_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'equalizer/input_r_V_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'equalizer/input_r_V_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on function 'equalizer' to 'ap_ctrl_none'.
+WARNING: [RTGEN 206-101] Register 'signal_shift_reg_31' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'signal_shift_reg_30' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'signal_shift_reg_29' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'signal_shift_reg_28' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'signal_shift_reg_27' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'signal_shift_reg_26' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'signal_shift_reg_25' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'signal_shift_reg_24' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'signal_shift_reg_23' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'signal_shift_reg_22' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'signal_shift_reg_21' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'signal_shift_reg_20' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'signal_shift_reg_19' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'signal_shift_reg_18' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'signal_shift_reg_17' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'signal_shift_reg_16' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'signal_shift_reg_15' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'signal_shift_reg_14' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'signal_shift_reg_13' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'signal_shift_reg_12' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'signal_shift_reg_11' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'signal_shift_reg_10' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'signal_shift_reg_9' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'signal_shift_reg_8' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'signal_shift_reg_7' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'signal_shift_reg_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'signal_shift_reg_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'signal_shift_reg_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'signal_shift_reg_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'signal_shift_reg_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'signal_shift_reg_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'signal_shift_reg_0' is power-on initialization.
+INFO: [RTGEN 206-100] Bundling port 'coefs' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_32_2_1': 33 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'equalizer'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.959 seconds; current allocated memory: 1.443 GB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 5 seconds. CPU system time: 0 seconds. Elapsed time: 5.286 seconds; current allocated memory: 1.443 GB.
+INFO: [HLS 200-1603] Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.669 seconds; current allocated memory: 1.443 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for equalizer.
+INFO: [VLOG 209-307] Generating Verilog RTL for equalizer.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 136.99 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 12 seconds. CPU system time: 1 seconds. Elapsed time: 23.482 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 15 seconds. Total CPU system time: 2 seconds. Total elapsed time: 26.196 seconds; peak allocated memory: 1.443 GB.

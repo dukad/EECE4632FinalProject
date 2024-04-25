@@ -3,7 +3,7 @@
 	"modules": {
 		"equalizer": {
 			"proto_instances": {
-				"grp_equalizer_Pipeline_VITIS_LOOP_56_2_fu_258/grp_equalizer_Pipeline_VITIS_LOOP_56_2_fu_258_activity": {
+				"grp_equalizer_Pipeline_VITIS_LOOP_48_2_fu_229/grp_equalizer_Pipeline_VITIS_LOOP_48_2_fu_229_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},

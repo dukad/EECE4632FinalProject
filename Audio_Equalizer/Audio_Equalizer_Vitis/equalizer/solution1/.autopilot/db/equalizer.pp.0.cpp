@@ -6423,15 +6423,24 @@ private:
 
 
 typedef ap_axis<32,1,1,1> AXI_VAL;
-typedef int data_t;
+typedef float data_t;
 typedef int coef_t;
-typedef int acc_t;
-# 26 "./equalizer.h"
+typedef float acc_t;
+
+union fpint{
+ int ival;
+ float fval;
+};
+# 31 "./equalizer.h"
 __attribute__((sdx_kernel("equalizer", 0))) void equalizer(hls::stream<AXI_VAL>& output, coef_t coefs[33], hls::stream<AXI_VAL>& input);
 # 2 "equalizer.cpp" 2
 
 __attribute__((sdx_kernel("equalizer", 0))) void equalizer(hls::stream<AXI_VAL>& output, coef_t coefs[33], hls::stream<AXI_VAL>& input) {
-#line 15 "C:/EECE4632FinalProject/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution1/csynth.tcl"
+#line 16 "C:/EECE4632FinalProject/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution1/csynth.tcl"
+#pragma HLSDIRECTIVE TOP name=equalizer
+# 3 "equalizer.cpp"
+
+#line 6 "C:/EECE4632FinalProject/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution1/directives.tcl"
 #pragma HLSDIRECTIVE TOP name=equalizer
 # 3 "equalizer.cpp"
 
@@ -6451,39 +6460,44 @@ __attribute__((sdx_kernel("equalizer", 0))) void equalizer(hls::stream<AXI_VAL>&
  AXI_VAL tmp_out;
  static data_t signal_shift_reg[33];
 
+ fpint coef;
+ fpint acc;
+ fpint coe;
+ fpint co;
+
+ coef.ival = 0;
+ acc.ival = 0;
+ coe.ival = 0;
+ co.ival = 0;
+
  bool running = true;
 
  int state = 0x0000;
 
- VITIS_LOOP_24_1: while(running){
+ VITIS_LOOP_34_1: while(running){
   input.read(tmp);
 
   switch (state){
    case 0x0000:
+    coef.ival = tmp.data.to_int();
 
-    if (tmp.data.to_int() == 48879){
-
+    if (coef.ival == 48879){
      state = 0x0011;
      i -= 1;
     }
     break;
-# 48 "equalizer.cpp"
+
    case 0x0011:
+    VITIS_LOOP_48_2: while(state == 0x0011){
+     coef.ival = tmp.data.to_int();
 
-
-
-
-
-
-
-    VITIS_LOOP_56_2: while(state == 0x0011){
-     if (tmp.data.to_int() == 43962){
+     if (coef.ival == 43962){
       state = 0x1000;
       i = 0;
       break;
      }
 
-     coefs[i] = tmp.data.to_int();
+     coefs[i] = coef.ival;
 
      input.read(tmp);
      i += 1;
@@ -6491,21 +6505,21 @@ __attribute__((sdx_kernel("equalizer", 0))) void equalizer(hls::stream<AXI_VAL>&
     break;
 
    case 0x1000:
-
-
     accumulate = 0;
 
     Shift_Accumulate_Loop:
     for (i = 33 - 1; i > 0; i--){
 #pragma HLS UNROLL
  signal_shift_reg[i] = signal_shift_reg[i - 1];
-     accumulate += signal_shift_reg[i] * coefs[i];
+     coe.ival = coefs[i];
+     accumulate += signal_shift_reg[i] * coe.fval;
     }
 
-    accumulate += tmp.data.to_int() * coefs[0];
-    signal_shift_reg[0] = tmp.data.to_int();
+    co.ival = coefs[0];
+    accumulate += coef.fval * co.fval;
+    signal_shift_reg[0] = coef.fval;
 
-    tmp_out.data = accumulate;
+    tmp_out.data = acc.ival;
     tmp_out.keep = tmp.keep;
     tmp_out.strb = tmp.strb;
     tmp_out.last = tmp.last;
@@ -6520,9 +6534,11 @@ __attribute__((sdx_kernel("equalizer", 0))) void equalizer(hls::stream<AXI_VAL>&
 
   i += 1;
 
-
   if (tmp.last){
    running = false;
   }
+ }
+ if (tmp.last){
+  running = false;
  }
 }

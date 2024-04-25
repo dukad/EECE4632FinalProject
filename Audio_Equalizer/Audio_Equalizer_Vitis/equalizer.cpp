@@ -17,6 +17,16 @@ void equalizer(hls::stream<AXI_VAL>& output, coef_t coefs[NUM_COEFS], hls::strea
 	AXI_VAL tmp_out;
 	static data_t signal_shift_reg[NUM_COEFS];
 
+	fpint coef;
+	fpint acc;
+	fpint coe;
+	fpint co;
+
+	coef.ival = 0;
+	acc.ival = 0;
+	coe.ival = 0;
+	co.ival = 0;
+
 	bool running = true;
 
 	int state = IDLE;
@@ -26,41 +36,25 @@ void equalizer(hls::stream<AXI_VAL>& output, coef_t coefs[NUM_COEFS], hls::strea
 
 		switch (state){
 			case IDLE:
-				// Remains in idle state until 0xBEEF value is read on AXI stream
-				if (tmp.data.to_int() == BEEF){
-					//state = READ_COEF_PARAMS;
+				coef.ival = tmp.data.to_int();
+
+				if (coef.ival == BEEF){
 					state = READ_COEFS;
 					i -= 1;
 				}
 				break;
 
-//			case READ_COEF_PARAMS:
-//				// *** COEFFICIENT PROCESSING SETUP ***
-//				num_filters = tmp.data.to_int();
-//
-//				input.read(tmp);
-//
-//				// FOR LOOP TO READ ALL COEFS INTO MEMORY
-//
-//				state = READ_COEFS;
-//				break;
-
 			case READ_COEFS:
-				// *** COEFFICIENT PROCESSING CODE ***
-				// Reads coefficients from AXI stream and writes them into coefficient array
-				// Keeps reading until value of 0xABBA is read on AXI stream
-//				input.read(tmp);
-//
-//				coef_scale = 0;
-
 				while(state == READ_COEFS){
-					if (tmp.data.to_int() == ABBA){
+					coef.ival = tmp.data.to_int();
+
+					if (coef.ival == ABBA){
 						state = OUTPUT_SIGNAL;
 						i = 0;
 						break;
 					}
 
-					coefs[i] = tmp.data.to_int();
+					coefs[i] = coef.ival;
 
 					input.read(tmp);
 					i += 1;
@@ -68,21 +62,21 @@ void equalizer(hls::stream<AXI_VAL>& output, coef_t coefs[NUM_COEFS], hls::strea
 				break;
 
 			case OUTPUT_SIGNAL:
-				// *** APPLY FILTER TO SIGNAL ***
-				// Convolves filter coefficients with signal
 				accumulate = 0;
 
 				Shift_Accumulate_Loop:
 				for (i = NUM_COEFS - 1; i > 0; i--){
 				#pragma HLS UNROLL
 					signal_shift_reg[i] = signal_shift_reg[i - 1];
-					accumulate += signal_shift_reg[i] * coefs[i];
+					coe.ival = coefs[i];
+					accumulate += signal_shift_reg[i] * coe.fval;
 				}
 
-				accumulate += tmp.data.to_int() * coefs[0];
-				signal_shift_reg[0] = tmp.data.to_int();
+				co.ival = coefs[0];
+				accumulate += coef.fval * co.fval;
+				signal_shift_reg[0] = coef.fval;
 
-				tmp_out.data = accumulate;
+				tmp_out.data = acc.ival;
 				tmp_out.keep = tmp.keep;
 				tmp_out.strb = tmp.strb;
 				tmp_out.last = tmp.last;
@@ -97,9 +91,11 @@ void equalizer(hls::stream<AXI_VAL>& output, coef_t coefs[NUM_COEFS], hls::strea
 
 		i += 1;
 
-		// *** LOOP BREAK ***
 		if (tmp.last){
 			running = false;
 		}
+	}
+	if (tmp.last){
+		running = false;
 	}
 }

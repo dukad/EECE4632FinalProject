@@ -1,4 +1,4 @@
-<project xmlns="com.autoesl.autopilot.project" top="equalizer" name="equalizer">
+<project xmlns="com.autoesl.autopilot.project" name="equalizer" top="equalizer">
     <includePaths/>
     <libraryPaths/>
     <Simulation>

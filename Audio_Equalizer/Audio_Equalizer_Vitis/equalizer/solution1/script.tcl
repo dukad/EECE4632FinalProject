@@ -7,11 +7,12 @@ open_project equalizer
 set_top equalizer
 add_files equalizer.cpp
 add_files equalizer.h
-add_files -tb equalizer_test.cpp
+add_files -tb equalizer_test.cpp -cflags "-Wno-unknown-pragmas" -csimflags "-Wno-unknown-pragmas"
 open_solution "solution1" -flow_target vivado
-set_part {xc7z020clg400-1}
+set_part {xc7z020-clg400-1}
 create_clock -period 20 -name default
-#source "./equalizer/solution1/directives.tcl"
+config_export -format ip_catalog -rtl verilog
+source "./equalizer/solution1/directives.tcl"
 csim_design
 csynth_design
 cosim_design
