@@ -2,8 +2,8 @@
 # Vivado v2022.1 (64-bit)
 # SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
 # IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
-# Start of session at: Thu Apr 25 16:21:32 2024
-# Process ID: 6964
+# Start of session at: Wed Apr 24 17:07:16 2024
+# Process ID: 23760
 # Current directory: C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1
 # Command line: vivado.exe -log guitar_effects_design_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source guitar_effects_design_wrapper.tcl
 # Log file: C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1/guitar_effects_design_wrapper.vds
@@ -15,9 +15,6 @@ INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/EECE4632FinalProject'.
 WARNING: [IP_Flow 19-3656] If you move the project, the path for repository 'c:/EECE4632FinalProject' may become invalid. A better location for the repository would be in a path adjacent to the project. (Current project location is 'c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1'.)
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.1/data/ip'.
-WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:hls:equalizer:1.0'. The one found in IP location 'c:/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/impl/ip' will take precedence over the same IP in locations: 
-   c:/EECE4632FinalProject/Latest_Working_Copy/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution1/impl/ip
-   c:/EECE4632FinalProject/Test_Runs/Audio_Equalizer_Scaling/Audio_Equalizer_Vitis/equalizer/solution1/impl/ip
 Command: read_checkpoint -auto_incremental -incremental C:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/utils_1/imports/synth_1/guitar_effects_design_wrapper.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/utils_1/imports/synth_1/guitar_effects_design_wrapper.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -30,20 +27,20 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 22980
+INFO: [Synth 8-7075] Helper process launched with PID 10520
 WARNING: [Synth 8-9501] generate block is allowed only inside loop and conditional generate in SystemVerilog mode [C:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:4023]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1637.066 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1617.309 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'guitar_effects_design_wrapper' [C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/hdl/guitar_effects_design_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'guitar_effects_design' [c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.v:12]
-INFO: [Synth 8-6157] synthesizing module 'guitar_effects_design_axi_bram_ctrl_0_3' [C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1/.Xil/Vivado-6964-WFXB07B250A366D/realtime/guitar_effects_design_axi_bram_ctrl_0_3_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'guitar_effects_design_axi_bram_ctrl_0_3' (0#1) [C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1/.Xil/Vivado-6964-WFXB07B250A366D/realtime/guitar_effects_design_axi_bram_ctrl_0_3_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'guitar_effects_design_axi_bram_ctrl_0_3' [C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1/.Xil/Vivado-23760-WFXB07B250A366D/realtime/guitar_effects_design_axi_bram_ctrl_0_3_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'guitar_effects_design_axi_bram_ctrl_0_3' (0#1) [C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1/.Xil/Vivado-23760-WFXB07B250A366D/realtime/guitar_effects_design_axi_bram_ctrl_0_3_stub.v:5]
 WARNING: [Synth 8-7071] port 'bram_we_a' of module 'guitar_effects_design_axi_bram_ctrl_0_3' is unconnected for instance 'axi_bram_ctrl_0' [c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.v:266]
 WARNING: [Synth 8-7071] port 'bram_wrdata_a' of module 'guitar_effects_design_axi_bram_ctrl_0_3' is unconnected for instance 'axi_bram_ctrl_0' [c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.v:266]
 WARNING: [Synth 8-7023] instance 'axi_bram_ctrl_0' of module 'guitar_effects_design_axi_bram_ctrl_0_3' has 40 connections declared, but only 38 given [c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.v:266]
-INFO: [Synth 8-6157] synthesizing module 'guitar_effects_design_axi_dma_0_3' [C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1/.Xil/Vivado-6964-WFXB07B250A366D/realtime/guitar_effects_design_axi_dma_0_3_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'guitar_effects_design_axi_dma_0_3' (0#1) [C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1/.Xil/Vivado-6964-WFXB07B250A366D/realtime/guitar_effects_design_axi_dma_0_3_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'guitar_effects_design_axi_dma_0_3' [C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1/.Xil/Vivado-23760-WFXB07B250A366D/realtime/guitar_effects_design_axi_dma_0_3_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'guitar_effects_design_axi_dma_0_3' (0#1) [C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1/.Xil/Vivado-23760-WFXB07B250A366D/realtime/guitar_effects_design_axi_dma_0_3_stub.v:5]
 WARNING: [Synth 8-7071] port 'mm2s_prmry_reset_out_n' of module 'guitar_effects_design_axi_dma_0_3' is unconnected for instance 'axi_dma_0' [c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.v:305]
 WARNING: [Synth 8-7071] port 's2mm_prmry_reset_out_n' of module 'guitar_effects_design_axi_dma_0_3' is unconnected for instance 'axi_dma_0' [c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.v:305]
 WARNING: [Synth 8-7071] port 'mm2s_introut' of module 'guitar_effects_design_axi_dma_0_3' is unconnected for instance 'axi_dma_0' [c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.v:305]
@@ -52,15 +49,15 @@ WARNING: [Synth 8-7071] port 'axi_dma_tstvec' of module 'guitar_effects_design_a
 WARNING: [Synth 8-7023] instance 'axi_dma_0' of module 'guitar_effects_design_axi_dma_0_3' has 64 connections declared, but only 59 given [c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.v:305]
 INFO: [Synth 8-6157] synthesizing module 'guitar_effects_design_axi_mem_intercon_5' [c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.v:704]
 INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_2TE3PB' [c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.v:1960]
-INFO: [Synth 8-6157] synthesizing module 'guitar_effects_design_auto_pc_0' [C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1/.Xil/Vivado-6964-WFXB07B250A366D/realtime/guitar_effects_design_auto_pc_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'guitar_effects_design_auto_pc_0' (0#1) [C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1/.Xil/Vivado-6964-WFXB07B250A366D/realtime/guitar_effects_design_auto_pc_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'guitar_effects_design_auto_pc_0' [C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1/.Xil/Vivado-23760-WFXB07B250A366D/realtime/guitar_effects_design_auto_pc_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'guitar_effects_design_auto_pc_0' (0#1) [C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1/.Xil/Vivado-23760-WFXB07B250A366D/realtime/guitar_effects_design_auto_pc_0_stub.v:5]
 INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_2TE3PB' (0#1) [c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.v:1960]
 INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_2JFQM6' [c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.v:2802]
 INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_2JFQM6' (0#1) [c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.v:2802]
 INFO: [Synth 8-6157] synthesizing module 's01_couplers_imp_25FLIN' [c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.v:2906]
 INFO: [Synth 8-6155] done synthesizing module 's01_couplers_imp_25FLIN' (0#1) [c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.v:2906]
-INFO: [Synth 8-6157] synthesizing module 'guitar_effects_design_xbar_1' [C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1/.Xil/Vivado-6964-WFXB07B250A366D/realtime/guitar_effects_design_xbar_1_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'guitar_effects_design_xbar_1' (0#1) [C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1/.Xil/Vivado-6964-WFXB07B250A366D/realtime/guitar_effects_design_xbar_1_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'guitar_effects_design_xbar_1' [C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1/.Xil/Vivado-23760-WFXB07B250A366D/realtime/guitar_effects_design_xbar_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'guitar_effects_design_xbar_1' (0#1) [C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1/.Xil/Vivado-23760-WFXB07B250A366D/realtime/guitar_effects_design_xbar_1_stub.v:5]
 WARNING: [Synth 8-689] width (1) of port connection 's_axi_arready' does not match port width (2) of module 'guitar_effects_design_xbar_1' [c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.v:1267]
 WARNING: [Synth 8-689] width (32) of port connection 's_axi_rdata' does not match port width (64) of module 'guitar_effects_design_xbar_1' [c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.v:1284]
 WARNING: [Synth 8-689] width (1) of port connection 's_axi_rlast' does not match port width (2) of module 'guitar_effects_design_xbar_1' [c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.v:1285]
@@ -70,23 +67,23 @@ WARNING: [Synth 8-7071] port 's_axi_bid' of module 'guitar_effects_design_xbar_1
 WARNING: [Synth 8-7071] port 's_axi_rid' of module 'guitar_effects_design_xbar_1' is unconnected for instance 'xbar' [c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.v:1217]
 WARNING: [Synth 8-7023] instance 'xbar' of module 'guitar_effects_design_xbar_1' has 78 connections declared, but only 76 given [c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.v:1217]
 INFO: [Synth 8-6155] done synthesizing module 'guitar_effects_design_axi_mem_intercon_5' (0#1) [c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.v:704]
-INFO: [Synth 8-6157] synthesizing module 'guitar_effects_design_blk_mem_gen_0_2' [C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1/.Xil/Vivado-6964-WFXB07B250A366D/realtime/guitar_effects_design_blk_mem_gen_0_2_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'guitar_effects_design_blk_mem_gen_0_2' (0#1) [C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1/.Xil/Vivado-6964-WFXB07B250A366D/realtime/guitar_effects_design_blk_mem_gen_0_2_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'guitar_effects_design_blk_mem_gen_0_2' [C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1/.Xil/Vivado-23760-WFXB07B250A366D/realtime/guitar_effects_design_blk_mem_gen_0_2_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'guitar_effects_design_blk_mem_gen_0_2' (0#1) [C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1/.Xil/Vivado-23760-WFXB07B250A366D/realtime/guitar_effects_design_blk_mem_gen_0_2_stub.v:5]
 WARNING: [Synth 8-7071] port 'rsta_busy' of module 'guitar_effects_design_blk_mem_gen_0_2' is unconnected for instance 'blk_mem_gen_0' [c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.v:441]
 WARNING: [Synth 8-7023] instance 'blk_mem_gen_0' of module 'guitar_effects_design_blk_mem_gen_0_2' has 6 connections declared, but only 5 given [c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.v:441]
-INFO: [Synth 8-6157] synthesizing module 'guitar_effects_design_guitar_effects_0_34' [C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1/.Xil/Vivado-6964-WFXB07B250A366D/realtime/guitar_effects_design_guitar_effects_0_34_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'guitar_effects_design_guitar_effects_0_34' (0#1) [C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1/.Xil/Vivado-6964-WFXB07B250A366D/realtime/guitar_effects_design_guitar_effects_0_34_stub.v:5]
-WARNING: [Synth 8-7071] port 'm_axi_gmem_AWREGION' of module 'guitar_effects_design_guitar_effects_0_34' is unconnected for instance 'guitar_effects_0' [c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.v:447]
-WARNING: [Synth 8-7071] port 'm_axi_gmem_AWQOS' of module 'guitar_effects_design_guitar_effects_0_34' is unconnected for instance 'guitar_effects_0' [c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.v:447]
-WARNING: [Synth 8-7071] port 'm_axi_gmem_ARREGION' of module 'guitar_effects_design_guitar_effects_0_34' is unconnected for instance 'guitar_effects_0' [c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.v:447]
-WARNING: [Synth 8-7071] port 'm_axi_gmem_ARQOS' of module 'guitar_effects_design_guitar_effects_0_34' is unconnected for instance 'guitar_effects_0' [c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.v:447]
-WARNING: [Synth 8-7071] port 'OUTPUT_r_TDEST' of module 'guitar_effects_design_guitar_effects_0_34' is unconnected for instance 'guitar_effects_0' [c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.v:447]
-WARNING: [Synth 8-7071] port 'OUTPUT_r_TSTRB' of module 'guitar_effects_design_guitar_effects_0_34' is unconnected for instance 'guitar_effects_0' [c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.v:447]
-WARNING: [Synth 8-7071] port 'OUTPUT_r_TUSER' of module 'guitar_effects_design_guitar_effects_0_34' is unconnected for instance 'guitar_effects_0' [c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.v:447]
-WARNING: [Synth 8-7071] port 'OUTPUT_r_TID' of module 'guitar_effects_design_guitar_effects_0_34' is unconnected for instance 'guitar_effects_0' [c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.v:447]
-WARNING: [Synth 8-7023] instance 'guitar_effects_0' of module 'guitar_effects_design_guitar_effects_0_34' has 72 connections declared, but only 64 given [c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.v:447]
-INFO: [Synth 8-6157] synthesizing module 'guitar_effects_design_processing_system7_0_5' [C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1/.Xil/Vivado-6964-WFXB07B250A366D/realtime/guitar_effects_design_processing_system7_0_5_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'guitar_effects_design_processing_system7_0_5' (0#1) [C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1/.Xil/Vivado-6964-WFXB07B250A366D/realtime/guitar_effects_design_processing_system7_0_5_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'guitar_effects_design_guitar_effects_0_33' [C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1/.Xil/Vivado-23760-WFXB07B250A366D/realtime/guitar_effects_design_guitar_effects_0_33_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'guitar_effects_design_guitar_effects_0_33' (0#1) [C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1/.Xil/Vivado-23760-WFXB07B250A366D/realtime/guitar_effects_design_guitar_effects_0_33_stub.v:5]
+WARNING: [Synth 8-7071] port 'm_axi_gmem_AWREGION' of module 'guitar_effects_design_guitar_effects_0_33' is unconnected for instance 'guitar_effects_0' [c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.v:447]
+WARNING: [Synth 8-7071] port 'm_axi_gmem_AWQOS' of module 'guitar_effects_design_guitar_effects_0_33' is unconnected for instance 'guitar_effects_0' [c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.v:447]
+WARNING: [Synth 8-7071] port 'm_axi_gmem_ARREGION' of module 'guitar_effects_design_guitar_effects_0_33' is unconnected for instance 'guitar_effects_0' [c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.v:447]
+WARNING: [Synth 8-7071] port 'm_axi_gmem_ARQOS' of module 'guitar_effects_design_guitar_effects_0_33' is unconnected for instance 'guitar_effects_0' [c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.v:447]
+WARNING: [Synth 8-7071] port 'OUTPUT_r_TDEST' of module 'guitar_effects_design_guitar_effects_0_33' is unconnected for instance 'guitar_effects_0' [c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.v:447]
+WARNING: [Synth 8-7071] port 'OUTPUT_r_TSTRB' of module 'guitar_effects_design_guitar_effects_0_33' is unconnected for instance 'guitar_effects_0' [c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.v:447]
+WARNING: [Synth 8-7071] port 'OUTPUT_r_TUSER' of module 'guitar_effects_design_guitar_effects_0_33' is unconnected for instance 'guitar_effects_0' [c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.v:447]
+WARNING: [Synth 8-7071] port 'OUTPUT_r_TID' of module 'guitar_effects_design_guitar_effects_0_33' is unconnected for instance 'guitar_effects_0' [c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.v:447]
+WARNING: [Synth 8-7023] instance 'guitar_effects_0' of module 'guitar_effects_design_guitar_effects_0_33' has 72 connections declared, but only 64 given [c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.v:447]
+INFO: [Synth 8-6157] synthesizing module 'guitar_effects_design_processing_system7_0_5' [C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1/.Xil/Vivado-23760-WFXB07B250A366D/realtime/guitar_effects_design_processing_system7_0_5_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'guitar_effects_design_processing_system7_0_5' (0#1) [C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1/.Xil/Vivado-23760-WFXB07B250A366D/realtime/guitar_effects_design_processing_system7_0_5_stub.v:5]
 WARNING: [Synth 8-7071] port 'USB0_PORT_INDCTL' of module 'guitar_effects_design_processing_system7_0_5' is unconnected for instance 'processing_system7_0' [c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.v:512]
 WARNING: [Synth 8-7071] port 'USB0_VBUS_PWRSELECT' of module 'guitar_effects_design_processing_system7_0_5' is unconnected for instance 'processing_system7_0' [c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.v:512]
 WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'guitar_effects_design_processing_system7_0_5' has 104 connections declared, but only 102 given [c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.v:512]
@@ -96,17 +93,17 @@ INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_1QYLRSV' (0#1) [
 INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_1THV226' [c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.v:2365]
 INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_1THV226' (0#1) [c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.v:2365]
 INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1QONEM6' [c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.v:2497]
-INFO: [Synth 8-6157] synthesizing module 'guitar_effects_design_auto_pc_1' [C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1/.Xil/Vivado-6964-WFXB07B250A366D/realtime/guitar_effects_design_auto_pc_1_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'guitar_effects_design_auto_pc_1' (0#1) [C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1/.Xil/Vivado-6964-WFXB07B250A366D/realtime/guitar_effects_design_auto_pc_1_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'guitar_effects_design_auto_pc_1' [C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1/.Xil/Vivado-23760-WFXB07B250A366D/realtime/guitar_effects_design_auto_pc_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'guitar_effects_design_auto_pc_1' (0#1) [C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1/.Xil/Vivado-23760-WFXB07B250A366D/realtime/guitar_effects_design_auto_pc_1_stub.v:5]
 INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1QONEM6' (0#1) [c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.v:2497]
-INFO: [Synth 8-6157] synthesizing module 'guitar_effects_design_xbar_2' [C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1/.Xil/Vivado-6964-WFXB07B250A366D/realtime/guitar_effects_design_xbar_2_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'guitar_effects_design_xbar_2' (0#1) [C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1/.Xil/Vivado-6964-WFXB07B250A366D/realtime/guitar_effects_design_xbar_2_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'guitar_effects_design_xbar_2' [C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1/.Xil/Vivado-23760-WFXB07B250A366D/realtime/guitar_effects_design_xbar_2_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'guitar_effects_design_xbar_2' (0#1) [C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1/.Xil/Vivado-23760-WFXB07B250A366D/realtime/guitar_effects_design_xbar_2_stub.v:5]
 WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'guitar_effects_design_xbar_2' is unconnected for instance 'xbar' [c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.v:1794]
 WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'guitar_effects_design_xbar_2' is unconnected for instance 'xbar' [c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.v:1794]
 WARNING: [Synth 8-7023] instance 'xbar' of module 'guitar_effects_design_xbar_2' has 40 connections declared, but only 38 given [c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.v:1794]
 INFO: [Synth 8-6155] done synthesizing module 'guitar_effects_design_ps7_0_axi_periph_5' (0#1) [c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.v:1296]
-INFO: [Synth 8-6157] synthesizing module 'guitar_effects_design_rst_ps7_0_50M_0' [C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1/.Xil/Vivado-6964-WFXB07B250A366D/realtime/guitar_effects_design_rst_ps7_0_50M_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'guitar_effects_design_rst_ps7_0_50M_0' (0#1) [C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1/.Xil/Vivado-6964-WFXB07B250A366D/realtime/guitar_effects_design_rst_ps7_0_50M_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'guitar_effects_design_rst_ps7_0_50M_0' [C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1/.Xil/Vivado-23760-WFXB07B250A366D/realtime/guitar_effects_design_rst_ps7_0_50M_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'guitar_effects_design_rst_ps7_0_50M_0' (0#1) [C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1/.Xil/Vivado-23760-WFXB07B250A366D/realtime/guitar_effects_design_rst_ps7_0_50M_0_stub.v:5]
 WARNING: [Synth 8-7071] port 'mb_reset' of module 'guitar_effects_design_rst_ps7_0_50M_0' is unconnected for instance 'rst_ps7_0_50M' [c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.v:695]
 WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'guitar_effects_design_rst_ps7_0_50M_0' is unconnected for instance 'rst_ps7_0_50M' [c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.v:695]
 WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'guitar_effects_design_rst_ps7_0_50M_0' is unconnected for instance 'rst_ps7_0_50M' [c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.v:695]
@@ -157,18 +154,18 @@ WARNING: [Synth 8-7129] Port S00_ARESETN in module guitar_effects_design_axi_mem
 WARNING: [Synth 8-7129] Port S01_ACLK in module guitar_effects_design_axi_mem_intercon_5 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port S01_ARESETN in module guitar_effects_design_axi_mem_intercon_5 is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1685.086 ; gain = 48.020
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1682.648 ; gain = 65.340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1685.086 ; gain = 48.020
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1682.648 ; gain = 65.340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1685.086 ; gain = 48.020
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1682.648 ; gain = 65.340
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 1685.086 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 1682.648 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -191,29 +188,29 @@ Parsing XDC File [c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Ef
 Finished Parsing XDC File [c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_xbar_2/guitar_effects_design_xbar_2/guitar_effects_design_xbar_3_in_context.xdc] for cell 'guitar_effects_design_i/ps7_0_axi_periph/xbar'
 Parsing XDC File [c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_auto_pc_1/guitar_effects_design_auto_pc_1/equalizer_auto_pc_1_in_context.xdc] for cell 'guitar_effects_design_i/ps7_0_axi_periph/s00_couplers/auto_pc'
 Finished Parsing XDC File [c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_auto_pc_1/guitar_effects_design_auto_pc_1/equalizer_auto_pc_1_in_context.xdc] for cell 'guitar_effects_design_i/ps7_0_axi_periph/s00_couplers/auto_pc'
-Parsing XDC File [c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_guitar_effects_0_34/guitar_effects_design_guitar_effects_0_34/guitar_effects_design_guitar_effects_0_34_in_context.xdc] for cell 'guitar_effects_design_i/guitar_effects_0'
-Finished Parsing XDC File [c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_guitar_effects_0_34/guitar_effects_design_guitar_effects_0_34/guitar_effects_design_guitar_effects_0_34_in_context.xdc] for cell 'guitar_effects_design_i/guitar_effects_0'
+Parsing XDC File [c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_guitar_effects_0_33/guitar_effects_design_guitar_effects_0_33/guitar_effects_design_guitar_effects_0_33_in_context.xdc] for cell 'guitar_effects_design_i/guitar_effects_0'
+Finished Parsing XDC File [c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_guitar_effects_0_33/guitar_effects_design_guitar_effects_0_33/guitar_effects_design_guitar_effects_0_33_in_context.xdc] for cell 'guitar_effects_design_i/guitar_effects_0'
 Parsing XDC File [C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1/dont_touch.xdc]
 Finished Parsing XDC File [C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1685.086 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1682.648 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1685.086 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1682.648 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'guitar_effects_design_i/blk_mem_gen_0' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1685.086 ; gain = 48.020
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1682.648 ; gain = 65.340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1685.086 ; gain = 48.020
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1682.648 ; gain = 65.340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -492,10 +489,10 @@ Applied set_property KEEP_HIERARCHY = SOFT for guitar_effects_design_i/ps7_0_axi
 Applied set_property KEEP_HIERARCHY = SOFT for guitar_effects_design_i/ps7_0_axi_periph. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for guitar_effects_design_i/guitar_effects_0. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1685.086 ; gain = 48.020
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1682.648 ; gain = 65.340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1685.086 ; gain = 48.020
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1682.648 ; gain = 65.340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -540,25 +537,25 @@ WARNING: [Synth 8-7129] Port S00_ARESETN in module guitar_effects_design_axi_mem
 WARNING: [Synth 8-7129] Port S01_ACLK in module guitar_effects_design_axi_mem_intercon_5 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port S01_ARESETN in module guitar_effects_design_axi_mem_intercon_5 is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1685.086 ; gain = 48.020
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1682.648 ; gain = 65.340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1690.656 ; gain = 53.590
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1687.563 ; gain = 70.254
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1690.656 ; gain = 53.590
+Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1687.563 ; gain = 70.254
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1709.715 ; gain = 72.648
+Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1707.125 ; gain = 89.816
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -576,37 +573,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 1715.500 ; gain = 78.434
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1711.914 ; gain = 94.605
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 1715.500 ; gain = 78.434
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1711.914 ; gain = 94.605
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 1715.500 ; gain = 78.434
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1711.914 ; gain = 94.605
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 1715.500 ; gain = 78.434
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1711.914 ; gain = 94.605
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 1715.500 ; gain = 78.434
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1711.914 ; gain = 94.605
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 1715.500 ; gain = 78.434
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1711.914 ; gain = 94.605
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -623,7 +620,7 @@ Report BlackBoxes:
 |5     |guitar_effects_design_axi_bram_ctrl_0_3      |         1|
 |6     |guitar_effects_design_axi_dma_0_3            |         1|
 |7     |guitar_effects_design_blk_mem_gen_0_2        |         1|
-|8     |guitar_effects_design_guitar_effects_0_34    |         1|
+|8     |guitar_effects_design_guitar_effects_0_33    |         1|
 |9     |guitar_effects_design_processing_system7_0_5 |         1|
 |10    |guitar_effects_design_rst_ps7_0_50M_0        |         1|
 +------+---------------------------------------------+----------+
@@ -642,24 +639,24 @@ Report Cell Usage:
 |9     |guitar_effects_design_xbar                 |     2|
 +------+-------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 1715.500 ; gain = 78.434
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1711.914 ; gain = 94.605
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 23 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:21 . Memory (MB): peak = 1715.500 ; gain = 78.434
-Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 1715.500 ; gain = 78.434
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:22 . Memory (MB): peak = 1711.914 ; gain = 94.605
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1711.914 ; gain = 94.605
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.045 . Memory (MB): peak = 1715.500 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.027 . Memory (MB): peak = 1711.914 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1737.426 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1734.086 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete, checksum: eac62f33
+Synth Design complete, checksum: 376080c3
 INFO: [Common 17-83] Releasing license: Synthesis
-61 Infos, 108 Warnings, 0 Critical Warnings and 0 Errors encountered.
+61 Infos, 107 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1743.184 ; gain = 106.117
+synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:34 . Memory (MB): peak = 1739.090 ; gain = 121.781
 INFO: [Common 17-1381] The checkpoint 'C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1/guitar_effects_design_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file guitar_effects_design_wrapper_utilization_synth.rpt -pb guitar_effects_design_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Apr 25 16:22:13 2024...
+INFO: [Common 17-206] Exiting Vivado at Wed Apr 24 17:08:08 2024...

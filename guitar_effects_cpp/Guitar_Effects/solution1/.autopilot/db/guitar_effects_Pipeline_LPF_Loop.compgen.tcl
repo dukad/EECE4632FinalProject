@@ -1,5 +1,11 @@
 # This script segment is generated automatically by AutoPilot
 
+set name guitar_effects_fadd_32ns_32ns_32_5_full_dsp_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fadd} IMPL {fulldsp} LATENCY 4 ALLOW_PRAGMA 1
+}
+
+
 set name guitar_effects_srem_11ns_10ns_9_15_1
 if {${::AESL::PGuard_rtl_comp_handler}} {
 	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {srem} IMPL {auto} LATENCY 14 ALLOW_PRAGMA 1
@@ -7,7 +13,7 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 
 
 # Memory (RAM/ROM)  definition:
-set ID 6
+set ID 7
 set hasByteEnable 0
 set MemName guitar_effects_guitar_effects_Pipeline_LPF_Loop_lpf_coefficients_ROM_AUTO_1R
 set CoreName ap_simcore_mem
@@ -96,7 +102,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 8 \
+    id 9 \
     name compression_buffer \
     reset_level 1 \
     sync_rst true \
@@ -114,7 +120,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 7 \
+    id 8 \
     name sext_ln67 \
     type other \
     dir I \
@@ -129,7 +135,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 9 \
+    id 10 \
     name p_out \
     type other \
     dir O \

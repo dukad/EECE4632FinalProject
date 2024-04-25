@@ -17,25 +17,10 @@
           }
         },
         {
-          "functionName": "wah",
-          "label": "WAH_LOOP",
-          "functionLabel": "",
-          "id": "2",
-          "sourceFile": "C:\/EECE4632FinalProject\/guitar_effects_cpp\/Guitar_Effects\/solution1\/directives.tcl",
-          "sourceLine": "7",
-          "pragma": {
-            "name": "PIPELINE",
-            "option": [{
-                "name": "II",
-                "value": "6"
-              }]
-          }
-        },
-        {
           "functionName": "guitar_effects",
           "label": "",
           "functionLabel": "",
-          "id": "3",
+          "id": "2",
           "sourceFile": "C:\/EECE4632FinalProject\/guitar_effects_cpp\/Guitar_Effects\/solution1\/csynth.tcl",
           "sourceLine": "17",
           "pragma": {

@@ -48,14 +48,6 @@
 <InstanceList>
 </InstanceList>
 </Loop2>
-<VITIS_LOOP_83_2>
-<TripCount>100</TripCount>
-<Latency>100</Latency>
-<AbsoluteTimeLatency>1000</AbsoluteTimeLatency>
-<IterationLatency>1</IterationLatency>
-<InstanceList>
-</InstanceList>
-</VITIS_LOOP_83_2>
 <VITIS_LOOP_96_3>
 <TripCount>undef</TripCount>
 <Latency>undef</Latency>
@@ -63,7 +55,7 @@
 <IterationLatency>
 <range>
 <min>9</min>
-<max>7431</max>
+<max>6823</max>
 </range>
 </IterationLatency>
 <InstanceList>
@@ -74,10 +66,10 @@
 
 <AreaEstimates>
 <Resources>
-<BRAM_18K>259</BRAM_18K>
-<DSP>10</DSP>
-<FF>7611</FF>
-<LUT>12499</LUT>
+<BRAM_18K>258</BRAM_18K>
+<DSP>24</DSP>
+<FF>7289</FF>
+<LUT>11765</LUT>
 <URAM>0</URAM>
 </Resources>
 <AvailableResources>
