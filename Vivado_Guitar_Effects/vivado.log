@@ -2,10 +2,10 @@
 # Vivado v2022.1 (64-bit)
 # SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
 # IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
-# Start of session at: Wed Apr 24 12:39:12 2024
-# Process ID: 24392
+# Start of session at: Thu Apr 25 11:21:21 2024
+# Process ID: 23988
 # Current directory: C:/EECE4632FinalProject/Vivado_Guitar_Effects
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent18180 C:\EECE4632FinalProject\Vivado_Guitar_Effects\Vivado_Guitar_Effects.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10632 C:\EECE4632FinalProject\Vivado_Guitar_Effects\Vivado_Guitar_Effects.xpr
 # Log file: C:/EECE4632FinalProject/Vivado_Guitar_Effects/vivado.log
 # Journal file: C:/EECE4632FinalProject/Vivado_Guitar_Effects\vivado.jou
 # Running On: WFXB07B250A366D, OS: Windows, CPU Frequency: 2904 MHz, CPU Physical cores: 8, Host memory: 16881 MB
@@ -24,7 +24,10 @@ INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/EECE4632FinalProject'.
 WARNING: [IP_Flow 19-3656] If you move the project, the path for repository 'c:/EECE4632FinalProject' may become invalid. A better location for the repository would be in a path adjacent to the project. (Current project location is 'c:/EECE4632FinalProject/Vivado_Guitar_Effects'.)
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.1/data/ip'.
-open_project: Time (s): cpu = 00:00:22 ; elapsed = 00:00:17 . Memory (MB): peak = 1571.125 ; gain = 335.215
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:hls:equalizer:1.0'. The one found in IP location 'c:/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/impl/ip' will take precedence over the same IP in locations: 
+   c:/EECE4632FinalProject/Latest_Working_Copy/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution1/impl/ip
+   c:/EECE4632FinalProject/Test_Runs/Audio_Equalizer_Scaling/Audio_Equalizer_Vitis/equalizer/solution1/impl/ip
+open_project: Time (s): cpu = 00:00:25 ; elapsed = 00:00:24 . Memory (MB): peak = 1590.066 ; gain = 353.910
 update_compile_order -fileset sources_1
 open_bd_design {C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd}
 Reading block design file <C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd>...
@@ -45,18 +48,20 @@ Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from addre
 Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
 Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
 Successfully read diagram <guitar_effects_design> from block design file <C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd>
-open_bd_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1655.469 ; gain = 57.898
+open_bd_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:14 . Memory (MB): peak = 1769.078 ; gain = 116.445
 WARNING: [IP_Flow 19-4318] IP-XACT file does not exist: c:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/impl/ip/component.xml. It will be created.
 update_ip_catalog -rebuild -scan_changes
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/EECE4632FinalProject'.
 WARNING: [IP_Flow 19-3656] If you move the project, the path for repository 'c:/EECE4632FinalProject' may become invalid. A better location for the repository would be in a path adjacent to the project. (Current project location is 'c:/EECE4632FinalProject/Vivado_Guitar_Effects'.)
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:hls:equalizer:1.0'. The one found in IP location 'c:/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/impl/ip' will take precedence over the same IP in locations: 
+   c:/EECE4632FinalProject/Latest_Working_Copy/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution1/impl/ip
+   c:/EECE4632FinalProject/Test_Runs/Audio_Equalizer_Scaling/Audio_Equalizer_Vitis/equalizer/solution1/impl/ip
 report_ip_status -name ip_status
 upgrade_ip -vlnv xilinx.com:hls:guitar_effects:1.0 [get_ips  guitar_effects_design_guitar_effects_0_33] -log ip_upgrade.log
 Upgrading 'C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd'
-INFO: [IP_Flow 19-3422] Upgraded guitar_effects_design_guitar_effects_0_33 (Guitar_effects 1.0) from revision 2113527060 to revision 2113528475
+INFO: [IP_Flow 19-3422] Upgraded guitar_effects_design_guitar_effects_0_33 (Guitar_effects 1.0) from revision 2113528683 to revision 2113529785
 Wrote  : <C:\EECE4632FinalProject\Vivado_Guitar_Effects\Vivado_Guitar_Effects.srcs\sources_1\bd\guitar_effects_design\guitar_effects_design.bd> 
-Wrote  : <C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/ui/bd_aa970370.ui> 
 INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/EECE4632FinalProject/Vivado_Guitar_Effects/ip_upgrade.log'.
 export_ip_user_files -of_objects [get_ips guitar_effects_design_guitar_effects_0_33] -no_script -sync -force -quiet
 generate_target all [get_files  C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd]
@@ -152,35 +157,35 @@ WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/EECE4632Fina
 INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
 Exporting to file c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/hw_handoff/guitar_effects_design.hwh
 Generated Hardware Definition File c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.hwdef
-generate_target: Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 2092.547 ; gain = 245.871
+generate_target: Time (s): cpu = 00:00:21 ; elapsed = 00:00:26 . Memory (MB): peak = 2126.074 ; gain = 235.535
 catch { config_ip_cache -export [get_ips -all guitar_effects_design_guitar_effects_0_33] }
 catch { config_ip_cache -export [get_ips -all guitar_effects_design_auto_pc_0] }
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP guitar_effects_design_auto_pc_0, cache-ID = 7217c5ddb7eb2fc2; cache size = 17.999 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP guitar_effects_design_auto_pc_0, cache-ID = 7217c5ddb7eb2fc2; cache size = 45.885 MB.
 catch { config_ip_cache -export [get_ips -all guitar_effects_design_auto_pc_1] }
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP guitar_effects_design_auto_pc_1, cache-ID = 42ad08fd9091ea99; cache size = 17.999 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP guitar_effects_design_auto_pc_1, cache-ID = 42ad08fd9091ea99; cache size = 45.885 MB.
 export_ip_user_files -of_objects [get_files C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd] -no_script -sync -force -quiet
 create_ip_run [get_files -of_objects [get_fileset sources_1] C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd]
 launch_runs guitar_effects_design_guitar_effects_0_33_synth_1 -jobs 16
-[Wed Apr 24 13:37:47 2024] Launched guitar_effects_design_guitar_effects_0_33_synth_1...
+[Thu Apr 25 11:26:26 2024] Launched guitar_effects_design_guitar_effects_0_33_synth_1...
 Run output will be captured here: C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/guitar_effects_design_guitar_effects_0_33_synth_1/runme.log
 export_simulation -of_objects [get_files C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd] -directory C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.ip_user_files/sim_scripts -ip_user_files_dir C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.ip_user_files -ipstatic_source_dir C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/modelsim} {questa=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/questa} {riviera=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/riviera} {activehdl=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
-report_ip_status -name ip_status 
 reset_run synth_1
 INFO: [Project 1-1161] Replacing file C:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/utils_1/imports/synth_1/guitar_effects_design_wrapper.dcp with file C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1/guitar_effects_design_wrapper.dcp
 WARNING: [Vivado 12-1017] Problems encountered:
 1. Failed to delete one or more files in run directory C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1
 
 launch_runs impl_1 -to_step write_bitstream -jobs 16
-[Wed Apr 24 13:38:08 2024] Launched guitar_effects_design_guitar_effects_0_33_synth_1, synth_1...
+[Thu Apr 25 11:26:41 2024] Launched guitar_effects_design_guitar_effects_0_33_synth_1, synth_1...
 Run output will be captured here:
 guitar_effects_design_guitar_effects_0_33_synth_1: C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/guitar_effects_design_guitar_effects_0_33_synth_1/runme.log
 synth_1: C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1/runme.log
-[Wed Apr 24 13:38:08 2024] Launched impl_1...
+[Thu Apr 25 11:26:41 2024] Launched impl_1...
 Run output will be captured here: C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/impl_1/runme.log
+report_ip_status -name ip_status 
 open_run impl_1
 INFO: [Device 21-403] Loading part xc7z020clg400-1
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.863 . Memory (MB): peak = 2335.332 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 2780 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.346 . Memory (MB): peak = 2331.125 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 818 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2022.1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -191,28 +196,31 @@ INFO: [Project 1-853] Binary constraint restore complete.
 Reading XDEF placement.
 Reading placer database...
 Reading XDEF routing.
-Read XDEF Files: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 3191.785 ; gain = 34.266
-Restored from archive | CPU: 2.000000 secs | Memory: 0.000000 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 3191.785 ; gain = 34.266
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 3215.488 ; gain = 0.000
+Read XDEF Files: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.908 . Memory (MB): peak = 3077.816 ; gain = 6.195
+Restored from archive | CPU: 1.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.909 . Memory (MB): peak = 3077.816 ; gain = 6.195
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 3077.816 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 24 instances were transformed.
+  A total of 8 instances were transformed.
   RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 4 instances
   RAM32X1D => RAM32X1D (RAMD32(x2)): 1 instance 
-  SRLC32E => SRL16E: 19 instances
+  SRLC32E => SRL16E: 3 instances
 
-open_run: Time (s): cpu = 00:00:29 ; elapsed = 00:00:20 . Memory (MB): peak = 3348.297 ; gain = 1240.480
-open_report: Time (s): cpu = 00:00:20 ; elapsed = 00:00:14 . Memory (MB): peak = 3538.922 ; gain = 169.871
+open_run: Time (s): cpu = 00:00:25 ; elapsed = 00:00:16 . Memory (MB): peak = 3244.848 ; gain = 1081.844
+open_report: Time (s): cpu = 00:00:12 ; elapsed = 00:00:08 . Memory (MB): peak = 3308.250 ; gain = 58.855
 WARNING: [IP_Flow 19-4318] IP-XACT file does not exist: c:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/impl/ip/component.xml. It will be created.
 open_bd_design {C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd}
 update_ip_catalog -rebuild -scan_changes
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/EECE4632FinalProject'.
 WARNING: [IP_Flow 19-3656] If you move the project, the path for repository 'c:/EECE4632FinalProject' may become invalid. A better location for the repository would be in a path adjacent to the project. (Current project location is 'c:/EECE4632FinalProject/Vivado_Guitar_Effects'.)
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:hls:equalizer:1.0'. The one found in IP location 'c:/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/impl/ip' will take precedence over the same IP in locations: 
+   c:/EECE4632FinalProject/Latest_Working_Copy/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution1/impl/ip
+   c:/EECE4632FinalProject/Test_Runs/Audio_Equalizer_Scaling/Audio_Equalizer_Vitis/equalizer/solution1/impl/ip
 report_ip_status -name ip_status
 upgrade_ip -vlnv xilinx.com:hls:guitar_effects:1.0 [get_ips  guitar_effects_design_guitar_effects_0_33] -log ip_upgrade.log
 Upgrading 'C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd'
-INFO: [IP_Flow 19-3422] Upgraded guitar_effects_design_guitar_effects_0_33 (Guitar_effects 1.0) from revision 2113528475 to revision 2113528510
+INFO: [IP_Flow 19-3422] Upgraded guitar_effects_design_guitar_effects_0_33 (Guitar_effects 1.0) from revision 2113529785 to revision 2113529797
 Wrote  : <C:\EECE4632FinalProject\Vivado_Guitar_Effects\Vivado_Guitar_Effects.srcs\sources_1\bd\guitar_effects_design\guitar_effects_design.bd> 
 Wrote  : <C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/ui/bd_aa970370.ui> 
 INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/EECE4632FinalProject/Vivado_Guitar_Effects/ip_upgrade.log'.
@@ -310,147 +318,16 @@ WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/EECE4632Fina
 INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
 Exporting to file c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/hw_handoff/guitar_effects_design.hwh
 Generated Hardware Definition File c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.hwdef
-generate_target: Time (s): cpu = 00:00:17 ; elapsed = 00:00:16 . Memory (MB): peak = 3748.613 ; gain = 0.000
+generate_target: Time (s): cpu = 00:00:19 ; elapsed = 00:00:16 . Memory (MB): peak = 3400.500 ; gain = 0.000
 catch { config_ip_cache -export [get_ips -all guitar_effects_design_guitar_effects_0_33] }
 catch { config_ip_cache -export [get_ips -all guitar_effects_design_auto_pc_0] }
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP guitar_effects_design_auto_pc_0, cache-ID = 7217c5ddb7eb2fc2; cache size = 17.999 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP guitar_effects_design_auto_pc_0, cache-ID = 7217c5ddb7eb2fc2; cache size = 45.885 MB.
 catch { config_ip_cache -export [get_ips -all guitar_effects_design_auto_pc_1] }
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP guitar_effects_design_auto_pc_1, cache-ID = 42ad08fd9091ea99; cache size = 17.999 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP guitar_effects_design_auto_pc_1, cache-ID = 42ad08fd9091ea99; cache size = 45.885 MB.
 export_ip_user_files -of_objects [get_files C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd] -no_script -sync -force -quiet
 create_ip_run [get_files -of_objects [get_fileset sources_1] C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd]
 launch_runs guitar_effects_design_guitar_effects_0_33_synth_1 -jobs 16
-[Wed Apr 24 14:11:55 2024] Launched guitar_effects_design_guitar_effects_0_33_synth_1...
-Run output will be captured here: C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/guitar_effects_design_guitar_effects_0_33_synth_1/runme.log
-export_simulation -of_objects [get_files C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd] -directory C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.ip_user_files/sim_scripts -ip_user_files_dir C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.ip_user_files -ipstatic_source_dir C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/modelsim} {questa=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/questa} {riviera=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/riviera} {activehdl=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
-reset_run synth_1
-INFO: [Project 1-1161] Replacing file C:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/utils_1/imports/synth_1/guitar_effects_design_wrapper.dcp with file C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1/guitar_effects_design_wrapper.dcp
-WARNING: [Vivado 12-1017] Problems encountered:
-1. Failed to delete one or more files in run directory C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1
-
-launch_runs impl_1 -to_step write_bitstream -jobs 16
-[Wed Apr 24 14:12:13 2024] Launched guitar_effects_design_guitar_effects_0_33_synth_1, synth_1...
-Run output will be captured here:
-guitar_effects_design_guitar_effects_0_33_synth_1: C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/guitar_effects_design_guitar_effects_0_33_synth_1/runme.log
-synth_1: C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1/runme.log
-[Wed Apr 24 14:12:13 2024] Launched impl_1...
-Run output will be captured here: C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/impl_1/runme.log
-report_ip_status -name ip_status 
-WARNING: [IP_Flow 19-4318] IP-XACT file does not exist: c:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/impl/ip/component.xml. It will be created.
-update_ip_catalog -rebuild -scan_changes
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/EECE4632FinalProject'.
-WARNING: [IP_Flow 19-3656] If you move the project, the path for repository 'c:/EECE4632FinalProject' may become invalid. A better location for the repository would be in a path adjacent to the project. (Current project location is 'c:/EECE4632FinalProject/Vivado_Guitar_Effects'.)
-report_ip_status -name ip_status
-upgrade_ip -vlnv xilinx.com:hls:guitar_effects:1.0 [get_ips  guitar_effects_design_guitar_effects_0_33] -log ip_upgrade.log
-Upgrading 'C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd'
-INFO: [IP_Flow 19-3422] Upgraded guitar_effects_design_guitar_effects_0_33 (Guitar_effects 1.0) from revision 2113528510 to revision 2113528555
-Wrote  : <C:\EECE4632FinalProject\Vivado_Guitar_Effects\Vivado_Guitar_Effects.srcs\sources_1\bd\guitar_effects_design\guitar_effects_design.bd> 
-Wrote  : <C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/ui/bd_aa970370.ui> 
-INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/EECE4632FinalProject/Vivado_Guitar_Effects/ip_upgrade.log'.
-export_ip_user_files -of_objects [get_ips guitar_effects_design_guitar_effects_0_33] -no_script -sync -force -quiet
-generate_target all [get_files  C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd]
-WARNING: [BD 41-1629] Slave segment </processing_system7_0/S_AXI_GP0/GP0_IOP> is excluded from all addressing paths.
-WARNING: [BD 41-1629] Slave segment </processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0> is excluded from all addressing paths.
-CRITICAL WARNING: [BD 41-1356] Slave segment </axi_bram_ctrl_0/S_AXI/Mem0> is not assigned into address space </guitar_effects_0/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
-WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_object /processing_system7_0/S_AXI_GP0/GP0_IOP'
-WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_object /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0'
-WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_object /processing_system7_0/S_AXI_GP0/GP0_IOP'
-WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_object /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0'
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
-WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter PCW_M_AXI_GP0_FREQMHZ(10) on '/processing_system7_0' with propagated value(100). Command ignored
-WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter PCW_S_AXI_GP0_FREQMHZ(10) on '/processing_system7_0' with propagated value(100). Command ignored
-Wrote  : <C:\EECE4632FinalProject\Vivado_Guitar_Effects\Vivado_Guitar_Effects.srcs\sources_1\bd\guitar_effects_design\guitar_effects_design.bd> 
-WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_rid'(1) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_rid'(6) - Only lower order bits will be connected.
-WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_bid'(1) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_bid'(6) - Only lower order bits will be connected.
-WARNING: [BD 41-2384] Width mismatch when connecting pin: '/blk_mem_gen_0/addra'(32) to pin: '/axi_bram_ctrl_0/bram_addr_a'(13) - Only lower order bits will be connected.
-WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_GP0_AWID'(6) to pin: '/axi_mem_intercon/M00_AXI_awid'(1) - Only lower order bits will be connected.
-WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_GP0_ARID'(6) to pin: '/axi_mem_intercon/M00_AXI_arid'(1) - Only lower order bits will be connected.
-WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_GP0_WID'(6) to pin: '/axi_mem_intercon/M00_AXI_wid'(1) - Only lower order bits will be connected.
-Verilog Output written to : c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.v
-WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_rid'(1) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_rid'(6) - Only lower order bits will be connected.
-WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_bid'(1) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_bid'(6) - Only lower order bits will be connected.
-WARNING: [BD 41-2384] Width mismatch when connecting pin: '/blk_mem_gen_0/addra'(32) to pin: '/axi_bram_ctrl_0/bram_addr_a'(13) - Only lower order bits will be connected.
-WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_GP0_AWID'(6) to pin: '/axi_mem_intercon/M00_AXI_awid'(1) - Only lower order bits will be connected.
-WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_GP0_ARID'(6) to pin: '/axi_mem_intercon/M00_AXI_arid'(1) - Only lower order bits will be connected.
-WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_GP0_WID'(6) to pin: '/axi_mem_intercon/M00_AXI_wid'(1) - Only lower order bits will be connected.
-Verilog Output written to : c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/sim/guitar_effects_design.v
-Verilog Output written to : c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/hdl/guitar_effects_design_wrapper.v
-INFO: [BD 41-1029] Generation completed for the IP Integrator block guitar_effects_0 .
-WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_auto_pc_0/guitar_effects_design_auto_pc_0_ooc.xdc'
-INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/m00_couplers/auto_pc .
-WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_auto_pc_1/guitar_effects_design_auto_pc_1_ooc.xdc'
-INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
-Exporting to file c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/hw_handoff/guitar_effects_design.hwh
-Generated Hardware Definition File c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.hwdef
-generate_target: Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 3766.000 ; gain = 0.000
-catch { config_ip_cache -export [get_ips -all guitar_effects_design_guitar_effects_0_33] }
-catch { config_ip_cache -export [get_ips -all guitar_effects_design_auto_pc_0] }
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP guitar_effects_design_auto_pc_0, cache-ID = 7217c5ddb7eb2fc2; cache size = 17.999 MB.
-catch { config_ip_cache -export [get_ips -all guitar_effects_design_auto_pc_1] }
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP guitar_effects_design_auto_pc_1, cache-ID = 42ad08fd9091ea99; cache size = 17.999 MB.
-export_ip_user_files -of_objects [get_files C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd] -no_script -sync -force -quiet
-create_ip_run [get_files -of_objects [get_fileset sources_1] C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd]
-launch_runs guitar_effects_design_guitar_effects_0_33_synth_1 -jobs 16
-[Wed Apr 24 14:57:39 2024] Launched guitar_effects_design_guitar_effects_0_33_synth_1...
+[Thu Apr 25 11:38:52 2024] Launched guitar_effects_design_guitar_effects_0_33_synth_1...
 Run output will be captured here: C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/guitar_effects_design_guitar_effects_0_33_synth_1/runme.log
 export_simulation -of_objects [get_files C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd] -directory C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.ip_user_files/sim_scripts -ip_user_files_dir C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.ip_user_files -ipstatic_source_dir C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/modelsim} {questa=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/questa} {riviera=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/riviera} {activehdl=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
 report_ip_status -name ip_status 
@@ -460,23 +337,25 @@ WARNING: [Vivado 12-1017] Problems encountered:
 1. Failed to delete one or more files in run directory C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1
 
 launch_runs impl_1 -to_step write_bitstream -jobs 16
-[Wed Apr 24 14:57:57 2024] Launched guitar_effects_design_guitar_effects_0_33_synth_1, synth_1...
+[Thu Apr 25 11:39:09 2024] Launched guitar_effects_design_guitar_effects_0_33_synth_1, synth_1...
 Run output will be captured here:
 guitar_effects_design_guitar_effects_0_33_synth_1: C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/guitar_effects_design_guitar_effects_0_33_synth_1/runme.log
 synth_1: C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1/runme.log
-[Wed Apr 24 14:57:57 2024] Launched impl_1...
+[Thu Apr 25 11:39:09 2024] Launched impl_1...
 Run output will be captured here: C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/impl_1/runme.log
 WARNING: [IP_Flow 19-4318] IP-XACT file does not exist: c:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/impl/ip/component.xml. It will be created.
 update_ip_catalog -rebuild -scan_changes
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/EECE4632FinalProject'.
 WARNING: [IP_Flow 19-3656] If you move the project, the path for repository 'c:/EECE4632FinalProject' may become invalid. A better location for the repository would be in a path adjacent to the project. (Current project location is 'c:/EECE4632FinalProject/Vivado_Guitar_Effects'.)
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:hls:equalizer:1.0'. The one found in IP location 'c:/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/impl/ip' will take precedence over the same IP in locations: 
+   c:/EECE4632FinalProject/Latest_Working_Copy/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution1/impl/ip
+   c:/EECE4632FinalProject/Test_Runs/Audio_Equalizer_Scaling/Audio_Equalizer_Vitis/equalizer/solution1/impl/ip
 report_ip_status -name ip_status
 upgrade_ip -vlnv xilinx.com:hls:guitar_effects:1.0 [get_ips  guitar_effects_design_guitar_effects_0_33] -log ip_upgrade.log
 Upgrading 'C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd'
-INFO: [IP_Flow 19-3422] Upgraded guitar_effects_design_guitar_effects_0_33 (Guitar_effects 1.0) from revision 2113528555 to revision 2113528587
+INFO: [IP_Flow 19-3422] Upgraded guitar_effects_design_guitar_effects_0_33 (Guitar_effects 1.0) from revision 2113529797 to revision 2113529808
 Wrote  : <C:\EECE4632FinalProject\Vivado_Guitar_Effects\Vivado_Guitar_Effects.srcs\sources_1\bd\guitar_effects_design\guitar_effects_design.bd> 
-Wrote  : <C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/ui/bd_aa970370.ui> 
 INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/EECE4632FinalProject/Vivado_Guitar_Effects/ip_upgrade.log'.
 export_ip_user_files -of_objects [get_ips guitar_effects_design_guitar_effects_0_33] -no_script -sync -force -quiet
 generate_target all [get_files  C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd]
@@ -572,146 +451,16 @@ WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/EECE4632Fina
 INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
 Exporting to file c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/hw_handoff/guitar_effects_design.hwh
 Generated Hardware Definition File c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.hwdef
-generate_target: Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 3771.926 ; gain = 0.000
+generate_target: Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 3400.500 ; gain = 0.000
 catch { config_ip_cache -export [get_ips -all guitar_effects_design_guitar_effects_0_33] }
 catch { config_ip_cache -export [get_ips -all guitar_effects_design_auto_pc_0] }
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP guitar_effects_design_auto_pc_0, cache-ID = 7217c5ddb7eb2fc2; cache size = 17.999 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP guitar_effects_design_auto_pc_0, cache-ID = 7217c5ddb7eb2fc2; cache size = 45.885 MB.
 catch { config_ip_cache -export [get_ips -all guitar_effects_design_auto_pc_1] }
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP guitar_effects_design_auto_pc_1, cache-ID = 42ad08fd9091ea99; cache size = 17.999 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP guitar_effects_design_auto_pc_1, cache-ID = 42ad08fd9091ea99; cache size = 45.885 MB.
 export_ip_user_files -of_objects [get_files C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd] -no_script -sync -force -quiet
 create_ip_run [get_files -of_objects [get_fileset sources_1] C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd]
 launch_runs guitar_effects_design_guitar_effects_0_33_synth_1 -jobs 16
-[Wed Apr 24 15:29:03 2024] Launched guitar_effects_design_guitar_effects_0_33_synth_1...
-Run output will be captured here: C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/guitar_effects_design_guitar_effects_0_33_synth_1/runme.log
-export_simulation -of_objects [get_files C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd] -directory C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.ip_user_files/sim_scripts -ip_user_files_dir C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.ip_user_files -ipstatic_source_dir C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/modelsim} {questa=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/questa} {riviera=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/riviera} {activehdl=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
-reset_run synth_1
-INFO: [Project 1-1161] Replacing file C:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/utils_1/imports/synth_1/guitar_effects_design_wrapper.dcp with file C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1/guitar_effects_design_wrapper.dcp
-WARNING: [Vivado 12-1017] Problems encountered:
-1. Failed to delete one or more files in run directory C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1
-
-launch_runs impl_1 -to_step write_bitstream -jobs 16
-[Wed Apr 24 15:29:16 2024] Launched guitar_effects_design_guitar_effects_0_33_synth_1, synth_1...
-Run output will be captured here:
-guitar_effects_design_guitar_effects_0_33_synth_1: C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/guitar_effects_design_guitar_effects_0_33_synth_1/runme.log
-synth_1: C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1/runme.log
-[Wed Apr 24 15:29:16 2024] Launched impl_1...
-Run output will be captured here: C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/impl_1/runme.log
-WARNING: [IP_Flow 19-4318] IP-XACT file does not exist: c:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/impl/ip/component.xml. It will be created.
-update_ip_catalog -rebuild -scan_changes
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/EECE4632FinalProject'.
-WARNING: [IP_Flow 19-3656] If you move the project, the path for repository 'c:/EECE4632FinalProject' may become invalid. A better location for the repository would be in a path adjacent to the project. (Current project location is 'c:/EECE4632FinalProject/Vivado_Guitar_Effects'.)
-report_ip_status -name ip_status
-upgrade_ip -vlnv xilinx.com:hls:guitar_effects:1.0 [get_ips  guitar_effects_design_guitar_effects_0_33] -log ip_upgrade.log
-Upgrading 'C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd'
-INFO: [IP_Flow 19-3422] Upgraded guitar_effects_design_guitar_effects_0_33 (Guitar_effects 1.0) from revision 2113528587 to revision 2113528607
-Wrote  : <C:\EECE4632FinalProject\Vivado_Guitar_Effects\Vivado_Guitar_Effects.srcs\sources_1\bd\guitar_effects_design\guitar_effects_design.bd> 
-Wrote  : <C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/ui/bd_aa970370.ui> 
-INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/EECE4632FinalProject/Vivado_Guitar_Effects/ip_upgrade.log'.
-export_ip_user_files -of_objects [get_ips guitar_effects_design_guitar_effects_0_33] -no_script -sync -force -quiet
-generate_target all [get_files  C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd]
-WARNING: [BD 41-1629] Slave segment </processing_system7_0/S_AXI_GP0/GP0_IOP> is excluded from all addressing paths.
-WARNING: [BD 41-1629] Slave segment </processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0> is excluded from all addressing paths.
-CRITICAL WARNING: [BD 41-1356] Slave segment </axi_bram_ctrl_0/S_AXI/Mem0> is not assigned into address space </guitar_effects_0/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
-WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_object /processing_system7_0/S_AXI_GP0/GP0_IOP'
-WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_object /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0'
-WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_object /processing_system7_0/S_AXI_GP0/GP0_IOP'
-WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_object /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0'
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
-Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
-WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter PCW_M_AXI_GP0_FREQMHZ(10) on '/processing_system7_0' with propagated value(100). Command ignored
-WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter PCW_S_AXI_GP0_FREQMHZ(10) on '/processing_system7_0' with propagated value(100). Command ignored
-Wrote  : <C:\EECE4632FinalProject\Vivado_Guitar_Effects\Vivado_Guitar_Effects.srcs\sources_1\bd\guitar_effects_design\guitar_effects_design.bd> 
-WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_rid'(1) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_rid'(6) - Only lower order bits will be connected.
-WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_bid'(1) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_bid'(6) - Only lower order bits will be connected.
-WARNING: [BD 41-2384] Width mismatch when connecting pin: '/blk_mem_gen_0/addra'(32) to pin: '/axi_bram_ctrl_0/bram_addr_a'(13) - Only lower order bits will be connected.
-WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_GP0_AWID'(6) to pin: '/axi_mem_intercon/M00_AXI_awid'(1) - Only lower order bits will be connected.
-WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_GP0_ARID'(6) to pin: '/axi_mem_intercon/M00_AXI_arid'(1) - Only lower order bits will be connected.
-WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_GP0_WID'(6) to pin: '/axi_mem_intercon/M00_AXI_wid'(1) - Only lower order bits will be connected.
-Verilog Output written to : c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.v
-WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_rid'(1) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_rid'(6) - Only lower order bits will be connected.
-WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_bid'(1) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_bid'(6) - Only lower order bits will be connected.
-WARNING: [BD 41-2384] Width mismatch when connecting pin: '/blk_mem_gen_0/addra'(32) to pin: '/axi_bram_ctrl_0/bram_addr_a'(13) - Only lower order bits will be connected.
-WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_GP0_AWID'(6) to pin: '/axi_mem_intercon/M00_AXI_awid'(1) - Only lower order bits will be connected.
-WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_GP0_ARID'(6) to pin: '/axi_mem_intercon/M00_AXI_arid'(1) - Only lower order bits will be connected.
-WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_GP0_WID'(6) to pin: '/axi_mem_intercon/M00_AXI_wid'(1) - Only lower order bits will be connected.
-Verilog Output written to : c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/sim/guitar_effects_design.v
-Verilog Output written to : c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/hdl/guitar_effects_design_wrapper.v
-INFO: [BD 41-1029] Generation completed for the IP Integrator block guitar_effects_0 .
-WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_auto_pc_0/guitar_effects_design_auto_pc_0_ooc.xdc'
-INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/m00_couplers/auto_pc .
-WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_auto_pc_1/guitar_effects_design_auto_pc_1_ooc.xdc'
-INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
-Exporting to file c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/hw_handoff/guitar_effects_design.hwh
-Generated Hardware Definition File c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.hwdef
-generate_target: Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 3784.824 ; gain = 12.898
-catch { config_ip_cache -export [get_ips -all guitar_effects_design_guitar_effects_0_33] }
-catch { config_ip_cache -export [get_ips -all guitar_effects_design_auto_pc_0] }
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP guitar_effects_design_auto_pc_0, cache-ID = 7217c5ddb7eb2fc2; cache size = 17.999 MB.
-catch { config_ip_cache -export [get_ips -all guitar_effects_design_auto_pc_1] }
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP guitar_effects_design_auto_pc_1, cache-ID = 42ad08fd9091ea99; cache size = 17.999 MB.
-export_ip_user_files -of_objects [get_files C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd] -no_script -sync -force -quiet
-create_ip_run [get_files -of_objects [get_fileset sources_1] C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd]
-launch_runs guitar_effects_design_guitar_effects_0_33_synth_1 -jobs 16
-[Wed Apr 24 15:48:44 2024] Launched guitar_effects_design_guitar_effects_0_33_synth_1...
+[Thu Apr 25 11:49:55 2024] Launched guitar_effects_design_guitar_effects_0_33_synth_1...
 Run output will be captured here: C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/guitar_effects_design_guitar_effects_0_33_synth_1/runme.log
 export_simulation -of_objects [get_files C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd] -directory C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.ip_user_files/sim_scripts -ip_user_files_dir C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.ip_user_files -ipstatic_source_dir C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/modelsim} {questa=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/questa} {riviera=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/riviera} {activehdl=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
 report_ip_status -name ip_status 
@@ -721,23 +470,26 @@ WARNING: [Vivado 12-1017] Problems encountered:
 1. Failed to delete one or more files in run directory C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1
 
 launch_runs impl_1 -to_step write_bitstream -jobs 16
-[Wed Apr 24 15:49:00 2024] Launched guitar_effects_design_guitar_effects_0_33_synth_1, synth_1...
+[Thu Apr 25 11:50:11 2024] Launched guitar_effects_design_guitar_effects_0_33_synth_1, synth_1...
 Run output will be captured here:
 guitar_effects_design_guitar_effects_0_33_synth_1: C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/guitar_effects_design_guitar_effects_0_33_synth_1/runme.log
 synth_1: C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1/runme.log
-[Wed Apr 24 15:49:00 2024] Launched impl_1...
+[Thu Apr 25 11:50:11 2024] Launched impl_1...
 Run output will be captured here: C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/impl_1/runme.log
 WARNING: [IP_Flow 19-4318] IP-XACT file does not exist: c:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/impl/ip/component.xml. It will be created.
 update_ip_catalog -rebuild -scan_changes
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/EECE4632FinalProject'.
 WARNING: [IP_Flow 19-3656] If you move the project, the path for repository 'c:/EECE4632FinalProject' may become invalid. A better location for the repository would be in a path adjacent to the project. (Current project location is 'c:/EECE4632FinalProject/Vivado_Guitar_Effects'.)
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:hls:equalizer:1.0'. The one found in IP location 'c:/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/impl/ip' will take precedence over the same IP in locations: 
+   c:/EECE4632FinalProject/Latest_Working_Copy/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution1/impl/ip
+   c:/EECE4632FinalProject/Test_Runs/Audio_Equalizer_Scaling/Audio_Equalizer_Vitis/equalizer/solution1/impl/ip
+update_ip_catalog: Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 3400.500 ; gain = 0.000
 report_ip_status -name ip_status
 upgrade_ip -vlnv xilinx.com:hls:guitar_effects:1.0 [get_ips  guitar_effects_design_guitar_effects_0_33] -log ip_upgrade.log
 Upgrading 'C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd'
-INFO: [IP_Flow 19-3422] Upgraded guitar_effects_design_guitar_effects_0_33 (Guitar_effects 1.0) from revision 2113528607 to revision 2113528629
+INFO: [IP_Flow 19-3422] Upgraded guitar_effects_design_guitar_effects_0_33 (Guitar_effects 1.0) from revision 2113529808 to revision 2113529821
 Wrote  : <C:\EECE4632FinalProject\Vivado_Guitar_Effects\Vivado_Guitar_Effects.srcs\sources_1\bd\guitar_effects_design\guitar_effects_design.bd> 
-Wrote  : <C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/ui/bd_aa970370.ui> 
 INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/EECE4632FinalProject/Vivado_Guitar_Effects/ip_upgrade.log'.
 export_ip_user_files -of_objects [get_ips guitar_effects_design_guitar_effects_0_33] -no_script -sync -force -quiet
 generate_target all [get_files  C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd]
@@ -833,44 +585,196 @@ WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/EECE4632Fina
 INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
 Exporting to file c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/hw_handoff/guitar_effects_design.hwh
 Generated Hardware Definition File c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.hwdef
-generate_target: Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 3784.824 ; gain = 0.000
+generate_target: Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 3400.500 ; gain = 0.000
 catch { config_ip_cache -export [get_ips -all guitar_effects_design_guitar_effects_0_33] }
 catch { config_ip_cache -export [get_ips -all guitar_effects_design_auto_pc_0] }
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP guitar_effects_design_auto_pc_0, cache-ID = 7217c5ddb7eb2fc2; cache size = 17.999 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP guitar_effects_design_auto_pc_0, cache-ID = 7217c5ddb7eb2fc2; cache size = 45.885 MB.
 catch { config_ip_cache -export [get_ips -all guitar_effects_design_auto_pc_1] }
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP guitar_effects_design_auto_pc_1, cache-ID = 42ad08fd9091ea99; cache size = 17.999 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP guitar_effects_design_auto_pc_1, cache-ID = 42ad08fd9091ea99; cache size = 45.885 MB.
 export_ip_user_files -of_objects [get_files C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd] -no_script -sync -force -quiet
 create_ip_run [get_files -of_objects [get_fileset sources_1] C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd]
 launch_runs guitar_effects_design_guitar_effects_0_33_synth_1 -jobs 16
-[Wed Apr 24 16:11:14 2024] Launched guitar_effects_design_guitar_effects_0_33_synth_1...
+[Thu Apr 25 12:02:29 2024] Launched guitar_effects_design_guitar_effects_0_33_synth_1...
 Run output will be captured here: C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/guitar_effects_design_guitar_effects_0_33_synth_1/runme.log
 export_simulation -of_objects [get_files C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd] -directory C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.ip_user_files/sim_scripts -ip_user_files_dir C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.ip_user_files -ipstatic_source_dir C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/modelsim} {questa=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/questa} {riviera=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/riviera} {activehdl=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
-report_ip_status -name ip_status 
 reset_run synth_1
 INFO: [Project 1-1161] Replacing file C:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/utils_1/imports/synth_1/guitar_effects_design_wrapper.dcp with file C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1/guitar_effects_design_wrapper.dcp
 WARNING: [Vivado 12-1017] Problems encountered:
 1. Failed to delete one or more files in run directory C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1
 
 launch_runs impl_1 -to_step write_bitstream -jobs 16
-[Wed Apr 24 16:11:53 2024] Launched guitar_effects_design_guitar_effects_0_33_synth_1, synth_1...
+[Thu Apr 25 12:02:49 2024] Launched guitar_effects_design_guitar_effects_0_33_synth_1, synth_1...
 Run output will be captured here:
 guitar_effects_design_guitar_effects_0_33_synth_1: C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/guitar_effects_design_guitar_effects_0_33_synth_1/runme.log
 synth_1: C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1/runme.log
-[Wed Apr 24 16:11:53 2024] Launched impl_1...
+[Thu Apr 25 12:02:49 2024] Launched impl_1...
 Run output will be captured here: C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/impl_1/runme.log
 WARNING: [IP_Flow 19-4318] IP-XACT file does not exist: c:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/impl/ip/component.xml. It will be created.
 update_ip_catalog -rebuild -scan_changes
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/EECE4632FinalProject'.
 WARNING: [IP_Flow 19-3656] If you move the project, the path for repository 'c:/EECE4632FinalProject' may become invalid. A better location for the repository would be in a path adjacent to the project. (Current project location is 'c:/EECE4632FinalProject/Vivado_Guitar_Effects'.)
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:hls:equalizer:1.0'. The one found in IP location 'c:/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/impl/ip' will take precedence over the same IP in locations: 
+   c:/EECE4632FinalProject/Latest_Working_Copy/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution1/impl/ip
+   c:/EECE4632FinalProject/Test_Runs/Audio_Equalizer_Scaling/Audio_Equalizer_Vitis/equalizer/solution1/impl/ip
+update_ip_catalog: Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 3424.473 ; gain = 0.000
 report_ip_status -name ip_status
-upgrade_ip -vlnv xilinx.com:hls:guitar_effects:1.0 [get_ips  guitar_effects_design_guitar_effects_0_33] -log ip_upgrade.log
-Upgrading 'C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd'
-INFO: [IP_Flow 19-3422] Upgraded guitar_effects_design_guitar_effects_0_33 (Guitar_effects 1.0) from revision 2113528629 to revision 2113528658
+report_ip_status -name ip_status 
+report_ip_status -name ip_status 
+report_ip_status -name ip_status 
+set_property LOCK_UPGRADE 1 [get_bd_cells /guitar_effects_0]
+INFO: [IP_Flow 19-8015] Moving outputs for IP 'guitar_effects_design_guitar_effects_0_33' to 'c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_guitar_effects_0_33'
+WARNING: [IP_Flow 19-2162] IP 'guitar_effects_design_guitar_effects_0_33' is locked:
+* IP definition 'guitar_effects (1.0)' for IP 'guitar_effects_design_guitar_effects_0_33' (customized with software release 2022.1) was not found in the IP Catalog. * Detected changes to IP definition 'guitar_effects (1.0)' file(s).
+WARNING: [BD 41-2028] Locking guitar_effects to version 1.0. If the latest driver for the IP is not backwards compatible, software flow will assign a generic driver or no driver for this IP
+report_ip_status -name ip_status 
+delete_bd_objs [get_bd_intf_nets guitar_effects_0_m_axi_gmem] [get_bd_intf_nets axi_dma_0_M_AXIS_MM2S] [get_bd_intf_nets guitar_effects_0_OUTPUT_r] [get_bd_intf_nets ps7_0_axi_periph_M01_AXI] [get_bd_cells guitar_effects_0]
+set_property  ip_repo_paths  {} [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+set_property  ip_repo_paths  C:/EECE4632FinalProject [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/EECE4632FinalProject'.
+WARNING: [IP_Flow 19-3656] If you move the project, the path for repository 'c:/EECE4632FinalProject' may become invalid. A better location for the repository would be in a path adjacent to the project. (Current project location is 'c:/EECE4632FinalProject/Vivado_Guitar_Effects'.)
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:hls:equalizer:1.0'. The one found in IP location 'c:/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/impl/ip' will take precedence over the same IP in locations: 
+   c:/EECE4632FinalProject/Latest_Working_Copy/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution1/impl/ip
+   c:/EECE4632FinalProject/Test_Runs/Audio_Equalizer_Scaling/Audio_Equalizer_Vitis/equalizer/solution1/impl/ip
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:hls:guitar_effects:1.0 guitar_effects_0
+endgroup
+set_property location {2 494 -88} [get_bd_cells guitar_effects_0]
+connect_bd_intf_net [get_bd_intf_pins guitar_effects_0/m_axi_gmem] [get_bd_intf_pins axi_bram_ctrl_0/S_AXI]
+connect_bd_intf_net [get_bd_intf_pins guitar_effects_0/OUTPUT_r] [get_bd_intf_pins axi_dma_0/S_AXIS_S2MM]
+connect_bd_intf_net [get_bd_intf_pins guitar_effects_0/INPUT_r] [get_bd_intf_pins axi_dma_0/M_AXIS_MM2S]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (100 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/guitar_effects_0/s_axi_control_r} ddr_seg {Auto} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins guitar_effects_0/s_axi_control_r]
+Slave segment '/guitar_effects_0/s_axi_control_r/Reg' is being assigned into address space '/processing_system7_0/Data' at <0x4000_0000 [ 64K ]>.
+save_bd_design
 Wrote  : <C:\EECE4632FinalProject\Vivado_Guitar_Effects\Vivado_Guitar_Effects.srcs\sources_1\bd\guitar_effects_design\guitar_effects_design.bd> 
 Wrote  : <C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/ui/bd_aa970370.ui> 
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file C:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/utils_1/imports/synth_1/guitar_effects_design_wrapper.dcp with file C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1/guitar_effects_design_wrapper.dcp
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+WARNING: [BD 41-1629] Slave segment </processing_system7_0/S_AXI_GP0/GP0_IOP> is excluded from all addressing paths.
+WARNING: [BD 41-1629] Slave segment </processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0> is excluded from all addressing paths.
+CRITICAL WARNING: [BD 41-1356] Slave segment </axi_bram_ctrl_0/S_AXI/Mem0> is not assigned into address space </guitar_effects_0/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_object /processing_system7_0/S_AXI_GP0/GP0_IOP'
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_object /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0'
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_object /processing_system7_0/S_AXI_GP0/GP0_IOP'
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_object /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0'
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter PCW_M_AXI_GP0_FREQMHZ(10) on '/processing_system7_0' with propagated value(100). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter PCW_S_AXI_GP0_FREQMHZ(10) on '/processing_system7_0' with propagated value(100). Command ignored
+Wrote  : <C:\EECE4632FinalProject\Vivado_Guitar_Effects\Vivado_Guitar_Effects.srcs\sources_1\bd\guitar_effects_design\guitar_effects_design.bd> 
+Wrote  : <C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/ui/bd_aa970370.ui> 
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_rid'(1) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_rid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_bid'(1) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_bid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/blk_mem_gen_0/addra'(32) to pin: '/axi_bram_ctrl_0/bram_addr_a'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_GP0_AWID'(6) to pin: '/axi_mem_intercon/M00_AXI_awid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_GP0_ARID'(6) to pin: '/axi_mem_intercon/M00_AXI_arid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_GP0_WID'(6) to pin: '/axi_mem_intercon/M00_AXI_wid'(1) - Only lower order bits will be connected.
+Verilog Output written to : c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.v
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_rid'(1) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_rid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_bid'(1) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_bid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/blk_mem_gen_0/addra'(32) to pin: '/axi_bram_ctrl_0/bram_addr_a'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_GP0_AWID'(6) to pin: '/axi_mem_intercon/M00_AXI_awid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_GP0_ARID'(6) to pin: '/axi_mem_intercon/M00_AXI_arid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_GP0_WID'(6) to pin: '/axi_mem_intercon/M00_AXI_wid'(1) - Only lower order bits will be connected.
+Verilog Output written to : c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/sim/guitar_effects_design.v
+Verilog Output written to : c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/hdl/guitar_effects_design_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block guitar_effects_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_auto_pc_0/guitar_effects_design_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/m00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_auto_pc_1/guitar_effects_design_auto_pc_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/hw_handoff/guitar_effects_design.hwh
+Generated Hardware Definition File c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP guitar_effects_design_auto_pc_0, cache-ID = 7217c5ddb7eb2fc2; cache size = 45.885 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP guitar_effects_design_auto_pc_1, cache-ID = 42ad08fd9091ea99; cache size = 45.885 MB.
+[Thu Apr 25 12:17:52 2024] Launched guitar_effects_design_guitar_effects_0_34_synth_1, synth_1...
+Run output will be captured here:
+guitar_effects_design_guitar_effects_0_34_synth_1: C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/guitar_effects_design_guitar_effects_0_34_synth_1/runme.log
+synth_1: C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1/runme.log
+[Thu Apr 25 12:17:52 2024] Launched impl_1...
+Run output will be captured here: C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 3427.594 ; gain = 0.000
+report_ip_status -name ip_status 
+WARNING: [IP_Flow 19-4318] IP-XACT file does not exist: c:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/impl/ip/component.xml. It will be created.
+update_ip_catalog -rebuild -scan_changes
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/EECE4632FinalProject'.
+WARNING: [IP_Flow 19-3656] If you move the project, the path for repository 'c:/EECE4632FinalProject' may become invalid. A better location for the repository would be in a path adjacent to the project. (Current project location is 'c:/EECE4632FinalProject/Vivado_Guitar_Effects'.)
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:hls:equalizer:1.0'. The one found in IP location 'c:/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/impl/ip' will take precedence over the same IP in locations: 
+   c:/EECE4632FinalProject/Latest_Working_Copy/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution1/impl/ip
+   c:/EECE4632FinalProject/Test_Runs/Audio_Equalizer_Scaling/Audio_Equalizer_Vitis/equalizer/solution1/impl/ip
+update_ip_catalog: Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 3427.594 ; gain = 0.000
+report_ip_status -name ip_status
+upgrade_ip -vlnv xilinx.com:hls:guitar_effects:1.0 [get_ips  guitar_effects_design_guitar_effects_0_34] -log ip_upgrade.log
+Upgrading 'C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd'
+INFO: [IP_Flow 19-3422] Upgraded guitar_effects_design_guitar_effects_0_34 (Guitar_effects 1.0) from revision 2113529835 to revision 2113529853
+Wrote  : <C:\EECE4632FinalProject\Vivado_Guitar_Effects\Vivado_Guitar_Effects.srcs\sources_1\bd\guitar_effects_design\guitar_effects_design.bd> 
 INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/EECE4632FinalProject/Vivado_Guitar_Effects/ip_upgrade.log'.
-export_ip_user_files -of_objects [get_ips guitar_effects_design_guitar_effects_0_33] -no_script -sync -force -quiet
+export_ip_user_files -of_objects [get_ips guitar_effects_design_guitar_effects_0_34] -no_script -sync -force -quiet
 generate_target all [get_files  C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd]
 WARNING: [BD 41-1629] Slave segment </processing_system7_0/S_AXI_GP0/GP0_IOP> is excluded from all addressing paths.
 WARNING: [BD 41-1629] Slave segment </processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0> is excluded from all addressing paths.
@@ -964,44 +868,48 @@ WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/EECE4632Fina
 INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
 Exporting to file c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/hw_handoff/guitar_effects_design.hwh
 Generated Hardware Definition File c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.hwdef
-generate_target: Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 3784.824 ; gain = 0.000
-catch { config_ip_cache -export [get_ips -all guitar_effects_design_guitar_effects_0_33] }
+generate_target: Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 3435.844 ; gain = 5.402
+catch { config_ip_cache -export [get_ips -all guitar_effects_design_guitar_effects_0_34] }
 catch { config_ip_cache -export [get_ips -all guitar_effects_design_auto_pc_0] }
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP guitar_effects_design_auto_pc_0, cache-ID = 7217c5ddb7eb2fc2; cache size = 17.999 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP guitar_effects_design_auto_pc_0, cache-ID = 7217c5ddb7eb2fc2; cache size = 45.885 MB.
 catch { config_ip_cache -export [get_ips -all guitar_effects_design_auto_pc_1] }
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP guitar_effects_design_auto_pc_1, cache-ID = 42ad08fd9091ea99; cache size = 17.999 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP guitar_effects_design_auto_pc_1, cache-ID = 42ad08fd9091ea99; cache size = 45.885 MB.
 export_ip_user_files -of_objects [get_files C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd] -no_script -sync -force -quiet
 create_ip_run [get_files -of_objects [get_fileset sources_1] C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd]
-launch_runs guitar_effects_design_guitar_effects_0_33_synth_1 -jobs 16
-[Wed Apr 24 16:40:03 2024] Launched guitar_effects_design_guitar_effects_0_33_synth_1...
-Run output will be captured here: C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/guitar_effects_design_guitar_effects_0_33_synth_1/runme.log
+launch_runs guitar_effects_design_guitar_effects_0_34_synth_1 -jobs 16
+[Thu Apr 25 12:34:36 2024] Launched guitar_effects_design_guitar_effects_0_34_synth_1...
+Run output will be captured here: C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/guitar_effects_design_guitar_effects_0_34_synth_1/runme.log
 export_simulation -of_objects [get_files C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd] -directory C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.ip_user_files/sim_scripts -ip_user_files_dir C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.ip_user_files -ipstatic_source_dir C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/modelsim} {questa=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/questa} {riviera=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/riviera} {activehdl=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
-report_ip_status -name ip_status 
 reset_run synth_1
 INFO: [Project 1-1161] Replacing file C:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/utils_1/imports/synth_1/guitar_effects_design_wrapper.dcp with file C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1/guitar_effects_design_wrapper.dcp
 WARNING: [Vivado 12-1017] Problems encountered:
 1. Failed to delete one or more files in run directory C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1
 
 launch_runs impl_1 -to_step write_bitstream -jobs 16
-[Wed Apr 24 16:40:19 2024] Launched guitar_effects_design_guitar_effects_0_33_synth_1, synth_1...
+[Thu Apr 25 12:34:50 2024] Launched guitar_effects_design_guitar_effects_0_34_synth_1, synth_1...
 Run output will be captured here:
-guitar_effects_design_guitar_effects_0_33_synth_1: C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/guitar_effects_design_guitar_effects_0_33_synth_1/runme.log
+guitar_effects_design_guitar_effects_0_34_synth_1: C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/guitar_effects_design_guitar_effects_0_34_synth_1/runme.log
 synth_1: C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1/runme.log
-[Wed Apr 24 16:40:19 2024] Launched impl_1...
+[Thu Apr 25 12:34:50 2024] Launched impl_1...
 Run output will be captured here: C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/impl_1/runme.log
+report_ip_status -name ip_status 
 WARNING: [IP_Flow 19-4318] IP-XACT file does not exist: c:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/impl/ip/component.xml. It will be created.
 update_ip_catalog -rebuild -scan_changes
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/EECE4632FinalProject'.
 WARNING: [IP_Flow 19-3656] If you move the project, the path for repository 'c:/EECE4632FinalProject' may become invalid. A better location for the repository would be in a path adjacent to the project. (Current project location is 'c:/EECE4632FinalProject/Vivado_Guitar_Effects'.)
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:hls:equalizer:1.0'. The one found in IP location 'c:/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/impl/ip' will take precedence over the same IP in locations: 
+   c:/EECE4632FinalProject/Latest_Working_Copy/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution1/impl/ip
+   c:/EECE4632FinalProject/Test_Runs/Audio_Equalizer_Scaling/Audio_Equalizer_Vitis/equalizer/solution1/impl/ip
+update_ip_catalog: Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 3464.207 ; gain = 0.000
 report_ip_status -name ip_status
-upgrade_ip -vlnv xilinx.com:hls:guitar_effects:1.0 [get_ips  guitar_effects_design_guitar_effects_0_33] -log ip_upgrade.log
+upgrade_ip -vlnv xilinx.com:hls:guitar_effects:1.0 [get_ips  guitar_effects_design_guitar_effects_0_34] -log ip_upgrade.log
 Upgrading 'C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd'
-INFO: [IP_Flow 19-3422] Upgraded guitar_effects_design_guitar_effects_0_33 (Guitar_effects 1.0) from revision 2113528658 to revision 2113528683
+INFO: [IP_Flow 19-3422] Upgraded guitar_effects_design_guitar_effects_0_34 (Guitar_effects 1.0) from revision 2113529853 to revision 2113529876
 Wrote  : <C:\EECE4632FinalProject\Vivado_Guitar_Effects\Vivado_Guitar_Effects.srcs\sources_1\bd\guitar_effects_design\guitar_effects_design.bd> 
 Wrote  : <C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/ui/bd_aa970370.ui> 
 INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/EECE4632FinalProject/Vivado_Guitar_Effects/ip_upgrade.log'.
-export_ip_user_files -of_objects [get_ips guitar_effects_design_guitar_effects_0_33] -no_script -sync -force -quiet
+export_ip_user_files -of_objects [get_ips guitar_effects_design_guitar_effects_0_34] -no_script -sync -force -quiet
 generate_target all [get_files  C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd]
 WARNING: [BD 41-1629] Slave segment </processing_system7_0/S_AXI_GP0/GP0_IOP> is excluded from all addressing paths.
 WARNING: [BD 41-1629] Slave segment </processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0> is excluded from all addressing paths.
@@ -1095,17 +1003,441 @@ WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/EECE4632Fina
 INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
 Exporting to file c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/hw_handoff/guitar_effects_design.hwh
 Generated Hardware Definition File c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.hwdef
-generate_target: Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 3788.375 ; gain = 0.000
-catch { config_ip_cache -export [get_ips -all guitar_effects_design_guitar_effects_0_33] }
+generate_target: Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 3464.207 ; gain = 0.000
+catch { config_ip_cache -export [get_ips -all guitar_effects_design_guitar_effects_0_34] }
 catch { config_ip_cache -export [get_ips -all guitar_effects_design_auto_pc_0] }
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP guitar_effects_design_auto_pc_0, cache-ID = 7217c5ddb7eb2fc2; cache size = 17.999 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP guitar_effects_design_auto_pc_0, cache-ID = 7217c5ddb7eb2fc2; cache size = 45.885 MB.
 catch { config_ip_cache -export [get_ips -all guitar_effects_design_auto_pc_1] }
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP guitar_effects_design_auto_pc_1, cache-ID = 42ad08fd9091ea99; cache size = 17.999 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP guitar_effects_design_auto_pc_1, cache-ID = 42ad08fd9091ea99; cache size = 45.885 MB.
 export_ip_user_files -of_objects [get_files C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd] -no_script -sync -force -quiet
 create_ip_run [get_files -of_objects [get_fileset sources_1] C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd]
-launch_runs guitar_effects_design_guitar_effects_0_33_synth_1 -jobs 16
-[Wed Apr 24 17:04:26 2024] Launched guitar_effects_design_guitar_effects_0_33_synth_1...
-Run output will be captured here: C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/guitar_effects_design_guitar_effects_0_33_synth_1/runme.log
+launch_runs guitar_effects_design_guitar_effects_0_34_synth_1 -jobs 16
+[Thu Apr 25 12:57:21 2024] Launched guitar_effects_design_guitar_effects_0_34_synth_1...
+Run output will be captured here: C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/guitar_effects_design_guitar_effects_0_34_synth_1/runme.log
+export_simulation -of_objects [get_files C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd] -directory C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.ip_user_files/sim_scripts -ip_user_files_dir C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.ip_user_files -ipstatic_source_dir C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/modelsim} {questa=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/questa} {riviera=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/riviera} {activehdl=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file C:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/utils_1/imports/synth_1/guitar_effects_design_wrapper.dcp with file C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1/guitar_effects_design_wrapper.dcp
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+[Thu Apr 25 12:58:32 2024] Launched guitar_effects_design_guitar_effects_0_34_synth_1, synth_1...
+Run output will be captured here:
+guitar_effects_design_guitar_effects_0_34_synth_1: C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/guitar_effects_design_guitar_effects_0_34_synth_1/runme.log
+synth_1: C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1/runme.log
+[Thu Apr 25 12:58:32 2024] Launched impl_1...
+Run output will be captured here: C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/impl_1/runme.log
+report_ip_status -name ip_status 
+WARNING: [IP_Flow 19-4318] IP-XACT file does not exist: c:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/impl/ip/component.xml. It will be created.
+open_bd_design {C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd}
+update_ip_catalog -rebuild -scan_changes
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/EECE4632FinalProject'.
+WARNING: [IP_Flow 19-3656] If you move the project, the path for repository 'c:/EECE4632FinalProject' may become invalid. A better location for the repository would be in a path adjacent to the project. (Current project location is 'c:/EECE4632FinalProject/Vivado_Guitar_Effects'.)
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:hls:equalizer:1.0'. The one found in IP location 'c:/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/impl/ip' will take precedence over the same IP in locations: 
+   c:/EECE4632FinalProject/Latest_Working_Copy/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution1/impl/ip
+   c:/EECE4632FinalProject/Test_Runs/Audio_Equalizer_Scaling/Audio_Equalizer_Vitis/equalizer/solution1/impl/ip
+update_ip_catalog: Time (s): cpu = 00:00:03 ; elapsed = 00:00:11 . Memory (MB): peak = 3489.020 ; gain = 0.000
+report_ip_status -name ip_status
+set_property  ip_repo_paths  {} [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+set_property  ip_repo_paths  C:/EECE4632FinalProject [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/EECE4632FinalProject'.
+WARNING: [IP_Flow 19-3656] If you move the project, the path for repository 'c:/EECE4632FinalProject' may become invalid. A better location for the repository would be in a path adjacent to the project. (Current project location is 'c:/EECE4632FinalProject/Vivado_Guitar_Effects'.)
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:hls:equalizer:1.0'. The one found in IP location 'c:/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/impl/ip' will take precedence over the same IP in locations: 
+   c:/EECE4632FinalProject/Latest_Working_Copy/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution1/impl/ip
+   c:/EECE4632FinalProject/Test_Runs/Audio_Equalizer_Scaling/Audio_Equalizer_Vitis/equalizer/solution1/impl/ip
+open_bd_design {C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd}
+report_ip_status -name ip_status 
+upgrade_ip -vlnv xilinx.com:hls:guitar_effects:1.0 [get_ips  guitar_effects_design_guitar_effects_0_34] -log ip_upgrade.log
+Upgrading 'C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd'
+INFO: [IP_Flow 19-3422] Upgraded guitar_effects_design_guitar_effects_0_34 (Guitar_effects 1.0) from revision 2113529876 to revision 2113529981
+Wrote  : <C:\EECE4632FinalProject\Vivado_Guitar_Effects\Vivado_Guitar_Effects.srcs\sources_1\bd\guitar_effects_design\guitar_effects_design.bd> 
+Wrote  : <C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/ui/bd_aa970370.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/EECE4632FinalProject/Vivado_Guitar_Effects/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips guitar_effects_design_guitar_effects_0_34] -no_script -sync -force -quiet
+generate_target all [get_files  C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd]
+WARNING: [BD 41-1629] Slave segment </processing_system7_0/S_AXI_GP0/GP0_IOP> is excluded from all addressing paths.
+WARNING: [BD 41-1629] Slave segment </processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0> is excluded from all addressing paths.
+CRITICAL WARNING: [BD 41-1356] Slave segment </axi_bram_ctrl_0/S_AXI/Mem0> is not assigned into address space </guitar_effects_0/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_object /processing_system7_0/S_AXI_GP0/GP0_IOP'
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_object /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0'
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_object /processing_system7_0/S_AXI_GP0/GP0_IOP'
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_object /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0'
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter PCW_M_AXI_GP0_FREQMHZ(10) on '/processing_system7_0' with propagated value(100). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter PCW_S_AXI_GP0_FREQMHZ(10) on '/processing_system7_0' with propagated value(100). Command ignored
+Wrote  : <C:\EECE4632FinalProject\Vivado_Guitar_Effects\Vivado_Guitar_Effects.srcs\sources_1\bd\guitar_effects_design\guitar_effects_design.bd> 
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_rid'(1) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_rid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_bid'(1) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_bid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/blk_mem_gen_0/addra'(32) to pin: '/axi_bram_ctrl_0/bram_addr_a'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_GP0_AWID'(6) to pin: '/axi_mem_intercon/M00_AXI_awid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_GP0_ARID'(6) to pin: '/axi_mem_intercon/M00_AXI_arid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_GP0_WID'(6) to pin: '/axi_mem_intercon/M00_AXI_wid'(1) - Only lower order bits will be connected.
+Verilog Output written to : c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.v
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_rid'(1) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_rid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_bid'(1) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_bid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/blk_mem_gen_0/addra'(32) to pin: '/axi_bram_ctrl_0/bram_addr_a'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_GP0_AWID'(6) to pin: '/axi_mem_intercon/M00_AXI_awid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_GP0_ARID'(6) to pin: '/axi_mem_intercon/M00_AXI_arid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_GP0_WID'(6) to pin: '/axi_mem_intercon/M00_AXI_wid'(1) - Only lower order bits will be connected.
+Verilog Output written to : c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/sim/guitar_effects_design.v
+Verilog Output written to : c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/hdl/guitar_effects_design_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block guitar_effects_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_auto_pc_0/guitar_effects_design_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/m00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_auto_pc_1/guitar_effects_design_auto_pc_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/hw_handoff/guitar_effects_design.hwh
+Generated Hardware Definition File c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.hwdef
+generate_target: Time (s): cpu = 00:00:18 ; elapsed = 00:00:17 . Memory (MB): peak = 3489.020 ; gain = 0.000
+catch { config_ip_cache -export [get_ips -all guitar_effects_design_guitar_effects_0_34] }
+catch { config_ip_cache -export [get_ips -all guitar_effects_design_auto_pc_0] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP guitar_effects_design_auto_pc_0, cache-ID = 7217c5ddb7eb2fc2; cache size = 45.885 MB.
+catch { config_ip_cache -export [get_ips -all guitar_effects_design_auto_pc_1] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP guitar_effects_design_auto_pc_1, cache-ID = 42ad08fd9091ea99; cache size = 45.885 MB.
+export_ip_user_files -of_objects [get_files C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd]
+launch_runs guitar_effects_design_guitar_effects_0_34_synth_1 -jobs 16
+[Thu Apr 25 14:43:34 2024] Launched guitar_effects_design_guitar_effects_0_34_synth_1...
+Run output will be captured here: C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/guitar_effects_design_guitar_effects_0_34_synth_1/runme.log
+export_simulation -of_objects [get_files C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd] -directory C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.ip_user_files/sim_scripts -ip_user_files_dir C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.ip_user_files -ipstatic_source_dir C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/modelsim} {questa=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/questa} {riviera=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/riviera} {activehdl=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file C:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/utils_1/imports/synth_1/guitar_effects_design_wrapper.dcp with file C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1/guitar_effects_design_wrapper.dcp
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+[Thu Apr 25 14:44:33 2024] Launched guitar_effects_design_guitar_effects_0_34_synth_1, synth_1...
+Run output will be captured here:
+guitar_effects_design_guitar_effects_0_34_synth_1: C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/guitar_effects_design_guitar_effects_0_34_synth_1/runme.log
+synth_1: C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1/runme.log
+[Thu Apr 25 14:44:33 2024] Launched impl_1...
+Run output will be captured here: C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/impl_1/runme.log
+report_ip_status -name ip_status 
+open_bd_design {C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd}
+report_ip_status -name ip_status 
+report_ip_status -name ip_status 
+update_ip_catalog -rebuild
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/EECE4632FinalProject'.
+WARNING: [IP_Flow 19-3656] If you move the project, the path for repository 'c:/EECE4632FinalProject' may become invalid. A better location for the repository would be in a path adjacent to the project. (Current project location is 'c:/EECE4632FinalProject/Vivado_Guitar_Effects'.)
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:hls:equalizer:1.0'. The one found in IP location 'c:/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/impl/ip' will take precedence over the same IP in locations: 
+   c:/EECE4632FinalProject/Latest_Working_Copy/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution1/impl/ip
+   c:/EECE4632FinalProject/Test_Runs/Audio_Equalizer_Scaling/Audio_Equalizer_Vitis/equalizer/solution1/impl/ip
+update_ip_catalog: Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 3502.668 ; gain = 0.000
+open_bd_design {C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd}
+report_ip_status -name ip_status 
+upgrade_ip -vlnv xilinx.com:hls:guitar_effects:1.0 [get_ips  guitar_effects_design_guitar_effects_0_34] -log ip_upgrade.log
+Upgrading 'C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd'
+INFO: [IP_Flow 19-3422] Upgraded guitar_effects_design_guitar_effects_0_34 (Guitar_effects 1.0) from revision 2113529981 to revision 2113530015
+Wrote  : <C:\EECE4632FinalProject\Vivado_Guitar_Effects\Vivado_Guitar_Effects.srcs\sources_1\bd\guitar_effects_design\guitar_effects_design.bd> 
+Wrote  : <C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/ui/bd_aa970370.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/EECE4632FinalProject/Vivado_Guitar_Effects/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips guitar_effects_design_guitar_effects_0_34] -no_script -sync -force -quiet
+generate_target all [get_files  C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd]
+WARNING: [BD 41-1629] Slave segment </processing_system7_0/S_AXI_GP0/GP0_IOP> is excluded from all addressing paths.
+WARNING: [BD 41-1629] Slave segment </processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0> is excluded from all addressing paths.
+CRITICAL WARNING: [BD 41-1356] Slave segment </axi_bram_ctrl_0/S_AXI/Mem0> is not assigned into address space </guitar_effects_0/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_object /processing_system7_0/S_AXI_GP0/GP0_IOP'
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_object /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0'
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_object /processing_system7_0/S_AXI_GP0/GP0_IOP'
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_object /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0'
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter PCW_M_AXI_GP0_FREQMHZ(10) on '/processing_system7_0' with propagated value(100). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter PCW_S_AXI_GP0_FREQMHZ(10) on '/processing_system7_0' with propagated value(100). Command ignored
+Wrote  : <C:\EECE4632FinalProject\Vivado_Guitar_Effects\Vivado_Guitar_Effects.srcs\sources_1\bd\guitar_effects_design\guitar_effects_design.bd> 
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_rid'(1) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_rid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_bid'(1) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_bid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/blk_mem_gen_0/addra'(32) to pin: '/axi_bram_ctrl_0/bram_addr_a'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_GP0_AWID'(6) to pin: '/axi_mem_intercon/M00_AXI_awid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_GP0_ARID'(6) to pin: '/axi_mem_intercon/M00_AXI_arid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_GP0_WID'(6) to pin: '/axi_mem_intercon/M00_AXI_wid'(1) - Only lower order bits will be connected.
+Verilog Output written to : c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.v
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_rid'(1) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_rid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_bid'(1) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_bid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/blk_mem_gen_0/addra'(32) to pin: '/axi_bram_ctrl_0/bram_addr_a'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_GP0_AWID'(6) to pin: '/axi_mem_intercon/M00_AXI_awid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_GP0_ARID'(6) to pin: '/axi_mem_intercon/M00_AXI_arid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_GP0_WID'(6) to pin: '/axi_mem_intercon/M00_AXI_wid'(1) - Only lower order bits will be connected.
+Verilog Output written to : c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/sim/guitar_effects_design.v
+Verilog Output written to : c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/hdl/guitar_effects_design_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block guitar_effects_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_auto_pc_0/guitar_effects_design_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/m00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_auto_pc_1/guitar_effects_design_auto_pc_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/hw_handoff/guitar_effects_design.hwh
+Generated Hardware Definition File c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.hwdef
+generate_target: Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 3502.668 ; gain = 0.000
+catch { config_ip_cache -export [get_ips -all guitar_effects_design_guitar_effects_0_34] }
+catch { config_ip_cache -export [get_ips -all guitar_effects_design_auto_pc_0] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP guitar_effects_design_auto_pc_0, cache-ID = 7217c5ddb7eb2fc2; cache size = 45.885 MB.
+catch { config_ip_cache -export [get_ips -all guitar_effects_design_auto_pc_1] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP guitar_effects_design_auto_pc_1, cache-ID = 42ad08fd9091ea99; cache size = 45.885 MB.
+export_ip_user_files -of_objects [get_files C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd]
+launch_runs guitar_effects_design_guitar_effects_0_34_synth_1 -jobs 16
+[Thu Apr 25 15:19:02 2024] Launched guitar_effects_design_guitar_effects_0_34_synth_1...
+Run output will be captured here: C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/guitar_effects_design_guitar_effects_0_34_synth_1/runme.log
+export_simulation -of_objects [get_files C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd] -directory C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.ip_user_files/sim_scripts -ip_user_files_dir C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.ip_user_files -ipstatic_source_dir C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/modelsim} {questa=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/questa} {riviera=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/riviera} {activehdl=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file C:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/utils_1/imports/synth_1/guitar_effects_design_wrapper.dcp with file C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1/guitar_effects_design_wrapper.dcp
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+[Thu Apr 25 15:19:24 2024] Launched guitar_effects_design_guitar_effects_0_34_synth_1, synth_1...
+Run output will be captured here:
+guitar_effects_design_guitar_effects_0_34_synth_1: C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/guitar_effects_design_guitar_effects_0_34_synth_1/runme.log
+synth_1: C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1/runme.log
+[Thu Apr 25 15:19:24 2024] Launched impl_1...
+Run output will be captured here: C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/impl_1/runme.log
+report_ip_status -name ip_status 
+open_hw_manager
+open_bd_design {C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd}
+update_ip_catalog -rebuild
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/EECE4632FinalProject'.
+WARNING: [IP_Flow 19-3656] If you move the project, the path for repository 'c:/EECE4632FinalProject' may become invalid. A better location for the repository would be in a path adjacent to the project. (Current project location is 'c:/EECE4632FinalProject/Vivado_Guitar_Effects'.)
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:hls:equalizer:1.0'. The one found in IP location 'c:/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/impl/ip' will take precedence over the same IP in locations: 
+   c:/EECE4632FinalProject/Latest_Working_Copy/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution1/impl/ip
+   c:/EECE4632FinalProject/Test_Runs/Audio_Equalizer_Scaling/Audio_Equalizer_Vitis/equalizer/solution1/impl/ip
+update_ip_catalog: Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 3533.066 ; gain = 0.000
+report_ip_status -name ip_status 
+upgrade_ip -vlnv xilinx.com:hls:guitar_effects:1.0 [get_ips  guitar_effects_design_guitar_effects_0_34] -log ip_upgrade.log
+Upgrading 'C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd'
+INFO: [IP_Flow 19-3422] Upgraded guitar_effects_design_guitar_effects_0_34 (Guitar_effects 1.0) from revision 2113530015 to revision 2113530052
+Wrote  : <C:\EECE4632FinalProject\Vivado_Guitar_Effects\Vivado_Guitar_Effects.srcs\sources_1\bd\guitar_effects_design\guitar_effects_design.bd> 
+Wrote  : <C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/ui/bd_aa970370.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/EECE4632FinalProject/Vivado_Guitar_Effects/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips guitar_effects_design_guitar_effects_0_34] -no_script -sync -force -quiet
+generate_target all [get_files  C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd]
+WARNING: [BD 41-1629] Slave segment </processing_system7_0/S_AXI_GP0/GP0_IOP> is excluded from all addressing paths.
+WARNING: [BD 41-1629] Slave segment </processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0> is excluded from all addressing paths.
+CRITICAL WARNING: [BD 41-1356] Slave segment </axi_bram_ctrl_0/S_AXI/Mem0> is not assigned into address space </guitar_effects_0/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_object /processing_system7_0/S_AXI_GP0/GP0_IOP'
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_object /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0'
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_object /processing_system7_0/S_AXI_GP0/GP0_IOP'
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_object /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0'
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter PCW_M_AXI_GP0_FREQMHZ(10) on '/processing_system7_0' with propagated value(100). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter PCW_S_AXI_GP0_FREQMHZ(10) on '/processing_system7_0' with propagated value(100). Command ignored
+Wrote  : <C:\EECE4632FinalProject\Vivado_Guitar_Effects\Vivado_Guitar_Effects.srcs\sources_1\bd\guitar_effects_design\guitar_effects_design.bd> 
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_rid'(1) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_rid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_bid'(1) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_bid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/blk_mem_gen_0/addra'(32) to pin: '/axi_bram_ctrl_0/bram_addr_a'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_GP0_AWID'(6) to pin: '/axi_mem_intercon/M00_AXI_awid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_GP0_ARID'(6) to pin: '/axi_mem_intercon/M00_AXI_arid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_GP0_WID'(6) to pin: '/axi_mem_intercon/M00_AXI_wid'(1) - Only lower order bits will be connected.
+Verilog Output written to : c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.v
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_rid'(1) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_rid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_bid'(1) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_bid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/blk_mem_gen_0/addra'(32) to pin: '/axi_bram_ctrl_0/bram_addr_a'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_GP0_AWID'(6) to pin: '/axi_mem_intercon/M00_AXI_awid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_GP0_ARID'(6) to pin: '/axi_mem_intercon/M00_AXI_arid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_GP0_WID'(6) to pin: '/axi_mem_intercon/M00_AXI_wid'(1) - Only lower order bits will be connected.
+Verilog Output written to : c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/sim/guitar_effects_design.v
+Verilog Output written to : c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/hdl/guitar_effects_design_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block guitar_effects_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_auto_pc_0/guitar_effects_design_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/m00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_auto_pc_1/guitar_effects_design_auto_pc_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/hw_handoff/guitar_effects_design.hwh
+Generated Hardware Definition File c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.hwdef
+generate_target: Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 3533.066 ; gain = 0.000
+catch { config_ip_cache -export [get_ips -all guitar_effects_design_guitar_effects_0_34] }
+catch { config_ip_cache -export [get_ips -all guitar_effects_design_auto_pc_0] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP guitar_effects_design_auto_pc_0, cache-ID = 7217c5ddb7eb2fc2; cache size = 45.885 MB.
+catch { config_ip_cache -export [get_ips -all guitar_effects_design_auto_pc_1] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP guitar_effects_design_auto_pc_1, cache-ID = 42ad08fd9091ea99; cache size = 45.885 MB.
+export_ip_user_files -of_objects [get_files C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd]
+launch_runs guitar_effects_design_guitar_effects_0_34_synth_1 -jobs 16
+[Thu Apr 25 15:53:53 2024] Launched guitar_effects_design_guitar_effects_0_34_synth_1...
+Run output will be captured here: C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/guitar_effects_design_guitar_effects_0_34_synth_1/runme.log
 export_simulation -of_objects [get_files C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd] -directory C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.ip_user_files/sim_scripts -ip_user_files_dir C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.ip_user_files -ipstatic_source_dir C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/modelsim} {questa=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/questa} {riviera=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/riviera} {activehdl=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
 report_ip_status -name ip_status 
 reset_run synth_1
@@ -1114,9 +1446,144 @@ WARNING: [Vivado 12-1017] Problems encountered:
 1. Failed to delete one or more files in run directory C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1
 
 launch_runs impl_1 -to_step write_bitstream -jobs 16
-[Wed Apr 24 17:05:11 2024] Launched guitar_effects_design_guitar_effects_0_33_synth_1, synth_1...
+[Thu Apr 25 15:54:11 2024] Launched guitar_effects_design_guitar_effects_0_34_synth_1, synth_1...
 Run output will be captured here:
-guitar_effects_design_guitar_effects_0_33_synth_1: C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/guitar_effects_design_guitar_effects_0_33_synth_1/runme.log
+guitar_effects_design_guitar_effects_0_34_synth_1: C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/guitar_effects_design_guitar_effects_0_34_synth_1/runme.log
 synth_1: C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1/runme.log
-[Wed Apr 24 17:05:11 2024] Launched impl_1...
+[Thu Apr 25 15:54:11 2024] Launched impl_1...
+Run output will be captured here: C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/impl_1/runme.log
+open_bd_design {C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd}
+update_ip_catalog -rebuild
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/EECE4632FinalProject'.
+WARNING: [IP_Flow 19-3656] If you move the project, the path for repository 'c:/EECE4632FinalProject' may become invalid. A better location for the repository would be in a path adjacent to the project. (Current project location is 'c:/EECE4632FinalProject/Vivado_Guitar_Effects'.)
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:hls:equalizer:1.0'. The one found in IP location 'c:/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution11/impl/ip' will take precedence over the same IP in locations: 
+   c:/EECE4632FinalProject/Latest_Working_Copy/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution1/impl/ip
+   c:/EECE4632FinalProject/Test_Runs/Audio_Equalizer_Scaling/Audio_Equalizer_Vitis/equalizer/solution1/impl/ip
+update_ip_catalog: Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 3551.117 ; gain = 0.000
+report_ip_status -name ip_status 
+upgrade_ip -vlnv xilinx.com:hls:guitar_effects:1.0 [get_ips  guitar_effects_design_guitar_effects_0_34] -log ip_upgrade.log
+Upgrading 'C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd'
+INFO: [IP_Flow 19-3422] Upgraded guitar_effects_design_guitar_effects_0_34 (Guitar_effects 1.0) from revision 2113530052 to revision 2113530076
+Wrote  : <C:\EECE4632FinalProject\Vivado_Guitar_Effects\Vivado_Guitar_Effects.srcs\sources_1\bd\guitar_effects_design\guitar_effects_design.bd> 
+Wrote  : <C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/ui/bd_aa970370.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/EECE4632FinalProject/Vivado_Guitar_Effects/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips guitar_effects_design_guitar_effects_0_34] -no_script -sync -force -quiet
+generate_target all [get_files  C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd]
+WARNING: [BD 41-1629] Slave segment </processing_system7_0/S_AXI_GP0/GP0_IOP> is excluded from all addressing paths.
+WARNING: [BD 41-1629] Slave segment </processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0> is excluded from all addressing paths.
+CRITICAL WARNING: [BD 41-1356] Slave segment </axi_bram_ctrl_0/S_AXI/Mem0> is not assigned into address space </guitar_effects_0/Data_m_axi_gmem>. Please use Address Editor to either assign or exclude it.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_object /processing_system7_0/S_AXI_GP0/GP0_IOP'
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_object /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0'
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_object /processing_system7_0/S_AXI_GP0/GP0_IOP'
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_object /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0'
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_IOP from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /processing_system7_0/S_AXI_GP0/GP0_M_AXI_GP0 from address space /axi_dma_0/Data_S2MM.
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter PCW_M_AXI_GP0_FREQMHZ(10) on '/processing_system7_0' with propagated value(100). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter PCW_S_AXI_GP0_FREQMHZ(10) on '/processing_system7_0' with propagated value(100). Command ignored
+Wrote  : <C:\EECE4632FinalProject\Vivado_Guitar_Effects\Vivado_Guitar_Effects.srcs\sources_1\bd\guitar_effects_design\guitar_effects_design.bd> 
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_rid'(1) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_rid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_bid'(1) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_bid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/blk_mem_gen_0/addra'(32) to pin: '/axi_bram_ctrl_0/bram_addr_a'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_GP0_AWID'(6) to pin: '/axi_mem_intercon/M00_AXI_awid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_GP0_ARID'(6) to pin: '/axi_mem_intercon/M00_AXI_arid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_GP0_WID'(6) to pin: '/axi_mem_intercon/M00_AXI_wid'(1) - Only lower order bits will be connected.
+Verilog Output written to : c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.v
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_rid'(1) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_rid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_bid'(1) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_bid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/blk_mem_gen_0/addra'(32) to pin: '/axi_bram_ctrl_0/bram_addr_a'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_GP0_AWID'(6) to pin: '/axi_mem_intercon/M00_AXI_awid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_GP0_ARID'(6) to pin: '/axi_mem_intercon/M00_AXI_arid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_GP0_WID'(6) to pin: '/axi_mem_intercon/M00_AXI_wid'(1) - Only lower order bits will be connected.
+Verilog Output written to : c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/sim/guitar_effects_design.v
+Verilog Output written to : c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/hdl/guitar_effects_design_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block guitar_effects_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_auto_pc_0/guitar_effects_design_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/m00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/ip/guitar_effects_design_auto_pc_1/guitar_effects_design_auto_pc_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/hw_handoff/guitar_effects_design.hwh
+Generated Hardware Definition File c:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.gen/sources_1/bd/guitar_effects_design/synth/guitar_effects_design.hwdef
+generate_target: Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 3551.117 ; gain = 0.000
+catch { config_ip_cache -export [get_ips -all guitar_effects_design_guitar_effects_0_34] }
+catch { config_ip_cache -export [get_ips -all guitar_effects_design_auto_pc_0] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP guitar_effects_design_auto_pc_0, cache-ID = 7217c5ddb7eb2fc2; cache size = 45.885 MB.
+catch { config_ip_cache -export [get_ips -all guitar_effects_design_auto_pc_1] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP guitar_effects_design_auto_pc_1, cache-ID = 42ad08fd9091ea99; cache size = 45.885 MB.
+export_ip_user_files -of_objects [get_files C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd]
+launch_runs guitar_effects_design_guitar_effects_0_34_synth_1 -jobs 16
+[Thu Apr 25 16:19:11 2024] Launched guitar_effects_design_guitar_effects_0_34_synth_1...
+Run output will be captured here: C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/guitar_effects_design_guitar_effects_0_34_synth_1/runme.log
+export_simulation -of_objects [get_files C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/sources_1/bd/guitar_effects_design/guitar_effects_design.bd] -directory C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.ip_user_files/sim_scripts -ip_user_files_dir C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.ip_user_files -ipstatic_source_dir C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/modelsim} {questa=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/questa} {riviera=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/riviera} {activehdl=C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+report_ip_status -name ip_status 
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file C:/Users/du.kad/Desktop/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.srcs/utils_1/imports/synth_1/guitar_effects_design_wrapper.dcp with file C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1/guitar_effects_design_wrapper.dcp
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+[Thu Apr 25 16:19:42 2024] Launched guitar_effects_design_guitar_effects_0_34_synth_1, synth_1...
+Run output will be captured here:
+guitar_effects_design_guitar_effects_0_34_synth_1: C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/guitar_effects_design_guitar_effects_0_34_synth_1/runme.log
+synth_1: C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/synth_1/runme.log
+[Thu Apr 25 16:19:42 2024] Launched impl_1...
 Run output will be captured here: C:/EECE4632FinalProject/Vivado_Guitar_Effects/Vivado_Guitar_Effects.runs/impl_1/runme.log

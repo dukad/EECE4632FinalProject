@@ -6,11 +6,13 @@
     </Simulation>
     <files xmlns="">
         <file name="../../guitar_effects_tb.cpp" sc="0" tb="1" cflags=" -Wno-unknown-pragmas" csimflags=" -Wno-unknown-pragmas" blackbox="false"/>
-        <file name="guitar_effects.cpp" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>
         <file name="guitar_effects.h" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>
+        <file name="guitar_effects.cpp" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>
     </files>
     <solutions xmlns="">
-        <solution name="solution1" status="active"/>
+        <solution name="solution1" status="inactive"/>
+        <solution name="pipeline5" status="inactive"/>
+        <solution name="int_to_short" status="active"/>
     </solutions>
 </project>
 
