@@ -3910,3 +3910,9 @@ selectButton(RDIResource.BaseDialog_OK, "OK"); // a
 // Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
 // Tcl Command: 'rdi::info_commands get_hw_probes'
 dismissDialog("Bitstream Generation Completed"); // ag
+// Elapsed time: 1330 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Open Implemented Design]", 18, true); // n - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_IMPLEMENTED_DESIGN
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Open Implemented Design]", 18); // n
+collapseTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Open Implemented Design]", 18); // n
+// HMemoryUtils.trashcanNow. Engine heap size: 2,477 MB. GUI used memory: 225 MB. Current time: 4/25/24, 4:47:14 PM EDT
