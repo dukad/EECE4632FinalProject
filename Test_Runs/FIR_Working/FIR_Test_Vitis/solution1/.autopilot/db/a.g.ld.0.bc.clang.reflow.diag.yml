@@ -1,0 +1,556 @@
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: filt.cpp, Line: 3, Column: 0 }
+Function:        _Z4filtRN3hls6streamINS_4axisI6ap_intILi32EELm1ELm1ELm1ELh56ELb0EEELi0EEEPiS6_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        Shift_Accumulate_Loop
+  - String:          ''' ('
+  - LoopLoc:         'filt.cpp:76:5'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          filt
+  - String:          ''' completely with a factor of '
+  - Factor:          '98'
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+Function:        _Z4filtRN3hls6streamINS_4axisI6ap_intILi32EELm1ELm1ELm1ELh56ELb0EEELi0EEEPiS6_
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '99'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        coefs1seq
+  - ArrayName:       coefs
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_24_1
+  - String:          ' '
+  - LoopLoc:         'filt.cpp:24:19'
+  - String:          ' '
+  - Function:        'filt(hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, int*, hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&)'
+    DebugLoc:        { File: filt.cpp, Line: 3, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 82, Column: 39 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.785
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.781
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.774
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.767
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.760
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.753
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.746
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.739
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.732
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.725
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.718
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.711
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.704
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.697
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.690
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.683
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.676
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.669
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.662
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.655
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.648
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.641
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.634
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.627
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.620
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.613
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.606
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.599
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.592
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.585
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.578
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.571
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.564
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.557
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.550
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.543
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.536
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.529
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.522
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.515
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.508
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.501
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.494
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.487
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.480
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.473
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.466
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.459
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.452
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.445
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.438
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.431
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.424
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.417
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.410
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.403
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.396
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.389
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.382
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.375
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.368
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.361
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.354
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.347
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.340
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.333
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.326
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.319
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.312
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.305
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.298
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.291
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.284
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.277
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.270
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.263
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.256
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.249
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.242
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.235
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.228
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.221
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.214
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.207
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.200
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.193
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.186
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.179
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.172
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.165
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.158
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.151
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.144
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.137
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.130
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.123
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.116
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.109
+  - OrigAccess:      load
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.103
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: filt.cpp, Line: 56, Column: 22 }
+Function:        _Z4filtRN3hls6streamINS_4axisI6ap_intILi32EELm1ELm1ELm1ELh56ELb0EEELi0EEEPiS6_
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        VITIS_LOOP_56_2
+  - String:          ' '
+  - LoopLoc:         'filt.cpp:56:22'
+  - String:          ' '
+  - Function:        'filt(hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, int*, hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&)'
+    DebugLoc:        { File: filt.cpp, Line: 3, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: filt.cpp, Line: 24, Column: 19 }
+Function:        _Z4filtRN3hls6streamINS_4axisI6ap_intILi32EELm1ELm1ELm1ELh56ELb0EEELi0EEEPiS6_
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        VITIS_LOOP_24_1
+  - String:          ' '
+  - LoopLoc:         'filt.cpp:24:19'
+  - String:          ' '
+  - Function:        'filt(hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, int*, hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&)'
+    DebugLoc:        { File: filt.cpp, Line: 3, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+Function:        _Z4filtRN3hls6streamINS_4axisI6ap_intILi32EELm1ELm1ELm1ELh56ELb0EEELi0EEEPiS6_
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i32
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          coefs1seq
+  - ArrayName:       coefs
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - Function:        'filt(hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, int*, hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&)'
+    DebugLoc:        { File: filt.cpp, Line: 3, Column: 0 }
+  - String:          ' '
+...
+--- !Failure
+Pass:            reflow-occurrence-inference
+Name:            NonComputableLoopForm
+DebugLoc:        { File: filt.cpp, Line: 24, Column: 19 }
+Function:        _Z4filtRN3hls6streamINS_4axisI6ap_intILi32EELm1ELm1ELm1ELh56ELb0EEELi0EEEPiS6_
+Args:            
+  - String:          'Could not analyze occurrence information within '''
+  - LoopName:        VITIS_LOOP_24_1
+  - String:          '''('
+  - LoopLoc:         'filt.cpp:24:19'
+  - String:          ') . Requires loop in simplify form and with single exit.'
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_56_2
+  - String:          '> at '
+  - LoopLoc:         'filt.cpp:56:22'
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+Function:        _Z4filtRN3hls6streamINS_4axisI6ap_intILi32EELm1ELm1ELm1ELh56ELb0EEELi0EEEPiS6_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '99'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - Function:        'filt(hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, int*, hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&)'
+    DebugLoc:        { File: filt.cpp, Line: 3, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: filt.cpp, Line: 79, Column: 42 }
+Function:        _Z4filtRN3hls6streamINS_4axisI6ap_intILi32EELm1ELm1ELm1ELh56ELb0EEELi0EEEPiS6_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '99'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...

@@ -1,0 +1,277 @@
+
+
+================================================================
+== Synthesis Summary Report of 'filt'
+================================================================
++ General Information: 
+    * Date:           Thu Apr 11 21:20:22 2024
+    * Version:        2023.2 (Build 4023990 on Oct 11 2023)
+    * Project:        FIR_Test_Vitis
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg400-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-----------------------------------+------+-------+---------+--------+----------+---------+------+----------+--------+----------+-----------+------------+-----+
+    |              Modules              | Issue|       | Latency | Latency| Iteration|         | Trip |          |        |          |           |            |     |
+    |              & Loops              | Type | Slack | (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined|  BRAM  |    DSP   |     FF    |     LUT    | URAM|
+    +-----------------------------------+------+-------+---------+--------+----------+---------+------+----------+--------+----------+-----------+------------+-----+
+    |+ filt                             |     -|   0.00|        -|       -|         -|        -|     -|        no|  6 (2%)|  24 (10%)|  7144 (6%)|  6440 (12%)|    -|
+    | o VITIS_LOOP_24_1                 |     -|  14.60|        -|       -|         -|        -|     -|        no|       -|         -|          -|           -|    -|
+    |  + filt_Pipeline_VITIS_LOOP_56_2  |     -|   0.00|        -|       -|         -|        -|     -|        no|       -|         -|  371 (~0%)|   358 (~0%)|    -|
+    |   o VITIS_LOOP_56_2               |     -|  14.60|        -|       -|         8|        1|     -|       yes|       -|         -|          -|           -|    -|
+    +-----------------------------------+------+-------+---------+--------+----------+---------+------+----------+--------+----------+-----------+------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* M_AXI
++------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+| Interface  | Data Width | Address Width | Latency | Offset | Register | Max Widen | Max Read     | Max Write    | Num Read    | Num Write   | Resource Estimate |
+|            | (SW->HW)   |               |         |        |          | Bitwidth  | Burst Length | Burst Length | Outstanding | Outstanding |                   |
++------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+| m_axi_gmem | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
++------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+
+* S_AXILITE Interfaces
++---------------+------------+---------------+--------+----------+
+| Interface     | Data Width | Address Width | Offset | Register |
++---------------+------------+---------------+--------+----------+
+| s_axi_control | 32         | 5             | 16     | 0        |
++---------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++---------------+----------+--------+-------+--------+----------------------+
+| Interface     | Register | Offset | Width | Access | Description          |
++---------------+----------+--------+-------+--------+----------------------+
+| s_axi_control | coefs_1  | 0x10   | 32    | W      | Data signal of coefs |
+| s_axi_control | coefs_2  | 0x14   | 32    | W      | Data signal of coefs |
++---------------+----------+--------+-------+--------+----------------------+
+
+* AXIS
++-----------+-----------+---------------+-------+-------+-----+-------+-------+--------+-------+-------+--------+
+| Interface | Direction | Register Mode | TDATA | TDEST | TID | TKEEP | TLAST | TREADY | TSTRB | TUSER | TVALID |
++-----------+-----------+---------------+-------+-------+-----+-------+-------+--------+-------+-------+--------+
+| input_r   | in        | both          | 32    | 1     | 1   | 4     | 1     | 1      | 4     | 1     | 1      |
+| output_r  | out       | both          | 32    | 1     | 1   | 4     | 1     | 1      | 4     | 1     | 1      |
++-----------+-----------+---------------+-------+-------+-----+-------+-------+--------+-------+-------+--------+
+
+* TOP LEVEL CONTROL
++-----------+--------------+----------+
+| Interface | Type         | Ports    |
++-----------+--------------+----------+
+| ap_clk    | clock        | ap_clk   |
+| ap_rst_n  | reset        | ap_rst_n |
+| ap_ctrl   | ap_ctrl_none |          |
++-----------+--------------+----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+--------------------------------------------------------+
+| Argument | Direction | Datatype                                               |
++----------+-----------+--------------------------------------------------------+
+| output   | out       | stream<hls::axis<ap_int<32>, 1, 1, 1, '8', false>, 0>& |
+| coefs    | inout     | int*                                                   |
+| input    | in        | stream<hls::axis<ap_int<32>, 1, 1, 1, '8', false>, 0>& |
++----------+-----------+--------------------------------------------------------+
+
+* SW-to-HW Mapping
++----------+---------------+-----------+----------+-----------------------------------+
+| Argument | HW Interface  | HW Type   | HW Usage | HW Info                           |
++----------+---------------+-----------+----------+-----------------------------------+
+| output   | output_r      | interface |          |                                   |
+| coefs    | m_axi_gmem    | interface |          |                                   |
+| coefs    | s_axi_control | register  | offset   | name=coefs_1 offset=0x10 range=32 |
+| coefs    | s_axi_control | register  | offset   | name=coefs_2 offset=0x14 range=32 |
+| input    | input_r       | interface |          |                                   |
++----------+---------------+-----------+----------+-----------------------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+* Inferred Burst Summary
++--------------+-----------+--------+-------+
+| HW Interface | Direction | Length | Width |
++--------------+-----------+--------+-------+
+| m_axi_gmem   | read      | 99     | 32    |
++--------------+-----------+--------+-------+
+
+* All M_AXI Variable Accesses
++--------------+----------+-----------------+-----------+--------------+--------+-----------------+----------------+------------+-------------------------------------------------------------------------------------------------------+
+| HW Interface | Variable | Access Location | Direction | Burst Status | Length | Loop            | Loop Location  | Resolution | Problem                                                                                               |
++--------------+----------+-----------------+-----------+--------------+--------+-----------------+----------------+------------+-------------------------------------------------------------------------------------------------------+
+| m_axi_gmem   | coefs    | filt.cpp:79:42  | read      | Widen Fail   |        |                 |                | 214-353    | Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem   | coefs    | filt.cpp:79:42  | read      | Inferred     | 99     | VITIS_LOOP_24_1 | filt.cpp:24:19 |            |                                                                                                       |
+| m_axi_gmem   | coefs    | filt.cpp:82:39  | read      | Widen Fail   |        |                 |                | 214-353    | Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem   | coefs    | filt.cpp:82:39  | read      | Inferred     | 99     | VITIS_LOOP_24_1 | filt.cpp:24:19 |            |                                                                                                       |
++--------------+----------+-----------------+-----------+--------------+--------+-----------------+----------------+------------+-------------------------------------------------------------------------------------------------------+
+
+    * Resolution URL: docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&url=ug1448-hls-guidance&resourceid=XXX-YYY.html (replace XXX-YYY with column value)
+
+================================================================
+== Bind Op Report
+================================================================
++----------------------------------+-----+--------+-------------+-----+--------+---------+
+| Name                             | DSP | Pragma | Variable    | Op  | Impl   | Latency |
++----------------------------------+-----+--------+-------------+-----+--------+---------+
+| + filt                           | 24  |        |             |     |        |         |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | accumulate  | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln79    | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln79_1  | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln79_2  | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln79_3  | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln79_4  | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln79_5  | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln79_6  | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln79_7  | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln79_8  | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln79_9  | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln79_10 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln79_11 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln79_12 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln79_13 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln79_14 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln79_15 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln79_16 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln79_17 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln79_18 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln79_19 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln79_20 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln79_21 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln79_22 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln79_23 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln79_24 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln79_25 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln79_26 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln79_27 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln79_28 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln79_29 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln79_30 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln79_31 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln79_32 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U15         | 3   |        | mul_ln79_33 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln79_34 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln79_35 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U15         | 3   |        | mul_ln79_36 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln79_37 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U15         | 3   |        | mul_ln79_38 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U16         | 3   |        | mul_ln79_39 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln79_40 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln79_41 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U15         | 3   |        | mul_ln79_42 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln79_43 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln79_44 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln79_45 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U15         | 3   |        | mul_ln79_46 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln79_47 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln79_48 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U15         | 3   |        | mul_ln79_49 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln79_50 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U15         | 3   |        | mul_ln79_51 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U16         | 3   |        | mul_ln79_52 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln79_53 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln79_54 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U15         | 3   |        | mul_ln79_55 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln79_56 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U15         | 3   |        | mul_ln79_57 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U16         | 3   |        | mul_ln79_58 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln79_59 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln79_60 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U15         | 3   |        | mul_ln79_61 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln79_62 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U15         | 3   |        | mul_ln79_63 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U16         | 3   |        | mul_ln79_64 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U16         | 3   |        | mul_ln79_65 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln79_66 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U17         | 3   |        | mul_ln79_67 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U15         | 3   |        | mul_ln79_68 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U16         | 3   |        | mul_ln79_69 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U17         | 3   |        | mul_ln79_70 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U18         | 3   |        | mul_ln79_71 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U17         | 3   |        | mul_ln79_72 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U17         | 3   |        | mul_ln79_73 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U18         | 3   |        | mul_ln79_74 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln79_75 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U15         | 3   |        | mul_ln79_76 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U16         | 3   |        | mul_ln79_77 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U15         | 3   |        | mul_ln79_78 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U18         | 3   |        | mul_ln79_79 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U19         | 3   |        | mul_ln79_80 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U16         | 3   |        | mul_ln79_81 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U17         | 3   |        | mul_ln79_82 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U18         | 3   |        | mul_ln79_83 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln79_84 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U15         | 3   |        | mul_ln79_85 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U16         | 3   |        | mul_ln79_86 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U17         | 3   |        | mul_ln79_87 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U18         | 3   |        | mul_ln79_88 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U19         | 3   |        | mul_ln79_89 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln79_90 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U20         | 3   |        | mul_ln79_91 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U21         | 3   |        | mul_ln79_92 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U15         | 3   |        | mul_ln79_93 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U16         | 3   |        | mul_ln79_94 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U17         | 3   |        | mul_ln79_95 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U18         | 3   |        | mul_ln79_96 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U14         | 3   |        | mul_ln82    | mul | auto   | 0       |
+|   add_ln82_fu_1127_p2            |     |        | add_ln82    | add | fabric | 0       |
+|   grp_fu_768_p2                  |     |        | add_ln82_5  | add | fabric | 0       |
+|   grp_fu_768_p2                  |     |        | add_ln82_16 | add | fabric | 0       |
+|   grp_fu_768_p2                  |     |        | add_ln82_23 | add | fabric | 0       |
+|   grp_fu_768_p2                  |     |        | add_ln82_28 | add | fabric | 0       |
+|   grp_fu_606_p2                  |     |        | add_ln82_39 | add | fabric | 0       |
+|   grp_fu_606_p2                  |     |        | add_ln82_42 | add | fabric | 0       |
+|   grp_fu_606_p2                  |     |        | add_ln82_53 | add | fabric | 0       |
+|   add_ln82_64_fu_924_p2          |     |        | add_ln82_64 | add | fabric | 0       |
+|   grp_fu_600_p2                  |     |        | add_ln82_67 | add | fabric | 0       |
+|   grp_fu_600_p2                  |     |        | add_ln82_72 | add | fabric | 0       |
+|   add_ln82_77_fu_964_p2          |     |        | add_ln82_77 | add | fabric | 0       |
+|   add_ln82_88_fu_1009_p2         |     |        | add_ln82_88 | add | fabric | 0       |
+|   grp_fu_600_p2                  |     |        | add_ln82_91 | add | fabric | 0       |
+|   add_ln33_fu_887_p2             |     |        | add_ln33    | add | fabric | 0       |
+|   i_3_fu_1169_p2                 |     |        | i_3         | add | fabric | 0       |
+|  + filt_Pipeline_VITIS_LOOP_56_2 | 0   |        |             |     |        |         |
+|    add_ln63_fu_208_p2            |     |        | add_ln63    | add | fabric | 0       |
+|    add_ln66_fu_241_p2            |     |        | add_ln66    | add | fabric | 0       |
++----------------------------------+-----+--------+-------------+-----+--------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
++----------------------+-----------+-----------+------+------+--------+------------------+------+---------+------------------+
+| Name                 | Usage     | Type      | BRAM | URAM | Pragma | Variable         | Impl | Latency | Bitwidth, Depth, |
+|                      |           |           |      |      |        |                  |      |         | Banks            |
++----------------------+-----------+-----------+------+------+--------+------------------+------+---------+------------------+
+| + filt               |           |           | 6    | 0    |        |                  |      |         |                  |
+|   control_s_axi_U    | interface | s_axilite |      |      |        |                  |      |         |                  |
+|   gmem_m_axi_U       | interface | m_axi     | 4    |      |        |                  |      |         |                  |
+|   signal_shift_reg_U | ram_t2p   |           | 2    |      |        | signal_shift_reg | auto | 1       | 32, 99, 1        |
++----------------------+-----------+-----------+------+------+--------+------------------+------+---------+------------------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------+--------------------------------+----------------------------+
+| Type      | Options                        | Location                   |
++-----------+--------------------------------+----------------------------+
+| interface | m_axi depth=99 port=coefs      | filt.cpp:4 in filt, coefs  |
+| interface | axis register both port=input  | filt.cpp:5 in filt, input  |
+| interface | axis register both port=output | filt.cpp:6 in filt, output |
+| interface | ap_ctrl_none port=return       | filt.cpp:7 in filt, return |
+| unroll    |                                | filt.cpp:77 in filt        |
++-----------+--------------------------------+----------------------------+
+
+

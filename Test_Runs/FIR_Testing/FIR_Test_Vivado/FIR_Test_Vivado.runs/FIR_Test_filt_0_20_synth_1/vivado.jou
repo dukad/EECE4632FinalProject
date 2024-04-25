@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Thu Apr 11 19:48:08 2024
+# Process ID: 17812
+# Current directory: C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Testing/FIR_Test_Vivado/FIR_Test_Vivado.runs/FIR_Test_filt_0_20_synth_1
+# Command line: vivado.exe -log FIR_Test_filt_0_20.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source FIR_Test_filt_0_20.tcl
+# Log file: C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Testing/FIR_Test_Vivado/FIR_Test_Vivado.runs/FIR_Test_filt_0_20_synth_1/FIR_Test_filt_0_20.vds
+# Journal file: C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Test_Runs/FIR_Testing/FIR_Test_Vivado/FIR_Test_Vivado.runs/FIR_Test_filt_0_20_synth_1\vivado.jou
+# Running On: DESKTOP-G7JA666, OS: Windows, CPU Frequency: 2304 MHz, CPU Physical cores: 8, Host memory: 34065 MB
+#-----------------------------------------------------------
+source FIR_Test_filt_0_20.tcl -notrace
