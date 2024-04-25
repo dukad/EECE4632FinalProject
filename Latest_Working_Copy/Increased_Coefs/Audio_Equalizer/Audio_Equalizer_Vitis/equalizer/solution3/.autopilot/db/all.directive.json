@@ -1,0 +1,35 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [
+        {
+          "functionName": "equalizer",
+          "label": "",
+          "functionLabel": "",
+          "id": "1",
+          "sourceFile": "C:\/Users\/a01me\/Documents\/GitHub\/College\/EECE4632FinalProject\/Float_Implementation\/Audio_Equalizer\/Audio_Equalizer_Vitis\/equalizer\/solution3\/directives.tcl",
+          "sourceLine": "6",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "equalizer"
+              }]
+          }
+        },
+        {
+          "functionName": "equalizer",
+          "label": "",
+          "functionLabel": "",
+          "id": "2",
+          "sourceFile": "C:\/Users\/a01me\/Documents\/GitHub\/College\/EECE4632FinalProject\/Float_Implementation\/Audio_Equalizer\/Audio_Equalizer_Vitis\/equalizer\/solution3\/csynth.tcl",
+          "sourceLine": "16",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "equalizer"
+              }]
+          }
+        }
+      ]
+    }]}
