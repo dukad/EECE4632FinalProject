@@ -31807,7 +31807,7 @@ __attribute__((sdx_kernel("equalizer", 0))) void equalizer(hls::stream<AXI_VAL>&
 
   coef.fval += 2;
 
-  if (coef.fval == 48879){
+  if (coef.ival == 48879){
    coef.fval = 4;
   }
 

@@ -5,5 +5,5 @@
   <xd:arg xd:name="coefs" xd:originalName="coefs" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:offset="0x10" xd:dataWidth="32" xd:aximmInterfaceRef="m_axi_gmem"/>
   <xd:arg xd:name="input" xd:originalName="input" xd:direction="in" xd:interfaceRef="input_r" xd:busTypeRef="axis" xd:dataWidth="32"/>
   <xd:latencyEstimates xd:best-case="undef" xd:worst-case="undef" xd:average-case="undef"/>
-  <xd:resourceEstimates xd:LUT="729" xd:FF="391" xd:BRAM="0" xd:DSP="2"/>
+  <xd:resourceEstimates xd:LUT="711" xd:FF="390" xd:BRAM="0" xd:DSP="2"/>
 </xd:acceleratorMap>
