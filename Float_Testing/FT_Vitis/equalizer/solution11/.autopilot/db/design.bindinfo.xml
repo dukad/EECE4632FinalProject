@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<BindInfo>
-	<BindNode BINDTYPE="op" DISPLAY="bind_op fadd" ID="" IMPL="fulldsp" LATENCY="4" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U1" SOURCE="equalizer.cpp:38" VARIABLE="add" MODULE="equalizer" LOOP="Running_Loop" BUNDLEDNAME="" DSP="2" BRAM="0" URAM="0"/>
-	<BindNode BINDTYPE="op" DISPLAY="bind_op icmp" ID="" IMPL="auto" LATENCY="0" OPTYPE="icmp" PRAGMA="" RTLNAME="icmp_ln40_fu_175_p2" SOURCE="equalizer.cpp:40" VARIABLE="icmp_ln40" MODULE="equalizer" LOOP="Running_Loop" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
-	<BindNode BINDTYPE="op" DISPLAY="bind_op select" ID="" IMPL="auto_sel" LATENCY="0" OPTYPE="select" PRAGMA="" RTLNAME="tmp_out_data_V_fu_181_p3" SOURCE="equalizer.cpp:44" VARIABLE="tmp_out_data_V" MODULE="equalizer" LOOP="Running_Loop" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
-	<BindNode BINDTYPE="adapter" DISPLAY="bind_adapter axilite" ID="" IMPL="" LATENCY="" OPTYPE="" PRAGMA="yes" RTLNAME="control_s_axi_U" SOURCE="" VARIABLE="" MODULE="equalizer" LOOP="" BUNDLEDNAME="control" DSP="0" BRAM="0" URAM="0"/>
-</BindInfo>
