@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="equalizer.cpp" path="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Float_Testing\FT_Vitis\equalizer.cpp"/>
+    <originFiles name="equalizer.h" path="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Float_Testing\FT_Vitis\equalizer.h"/>
+  </source>
+  <testbench>
+    <originFiles name="equalizer_test.cpp" path="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Float_Testing\FT_Vitis\equalizer_test.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>
