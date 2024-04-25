@@ -36,7 +36,7 @@
 <TripCount>undef</TripCount>
 <Latency>undef</Latency>
 <AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
-<IterationLatency>7</IterationLatency>
+<IterationLatency>8</IterationLatency>
 <InstanceList>
 </InstanceList>
 </Running_Loop>
@@ -47,8 +47,8 @@
 <Resources>
 <BRAM_18K>0</BRAM_18K>
 <DSP>2</DSP>
-<FF>390</FF>
-<LUT>711</LUT>
+<FF>391</FF>
+<LUT>729</LUT>
 <URAM>0</URAM>
 </Resources>
 <AvailableResources>

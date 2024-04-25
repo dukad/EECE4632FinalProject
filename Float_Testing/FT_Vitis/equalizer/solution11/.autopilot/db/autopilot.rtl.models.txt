@@ -1,4 +1,5 @@
 equalizer_fadd_32ns_32ns_32_5_full_dsp_1
+equalizer_fcmp_32ns_32ns_1_2_no_dsp_1
 equalizer_control_s_axi
 equalizer_regslice_both
 equalizer_regslice_both

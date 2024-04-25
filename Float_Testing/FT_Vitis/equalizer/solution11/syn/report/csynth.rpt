@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'equalizer'
 ================================================================
 + General Information: 
-    * Date:           Thu Apr 25 18:02:48 2024
+    * Date:           Thu Apr 25 18:33:00 2024
     * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
     * Project:        equalizer
     * Solution:       solution11 (Vivado IP Flow Target)
@@ -19,8 +19,8 @@
     |     Modules     | Issue|      | Latency | Latency| Iteration|         | Trip |          |      |         |           |          |     |
     |     & Loops     | Type | Slack| (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined| BRAM |   DSP   |     FF    |    LUT   | URAM|
     +-----------------+------+------+---------+--------+----------+---------+------+----------+------+---------+-----------+----------+-----+
-    |+ equalizer      |     -|  0.04|        -|       -|         -|        -|     -|        no|     -|  2 (~0%)|  390 (~0%)|  711 (1%)|    -|
-    | o Running_Loop  |     -|  7.30|        -|       -|         7|        -|     -|        no|     -|        -|          -|         -|    -|
+    |+ equalizer      |     -|  0.04|        -|       -|         -|        -|     -|        no|     -|  2 (~0%)|  391 (~0%)|  729 (1%)|    -|
+    | o Running_Loop  |     -|  7.30|        -|       -|         8|        -|     -|        no|     -|        -|          -|         -|    -|
     +-----------------+------+------+---------+--------+----------+---------+------+----------+------+---------+-----------+----------+-----+
 
 

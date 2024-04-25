@@ -37,7 +37,7 @@ void equalizer(hls::stream<AXI_VAL>& output, coef_t coefs[NUM_COEFS], hls::strea
 
 		coef.fval += 2;
 
-		if (coef.ival == BEEF){
+		if (coef.fval == BEEF){
 			coef.fval = 4;
 		}
 

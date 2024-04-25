@@ -7,7 +7,7 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="equalizer_equalizer,hls_ip_2022_1,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020-clg400-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=7.256000,HLS_SYN_LAT=-1,HLS_SYN_TPT=none,HLS_SYN_MEM=0,HLS_SYN_DSP=0,HLS_SYN_FF=390,HLS_SYN_LUT=711,HLS_VERSION=2022_1}" *)
+(* CORE_GENERATION_INFO="equalizer_equalizer,hls_ip_2022_1,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020-clg400-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=7.256000,HLS_SYN_LAT=-1,HLS_SYN_TPT=none,HLS_SYN_MEM=0,HLS_SYN_DSP=0,HLS_SYN_FF=391,HLS_SYN_LUT=729,HLS_VERSION=2022_1}" *)
 
 module equalizer (
         ap_clk,
@@ -94,15 +94,16 @@ module equalizer (
         s_axi_control_BRESP
 );
 
-parameter    ap_ST_fsm_state1 = 9'd1;
-parameter    ap_ST_fsm_state2 = 9'd2;
-parameter    ap_ST_fsm_state3 = 9'd4;
-parameter    ap_ST_fsm_state4 = 9'd8;
-parameter    ap_ST_fsm_state5 = 9'd16;
-parameter    ap_ST_fsm_state6 = 9'd32;
-parameter    ap_ST_fsm_state7 = 9'd64;
-parameter    ap_ST_fsm_state8 = 9'd128;
-parameter    ap_ST_fsm_state9 = 9'd256;
+parameter    ap_ST_fsm_state1 = 10'd1;
+parameter    ap_ST_fsm_state2 = 10'd2;
+parameter    ap_ST_fsm_state3 = 10'd4;
+parameter    ap_ST_fsm_state4 = 10'd8;
+parameter    ap_ST_fsm_state5 = 10'd16;
+parameter    ap_ST_fsm_state6 = 10'd32;
+parameter    ap_ST_fsm_state7 = 10'd64;
+parameter    ap_ST_fsm_state8 = 10'd128;
+parameter    ap_ST_fsm_state9 = 10'd256;
+parameter    ap_ST_fsm_state10 = 10'd512;
 parameter    C_S_AXI_CONTROL_DATA_WIDTH = 32;
 parameter    C_S_AXI_CONTROL_ADDR_WIDTH = 5;
 parameter    C_S_AXI_DATA_WIDTH = 32;
@@ -208,44 +209,53 @@ output  [1:0] s_axi_control_BRESP;
  reg    ap_rst_n_inv;
 wire   [63:0] coefs;
 reg    output_r_TDATA_blk_n;
-(* fsm_encoding = "none" *) reg   [8:0] ap_CS_fsm;
-wire    ap_CS_fsm_state7;
+(* fsm_encoding = "none" *) reg   [9:0] ap_CS_fsm;
 wire    ap_CS_fsm_state8;
-reg   [0:0] tmp_last_V_reg_205;
 wire    ap_CS_fsm_state9;
+reg   [0:0] tmp_last_V_reg_252;
+wire    ap_CS_fsm_state10;
 reg    input_r_TDATA_blk_n;
 wire    ap_CS_fsm_state2;
-reg   [3:0] tmp_keep_V_reg_190;
-reg   [3:0] tmp_strb_V_reg_195;
-reg   [0:0] tmp_user_V_reg_200;
-reg   [0:0] tmp_id_V_reg_210;
-reg   [0:0] tmp_dest_V_reg_215;
-wire   [31:0] grp_fu_134_p2;
-reg   [31:0] add_reg_225;
+reg   [3:0] tmp_keep_V_reg_237;
+reg   [3:0] tmp_strb_V_reg_242;
+reg   [0:0] tmp_user_V_reg_247;
+reg   [0:0] tmp_id_V_reg_257;
+reg   [0:0] tmp_dest_V_reg_262;
+wire   [31:0] grp_fu_144_p2;
+reg   [31:0] add_reg_272;
 wire    ap_CS_fsm_state6;
-wire   [31:0] tmp_out_data_V_fu_181_p3;
-reg   [31:0] tmp_out_data_V_reg_230;
-reg    ap_block_state8;
-reg    ap_block_state8_io;
-wire   [31:0] grp_fu_134_p0;
-wire   [31:0] bitcast_ln40_fu_172_p1;
-wire   [0:0] icmp_ln40_fu_175_p2;
-reg    grp_fu_134_ce;
+wire   [31:0] coef_2_fu_228_p3;
+reg   [31:0] coef_2_reg_278;
+reg    ap_block_state9;
+reg    ap_block_state9_io;
+wire   [31:0] grp_fu_144_p0;
+wire    ap_CS_fsm_state7;
+wire   [31:0] coef_fu_187_p1;
+wire   [7:0] tmp_fu_190_p4;
+wire   [22:0] trunc_ln40_fu_200_p1;
+wire   [0:0] icmp_ln40_1_fu_210_p2;
+wire   [0:0] icmp_ln40_fu_204_p2;
+wire   [0:0] or_ln40_fu_216_p2;
+wire   [0:0] grp_fu_149_p2;
+wire   [0:0] and_ln40_fu_222_p2;
+reg    grp_fu_144_ce;
 wire    ap_CS_fsm_state3;
 wire    ap_CS_fsm_state4;
 wire    ap_CS_fsm_state5;
-reg   [8:0] ap_NS_fsm;
+reg    grp_fu_149_ce;
+reg   [9:0] ap_NS_fsm;
 wire    ap_ST_fsm_state1_blk;
 reg    ap_ST_fsm_state2_blk;
 wire    ap_ST_fsm_state3_blk;
 wire    ap_ST_fsm_state4_blk;
 wire    ap_ST_fsm_state5_blk;
 wire    ap_ST_fsm_state6_blk;
-reg    ap_ST_fsm_state7_blk;
+wire    ap_ST_fsm_state7_blk;
 reg    ap_ST_fsm_state8_blk;
 reg    ap_ST_fsm_state9_blk;
+reg    ap_ST_fsm_state10_blk;
 wire    regslice_both_output_r_V_data_V_U_apdone_blk;
-reg    ap_block_state9;
+reg    ap_block_state10;
 reg   [31:0] output_r_TDATA_int_regslice;
 reg    output_r_TVALID_int_regslice;
 wire    output_r_TREADY_int_regslice;
@@ -302,7 +312,7 @@ wire    ap_ce_reg;
 
 // power-on initialization
 initial begin
-#0 ap_CS_fsm = 9'd1;
+#0 ap_CS_fsm = 10'd1;
 end
 
 equalizer_control_s_axi #(
@@ -341,10 +351,26 @@ equalizer_fadd_32ns_32ns_32_5_full_dsp_1 #(
 fadd_32ns_32ns_32_5_full_dsp_1_U1(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
-    .din0(grp_fu_134_p0),
+    .din0(grp_fu_144_p0),
     .din1(32'd1073741824),
-    .ce(grp_fu_134_ce),
-    .dout(grp_fu_134_p2)
+    .ce(grp_fu_144_ce),
+    .dout(grp_fu_144_p2)
+);
+
+equalizer_fcmp_32ns_32ns_1_2_no_dsp_1 #(
+    .ID( 1 ),
+    .NUM_STAGE( 2 ),
+    .din0_WIDTH( 32 ),
+    .din1_WIDTH( 32 ),
+    .dout_WIDTH( 1 ))
+fcmp_32ns_32ns_1_2_no_dsp_1_U2(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .din0(add_reg_272),
+    .din1(32'd1195306752),
+    .ce(grp_fu_149_ce),
+    .opcode(5'd1),
+    .dout(grp_fu_149_p2)
 );
 
 equalizer_regslice_both #(
@@ -366,7 +392,7 @@ equalizer_regslice_both #(
 regslice_both_output_r_V_keep_V_U(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
-    .data_in(tmp_keep_V_reg_190),
+    .data_in(tmp_keep_V_reg_237),
     .vld_in(output_r_TVALID_int_regslice),
     .ack_in(regslice_both_output_r_V_keep_V_U_ack_in_dummy),
     .data_out(output_r_TKEEP),
@@ -380,7 +406,7 @@ equalizer_regslice_both #(
 regslice_both_output_r_V_strb_V_U(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
-    .data_in(tmp_strb_V_reg_195),
+    .data_in(tmp_strb_V_reg_242),
     .vld_in(output_r_TVALID_int_regslice),
     .ack_in(regslice_both_output_r_V_strb_V_U_ack_in_dummy),
     .data_out(output_r_TSTRB),
@@ -394,7 +420,7 @@ equalizer_regslice_both #(
 regslice_both_output_r_V_user_V_U(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
-    .data_in(tmp_user_V_reg_200),
+    .data_in(tmp_user_V_reg_247),
     .vld_in(output_r_TVALID_int_regslice),
     .ack_in(regslice_both_output_r_V_user_V_U_ack_in_dummy),
     .data_out(output_r_TUSER),
@@ -422,7 +448,7 @@ equalizer_regslice_both #(
 regslice_both_output_r_V_id_V_U(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
-    .data_in(tmp_id_V_reg_210),
+    .data_in(tmp_id_V_reg_257),
     .vld_in(output_r_TVALID_int_regslice),
     .ack_in(regslice_both_output_r_V_id_V_U_ack_in_dummy),
     .data_out(output_r_TID),
@@ -436,7 +462,7 @@ equalizer_regslice_both #(
 regslice_both_output_r_V_dest_V_U(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
-    .data_in(tmp_dest_V_reg_215),
+    .data_in(tmp_dest_V_reg_262),
     .vld_in(output_r_TVALID_int_regslice),
     .ack_in(regslice_both_output_r_V_dest_V_U_ack_in_dummy),
     .data_out(output_r_TDEST),
@@ -553,24 +579,32 @@ end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state6)) begin
-        add_reg_225 <= grp_fu_134_p2;
+        add_reg_272 <= grp_fu_144_p2;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((1'b1 == ap_CS_fsm_state8)) begin
+        coef_2_reg_278 <= coef_2_fu_228_p3;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state2)) begin
-        tmp_dest_V_reg_215 <= input_r_TDEST_int_regslice;
-        tmp_id_V_reg_210 <= input_r_TID_int_regslice;
-        tmp_keep_V_reg_190 <= input_r_TKEEP_int_regslice;
-        tmp_last_V_reg_205 <= input_r_TLAST_int_regslice;
-        tmp_strb_V_reg_195 <= input_r_TSTRB_int_regslice;
-        tmp_user_V_reg_200 <= input_r_TUSER_int_regslice;
+        tmp_dest_V_reg_262 <= input_r_TDEST_int_regslice;
+        tmp_id_V_reg_257 <= input_r_TID_int_regslice;
+        tmp_keep_V_reg_237 <= input_r_TKEEP_int_regslice;
+        tmp_last_V_reg_252 <= input_r_TLAST_int_regslice;
+        tmp_strb_V_reg_242 <= input_r_TSTRB_int_regslice;
+        tmp_user_V_reg_247 <= input_r_TUSER_int_regslice;
     end
 end
 
-always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_CS_fsm_state7)) begin
-        tmp_out_data_V_reg_230 <= tmp_out_data_V_fu_181_p3;
+always @ (*) begin
+    if (((output_r_TREADY_int_regslice == 1'b0) | (regslice_both_output_r_V_data_V_U_apdone_blk == 1'b1))) begin
+        ap_ST_fsm_state10_blk = 1'b1;
+    end else begin
+        ap_ST_fsm_state10_blk = 1'b0;
     end
 end
 
@@ -592,16 +626,10 @@ assign ap_ST_fsm_state5_blk = 1'b0;
 
 assign ap_ST_fsm_state6_blk = 1'b0;
 
-always @ (*) begin
-    if ((output_r_TREADY_int_regslice == 1'b0)) begin
-        ap_ST_fsm_state7_blk = 1'b1;
-    end else begin
-        ap_ST_fsm_state7_blk = 1'b0;
-    end
-end
+assign ap_ST_fsm_state7_blk = 1'b0;
 
 always @ (*) begin
-    if (((1'b1 == ap_block_state8_io) | (output_r_TREADY_int_regslice == 1'b0) | ((output_r_TREADY_int_regslice == 1'b0) & (tmp_last_V_reg_205 == 1'd1)))) begin
+    if ((output_r_TREADY_int_regslice == 1'b0)) begin
         ap_ST_fsm_state8_blk = 1'b1;
     end else begin
         ap_ST_fsm_state8_blk = 1'b0;
@@ -609,7 +637,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((output_r_TREADY_int_regslice == 1'b0) | (regslice_both_output_r_V_data_V_U_apdone_blk == 1'b1))) begin
+    if (((1'b1 == ap_block_state9_io) | (output_r_TREADY_int_regslice == 1'b0) | ((output_r_TREADY_int_regslice == 1'b0) & (tmp_last_V_reg_252 == 1'd1)))) begin
         ap_ST_fsm_state9_blk = 1'b1;
     end else begin
         ap_ST_fsm_state9_blk = 1'b0;
@@ -618,9 +646,17 @@ end
 
 always @ (*) begin
     if (((1'b1 == ap_CS_fsm_state5) | (1'b1 == ap_CS_fsm_state4) | (1'b1 == ap_CS_fsm_state3) | (1'b1 == ap_CS_fsm_state6) | ((input_r_TVALID_int_regslice == 1'b1) & (1'b1 == ap_CS_fsm_state2)))) begin
-        grp_fu_134_ce = 1'b1;
+        grp_fu_144_ce = 1'b1;
     end else begin
-        grp_fu_134_ce = 1'b0;
+        grp_fu_144_ce = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state7) | ((output_r_TREADY_int_regslice == 1'b1) & (1'b1 == ap_CS_fsm_state8)))) begin
+        grp_fu_149_ce = 1'b1;
+    end else begin
+        grp_fu_149_ce = 1'b0;
     end
 end
 
@@ -641,7 +677,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state7) | (1'b1 == ap_CS_fsm_state9) | ((1'b1 == ap_CS_fsm_state8) & (tmp_last_V_reg_205 == 1'd1)))) begin
+    if (((1'b1 == ap_CS_fsm_state8) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state9) | ((1'b1 == ap_CS_fsm_state9) & (tmp_last_V_reg_252 == 1'd1)))) begin
         output_r_TDATA_blk_n = output_r_TREADY_int_regslice;
     end else begin
         output_r_TDATA_blk_n = 1'b1;
@@ -649,27 +685,27 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((~((output_r_TREADY_int_regslice == 1'b0) | ((output_r_TREADY_int_regslice == 1'b0) & (tmp_last_V_reg_205 == 1'd1))) & (1'b1 == ap_CS_fsm_state8) & (tmp_last_V_reg_205 == 1'd1))) begin
-        output_r_TDATA_int_regslice = tmp_out_data_V_reg_230;
-    end else if (((output_r_TREADY_int_regslice == 1'b1) & (1'b1 == ap_CS_fsm_state7))) begin
-        output_r_TDATA_int_regslice = tmp_out_data_V_fu_181_p3;
+    if ((~((output_r_TREADY_int_regslice == 1'b0) | ((output_r_TREADY_int_regslice == 1'b0) & (tmp_last_V_reg_252 == 1'd1))) & (1'b1 == ap_CS_fsm_state9) & (tmp_last_V_reg_252 == 1'd1))) begin
+        output_r_TDATA_int_regslice = coef_2_reg_278;
+    end else if (((output_r_TREADY_int_regslice == 1'b1) & (1'b1 == ap_CS_fsm_state8))) begin
+        output_r_TDATA_int_regslice = coef_2_fu_228_p3;
     end else begin
         output_r_TDATA_int_regslice = 'bx;
     end
 end
 
 always @ (*) begin
-    if ((~((output_r_TREADY_int_regslice == 1'b0) | ((output_r_TREADY_int_regslice == 1'b0) & (tmp_last_V_reg_205 == 1'd1))) & (1'b1 == ap_CS_fsm_state8) & (tmp_last_V_reg_205 == 1'd1))) begin
+    if ((~((output_r_TREADY_int_regslice == 1'b0) | ((output_r_TREADY_int_regslice == 1'b0) & (tmp_last_V_reg_252 == 1'd1))) & (1'b1 == ap_CS_fsm_state9) & (tmp_last_V_reg_252 == 1'd1))) begin
         output_r_TLAST_int_regslice = 1'd1;
-    end else if (((output_r_TREADY_int_regslice == 1'b1) & (1'b1 == ap_CS_fsm_state7))) begin
-        output_r_TLAST_int_regslice = tmp_last_V_reg_205;
+    end else if (((output_r_TREADY_int_regslice == 1'b1) & (1'b1 == ap_CS_fsm_state8))) begin
+        output_r_TLAST_int_regslice = tmp_last_V_reg_252;
     end else begin
         output_r_TLAST_int_regslice = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((~((1'b1 == ap_block_state8_io) | (output_r_TREADY_int_regslice == 1'b0) | ((output_r_TREADY_int_regslice == 1'b0) & (tmp_last_V_reg_205 == 1'd1))) & (1'b1 == ap_CS_fsm_state8) & (tmp_last_V_reg_205 == 1'd1)) | ((output_r_TREADY_int_regslice == 1'b1) & (1'b1 == ap_CS_fsm_state7)))) begin
+    if (((~((1'b1 == ap_block_state9_io) | (output_r_TREADY_int_regslice == 1'b0) | ((output_r_TREADY_int_regslice == 1'b0) & (tmp_last_V_reg_252 == 1'd1))) & (1'b1 == ap_CS_fsm_state9) & (tmp_last_V_reg_252 == 1'd1)) | ((output_r_TREADY_int_regslice == 1'b1) & (1'b1 == ap_CS_fsm_state8)))) begin
         output_r_TVALID_int_regslice = 1'b1;
     end else begin
         output_r_TVALID_int_regslice = 1'b0;
@@ -701,26 +737,29 @@ always @ (*) begin
             ap_NS_fsm = ap_ST_fsm_state7;
         end
         ap_ST_fsm_state7 : begin
-            if (((output_r_TREADY_int_regslice == 1'b1) & (1'b1 == ap_CS_fsm_state7))) begin
-                ap_NS_fsm = ap_ST_fsm_state8;
-            end else begin
-                ap_NS_fsm = ap_ST_fsm_state7;
-            end
+            ap_NS_fsm = ap_ST_fsm_state8;
         end
         ap_ST_fsm_state8 : begin
-            if ((~((1'b1 == ap_block_state8_io) | (output_r_TREADY_int_regslice == 1'b0) | ((output_r_TREADY_int_regslice == 1'b0) & (tmp_last_V_reg_205 == 1'd1))) & (1'b1 == ap_CS_fsm_state8) & (tmp_last_V_reg_205 == 1'd0))) begin
-                ap_NS_fsm = ap_ST_fsm_state2;
-            end else if ((~((1'b1 == ap_block_state8_io) | (output_r_TREADY_int_regslice == 1'b0) | ((output_r_TREADY_int_regslice == 1'b0) & (tmp_last_V_reg_205 == 1'd1))) & (1'b1 == ap_CS_fsm_state8) & (tmp_last_V_reg_205 == 1'd1))) begin
+            if (((output_r_TREADY_int_regslice == 1'b1) & (1'b1 == ap_CS_fsm_state8))) begin
                 ap_NS_fsm = ap_ST_fsm_state9;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state8;
             end
         end
         ap_ST_fsm_state9 : begin
-            if ((~((output_r_TREADY_int_regslice == 1'b0) | (regslice_both_output_r_V_data_V_U_apdone_blk == 1'b1)) & (1'b1 == ap_CS_fsm_state9))) begin
-                ap_NS_fsm = ap_ST_fsm_state1;
+            if ((~((1'b1 == ap_block_state9_io) | (output_r_TREADY_int_regslice == 1'b0) | ((output_r_TREADY_int_regslice == 1'b0) & (tmp_last_V_reg_252 == 1'd1))) & (1'b1 == ap_CS_fsm_state9) & (tmp_last_V_reg_252 == 1'd0))) begin
+                ap_NS_fsm = ap_ST_fsm_state2;
+            end else if ((~((1'b1 == ap_block_state9_io) | (output_r_TREADY_int_regslice == 1'b0) | ((output_r_TREADY_int_regslice == 1'b0) & (tmp_last_V_reg_252 == 1'd1))) & (1'b1 == ap_CS_fsm_state9) & (tmp_last_V_reg_252 == 1'd1))) begin
+                ap_NS_fsm = ap_ST_fsm_state10;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state9;
+            end
+        end
+        ap_ST_fsm_state10 : begin
+            if ((~((output_r_TREADY_int_regslice == 1'b0) | (regslice_both_output_r_V_data_V_U_apdone_blk == 1'b1)) & (1'b1 == ap_CS_fsm_state10))) begin
+                ap_NS_fsm = ap_ST_fsm_state1;
+            end else begin
+                ap_NS_fsm = ap_ST_fsm_state10;
             end
         end
         default : begin
@@ -728,6 +767,10 @@ always @ (*) begin
         end
     endcase
 end
+
+assign and_ln40_fu_222_p2 = (or_ln40_fu_216_p2 & grp_fu_149_p2);
+
+assign ap_CS_fsm_state10 = ap_CS_fsm[32'd9];
 
 assign ap_CS_fsm_state2 = ap_CS_fsm[32'd1];
 
@@ -746,26 +789,30 @@ assign ap_CS_fsm_state8 = ap_CS_fsm[32'd7];
 assign ap_CS_fsm_state9 = ap_CS_fsm[32'd8];
 
 always @ (*) begin
-    ap_block_state8 = ((output_r_TREADY_int_regslice == 1'b0) | ((output_r_TREADY_int_regslice == 1'b0) & (tmp_last_V_reg_205 == 1'd1)));
+    ap_block_state10 = ((output_r_TREADY_int_regslice == 1'b0) | (regslice_both_output_r_V_data_V_U_apdone_blk == 1'b1));
 end
 
 always @ (*) begin
-    ap_block_state8_io = ((output_r_TREADY_int_regslice == 1'b0) | ((output_r_TREADY_int_regslice == 1'b0) & (tmp_last_V_reg_205 == 1'd1)));
+    ap_block_state9 = ((output_r_TREADY_int_regslice == 1'b0) | ((output_r_TREADY_int_regslice == 1'b0) & (tmp_last_V_reg_252 == 1'd1)));
 end
 
 always @ (*) begin
-    ap_block_state9 = ((output_r_TREADY_int_regslice == 1'b0) | (regslice_both_output_r_V_data_V_U_apdone_blk == 1'b1));
+    ap_block_state9_io = ((output_r_TREADY_int_regslice == 1'b0) | ((output_r_TREADY_int_regslice == 1'b0) & (tmp_last_V_reg_252 == 1'd1)));
 end
 
 always @ (*) begin
     ap_rst_n_inv = ~ap_rst_n;
 end
 
-assign bitcast_ln40_fu_172_p1 = add_reg_225;
+assign coef_2_fu_228_p3 = ((and_ln40_fu_222_p2[0:0] == 1'b1) ? 32'd1082130432 : coef_fu_187_p1);
 
-assign grp_fu_134_p0 = input_r_TDATA_int_regslice;
+assign coef_fu_187_p1 = add_reg_272;
 
-assign icmp_ln40_fu_175_p2 = ((bitcast_ln40_fu_172_p1 == 32'd48879) ? 1'b1 : 1'b0);
+assign grp_fu_144_p0 = input_r_TDATA_int_regslice;
+
+assign icmp_ln40_1_fu_210_p2 = ((trunc_ln40_fu_200_p1 == 23'd0) ? 1'b1 : 1'b0);
+
+assign icmp_ln40_fu_204_p2 = ((tmp_fu_190_p4 != 8'd255) ? 1'b1 : 1'b0);
 
 assign input_r_TREADY = regslice_both_input_r_V_data_V_U_ack_in;
 
@@ -833,15 +880,13 @@ assign m_axi_gmem_WUSER = 1'd0;
 
 assign m_axi_gmem_WVALID = 1'b0;
 
+assign or_ln40_fu_216_p2 = (icmp_ln40_fu_204_p2 | icmp_ln40_1_fu_210_p2);
+
 assign output_r_TVALID = regslice_both_output_r_V_data_V_U_vld_out;
 
-assign tmp_out_data_V_fu_181_p3 = ((icmp_ln40_fu_175_p2[0:0] == 1'b1) ? 32'd1082130432 : bitcast_ln40_fu_172_p1);
+assign tmp_fu_190_p4 = {{coef_fu_187_p1[30:23]}};
 
-
-reg find_kernel_block = 0;
-// synthesis translate_off
-`include "equalizer_hls_deadlock_kernel_monitor_top.vh"
-// synthesis translate_on
+assign trunc_ln40_fu_200_p1 = coef_fu_187_p1[22:0];
 
 
 reg find_kernel_block = 0;
@@ -850,5 +895,4 @@ reg find_kernel_block = 0;
 // synthesis translate_on
 
 endmodule //equalizer
-
 
