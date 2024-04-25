@@ -27011,7 +27011,7 @@ __attribute__((sdx_kernel("guitar_effects", 0))) void guitar_effects (
          axilite_out = axilite_out | 0b0001;
          tmp_int = wah(tmp_int, tempo, current_sample, wah_buffer_index, wah_values_buffer, wah_coeffs, debug_output, control_signals_buffer);
         }
-
+        current_sample++;
         tmp_out.data = (tmp_int);
         tmp_out.keep = tmp.keep;
         tmp_out.strb = tmp.strb;
@@ -27078,26 +27078,18 @@ int compression(int input, int min_threshold, int max_threshold, int zero_thresh
 
     float compression_factor;
     if (current_level > max_threshold) {
-     if (current_level > 0) {
 
-      compression_factor = (float)(max_threshold) / current_level;
-      output = (input * compression_factor);
-     } else {
-      output = input;
-     }
+  compression_factor = (float)(max_threshold) / current_level;
+  output = (input * compression_factor);
 
     } else if ((current_level < min_threshold) && (current_level > zero_threshold)) {
-     if (current_level > 0) {
-      compression_factor = (float)(min_threshold) / current_level;
-      output = (input * compression_factor);
-     } else {
-      output = input;
-     }
-
+  compression_factor = (float)(min_threshold) / current_level;
+  output = (input * compression_factor);
     } else {
 
         output = input;
     }
+
     return output;
 }
 
@@ -27123,12 +27115,11 @@ int wah(int input, int tempo, int &current_sample, int &wah_buffer_index, int wa
 
  wah_values_buffer[wah_buffer_index] = input;
 
+ int control_signal = (14*current_sample / 88200) % 10;
 
- int control_signal = (int)(0.5*(10*current_sample*tempo/88200)) % 10;
  control_signal_buffer[wah_buffer_index] = control_signal;
 
  wah_buffer_index = (wah_buffer_index + 1) % 100;
- current_sample += 1;
 
 
 
@@ -27139,11 +27130,10 @@ int wah(int input, int tempo, int &current_sample, int &wah_buffer_index, int wa
 
         int coeff_index = ((wah_buffer_index - i + 100) % 100);
         temp_result += (float)(wah_values_buffer[coeff_index] * (float)(bandpass_coeffs[control_signal_buffer[coeff_index]][i]));
-
     }
 
     result = (int)(temp_result);
-    debug = bandpass_coeffs[control_signal][0];
+    debug = 0b1111;
 
-    return control_signal;
+    return result;
 }

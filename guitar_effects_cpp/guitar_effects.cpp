@@ -119,7 +119,7 @@ void guitar_effects (
         	axilite_out = axilite_out | 0b0001;
         	tmp_int = wah(tmp_int, tempo, current_sample, wah_buffer_index, wah_values_buffer, wah_coeffs, debug_output, control_signals_buffer);
         }
-
+        current_sample++;
         tmp_out.data = (tmp_int);
         tmp_out.keep = tmp.keep;
         tmp_out.strb = tmp.strb;
@@ -186,26 +186,18 @@ int compression(int input, int min_threshold, int max_threshold, int zero_thresh
     // if the current level is above the max threshold, then scale the input down
     float compression_factor;
     if (current_level > max_threshold) {
-    	if (current_level > 0) {
-    		//realistically this will always be the case because max threshold will always be > 0
-    		compression_factor = (float)(max_threshold) / current_level;
-    		output = (input * compression_factor);
-    	} else {
-    		output = input;
-    	}
+		//realistically this will always be the case because max threshold will always be > 0
+		compression_factor = (float)(max_threshold) / current_level;
+		output = (input * compression_factor);
 
     } else if ((current_level < min_threshold) && (current_level > zero_threshold))  {
-    	if (current_level > 0) {
-    		compression_factor = (float)(min_threshold) / current_level;
-    		output = (input * compression_factor);
-    	} else {
-    		output = input;
-    	}
-
+		compression_factor = (float)(min_threshold) / current_level;
+		output = (input * compression_factor);
     } else {
         // dont change if within desired range
         output = input;
     }
+//    return current_level;
     return output;
 }
 
@@ -231,13 +223,11 @@ int wah(int input, int tempo, int &current_sample, int &wah_buffer_index, int wa
 
 	wah_values_buffer[wah_buffer_index] = input;
 	// define and save the control signal to be used in the convolution
-//	int control_signal = (int)(WAH_BANDPASS_RESOLUTION* (0.5 + 0.5*hls::sin(current_sample*0.104*tempo/FRAME_RATE))); // map sine wave to 0->1 then multiply by bandpass resolution
-	int control_signal = ((int)((WAH_BANDPASS_RESOLUTION*current_sample*tempo)/(float)(FRAME_RATE))) % WAH_BANDPASS_RESOLUTION;
-//	int control_signal = (int)(current_sample / )
+	int control_signal = (14*current_sample / FRAME_RATE) % WAH_BANDPASS_RESOLUTION;
+
 	control_signal_buffer[wah_buffer_index] = control_signal;
 
 	wah_buffer_index = (wah_buffer_index + 1) % BANDPASS_FILTER_LENGTH; // update index
-	current_sample += 1;
 
 
     // based on this control signal (int) use the bandpass filter coefficients to apply a bandpass filter to the input signal
@@ -248,11 +238,10 @@ int wah(int input, int tempo, int &current_sample, int &wah_buffer_index, int wa
         //iterate through filter
         int coeff_index = ((wah_buffer_index - i + BANDPASS_FILTER_LENGTH) % BANDPASS_FILTER_LENGTH); // get value to index the previous values by, essentially iterate though but loop if needed
         temp_result += (float)(wah_values_buffer[coeff_index] * (float)(bandpass_coeffs[control_signal_buffer[coeff_index]][i])); // use the control signal appropriate to the samples value, not the current sample
-//        std::cout << "control signal" << control_signal_buffer[coeff_index] << std::endl;
     }
 
     result = (int)(temp_result);
-    debug = bandpass_coeffs[control_signal][0]; // for debugging purposes
+    debug = 0b1111; // for debugging purposes
 
-    return control_signal;
+    return result;
 }

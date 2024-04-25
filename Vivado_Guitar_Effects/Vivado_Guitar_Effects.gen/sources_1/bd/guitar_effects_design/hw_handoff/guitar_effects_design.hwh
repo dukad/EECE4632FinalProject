@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Apr 24 17:04:23 2024" VIVADOVERSION="2022.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Apr 25 12:57:18 2024" VIVADOVERSION="2022.1">
 
   <SYSTEMINFO ARCH="zynq" BOARD="tul.com.tw:pynq-z2:part0:1.0" DEVICE="7z020" NAME="guitar_effects_design" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -2942,7 +2942,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="2113528683" FULLNAME="/guitar_effects_0" HWVERSION="1.0" INSTANCE="guitar_effects_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="guitar_effects" VLNV="xilinx.com:hls:guitar_effects:1.0">
+    <MODULE COREREVISION="2113529876" FULLNAME="/guitar_effects_0" HWVERSION="1.0" INSTANCE="guitar_effects_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="guitar_effects" VLNV="xilinx.com:hls:guitar_effects:1.0">
       <DOCUMENTS/>
       <ADDRESSBLOCKS>
         <ADDRESSBLOCK ACCESS="read-write" INTERFACE="s_axi_control_r" NAME="Reg" RANGE="65536" USAGE="register">
@@ -3326,7 +3326,7 @@
         <PARAMETER NAME="C_M_AXI_GMEM_CACHE_VALUE" VALUE="&quot;0011&quot;"/>
         <PARAMETER NAME="C_M_AXI_GMEM_ENABLE_ID_PORTS" VALUE="false"/>
         <PARAMETER NAME="C_M_AXI_GMEM_ENABLE_USER_PORTS" VALUE="false"/>
-        <PARAMETER NAME="Component_Name" VALUE="guitar_effects_design_guitar_effects_0_33"/>
+        <PARAMETER NAME="Component_Name" VALUE="guitar_effects_design_guitar_effects_0_34"/>
         <PARAMETER NAME="clk_period" VALUE="10"/>
         <PARAMETER NAME="machine" VALUE="64"/>
         <PARAMETER NAME="combinational" VALUE="0"/>

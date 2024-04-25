@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'guitar_effects_Pipeline_LPF_Loop'
 ================================================================
-* Date:           Wed Apr 24 17:03:05 2024
+* Date:           Thu Apr 25 12:54:22 2024
 
 * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
 * Project:        Guitar_Effects
@@ -118,21 +118,21 @@ IsGatedGlobalClock: 0
 
 State 1 <SV = 0> <Delay = 4.95>
 ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%ret = alloca i32 1"   --->   Operation 37 'alloca' 'ret' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%i = alloca i32 1"   --->   Operation 38 'alloca' 'i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%i_1 = alloca i32 1"   --->   Operation 38 'alloca' 'i_1' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%sext_ln67_read = read i10 @_ssdm_op_Read.ap_auto.i10, i10 %sext_ln67"   --->   Operation 39 'read' 'sext_ln67_read' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%sext_ln67_cast = sext i10 %sext_ln67_read"   --->   Operation 40 'sext' 'sext_ln67_cast' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 41 [1/1] (1.58ns)   --->   "%store_ln0 = store i9 0, i9 %i"   --->   Operation 41 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 41 [1/1] (1.58ns)   --->   "%store_ln0 = store i9 0, i9 %i_1"   --->   Operation 41 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
 ST_1 : Operation 42 [1/1] (1.58ns)   --->   "%store_ln0 = store i32 0, i32 %ret"   --->   Operation 42 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
 ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc.i"   --->   Operation 43 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%i_1 = load i9 %i" [guitar_effects.cpp:173]   --->   Operation 44 'load' 'i_1' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 45 [1/1] (1.66ns)   --->   "%icmp_ln173 = icmp_eq  i9 %i_1, i9 441" [guitar_effects.cpp:173]   --->   Operation 45 'icmp' 'icmp_ln173' <Predicate = true> <Delay = 1.66> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.66> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%i = load i9 %i_1" [guitar_effects.cpp:173]   --->   Operation 44 'load' 'i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (1.66ns)   --->   "%icmp_ln173 = icmp_eq  i9 %i, i9 441" [guitar_effects.cpp:173]   --->   Operation 45 'icmp' 'icmp_ln173' <Predicate = true> <Delay = 1.66> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.66> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 441, i64 441, i64 441"   --->   Operation 46 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 47 [1/1] (1.82ns)   --->   "%add_ln173 = add i9 %i_1, i9 1" [guitar_effects.cpp:173]   --->   Operation 47 'add' 'add_ln173' <Predicate = true> <Delay = 1.82> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 47 [1/1] (1.82ns)   --->   "%add_ln173 = add i9 %i, i9 1" [guitar_effects.cpp:173]   --->   Operation 47 'add' 'add_ln173' <Predicate = true> <Delay = 1.82> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%br_ln173 = br i1 %icmp_ln173, void %for.inc.i.split, void %for.end.i.exitStub" [guitar_effects.cpp:173]   --->   Operation 48 'br' 'br_ln173' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%zext_ln176 = zext i9 %i_1" [guitar_effects.cpp:176]   --->   Operation 49 'zext' 'zext_ln176' <Predicate = (!icmp_ln173)> <Delay = 0.00>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%zext_ln176 = zext i9 %i" [guitar_effects.cpp:176]   --->   Operation 49 'zext' 'zext_ln176' <Predicate = (!icmp_ln173)> <Delay = 0.00>
 ST_1 : Operation 50 [1/1] (1.73ns)   --->   "%add_ln176 = add i11 %zext_ln176, i11 %sext_ln67_cast" [guitar_effects.cpp:176]   --->   Operation 50 'add' 'add_ln176' <Predicate = (!icmp_ln173)> <Delay = 1.73> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_1 : Operation 51 [15/15] (3.22ns)   --->   "%coeff_index = srem i11 %add_ln176, i11 441" [guitar_effects.cpp:176]   --->   Operation 51 'srem' 'coeff_index' <Predicate = (!icmp_ln173)> <Delay = 3.22> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 14> <II = 1> <Delay = 3.22> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 52 [1/1] (1.58ns)   --->   "%store_ln173 = store i9 %add_ln173, i9 %i" [guitar_effects.cpp:173]   --->   Operation 52 'store' 'store_ln173' <Predicate = (!icmp_ln173)> <Delay = 1.58>
+ST_1 : Operation 52 [1/1] (1.58ns)   --->   "%store_ln173 = store i9 %add_ln173, i9 %i_1" [guitar_effects.cpp:173]   --->   Operation 52 'store' 'store_ln173' <Predicate = (!icmp_ln173)> <Delay = 1.58>
 
 State 2 <SV = 1> <Delay = 3.22>
 ST_2 : Operation 53 [14/15] (3.22ns)   --->   "%coeff_index = srem i11 %add_ln176, i11 441" [guitar_effects.cpp:176]   --->   Operation 53 'srem' 'coeff_index' <Predicate = (!icmp_ln173)> <Delay = 3.22> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 14> <II = 1> <Delay = 3.22> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
@@ -181,7 +181,7 @@ ST_15 : Operation 69 [1/1] (0.00ns)   --->   "%compression_buffer_addr = getelem
 ST_15 : Operation 70 [2/2] (3.25ns)   --->   "%compression_buffer_load = load i9 %compression_buffer_addr" [guitar_effects.cpp:177]   --->   Operation 70 'load' 'compression_buffer_load' <Predicate = (!icmp_ln173)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 441> <RAM>
 
 State 16 <SV = 15> <Delay = 3.25>
-ST_16 : Operation 71 [1/1] (0.00ns)   --->   "%zext_ln173 = zext i9 %i_1" [guitar_effects.cpp:173]   --->   Operation 71 'zext' 'zext_ln173' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 71 [1/1] (0.00ns)   --->   "%zext_ln173 = zext i9 %i" [guitar_effects.cpp:173]   --->   Operation 71 'zext' 'zext_ln173' <Predicate = true> <Delay = 0.00>
 ST_16 : Operation 72 [1/2] (3.25ns)   --->   "%compression_buffer_load = load i9 %compression_buffer_addr" [guitar_effects.cpp:177]   --->   Operation 72 'load' 'compression_buffer_load' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 441> <RAM>
 ST_16 : Operation 73 [1/1] (0.00ns)   --->   "%lpf_coefficients_addr = getelementptr i32 %lpf_coefficients, i64 0, i64 %zext_ln173" [guitar_effects.cpp:177]   --->   Operation 73 'getelementptr' 'lpf_coefficients_addr' <Predicate = true> <Delay = 0.00>
 ST_16 : Operation 74 [2/2] (3.25ns)   --->   "%lpf_coefficients_load = load i9 %lpf_coefficients_addr" [guitar_effects.cpp:177]   --->   Operation 74 'load' 'lpf_coefficients_load' <Predicate = true> <Delay = 3.25> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 441> <ROM>
@@ -246,7 +246,7 @@ State 32 <SV = 31> <Delay = 2.88>
 ST_32 : Operation 98 [1/1] (0.00ns)   --->   "%data_V = bitcast i32 %dc" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:317]   --->   Operation 98 'bitcast' 'data_V' <Predicate = true> <Delay = 0.00>
 ST_32 : Operation 99 [1/1] (0.00ns)   --->   "%p_Result_s = bitselect i1 @_ssdm_op_BitSelect.i1.i32.i32, i32 %data_V, i32 31"   --->   Operation 99 'bitselect' 'p_Result_s' <Predicate = true> <Delay = 0.00>
 ST_32 : Operation 100 [1/1] (0.00ns)   --->   "%xs_exp_V = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %data_V, i32 23, i32 30"   --->   Operation 100 'partselect' 'xs_exp_V' <Predicate = true> <Delay = 0.00>
-ST_32 : Operation 101 [1/1] (0.00ns)   --->   "%p_Result_1 = trunc i32 %data_V"   --->   Operation 101 'trunc' 'p_Result_1' <Predicate = true> <Delay = 0.00>
+ST_32 : Operation 101 [1/1] (0.00ns)   --->   "%p_Result_9 = trunc i32 %data_V"   --->   Operation 101 'trunc' 'p_Result_9' <Predicate = true> <Delay = 0.00>
 ST_32 : Operation 102 [1/1] (0.00ns)   --->   "%zext_ln346 = zext i8 %xs_exp_V" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:346]   --->   Operation 102 'zext' 'zext_ln346' <Predicate = true> <Delay = 0.00>
 ST_32 : Operation 103 [1/1] (1.91ns)   --->   "%add_ln346 = add i9 %zext_ln346, i9 385" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:346]   --->   Operation 103 'add' 'add_ln346' <Predicate = true> <Delay = 1.91> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_32 : Operation 104 [1/1] (0.00ns)   --->   "%isNeg = bitselect i1 @_ssdm_op_BitSelect.i1.i9.i32, i9 %add_ln346, i32 8"   --->   Operation 104 'bitselect' 'isNeg' <Predicate = true> <Delay = 0.00>
@@ -255,22 +255,22 @@ ST_32 : Operation 106 [1/1] (0.00ns)   --->   "%sext_ln1512 = sext i8 %sub_ln151
 ST_32 : Operation 107 [1/1] (0.96ns)   --->   "%ush = select i1 %isNeg, i9 %sext_ln1512, i9 %add_ln346"   --->   Operation 107 'select' 'ush' <Predicate = true> <Delay = 0.96> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 
 State 33 <SV = 32> <Delay = 4.42>
-ST_33 : Operation 108 [1/1] (0.00ns)   --->   "%mantissa = bitconcatenate i25 @_ssdm_op_BitConcatenate.i25.i1.i23.i1, i1 1, i23 %p_Result_1, i1 0" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:15]   --->   Operation 108 'bitconcatenate' 'mantissa' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 108 [1/1] (0.00ns)   --->   "%mantissa = bitconcatenate i25 @_ssdm_op_BitConcatenate.i25.i1.i23.i1, i1 1, i23 %p_Result_9, i1 0" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:15]   --->   Operation 108 'bitconcatenate' 'mantissa' <Predicate = true> <Delay = 0.00>
 ST_33 : Operation 109 [1/1] (0.00ns)   --->   "%zext_ln15 = zext i25 %mantissa" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:15]   --->   Operation 109 'zext' 'zext_ln15' <Predicate = true> <Delay = 0.00>
 ST_33 : Operation 110 [1/1] (0.00ns)   --->   "%sext_ln1488 = sext i9 %ush"   --->   Operation 110 'sext' 'sext_ln1488' <Predicate = true> <Delay = 0.00>
 ST_33 : Operation 111 [1/1] (0.00ns)   --->   "%zext_ln1488 = zext i32 %sext_ln1488"   --->   Operation 111 'zext' 'zext_ln1488' <Predicate = true> <Delay = 0.00>
 ST_33 : Operation 112 [1/1] (0.00ns) (grouped into LUT with out node val)   --->   "%r_V = lshr i79 %zext_ln15, i79 %zext_ln1488"   --->   Operation 112 'lshr' 'r_V' <Predicate = (isNeg)> <Delay = 0.00> <CoreInst = "Shifter">   --->   Core 75 'Shifter' <Latency = 0> <II = 1> <Delay = 4.42> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
-ST_33 : Operation 113 [1/1] (0.00ns) (grouped into LUT with out node val)   --->   "%r_V_1 = shl i79 %zext_ln15, i79 %zext_ln1488"   --->   Operation 113 'shl' 'r_V_1' <Predicate = (!isNeg)> <Delay = 0.00> <CoreInst = "Shifter">   --->   Core 75 'Shifter' <Latency = 0> <II = 1> <Delay = 4.42> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_33 : Operation 113 [1/1] (0.00ns) (grouped into LUT with out node val)   --->   "%r_V_2 = shl i79 %zext_ln15, i79 %zext_ln1488"   --->   Operation 113 'shl' 'r_V_2' <Predicate = (!isNeg)> <Delay = 0.00> <CoreInst = "Shifter">   --->   Core 75 'Shifter' <Latency = 0> <II = 1> <Delay = 4.42> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
 ST_33 : Operation 114 [1/1] (0.00ns) (grouped into LUT with out node val)   --->   "%tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i79.i32, i79 %r_V, i32 24"   --->   Operation 114 'bitselect' 'tmp' <Predicate = (isNeg)> <Delay = 0.00>
 ST_33 : Operation 115 [1/1] (0.00ns) (grouped into LUT with out node val)   --->   "%zext_ln818 = zext i1 %tmp"   --->   Operation 115 'zext' 'zext_ln818' <Predicate = (isNeg)> <Delay = 0.00>
-ST_33 : Operation 116 [1/1] (0.00ns) (grouped into LUT with out node val)   --->   "%tmp_6 = partselect i32 @_ssdm_op_PartSelect.i32.i79.i32.i32, i79 %r_V_1, i32 24, i32 55"   --->   Operation 116 'partselect' 'tmp_6' <Predicate = (!isNeg)> <Delay = 0.00>
-ST_33 : Operation 117 [1/1] (4.42ns) (out node of the LUT)   --->   "%val = select i1 %isNeg, i32 %zext_ln818, i32 %tmp_6"   --->   Operation 117 'select' 'val' <Predicate = true> <Delay = 4.42> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_33 : Operation 116 [1/1] (0.00ns) (grouped into LUT with out node val)   --->   "%tmp_s = partselect i32 @_ssdm_op_PartSelect.i32.i79.i32.i32, i79 %r_V_2, i32 24, i32 55"   --->   Operation 116 'partselect' 'tmp_s' <Predicate = (!isNeg)> <Delay = 0.00>
+ST_33 : Operation 117 [1/1] (4.42ns) (out node of the LUT)   --->   "%val = select i1 %isNeg, i32 %zext_ln818, i32 %tmp_s"   --->   Operation 117 'select' 'val' <Predicate = true> <Delay = 4.42> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 
 State 34 <SV = 33> <Delay = 4.83>
 ST_34 : Operation 118 [1/1] (0.00ns)   --->   "%specpipeline_ln174 = specpipeline void @_ssdm_op_SpecPipeline, i32 15, i32 0, i32 0, i32 0, void @empty_0" [guitar_effects.cpp:174]   --->   Operation 118 'specpipeline' 'specpipeline_ln174' <Predicate = true> <Delay = 0.00>
 ST_34 : Operation 119 [1/1] (0.00ns)   --->   "%specloopname_ln173 = specloopname void @_ssdm_op_SpecLoopName, void @empty_24" [guitar_effects.cpp:173]   --->   Operation 119 'specloopname' 'specloopname_ln173' <Predicate = true> <Delay = 0.00>
-ST_34 : Operation 120 [1/1] (2.55ns)   --->   "%result_V_1 = sub i32 0, i32 %val"   --->   Operation 120 'sub' 'result_V_1' <Predicate = (p_Result_s)> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_34 : Operation 121 [1/1] (0.69ns)   --->   "%result_V = select i1 %p_Result_s, i32 %result_V_1, i32 %val" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:59]   --->   Operation 121 'select' 'result_V' <Predicate = true> <Delay = 0.69> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_34 : Operation 120 [1/1] (2.55ns)   --->   "%result_V_3 = sub i32 0, i32 %val"   --->   Operation 120 'sub' 'result_V_3' <Predicate = (p_Result_s)> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_34 : Operation 121 [1/1] (0.69ns)   --->   "%result_V = select i1 %p_Result_s, i32 %result_V_3, i32 %val" [r:/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:59]   --->   Operation 121 'select' 'result_V' <Predicate = true> <Delay = 0.69> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 ST_34 : Operation 122 [1/1] (1.58ns)   --->   "%store_ln173 = store i32 %result_V, i32 %ret" [guitar_effects.cpp:173]   --->   Operation 122 'store' 'store_ln173' <Predicate = true> <Delay = 1.58>
 ST_34 : Operation 123 [1/1] (0.00ns)   --->   "%br_ln173 = br void %for.inc.i" [guitar_effects.cpp:173]   --->   Operation 123 'br' 'br_ln173' <Predicate = true> <Delay = 0.00>
 
@@ -297,13 +297,13 @@ Port [ lpf_coefficients]:  wired=0; compound=1; hidden=1; nouse=0; global=1; sta
 <LifeTime>
 <method=bitvector/>
 ret                     (alloca           ) [ 01111111111111111111111111111111111]
-i                       (alloca           ) [ 01000000000000000000000000000000000]
+i_1                     (alloca           ) [ 01000000000000000000000000000000000]
 sext_ln67_read          (read             ) [ 00000000000000000000000000000000000]
 sext_ln67_cast          (sext             ) [ 00000000000000000000000000000000000]
 store_ln0               (store            ) [ 00000000000000000000000000000000000]
 store_ln0               (store            ) [ 00000000000000000000000000000000000]
 br_ln0                  (br               ) [ 00000000000000000000000000000000000]
-i_1                     (load             ) [ 01111111111111111000000000000000000]
+i                       (load             ) [ 01111111111111111000000000000000000]
 icmp_ln173              (icmp             ) [ 01111111111111111111000000000000000]
 empty                   (speclooptripcount) [ 00000000000000000000000000000000000]
 add_ln173               (add              ) [ 00000000000000000000000000000000000]
@@ -327,7 +327,7 @@ dc                      (fadd             ) [ 0010000000000000000000000000000010
 data_V                  (bitcast          ) [ 00000000000000000000000000000000000]
 p_Result_s              (bitselect        ) [ 00011000000000000000000000000000011]
 xs_exp_V                (partselect       ) [ 00000000000000000000000000000000000]
-p_Result_1              (trunc            ) [ 00010000000000000000000000000000010]
+p_Result_9              (trunc            ) [ 00010000000000000000000000000000010]
 zext_ln346              (zext             ) [ 00000000000000000000000000000000000]
 add_ln346               (add              ) [ 00000000000000000000000000000000000]
 isNeg                   (bitselect        ) [ 00010000000000000000000000000000010]
@@ -339,14 +339,14 @@ zext_ln15               (zext             ) [ 0000000000000000000000000000000000
 sext_ln1488             (sext             ) [ 00000000000000000000000000000000000]
 zext_ln1488             (zext             ) [ 00000000000000000000000000000000000]
 r_V                     (lshr             ) [ 00000000000000000000000000000000000]
-r_V_1                   (shl              ) [ 00000000000000000000000000000000000]
+r_V_2                   (shl              ) [ 00000000000000000000000000000000000]
 tmp                     (bitselect        ) [ 00000000000000000000000000000000000]
 zext_ln818              (zext             ) [ 00000000000000000000000000000000000]
-tmp_6                   (partselect       ) [ 00000000000000000000000000000000000]
+tmp_s                   (partselect       ) [ 00000000000000000000000000000000000]
 val                     (select           ) [ 00001000000000000000000000000000001]
 specpipeline_ln174      (specpipeline     ) [ 00000000000000000000000000000000000]
 specloopname_ln173      (specloopname     ) [ 00000000000000000000000000000000000]
-result_V_1              (sub              ) [ 00000000000000000000000000000000000]
+result_V_3              (sub              ) [ 00000000000000000000000000000000000]
 result_V                (select           ) [ 00000000000000000000000000000000000]
 store_ln173             (store            ) [ 00000000000000000000000000000000000]
 br_ln173                (br               ) [ 00000000000000000000000000000000000]
@@ -695,14 +695,14 @@ ret_ln0                 (ret              ) [ 0000000000000000000000000000000000
 </bind>
 </comp>
 
-<comp id="76" class="1004" name="i_fu_76">
+<comp id="76" class="1004" name="i_1_fu_76">
 <pin_list>
 <pin id="77" dir="0" index="0" bw="1" slack="0"/>
 <pin id="78" dir="1" index="1" bw="9" slack="0"/>
 </pin_list>
 <bind>
 <opcode="alloca(26) " fcode="alloca"/>
-<opset="i/1 "/>
+<opset="i_1/1 "/>
 </bind>
 </comp>
 
@@ -853,14 +853,14 @@ ret_ln0                 (ret              ) [ 0000000000000000000000000000000000
 </bind>
 </comp>
 
-<comp id="144" class="1004" name="i_1_load_fu_144">
+<comp id="144" class="1004" name="i_load_fu_144">
 <pin_list>
 <pin id="145" dir="0" index="0" bw="9" slack="0"/>
 <pin id="146" dir="1" index="1" bw="9" slack="0"/>
 </pin_list>
 <bind>
 <opcode="load(27) " fcode="load"/>
-<opset="i_1/1 "/>
+<opset="i/1 "/>
 </bind>
 </comp>
 
@@ -1017,14 +1017,14 @@ ret_ln0                 (ret              ) [ 0000000000000000000000000000000000
 </bind>
 </comp>
 
-<comp id="218" class="1004" name="p_Result_1_fu_218">
+<comp id="218" class="1004" name="p_Result_9_fu_218">
 <pin_list>
 <pin id="219" dir="0" index="0" bw="32" slack="0"/>
 <pin id="220" dir="1" index="1" bw="23" slack="1"/>
 </pin_list>
 <bind>
 <opcode="trunc(33) " fcode="trunc"/>
-<opset="p_Result_1/32 "/>
+<opset="p_Result_9/32 "/>
 </bind>
 </comp>
 
@@ -1159,7 +1159,7 @@ ret_ln0                 (ret              ) [ 0000000000000000000000000000000000
 </bind>
 </comp>
 
-<comp id="284" class="1004" name="r_V_1_fu_284">
+<comp id="284" class="1004" name="r_V_2_fu_284">
 <pin_list>
 <pin id="285" dir="0" index="0" bw="25" slack="0"/>
 <pin id="286" dir="0" index="1" bw="32" slack="0"/>
@@ -1167,7 +1167,7 @@ ret_ln0                 (ret              ) [ 0000000000000000000000000000000000
 </pin_list>
 <bind>
 <opcode="shl(20) " fcode="shl"/>
-<opset="r_V_1/33 "/>
+<opset="r_V_2/33 "/>
 </bind>
 </comp>
 
@@ -1195,7 +1195,7 @@ ret_ln0                 (ret              ) [ 0000000000000000000000000000000000
 </bind>
 </comp>
 
-<comp id="302" class="1004" name="tmp_6_fu_302">
+<comp id="302" class="1004" name="tmp_s_fu_302">
 <pin_list>
 <pin id="303" dir="0" index="0" bw="32" slack="0"/>
 <pin id="304" dir="0" index="1" bw="79" slack="0"/>
@@ -1205,7 +1205,7 @@ ret_ln0                 (ret              ) [ 0000000000000000000000000000000000
 </pin_list>
 <bind>
 <opcode="partselect(1002) " fcode="partselect"/>
-<opset="tmp_6/33 "/>
+<opset="tmp_s/33 "/>
 </bind>
 </comp>
 
@@ -1222,7 +1222,7 @@ ret_ln0                 (ret              ) [ 0000000000000000000000000000000000
 </bind>
 </comp>
 
-<comp id="319" class="1004" name="result_V_1_fu_319">
+<comp id="319" class="1004" name="result_V_3_fu_319">
 <pin_list>
 <pin id="320" dir="0" index="0" bw="1" slack="0"/>
 <pin id="321" dir="0" index="1" bw="32" slack="1"/>
@@ -1230,7 +1230,7 @@ ret_ln0                 (ret              ) [ 0000000000000000000000000000000000
 </pin_list>
 <bind>
 <opcode="sub(10) " fcode="sub"/>
-<opset="result_V_1/34 "/>
+<opset="result_V_3/34 "/>
 </bind>
 </comp>
 
@@ -1280,23 +1280,23 @@ ret_ln0                 (ret              ) [ 0000000000000000000000000000000000
 </bind>
 </comp>
 
-<comp id="347" class="1005" name="i_reg_347">
+<comp id="347" class="1005" name="i_1_reg_347">
 <pin_list>
 <pin id="348" dir="0" index="0" bw="9" slack="0"/>
 <pin id="349" dir="1" index="1" bw="9" slack="0"/>
 </pin_list>
 <bind>
-<opset="i "/>
+<opset="i_1 "/>
 </bind>
 </comp>
 
-<comp id="354" class="1005" name="i_1_reg_354">
+<comp id="354" class="1005" name="i_reg_354">
 <pin_list>
 <pin id="355" dir="0" index="0" bw="9" slack="15"/>
 <pin id="356" dir="1" index="1" bw="9" slack="15"/>
 </pin_list>
 <bind>
-<opset="i_1 "/>
+<opset="i "/>
 </bind>
 </comp>
 
@@ -1420,13 +1420,13 @@ ret_ln0                 (ret              ) [ 0000000000000000000000000000000000
 </bind>
 </comp>
 
-<comp id="418" class="1005" name="p_Result_1_reg_418">
+<comp id="418" class="1005" name="p_Result_9_reg_418">
 <pin_list>
 <pin id="419" dir="0" index="0" bw="23" slack="1"/>
 <pin id="420" dir="1" index="1" bw="23" slack="1"/>
 </pin_list>
 <bind>
-<opset="p_Result_1 "/>
+<opset="p_Result_9 "/>
 </bind>
 </comp>
 
@@ -1711,7 +1711,7 @@ ret_ln0                 (ret              ) [ 0000000000000000000000000000000000
 	State 1
 		store_ln0 : 1
 		store_ln0 : 1
-		i_1 : 1
+		i : 1
 		icmp_ln173 : 2
 		add_ln173 : 2
 		br_ln173 : 3
@@ -1760,7 +1760,7 @@ ret_ln0                 (ret              ) [ 0000000000000000000000000000000000
 	State 32
 		p_Result_s : 1
 		xs_exp_V : 1
-		p_Result_1 : 1
+		p_Result_9 : 1
 		zext_ln346 : 2
 		add_ln346 : 3
 		isNeg : 4
@@ -1771,10 +1771,10 @@ ret_ln0                 (ret              ) [ 0000000000000000000000000000000000
 		zext_ln15 : 1
 		zext_ln1488 : 1
 		r_V : 2
-		r_V_1 : 2
+		r_V_2 : 2
 		tmp : 3
 		zext_ln818 : 4
-		tmp_6 : 3
+		tmp_s : 3
 		val : 5
 	State 34
 		result_V : 1
@@ -1797,14 +1797,14 @@ ret_ln0                 (ret              ) [ 0000000000000000000000000000000000
 |----------|---------------------------|---------|---------|---------|
 |   lshr   |         r_V_fu_278        |    0    |    0    |   100   |
 |----------|---------------------------|---------|---------|---------|
-|    shl   |        r_V_1_fu_284       |    0    |    0    |   100   |
+|    shl   |        r_V_2_fu_284       |    0    |    0    |   100   |
 |----------|---------------------------|---------|---------|---------|
 |          |         ush_fu_250        |    0    |    0    |    9    |
 |  select  |         val_fu_312        |    0    |    0    |    32   |
 |          |      result_V_fu_324      |    0    |    0    |    32   |
 |----------|---------------------------|---------|---------|---------|
 |    sub   |     sub_ln1512_fu_240     |    0    |    0    |    15   |
-|          |     result_V_1_fu_319     |    0    |    0    |    39   |
+|          |     result_V_3_fu_319     |    0    |    0    |    39   |
 |----------|---------------------------|---------|---------|---------|
 |          |      add_ln173_fu_153     |    0    |    0    |    14   |
 |    add   |      add_ln176_fu_163     |    0    |    0    |    13   |
@@ -1831,14 +1831,14 @@ ret_ln0                 (ret              ) [ 0000000000000000000000000000000000
 |          |     zext_ln818_fu_298     |    0    |    0    |    0    |
 |----------|---------------------------|---------|---------|---------|
 |   trunc  |     trunc_ln177_fu_180    |    0    |    0    |    0    |
-|          |     p_Result_1_fu_218     |    0    |    0    |    0    |
+|          |     p_Result_9_fu_218     |    0    |    0    |    0    |
 |----------|---------------------------|---------|---------|---------|
 |          |     p_Result_s_fu_200     |    0    |    0    |    0    |
 | bitselect|        isNeg_fu_232       |    0    |    0    |    0    |
 |          |         tmp_fu_290        |    0    |    0    |    0    |
 |----------|---------------------------|---------|---------|---------|
 |partselect|      xs_exp_V_fu_208      |    0    |    0    |    0    |
-|          |        tmp_6_fu_302       |    0    |    0    |    0    |
+|          |        tmp_s_fu_302       |    0    |    0    |    0    |
 |----------|---------------------------|---------|---------|---------|
 |bitconcatenate|      mantissa_fu_258      |    0    |    0    |    0    |
 |----------|---------------------------|---------|---------|---------|
@@ -1858,14 +1858,14 @@ N/A
 |        conv8_i_reg_398        |   32   |
 |         conv_i_reg_393        |   32   |
 |           dc_reg_408          |   32   |
-|          i_1_reg_354          |    9   |
-|           i_reg_347           |    9   |
+|          i_1_reg_347          |    9   |
+|           i_reg_354           |    9   |
 |       icmp_ln173_reg_359      |    1   |
 |         isNeg_reg_423         |    1   |
 | lpf_coefficients_addr_reg_378 |    9   |
 | lpf_coefficients_load_reg_383 |   32   |
 |         mul_i_reg_403         |   32   |
-|       p_Result_1_reg_418      |   23   |
+|       p_Result_9_reg_418      |   23   |
 |       p_Result_s_reg_413      |    1   |
 |       ret_load_1_reg_388      |   32   |
 |          ret_reg_339          |   32   |

@@ -6,7 +6,7 @@
 <Project Version="7" Minor="60" Path="C:/EECE4632FinalProject/guitar_effects_cpp/Guitar_Effects/solution1/impl/ip/tmp.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="a1bb9248fd4d4e68a61922d90c13fbcd"/>
+    <Option Name="Id" Val="dc4f51e5434f459e9acd7059271c48f0"/>
     <Option Name="Part" Val="xc7z020clg400-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -87,13 +87,6 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
       <Filter Type="Srcs"/>
-      <File Path="$PSRCDIR/sources_1/ip/guitar_effects_dmul_64ns_64ns_64_7_max_dsp_1_ip/guitar_effects_dmul_64ns_64ns_64_7_max_dsp_1_ip.xci">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PSRCDIR/sources_1/ip/guitar_effects_fadd_32ns_32ns_32_5_full_dsp_1_ip/guitar_effects_fadd_32ns_32ns_32_5_full_dsp_1_ip.xci">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -109,13 +102,6 @@
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/ip/guitar_effects_fmul_32ns_32ns_32_4_max_dsp_1_ip/guitar_effects_fmul_32ns_32ns_32_4_max_dsp_1_ip.xci">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/ip/guitar_effects_sitodp_32ns_64_6_no_dsp_1_ip/guitar_effects_sitodp_32ns_64_6_no_dsp_1_ip.xci">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
