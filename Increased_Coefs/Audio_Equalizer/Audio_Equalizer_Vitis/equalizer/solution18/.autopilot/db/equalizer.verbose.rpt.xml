@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'equalizer'" level="0">
-<item name = "Date">Fri Apr 26 02:52:27 2024
+<item name = "Date">Fri Apr 26 03:05:55 2024
 </item>
 <item name = "Version">2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)</item>
 <item name = "Project">equalizer</item>
@@ -33,7 +33,7 @@
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
 <column name="grp_equalizer_Pipeline_Shift_Accumulate_Loop_fu_386">equalizer_Pipeline_Shift_Accumulate_Loop, 110, 110, 1.100 us, 1.100 us, 110, 110, no</column>
 <column name="grp_equalizer_Pipeline_Coef_Clear_Loop_fu_396">equalizer_Pipeline_Coef_Clear_Loop, 107, 107, 1.070 us, 1.070 us, 107, 107, no</column>
-<column name="grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403">equalizer_Pipeline_VITIS_LOOP_48_1, 115, 115, 1.150 us, 1.150 us, 115, 115, no</column>
+<column name="grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403">equalizer_Pipeline_VITIS_LOOP_57_1, 115, 115, 1.150 us, 1.150 us, 115, 115, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
@@ -69,7 +69,7 @@
 <column name="control_s_axi_U">control_s_axi, 0, 0, 100, 168, 0</column>
 <column name="grp_equalizer_Pipeline_Coef_Clear_Loop_fu_396">equalizer_Pipeline_Coef_Clear_Loop, 0, 0, 87, 155, 0</column>
 <column name="grp_equalizer_Pipeline_Shift_Accumulate_Loop_fu_386">equalizer_Pipeline_Shift_Accumulate_Loop, 0, 0, 358, 267, 0</column>
-<column name="grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403">equalizer_Pipeline_VITIS_LOOP_48_1, 0, 0, 358, 296, 0</column>
+<column name="grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403">equalizer_Pipeline_VITIS_LOOP_57_1, 0, 0, 358, 296, 0</column>
 <column name="gmem_m_axi_U">gmem_m_axi, 0, 0, 718, 1318, 0</column>
 <column name="mul_32s_32s_32_2_1_U19">mul_32s_32s_32_2_1, 0, 3, 165, 50, 0</column>
 </table>
@@ -90,10 +90,10 @@
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
 <column name="accumulate_fu_534_p2">+, 0, 0, 39, 32, 32</column>
-<column name="add_ln45_fu_575_p2">+, 0, 0, 10, 2, 1</column>
-<column name="icmp_ln31_fu_508_p2">icmp, 0, 0, 18, 32, 16</column>
-<column name="icmp_ln45_fu_569_p2">icmp, 0, 0, 8, 2, 2</column>
-<column name="icmp_ln61_fu_581_p2">icmp, 0, 0, 18, 32, 16</column>
+<column name="add_ln54_fu_575_p2">+, 0, 0, 10, 2, 1</column>
+<column name="icmp_ln35_fu_508_p2">icmp, 0, 0, 18, 32, 16</column>
+<column name="icmp_ln54_fu_569_p2">icmp, 0, 0, 8, 2, 2</column>
+<column name="icmp_ln71_fu_581_p2">icmp, 0, 0, 18, 32, 16</column>
 <column name="ap_block_state15">or, 0, 0, 2, 1, 1</column>
 <column name="ap_block_state21">or, 0, 0, 2, 1, 1</column>
 <column name="ap_predicate_op119_write_state15">or, 0, 0, 2, 1, 1</column>
@@ -156,7 +156,7 @@
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
 <column name="accumulate_reg_760">32, 0, 32, 0</column>
-<column name="add_ln45_reg_770">2, 0, 2, 0</column>
+<column name="add_ln54_reg_770">2, 0, 2, 0</column>
 <column name="ap_CS_fsm">21, 0, 21, 0</column>
 <column name="coef_scale_reg_343">32, 0, 32, 0</column>
 <column name="coefs_read_reg_657">64, 0, 64, 0</column>
@@ -164,9 +164,9 @@
 <column name="gmem_addr_reg_670">64, 0, 64, 0</column>
 <column name="grp_equalizer_Pipeline_Coef_Clear_Loop_fu_396_ap_start_reg">1, 0, 1, 0</column>
 <column name="grp_equalizer_Pipeline_Shift_Accumulate_Loop_fu_386_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_ap_start_reg">1, 0, 1, 0</column>
 <column name="j_reg_332">2, 0, 2, 0</column>
-<column name="mul_ln76_reg_755">32, 0, 32, 0</column>
+<column name="mul_ln88_reg_755">32, 0, 32, 0</column>
 <column name="p_4_0_0_0132_phi_reg_353">1, 0, 1, 0</column>
 <column name="read_coefs_fu_156">1, 0, 1, 0</column>
 <column name="state_1_reg_694">2, 0, 32, 30</column>

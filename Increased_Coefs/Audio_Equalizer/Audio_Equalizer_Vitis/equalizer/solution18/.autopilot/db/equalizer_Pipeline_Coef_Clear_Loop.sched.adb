@@ -34,7 +34,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1528853351</coreId>
+						<coreId>4294967295</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -110,7 +110,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1126703163</coreId>
+						<coreId>1819619616</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -152,7 +152,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1767862369</coreId>
+						<coreId>824192108</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -195,7 +195,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>543434016</coreId>
+						<coreId>1014263401</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -238,7 +238,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1631351657</coreId>
+						<coreId>1953391988</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -265,7 +265,7 @@
 						<name>i</name>
 						<fileName>equalizer.cpp</fileName>
 						<fileDirectory>C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis</fileDirectory>
-						<lineNumber>41</lineNumber>
+						<lineNumber>48</lineNumber>
 						<contextFuncName>equalizer</contextFuncName>
 						<contextNormFuncName>equalizer</contextNormFuncName>
 						<inlineStackInfo>
@@ -281,7 +281,7 @@
 											<first>equalizer.cpp</first>
 											<second>equalizer</second>
 										</first>
-										<second>41</second>
+										<second>48</second>
 									</item>
 								</second>
 							</item>
@@ -294,7 +294,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1768843628</coreId>
+						<coreId>4294967295</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -322,7 +322,7 @@
 						<name>tmp</name>
 						<fileName>equalizer.cpp</fileName>
 						<fileDirectory>C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis</fileDirectory>
-						<lineNumber>39</lineNumber>
+						<lineNumber>46</lineNumber>
 						<contextFuncName>equalizer</contextFuncName>
 						<contextNormFuncName>equalizer</contextNormFuncName>
 						<inlineStackInfo>
@@ -338,7 +338,7 @@
 											<first>equalizer.cpp</first>
 											<second>equalizer</second>
 										</first>
-										<second>39</second>
+										<second>46</second>
 									</item>
 								</second>
 							</item>
@@ -351,7 +351,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>980642920</coreId>
+						<coreId>2912479808</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -377,10 +377,10 @@
 					<Obj>
 						<type>0</type>
 						<id>13</id>
-						<name>br_ln39</name>
+						<name>br_ln46</name>
 						<fileName>equalizer.cpp</fileName>
 						<fileDirectory>C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis</fileDirectory>
-						<lineNumber>39</lineNumber>
+						<lineNumber>46</lineNumber>
 						<contextFuncName>equalizer</contextFuncName>
 						<contextNormFuncName>equalizer</contextNormFuncName>
 						<inlineStackInfo>
@@ -396,7 +396,7 @@
 											<first>equalizer.cpp</first>
 											<second>equalizer</second>
 										</first>
-										<second>39</second>
+										<second>46</second>
 									</item>
 								</second>
 							</item>
@@ -409,7 +409,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1630501223</coreId>
+						<coreId>13</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -435,10 +435,10 @@
 					<Obj>
 						<type>0</type>
 						<id>17</id>
-						<name>trunc_ln41</name>
+						<name>trunc_ln48</name>
 						<fileName>equalizer.cpp</fileName>
 						<fileDirectory>C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis</fileDirectory>
-						<lineNumber>41</lineNumber>
+						<lineNumber>48</lineNumber>
 						<contextFuncName>equalizer</contextFuncName>
 						<contextNormFuncName>equalizer</contextNormFuncName>
 						<inlineStackInfo>
@@ -454,7 +454,7 @@
 											<first>equalizer.cpp</first>
 											<second>equalizer</second>
 										</first>
-										<second>41</second>
+										<second>48</second>
 									</item>
 								</second>
 							</item>
@@ -467,7 +467,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>11</coreId>
+						<coreId>37</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>7</bitwidth>
@@ -494,7 +494,7 @@
 						<name>shl_ln1</name>
 						<fileName>equalizer.cpp</fileName>
 						<fileDirectory>C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis</fileDirectory>
-						<lineNumber>41</lineNumber>
+						<lineNumber>48</lineNumber>
 						<contextFuncName>equalizer</contextFuncName>
 						<contextNormFuncName>equalizer</contextNormFuncName>
 						<inlineStackInfo>
@@ -510,7 +510,7 @@
 											<first>equalizer.cpp</first>
 											<second>equalizer</second>
 										</first>
-										<second>41</second>
+										<second>48</second>
 									</item>
 								</second>
 							</item>
@@ -523,7 +523,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>691548474</coreId>
+						<coreId>506</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -549,10 +549,10 @@
 					<Obj>
 						<type>0</type>
 						<id>19</id>
-						<name>zext_ln41</name>
+						<name>zext_ln48</name>
 						<fileName>equalizer.cpp</fileName>
 						<fileDirectory>C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis</fileDirectory>
-						<lineNumber>41</lineNumber>
+						<lineNumber>48</lineNumber>
 						<contextFuncName>equalizer</contextFuncName>
 						<contextNormFuncName>equalizer</contextNormFuncName>
 						<inlineStackInfo>
@@ -568,7 +568,7 @@
 											<first>equalizer.cpp</first>
 											<second>equalizer</second>
 										</first>
-										<second>41</second>
+										<second>48</second>
 									</item>
 								</second>
 							</item>
@@ -581,7 +581,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>775041584</coreId>
+						<coreId>44</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -605,10 +605,10 @@
 					<Obj>
 						<type>0</type>
 						<id>20</id>
-						<name>add_ln41</name>
+						<name>add_ln48</name>
 						<fileName>equalizer.cpp</fileName>
 						<fileDirectory>C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis</fileDirectory>
-						<lineNumber>41</lineNumber>
+						<lineNumber>48</lineNumber>
 						<contextFuncName>equalizer</contextFuncName>
 						<contextNormFuncName>equalizer</contextNormFuncName>
 						<inlineStackInfo>
@@ -624,7 +624,7 @@
 											<first>equalizer.cpp</first>
 											<second>equalizer</second>
 										</first>
-										<second>41</second>
+										<second>48</second>
 									</item>
 								</second>
 							</item>
@@ -637,7 +637,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>6005</coreId>
+						<coreId>100</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -665,7 +665,7 @@
 						<name>trunc_ln2</name>
 						<fileName>equalizer.cpp</fileName>
 						<fileDirectory>C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis</fileDirectory>
-						<lineNumber>41</lineNumber>
+						<lineNumber>48</lineNumber>
 						<contextFuncName>equalizer</contextFuncName>
 						<contextNormFuncName>equalizer</contextNormFuncName>
 						<inlineStackInfo>
@@ -681,7 +681,7 @@
 											<first>equalizer.cpp</first>
 											<second>equalizer</second>
 										</first>
-										<second>41</second>
+										<second>48</second>
 									</item>
 								</second>
 							</item>
@@ -694,7 +694,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>544435055</coreId>
+						<coreId>1999413671</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>62</bitwidth>
@@ -721,10 +721,10 @@
 					<Obj>
 						<type>0</type>
 						<id>22</id>
-						<name>sext_ln41</name>
+						<name>sext_ln48</name>
 						<fileName>equalizer.cpp</fileName>
 						<fileDirectory>C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis</fileDirectory>
-						<lineNumber>41</lineNumber>
+						<lineNumber>48</lineNumber>
 						<contextFuncName>equalizer</contextFuncName>
 						<contextNormFuncName>equalizer</contextNormFuncName>
 						<inlineStackInfo>
@@ -740,7 +740,7 @@
 											<first>equalizer.cpp</first>
 											<second>equalizer</second>
 										</first>
-										<second>41</second>
+										<second>48</second>
 									</item>
 								</second>
 							</item>
@@ -753,7 +753,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>791752242</coreId>
+						<coreId>2557606309</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -780,7 +780,7 @@
 						<name>gmem_addr</name>
 						<fileName>equalizer.cpp</fileName>
 						<fileDirectory>C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis</fileDirectory>
-						<lineNumber>41</lineNumber>
+						<lineNumber>48</lineNumber>
 						<contextFuncName>equalizer</contextFuncName>
 						<contextNormFuncName>equalizer</contextNormFuncName>
 						<inlineStackInfo>
@@ -796,7 +796,7 @@
 											<first>equalizer.cpp</first>
 											<second>equalizer</second>
 										</first>
-										<second>41</second>
+										<second>48</second>
 									</item>
 								</second>
 							</item>
@@ -809,7 +809,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>8</coreId>
+						<coreId>4294967295</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -837,7 +837,7 @@
 						<name>gmem_addr_2_req</name>
 						<fileName>equalizer.cpp</fileName>
 						<fileDirectory>C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis</fileDirectory>
-						<lineNumber>41</lineNumber>
+						<lineNumber>48</lineNumber>
 						<contextFuncName>equalizer</contextFuncName>
 						<contextNormFuncName>equalizer</contextNormFuncName>
 						<inlineStackInfo>
@@ -853,7 +853,7 @@
 											<first>equalizer.cpp</first>
 											<second>equalizer</second>
 										</first>
-										<second>41</second>
+										<second>48</second>
 									</item>
 								</second>
 							</item>
@@ -866,7 +866,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1663070068</coreId>
+						<coreId>183</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -892,10 +892,10 @@
 					<Obj>
 						<type>0</type>
 						<id>25</id>
-						<name>gmem_addr_write_ln41</name>
+						<name>gmem_addr_write_ln48</name>
 						<fileName>equalizer.cpp</fileName>
 						<fileDirectory>C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis</fileDirectory>
-						<lineNumber>41</lineNumber>
+						<lineNumber>48</lineNumber>
 						<contextFuncName>equalizer</contextFuncName>
 						<contextNormFuncName>equalizer</contextNormFuncName>
 						<inlineStackInfo>
@@ -911,7 +911,7 @@
 											<first>equalizer.cpp</first>
 											<second>equalizer</second>
 										</first>
-										<second>41</second>
+										<second>48</second>
 									</item>
 								</second>
 							</item>
@@ -924,7 +924,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1701867631</coreId>
+						<coreId>1869377390</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -955,7 +955,7 @@
 						<name>gmem_addr_2_resp</name>
 						<fileName>equalizer.cpp</fileName>
 						<fileDirectory>C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis</fileDirectory>
-						<lineNumber>41</lineNumber>
+						<lineNumber>48</lineNumber>
 						<contextFuncName>equalizer</contextFuncName>
 						<contextNormFuncName>equalizer</contextNormFuncName>
 						<inlineStackInfo>
@@ -971,7 +971,7 @@
 											<first>equalizer.cpp</first>
 											<second>equalizer</second>
 										</first>
-										<second>41</second>
+										<second>48</second>
 									</item>
 								</second>
 							</item>
@@ -984,7 +984,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1886218528</coreId>
+						<coreId>825045040</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -1010,10 +1010,10 @@
 					<Obj>
 						<type>0</type>
 						<id>27</id>
-						<name>add_ln39</name>
+						<name>add_ln46</name>
 						<fileName>equalizer.cpp</fileName>
 						<fileDirectory>C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis</fileDirectory>
-						<lineNumber>39</lineNumber>
+						<lineNumber>46</lineNumber>
 						<contextFuncName>equalizer</contextFuncName>
 						<contextNormFuncName>equalizer</contextNormFuncName>
 						<inlineStackInfo>
@@ -1029,7 +1029,7 @@
 											<first>equalizer.cpp</first>
 											<second>equalizer</second>
 										</first>
-										<second>39</second>
+										<second>46</second>
 									</item>
 								</second>
 							</item>
@@ -1042,7 +1042,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>673201011</coreId>
+						<coreId>1769239916</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -1067,10 +1067,10 @@
 					<Obj>
 						<type>0</type>
 						<id>28</id>
-						<name>i_1_write_ln39</name>
+						<name>i_1_write_ln46</name>
 						<fileName>equalizer.cpp</fileName>
 						<fileDirectory>C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis</fileDirectory>
-						<lineNumber>39</lineNumber>
+						<lineNumber>46</lineNumber>
 						<contextFuncName>equalizer</contextFuncName>
 						<contextNormFuncName>equalizer</contextNormFuncName>
 						<inlineStackInfo>
@@ -1086,7 +1086,7 @@
 											<first>equalizer.cpp</first>
 											<second>equalizer</second>
 										</first>
-										<second>39</second>
+										<second>46</second>
 									</item>
 								</second>
 							</item>
@@ -1099,7 +1099,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1819619616</coreId>
+						<coreId>1881171304</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1126,10 +1126,10 @@
 					<Obj>
 						<type>0</type>
 						<id>29</id>
-						<name>br_ln39</name>
+						<name>br_ln46</name>
 						<fileName>equalizer.cpp</fileName>
 						<fileDirectory>C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis</fileDirectory>
-						<lineNumber>39</lineNumber>
+						<lineNumber>46</lineNumber>
 						<contextFuncName>equalizer</contextFuncName>
 						<contextNormFuncName>equalizer</contextNormFuncName>
 						<inlineStackInfo>
@@ -1145,7 +1145,7 @@
 											<first>equalizer.cpp</first>
 											<second>equalizer</second>
 										</first>
-										<second>39</second>
+										<second>46</second>
 									</item>
 								</second>
 							</item>
@@ -1158,7 +1158,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>543434016</coreId>
+						<coreId>1660973938</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1200,7 +1200,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>539107901</coreId>
+						<coreId>1629890875</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1369,7 +1369,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1953391988</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1400,7 +1400,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1701015137</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1431,7 +1431,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1953391988</coreId>
+						<coreId>1734964007</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1462,7 +1462,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1629888623</coreId>
+						<coreId>1936683105</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>4</bitwidth>
@@ -1493,7 +1493,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1852796269</coreId>
+						<coreId>94</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -1619,7 +1619,7 @@
 				<Obj>
 					<type>3</type>
 					<id>32</id>
-					<name>VITIS_LOOP_48_1.preheader.exitStub</name>
+					<name>VITIS_LOOP_57_1.preheader.exitStub</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>

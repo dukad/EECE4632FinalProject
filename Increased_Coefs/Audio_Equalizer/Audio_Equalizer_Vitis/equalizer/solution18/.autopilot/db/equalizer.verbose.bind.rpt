@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'equalizer'
 ================================================================
-* Date:           Fri Apr 26 02:52:25 2024
+* Date:           Fri Apr 26 03:05:53 2024
 
 * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
 * Project:        equalizer
@@ -40,7 +40,7 @@
         +-----------------------------------------------------+------------------------------------------+---------+---------+----------+----------+-----+-----+---------+
         |grp_equalizer_Pipeline_Shift_Accumulate_Loop_fu_386  |equalizer_Pipeline_Shift_Accumulate_Loop  |      110|      110|  1.100 us|  1.100 us|  110|  110|       no|
         |grp_equalizer_Pipeline_Coef_Clear_Loop_fu_396        |equalizer_Pipeline_Coef_Clear_Loop        |      107|      107|  1.070 us|  1.070 us|  107|  107|       no|
-        |grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403        |equalizer_Pipeline_VITIS_LOOP_48_1        |      115|      115|  1.150 us|  1.150 us|  115|  115|       no|
+        |grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403        |equalizer_Pipeline_VITIS_LOOP_57_1        |      115|      115|  1.150 us|  1.150 us|  115|  115|       no|
         +-----------------------------------------------------+------------------------------------------+---------+---------+----------+----------+-----+-----+---------+
 
         * Loop: 
@@ -140,12 +140,12 @@ ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void
 ST_1 : Operation 51 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %input_r_V_last_V"   --->   Operation 51 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %input_r_V_id_V"   --->   Operation 52 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 53 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %input_r_V_dest_V"   --->   Operation 53 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 54 [1/1] (0.00ns)   --->   "%trunc_ln = partselect i62 @_ssdm_op_PartSelect.i62.i64.i32.i32, i64 %coefs_read, i32 2, i32 63" [equalizer.cpp:76]   --->   Operation 54 'partselect' 'trunc_ln' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 55 [1/1] (0.00ns)   --->   "%sext_ln76 = sext i62 %trunc_ln" [equalizer.cpp:76]   --->   Operation 55 'sext' 'sext_ln76' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 56 [1/1] (0.00ns)   --->   "%gmem_addr = getelementptr i32 %gmem, i64 %sext_ln76" [equalizer.cpp:76]   --->   Operation 56 'getelementptr' 'gmem_addr' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 57 [1/1] (1.82ns)   --->   "%store_ln26 = store i32 0, i32 %state" [equalizer.cpp:26]   --->   Operation 57 'store' 'store_ln26' <Predicate = true> <Delay = 1.82>
-ST_1 : Operation 58 [1/1] (1.58ns)   --->   "%store_ln26 = store i1 0, i1 %read_coefs" [equalizer.cpp:26]   --->   Operation 58 'store' 'store_ln26' <Predicate = true> <Delay = 1.58>
-ST_1 : Operation 59 [1/1] (0.00ns)   --->   "%br_ln26 = br void %while.body" [equalizer.cpp:26]   --->   Operation 59 'br' 'br_ln26' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 54 [1/1] (0.00ns)   --->   "%trunc_ln = partselect i62 @_ssdm_op_PartSelect.i62.i64.i32.i32, i64 %coefs_read, i32 2, i32 63" [equalizer.cpp:88]   --->   Operation 54 'partselect' 'trunc_ln' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 55 [1/1] (0.00ns)   --->   "%sext_ln88 = sext i62 %trunc_ln" [equalizer.cpp:88]   --->   Operation 55 'sext' 'sext_ln88' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 56 [1/1] (0.00ns)   --->   "%gmem_addr = getelementptr i32 %gmem, i64 %sext_ln88" [equalizer.cpp:88]   --->   Operation 56 'getelementptr' 'gmem_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 57 [1/1] (1.82ns)   --->   "%store_ln27 = store i32 0, i32 %state" [equalizer.cpp:27]   --->   Operation 57 'store' 'store_ln27' <Predicate = true> <Delay = 1.82>
+ST_1 : Operation 58 [1/1] (1.58ns)   --->   "%store_ln27 = store i1 0, i1 %read_coefs" [equalizer.cpp:27]   --->   Operation 58 'store' 'store_ln27' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 59 [1/1] (0.00ns)   --->   "%br_ln27 = br void %while.body" [equalizer.cpp:27]   --->   Operation 59 'br' 'br_ln27' <Predicate = true> <Delay = 0.00>
 
 State 2 <SV = 1> <Delay = 5.48>
 ST_2 : Operation 60 [1/1] (0.00ns)   --->   "%tmp_out_data_V_1 = load i32 %tmp_out_data_V"   --->   Operation 60 'load' 'tmp_out_data_V_1' <Predicate = true> <Delay = 0.00>
@@ -164,69 +164,69 @@ ST_2 : Operation 72 [1/1] (0.00ns)   --->   "%tmp_user_V = extractvalue i44 %emp
 ST_2 : Operation 73 [1/1] (0.00ns)   --->   "%tmp_last_V = extractvalue i44 %empty"   --->   Operation 73 'extractvalue' 'tmp_last_V' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 74 [1/1] (0.00ns)   --->   "%tmp_id_V = extractvalue i44 %empty"   --->   Operation 74 'extractvalue' 'tmp_id_V' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 75 [1/1] (0.00ns)   --->   "%tmp_dest_V = extractvalue i44 %empty"   --->   Operation 75 'extractvalue' 'tmp_dest_V' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 76 [1/1] (0.95ns)   --->   "%switch_ln29 = switch i32 %state_1, void %sw.epilog, i32 0, void %sw.bb, i32 16, void %sw.bb2, i32 256, void %for.inc46.preheader" [equalizer.cpp:29]   --->   Operation 76 'switch' 'switch_ln29' <Predicate = true> <Delay = 0.95>
+ST_2 : Operation 76 [1/1] (0.95ns)   --->   "%switch_ln31 = switch i32 %state_1, void %sw.epilog, i32 0, void %sw.bb, i32 16, void %sw.bb2, i32 256, void %for.inc46.preheader" [equalizer.cpp:31]   --->   Operation 76 'switch' 'switch_ln31' <Predicate = true> <Delay = 0.95>
 ST_2 : Operation 77 [2/2] (3.52ns)   --->   "%call_ln0 = call void @equalizer_Pipeline_Shift_Accumulate_Loop, i32 %gmem, i64 %coefs_read, i32 %accumulate_loc, i32 %signal_shift_reg"   --->   Operation 77 'call' 'call_ln0' <Predicate = (state_1 == 256)> <Delay = 3.52> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_2 : Operation 78 [1/1] (0.00ns)   --->   "%read_coefs_load = load i1 %read_coefs" [equalizer.cpp:37]   --->   Operation 78 'load' 'read_coefs_load' <Predicate = (state_1 == 16)> <Delay = 0.00>
-ST_2 : Operation 79 [1/1] (1.58ns)   --->   "%br_ln37 = br i1 %read_coefs_load, void %for.inc.preheader, void %if.end24" [equalizer.cpp:37]   --->   Operation 79 'br' 'br_ln37' <Predicate = (state_1 == 16)> <Delay = 1.58>
+ST_2 : Operation 78 [1/1] (0.00ns)   --->   "%read_coefs_load = load i1 %read_coefs" [equalizer.cpp:43]   --->   Operation 78 'load' 'read_coefs_load' <Predicate = (state_1 == 16)> <Delay = 0.00>
+ST_2 : Operation 79 [1/1] (1.58ns)   --->   "%br_ln43 = br i1 %read_coefs_load, void %for.inc.preheader, void %if.end24" [equalizer.cpp:43]   --->   Operation 79 'br' 'br_ln43' <Predicate = (state_1 == 16)> <Delay = 1.58>
 ST_2 : Operation 80 [2/2] (3.52ns)   --->   "%call_ln0 = call void @equalizer_Pipeline_Coef_Clear_Loop, i32 %gmem, i64 %coefs_read"   --->   Operation 80 'call' 'call_ln0' <Predicate = (state_1 == 16 & !read_coefs_load)> <Delay = 3.52> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_2 : Operation 81 [1/1] (2.47ns)   --->   "%icmp_ln31 = icmp_eq  i32 %tmp_data_V, i32 48879" [equalizer.cpp:31]   --->   Operation 81 'icmp' 'icmp_ln31' <Predicate = (state_1 == 0)> <Delay = 2.47> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 82 [1/1] (1.18ns)   --->   "%select_ln16 = select i1 %icmp_ln31, i32 16, i32 0" [equalizer.cpp:16]   --->   Operation 82 'select' 'select_ln16' <Predicate = (state_1 == 0)> <Delay = 1.18> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.18> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_2 : Operation 83 [1/1] (1.58ns)   --->   "%br_ln92 = br i1 %tmp_last_V, void %sw.bb.if.end66_crit_edge, void %while.end" [equalizer.cpp:92]   --->   Operation 83 'br' 'br_ln92' <Predicate = (state_1 == 0)> <Delay = 1.58>
-ST_2 : Operation 84 [1/1] (1.82ns)   --->   "%store_ln92 = store i32 %select_ln16, i32 %state" [equalizer.cpp:92]   --->   Operation 84 'store' 'store_ln92' <Predicate = (state_1 == 0 & !tmp_last_V)> <Delay = 1.82>
-ST_2 : Operation 85 [1/1] (0.00ns)   --->   "%br_ln92 = br void %if.end66" [equalizer.cpp:92]   --->   Operation 85 'br' 'br_ln92' <Predicate = (state_1 == 0 & !tmp_last_V)> <Delay = 0.00>
-ST_2 : Operation 86 [1/1] (1.58ns)   --->   "%br_ln92 = br i1 %tmp_last_V, void %if.end66, void %while.end" [equalizer.cpp:92]   --->   Operation 86 'br' 'br_ln92' <Predicate = (state_1 != 0 & state_1 != 16 & state_1 != 256)> <Delay = 1.58>
+ST_2 : Operation 81 [1/1] (2.47ns)   --->   "%icmp_ln35 = icmp_eq  i32 %tmp_data_V, i32 48879" [equalizer.cpp:35]   --->   Operation 81 'icmp' 'icmp_ln35' <Predicate = (state_1 == 0)> <Delay = 2.47> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 82 [1/1] (1.18ns)   --->   "%select_ln16 = select i1 %icmp_ln35, i32 16, i32 0" [equalizer.cpp:16]   --->   Operation 82 'select' 'select_ln16' <Predicate = (state_1 == 0)> <Delay = 1.18> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.18> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 83 [1/1] (1.58ns)   --->   "%br_ln105 = br i1 %tmp_last_V, void %sw.bb.if.end66_crit_edge, void %while.end" [equalizer.cpp:105]   --->   Operation 83 'br' 'br_ln105' <Predicate = (state_1 == 0)> <Delay = 1.58>
+ST_2 : Operation 84 [1/1] (1.82ns)   --->   "%store_ln105 = store i32 %select_ln16, i32 %state" [equalizer.cpp:105]   --->   Operation 84 'store' 'store_ln105' <Predicate = (state_1 == 0 & !tmp_last_V)> <Delay = 1.82>
+ST_2 : Operation 85 [1/1] (0.00ns)   --->   "%br_ln105 = br void %if.end66" [equalizer.cpp:105]   --->   Operation 85 'br' 'br_ln105' <Predicate = (state_1 == 0 & !tmp_last_V)> <Delay = 0.00>
+ST_2 : Operation 86 [1/1] (1.58ns)   --->   "%br_ln105 = br i1 %tmp_last_V, void %if.end66, void %while.end" [equalizer.cpp:105]   --->   Operation 86 'br' 'br_ln105' <Predicate = (state_1 != 0 & state_1 != 16 & state_1 != 256)> <Delay = 1.58>
 
 State 3 <SV = 2> <Delay = 0.00>
 ST_3 : Operation 87 [1/2] (0.00ns)   --->   "%call_ln0 = call void @equalizer_Pipeline_Shift_Accumulate_Loop, i32 %gmem, i64 %coefs_read, i32 %accumulate_loc, i32 %signal_shift_reg"   --->   Operation 87 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 4 <SV = 3> <Delay = 7.30>
-ST_4 : Operation 88 [7/7] (7.30ns)   --->   "%gmem_load_1_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %gmem_addr, i32 1" [equalizer.cpp:76]   --->   Operation 88 'readreq' 'gmem_load_1_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-ST_4 : Operation 89 [1/1] (3.25ns)   --->   "%store_ln77 = store i32 %tmp_data_V, i32 0" [equalizer.cpp:77]   --->   Operation 89 'store' 'store_ln77' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 99> <RAM>
+ST_4 : Operation 88 [7/7] (7.30ns)   --->   "%gmem_load_1_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %gmem_addr, i32 1" [equalizer.cpp:88]   --->   Operation 88 'readreq' 'gmem_load_1_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_4 : Operation 89 [1/1] (3.25ns)   --->   "%store_ln89 = store i32 %tmp_data_V, i32 0" [equalizer.cpp:89]   --->   Operation 89 'store' 'store_ln89' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 99> <RAM>
 
 State 5 <SV = 4> <Delay = 7.30>
-ST_5 : Operation 90 [6/7] (7.30ns)   --->   "%gmem_load_1_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %gmem_addr, i32 1" [equalizer.cpp:76]   --->   Operation 90 'readreq' 'gmem_load_1_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_5 : Operation 90 [6/7] (7.30ns)   --->   "%gmem_load_1_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %gmem_addr, i32 1" [equalizer.cpp:88]   --->   Operation 90 'readreq' 'gmem_load_1_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 6 <SV = 5> <Delay = 7.30>
-ST_6 : Operation 91 [5/7] (7.30ns)   --->   "%gmem_load_1_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %gmem_addr, i32 1" [equalizer.cpp:76]   --->   Operation 91 'readreq' 'gmem_load_1_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_6 : Operation 91 [5/7] (7.30ns)   --->   "%gmem_load_1_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %gmem_addr, i32 1" [equalizer.cpp:88]   --->   Operation 91 'readreq' 'gmem_load_1_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 7 <SV = 6> <Delay = 7.30>
-ST_7 : Operation 92 [4/7] (7.30ns)   --->   "%gmem_load_1_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %gmem_addr, i32 1" [equalizer.cpp:76]   --->   Operation 92 'readreq' 'gmem_load_1_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_7 : Operation 92 [4/7] (7.30ns)   --->   "%gmem_load_1_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %gmem_addr, i32 1" [equalizer.cpp:88]   --->   Operation 92 'readreq' 'gmem_load_1_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 8 <SV = 7> <Delay = 7.30>
-ST_8 : Operation 93 [3/7] (7.30ns)   --->   "%gmem_load_1_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %gmem_addr, i32 1" [equalizer.cpp:76]   --->   Operation 93 'readreq' 'gmem_load_1_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_8 : Operation 93 [3/7] (7.30ns)   --->   "%gmem_load_1_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %gmem_addr, i32 1" [equalizer.cpp:88]   --->   Operation 93 'readreq' 'gmem_load_1_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 9 <SV = 8> <Delay = 7.30>
-ST_9 : Operation 94 [2/7] (7.30ns)   --->   "%gmem_load_1_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %gmem_addr, i32 1" [equalizer.cpp:76]   --->   Operation 94 'readreq' 'gmem_load_1_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_9 : Operation 94 [2/7] (7.30ns)   --->   "%gmem_load_1_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %gmem_addr, i32 1" [equalizer.cpp:88]   --->   Operation 94 'readreq' 'gmem_load_1_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 10 <SV = 9> <Delay = 7.30>
-ST_10 : Operation 95 [1/7] (7.30ns)   --->   "%gmem_load_1_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %gmem_addr, i32 1" [equalizer.cpp:76]   --->   Operation 95 'readreq' 'gmem_load_1_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_10 : Operation 95 [1/7] (7.30ns)   --->   "%gmem_load_1_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %gmem_addr, i32 1" [equalizer.cpp:88]   --->   Operation 95 'readreq' 'gmem_load_1_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 11 <SV = 10> <Delay = 7.30>
-ST_11 : Operation 96 [1/1] (7.30ns)   --->   "%gmem_addr_read = read i32 @_ssdm_op_Read.m_axi.i32P1A, i32 %gmem_addr" [equalizer.cpp:76]   --->   Operation 96 'read' 'gmem_addr_read' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_11 : Operation 96 [1/1] (7.30ns)   --->   "%gmem_addr_read = read i32 @_ssdm_op_Read.m_axi.i32P1A, i32 %gmem_addr" [equalizer.cpp:88]   --->   Operation 96 'read' 'gmem_addr_read' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 12 <SV = 11> <Delay = 6.91>
-ST_12 : Operation 97 [2/2] (6.91ns)   --->   "%mul_ln76 = mul i32 %gmem_addr_read, i32 %tmp_data_V" [equalizer.cpp:76]   --->   Operation 97 'mul' 'mul_ln76' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 97 [2/2] (6.91ns)   --->   "%mul_ln88 = mul i32 %gmem_addr_read, i32 %tmp_data_V" [equalizer.cpp:88]   --->   Operation 97 'mul' 'mul_ln88' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
 
 State 13 <SV = 12> <Delay = 6.91>
-ST_13 : Operation 98 [1/2] (6.91ns)   --->   "%mul_ln76 = mul i32 %gmem_addr_read, i32 %tmp_data_V" [equalizer.cpp:76]   --->   Operation 98 'mul' 'mul_ln76' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 98 [1/2] (6.91ns)   --->   "%mul_ln88 = mul i32 %gmem_addr_read, i32 %tmp_data_V" [equalizer.cpp:88]   --->   Operation 98 'mul' 'mul_ln88' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
 
 State 14 <SV = 13> <Delay = 2.55>
 ST_14 : Operation 99 [1/1] (0.00ns)   --->   "%accumulate_loc_load = load i32 %accumulate_loc"   --->   Operation 99 'load' 'accumulate_loc_load' <Predicate = true> <Delay = 0.00>
-ST_14 : Operation 100 [1/1] (2.55ns)   --->   "%accumulate = add i32 %mul_ln76, i32 %accumulate_loc_load" [equalizer.cpp:76]   --->   Operation 100 'add' 'accumulate' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 100 [1/1] (2.55ns)   --->   "%accumulate = add i32 %mul_ln88, i32 %accumulate_loc_load" [equalizer.cpp:88]   --->   Operation 100 'add' 'accumulate' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_14 : Operation 101 [2/2] (0.00ns)   --->   "%write_ln304 = write void @_ssdm_op_Write.axis.volatile.i32P0A.i4P0A.i4P0A.i1P0A.i1P0A.i1P0A.i1P0A, i32 %output_r_V_data_V, i4 %output_r_V_keep_V, i4 %output_r_V_strb_V, i1 %output_r_V_user_V, i1 %output_r_V_last_V, i1 %output_r_V_id_V, i1 %output_r_V_dest_V, i32 %accumulate, i4 %tmp_keep_V, i4 %tmp_strb_V, i1 %tmp_user_V, i1 %tmp_last_V, i1 %tmp_id_V, i1 %tmp_dest_V"   --->   Operation 101 'write' 'write_ln304' <Predicate = true> <Delay = 0.00> <CoreInst = "axis">   --->   Core 115 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
 
 State 15 <SV = 14> <Delay = 1.82>
 ST_15 : Operation 102 [1/2] (0.00ns)   --->   "%write_ln304 = write void @_ssdm_op_Write.axis.volatile.i32P0A.i4P0A.i4P0A.i1P0A.i1P0A.i1P0A.i1P0A, i32 %output_r_V_data_V, i4 %output_r_V_keep_V, i4 %output_r_V_strb_V, i1 %output_r_V_user_V, i1 %output_r_V_last_V, i1 %output_r_V_id_V, i1 %output_r_V_dest_V, i32 %accumulate, i4 %tmp_keep_V, i4 %tmp_strb_V, i1 %tmp_user_V, i1 %tmp_last_V, i1 %tmp_id_V, i1 %tmp_dest_V"   --->   Operation 102 'write' 'write_ln304' <Predicate = (state_1 == 256)> <Delay = 0.00> <CoreInst = "axis">   --->   Core 115 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
-ST_15 : Operation 103 [1/1] (1.58ns)   --->   "%br_ln92 = br i1 %tmp_last_V, void %for.inc46.preheader.if.end66_crit_edge, void %while.end" [equalizer.cpp:92]   --->   Operation 103 'br' 'br_ln92' <Predicate = (state_1 == 256)> <Delay = 1.58>
-ST_15 : Operation 104 [1/1] (1.82ns)   --->   "%store_ln92 = store i32 256, i32 %state" [equalizer.cpp:92]   --->   Operation 104 'store' 'store_ln92' <Predicate = (state_1 == 256 & !tmp_last_V)> <Delay = 1.82>
-ST_15 : Operation 105 [1/1] (0.00ns)   --->   "%store_ln92 = store i1 %tmp_dest_V, i1 %tmp_out_dest_V" [equalizer.cpp:92]   --->   Operation 105 'store' 'store_ln92' <Predicate = (state_1 == 256 & !tmp_last_V)> <Delay = 0.00>
-ST_15 : Operation 106 [1/1] (0.00ns)   --->   "%store_ln92 = store i1 %tmp_id_V, i1 %tmp_out_id_V" [equalizer.cpp:92]   --->   Operation 106 'store' 'store_ln92' <Predicate = (state_1 == 256 & !tmp_last_V)> <Delay = 0.00>
-ST_15 : Operation 107 [1/1] (0.00ns)   --->   "%store_ln92 = store i1 %tmp_user_V, i1 %tmp_out_user_V" [equalizer.cpp:92]   --->   Operation 107 'store' 'store_ln92' <Predicate = (state_1 == 256 & !tmp_last_V)> <Delay = 0.00>
-ST_15 : Operation 108 [1/1] (0.00ns)   --->   "%store_ln92 = store i4 %tmp_strb_V, i4 %tmp_out_strb_V" [equalizer.cpp:92]   --->   Operation 108 'store' 'store_ln92' <Predicate = (state_1 == 256 & !tmp_last_V)> <Delay = 0.00>
-ST_15 : Operation 109 [1/1] (0.00ns)   --->   "%store_ln92 = store i4 %tmp_keep_V, i4 %tmp_out_keep_V" [equalizer.cpp:92]   --->   Operation 109 'store' 'store_ln92' <Predicate = (state_1 == 256 & !tmp_last_V)> <Delay = 0.00>
-ST_15 : Operation 110 [1/1] (0.00ns)   --->   "%store_ln92 = store i32 %accumulate, i32 %tmp_out_data_V" [equalizer.cpp:92]   --->   Operation 110 'store' 'store_ln92' <Predicate = (state_1 == 256 & !tmp_last_V)> <Delay = 0.00>
-ST_15 : Operation 111 [1/1] (0.00ns)   --->   "%br_ln92 = br void %if.end66" [equalizer.cpp:92]   --->   Operation 111 'br' 'br_ln92' <Predicate = (state_1 == 256 & !tmp_last_V)> <Delay = 0.00>
-ST_15 : Operation 112 [1/1] (0.00ns)   --->   "%br_ln26 = br void %while.body" [equalizer.cpp:26]   --->   Operation 112 'br' 'br_ln26' <Predicate = (state_1 != 16 & !tmp_last_V) | (state_1 == 16 & !tmp_last_V_1)> <Delay = 0.00>
+ST_15 : Operation 103 [1/1] (1.58ns)   --->   "%br_ln105 = br i1 %tmp_last_V, void %for.inc46.preheader.if.end66_crit_edge, void %while.end" [equalizer.cpp:105]   --->   Operation 103 'br' 'br_ln105' <Predicate = (state_1 == 256)> <Delay = 1.58>
+ST_15 : Operation 104 [1/1] (1.82ns)   --->   "%store_ln105 = store i32 256, i32 %state" [equalizer.cpp:105]   --->   Operation 104 'store' 'store_ln105' <Predicate = (state_1 == 256 & !tmp_last_V)> <Delay = 1.82>
+ST_15 : Operation 105 [1/1] (0.00ns)   --->   "%store_ln105 = store i1 %tmp_dest_V, i1 %tmp_out_dest_V" [equalizer.cpp:105]   --->   Operation 105 'store' 'store_ln105' <Predicate = (state_1 == 256 & !tmp_last_V)> <Delay = 0.00>
+ST_15 : Operation 106 [1/1] (0.00ns)   --->   "%store_ln105 = store i1 %tmp_id_V, i1 %tmp_out_id_V" [equalizer.cpp:105]   --->   Operation 106 'store' 'store_ln105' <Predicate = (state_1 == 256 & !tmp_last_V)> <Delay = 0.00>
+ST_15 : Operation 107 [1/1] (0.00ns)   --->   "%store_ln105 = store i1 %tmp_user_V, i1 %tmp_out_user_V" [equalizer.cpp:105]   --->   Operation 107 'store' 'store_ln105' <Predicate = (state_1 == 256 & !tmp_last_V)> <Delay = 0.00>
+ST_15 : Operation 108 [1/1] (0.00ns)   --->   "%store_ln105 = store i4 %tmp_strb_V, i4 %tmp_out_strb_V" [equalizer.cpp:105]   --->   Operation 108 'store' 'store_ln105' <Predicate = (state_1 == 256 & !tmp_last_V)> <Delay = 0.00>
+ST_15 : Operation 109 [1/1] (0.00ns)   --->   "%store_ln105 = store i4 %tmp_keep_V, i4 %tmp_out_keep_V" [equalizer.cpp:105]   --->   Operation 109 'store' 'store_ln105' <Predicate = (state_1 == 256 & !tmp_last_V)> <Delay = 0.00>
+ST_15 : Operation 110 [1/1] (0.00ns)   --->   "%store_ln105 = store i32 %accumulate, i32 %tmp_out_data_V" [equalizer.cpp:105]   --->   Operation 110 'store' 'store_ln105' <Predicate = (state_1 == 256 & !tmp_last_V)> <Delay = 0.00>
+ST_15 : Operation 111 [1/1] (0.00ns)   --->   "%br_ln105 = br void %if.end66" [equalizer.cpp:105]   --->   Operation 111 'br' 'br_ln105' <Predicate = (state_1 == 256 & !tmp_last_V)> <Delay = 0.00>
+ST_15 : Operation 112 [1/1] (0.00ns)   --->   "%br_ln27 = br void %while.body" [equalizer.cpp:27]   --->   Operation 112 'br' 'br_ln27' <Predicate = (state_1 != 16 & !tmp_last_V) | (state_1 == 16 & !tmp_last_V_1)> <Delay = 0.00>
 ST_15 : Operation 113 [1/1] (0.00ns)   --->   "%tmp_dest_V_1 = phi i1 %tmp_out_dest_V_1, void %sw.bb, i1 %tmp_out_dest_V_1, void %if.end24, i1 %tmp_dest_V, void %for.inc46.preheader, i1 %tmp_out_dest_V_1, void %sw.epilog"   --->   Operation 113 'phi' 'tmp_dest_V_1' <Predicate = (state_1 != 16 & tmp_last_V) | (state_1 == 16 & tmp_last_V_1)> <Delay = 0.00>
 ST_15 : Operation 114 [1/1] (0.00ns)   --->   "%tmp_id_V_1 = phi i1 %tmp_out_id_V_1, void %sw.bb, i1 %tmp_out_id_V_1, void %if.end24, i1 %tmp_id_V, void %for.inc46.preheader, i1 %tmp_out_id_V_1, void %sw.epilog"   --->   Operation 114 'phi' 'tmp_id_V_1' <Predicate = (state_1 != 16 & tmp_last_V) | (state_1 == 16 & tmp_last_V_1)> <Delay = 0.00>
 ST_15 : Operation 115 [1/1] (0.00ns)   --->   "%tmp_user_V_1 = phi i1 %tmp_out_user_V_1, void %sw.bb, i1 %tmp_out_user_V_1, void %if.end24, i1 %tmp_user_V, void %for.inc46.preheader, i1 %tmp_out_user_V_1, void %sw.epilog"   --->   Operation 115 'phi' 'tmp_user_V_1' <Predicate = (state_1 != 16 & tmp_last_V) | (state_1 == 16 & tmp_last_V_1)> <Delay = 0.00>
@@ -237,22 +237,22 @@ ST_15 : Operation 119 [2/2] (0.00ns)   --->   "%write_ln304 = write void @_ssdm_
 
 State 16 <SV = 2> <Delay = 1.58>
 ST_16 : Operation 120 [1/2] (0.00ns)   --->   "%call_ln0 = call void @equalizer_Pipeline_Coef_Clear_Loop, i32 %gmem, i64 %coefs_read"   --->   Operation 120 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_16 : Operation 121 [1/1] (1.58ns)   --->   "%br_ln45 = br void %VITIS_LOOP_48_1" [equalizer.cpp:45]   --->   Operation 121 'br' 'br_ln45' <Predicate = true> <Delay = 1.58>
+ST_16 : Operation 121 [1/1] (1.58ns)   --->   "%br_ln54 = br void %VITIS_LOOP_57_1" [equalizer.cpp:54]   --->   Operation 121 'br' 'br_ln54' <Predicate = true> <Delay = 1.58>
 
 State 17 <SV = 3> <Delay = 4.47>
-ST_17 : Operation 122 [1/1] (0.00ns)   --->   "%j = phi i2 %add_ln45, void %VITIS_LOOP_48_1.split, i2 0, void %for.inc.preheader" [equalizer.cpp:45]   --->   Operation 122 'phi' 'j' <Predicate = true> <Delay = 0.00>
-ST_17 : Operation 123 [1/1] (0.00ns)   --->   "%coef_scale = phi i32 %tmp_data_V_4, void %VITIS_LOOP_48_1.split, i32 %tmp_data_V, void %for.inc.preheader"   --->   Operation 123 'phi' 'coef_scale' <Predicate = true> <Delay = 0.00>
-ST_17 : Operation 124 [1/1] (0.00ns)   --->   "%p_4_0_0_0132_phi = phi i1 %tmp_last_V_2, void %VITIS_LOOP_48_1.split, i1 0, void %for.inc.preheader"   --->   Operation 124 'phi' 'p_4_0_0_0132_phi' <Predicate = true> <Delay = 0.00>
-ST_17 : Operation 125 [1/1] (0.95ns)   --->   "%icmp_ln45 = icmp_eq  i2 %j, i2 3" [equalizer.cpp:45]   --->   Operation 125 'icmp' 'icmp_ln45' <Predicate = true> <Delay = 0.95> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.95> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 122 [1/1] (0.00ns)   --->   "%j = phi i2 %add_ln54, void %VITIS_LOOP_57_1.split, i2 0, void %for.inc.preheader" [equalizer.cpp:54]   --->   Operation 122 'phi' 'j' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 123 [1/1] (0.00ns)   --->   "%coef_scale = phi i32 %tmp_data_V_4, void %VITIS_LOOP_57_1.split, i32 %tmp_data_V, void %for.inc.preheader"   --->   Operation 123 'phi' 'coef_scale' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 124 [1/1] (0.00ns)   --->   "%p_4_0_0_0132_phi = phi i1 %tmp_last_V_2, void %VITIS_LOOP_57_1.split, i1 0, void %for.inc.preheader"   --->   Operation 124 'phi' 'p_4_0_0_0132_phi' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 125 [1/1] (0.95ns)   --->   "%icmp_ln54 = icmp_eq  i2 %j, i2 3" [equalizer.cpp:54]   --->   Operation 125 'icmp' 'icmp_ln54' <Predicate = true> <Delay = 0.95> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.95> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 ST_17 : Operation 126 [1/1] (0.00ns)   --->   "%empty_23 = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 3, i64 3, i64 3"   --->   Operation 126 'speclooptripcount' 'empty_23' <Predicate = true> <Delay = 0.00>
-ST_17 : Operation 127 [1/1] (1.56ns)   --->   "%add_ln45 = add i2 %j, i2 1" [equalizer.cpp:45]   --->   Operation 127 'add' 'add_ln45' <Predicate = true> <Delay = 1.56> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.56> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_17 : Operation 128 [1/1] (0.00ns)   --->   "%br_ln45 = br i1 %icmp_ln45, void %VITIS_LOOP_48_1.split, void %if.end24.loopexit" [equalizer.cpp:45]   --->   Operation 128 'br' 'br_ln45' <Predicate = true> <Delay = 0.00>
-ST_17 : Operation 129 [1/1] (0.00ns)   --->   "%empty_24 = wait i32 @_ssdm_op_Wait"   --->   Operation 129 'wait' 'empty_24' <Predicate = (!icmp_ln45)> <Delay = 0.00>
-ST_17 : Operation 130 [2/2] (3.52ns)   --->   "%call_ln283 = call void @equalizer_Pipeline_VITIS_LOOP_48_1, i32 %gmem, i32 %input_r_V_data_V, i4 %input_r_V_keep_V, i4 %input_r_V_strb_V, i1 %input_r_V_user_V, i1 %input_r_V_last_V, i1 %input_r_V_id_V, i1 %input_r_V_dest_V, i32 %coef_scale, i64 %coefs_read"   --->   Operation 130 'call' 'call_ln283' <Predicate = (!icmp_ln45)> <Delay = 3.52> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_17 : Operation 131 [1/1] (1.58ns)   --->   "%br_ln0 = br void %if.end24"   --->   Operation 131 'br' 'br_ln0' <Predicate = (icmp_ln45)> <Delay = 1.58>
+ST_17 : Operation 127 [1/1] (1.56ns)   --->   "%add_ln54 = add i2 %j, i2 1" [equalizer.cpp:54]   --->   Operation 127 'add' 'add_ln54' <Predicate = true> <Delay = 1.56> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.56> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 128 [1/1] (0.00ns)   --->   "%br_ln54 = br i1 %icmp_ln54, void %VITIS_LOOP_57_1.split, void %if.end24.loopexit" [equalizer.cpp:54]   --->   Operation 128 'br' 'br_ln54' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 129 [1/1] (0.00ns)   --->   "%empty_24 = wait i32 @_ssdm_op_Wait"   --->   Operation 129 'wait' 'empty_24' <Predicate = (!icmp_ln54)> <Delay = 0.00>
+ST_17 : Operation 130 [2/2] (3.52ns)   --->   "%call_ln283 = call void @equalizer_Pipeline_VITIS_LOOP_57_1, i32 %gmem, i32 %input_r_V_data_V, i4 %input_r_V_keep_V, i4 %input_r_V_strb_V, i1 %input_r_V_user_V, i1 %input_r_V_last_V, i1 %input_r_V_id_V, i1 %input_r_V_dest_V, i32 %coef_scale, i64 %coefs_read"   --->   Operation 130 'call' 'call_ln283' <Predicate = (!icmp_ln54)> <Delay = 3.52> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_17 : Operation 131 [1/1] (1.58ns)   --->   "%br_ln0 = br void %if.end24"   --->   Operation 131 'br' 'br_ln0' <Predicate = (icmp_ln54)> <Delay = 1.58>
 
 State 18 <SV = 4> <Delay = 0.00>
-ST_18 : Operation 132 [1/2] (0.00ns)   --->   "%call_ln283 = call void @equalizer_Pipeline_VITIS_LOOP_48_1, i32 %gmem, i32 %input_r_V_data_V, i4 %input_r_V_keep_V, i4 %input_r_V_strb_V, i1 %input_r_V_user_V, i1 %input_r_V_last_V, i1 %input_r_V_id_V, i1 %input_r_V_dest_V, i32 %coef_scale, i64 %coefs_read"   --->   Operation 132 'call' 'call_ln283' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_18 : Operation 132 [1/2] (0.00ns)   --->   "%call_ln283 = call void @equalizer_Pipeline_VITIS_LOOP_57_1, i32 %gmem, i32 %input_r_V_data_V, i4 %input_r_V_keep_V, i4 %input_r_V_strb_V, i1 %input_r_V_user_V, i1 %input_r_V_last_V, i1 %input_r_V_id_V, i1 %input_r_V_dest_V, i32 %coef_scale, i64 %coefs_read"   --->   Operation 132 'call' 'call_ln283' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 19 <SV = 5> <Delay = 0.00>
 ST_19 : Operation 133 [1/1] (0.00ns)   --->   "%specloopname_ln14 = specloopname void @_ssdm_op_SpecLoopName, void @empty_15" [equalizer.cpp:14]   --->   Operation 133 'specloopname' 'specloopname_ln14' <Predicate = true> <Delay = 0.00>
@@ -260,21 +260,21 @@ ST_19 : Operation 134 [1/1] (0.00ns)   --->   "%empty_25 = wait i32 @_ssdm_op_Wa
 ST_19 : Operation 135 [1/1] (0.00ns)   --->   "%empty_26 = read i44 @_ssdm_op_Read.axis.volatile.i32P0A.i4P0A.i4P0A.i1P0A.i1P0A.i1P0A.i1P0A, i32 %input_r_V_data_V, i4 %input_r_V_keep_V, i4 %input_r_V_strb_V, i1 %input_r_V_user_V, i1 %input_r_V_last_V, i1 %input_r_V_id_V, i1 %input_r_V_dest_V"   --->   Operation 135 'read' 'empty_26' <Predicate = true> <Delay = 0.00> <CoreInst = "axis">   --->   Core 115 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
 ST_19 : Operation 136 [1/1] (0.00ns)   --->   "%tmp_data_V_4 = extractvalue i44 %empty_26"   --->   Operation 136 'extractvalue' 'tmp_data_V_4' <Predicate = true> <Delay = 0.00>
 ST_19 : Operation 137 [1/1] (0.00ns)   --->   "%tmp_last_V_2 = extractvalue i44 %empty_26"   --->   Operation 137 'extractvalue' 'tmp_last_V_2' <Predicate = true> <Delay = 0.00>
-ST_19 : Operation 138 [1/1] (0.00ns)   --->   "%br_ln45 = br void %VITIS_LOOP_48_1" [equalizer.cpp:45]   --->   Operation 138 'br' 'br_ln45' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 138 [1/1] (0.00ns)   --->   "%br_ln54 = br void %VITIS_LOOP_57_1" [equalizer.cpp:54]   --->   Operation 138 'br' 'br_ln54' <Predicate = true> <Delay = 0.00>
 
 State 20 <SV = 4> <Delay = 4.98>
 ST_20 : Operation 139 [1/1] (0.00ns)   --->   "%tmp_last_V_1 = phi i1 %tmp_last_V, void %sw.bb2, i1 %p_4_0_0_0132_phi, void %if.end24.loopexit"   --->   Operation 139 'phi' 'tmp_last_V_1' <Predicate = true> <Delay = 0.00>
-ST_20 : Operation 140 [1/1] (0.00ns) (grouped into LUT with out node icmp_ln61)   --->   "%tmp_data_V_2 = phi i32 %tmp_data_V, void %sw.bb2, i32 %coef_scale, void %if.end24.loopexit"   --->   Operation 140 'phi' 'tmp_data_V_2' <Predicate = true> <Delay = 0.00>
-ST_20 : Operation 141 [1/1] (2.47ns) (out node of the LUT)   --->   "%icmp_ln61 = icmp_eq  i32 %tmp_data_V_2, i32 43962" [equalizer.cpp:61]   --->   Operation 141 'icmp' 'icmp_ln61' <Predicate = true> <Delay = 2.47> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_20 : Operation 142 [1/1] (0.68ns)   --->   "%select_ln16_1 = select i1 %icmp_ln61, i32 256, i32 16" [equalizer.cpp:16]   --->   Operation 142 'select' 'select_ln16_1' <Predicate = true> <Delay = 0.68> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.68> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_20 : Operation 143 [1/1] (1.58ns)   --->   "%br_ln92 = br i1 %tmp_last_V_1, void %if.end24.if.end66_crit_edge, void %while.end" [equalizer.cpp:92]   --->   Operation 143 'br' 'br_ln92' <Predicate = true> <Delay = 1.58>
-ST_20 : Operation 144 [1/1] (1.82ns)   --->   "%store_ln92 = store i32 %select_ln16_1, i32 %state" [equalizer.cpp:92]   --->   Operation 144 'store' 'store_ln92' <Predicate = (!tmp_last_V_1)> <Delay = 1.82>
-ST_20 : Operation 145 [1/1] (1.58ns)   --->   "%store_ln92 = store i1 1, i1 %read_coefs" [equalizer.cpp:92]   --->   Operation 145 'store' 'store_ln92' <Predicate = (!tmp_last_V_1)> <Delay = 1.58>
-ST_20 : Operation 146 [1/1] (0.00ns)   --->   "%br_ln92 = br void %if.end66" [equalizer.cpp:92]   --->   Operation 146 'br' 'br_ln92' <Predicate = (!tmp_last_V_1)> <Delay = 0.00>
+ST_20 : Operation 140 [1/1] (0.00ns) (grouped into LUT with out node icmp_ln71)   --->   "%tmp_data_V_2 = phi i32 %tmp_data_V, void %sw.bb2, i32 %coef_scale, void %if.end24.loopexit"   --->   Operation 140 'phi' 'tmp_data_V_2' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 141 [1/1] (2.47ns) (out node of the LUT)   --->   "%icmp_ln71 = icmp_eq  i32 %tmp_data_V_2, i32 43962" [equalizer.cpp:71]   --->   Operation 141 'icmp' 'icmp_ln71' <Predicate = true> <Delay = 2.47> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 142 [1/1] (0.68ns)   --->   "%select_ln16_1 = select i1 %icmp_ln71, i32 256, i32 16" [equalizer.cpp:16]   --->   Operation 142 'select' 'select_ln16_1' <Predicate = true> <Delay = 0.68> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.68> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_20 : Operation 143 [1/1] (1.58ns)   --->   "%br_ln105 = br i1 %tmp_last_V_1, void %if.end24.if.end66_crit_edge, void %while.end" [equalizer.cpp:105]   --->   Operation 143 'br' 'br_ln105' <Predicate = true> <Delay = 1.58>
+ST_20 : Operation 144 [1/1] (1.82ns)   --->   "%store_ln105 = store i32 %select_ln16_1, i32 %state" [equalizer.cpp:105]   --->   Operation 144 'store' 'store_ln105' <Predicate = (!tmp_last_V_1)> <Delay = 1.82>
+ST_20 : Operation 145 [1/1] (1.58ns)   --->   "%store_ln105 = store i1 1, i1 %read_coefs" [equalizer.cpp:105]   --->   Operation 145 'store' 'store_ln105' <Predicate = (!tmp_last_V_1)> <Delay = 1.58>
+ST_20 : Operation 146 [1/1] (0.00ns)   --->   "%br_ln105 = br void %if.end66" [equalizer.cpp:105]   --->   Operation 146 'br' 'br_ln105' <Predicate = (!tmp_last_V_1)> <Delay = 0.00>
 
 State 21 <SV = 15> <Delay = 0.00>
 ST_21 : Operation 147 [1/2] (0.00ns)   --->   "%write_ln304 = write void @_ssdm_op_Write.axis.volatile.i32P0A.i4P0A.i4P0A.i1P0A.i1P0A.i1P0A.i1P0A, i32 %output_r_V_data_V, i4 %output_r_V_keep_V, i4 %output_r_V_strb_V, i1 %output_r_V_user_V, i1 %output_r_V_last_V, i1 %output_r_V_id_V, i1 %output_r_V_dest_V, i32 %tmp_data_V_5, i4 %tmp_keep_V_1, i4 %tmp_strb_V_1, i1 %tmp_user_V_1, i1 1, i1 %tmp_id_V_1, i1 %tmp_dest_V_1"   --->   Operation 147 'write' 'write_ln304' <Predicate = true> <Delay = 0.00> <CoreInst = "axis">   --->   Core 115 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
-ST_21 : Operation 148 [1/1] (0.00ns)   --->   "%ret_ln98 = ret" [equalizer.cpp:98]   --->   Operation 148 'ret' 'ret_ln98' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 148 [1/1] (0.00ns)   --->   "%ret_ln112 = ret" [equalizer.cpp:112]   --->   Operation 148 'ret' 'ret_ln112' <Predicate = true> <Delay = 0.00>
 
 
 ============================================================
@@ -344,11 +344,11 @@ specbitsmap_ln0     (specbitsmap      ) [ 0000000000000000000000]
 specbitsmap_ln0     (specbitsmap      ) [ 0000000000000000000000]
 specbitsmap_ln0     (specbitsmap      ) [ 0000000000000000000000]
 trunc_ln            (partselect       ) [ 0000000000000000000000]
-sext_ln76           (sext             ) [ 0000000000000000000000]
+sext_ln88           (sext             ) [ 0000000000000000000000]
 gmem_addr           (getelementptr    ) [ 0011111111111111111110]
-store_ln26          (store            ) [ 0000000000000000000000]
-store_ln26          (store            ) [ 0000000000000000000000]
-br_ln26             (br               ) [ 0000000000000000000000]
+store_ln27          (store            ) [ 0000000000000000000000]
+store_ln27          (store            ) [ 0000000000000000000000]
+br_ln27             (br               ) [ 0000000000000000000000]
 tmp_out_data_V_1    (load             ) [ 0011111111111111111110]
 tmp_out_keep_V_1    (load             ) [ 0011111111111111111110]
 tmp_out_strb_V_1    (load             ) [ 0011111111111111111110]
@@ -365,33 +365,33 @@ tmp_user_V          (extractvalue     ) [ 0011111111111111111110]
 tmp_last_V          (extractvalue     ) [ 0011111111111111111110]
 tmp_id_V            (extractvalue     ) [ 0011111111111111111110]
 tmp_dest_V          (extractvalue     ) [ 0011111111111111111110]
-switch_ln29         (switch           ) [ 0000000000000000000000]
+switch_ln31         (switch           ) [ 0000000000000000000000]
 read_coefs_load     (load             ) [ 0011111111111111111110]
-br_ln37             (br               ) [ 0011111111111111111110]
-icmp_ln31           (icmp             ) [ 0000000000000000000000]
+br_ln43             (br               ) [ 0011111111111111111110]
+icmp_ln35           (icmp             ) [ 0000000000000000000000]
 select_ln16         (select           ) [ 0000000000000000000000]
-br_ln92             (br               ) [ 0011111111111111111110]
-store_ln92          (store            ) [ 0000000000000000000000]
-br_ln92             (br               ) [ 0000000000000000000000]
-br_ln92             (br               ) [ 0011111111111111111110]
+br_ln105            (br               ) [ 0011111111111111111110]
+store_ln105         (store            ) [ 0000000000000000000000]
+br_ln105            (br               ) [ 0000000000000000000000]
+br_ln105            (br               ) [ 0011111111111111111110]
 call_ln0            (call             ) [ 0000000000000000000000]
-store_ln77          (store            ) [ 0000000000000000000000]
+store_ln89          (store            ) [ 0000000000000000000000]
 gmem_load_1_req     (readreq          ) [ 0000000000000000000000]
 gmem_addr_read      (read             ) [ 0000000000001100000000]
-mul_ln76            (mul              ) [ 0000000000000010000000]
+mul_ln88            (mul              ) [ 0000000000000010000000]
 accumulate_loc_load (load             ) [ 0000000000000000000000]
 accumulate          (add              ) [ 0010000000000001111110]
 write_ln304         (write            ) [ 0000000000000000000000]
-br_ln92             (br               ) [ 0000000000000000000000]
-store_ln92          (store            ) [ 0000000000000000000000]
-store_ln92          (store            ) [ 0000000000000000000000]
-store_ln92          (store            ) [ 0000000000000000000000]
-store_ln92          (store            ) [ 0000000000000000000000]
-store_ln92          (store            ) [ 0000000000000000000000]
-store_ln92          (store            ) [ 0000000000000000000000]
-store_ln92          (store            ) [ 0000000000000000000000]
-br_ln92             (br               ) [ 0000000000000000000000]
-br_ln26             (br               ) [ 0000000000000000000000]
+br_ln105            (br               ) [ 0000000000000000000000]
+store_ln105         (store            ) [ 0000000000000000000000]
+store_ln105         (store            ) [ 0000000000000000000000]
+store_ln105         (store            ) [ 0000000000000000000000]
+store_ln105         (store            ) [ 0000000000000000000000]
+store_ln105         (store            ) [ 0000000000000000000000]
+store_ln105         (store            ) [ 0000000000000000000000]
+store_ln105         (store            ) [ 0000000000000000000000]
+br_ln105            (br               ) [ 0000000000000000000000]
+br_ln27             (br               ) [ 0000000000000000000000]
 tmp_dest_V_1        (phi              ) [ 0001111111111111000001]
 tmp_id_V_1          (phi              ) [ 0001111111111111000001]
 tmp_user_V_1        (phi              ) [ 0001111111111111000001]
@@ -399,14 +399,14 @@ tmp_strb_V_1        (phi              ) [ 0001111111111111000001]
 tmp_keep_V_1        (phi              ) [ 0001111111111111000001]
 tmp_data_V_5        (phi              ) [ 0001111111111111000001]
 call_ln0            (call             ) [ 0000000000000000000000]
-br_ln45             (br               ) [ 0011111111111111111110]
+br_ln54             (br               ) [ 0011111111111111111110]
 j                   (phi              ) [ 0000000000000000010000]
 coef_scale          (phi              ) [ 0011111111111111011010]
 p_4_0_0_0132_phi    (phi              ) [ 0011111111111111010010]
-icmp_ln45           (icmp             ) [ 0011111111111111111110]
+icmp_ln54           (icmp             ) [ 0011111111111111111110]
 empty_23            (speclooptripcount) [ 0000000000000000000000]
-add_ln45            (add              ) [ 0011111111111111111110]
-br_ln45             (br               ) [ 0000000000000000000000]
+add_ln54            (add              ) [ 0011111111111111111110]
+br_ln54             (br               ) [ 0000000000000000000000]
 empty_24            (wait             ) [ 0000000000000000000000]
 br_ln0              (br               ) [ 0011111111111111111110]
 call_ln283          (call             ) [ 0000000000000000000000]
@@ -415,17 +415,17 @@ empty_25            (wait             ) [ 0000000000000000000000]
 empty_26            (read             ) [ 0000000000000000000000]
 tmp_data_V_4        (extractvalue     ) [ 0011111111111111111110]
 tmp_last_V_2        (extractvalue     ) [ 0011111111111111111110]
-br_ln45             (br               ) [ 0011111111111111111110]
+br_ln54             (br               ) [ 0011111111111111111110]
 tmp_last_V_1        (phi              ) [ 0011111111111111111110]
 tmp_data_V_2        (phi              ) [ 0000000000000000000010]
-icmp_ln61           (icmp             ) [ 0000000000000000000000]
+icmp_ln71           (icmp             ) [ 0000000000000000000000]
 select_ln16_1       (select           ) [ 0000000000000000000000]
-br_ln92             (br               ) [ 0011111111111111111110]
-store_ln92          (store            ) [ 0000000000000000000000]
-store_ln92          (store            ) [ 0000000000000000000000]
-br_ln92             (br               ) [ 0000000000000000000000]
+br_ln105            (br               ) [ 0011111111111111111110]
+store_ln105         (store            ) [ 0000000000000000000000]
+store_ln105         (store            ) [ 0000000000000000000000]
+br_ln105            (br               ) [ 0000000000000000000000]
 write_ln304         (write            ) [ 0000000000000000000000]
-ret_ln98            (ret              ) [ 0000000000000000000000]
+ret_ln112           (ret              ) [ 0000000000000000000000]
 </LifeTime>
 
 <model>
@@ -1004,7 +1004,7 @@ ret_ln98            (ret              ) [ 0000000000000000000000]
 <pin id="127" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="equalizer_Pipeline_VITIS_LOOP_48_1"/></StgValue>
+<StgValue><ssdm name="equalizer_Pipeline_VITIS_LOOP_57_1"/></StgValue>
 </bind>
 </comp>
 
@@ -1205,7 +1205,7 @@ ret_ln98            (ret              ) [ 0000000000000000000000]
 </bind>
 </comp>
 
-<comp id="230" class="1004" name="store_ln77_access_fu_230">
+<comp id="230" class="1004" name="store_ln89_access_fu_230">
 <pin_list>
 <pin id="231" dir="0" index="0" bw="32" slack="0"/>
 <pin id="232" dir="0" index="1" bw="32" slack="2"/>
@@ -1214,7 +1214,7 @@ ret_ln98            (ret              ) [ 0000000000000000000000]
 </pin_list>
 <bind>
 <opcode="store(28) " fcode="store"/>
-<opset="store_ln77/4 "/>
+<opset="store_ln89/4 "/>
 </bind>
 </comp>
 
@@ -1534,7 +1534,7 @@ ret_ln98            (ret              ) [ 0000000000000000000000]
 </bind>
 </comp>
 
-<comp id="403" class="1004" name="grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403">
+<comp id="403" class="1004" name="grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403">
 <pin_list>
 <pin id="404" dir="0" index="0" bw="0" slack="0"/>
 <pin id="405" dir="0" index="1" bw="32" slack="0"/>
@@ -1591,14 +1591,14 @@ ret_ln98            (ret              ) [ 0000000000000000000000]
 </bind>
 </comp>
 
-<comp id="444" class="1004" name="sext_ln76_fu_444">
+<comp id="444" class="1004" name="sext_ln88_fu_444">
 <pin_list>
 <pin id="445" dir="0" index="0" bw="62" slack="0"/>
 <pin id="446" dir="1" index="1" bw="64" slack="0"/>
 </pin_list>
 <bind>
 <opcode="sext(35) " fcode="sext"/>
-<opset="sext_ln76/1 "/>
+<opset="sext_ln88/1 "/>
 </bind>
 </comp>
 
@@ -1614,7 +1614,7 @@ ret_ln98            (ret              ) [ 0000000000000000000000]
 </bind>
 </comp>
 
-<comp id="454" class="1004" name="store_ln26_store_fu_454">
+<comp id="454" class="1004" name="store_ln27_store_fu_454">
 <pin_list>
 <pin id="455" dir="0" index="0" bw="1" slack="0"/>
 <pin id="456" dir="0" index="1" bw="32" slack="0"/>
@@ -1622,11 +1622,11 @@ ret_ln98            (ret              ) [ 0000000000000000000000]
 </pin_list>
 <bind>
 <opcode="store(28) " fcode="store"/>
-<opset="store_ln26/1 "/>
+<opset="store_ln27/1 "/>
 </bind>
 </comp>
 
-<comp id="459" class="1004" name="store_ln26_store_fu_459">
+<comp id="459" class="1004" name="store_ln27_store_fu_459">
 <pin_list>
 <pin id="460" dir="0" index="0" bw="1" slack="0"/>
 <pin id="461" dir="0" index="1" bw="1" slack="0"/>
@@ -1634,7 +1634,7 @@ ret_ln98            (ret              ) [ 0000000000000000000000]
 </pin_list>
 <bind>
 <opcode="store(28) " fcode="store"/>
-<opset="store_ln26/1 "/>
+<opset="store_ln27/1 "/>
 </bind>
 </comp>
 
@@ -1781,7 +1781,7 @@ ret_ln98            (ret              ) [ 0000000000000000000000]
 </bind>
 </comp>
 
-<comp id="508" class="1004" name="icmp_ln31_fu_508">
+<comp id="508" class="1004" name="icmp_ln35_fu_508">
 <pin_list>
 <pin id="509" dir="0" index="0" bw="32" slack="0"/>
 <pin id="510" dir="0" index="1" bw="17" slack="0"/>
@@ -1789,7 +1789,7 @@ ret_ln98            (ret              ) [ 0000000000000000000000]
 </pin_list>
 <bind>
 <opcode="icmp(45) " fcode="icmp"/>
-<opset="icmp_ln31/2 "/>
+<opset="icmp_ln35/2 "/>
 </bind>
 </comp>
 
@@ -1806,7 +1806,7 @@ ret_ln98            (ret              ) [ 0000000000000000000000]
 </bind>
 </comp>
 
-<comp id="522" class="1004" name="store_ln92_store_fu_522">
+<comp id="522" class="1004" name="store_ln105_store_fu_522">
 <pin_list>
 <pin id="523" dir="0" index="0" bw="6" slack="0"/>
 <pin id="524" dir="0" index="1" bw="32" slack="1"/>
@@ -1814,7 +1814,7 @@ ret_ln98            (ret              ) [ 0000000000000000000000]
 </pin_list>
 <bind>
 <opcode="store(28) " fcode="store"/>
-<opset="store_ln92/2 "/>
+<opset="store_ln105/2 "/>
 </bind>
 </comp>
 
@@ -1826,7 +1826,7 @@ ret_ln98            (ret              ) [ 0000000000000000000000]
 </pin_list>
 <bind>
 <opcode="mul(12) " fcode="mul"/>
-<opset="mul_ln76/12 "/>
+<opset="mul_ln88/12 "/>
 </bind>
 </comp>
 
@@ -1853,7 +1853,7 @@ ret_ln98            (ret              ) [ 0000000000000000000000]
 </bind>
 </comp>
 
-<comp id="540" class="1004" name="store_ln92_store_fu_540">
+<comp id="540" class="1004" name="store_ln105_store_fu_540">
 <pin_list>
 <pin id="541" dir="0" index="0" bw="10" slack="0"/>
 <pin id="542" dir="0" index="1" bw="32" slack="14"/>
@@ -1861,11 +1861,11 @@ ret_ln98            (ret              ) [ 0000000000000000000000]
 </pin_list>
 <bind>
 <opcode="store(28) " fcode="store"/>
-<opset="store_ln92/15 "/>
+<opset="store_ln105/15 "/>
 </bind>
 </comp>
 
-<comp id="545" class="1004" name="store_ln92_store_fu_545">
+<comp id="545" class="1004" name="store_ln105_store_fu_545">
 <pin_list>
 <pin id="546" dir="0" index="0" bw="1" slack="13"/>
 <pin id="547" dir="0" index="1" bw="1" slack="14"/>
@@ -1873,11 +1873,11 @@ ret_ln98            (ret              ) [ 0000000000000000000000]
 </pin_list>
 <bind>
 <opcode="store(28) " fcode="store"/>
-<opset="store_ln92/15 "/>
+<opset="store_ln105/15 "/>
 </bind>
 </comp>
 
-<comp id="549" class="1004" name="store_ln92_store_fu_549">
+<comp id="549" class="1004" name="store_ln105_store_fu_549">
 <pin_list>
 <pin id="550" dir="0" index="0" bw="1" slack="13"/>
 <pin id="551" dir="0" index="1" bw="1" slack="14"/>
@@ -1885,11 +1885,11 @@ ret_ln98            (ret              ) [ 0000000000000000000000]
 </pin_list>
 <bind>
 <opcode="store(28) " fcode="store"/>
-<opset="store_ln92/15 "/>
+<opset="store_ln105/15 "/>
 </bind>
 </comp>
 
-<comp id="553" class="1004" name="store_ln92_store_fu_553">
+<comp id="553" class="1004" name="store_ln105_store_fu_553">
 <pin_list>
 <pin id="554" dir="0" index="0" bw="1" slack="13"/>
 <pin id="555" dir="0" index="1" bw="1" slack="14"/>
@@ -1897,11 +1897,11 @@ ret_ln98            (ret              ) [ 0000000000000000000000]
 </pin_list>
 <bind>
 <opcode="store(28) " fcode="store"/>
-<opset="store_ln92/15 "/>
+<opset="store_ln105/15 "/>
 </bind>
 </comp>
 
-<comp id="557" class="1004" name="store_ln92_store_fu_557">
+<comp id="557" class="1004" name="store_ln105_store_fu_557">
 <pin_list>
 <pin id="558" dir="0" index="0" bw="4" slack="13"/>
 <pin id="559" dir="0" index="1" bw="4" slack="14"/>
@@ -1909,11 +1909,11 @@ ret_ln98            (ret              ) [ 0000000000000000000000]
 </pin_list>
 <bind>
 <opcode="store(28) " fcode="store"/>
-<opset="store_ln92/15 "/>
+<opset="store_ln105/15 "/>
 </bind>
 </comp>
 
-<comp id="561" class="1004" name="store_ln92_store_fu_561">
+<comp id="561" class="1004" name="store_ln105_store_fu_561">
 <pin_list>
 <pin id="562" dir="0" index="0" bw="4" slack="13"/>
 <pin id="563" dir="0" index="1" bw="4" slack="14"/>
@@ -1921,11 +1921,11 @@ ret_ln98            (ret              ) [ 0000000000000000000000]
 </pin_list>
 <bind>
 <opcode="store(28) " fcode="store"/>
-<opset="store_ln92/15 "/>
+<opset="store_ln105/15 "/>
 </bind>
 </comp>
 
-<comp id="565" class="1004" name="store_ln92_store_fu_565">
+<comp id="565" class="1004" name="store_ln105_store_fu_565">
 <pin_list>
 <pin id="566" dir="0" index="0" bw="32" slack="1"/>
 <pin id="567" dir="0" index="1" bw="32" slack="14"/>
@@ -1933,11 +1933,11 @@ ret_ln98            (ret              ) [ 0000000000000000000000]
 </pin_list>
 <bind>
 <opcode="store(28) " fcode="store"/>
-<opset="store_ln92/15 "/>
+<opset="store_ln105/15 "/>
 </bind>
 </comp>
 
-<comp id="569" class="1004" name="icmp_ln45_fu_569">
+<comp id="569" class="1004" name="icmp_ln54_fu_569">
 <pin_list>
 <pin id="570" dir="0" index="0" bw="2" slack="0"/>
 <pin id="571" dir="0" index="1" bw="1" slack="0"/>
@@ -1945,11 +1945,11 @@ ret_ln98            (ret              ) [ 0000000000000000000000]
 </pin_list>
 <bind>
 <opcode="icmp(45) " fcode="icmp"/>
-<opset="icmp_ln45/17 "/>
+<opset="icmp_ln54/17 "/>
 </bind>
 </comp>
 
-<comp id="575" class="1004" name="add_ln45_fu_575">
+<comp id="575" class="1004" name="add_ln54_fu_575">
 <pin_list>
 <pin id="576" dir="0" index="0" bw="2" slack="0"/>
 <pin id="577" dir="0" index="1" bw="1" slack="0"/>
@@ -1957,11 +1957,11 @@ ret_ln98            (ret              ) [ 0000000000000000000000]
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
-<opset="add_ln45/17 "/>
+<opset="add_ln54/17 "/>
 </bind>
 </comp>
 
-<comp id="581" class="1004" name="icmp_ln61_fu_581">
+<comp id="581" class="1004" name="icmp_ln71_fu_581">
 <pin_list>
 <pin id="582" dir="0" index="0" bw="32" slack="0"/>
 <pin id="583" dir="0" index="1" bw="17" slack="0"/>
@@ -1969,7 +1969,7 @@ ret_ln98            (ret              ) [ 0000000000000000000000]
 </pin_list>
 <bind>
 <opcode="icmp(45) " fcode="icmp"/>
-<opset="icmp_ln61/20 "/>
+<opset="icmp_ln71/20 "/>
 </bind>
 </comp>
 
@@ -1986,7 +1986,7 @@ ret_ln98            (ret              ) [ 0000000000000000000000]
 </bind>
 </comp>
 
-<comp id="595" class="1004" name="store_ln92_store_fu_595">
+<comp id="595" class="1004" name="store_ln105_store_fu_595">
 <pin_list>
 <pin id="596" dir="0" index="0" bw="10" slack="0"/>
 <pin id="597" dir="0" index="1" bw="32" slack="4"/>
@@ -1994,11 +1994,11 @@ ret_ln98            (ret              ) [ 0000000000000000000000]
 </pin_list>
 <bind>
 <opcode="store(28) " fcode="store"/>
-<opset="store_ln92/20 "/>
+<opset="store_ln105/20 "/>
 </bind>
 </comp>
 
-<comp id="600" class="1004" name="store_ln92_store_fu_600">
+<comp id="600" class="1004" name="store_ln105_store_fu_600">
 <pin_list>
 <pin id="601" dir="0" index="0" bw="1" slack="0"/>
 <pin id="602" dir="0" index="1" bw="1" slack="4"/>
@@ -2006,7 +2006,7 @@ ret_ln98            (ret              ) [ 0000000000000000000000]
 </pin_list>
 <bind>
 <opcode="store(28) " fcode="store"/>
-<opset="store_ln92/20 "/>
+<opset="store_ln105/20 "/>
 </bind>
 </comp>
 
@@ -2210,13 +2210,13 @@ ret_ln98            (ret              ) [ 0000000000000000000000]
 </bind>
 </comp>
 
-<comp id="755" class="1005" name="mul_ln76_reg_755">
+<comp id="755" class="1005" name="mul_ln88_reg_755">
 <pin_list>
 <pin id="756" dir="0" index="0" bw="32" slack="1"/>
 <pin id="757" dir="1" index="1" bw="32" slack="1"/>
 </pin_list>
 <bind>
-<opset="mul_ln76 "/>
+<opset="mul_ln88 "/>
 </bind>
 </comp>
 
@@ -2230,13 +2230,13 @@ ret_ln98            (ret              ) [ 0000000000000000000000]
 </bind>
 </comp>
 
-<comp id="770" class="1005" name="add_ln45_reg_770">
+<comp id="770" class="1005" name="add_ln54_reg_770">
 <pin_list>
 <pin id="771" dir="0" index="0" bw="2" slack="0"/>
 <pin id="772" dir="1" index="1" bw="2" slack="0"/>
 </pin_list>
 <bind>
-<opset="add_ln45 "/>
+<opset="add_ln54 "/>
 </bind>
 </comp>
 
@@ -2674,18 +2674,18 @@ ret_ln98            (ret              ) [ 0000000000000000000000]
 	Port: equalizer : signal_shift_reg | {2 3 }
   - Chain level:
 	State 1
-		sext_ln76 : 1
+		sext_ln88 : 1
 		gmem_addr : 2
-		store_ln26 : 1
-		store_ln26 : 1
+		store_ln27 : 1
+		store_ln27 : 1
 	State 2
-		switch_ln29 : 1
-		br_ln37 : 1
-		icmp_ln31 : 1
+		switch_ln31 : 1
+		br_ln43 : 1
+		icmp_ln35 : 1
 		select_ln16 : 2
-		br_ln92 : 1
-		store_ln92 : 3
-		br_ln92 : 1
+		br_ln105 : 1
+		store_ln105 : 3
+		br_ln105 : 1
 	State 3
 	State 4
 	State 5
@@ -2710,17 +2710,17 @@ ret_ln98            (ret              ) [ 0000000000000000000000]
 		write_ln304 : 2
 	State 16
 	State 17
-		icmp_ln45 : 1
-		add_ln45 : 1
-		br_ln45 : 2
+		icmp_ln54 : 1
+		add_ln54 : 1
+		br_ln54 : 2
 		call_ln283 : 1
 	State 18
 	State 19
 	State 20
-		icmp_ln61 : 1
+		icmp_ln71 : 1
 		select_ln16_1 : 2
-		br_ln92 : 1
-		store_ln92 : 3
+		br_ln105 : 1
+		store_ln105 : 3
 	State 21
 
 
@@ -2734,16 +2734,16 @@ ret_ln98            (ret              ) [ 0000000000000000000000]
 |----------|-----------------------------------------------------|---------|---------|---------|---------|
 |          | grp_equalizer_Pipeline_Shift_Accumulate_Loop_fu_386 |    3    |  1.588  |   347   |   193   |
 |   call   |    grp_equalizer_Pipeline_Coef_Clear_Loop_fu_396    |    0    |  1.588  |    41   |    86   |
-|          |    grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403    |    3    |  1.7073 |   365   |   184   |
+|          |    grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403    |    3    |  1.7073 |   365   |   184   |
 |----------|-----------------------------------------------------|---------|---------|---------|---------|
 |    mul   |                      grp_fu_527                     |    3    |    0    |   165   |    50   |
 |----------|-----------------------------------------------------|---------|---------|---------|---------|
 |    add   |                  accumulate_fu_534                  |    0    |    0    |    0    |    39   |
-|          |                   add_ln45_fu_575                   |    0    |    0    |    0    |    10   |
+|          |                   add_ln54_fu_575                   |    0    |    0    |    0    |    10   |
 |----------|-----------------------------------------------------|---------|---------|---------|---------|
-|          |                   icmp_ln31_fu_508                  |    0    |    0    |    0    |    18   |
-|   icmp   |                   icmp_ln45_fu_569                  |    0    |    0    |    0    |    8    |
-|          |                   icmp_ln61_fu_581                  |    0    |    0    |    0    |    18   |
+|          |                   icmp_ln35_fu_508                  |    0    |    0    |    0    |    18   |
+|   icmp   |                   icmp_ln54_fu_569                  |    0    |    0    |    0    |    8    |
+|          |                   icmp_ln71_fu_581                  |    0    |    0    |    0    |    18   |
 |----------|-----------------------------------------------------|---------|---------|---------|---------|
 |  select  |                  select_ln16_fu_514                 |    0    |    0    |    0    |    6    |
 |          |                 select_ln16_1_fu_587                |    0    |    0    |    0    |    10   |
@@ -2766,7 +2766,7 @@ ret_ln98            (ret              ) [ 0000000000000000000000]
 |----------|-----------------------------------------------------|---------|---------|---------|---------|
 |partselect|                   trunc_ln_fu_434                   |    0    |    0    |    0    |    0    |
 |----------|-----------------------------------------------------|---------|---------|---------|---------|
-|   sext   |                   sext_ln76_fu_444                  |    0    |    0    |    0    |    0    |
+|   sext   |                   sext_ln88_fu_444                  |    0    |    0    |    0    |    0    |
 |----------|-----------------------------------------------------|---------|---------|---------|---------|
 |   Total  |                                                     |    9    |  4.8833 |   918   |   622   |
 |----------|-----------------------------------------------------|---------|---------|---------|---------|
@@ -2786,13 +2786,13 @@ Memories:
 +------------------------+--------+
 | accumulate_loc_reg_664 |   32   |
 |   accumulate_reg_760   |   32   |
-|    add_ln45_reg_770    |    2   |
+|    add_ln54_reg_770    |    2   |
 |   coef_scale_reg_343   |   32   |
 |   coefs_read_reg_657   |   64   |
 | gmem_addr_read_reg_750 |   32   |
 |    gmem_addr_reg_670   |   32   |
 |        j_reg_332       |    2   |
-|    mul_ln76_reg_755    |   32   |
+|    mul_ln88_reg_755    |   32   |
 |p_4_0_0_0132_phi_reg_353|    1   |
 |   read_coefs_reg_641   |    1   |
 |     state_1_reg_694    |   32   |

@@ -212,13 +212,13 @@ architecture behav of equalizer is
     signal tmp_dest_V_reg_740 : STD_LOGIC_VECTOR (0 downto 0);
     signal gmem_addr_read_reg_750 : STD_LOGIC_VECTOR (31 downto 0);
     signal grp_fu_527_p2 : STD_LOGIC_VECTOR (31 downto 0);
-    signal mul_ln76_reg_755 : STD_LOGIC_VECTOR (31 downto 0);
+    signal mul_ln88_reg_755 : STD_LOGIC_VECTOR (31 downto 0);
     signal ap_CS_fsm_state13 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state13 : signal is "none";
     signal accumulate_fu_534_p2 : STD_LOGIC_VECTOR (31 downto 0);
     signal accumulate_reg_760 : STD_LOGIC_VECTOR (31 downto 0);
-    signal add_ln45_fu_575_p2 : STD_LOGIC_VECTOR (1 downto 0);
-    signal add_ln45_reg_770 : STD_LOGIC_VECTOR (1 downto 0);
+    signal add_ln54_fu_575_p2 : STD_LOGIC_VECTOR (1 downto 0);
+    signal add_ln54_reg_770 : STD_LOGIC_VECTOR (1 downto 0);
     signal ap_CS_fsm_state17 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state17 : signal is "none";
     signal grp_equalizer_Pipeline_Shift_Accumulate_Loop_fu_386_ap_start : STD_LOGIC;
@@ -304,46 +304,46 @@ architecture behav of equalizer is
     signal grp_equalizer_Pipeline_Coef_Clear_Loop_fu_396_m_axi_gmem_ARUSER : STD_LOGIC_VECTOR (0 downto 0);
     signal grp_equalizer_Pipeline_Coef_Clear_Loop_fu_396_m_axi_gmem_RREADY : STD_LOGIC;
     signal grp_equalizer_Pipeline_Coef_Clear_Loop_fu_396_m_axi_gmem_BREADY : STD_LOGIC;
-    signal grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_ap_start : STD_LOGIC;
-    signal grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_ap_done : STD_LOGIC;
-    signal grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_ap_idle : STD_LOGIC;
-    signal grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_ap_ready : STD_LOGIC;
-    signal grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_AWVALID : STD_LOGIC;
-    signal grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_AWADDR : STD_LOGIC_VECTOR (63 downto 0);
-    signal grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_AWID : STD_LOGIC_VECTOR (0 downto 0);
-    signal grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_AWLEN : STD_LOGIC_VECTOR (31 downto 0);
-    signal grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_AWSIZE : STD_LOGIC_VECTOR (2 downto 0);
-    signal grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_AWBURST : STD_LOGIC_VECTOR (1 downto 0);
-    signal grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_AWLOCK : STD_LOGIC_VECTOR (1 downto 0);
-    signal grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_AWCACHE : STD_LOGIC_VECTOR (3 downto 0);
-    signal grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_AWPROT : STD_LOGIC_VECTOR (2 downto 0);
-    signal grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_AWQOS : STD_LOGIC_VECTOR (3 downto 0);
-    signal grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_AWREGION : STD_LOGIC_VECTOR (3 downto 0);
-    signal grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_AWUSER : STD_LOGIC_VECTOR (0 downto 0);
-    signal grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_WVALID : STD_LOGIC;
-    signal grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_WDATA : STD_LOGIC_VECTOR (31 downto 0);
-    signal grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_WSTRB : STD_LOGIC_VECTOR (3 downto 0);
-    signal grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_WLAST : STD_LOGIC;
-    signal grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_WID : STD_LOGIC_VECTOR (0 downto 0);
-    signal grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_WUSER : STD_LOGIC_VECTOR (0 downto 0);
-    signal grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_ARVALID : STD_LOGIC;
-    signal grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_ARADDR : STD_LOGIC_VECTOR (63 downto 0);
-    signal grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_ARID : STD_LOGIC_VECTOR (0 downto 0);
-    signal grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_ARLEN : STD_LOGIC_VECTOR (31 downto 0);
-    signal grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_ARSIZE : STD_LOGIC_VECTOR (2 downto 0);
-    signal grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_ARBURST : STD_LOGIC_VECTOR (1 downto 0);
-    signal grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_ARLOCK : STD_LOGIC_VECTOR (1 downto 0);
-    signal grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_ARCACHE : STD_LOGIC_VECTOR (3 downto 0);
-    signal grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_ARPROT : STD_LOGIC_VECTOR (2 downto 0);
-    signal grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_ARQOS : STD_LOGIC_VECTOR (3 downto 0);
-    signal grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_ARREGION : STD_LOGIC_VECTOR (3 downto 0);
-    signal grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_ARUSER : STD_LOGIC_VECTOR (0 downto 0);
-    signal grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_RREADY : STD_LOGIC;
-    signal grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_BREADY : STD_LOGIC;
-    signal grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_input_r_TREADY : STD_LOGIC;
-    signal grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_grp_fu_527_p_din0 : STD_LOGIC_VECTOR (31 downto 0);
-    signal grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_grp_fu_527_p_din1 : STD_LOGIC_VECTOR (31 downto 0);
-    signal grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_grp_fu_527_p_ce : STD_LOGIC;
+    signal grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_ap_start : STD_LOGIC;
+    signal grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_ap_done : STD_LOGIC;
+    signal grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_ap_idle : STD_LOGIC;
+    signal grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_ap_ready : STD_LOGIC;
+    signal grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_AWVALID : STD_LOGIC;
+    signal grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_AWADDR : STD_LOGIC_VECTOR (63 downto 0);
+    signal grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_AWID : STD_LOGIC_VECTOR (0 downto 0);
+    signal grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_AWLEN : STD_LOGIC_VECTOR (31 downto 0);
+    signal grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_AWSIZE : STD_LOGIC_VECTOR (2 downto 0);
+    signal grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_AWBURST : STD_LOGIC_VECTOR (1 downto 0);
+    signal grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_AWLOCK : STD_LOGIC_VECTOR (1 downto 0);
+    signal grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_AWCACHE : STD_LOGIC_VECTOR (3 downto 0);
+    signal grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_AWPROT : STD_LOGIC_VECTOR (2 downto 0);
+    signal grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_AWQOS : STD_LOGIC_VECTOR (3 downto 0);
+    signal grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_AWREGION : STD_LOGIC_VECTOR (3 downto 0);
+    signal grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_AWUSER : STD_LOGIC_VECTOR (0 downto 0);
+    signal grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_WVALID : STD_LOGIC;
+    signal grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_WDATA : STD_LOGIC_VECTOR (31 downto 0);
+    signal grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_WSTRB : STD_LOGIC_VECTOR (3 downto 0);
+    signal grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_WLAST : STD_LOGIC;
+    signal grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_WID : STD_LOGIC_VECTOR (0 downto 0);
+    signal grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_WUSER : STD_LOGIC_VECTOR (0 downto 0);
+    signal grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_ARVALID : STD_LOGIC;
+    signal grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_ARADDR : STD_LOGIC_VECTOR (63 downto 0);
+    signal grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_ARID : STD_LOGIC_VECTOR (0 downto 0);
+    signal grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_ARLEN : STD_LOGIC_VECTOR (31 downto 0);
+    signal grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_ARSIZE : STD_LOGIC_VECTOR (2 downto 0);
+    signal grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_ARBURST : STD_LOGIC_VECTOR (1 downto 0);
+    signal grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_ARLOCK : STD_LOGIC_VECTOR (1 downto 0);
+    signal grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_ARCACHE : STD_LOGIC_VECTOR (3 downto 0);
+    signal grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_ARPROT : STD_LOGIC_VECTOR (2 downto 0);
+    signal grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_ARQOS : STD_LOGIC_VECTOR (3 downto 0);
+    signal grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_ARREGION : STD_LOGIC_VECTOR (3 downto 0);
+    signal grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_ARUSER : STD_LOGIC_VECTOR (0 downto 0);
+    signal grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_RREADY : STD_LOGIC;
+    signal grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_BREADY : STD_LOGIC;
+    signal grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_input_r_TREADY : STD_LOGIC;
+    signal grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_grp_fu_527_p_din0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_grp_fu_527_p_din1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_grp_fu_527_p_ce : STD_LOGIC;
     signal gmem_AWVALID : STD_LOGIC;
     signal gmem_AWREADY : STD_LOGIC;
     signal gmem_AWADDR : STD_LOGIC_VECTOR (63 downto 0);
@@ -386,16 +386,16 @@ architecture behav of equalizer is
     signal coef_scale_reg_343 : STD_LOGIC_VECTOR (31 downto 0);
     signal p_4_0_0_0132_phi_reg_353 : STD_LOGIC_VECTOR (0 downto 0);
     signal read_coefs_load_load_fu_505_p1 : STD_LOGIC_VECTOR (0 downto 0);
-    signal icmp_ln45_fu_569_p2 : STD_LOGIC_VECTOR (0 downto 0);
+    signal icmp_ln54_fu_569_p2 : STD_LOGIC_VECTOR (0 downto 0);
     signal tmp_data_V_2_reg_376 : STD_LOGIC_VECTOR (31 downto 0);
     signal grp_equalizer_Pipeline_Shift_Accumulate_Loop_fu_386_ap_start_reg : STD_LOGIC := '0';
     signal ap_CS_fsm_state3 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state3 : signal is "none";
     signal grp_equalizer_Pipeline_Coef_Clear_Loop_fu_396_ap_start_reg : STD_LOGIC := '0';
-    signal grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_ap_start_reg : STD_LOGIC := '0';
+    signal grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_ap_start_reg : STD_LOGIC := '0';
     signal ap_CS_fsm_state18 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state18 : signal is "none";
-    signal sext_ln76_fu_444_p1 : STD_LOGIC_VECTOR (63 downto 0);
+    signal sext_ln88_fu_444_p1 : STD_LOGIC_VECTOR (63 downto 0);
     signal tmp_out_data_V_fu_132 : STD_LOGIC_VECTOR (31 downto 0);
     signal tmp_out_keep_V_fu_136 : STD_LOGIC_VECTOR (3 downto 0);
     signal tmp_out_strb_V_fu_140 : STD_LOGIC_VECTOR (3 downto 0);
@@ -407,13 +407,13 @@ architecture behav of equalizer is
     signal select_ln16_1_fu_587_p3 : STD_LOGIC_VECTOR (31 downto 0);
     signal select_ln16_fu_514_p3 : STD_LOGIC_VECTOR (31 downto 0);
     signal trunc_ln_fu_434_p4 : STD_LOGIC_VECTOR (61 downto 0);
-    signal icmp_ln31_fu_508_p0 : STD_LOGIC_VECTOR (31 downto 0);
-    signal icmp_ln31_fu_508_p2 : STD_LOGIC_VECTOR (0 downto 0);
+    signal icmp_ln35_fu_508_p0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal icmp_ln35_fu_508_p2 : STD_LOGIC_VECTOR (0 downto 0);
     signal grp_fu_527_p0 : STD_LOGIC_VECTOR (31 downto 0);
     signal grp_fu_527_p1 : STD_LOGIC_VECTOR (31 downto 0);
     signal ap_CS_fsm_state12 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state12 : signal is "none";
-    signal icmp_ln61_fu_581_p2 : STD_LOGIC_VECTOR (0 downto 0);
+    signal icmp_ln71_fu_581_p2 : STD_LOGIC_VECTOR (0 downto 0);
     signal grp_fu_527_ce : STD_LOGIC;
     signal ap_NS_fsm : STD_LOGIC_VECTOR (20 downto 0);
     signal ap_ST_fsm_state1_blk : STD_LOGIC;
@@ -627,7 +627,7 @@ architecture behav of equalizer is
     end component;
 
 
-    component equalizer_equalizer_Pipeline_VITIS_LOOP_48_1 IS
+    component equalizer_equalizer_Pipeline_VITIS_LOOP_57_1 IS
     port (
         ap_clk : IN STD_LOGIC;
         ap_rst : IN STD_LOGIC;
@@ -1014,50 +1014,50 @@ begin
         m_axi_gmem_BUSER => ap_const_lv1_0,
         coefs => coefs_read_reg_657);
 
-    grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403 : component equalizer_equalizer_Pipeline_VITIS_LOOP_48_1
+    grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403 : component equalizer_equalizer_Pipeline_VITIS_LOOP_57_1
     port map (
         ap_clk => ap_clk,
         ap_rst => ap_rst_n_inv,
-        ap_start => grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_ap_start,
-        ap_done => grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_ap_done,
-        ap_idle => grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_ap_idle,
-        ap_ready => grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_ap_ready,
+        ap_start => grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_ap_start,
+        ap_done => grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_ap_done,
+        ap_idle => grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_ap_idle,
+        ap_ready => grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_ap_ready,
         input_r_TVALID => input_r_TVALID_int_regslice,
-        m_axi_gmem_AWVALID => grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_AWVALID,
+        m_axi_gmem_AWVALID => grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_AWVALID,
         m_axi_gmem_AWREADY => gmem_AWREADY,
-        m_axi_gmem_AWADDR => grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_AWADDR,
-        m_axi_gmem_AWID => grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_AWID,
-        m_axi_gmem_AWLEN => grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_AWLEN,
-        m_axi_gmem_AWSIZE => grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_AWSIZE,
-        m_axi_gmem_AWBURST => grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_AWBURST,
-        m_axi_gmem_AWLOCK => grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_AWLOCK,
-        m_axi_gmem_AWCACHE => grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_AWCACHE,
-        m_axi_gmem_AWPROT => grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_AWPROT,
-        m_axi_gmem_AWQOS => grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_AWQOS,
-        m_axi_gmem_AWREGION => grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_AWREGION,
-        m_axi_gmem_AWUSER => grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_AWUSER,
-        m_axi_gmem_WVALID => grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_WVALID,
+        m_axi_gmem_AWADDR => grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_AWADDR,
+        m_axi_gmem_AWID => grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_AWID,
+        m_axi_gmem_AWLEN => grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_AWLEN,
+        m_axi_gmem_AWSIZE => grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_AWSIZE,
+        m_axi_gmem_AWBURST => grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_AWBURST,
+        m_axi_gmem_AWLOCK => grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_AWLOCK,
+        m_axi_gmem_AWCACHE => grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_AWCACHE,
+        m_axi_gmem_AWPROT => grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_AWPROT,
+        m_axi_gmem_AWQOS => grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_AWQOS,
+        m_axi_gmem_AWREGION => grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_AWREGION,
+        m_axi_gmem_AWUSER => grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_AWUSER,
+        m_axi_gmem_WVALID => grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_WVALID,
         m_axi_gmem_WREADY => gmem_WREADY,
-        m_axi_gmem_WDATA => grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_WDATA,
-        m_axi_gmem_WSTRB => grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_WSTRB,
-        m_axi_gmem_WLAST => grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_WLAST,
-        m_axi_gmem_WID => grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_WID,
-        m_axi_gmem_WUSER => grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_WUSER,
-        m_axi_gmem_ARVALID => grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_ARVALID,
+        m_axi_gmem_WDATA => grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_WDATA,
+        m_axi_gmem_WSTRB => grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_WSTRB,
+        m_axi_gmem_WLAST => grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_WLAST,
+        m_axi_gmem_WID => grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_WID,
+        m_axi_gmem_WUSER => grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_WUSER,
+        m_axi_gmem_ARVALID => grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_ARVALID,
         m_axi_gmem_ARREADY => gmem_ARREADY,
-        m_axi_gmem_ARADDR => grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_ARADDR,
-        m_axi_gmem_ARID => grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_ARID,
-        m_axi_gmem_ARLEN => grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_ARLEN,
-        m_axi_gmem_ARSIZE => grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_ARSIZE,
-        m_axi_gmem_ARBURST => grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_ARBURST,
-        m_axi_gmem_ARLOCK => grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_ARLOCK,
-        m_axi_gmem_ARCACHE => grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_ARCACHE,
-        m_axi_gmem_ARPROT => grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_ARPROT,
-        m_axi_gmem_ARQOS => grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_ARQOS,
-        m_axi_gmem_ARREGION => grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_ARREGION,
-        m_axi_gmem_ARUSER => grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_ARUSER,
+        m_axi_gmem_ARADDR => grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_ARADDR,
+        m_axi_gmem_ARID => grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_ARID,
+        m_axi_gmem_ARLEN => grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_ARLEN,
+        m_axi_gmem_ARSIZE => grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_ARSIZE,
+        m_axi_gmem_ARBURST => grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_ARBURST,
+        m_axi_gmem_ARLOCK => grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_ARLOCK,
+        m_axi_gmem_ARCACHE => grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_ARCACHE,
+        m_axi_gmem_ARPROT => grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_ARPROT,
+        m_axi_gmem_ARQOS => grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_ARQOS,
+        m_axi_gmem_ARREGION => grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_ARREGION,
+        m_axi_gmem_ARUSER => grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_ARUSER,
         m_axi_gmem_RVALID => gmem_RVALID,
-        m_axi_gmem_RREADY => grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_RREADY,
+        m_axi_gmem_RREADY => grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_RREADY,
         m_axi_gmem_RDATA => gmem_RDATA,
         m_axi_gmem_RLAST => ap_const_logic_0,
         m_axi_gmem_RID => ap_const_lv1_0,
@@ -1065,12 +1065,12 @@ begin
         m_axi_gmem_RUSER => ap_const_lv1_0,
         m_axi_gmem_RRESP => ap_const_lv2_0,
         m_axi_gmem_BVALID => gmem_BVALID,
-        m_axi_gmem_BREADY => grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_BREADY,
+        m_axi_gmem_BREADY => grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_BREADY,
         m_axi_gmem_BRESP => ap_const_lv2_0,
         m_axi_gmem_BID => ap_const_lv1_0,
         m_axi_gmem_BUSER => ap_const_lv1_0,
         input_r_TDATA => input_r_TDATA_int_regslice,
-        input_r_TREADY => grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_input_r_TREADY,
+        input_r_TREADY => grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_input_r_TREADY,
         input_r_TKEEP => input_r_TKEEP_int_regslice,
         input_r_TSTRB => input_r_TSTRB_int_regslice,
         input_r_TUSER => input_r_TUSER_int_regslice,
@@ -1079,10 +1079,10 @@ begin
         input_r_TDEST => input_r_TDEST_int_regslice,
         coef_scale => coef_scale_reg_343,
         coefs => coefs_read_reg_657,
-        grp_fu_527_p_din0 => grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_grp_fu_527_p_din0,
-        grp_fu_527_p_din1 => grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_grp_fu_527_p_din1,
+        grp_fu_527_p_din0 => grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_grp_fu_527_p_din0,
+        grp_fu_527_p_din1 => grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_grp_fu_527_p_din1,
         grp_fu_527_p_dout0 => grp_fu_527_p2,
-        grp_fu_527_p_ce => grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_grp_fu_527_p_ce);
+        grp_fu_527_p_ce => grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_grp_fu_527_p_ce);
 
     control_s_axi_U : component equalizer_control_s_axi
     generic map (
@@ -1460,16 +1460,16 @@ begin
     end process;
 
 
-    grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_ap_start_reg_assign_proc : process(ap_clk)
+    grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_ap_start_reg_assign_proc : process(ap_clk)
     begin
         if (ap_clk'event and ap_clk =  '1') then
             if (ap_rst_n_inv = '1') then
-                grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_ap_start_reg <= ap_const_logic_0;
+                grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_ap_start_reg <= ap_const_logic_0;
             else
-                if (((icmp_ln45_fu_569_p2 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state17))) then 
-                    grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_ap_start_reg <= ap_const_logic_1;
-                elsif ((grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_ap_ready = ap_const_logic_1)) then 
-                    grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_ap_start_reg <= ap_const_logic_0;
+                if (((icmp_ln54_fu_569_p2 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state17))) then 
+                    grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_ap_start_reg <= ap_const_logic_1;
+                elsif ((grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_ap_ready = ap_const_logic_1)) then 
+                    grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_ap_start_reg <= ap_const_logic_0;
                 end if; 
             end if;
         end if;
@@ -1493,7 +1493,7 @@ begin
             if (((grp_equalizer_Pipeline_Coef_Clear_Loop_fu_396_ap_done = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state16))) then 
                 j_reg_332 <= ap_const_lv2_0;
             elsif (((input_r_TVALID_int_regslice = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state19))) then 
-                j_reg_332 <= add_ln45_reg_770;
+                j_reg_332 <= add_ln54_reg_770;
             end if; 
         end if;
     end process;
@@ -1529,7 +1529,7 @@ begin
     tmp_data_V_2_reg_376_assign_proc : process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
-            if (((icmp_ln45_fu_569_p2 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state17))) then 
+            if (((icmp_ln54_fu_569_p2 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state17))) then 
                 tmp_data_V_2_reg_376 <= coef_scale_reg_343;
             elsif (((input_r_TVALID_int_regslice = ap_const_logic_1) and (read_coefs_load_load_fu_505_p1 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state2) and (state_1_load_fu_482_p1 = ap_const_lv32_10))) then 
                 tmp_data_V_2_reg_376 <= input_r_TDATA_int_regslice;
@@ -1584,7 +1584,7 @@ begin
     tmp_last_V_1_reg_365_assign_proc : process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
-            if (((icmp_ln45_fu_569_p2 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state17))) then 
+            if (((icmp_ln54_fu_569_p2 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state17))) then 
                 tmp_last_V_1_reg_365 <= p_4_0_0_0132_phi_reg_353;
             elsif (((input_r_TVALID_int_regslice = ap_const_logic_1) and (read_coefs_load_load_fu_505_p1 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state2) and (state_1_load_fu_482_p1 = ap_const_lv32_10))) then 
                 tmp_last_V_1_reg_365 <= input_r_TLAST_int_regslice;
@@ -1625,7 +1625,7 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if ((ap_const_logic_1 = ap_CS_fsm_state17)) then
-                add_ln45_reg_770 <= add_ln45_fu_575_p2;
+                add_ln54_reg_770 <= add_ln54_fu_575_p2;
             end if;
         end if;
     end process;
@@ -1634,7 +1634,7 @@ begin
         if (ap_clk'event and ap_clk = '1') then
             if ((ap_const_logic_1 = ap_CS_fsm_state1)) then
                 coefs_read_reg_657 <= coefs;
-                gmem_addr_reg_670 <= sext_ln76_fu_444_p1;
+                gmem_addr_reg_670 <= sext_ln88_fu_444_p1;
             end if;
         end if;
     end process;
@@ -1650,7 +1650,7 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if ((ap_const_logic_1 = ap_CS_fsm_state13)) then
-                mul_ln76_reg_755 <= grp_fu_527_p2;
+                mul_ln88_reg_755 <= grp_fu_527_p2;
             end if;
         end if;
     end process;
@@ -1697,7 +1697,7 @@ begin
     state_fu_160(7 downto 5) <= "000";
     state_fu_160(31 downto 9) <= "00000000000000000000000";
 
-    ap_NS_fsm_assign_proc : process (ap_CS_fsm, ap_CS_fsm_state4, ap_CS_fsm_state11, ap_CS_fsm_state14, ap_CS_fsm_state15, state_1_reg_694, tmp_last_V_reg_727, tmp_last_V_1_reg_365, ap_CS_fsm_state21, ap_CS_fsm_state2, ap_CS_fsm_state19, state_1_load_fu_482_p1, ap_CS_fsm_state17, grp_equalizer_Pipeline_Shift_Accumulate_Loop_fu_386_ap_done, grp_equalizer_Pipeline_Coef_Clear_Loop_fu_396_ap_done, grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_ap_done, gmem_ARREADY, gmem_RVALID, ap_predicate_op119_write_state15, ap_block_state15_io, ap_CS_fsm_state16, read_coefs_load_load_fu_505_p1, icmp_ln45_fu_569_p2, ap_CS_fsm_state3, ap_CS_fsm_state18, regslice_both_output_r_V_data_V_U_apdone_blk, output_r_TREADY_int_regslice, input_r_TVALID_int_regslice)
+    ap_NS_fsm_assign_proc : process (ap_CS_fsm, ap_CS_fsm_state4, ap_CS_fsm_state11, ap_CS_fsm_state14, ap_CS_fsm_state15, state_1_reg_694, tmp_last_V_reg_727, tmp_last_V_1_reg_365, ap_CS_fsm_state21, ap_CS_fsm_state2, ap_CS_fsm_state19, state_1_load_fu_482_p1, ap_CS_fsm_state17, grp_equalizer_Pipeline_Shift_Accumulate_Loop_fu_386_ap_done, grp_equalizer_Pipeline_Coef_Clear_Loop_fu_396_ap_done, grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_ap_done, gmem_ARREADY, gmem_RVALID, ap_predicate_op119_write_state15, ap_block_state15_io, ap_CS_fsm_state16, read_coefs_load_load_fu_505_p1, icmp_ln54_fu_569_p2, ap_CS_fsm_state3, ap_CS_fsm_state18, regslice_both_output_r_V_data_V_U_apdone_blk, output_r_TREADY_int_regslice, input_r_TVALID_int_regslice)
     begin
         case ap_CS_fsm is
             when ap_ST_fsm_state1 => 
@@ -1769,13 +1769,13 @@ begin
                     ap_NS_fsm <= ap_ST_fsm_state16;
                 end if;
             when ap_ST_fsm_state17 => 
-                if (((icmp_ln45_fu_569_p2 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state17))) then
+                if (((icmp_ln54_fu_569_p2 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state17))) then
                     ap_NS_fsm <= ap_ST_fsm_state20;
                 else
                     ap_NS_fsm <= ap_ST_fsm_state18;
                 end if;
             when ap_ST_fsm_state18 => 
-                if (((grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_ap_done = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state18))) then
+                if (((grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_ap_done = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state18))) then
                     ap_NS_fsm <= ap_ST_fsm_state19;
                 else
                     ap_NS_fsm <= ap_ST_fsm_state18;
@@ -1798,8 +1798,8 @@ begin
                 ap_NS_fsm <= "XXXXXXXXXXXXXXXXXXXXX";
         end case;
     end process;
-    accumulate_fu_534_p2 <= std_logic_vector(unsigned(mul_ln76_reg_755) + unsigned(grp_equalizer_Pipeline_Shift_Accumulate_Loop_fu_386_accumulate_out));
-    add_ln45_fu_575_p2 <= std_logic_vector(unsigned(j_reg_332) + unsigned(ap_const_lv2_1));
+    accumulate_fu_534_p2 <= std_logic_vector(unsigned(mul_ln88_reg_755) + unsigned(grp_equalizer_Pipeline_Shift_Accumulate_Loop_fu_386_accumulate_out));
+    add_ln54_fu_575_p2 <= std_logic_vector(unsigned(j_reg_332) + unsigned(ap_const_lv2_1));
     ap_CS_fsm_state1 <= ap_CS_fsm(0);
     ap_CS_fsm_state11 <= ap_CS_fsm(10);
     ap_CS_fsm_state12 <= ap_CS_fsm(11);
@@ -1860,9 +1860,9 @@ begin
 
     ap_ST_fsm_state17_blk <= ap_const_logic_0;
 
-    ap_ST_fsm_state18_blk_assign_proc : process(grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_ap_done)
+    ap_ST_fsm_state18_blk_assign_proc : process(grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_ap_done)
     begin
-        if ((grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_ap_done = ap_const_logic_0)) then 
+        if ((grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_ap_done = ap_const_logic_0)) then 
             ap_ST_fsm_state18_blk <= ap_const_logic_1;
         else 
             ap_ST_fsm_state18_blk <= ap_const_logic_0;
@@ -2018,12 +2018,12 @@ begin
     end process;
 
 
-    gmem_ARADDR_assign_proc : process(ap_CS_fsm_state4, ap_CS_fsm_state2, gmem_addr_reg_670, state_1_load_fu_482_p1, ap_CS_fsm_state17, grp_equalizer_Pipeline_Shift_Accumulate_Loop_fu_386_m_axi_gmem_ARADDR, grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_ARADDR, gmem_ARREADY, icmp_ln45_fu_569_p2, ap_CS_fsm_state3, ap_CS_fsm_state18)
+    gmem_ARADDR_assign_proc : process(ap_CS_fsm_state4, ap_CS_fsm_state2, gmem_addr_reg_670, state_1_load_fu_482_p1, ap_CS_fsm_state17, grp_equalizer_Pipeline_Shift_Accumulate_Loop_fu_386_m_axi_gmem_ARADDR, grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_ARADDR, gmem_ARREADY, icmp_ln54_fu_569_p2, ap_CS_fsm_state3, ap_CS_fsm_state18)
     begin
         if (((gmem_ARREADY = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state4))) then 
             gmem_ARADDR <= gmem_addr_reg_670;
-        elsif (((ap_const_logic_1 = ap_CS_fsm_state18) or ((icmp_ln45_fu_569_p2 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state17)))) then 
-            gmem_ARADDR <= grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_ARADDR;
+        elsif (((ap_const_logic_1 = ap_CS_fsm_state18) or ((icmp_ln54_fu_569_p2 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state17)))) then 
+            gmem_ARADDR <= grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_ARADDR;
         elsif (((ap_const_logic_1 = ap_CS_fsm_state3) or ((ap_const_logic_1 = ap_CS_fsm_state2) and (state_1_load_fu_482_p1 = ap_const_lv32_100)))) then 
             gmem_ARADDR <= grp_equalizer_Pipeline_Shift_Accumulate_Loop_fu_386_m_axi_gmem_ARADDR;
         else 
@@ -2032,12 +2032,12 @@ begin
     end process;
 
 
-    gmem_ARLEN_assign_proc : process(ap_CS_fsm_state4, ap_CS_fsm_state2, state_1_load_fu_482_p1, ap_CS_fsm_state17, grp_equalizer_Pipeline_Shift_Accumulate_Loop_fu_386_m_axi_gmem_ARLEN, grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_ARLEN, gmem_ARREADY, icmp_ln45_fu_569_p2, ap_CS_fsm_state3, ap_CS_fsm_state18)
+    gmem_ARLEN_assign_proc : process(ap_CS_fsm_state4, ap_CS_fsm_state2, state_1_load_fu_482_p1, ap_CS_fsm_state17, grp_equalizer_Pipeline_Shift_Accumulate_Loop_fu_386_m_axi_gmem_ARLEN, grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_ARLEN, gmem_ARREADY, icmp_ln54_fu_569_p2, ap_CS_fsm_state3, ap_CS_fsm_state18)
     begin
         if (((gmem_ARREADY = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state4))) then 
             gmem_ARLEN <= ap_const_lv32_1;
-        elsif (((ap_const_logic_1 = ap_CS_fsm_state18) or ((icmp_ln45_fu_569_p2 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state17)))) then 
-            gmem_ARLEN <= grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_ARLEN;
+        elsif (((ap_const_logic_1 = ap_CS_fsm_state18) or ((icmp_ln54_fu_569_p2 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state17)))) then 
+            gmem_ARLEN <= grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_ARLEN;
         elsif (((ap_const_logic_1 = ap_CS_fsm_state3) or ((ap_const_logic_1 = ap_CS_fsm_state2) and (state_1_load_fu_482_p1 = ap_const_lv32_100)))) then 
             gmem_ARLEN <= grp_equalizer_Pipeline_Shift_Accumulate_Loop_fu_386_m_axi_gmem_ARLEN;
         else 
@@ -2046,12 +2046,12 @@ begin
     end process;
 
 
-    gmem_ARVALID_assign_proc : process(ap_CS_fsm_state4, ap_CS_fsm_state2, state_1_load_fu_482_p1, ap_CS_fsm_state17, grp_equalizer_Pipeline_Shift_Accumulate_Loop_fu_386_m_axi_gmem_ARVALID, grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_ARVALID, gmem_ARREADY, icmp_ln45_fu_569_p2, ap_CS_fsm_state3, ap_CS_fsm_state18)
+    gmem_ARVALID_assign_proc : process(ap_CS_fsm_state4, ap_CS_fsm_state2, state_1_load_fu_482_p1, ap_CS_fsm_state17, grp_equalizer_Pipeline_Shift_Accumulate_Loop_fu_386_m_axi_gmem_ARVALID, grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_ARVALID, gmem_ARREADY, icmp_ln54_fu_569_p2, ap_CS_fsm_state3, ap_CS_fsm_state18)
     begin
         if (((gmem_ARREADY = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state4))) then 
             gmem_ARVALID <= ap_const_logic_1;
-        elsif (((ap_const_logic_1 = ap_CS_fsm_state18) or ((icmp_ln45_fu_569_p2 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state17)))) then 
-            gmem_ARVALID <= grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_ARVALID;
+        elsif (((ap_const_logic_1 = ap_CS_fsm_state18) or ((icmp_ln54_fu_569_p2 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state17)))) then 
+            gmem_ARVALID <= grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_ARVALID;
         elsif (((ap_const_logic_1 = ap_CS_fsm_state3) or ((ap_const_logic_1 = ap_CS_fsm_state2) and (state_1_load_fu_482_p1 = ap_const_lv32_100)))) then 
             gmem_ARVALID <= grp_equalizer_Pipeline_Shift_Accumulate_Loop_fu_386_m_axi_gmem_ARVALID;
         else 
@@ -2060,10 +2060,10 @@ begin
     end process;
 
 
-    gmem_AWADDR_assign_proc : process(ap_CS_fsm_state2, state_1_load_fu_482_p1, ap_CS_fsm_state17, grp_equalizer_Pipeline_Coef_Clear_Loop_fu_396_m_axi_gmem_AWADDR, grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_AWADDR, ap_CS_fsm_state16, read_coefs_load_load_fu_505_p1, icmp_ln45_fu_569_p2, ap_CS_fsm_state18)
+    gmem_AWADDR_assign_proc : process(ap_CS_fsm_state2, state_1_load_fu_482_p1, ap_CS_fsm_state17, grp_equalizer_Pipeline_Coef_Clear_Loop_fu_396_m_axi_gmem_AWADDR, grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_AWADDR, ap_CS_fsm_state16, read_coefs_load_load_fu_505_p1, icmp_ln54_fu_569_p2, ap_CS_fsm_state18)
     begin
-        if (((ap_const_logic_1 = ap_CS_fsm_state18) or ((icmp_ln45_fu_569_p2 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state17)))) then 
-            gmem_AWADDR <= grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_AWADDR;
+        if (((ap_const_logic_1 = ap_CS_fsm_state18) or ((icmp_ln54_fu_569_p2 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state17)))) then 
+            gmem_AWADDR <= grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_AWADDR;
         elsif (((ap_const_logic_1 = ap_CS_fsm_state16) or ((read_coefs_load_load_fu_505_p1 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state2) and (state_1_load_fu_482_p1 = ap_const_lv32_10)))) then 
             gmem_AWADDR <= grp_equalizer_Pipeline_Coef_Clear_Loop_fu_396_m_axi_gmem_AWADDR;
         else 
@@ -2072,10 +2072,10 @@ begin
     end process;
 
 
-    gmem_AWLEN_assign_proc : process(ap_CS_fsm_state2, state_1_load_fu_482_p1, ap_CS_fsm_state17, grp_equalizer_Pipeline_Coef_Clear_Loop_fu_396_m_axi_gmem_AWLEN, grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_AWLEN, ap_CS_fsm_state16, read_coefs_load_load_fu_505_p1, icmp_ln45_fu_569_p2, ap_CS_fsm_state18)
+    gmem_AWLEN_assign_proc : process(ap_CS_fsm_state2, state_1_load_fu_482_p1, ap_CS_fsm_state17, grp_equalizer_Pipeline_Coef_Clear_Loop_fu_396_m_axi_gmem_AWLEN, grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_AWLEN, ap_CS_fsm_state16, read_coefs_load_load_fu_505_p1, icmp_ln54_fu_569_p2, ap_CS_fsm_state18)
     begin
-        if (((ap_const_logic_1 = ap_CS_fsm_state18) or ((icmp_ln45_fu_569_p2 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state17)))) then 
-            gmem_AWLEN <= grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_AWLEN;
+        if (((ap_const_logic_1 = ap_CS_fsm_state18) or ((icmp_ln54_fu_569_p2 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state17)))) then 
+            gmem_AWLEN <= grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_AWLEN;
         elsif (((ap_const_logic_1 = ap_CS_fsm_state16) or ((read_coefs_load_load_fu_505_p1 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state2) and (state_1_load_fu_482_p1 = ap_const_lv32_10)))) then 
             gmem_AWLEN <= grp_equalizer_Pipeline_Coef_Clear_Loop_fu_396_m_axi_gmem_AWLEN;
         else 
@@ -2084,10 +2084,10 @@ begin
     end process;
 
 
-    gmem_AWVALID_assign_proc : process(ap_CS_fsm_state2, state_1_load_fu_482_p1, ap_CS_fsm_state17, grp_equalizer_Pipeline_Coef_Clear_Loop_fu_396_m_axi_gmem_AWVALID, grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_AWVALID, ap_CS_fsm_state16, read_coefs_load_load_fu_505_p1, icmp_ln45_fu_569_p2, ap_CS_fsm_state18)
+    gmem_AWVALID_assign_proc : process(ap_CS_fsm_state2, state_1_load_fu_482_p1, ap_CS_fsm_state17, grp_equalizer_Pipeline_Coef_Clear_Loop_fu_396_m_axi_gmem_AWVALID, grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_AWVALID, ap_CS_fsm_state16, read_coefs_load_load_fu_505_p1, icmp_ln54_fu_569_p2, ap_CS_fsm_state18)
     begin
-        if (((ap_const_logic_1 = ap_CS_fsm_state18) or ((icmp_ln45_fu_569_p2 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state17)))) then 
-            gmem_AWVALID <= grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_AWVALID;
+        if (((ap_const_logic_1 = ap_CS_fsm_state18) or ((icmp_ln54_fu_569_p2 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state17)))) then 
+            gmem_AWVALID <= grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_AWVALID;
         elsif (((ap_const_logic_1 = ap_CS_fsm_state16) or ((read_coefs_load_load_fu_505_p1 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state2) and (state_1_load_fu_482_p1 = ap_const_lv32_10)))) then 
             gmem_AWVALID <= grp_equalizer_Pipeline_Coef_Clear_Loop_fu_396_m_axi_gmem_AWVALID;
         else 
@@ -2096,10 +2096,10 @@ begin
     end process;
 
 
-    gmem_BREADY_assign_proc : process(ap_CS_fsm_state2, state_1_load_fu_482_p1, ap_CS_fsm_state17, grp_equalizer_Pipeline_Coef_Clear_Loop_fu_396_m_axi_gmem_BREADY, grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_BREADY, ap_CS_fsm_state16, read_coefs_load_load_fu_505_p1, icmp_ln45_fu_569_p2, ap_CS_fsm_state18)
+    gmem_BREADY_assign_proc : process(ap_CS_fsm_state2, state_1_load_fu_482_p1, ap_CS_fsm_state17, grp_equalizer_Pipeline_Coef_Clear_Loop_fu_396_m_axi_gmem_BREADY, grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_BREADY, ap_CS_fsm_state16, read_coefs_load_load_fu_505_p1, icmp_ln54_fu_569_p2, ap_CS_fsm_state18)
     begin
-        if (((ap_const_logic_1 = ap_CS_fsm_state18) or ((icmp_ln45_fu_569_p2 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state17)))) then 
-            gmem_BREADY <= grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_BREADY;
+        if (((ap_const_logic_1 = ap_CS_fsm_state18) or ((icmp_ln54_fu_569_p2 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state17)))) then 
+            gmem_BREADY <= grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_BREADY;
         elsif (((ap_const_logic_1 = ap_CS_fsm_state16) or ((read_coefs_load_load_fu_505_p1 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state2) and (state_1_load_fu_482_p1 = ap_const_lv32_10)))) then 
             gmem_BREADY <= grp_equalizer_Pipeline_Coef_Clear_Loop_fu_396_m_axi_gmem_BREADY;
         else 
@@ -2108,12 +2108,12 @@ begin
     end process;
 
 
-    gmem_RREADY_assign_proc : process(ap_CS_fsm_state11, ap_CS_fsm_state2, state_1_load_fu_482_p1, ap_CS_fsm_state17, grp_equalizer_Pipeline_Shift_Accumulate_Loop_fu_386_m_axi_gmem_RREADY, grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_RREADY, gmem_RVALID, icmp_ln45_fu_569_p2, ap_CS_fsm_state3, ap_CS_fsm_state18)
+    gmem_RREADY_assign_proc : process(ap_CS_fsm_state11, ap_CS_fsm_state2, state_1_load_fu_482_p1, ap_CS_fsm_state17, grp_equalizer_Pipeline_Shift_Accumulate_Loop_fu_386_m_axi_gmem_RREADY, grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_RREADY, gmem_RVALID, icmp_ln54_fu_569_p2, ap_CS_fsm_state3, ap_CS_fsm_state18)
     begin
         if (((gmem_RVALID = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state11))) then 
             gmem_RREADY <= ap_const_logic_1;
-        elsif (((ap_const_logic_1 = ap_CS_fsm_state18) or ((icmp_ln45_fu_569_p2 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state17)))) then 
-            gmem_RREADY <= grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_RREADY;
+        elsif (((ap_const_logic_1 = ap_CS_fsm_state18) or ((icmp_ln54_fu_569_p2 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state17)))) then 
+            gmem_RREADY <= grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_RREADY;
         elsif (((ap_const_logic_1 = ap_CS_fsm_state3) or ((ap_const_logic_1 = ap_CS_fsm_state2) and (state_1_load_fu_482_p1 = ap_const_lv32_100)))) then 
             gmem_RREADY <= grp_equalizer_Pipeline_Shift_Accumulate_Loop_fu_386_m_axi_gmem_RREADY;
         else 
@@ -2122,10 +2122,10 @@ begin
     end process;
 
 
-    gmem_WDATA_assign_proc : process(ap_CS_fsm_state2, state_1_load_fu_482_p1, ap_CS_fsm_state17, grp_equalizer_Pipeline_Coef_Clear_Loop_fu_396_m_axi_gmem_WDATA, grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_WDATA, ap_CS_fsm_state16, read_coefs_load_load_fu_505_p1, icmp_ln45_fu_569_p2, ap_CS_fsm_state18)
+    gmem_WDATA_assign_proc : process(ap_CS_fsm_state2, state_1_load_fu_482_p1, ap_CS_fsm_state17, grp_equalizer_Pipeline_Coef_Clear_Loop_fu_396_m_axi_gmem_WDATA, grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_WDATA, ap_CS_fsm_state16, read_coefs_load_load_fu_505_p1, icmp_ln54_fu_569_p2, ap_CS_fsm_state18)
     begin
-        if (((ap_const_logic_1 = ap_CS_fsm_state18) or ((icmp_ln45_fu_569_p2 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state17)))) then 
-            gmem_WDATA <= grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_WDATA;
+        if (((ap_const_logic_1 = ap_CS_fsm_state18) or ((icmp_ln54_fu_569_p2 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state17)))) then 
+            gmem_WDATA <= grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_WDATA;
         elsif (((ap_const_logic_1 = ap_CS_fsm_state16) or ((read_coefs_load_load_fu_505_p1 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state2) and (state_1_load_fu_482_p1 = ap_const_lv32_10)))) then 
             gmem_WDATA <= grp_equalizer_Pipeline_Coef_Clear_Loop_fu_396_m_axi_gmem_WDATA;
         else 
@@ -2134,10 +2134,10 @@ begin
     end process;
 
 
-    gmem_WSTRB_assign_proc : process(ap_CS_fsm_state2, state_1_load_fu_482_p1, ap_CS_fsm_state17, grp_equalizer_Pipeline_Coef_Clear_Loop_fu_396_m_axi_gmem_WSTRB, grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_WSTRB, ap_CS_fsm_state16, read_coefs_load_load_fu_505_p1, icmp_ln45_fu_569_p2, ap_CS_fsm_state18)
+    gmem_WSTRB_assign_proc : process(ap_CS_fsm_state2, state_1_load_fu_482_p1, ap_CS_fsm_state17, grp_equalizer_Pipeline_Coef_Clear_Loop_fu_396_m_axi_gmem_WSTRB, grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_WSTRB, ap_CS_fsm_state16, read_coefs_load_load_fu_505_p1, icmp_ln54_fu_569_p2, ap_CS_fsm_state18)
     begin
-        if (((ap_const_logic_1 = ap_CS_fsm_state18) or ((icmp_ln45_fu_569_p2 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state17)))) then 
-            gmem_WSTRB <= grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_WSTRB;
+        if (((ap_const_logic_1 = ap_CS_fsm_state18) or ((icmp_ln54_fu_569_p2 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state17)))) then 
+            gmem_WSTRB <= grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_WSTRB;
         elsif (((ap_const_logic_1 = ap_CS_fsm_state16) or ((read_coefs_load_load_fu_505_p1 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state2) and (state_1_load_fu_482_p1 = ap_const_lv32_10)))) then 
             gmem_WSTRB <= grp_equalizer_Pipeline_Coef_Clear_Loop_fu_396_m_axi_gmem_WSTRB;
         else 
@@ -2146,10 +2146,10 @@ begin
     end process;
 
 
-    gmem_WVALID_assign_proc : process(ap_CS_fsm_state2, state_1_load_fu_482_p1, ap_CS_fsm_state17, grp_equalizer_Pipeline_Coef_Clear_Loop_fu_396_m_axi_gmem_WVALID, grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_WVALID, ap_CS_fsm_state16, read_coefs_load_load_fu_505_p1, icmp_ln45_fu_569_p2, ap_CS_fsm_state18)
+    gmem_WVALID_assign_proc : process(ap_CS_fsm_state2, state_1_load_fu_482_p1, ap_CS_fsm_state17, grp_equalizer_Pipeline_Coef_Clear_Loop_fu_396_m_axi_gmem_WVALID, grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_WVALID, ap_CS_fsm_state16, read_coefs_load_load_fu_505_p1, icmp_ln54_fu_569_p2, ap_CS_fsm_state18)
     begin
-        if (((ap_const_logic_1 = ap_CS_fsm_state18) or ((icmp_ln45_fu_569_p2 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state17)))) then 
-            gmem_WVALID <= grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_WVALID;
+        if (((ap_const_logic_1 = ap_CS_fsm_state18) or ((icmp_ln54_fu_569_p2 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state17)))) then 
+            gmem_WVALID <= grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_WVALID;
         elsif (((ap_const_logic_1 = ap_CS_fsm_state16) or ((read_coefs_load_load_fu_505_p1 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state2) and (state_1_load_fu_482_p1 = ap_const_lv32_10)))) then 
             gmem_WVALID <= grp_equalizer_Pipeline_Coef_Clear_Loop_fu_396_m_axi_gmem_WVALID;
         else 
@@ -2179,13 +2179,13 @@ begin
 
     grp_equalizer_Pipeline_Coef_Clear_Loop_fu_396_ap_start <= grp_equalizer_Pipeline_Coef_Clear_Loop_fu_396_ap_start_reg;
     grp_equalizer_Pipeline_Shift_Accumulate_Loop_fu_386_ap_start <= grp_equalizer_Pipeline_Shift_Accumulate_Loop_fu_386_ap_start_reg;
-    grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_ap_start <= grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_ap_start_reg;
+    grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_ap_start <= grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_ap_start_reg;
     grp_fu_430_p1 <= input_r_TLAST_int_regslice;
 
-    grp_fu_527_ce_assign_proc : process(grp_equalizer_Pipeline_Shift_Accumulate_Loop_fu_386_grp_fu_527_p_ce, grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_grp_fu_527_p_ce, ap_CS_fsm_state3, ap_CS_fsm_state18)
+    grp_fu_527_ce_assign_proc : process(grp_equalizer_Pipeline_Shift_Accumulate_Loop_fu_386_grp_fu_527_p_ce, grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_grp_fu_527_p_ce, ap_CS_fsm_state3, ap_CS_fsm_state18)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state18)) then 
-            grp_fu_527_ce <= grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_grp_fu_527_p_ce;
+            grp_fu_527_ce <= grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_grp_fu_527_p_ce;
         elsif ((ap_const_logic_1 = ap_CS_fsm_state3)) then 
             grp_fu_527_ce <= grp_equalizer_Pipeline_Shift_Accumulate_Loop_fu_386_grp_fu_527_p_ce;
         else 
@@ -2194,10 +2194,10 @@ begin
     end process;
 
 
-    grp_fu_527_p0_assign_proc : process(gmem_addr_read_reg_750, grp_equalizer_Pipeline_Shift_Accumulate_Loop_fu_386_grp_fu_527_p_din0, grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_grp_fu_527_p_din0, ap_CS_fsm_state3, ap_CS_fsm_state18, ap_CS_fsm_state12)
+    grp_fu_527_p0_assign_proc : process(gmem_addr_read_reg_750, grp_equalizer_Pipeline_Shift_Accumulate_Loop_fu_386_grp_fu_527_p_din0, grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_grp_fu_527_p_din0, ap_CS_fsm_state3, ap_CS_fsm_state18, ap_CS_fsm_state12)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state18)) then 
-            grp_fu_527_p0 <= grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_grp_fu_527_p_din0;
+            grp_fu_527_p0 <= grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_grp_fu_527_p_din0;
         elsif ((ap_const_logic_1 = ap_CS_fsm_state3)) then 
             grp_fu_527_p0 <= grp_equalizer_Pipeline_Shift_Accumulate_Loop_fu_386_grp_fu_527_p_din0;
         elsif ((ap_const_logic_1 = ap_CS_fsm_state12)) then 
@@ -2208,10 +2208,10 @@ begin
     end process;
 
 
-    grp_fu_527_p1_assign_proc : process(tmp_data_V_reg_698, grp_equalizer_Pipeline_Shift_Accumulate_Loop_fu_386_grp_fu_527_p_din1, grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_grp_fu_527_p_din1, ap_CS_fsm_state3, ap_CS_fsm_state18, ap_CS_fsm_state12)
+    grp_fu_527_p1_assign_proc : process(tmp_data_V_reg_698, grp_equalizer_Pipeline_Shift_Accumulate_Loop_fu_386_grp_fu_527_p_din1, grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_grp_fu_527_p_din1, ap_CS_fsm_state3, ap_CS_fsm_state18, ap_CS_fsm_state12)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state18)) then 
-            grp_fu_527_p1 <= grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_grp_fu_527_p_din1;
+            grp_fu_527_p1 <= grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_grp_fu_527_p_din1;
         elsif ((ap_const_logic_1 = ap_CS_fsm_state3)) then 
             grp_fu_527_p1 <= grp_equalizer_Pipeline_Shift_Accumulate_Loop_fu_386_grp_fu_527_p_din1;
         elsif ((ap_const_logic_1 = ap_CS_fsm_state12)) then 
@@ -2221,10 +2221,10 @@ begin
         end if; 
     end process;
 
-    icmp_ln31_fu_508_p0 <= input_r_TDATA_int_regslice;
-    icmp_ln31_fu_508_p2 <= "1" when (icmp_ln31_fu_508_p0 = ap_const_lv32_BEEF) else "0";
-    icmp_ln45_fu_569_p2 <= "1" when (j_reg_332 = ap_const_lv2_3) else "0";
-    icmp_ln61_fu_581_p2 <= "1" when (tmp_data_V_2_reg_376 = ap_const_lv32_ABBA) else "0";
+    icmp_ln35_fu_508_p0 <= input_r_TDATA_int_regslice;
+    icmp_ln35_fu_508_p2 <= "1" when (icmp_ln35_fu_508_p0 = ap_const_lv32_BEEF) else "0";
+    icmp_ln54_fu_569_p2 <= "1" when (j_reg_332 = ap_const_lv2_3) else "0";
+    icmp_ln71_fu_581_p2 <= "1" when (tmp_data_V_2_reg_376 = ap_const_lv32_ABBA) else "0";
 
     input_r_TDATA_blk_n_assign_proc : process(ap_CS_fsm_state2, ap_CS_fsm_state19, input_r_TVALID_int_regslice)
     begin
@@ -2237,12 +2237,12 @@ begin
 
     input_r_TREADY <= regslice_both_input_r_V_data_V_U_ack_in;
 
-    input_r_TREADY_int_regslice_assign_proc : process(ap_CS_fsm_state2, ap_CS_fsm_state19, grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_input_r_TREADY, ap_CS_fsm_state18, input_r_TVALID_int_regslice)
+    input_r_TREADY_int_regslice_assign_proc : process(ap_CS_fsm_state2, ap_CS_fsm_state19, grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_input_r_TREADY, ap_CS_fsm_state18, input_r_TVALID_int_regslice)
     begin
         if ((((input_r_TVALID_int_regslice = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state19)) or ((input_r_TVALID_int_regslice = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state2)))) then 
             input_r_TREADY_int_regslice <= ap_const_logic_1;
         elsif ((ap_const_logic_1 = ap_CS_fsm_state18)) then 
-            input_r_TREADY_int_regslice <= grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_input_r_TREADY;
+            input_r_TREADY_int_regslice <= grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_input_r_TREADY;
         else 
             input_r_TREADY_int_regslice <= ap_const_logic_0;
         end if; 
@@ -2355,12 +2355,12 @@ begin
 
     read_coefs_load_load_fu_505_p1 <= read_coefs_fu_156;
     select_ln16_1_fu_587_p3 <= 
-        ap_const_lv32_100 when (icmp_ln61_fu_581_p2(0) = '1') else 
+        ap_const_lv32_100 when (icmp_ln71_fu_581_p2(0) = '1') else 
         ap_const_lv32_10;
     select_ln16_fu_514_p3 <= 
-        ap_const_lv32_10 when (icmp_ln31_fu_508_p2(0) = '1') else 
+        ap_const_lv32_10 when (icmp_ln35_fu_508_p2(0) = '1') else 
         ap_const_lv32_0;
-        sext_ln76_fu_444_p1 <= std_logic_vector(IEEE.numeric_std.resize(signed(trunc_ln_fu_434_p4),64));
+        sext_ln88_fu_444_p1 <= std_logic_vector(IEEE.numeric_std.resize(signed(trunc_ln_fu_434_p4),64));
 
 
     signal_shift_reg_address0_assign_proc : process(ap_CS_fsm_state4, grp_equalizer_Pipeline_Shift_Accumulate_Loop_fu_386_signal_shift_reg_address0, ap_CS_fsm_state3)

@@ -3,7 +3,6 @@
 
 #include <hls_stream.h>
 #include <ap_axi_sdata.h>
-#include <iostream>
 
 // *** DATA TYPE DEFINITIONS ***
 typedef ap_axis<32,1,1,1> AXI_VAL;

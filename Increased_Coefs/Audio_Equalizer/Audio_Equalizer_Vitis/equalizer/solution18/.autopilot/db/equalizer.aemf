@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1714114347689">
-  <ports id="1" name="gmem" type="PortType" coreId="1126178848" bitwidth="32" direction="DirInOut" iftype="IfTypeFifo">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1714115155744">
+  <ports id="1" name="gmem" type="PortType" coreId="1953391988" bitwidth="32" direction="DirInOut" iftype="IfTypeFifo">
     <dataInputObjs>getelementptr</dataInputObjs>
     <dataInputObjs>call</dataInputObjs>
     <dataInputObjs>call</dataInputObjs>
@@ -18,60 +18,60 @@
     <dataInputObjs>write</dataInputObjs>
     <dataInputObjs>write</dataInputObjs>
   </ports>
-  <ports id="4" name="output_r_V_strb_V" type="PortType" originalName="output" coreId="1126178848" bitwidth="4" direction="DirOut">
+  <ports id="4" name="output_r_V_strb_V" type="PortType" originalName="output" coreId="1953391988" bitwidth="4" direction="DirOut">
     <dataInputObjs>write</dataInputObjs>
     <dataInputObjs>write</dataInputObjs>
   </ports>
-  <ports id="5" name="output_r_V_user_V" type="PortType" originalName="output" coreId="1953391988" bitwidth="1" direction="DirOut">
+  <ports id="5" name="output_r_V_user_V" type="PortType" originalName="output" coreId="1126178848" bitwidth="1" direction="DirOut">
     <dataInputObjs>write</dataInputObjs>
     <dataInputObjs>write</dataInputObjs>
   </ports>
-  <ports id="6" name="output_r_V_last_V" type="PortType" originalName="output" coreId="1953391988" bitwidth="1" direction="DirOut">
+  <ports id="6" name="output_r_V_last_V" type="PortType" originalName="output" coreId="1634485536" bitwidth="1" direction="DirOut">
     <dataInputObjs>write</dataInputObjs>
     <dataInputObjs>write</dataInputObjs>
   </ports>
-  <ports id="7" name="output_r_V_id_V" type="PortType" originalName="output" coreId="0" bitwidth="1" direction="DirOut">
+  <ports id="7" name="output_r_V_id_V" type="PortType" originalName="output" coreId="1953391988" bitwidth="1" direction="DirOut">
     <dataInputObjs>write</dataInputObjs>
     <dataInputObjs>write</dataInputObjs>
   </ports>
-  <ports id="8" name="output_r_V_dest_V" type="PortType" originalName="output" coreId="1528853351" bitwidth="1" direction="DirOut">
+  <ports id="8" name="output_r_V_dest_V" type="PortType" originalName="output" coreId="1953391988" bitwidth="1" direction="DirOut">
     <dataInputObjs>write</dataInputObjs>
     <dataInputObjs>write</dataInputObjs>
   </ports>
-  <ports id="9" name="coefs" type="PortType" originalName="coefs" coreId="1663070068" bitwidth="64">
+  <ports id="9" name="coefs" type="PortType" originalName="coefs" coreId="1953391988" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="10" name="input_r_V_data_V" type="PortType" originalName="input" coreId="1953391988" bitwidth="32">
+  <ports id="10" name="input_r_V_data_V" type="PortType" originalName="input" coreId="0" bitwidth="32">
     <dataOutputObjs>read</dataOutputObjs>
     <dataOutputObjs>call</dataOutputObjs>
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="11" name="input_r_V_keep_V" type="PortType" originalName="input" coreId="0" bitwidth="4">
+  <ports id="11" name="input_r_V_keep_V" type="PortType" originalName="input" coreId="1126178848" bitwidth="4">
     <dataOutputObjs>read</dataOutputObjs>
     <dataOutputObjs>call</dataOutputObjs>
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="12" name="input_r_V_strb_V" type="PortType" originalName="input" coreId="536879616" bitwidth="4">
+  <ports id="12" name="input_r_V_strb_V" type="PortType" originalName="input" coreId="1953391988" bitwidth="4">
     <dataOutputObjs>read</dataOutputObjs>
     <dataOutputObjs>call</dataOutputObjs>
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="13" name="input_r_V_user_V" type="PortType" originalName="input" coreId="0" bitwidth="1">
+  <ports id="13" name="input_r_V_user_V" type="PortType" originalName="input" coreId="1747394670" bitwidth="1">
     <dataOutputObjs>read</dataOutputObjs>
     <dataOutputObjs>call</dataOutputObjs>
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="14" name="input_r_V_last_V" type="PortType" originalName="input" coreId="0" bitwidth="1">
+  <ports id="14" name="input_r_V_last_V" type="PortType" originalName="input" coreId="690372204" bitwidth="1">
     <dataOutputObjs>read</dataOutputObjs>
     <dataOutputObjs>call</dataOutputObjs>
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="15" name="input_r_V_id_V" type="PortType" originalName="input" coreId="0" bitwidth="1">
+  <ports id="15" name="input_r_V_id_V" type="PortType" originalName="input" coreId="1684367214" bitwidth="1">
     <dataOutputObjs>read</dataOutputObjs>
     <dataOutputObjs>call</dataOutputObjs>
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="16" name="input_r_V_dest_V" type="PortType" originalName="input" coreId="163999200" bitwidth="1">
+  <ports id="16" name="input_r_V_dest_V" type="PortType" originalName="input" coreId="0" bitwidth="1">
     <dataOutputObjs>read</dataOutputObjs>
     <dataOutputObjs>call</dataOutputObjs>
     <dataOutputObjs>read</dataOutputObjs>
@@ -346,43 +346,43 @@
   <edges id="-316" source_obj="//@blocks.7/@node_objs.1" sink_obj="//@ports.0"/>
   <blocks id="56" name="entry" type="BlockType">
     <controlOutputObjs>while.body</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="tmp_out_data_V" originalName="tmp_out.data.V" coreId="1953525093" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="tmp_out_data_V" originalName="tmp_out.data.V" coreId="1936291937" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
       <dataOutputObjs>load</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="tmp_out_keep_V" originalName="tmp_out.keep.V" coreId="1768713801" bitwidth="4" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="tmp_out_keep_V" originalName="tmp_out.keep.V" coreId="976629811" bitwidth="4" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
       <dataOutputObjs>load</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="20" name="tmp_out_strb_V" originalName="tmp_out.strb.V" coreId="0" bitwidth="4" opcode="alloca" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="20" name="tmp_out_strb_V" originalName="tmp_out.strb.V" coreId="2942477823" bitwidth="4" opcode="alloca" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
       <dataOutputObjs>load</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="tmp_out_user_V" originalName="tmp_out.user.V" coreId="15" bitwidth="1" opcode="alloca" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="tmp_out_user_V" originalName="tmp_out.user.V" coreId="1919118953" bitwidth="1" opcode="alloca" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
       <dataOutputObjs>load</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="22" name="tmp_out_id_V" originalName="tmp_out.id.V" coreId="0" bitwidth="1" opcode="alloca" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="22" name="tmp_out_id_V" originalName="tmp_out.id.V" coreId="1953525093" bitwidth="1" opcode="alloca" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
       <dataOutputObjs>load</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="tmp_out_dest_V" originalName="tmp_out.dest.V" coreId="124" bitwidth="1" opcode="alloca" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="tmp_out_dest_V" originalName="tmp_out.dest.V" coreId="1664037166" bitwidth="1" opcode="alloca" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
       <dataOutputObjs>load</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="24" name="read_coefs" originalName="read_coefs" coreId="57" bitwidth="1" opcode="alloca" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="24" name="read_coefs" originalName="read_coefs" coreId="1953525093" bitwidth="1" opcode="alloca" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="25" name="state" originalName="state" coreId="3" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="25" name="state" originalName="state" coreId="859599982" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
@@ -397,47 +397,47 @@
       <dataOutputObjs>call</dataOutputObjs>
       <dataOutputObjs>call</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="27" name="accumulate_loc" coreId="1747394670" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="27" name="accumulate_loc" coreId="1819619616" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
       <dataOutputObjs>call</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="50" name="trunc_ln" lineNumber="76" fileName="equalizer.cpp" fileDirectory=".." rtlName="trunc_ln_fu_434_p4" coreId="742288501" contextFuncName="equalizer" bitwidth="62" opcode="partselect" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="equalizer.cpp" linenumber="76" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="50" name="trunc_ln" lineNumber="88" fileName="equalizer.cpp" fileDirectory=".." rtlName="trunc_ln_fu_434_p4" coreId="0" contextFuncName="equalizer" bitwidth="62" opcode="partselect" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="equalizer.cpp" linenumber="88" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>sext</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="51" name="sext_ln76" lineNumber="76" fileName="equalizer.cpp" fileDirectory=".." rtlName="sext_ln76_fu_444_p1" coreId="1629516649" contextFuncName="equalizer" bitwidth="64" opcode="sext" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="equalizer.cpp" linenumber="76" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="51" name="sext_ln88" lineNumber="88" fileName="equalizer.cpp" fileDirectory=".." rtlName="sext_ln88_fu_444_p1" coreId="0" contextFuncName="equalizer" bitwidth="64" opcode="sext" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="equalizer.cpp" linenumber="88" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataInputObjs>partselect</dataInputObjs>
       <dataOutputObjs>getelementptr</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="52" name="gmem_addr" lineNumber="76" fileName="equalizer.cpp" fileDirectory=".." coreId="1819619616" contextFuncName="equalizer" bitwidth="32" opcode="getelementptr" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="equalizer.cpp" linenumber="76" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="52" name="gmem_addr" lineNumber="88" fileName="equalizer.cpp" fileDirectory=".." coreId="1912632178" contextFuncName="equalizer" bitwidth="32" opcode="getelementptr" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="equalizer.cpp" linenumber="88" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataInputObjs>gmem</dataInputObjs>
       <dataInputObjs>sext</dataInputObjs>
       <dataOutputObjs>readreq</dataOutputObjs>
       <dataOutputObjs>read</dataOutputObjs>
       <dataOutputObjs>gmem</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="53" name="state_write_ln26" lineNumber="26" fileName="equalizer.cpp" fileDirectory=".." coreId="1953521522" contextFuncName="equalizer" opcode="store" m_display="0" m_delay="1.82" m_topoIndex="14" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="equalizer.cpp" linenumber="26" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="53" name="state_write_ln27" lineNumber="27" fileName="equalizer.cpp" fileDirectory=".." coreId="0" contextFuncName="equalizer" opcode="store" m_display="0" m_delay="1.82" m_topoIndex="14" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="equalizer.cpp" linenumber="27" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataInputObjs>alloca</dataInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="54" name="read_coefs_write_ln26" lineNumber="26" fileName="equalizer.cpp" fileDirectory=".." coreId="1767255928" contextFuncName="equalizer" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="15" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="equalizer.cpp" linenumber="26" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="54" name="read_coefs_write_ln27" lineNumber="27" fileName="equalizer.cpp" fileDirectory=".." coreId="0" contextFuncName="equalizer" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="15" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="equalizer.cpp" linenumber="27" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataInputObjs>alloca</dataInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="55" name="br_ln26" lineNumber="26" fileName="equalizer.cpp" fileDirectory=".." coreId="1747394670" contextFuncName="equalizer" opcode="br" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="equalizer.cpp" linenumber="26" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="55" name="br_ln27" lineNumber="27" fileName="equalizer.cpp" fileDirectory=".." coreId="0" contextFuncName="equalizer" opcode="br" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="equalizer.cpp" linenumber="27" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <controlInputObjs>while.body</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="equalizer.cpp">
-      <validLinenumbers>76</validLinenumbers>
-      <validLinenumbers>26</validLinenumbers>
+      <validLinenumbers>88</validLinenumbers>
+      <validLinenumbers>27</validLinenumbers>
     </fileValidLineNumbers>
   </blocks>
   <blocks id="74" name="while.body" type="BlockType">
@@ -449,43 +449,43 @@
     <controlOutputObjs>sw.bb</controlOutputObjs>
     <controlOutputObjs>sw.bb2</controlOutputObjs>
     <controlOutputObjs>for.inc46.preheader</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="57" name="tmp_out_data_V_1" originalName="tmp_out.data.V" coreId="1819619616" bitwidth="32" opcode="load" nodeLabel="1.0" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="57" name="tmp_out_data_V_1" originalName="tmp_out.data.V" coreId="0" bitwidth="32" opcode="load" nodeLabel="1.0" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>phi</dataOutputObjs>
       <dataOutputObjs>phi</dataOutputObjs>
       <dataOutputObjs>phi</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="58" name="tmp_out_keep_V_1" originalName="tmp_out.keep.V" coreId="824192108" bitwidth="4" opcode="load" nodeLabel="1.0" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="58" name="tmp_out_keep_V_1" originalName="tmp_out.keep.V" coreId="0" bitwidth="4" opcode="load" nodeLabel="1.0" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>phi</dataOutputObjs>
       <dataOutputObjs>phi</dataOutputObjs>
       <dataOutputObjs>phi</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="59" name="tmp_out_strb_V_1" originalName="tmp_out.strb.V" coreId="796485487" bitwidth="4" opcode="load" nodeLabel="1.0" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="59" name="tmp_out_strb_V_1" originalName="tmp_out.strb.V" coreId="509" bitwidth="4" opcode="load" nodeLabel="1.0" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>phi</dataOutputObjs>
       <dataOutputObjs>phi</dataOutputObjs>
       <dataOutputObjs>phi</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="60" name="tmp_out_user_V_1" originalName="tmp_out.user.V" coreId="539770418" bitwidth="1" opcode="load" nodeLabel="1.0" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="60" name="tmp_out_user_V_1" originalName="tmp_out.user.V" coreId="0" bitwidth="1" opcode="load" nodeLabel="1.0" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>phi</dataOutputObjs>
       <dataOutputObjs>phi</dataOutputObjs>
       <dataOutputObjs>phi</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="61" name="tmp_out_id_V_1" originalName="tmp_out.id.V" coreId="875706933" bitwidth="1" opcode="load" nodeLabel="1.0" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="61" name="tmp_out_id_V_1" originalName="tmp_out.id.V" coreId="0" bitwidth="1" opcode="load" nodeLabel="1.0" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>phi</dataOutputObjs>
       <dataOutputObjs>phi</dataOutputObjs>
       <dataOutputObjs>phi</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="62" name="tmp_out_dest_V_1" originalName="tmp_out.dest.V" coreId="1014263401" bitwidth="1" opcode="load" nodeLabel="1.0" m_display="0" m_topoIndex="22" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="62" name="tmp_out_dest_V_1" originalName="tmp_out.dest.V" coreId="0" bitwidth="1" opcode="load" nodeLabel="1.0" m_display="0" m_topoIndex="22" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>phi</dataOutputObjs>
       <dataOutputObjs>phi</dataOutputObjs>
       <dataOutputObjs>phi</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="63" name="state_1" originalName="state" coreId="742288501" bitwidth="32" opcode="load" nodeLabel="1.0" m_display="0" m_topoIndex="23" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="63" name="state_1" originalName="state" coreId="6759712" bitwidth="32" opcode="load" nodeLabel="1.0" m_display="0" m_topoIndex="23" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>switch</dataOutputObjs>
     </node_objs>
@@ -506,7 +506,7 @@
       <dataOutputObjs>extractvalue</dataOutputObjs>
       <dataOutputObjs>extractvalue</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="66" name="tmp_data_V" lineNumber="283" originalName="tmp.data.V" fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h" fileDirectory=".." coreId="742273587" contextFuncName="read" bitwidth="32" opcode="extractvalue" nodeLabel="1.0" m_display="0" m_topoIndex="25" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="66" name="tmp_data_V" lineNumber="283" originalName="tmp.data.V" fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h" fileDirectory=".." coreId="1847620389" contextFuncName="read" bitwidth="32" opcode="extractvalue" nodeLabel="1.0" m_display="0" m_topoIndex="25" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h" linenumber="283" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="read"/>
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>mul</dataOutputObjs>
@@ -515,28 +515,28 @@
       <dataOutputObjs>phi</dataOutputObjs>
       <dataOutputObjs>phi</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="67" name="tmp_keep_V" lineNumber="283" originalName="tmp.keep.V" fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h" fileDirectory=".." coreId="1397508130" contextFuncName="read" bitwidth="4" opcode="extractvalue" nodeLabel="1.0" m_display="0" m_topoIndex="26" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="67" name="tmp_keep_V" lineNumber="283" originalName="tmp.keep.V" fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h" fileDirectory=".." coreId="0" contextFuncName="read" bitwidth="4" opcode="extractvalue" nodeLabel="1.0" m_display="0" m_topoIndex="26" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h" linenumber="283" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="read"/>
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>write</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>phi</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="68" name="tmp_strb_V" lineNumber="283" originalName="tmp.strb.V" fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h" fileDirectory=".." coreId="1768713801" contextFuncName="read" bitwidth="4" opcode="extractvalue" nodeLabel="1.0" m_display="0" m_topoIndex="27" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="68" name="tmp_strb_V" lineNumber="283" originalName="tmp.strb.V" fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h" fileDirectory=".." coreId="1936683105" contextFuncName="read" bitwidth="4" opcode="extractvalue" nodeLabel="1.0" m_display="0" m_topoIndex="27" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h" linenumber="283" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="read"/>
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>write</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>phi</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="69" name="tmp_user_V" lineNumber="283" originalName="tmp.user.V" fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h" fileDirectory=".." coreId="0" contextFuncName="read" bitwidth="1" opcode="extractvalue" nodeLabel="1.0" m_display="0" m_topoIndex="28" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="69" name="tmp_user_V" lineNumber="283" originalName="tmp.user.V" fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h" fileDirectory=".." coreId="1713384556" contextFuncName="read" bitwidth="1" opcode="extractvalue" nodeLabel="1.0" m_display="0" m_topoIndex="28" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h" linenumber="283" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="read"/>
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>write</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>phi</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="70" name="tmp_last_V" lineNumber="283" originalName="tmp.last.V" fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h" fileDirectory=".." coreId="574106982" contextFuncName="read" bitwidth="1" opcode="extractvalue" nodeLabel="1.0" m_display="0" m_topoIndex="29" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="70" name="tmp_last_V" lineNumber="283" originalName="tmp.last.V" fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h" fileDirectory=".." coreId="0" contextFuncName="read" bitwidth="1" opcode="extractvalue" nodeLabel="1.0" m_display="0" m_topoIndex="29" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h" linenumber="283" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="read"/>
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>write</dataOutputObjs>
@@ -545,22 +545,22 @@
       <dataOutputObjs>phi</dataOutputObjs>
       <dataOutputObjs>br</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="71" name="tmp_id_V" lineNumber="283" originalName="tmp.id.V" fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h" fileDirectory=".." coreId="1031365995" contextFuncName="read" bitwidth="1" opcode="extractvalue" nodeLabel="1.0" m_display="0" m_topoIndex="30" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="71" name="tmp_id_V" lineNumber="283" originalName="tmp.id.V" fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h" fileDirectory=".." coreId="272" contextFuncName="read" bitwidth="1" opcode="extractvalue" nodeLabel="1.0" m_display="0" m_topoIndex="30" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h" linenumber="283" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="read"/>
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>write</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>phi</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="72" name="tmp_dest_V" lineNumber="283" originalName="tmp.dest.V" fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h" fileDirectory=".." coreId="1748726639" contextFuncName="read" bitwidth="1" opcode="extractvalue" nodeLabel="1.0" m_display="0" m_topoIndex="31" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="72" name="tmp_dest_V" lineNumber="283" originalName="tmp.dest.V" fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h" fileDirectory=".." coreId="4294967295" contextFuncName="read" bitwidth="1" opcode="extractvalue" nodeLabel="1.0" m_display="0" m_topoIndex="31" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h" linenumber="283" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="read"/>
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>write</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>phi</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="73" name="_ln29" lineNumber="29" fileName="equalizer.cpp" fileDirectory=".." coreId="824195705" contextFuncName="equalizer" opcode="switch" nodeLabel="1.0" m_display="0" m_delay="0.95" m_topoIndex="32" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="equalizer.cpp" linenumber="29" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="73" name="_ln31" lineNumber="31" fileName="equalizer.cpp" fileDirectory=".." coreId="52" contextFuncName="equalizer" opcode="switch" nodeLabel="1.0" m_display="0" m_delay="0.95" m_topoIndex="32" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="equalizer.cpp" linenumber="31" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataInputObjs>load</dataInputObjs>
       <controlInputObjs>sw.epilog</controlInputObjs>
       <controlInputObjs>sw.bb</controlInputObjs>
@@ -569,7 +569,7 @@
       <constName>empty</constName>
     </node_objs>
     <fileValidLineNumbers fileName="equalizer.cpp">
-      <validLinenumbers>29</validLinenumbers>
+      <validLinenumbers>31</validLinenumbers>
     </fileValidLineNumbers>
     <fileValidLineNumbers fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h">
       <validLinenumbers>283</validLinenumbers>
@@ -586,43 +586,43 @@
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>while.end</controlOutputObjs>
     <controlOutputObjs>for.inc46.preheader.if.end66_crit_edge</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="75" name="_ln0" rtlName="grp_equalizer_Pipeline_Shift_Accumulate_Loop_fu_386" coreId="645165934" opcode="call" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="3.52" m_topoIndex="33" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="75" name="_ln0" rtlName="grp_equalizer_Pipeline_Shift_Accumulate_Loop_fu_386" coreId="77" opcode="call" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="3.52" m_topoIndex="33" m_clusterGroupNumber="-1">
       <dataInputObjs>gmem</dataInputObjs>
       <dataInputObjs>read</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>gmem</dataOutputObjs>
       <constName>equalizer_Pipeline_Shift_Accumulate_Loop</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="76" name="accumulate_loc_load" coreId="1869182069" bitwidth="32" opcode="load" nodeLabel="13.0" m_display="0" m_topoIndex="47" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="76" name="accumulate_loc_load" coreId="1801676136" bitwidth="32" opcode="load" nodeLabel="13.0" m_display="0" m_topoIndex="47" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="77" name="gmem_load_1_req" lineNumber="76" fileName="equalizer.cpp" fileDirectory=".." coreName="m_axi" implIndex="m_axi" control="no" opType="adapter" coreId="113" contextFuncName="equalizer" bitwidth="1" opcode="readreq" nodeLabel="3.0" nodeLatency="6" m_display="0" m_delay="7.3" m_topoIndex="43" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="equalizer.cpp" linenumber="76" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="77" name="gmem_load_1_req" lineNumber="88" fileName="equalizer.cpp" fileDirectory=".." coreName="m_axi" implIndex="m_axi" control="no" opType="adapter" coreId="113" contextFuncName="equalizer" bitwidth="1" opcode="readreq" nodeLabel="3.0" nodeLatency="6" m_display="0" m_delay="7.3" m_topoIndex="43" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="equalizer.cpp" linenumber="88" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataInputObjs>getelementptr</dataInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="78" name="gmem_addr_read" lineNumber="76" fileName="equalizer.cpp" fileDirectory=".." coreName="m_axi" implIndex="m_axi" control="no" opType="adapter" coreId="113" contextFuncName="equalizer" bitwidth="32" opcode="read" nodeLabel="10.0" m_display="0" m_delay="7.3" m_topoIndex="45" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="equalizer.cpp" linenumber="76" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="78" name="gmem_addr_read" lineNumber="88" fileName="equalizer.cpp" fileDirectory=".." coreName="m_axi" implIndex="m_axi" control="no" opType="adapter" coreId="113" contextFuncName="equalizer" bitwidth="32" opcode="read" nodeLabel="10.0" m_display="0" m_delay="7.3" m_topoIndex="45" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="equalizer.cpp" linenumber="88" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataInputObjs>getelementptr</dataInputObjs>
       <dataOutputObjs>mul</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="79" name="mul_ln76" lineNumber="76" fileName="equalizer.cpp" fileDirectory=".." rtlName="mul_32s_32s_32_2_1_U19" coreName="Multiplier" implIndex="auto" control="no" opType="mul" coreId="3" contextFuncName="equalizer" bitwidth="32" opcode="mul" nodeLabel="11.0" nodeLatency="1" m_display="0" m_delay="6.91" m_topoIndex="46" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="equalizer.cpp" linenumber="76" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="79" name="mul_ln88" lineNumber="88" fileName="equalizer.cpp" fileDirectory=".." rtlName="mul_32s_32s_32_2_1_U19" coreName="Multiplier" implIndex="auto" control="no" opType="mul" coreId="3" contextFuncName="equalizer" bitwidth="32" opcode="mul" nodeLabel="11.0" nodeLatency="1" m_display="0" m_delay="6.91" m_topoIndex="46" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="equalizer.cpp" linenumber="88" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataInputObjs>read</dataInputObjs>
       <dataInputObjs>extractvalue</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="80" name="accumulate" lineNumber="76" originalName="accumulate" fileName="equalizer.cpp" fileDirectory=".." rtlName="accumulate_fu_534_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="equalizer" bitwidth="32" opcode="add" nodeLabel="13.0" m_display="0" m_delay="2.55" m_topoIndex="48" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="equalizer.cpp" linenumber="76" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="80" name="accumulate" lineNumber="88" originalName="accumulate" fileName="equalizer.cpp" fileDirectory=".." rtlName="accumulate_fu_534_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="equalizer" bitwidth="32" opcode="add" nodeLabel="13.0" m_display="0" m_delay="2.55" m_topoIndex="48" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="equalizer.cpp" linenumber="88" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataInputObjs>mul</dataInputObjs>
       <dataInputObjs>load</dataInputObjs>
       <dataOutputObjs>write</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>phi</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="81" name="0_write_ln77" lineNumber="77" fileName="equalizer.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="equalizer" opcode="store" nodeLabel="3.0" m_display="0" m_delay="3.25" m_topoIndex="44" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="equalizer.cpp" linenumber="77" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="81" name="0_write_ln89" lineNumber="89" fileName="equalizer.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="equalizer" opcode="store" nodeLabel="3.0" m_display="0" m_delay="3.25" m_topoIndex="44" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="equalizer.cpp" linenumber="89" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataInputObjs>extractvalue</dataInputObjs>
       <constName>empty</constName>
     </node_objs>
@@ -643,16 +643,16 @@
       <dataOutputObjs>output_r_V_id_V</dataOutputObjs>
       <dataOutputObjs>output_r_V_dest_V</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="83" name="br_ln92" lineNumber="92" fileName="equalizer.cpp" fileDirectory=".." coreId="103" contextFuncName="equalizer" opcode="br" nodeLabel="14.0" m_display="0" m_delay="1.58" m_topoIndex="50" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="equalizer.cpp" linenumber="92" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="83" name="br_ln105" lineNumber="105" fileName="equalizer.cpp" fileDirectory=".." coreId="1886352501" contextFuncName="equalizer" opcode="br" nodeLabel="14.0" m_display="0" m_delay="1.58" m_topoIndex="50" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="equalizer.cpp" linenumber="105" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataInputObjs>extractvalue</dataInputObjs>
       <controlInputObjs>for.inc46.preheader.if.end66_crit_edge</controlInputObjs>
       <controlInputObjs>while.end</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="equalizer.cpp">
-      <validLinenumbers>76</validLinenumbers>
-      <validLinenumbers>77</validLinenumbers>
-      <validLinenumbers>92</validLinenumbers>
+      <validLinenumbers>88</validLinenumbers>
+      <validLinenumbers>89</validLinenumbers>
+      <validLinenumbers>105</validLinenumbers>
     </fileValidLineNumbers>
     <fileValidLineNumbers fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h">
       <validLinenumbers>304</validLinenumbers>
@@ -662,47 +662,47 @@
     <controlInputObjs>for.inc46.preheader</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>if.end66</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="85" name="state_write_ln92" lineNumber="92" fileName="equalizer.cpp" fileDirectory=".." coreId="0" contextFuncName="equalizer" opcode="store" nodeLabel="14.0" m_display="0" m_delay="1.82" m_topoIndex="51" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="equalizer.cpp" linenumber="92" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="85" name="state_write_ln105" lineNumber="105" fileName="equalizer.cpp" fileDirectory=".." coreId="824192108" contextFuncName="equalizer" opcode="store" nodeLabel="14.0" m_display="0" m_delay="1.82" m_topoIndex="51" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="equalizer.cpp" linenumber="105" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataInputObjs>alloca</dataInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="86" name="tmp_out_dest_V_write_ln92" lineNumber="92" fileName="equalizer.cpp" fileDirectory=".." coreId="544239471" contextFuncName="equalizer" opcode="store" nodeLabel="14.0" m_display="0" m_topoIndex="52" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="equalizer.cpp" linenumber="92" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="86" name="tmp_out_dest_V_write_ln105" lineNumber="105" fileName="equalizer.cpp" fileDirectory=".." coreId="574449505" contextFuncName="equalizer" opcode="store" nodeLabel="14.0" m_display="0" m_topoIndex="52" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="equalizer.cpp" linenumber="105" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataInputObjs>extractvalue</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="87" name="tmp_out_id_V_write_ln92" lineNumber="92" fileName="equalizer.cpp" fileDirectory=".." coreId="0" contextFuncName="equalizer" opcode="store" nodeLabel="14.0" m_display="0" m_topoIndex="53" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="equalizer.cpp" linenumber="92" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="87" name="tmp_out_id_V_write_ln105" lineNumber="105" fileName="equalizer.cpp" fileDirectory=".." coreId="0" contextFuncName="equalizer" opcode="store" nodeLabel="14.0" m_display="0" m_topoIndex="53" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="equalizer.cpp" linenumber="105" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataInputObjs>extractvalue</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="88" name="tmp_out_user_V_write_ln92" lineNumber="92" fileName="equalizer.cpp" fileDirectory=".." coreId="0" contextFuncName="equalizer" opcode="store" nodeLabel="14.0" m_display="0" m_topoIndex="54" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="equalizer.cpp" linenumber="92" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="88" name="tmp_out_user_V_write_ln105" lineNumber="105" fileName="equalizer.cpp" fileDirectory=".." coreId="171847458" contextFuncName="equalizer" opcode="store" nodeLabel="14.0" m_display="0" m_topoIndex="54" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="equalizer.cpp" linenumber="105" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataInputObjs>extractvalue</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="89" name="tmp_out_strb_V_write_ln92" lineNumber="92" fileName="equalizer.cpp" fileDirectory=".." coreId="0" contextFuncName="equalizer" opcode="store" nodeLabel="14.0" m_display="0" m_topoIndex="55" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="equalizer.cpp" linenumber="92" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="89" name="tmp_out_strb_V_write_ln105" lineNumber="105" fileName="equalizer.cpp" fileDirectory=".." coreId="539769716" contextFuncName="equalizer" opcode="store" nodeLabel="14.0" m_display="0" m_topoIndex="55" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="equalizer.cpp" linenumber="105" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataInputObjs>extractvalue</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="90" name="tmp_out_keep_V_write_ln92" lineNumber="92" fileName="equalizer.cpp" fileDirectory=".." coreId="744957216" contextFuncName="equalizer" opcode="store" nodeLabel="14.0" m_display="0" m_topoIndex="56" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="equalizer.cpp" linenumber="92" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="90" name="tmp_out_keep_V_write_ln105" lineNumber="105" fileName="equalizer.cpp" fileDirectory=".." coreId="0" contextFuncName="equalizer" opcode="store" nodeLabel="14.0" m_display="0" m_topoIndex="56" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="equalizer.cpp" linenumber="105" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataInputObjs>extractvalue</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="91" name="tmp_out_data_V_write_ln92" lineNumber="92" fileName="equalizer.cpp" fileDirectory=".." coreId="0" contextFuncName="equalizer" opcode="store" nodeLabel="14.0" m_display="0" m_topoIndex="57" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="equalizer.cpp" linenumber="92" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="91" name="tmp_out_data_V_write_ln105" lineNumber="105" fileName="equalizer.cpp" fileDirectory=".." coreId="0" contextFuncName="equalizer" opcode="store" nodeLabel="14.0" m_display="0" m_topoIndex="57" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="equalizer.cpp" linenumber="105" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataInputObjs>add</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="92" name="br_ln92" lineNumber="92" fileName="equalizer.cpp" fileDirectory=".." coreId="0" contextFuncName="equalizer" opcode="br" nodeLabel="14.0" m_display="0" m_topoIndex="58" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="equalizer.cpp" linenumber="92" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="92" name="br_ln105" lineNumber="105" fileName="equalizer.cpp" fileDirectory=".." coreId="0" contextFuncName="equalizer" opcode="br" nodeLabel="14.0" m_display="0" m_topoIndex="58" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="equalizer.cpp" linenumber="105" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <controlInputObjs>if.end66</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="equalizer.cpp">
-      <validLinenumbers>92</validLinenumbers>
+      <validLinenumbers>105</validLinenumbers>
     </fileValidLineNumbers>
   </blocks>
   <blocks id="96" name="sw.bb2" type="BlockType">
@@ -712,19 +712,19 @@
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>if.end24</controlOutputObjs>
     <controlOutputObjs>for.inc.preheader</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="94" name="read_coefs_load" lineNumber="37" fileName="equalizer.cpp" fileDirectory=".." coreId="0" contextFuncName="equalizer" bitwidth="1" opcode="load" nodeLabel="1.0" m_display="0" m_topoIndex="34" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="equalizer.cpp" linenumber="37" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="94" name="read_coefs_load" lineNumber="43" fileName="equalizer.cpp" fileDirectory=".." coreId="1563505457" contextFuncName="equalizer" bitwidth="1" opcode="load" nodeLabel="1.0" m_display="0" m_topoIndex="34" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="equalizer.cpp" linenumber="43" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>br</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="95" name="br_ln37" lineNumber="37" fileName="equalizer.cpp" fileDirectory=".." coreId="0" contextFuncName="equalizer" opcode="br" nodeLabel="1.0" m_display="0" m_delay="1.58" m_topoIndex="35" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="equalizer.cpp" linenumber="37" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="95" name="br_ln43" lineNumber="43" fileName="equalizer.cpp" fileDirectory=".." coreId="1701519394" contextFuncName="equalizer" opcode="br" nodeLabel="1.0" m_display="0" m_delay="1.58" m_topoIndex="35" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="equalizer.cpp" linenumber="43" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataInputObjs>load</dataInputObjs>
       <controlInputObjs>for.inc.preheader</controlInputObjs>
       <controlInputObjs>if.end24</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="equalizer.cpp">
-      <validLinenumbers>37</validLinenumbers>
+      <validLinenumbers>43</validLinenumbers>
     </fileValidLineNumbers>
   </blocks>
   <blocks id="99" name="for.inc.preheader" type="BlockType">
@@ -733,83 +733,83 @@
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>phi</controlOutputObjs>
-    <controlOutputObjs>VITIS_LOOP_48_1</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="97" name="_ln0" rtlName="grp_equalizer_Pipeline_Coef_Clear_Loop_fu_396" coreId="543434016" opcode="call" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="3.52" m_topoIndex="36" m_clusterGroupNumber="-1">
+    <controlOutputObjs>VITIS_LOOP_57_1</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="97" name="_ln0" rtlName="grp_equalizer_Pipeline_Coef_Clear_Loop_fu_396" coreId="1869182069" opcode="call" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="3.52" m_topoIndex="36" m_clusterGroupNumber="-1">
       <dataInputObjs>gmem</dataInputObjs>
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>gmem</dataOutputObjs>
       <constName>equalizer_Pipeline_Coef_Clear_Loop</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="98" name="br_ln45" lineNumber="45" fileName="equalizer.cpp" fileDirectory=".." coreId="0" contextFuncName="equalizer" opcode="br" nodeLabel="15.0" m_display="0" m_delay="1.58" m_topoIndex="67" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="equalizer.cpp" linenumber="45" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
-      <controlInputObjs>VITIS_LOOP_48_1</controlInputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="98" name="br_ln54" lineNumber="54" fileName="equalizer.cpp" fileDirectory=".." coreId="0" contextFuncName="equalizer" opcode="br" nodeLabel="15.0" m_display="0" m_delay="1.58" m_topoIndex="67" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="equalizer.cpp" linenumber="54" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
+      <controlInputObjs>VITIS_LOOP_57_1</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="equalizer.cpp">
-      <validLinenumbers>45</validLinenumbers>
+      <validLinenumbers>54</validLinenumbers>
     </fileValidLineNumbers>
   </blocks>
-  <blocks id="107" name="VITIS_LOOP_48_1" type="BlockType">
+  <blocks id="107" name="VITIS_LOOP_57_1" type="BlockType">
     <controlInputObjs>for.inc.preheader</controlInputObjs>
-    <controlInputObjs>VITIS_LOOP_48_1.split</controlInputObjs>
+    <controlInputObjs>VITIS_LOOP_57_1.split</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>if.end24.loopexit</controlOutputObjs>
-    <controlOutputObjs>VITIS_LOOP_48_1.split</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="100" name="j" lineNumber="45" originalName="j" fileName="equalizer.cpp" fileDirectory=".." coreId="0" contextFuncName="equalizer" bitwidth="2" opcode="phi" nodeLabel="16.0" m_display="0" m_topoIndex="68" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="equalizer.cpp" linenumber="45" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
+    <controlOutputObjs>VITIS_LOOP_57_1.split</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="100" name="j" lineNumber="54" originalName="j" fileName="equalizer.cpp" fileDirectory=".." coreId="645097848" contextFuncName="equalizer" bitwidth="2" opcode="phi" nodeLabel="16.0" m_display="0" m_topoIndex="68" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="equalizer.cpp" linenumber="54" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataInputObjs>add</dataInputObjs>
       <dataOutputObjs>icmp</dataOutputObjs>
       <dataOutputObjs>add</dataOutputObjs>
-      <controlInputObjs>VITIS_LOOP_48_1.split</controlInputObjs>
+      <controlInputObjs>VITIS_LOOP_57_1.split</controlInputObjs>
       <controlInputObjs>for.inc.preheader</controlInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="101" name="coef_scale" originalName="tmp.data.V" coreId="0" bitwidth="32" opcode="phi" nodeLabel="16.0" m_display="0" m_topoIndex="69" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="101" name="coef_scale" originalName="tmp.data.V" coreId="1952917093" bitwidth="32" opcode="phi" nodeLabel="16.0" m_display="0" m_topoIndex="69" m_clusterGroupNumber="-1">
       <dataInputObjs>extractvalue</dataInputObjs>
       <dataInputObjs>extractvalue</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
       <dataOutputObjs>phi</dataOutputObjs>
-      <controlInputObjs>VITIS_LOOP_48_1.split</controlInputObjs>
+      <controlInputObjs>VITIS_LOOP_57_1.split</controlInputObjs>
       <controlInputObjs>for.inc.preheader</controlInputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="102" name="p_4_0_0_0132_phi" originalName="tmp.last.V" coreId="0" bitwidth="1" opcode="phi" nodeLabel="16.0" m_display="0" m_topoIndex="70" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="102" name="p_4_0_0_0132_phi" originalName="tmp.last.V" coreId="1126703163" bitwidth="1" opcode="phi" nodeLabel="16.0" m_display="0" m_topoIndex="70" m_clusterGroupNumber="-1">
       <dataInputObjs>extractvalue</dataInputObjs>
       <dataOutputObjs>phi</dataOutputObjs>
-      <controlInputObjs>VITIS_LOOP_48_1.split</controlInputObjs>
+      <controlInputObjs>VITIS_LOOP_57_1.split</controlInputObjs>
       <controlInputObjs>for.inc.preheader</controlInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="103" name="icmp_ln45" lineNumber="45" fileName="equalizer.cpp" fileDirectory=".." rtlName="icmp_ln45_fu_569_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="equalizer" bitwidth="1" opcode="icmp" nodeLabel="16.0" m_display="0" m_delay="0.95" m_topoIndex="71" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="equalizer.cpp" linenumber="45" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="103" name="icmp_ln54" lineNumber="54" fileName="equalizer.cpp" fileDirectory=".." rtlName="icmp_ln54_fu_569_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="equalizer" bitwidth="1" opcode="icmp" nodeLabel="16.0" m_display="0" m_delay="0.95" m_topoIndex="71" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="equalizer.cpp" linenumber="54" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataInputObjs>phi</dataInputObjs>
       <dataOutputObjs>br</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="105" name="add_ln45" lineNumber="45" fileName="equalizer.cpp" fileDirectory=".." rtlName="add_ln45_fu_575_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="equalizer" bitwidth="2" opcode="add" nodeLabel="16.0" m_display="0" m_delay="1.56" m_topoIndex="72" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="equalizer.cpp" linenumber="45" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="105" name="add_ln54" lineNumber="54" fileName="equalizer.cpp" fileDirectory=".." rtlName="add_ln54_fu_575_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="equalizer" bitwidth="2" opcode="add" nodeLabel="16.0" m_display="0" m_delay="1.56" m_topoIndex="72" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="equalizer.cpp" linenumber="54" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataInputObjs>phi</dataInputObjs>
       <dataOutputObjs>phi</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="106" name="br_ln45" lineNumber="45" fileName="equalizer.cpp" fileDirectory=".." coreId="0" contextFuncName="equalizer" opcode="br" nodeLabel="16.0" m_display="0" m_topoIndex="73" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="equalizer.cpp" linenumber="45" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="106" name="br_ln54" lineNumber="54" fileName="equalizer.cpp" fileDirectory=".." coreId="0" contextFuncName="equalizer" opcode="br" nodeLabel="16.0" m_display="0" m_topoIndex="73" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="equalizer.cpp" linenumber="54" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataInputObjs>icmp</dataInputObjs>
-      <controlInputObjs>VITIS_LOOP_48_1.split</controlInputObjs>
+      <controlInputObjs>VITIS_LOOP_57_1.split</controlInputObjs>
       <controlInputObjs>if.end24.loopexit</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="equalizer.cpp">
-      <validLinenumbers>45</validLinenumbers>
+      <validLinenumbers>54</validLinenumbers>
     </fileValidLineNumbers>
   </blocks>
-  <blocks id="116" name="VITIS_LOOP_48_1.split" type="BlockType">
-    <controlInputObjs>VITIS_LOOP_48_1</controlInputObjs>
+  <blocks id="116" name="VITIS_LOOP_57_1.split" type="BlockType">
+    <controlInputObjs>VITIS_LOOP_57_1</controlInputObjs>
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>br</controlOutputObjs>
-    <controlOutputObjs>VITIS_LOOP_48_1</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="109" name="empty_24" coreId="0" bitwidth="32" opcode="wait" nodeLabel="16.0" m_display="0" m_topoIndex="74" m_clusterGroupNumber="-1"/>
-    <node_objs xsi:type="cdfg:CdfgNode" id="110" name="_ln283" lineNumber="283" fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h" fileDirectory=".." rtlName="grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403" coreId="0" contextFuncName="read" opcode="call" nodeLabel="16.0" nodeLatency="1" m_display="0" m_delay="3.52" m_topoIndex="75" m_clusterGroupNumber="-1">
+    <controlOutputObjs>VITIS_LOOP_57_1</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="109" name="empty_24" coreId="1629888623" bitwidth="32" opcode="wait" nodeLabel="16.0" m_display="0" m_topoIndex="74" m_clusterGroupNumber="-1"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="110" name="_ln283" lineNumber="283" fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h" fileDirectory=".." rtlName="grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403" coreId="1936028192" contextFuncName="read" opcode="call" nodeLabel="16.0" nodeLatency="1" m_display="0" m_delay="3.52" m_topoIndex="75" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h" linenumber="283" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="read"/>
       <dataInputObjs>gmem</dataInputObjs>
       <dataInputObjs>input_r_V_data_V</dataInputObjs>
@@ -822,9 +822,9 @@
       <dataInputObjs>phi</dataInputObjs>
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>gmem</dataOutputObjs>
-      <constName>equalizer_Pipeline_VITIS_LOOP_48_1</constName>
+      <constName>equalizer_Pipeline_VITIS_LOOP_57_1</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="111" name="empty_25" coreId="0" bitwidth="32" opcode="wait" nodeLabel="18.0" m_display="0" m_topoIndex="77" m_clusterGroupNumber="-1"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="111" name="empty_25" coreId="997223777" bitwidth="32" opcode="wait" nodeLabel="18.0" m_display="0" m_topoIndex="77" m_clusterGroupNumber="-1"/>
     <node_objs xsi:type="cdfg:CdfgNode" id="112" name="empty_26" lineNumber="283" fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h" fileDirectory=".." coreName="axis" implIndex="axi4stream" control="no" opType="adapter" coreId="115" contextFuncName="read" bitwidth="44" opcode="read" nodeLabel="18.0" m_display="0" m_topoIndex="78" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h" linenumber="283" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="read"/>
       <dataInputObjs>input_r_V_data_V</dataInputObjs>
@@ -837,34 +837,34 @@
       <dataOutputObjs>extractvalue</dataOutputObjs>
       <dataOutputObjs>extractvalue</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="113" name="tmp_data_V_4" lineNumber="283" originalName="tmp.data.V" fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h" fileDirectory=".." coreId="0" contextFuncName="read" bitwidth="32" opcode="extractvalue" nodeLabel="18.0" m_display="0" m_topoIndex="79" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="113" name="tmp_data_V_4" lineNumber="283" originalName="tmp.data.V" fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h" fileDirectory=".." coreId="1633973087" contextFuncName="read" bitwidth="32" opcode="extractvalue" nodeLabel="18.0" m_display="0" m_topoIndex="79" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h" linenumber="283" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="read"/>
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>phi</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="114" name="tmp_last_V_2" lineNumber="283" originalName="tmp.last.V" fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h" fileDirectory=".." coreId="0" contextFuncName="read" bitwidth="1" opcode="extractvalue" nodeLabel="18.0" m_display="0" m_topoIndex="80" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="114" name="tmp_last_V_2" lineNumber="283" originalName="tmp.last.V" fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h" fileDirectory=".." coreId="997420912" contextFuncName="read" bitwidth="1" opcode="extractvalue" nodeLabel="18.0" m_display="0" m_topoIndex="80" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h" linenumber="283" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="read"/>
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>phi</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="115" name="br_ln45" lineNumber="45" fileName="equalizer.cpp" fileDirectory=".." coreId="0" contextFuncName="equalizer" opcode="br" nodeLabel="18.0" m_display="0" m_topoIndex="81" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="equalizer.cpp" linenumber="45" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
-      <controlInputObjs>VITIS_LOOP_48_1</controlInputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="115" name="br_ln54" lineNumber="54" fileName="equalizer.cpp" fileDirectory=".." coreId="1953521522" contextFuncName="equalizer" opcode="br" nodeLabel="18.0" m_display="0" m_topoIndex="81" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="equalizer.cpp" linenumber="54" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
+      <controlInputObjs>VITIS_LOOP_57_1</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="equalizer.cpp">
-      <validLinenumbers>45</validLinenumbers>
+      <validLinenumbers>54</validLinenumbers>
     </fileValidLineNumbers>
     <fileValidLineNumbers fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h">
       <validLinenumbers>283</validLinenumbers>
     </fileValidLineNumbers>
   </blocks>
   <blocks id="118" name="if.end24.loopexit" type="BlockType">
-    <controlInputObjs>VITIS_LOOP_48_1</controlInputObjs>
+    <controlInputObjs>VITIS_LOOP_57_1</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>if.end24</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="117" name="br_ln0" coreId="0" opcode="br" nodeLabel="16.0" m_display="0" m_delay="1.58" m_topoIndex="76" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="117" name="br_ln0" coreId="1213932093" opcode="br" nodeLabel="16.0" m_display="0" m_delay="1.58" m_topoIndex="76" m_clusterGroupNumber="-1">
       <controlInputObjs>if.end24</controlInputObjs>
     </node_objs>
   </blocks>
@@ -881,22 +881,22 @@
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>while.end</controlOutputObjs>
     <controlOutputObjs>if.end24.if.end66_crit_edge</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="119" name="tmp_last_V_1" originalName="tmp.last.V" coreId="0" bitwidth="1" opcode="phi" nodeLabel="19.0" m_display="0" m_topoIndex="82" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="119" name="tmp_last_V_1" originalName="tmp.last.V" coreId="563" bitwidth="1" opcode="phi" nodeLabel="19.0" m_display="0" m_topoIndex="82" m_clusterGroupNumber="-1">
       <dataInputObjs>extractvalue</dataInputObjs>
       <dataInputObjs>phi</dataInputObjs>
       <dataOutputObjs>br</dataOutputObjs>
       <controlInputObjs>sw.bb2</controlInputObjs>
       <controlInputObjs>if.end24.loopexit</controlInputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="120" name="tmp_data_V_2" originalName="tmp.data.V" coreId="0" bitwidth="32" opcode="phi" nodeLabel="19.0" m_display="0" m_topoIndex="83" m_clusterGroupNumber="1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="120" name="tmp_data_V_2" originalName="tmp.data.V" coreId="539769716" bitwidth="32" opcode="phi" nodeLabel="19.0" m_display="0" m_topoIndex="83" m_clusterGroupNumber="1">
       <dataInputObjs>extractvalue</dataInputObjs>
       <dataInputObjs>phi</dataInputObjs>
       <dataOutputObjs>icmp</dataOutputObjs>
       <controlInputObjs>sw.bb2</controlInputObjs>
       <controlInputObjs>if.end24.loopexit</controlInputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="121" name="icmp_ln61" lineNumber="61" fileName="equalizer.cpp" fileDirectory=".." rtlName="icmp_ln61_fu_581_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="equalizer" bitwidth="1" opcode="icmp" nodeLabel="19.0" m_display="0" m_delay="2.47" m_topoIndex="84" m_clusterGroupNumber="1">
-      <inlineStackInfo fileName="equalizer.cpp" linenumber="61" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="121" name="icmp_ln71" lineNumber="71" fileName="equalizer.cpp" fileDirectory=".." rtlName="icmp_ln71_fu_581_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="equalizer" bitwidth="1" opcode="icmp" nodeLabel="19.0" m_display="0" m_delay="2.47" m_topoIndex="84" m_clusterGroupNumber="1">
+      <inlineStackInfo fileName="equalizer.cpp" linenumber="71" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataInputObjs>phi</dataInputObjs>
       <dataOutputObjs>select</dataOutputObjs>
       <constName>empty</constName>
@@ -907,38 +907,38 @@
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="123" name="br_ln92" lineNumber="92" fileName="equalizer.cpp" fileDirectory=".." coreId="0" contextFuncName="equalizer" opcode="br" nodeLabel="19.0" m_display="0" m_delay="1.58" m_topoIndex="86" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="equalizer.cpp" linenumber="92" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="123" name="br_ln105" lineNumber="105" fileName="equalizer.cpp" fileDirectory=".." coreId="1935762015" contextFuncName="equalizer" opcode="br" nodeLabel="19.0" m_display="0" m_delay="1.58" m_topoIndex="86" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="equalizer.cpp" linenumber="105" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataInputObjs>phi</dataInputObjs>
       <controlInputObjs>if.end24.if.end66_crit_edge</controlInputObjs>
       <controlInputObjs>while.end</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="equalizer.cpp">
-      <validLinenumbers>61</validLinenumbers>
+      <validLinenumbers>71</validLinenumbers>
       <validLinenumbers>16</validLinenumbers>
-      <validLinenumbers>92</validLinenumbers>
+      <validLinenumbers>105</validLinenumbers>
     </fileValidLineNumbers>
   </blocks>
   <blocks id="128" name="if.end24.if.end66_crit_edge" type="BlockType">
     <controlInputObjs>if.end24</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>if.end66</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="125" name="state_write_ln92" lineNumber="92" fileName="equalizer.cpp" fileDirectory=".." coreId="0" contextFuncName="equalizer" opcode="store" nodeLabel="19.0" m_display="0" m_delay="1.82" m_topoIndex="87" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="equalizer.cpp" linenumber="92" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="125" name="state_write_ln105" lineNumber="105" fileName="equalizer.cpp" fileDirectory=".." coreId="1819619616" contextFuncName="equalizer" opcode="store" nodeLabel="19.0" m_display="0" m_delay="1.82" m_topoIndex="87" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="equalizer.cpp" linenumber="105" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataInputObjs>select</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="126" name="read_coefs_write_ln92" lineNumber="92" fileName="equalizer.cpp" fileDirectory=".." coreId="0" contextFuncName="equalizer" opcode="store" nodeLabel="19.0" m_display="0" m_delay="1.58" m_topoIndex="88" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="equalizer.cpp" linenumber="92" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="126" name="read_coefs_write_ln105" lineNumber="105" fileName="equalizer.cpp" fileDirectory=".." coreId="539109684" contextFuncName="equalizer" opcode="store" nodeLabel="19.0" m_display="0" m_delay="1.58" m_topoIndex="88" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="equalizer.cpp" linenumber="105" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataInputObjs>alloca</dataInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="127" name="br_ln92" lineNumber="92" fileName="equalizer.cpp" fileDirectory=".." coreId="0" contextFuncName="equalizer" opcode="br" nodeLabel="19.0" m_display="0" m_topoIndex="89" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="equalizer.cpp" linenumber="92" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="127" name="br_ln105" lineNumber="105" fileName="equalizer.cpp" fileDirectory=".." coreId="1852793632" contextFuncName="equalizer" opcode="br" nodeLabel="19.0" m_display="0" m_topoIndex="89" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="equalizer.cpp" linenumber="105" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <controlInputObjs>if.end66</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="equalizer.cpp">
-      <validLinenumbers>92</validLinenumbers>
+      <validLinenumbers>105</validLinenumbers>
     </fileValidLineNumbers>
   </blocks>
   <blocks id="132" name="sw.bb" type="BlockType">
@@ -952,8 +952,8 @@
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>while.end</controlOutputObjs>
     <controlOutputObjs>sw.bb.if.end66_crit_edge</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="129" name="icmp_ln31" lineNumber="31" fileName="equalizer.cpp" fileDirectory=".." rtlName="icmp_ln31_fu_508_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="equalizer" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="2.47" m_topoIndex="37" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="equalizer.cpp" linenumber="31" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="129" name="icmp_ln35" lineNumber="35" fileName="equalizer.cpp" fileDirectory=".." rtlName="icmp_ln35_fu_508_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="equalizer" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="2.47" m_topoIndex="37" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="equalizer.cpp" linenumber="35" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataInputObjs>extractvalue</dataInputObjs>
       <dataOutputObjs>select</dataOutputObjs>
       <constName>empty</constName>
@@ -964,33 +964,33 @@
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="131" name="br_ln92" lineNumber="92" fileName="equalizer.cpp" fileDirectory=".." coreId="0" contextFuncName="equalizer" opcode="br" nodeLabel="1.0" m_display="0" m_delay="1.58" m_topoIndex="39" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="equalizer.cpp" linenumber="92" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="131" name="br_ln105" lineNumber="105" fileName="equalizer.cpp" fileDirectory=".." coreId="795766637" contextFuncName="equalizer" opcode="br" nodeLabel="1.0" m_display="0" m_delay="1.58" m_topoIndex="39" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="equalizer.cpp" linenumber="105" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataInputObjs>extractvalue</dataInputObjs>
       <controlInputObjs>sw.bb.if.end66_crit_edge</controlInputObjs>
       <controlInputObjs>while.end</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="equalizer.cpp">
-      <validLinenumbers>31</validLinenumbers>
+      <validLinenumbers>35</validLinenumbers>
       <validLinenumbers>16</validLinenumbers>
-      <validLinenumbers>92</validLinenumbers>
+      <validLinenumbers>105</validLinenumbers>
     </fileValidLineNumbers>
   </blocks>
   <blocks id="135" name="sw.bb.if.end66_crit_edge" type="BlockType">
     <controlInputObjs>sw.bb</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>if.end66</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="133" name="state_write_ln92" lineNumber="92" fileName="equalizer.cpp" fileDirectory=".." coreId="0" contextFuncName="equalizer" opcode="store" nodeLabel="1.0" m_display="0" m_delay="1.82" m_topoIndex="40" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="equalizer.cpp" linenumber="92" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="133" name="state_write_ln105" lineNumber="105" fileName="equalizer.cpp" fileDirectory=".." coreId="539119430" contextFuncName="equalizer" opcode="store" nodeLabel="1.0" m_display="0" m_delay="1.82" m_topoIndex="40" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="equalizer.cpp" linenumber="105" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataInputObjs>select</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="134" name="br_ln92" lineNumber="92" fileName="equalizer.cpp" fileDirectory=".." coreId="0" contextFuncName="equalizer" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="41" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="equalizer.cpp" linenumber="92" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="134" name="br_ln105" lineNumber="105" fileName="equalizer.cpp" fileDirectory=".." coreId="1768318322" contextFuncName="equalizer" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="41" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="equalizer.cpp" linenumber="105" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <controlInputObjs>if.end66</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="equalizer.cpp">
-      <validLinenumbers>92</validLinenumbers>
+      <validLinenumbers>105</validLinenumbers>
     </fileValidLineNumbers>
   </blocks>
   <blocks id="137" name="sw.epilog" type="BlockType">
@@ -1004,14 +1004,14 @@
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>while.end</controlOutputObjs>
     <controlOutputObjs>if.end66</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="136" name="br_ln92" lineNumber="92" fileName="equalizer.cpp" fileDirectory=".." coreId="0" contextFuncName="equalizer" opcode="br" nodeLabel="1.0" m_display="0" m_delay="1.58" m_topoIndex="42" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="equalizer.cpp" linenumber="92" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="136" name="br_ln105" lineNumber="105" fileName="equalizer.cpp" fileDirectory=".." coreId="1735289198" contextFuncName="equalizer" opcode="br" nodeLabel="1.0" m_display="0" m_delay="1.58" m_topoIndex="42" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="equalizer.cpp" linenumber="105" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <dataInputObjs>extractvalue</dataInputObjs>
       <controlInputObjs>if.end66</controlInputObjs>
       <controlInputObjs>while.end</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="equalizer.cpp">
-      <validLinenumbers>92</validLinenumbers>
+      <validLinenumbers>105</validLinenumbers>
     </fileValidLineNumbers>
   </blocks>
   <blocks id="139" name="if.end66" type="BlockType">
@@ -1024,12 +1024,12 @@
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>while.body</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="138" name="br_ln26" lineNumber="26" fileName="equalizer.cpp" fileDirectory=".." coreId="0" contextFuncName="equalizer" opcode="br" nodeLabel="14.0" m_display="0" m_topoIndex="59" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="equalizer.cpp" linenumber="26" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="138" name="br_ln27" lineNumber="27" fileName="equalizer.cpp" fileDirectory=".." coreId="678585722" contextFuncName="equalizer" opcode="br" nodeLabel="14.0" m_display="0" m_topoIndex="59" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="equalizer.cpp" linenumber="27" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
       <controlInputObjs>while.body</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="equalizer.cpp">
-      <validLinenumbers>26</validLinenumbers>
+      <validLinenumbers>27</validLinenumbers>
     </fileValidLineNumbers>
   </blocks>
   <blocks id="148" name="while.end" type="BlockType">
@@ -1041,7 +1041,7 @@
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>br</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="140" name="tmp_dest_V_1" originalName="tmp_out.dest.V" coreId="0" bitwidth="1" opcode="phi" nodeLabel="14.0" m_display="0" m_topoIndex="60" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="140" name="tmp_dest_V_1" originalName="tmp_out.dest.V" coreId="1528970616" bitwidth="1" opcode="phi" nodeLabel="14.0" m_display="0" m_topoIndex="60" m_clusterGroupNumber="-1">
       <dataInputObjs>load</dataInputObjs>
       <dataInputObjs>load</dataInputObjs>
       <dataInputObjs>extractvalue</dataInputObjs>
@@ -1052,7 +1052,7 @@
       <controlInputObjs>for.inc46.preheader</controlInputObjs>
       <controlInputObjs>sw.epilog</controlInputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="141" name="tmp_id_V_1" originalName="tmp_out.id.V" coreId="0" bitwidth="1" opcode="phi" nodeLabel="14.0" m_display="0" m_topoIndex="61" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="141" name="tmp_id_V_1" originalName="tmp_out.id.V" coreId="1919253097" bitwidth="1" opcode="phi" nodeLabel="14.0" m_display="0" m_topoIndex="61" m_clusterGroupNumber="-1">
       <dataInputObjs>load</dataInputObjs>
       <dataInputObjs>load</dataInputObjs>
       <dataInputObjs>extractvalue</dataInputObjs>
@@ -1063,7 +1063,7 @@
       <controlInputObjs>for.inc46.preheader</controlInputObjs>
       <controlInputObjs>sw.epilog</controlInputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="142" name="tmp_user_V_1" originalName="tmp_out.user.V" coreId="0" bitwidth="1" opcode="phi" nodeLabel="14.0" m_display="0" m_topoIndex="62" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="142" name="tmp_user_V_1" originalName="tmp_out.user.V" coreId="640824123" bitwidth="1" opcode="phi" nodeLabel="14.0" m_display="0" m_topoIndex="62" m_clusterGroupNumber="-1">
       <dataInputObjs>load</dataInputObjs>
       <dataInputObjs>load</dataInputObjs>
       <dataInputObjs>extractvalue</dataInputObjs>
@@ -1074,7 +1074,7 @@
       <controlInputObjs>for.inc46.preheader</controlInputObjs>
       <controlInputObjs>sw.epilog</controlInputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="143" name="tmp_strb_V_1" originalName="tmp_out.strb.V" coreId="0" bitwidth="4" opcode="phi" nodeLabel="14.0" m_display="0" m_topoIndex="63" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="143" name="tmp_strb_V_1" originalName="tmp_out.strb.V" coreId="574043700" bitwidth="4" opcode="phi" nodeLabel="14.0" m_display="0" m_topoIndex="63" m_clusterGroupNumber="-1">
       <dataInputObjs>load</dataInputObjs>
       <dataInputObjs>load</dataInputObjs>
       <dataInputObjs>extractvalue</dataInputObjs>
@@ -1085,7 +1085,7 @@
       <controlInputObjs>for.inc46.preheader</controlInputObjs>
       <controlInputObjs>sw.epilog</controlInputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="144" name="tmp_keep_V_1" originalName="tmp_out.keep.V" coreId="0" bitwidth="4" opcode="phi" nodeLabel="14.0" m_display="0" m_topoIndex="64" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="144" name="tmp_keep_V_1" originalName="tmp_out.keep.V" coreId="1735289195" bitwidth="4" opcode="phi" nodeLabel="14.0" m_display="0" m_topoIndex="64" m_clusterGroupNumber="-1">
       <dataInputObjs>load</dataInputObjs>
       <dataInputObjs>load</dataInputObjs>
       <dataInputObjs>extractvalue</dataInputObjs>
@@ -1096,7 +1096,7 @@
       <controlInputObjs>for.inc46.preheader</controlInputObjs>
       <controlInputObjs>sw.epilog</controlInputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="145" name="tmp_data_V_5" originalName="tmp_out.data.V" coreId="0" bitwidth="32" opcode="phi" nodeLabel="14.0" m_display="0" m_topoIndex="65" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="145" name="tmp_data_V_5" originalName="tmp_out.data.V" coreId="1768318322" bitwidth="32" opcode="phi" nodeLabel="14.0" m_display="0" m_topoIndex="65" m_clusterGroupNumber="-1">
       <dataInputObjs>load</dataInputObjs>
       <dataInputObjs>load</dataInputObjs>
       <dataInputObjs>add</dataInputObjs>
@@ -1124,11 +1124,11 @@
       <dataOutputObjs>output_r_V_dest_V</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="147" name="_ln98" lineNumber="98" fileName="equalizer.cpp" fileDirectory=".." coreId="0" contextFuncName="equalizer" opcode="ret" nodeLabel="20.0" m_display="0" m_topoIndex="90" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="equalizer.cpp" linenumber="98" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="147" name="_ln112" lineNumber="112" fileName="equalizer.cpp" fileDirectory=".." coreId="1279795773" contextFuncName="equalizer" opcode="ret" nodeLabel="20.0" m_display="0" m_topoIndex="90" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="equalizer.cpp" linenumber="112" fileDirectory="C:\Users\a01me\Documents\GitHub\College\EECE4632FinalProject\Increased_Coefs\Audio_Equalizer\Audio_Equalizer_Vitis" functionName="equalizer"/>
     </node_objs>
     <fileValidLineNumbers fileName="equalizer.cpp">
-      <validLinenumbers>98</validLinenumbers>
+      <validLinenumbers>112</validLinenumbers>
     </fileValidLineNumbers>
     <fileValidLineNumbers fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h">
       <validLinenumbers>304</validLinenumbers>
@@ -1188,6 +1188,9 @@
   <regnodes realName="accumulate_loc_reg_664">
     <nodeIds>27</nodeIds>
   </regnodes>
+  <regnodes realName="mul_ln88_reg_755">
+    <nodeIds>79</nodeIds>
+  </regnodes>
   <regnodes realName="tmp_out_dest_V_reg_635">
     <nodeIds>23</nodeIds>
   </regnodes>
@@ -1196,9 +1199,6 @@
   </regnodes>
   <regnodes realName="tmp_out_data_V_reg_605">
     <nodeIds>18</nodeIds>
-  </regnodes>
-  <regnodes realName="add_ln45_reg_770">
-    <nodeIds>105</nodeIds>
   </regnodes>
   <regnodes realName="tmp_dest_V_reg_740">
     <nodeIds>72</nodeIds>
@@ -1230,8 +1230,8 @@
   <regnodes realName="tmp_keep_V_reg_706">
     <nodeIds>67</nodeIds>
   </regnodes>
-  <regnodes realName="mul_ln76_reg_755">
-    <nodeIds>79</nodeIds>
+  <regnodes realName="add_ln54_reg_770">
+    <nodeIds>105</nodeIds>
   </regnodes>
   <regnodes realName="p_4_0_0_0132_phi_reg_353">
     <nodeIds>102</nodeIds>
@@ -1263,9 +1263,6 @@
   <regnodes realName="tmp_data_V_5_reg_316">
     <nodeIds>145</nodeIds>
   </regnodes>
-  <expressionNodes realName="sext_ln76_fu_444">
-    <nodeIds>51</nodeIds>
-  </expressionNodes>
   <expressionNodes realName="tmp_dest_V_1_phi_fu_240">
     <nodeIds>140</nodeIds>
   </expressionNodes>
@@ -1275,9 +1272,6 @@
   <expressionNodes realName="tmp_out_keep_V_fu_136">
     <nodeIds>19</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="icmp_ln45_fu_569">
-    <nodeIds>103</nodeIds>
-  </expressionNodes>
   <expressionNodes realName="accumulate_loc_fu_164">
     <nodeIds>27</nodeIds>
   </expressionNodes>
@@ -1285,14 +1279,23 @@
     <nodeIds>66</nodeIds>
     <nodeIds>113</nodeIds>
   </expressionNodes>
+  <expressionNodes realName="icmp_ln35_fu_508">
+    <nodeIds>129</nodeIds>
+  </expressionNodes>
   <expressionNodes realName="select_ln16_fu_514">
     <nodeIds>130</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="add_ln45_fu_575">
-    <nodeIds>105</nodeIds>
+  <expressionNodes realName="sext_ln88_fu_444">
+    <nodeIds>51</nodeIds>
   </expressionNodes>
   <expressionNodes realName="tmp_out_data_V_fu_132">
     <nodeIds>18</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln54_fu_575">
+    <nodeIds>105</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln54_fu_569">
+    <nodeIds>103</nodeIds>
   </expressionNodes>
   <expressionNodes realName="tmp_data_V_2_phi_fu_379">
     <nodeIds>120</nodeIds>
@@ -1352,11 +1355,8 @@
   <expressionNodes realName="tmp_keep_V_1_phi_fu_304">
     <nodeIds>144</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="icmp_ln61_fu_581">
+  <expressionNodes realName="icmp_ln71_fu_581">
     <nodeIds>121</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="icmp_ln31_fu_508">
-    <nodeIds>129</nodeIds>
   </expressionNodes>
   <expressionNodes realName="read_coefs_fu_156">
     <nodeIds>24</nodeIds>
@@ -1376,20 +1376,38 @@
   <expressionNodes realName="select_ln16_1_fu_587">
     <nodeIds>122</nodeIds>
   </expressionNodes>
-  <moduleNodes realName="grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403">
-    <nodeIds>110</nodeIds>
-  </moduleNodes>
   <moduleNodes realName="grp_fu_527">
     <nodeIds>79</nodeIds>
   </moduleNodes>
   <moduleNodes realName="grp_equalizer_Pipeline_Coef_Clear_Loop_fu_396">
     <nodeIds>97</nodeIds>
   </moduleNodes>
+  <moduleNodes realName="grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403">
+    <nodeIds>110</nodeIds>
+  </moduleNodes>
   <moduleNodes realName="grp_equalizer_Pipeline_Shift_Accumulate_Loop_fu_386">
     <nodeIds>75</nodeIds>
   </moduleNodes>
+  <ioNodes realName="store_ln105_store_fu_545">
+    <nodeIds>86</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln105_store_fu_600">
+    <nodeIds>126</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln105_store_fu_522">
+    <nodeIds>133</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln105_store_fu_540">
+    <nodeIds>85</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln105_store_fu_565">
+    <nodeIds>91</nodeIds>
+  </ioNodes>
   <ioNodes realName="tmp_out_id_V_1_load_fu_476">
     <nodeIds>61</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln105_store_fu_561">
+    <nodeIds>90</nodeIds>
   </ioNodes>
   <ioNodes realName="grp_write_fu_204">
     <nodeIds>82</nodeIds>
@@ -1401,32 +1419,14 @@
   <ioNodes realName="gmem_addr_read_read_fu_199">
     <nodeIds>78</nodeIds>
   </ioNodes>
-  <ioNodes realName="store_ln26_store_fu_454">
+  <ioNodes realName="store_ln27_store_fu_454">
     <nodeIds>53</nodeIds>
-  </ioNodes>
-  <ioNodes realName="store_ln92_store_fu_540">
-    <nodeIds>85</nodeIds>
   </ioNodes>
   <ioNodes realName="grp_read_fu_174">
     <nodeIds>65</nodeIds>
     <nodeIds>112</nodeIds>
   </ioNodes>
-  <ioNodes realName="store_ln92_store_fu_561">
-    <nodeIds>90</nodeIds>
-  </ioNodes>
-  <ioNodes realName="store_ln92_store_fu_545">
-    <nodeIds>86</nodeIds>
-  </ioNodes>
-  <ioNodes realName="store_ln92_store_fu_600">
-    <nodeIds>126</nodeIds>
-  </ioNodes>
-  <ioNodes realName="store_ln92_store_fu_522">
-    <nodeIds>133</nodeIds>
-  </ioNodes>
-  <ioNodes realName="store_ln92_store_fu_565">
-    <nodeIds>91</nodeIds>
-  </ioNodes>
-  <ioNodes realName="store_ln92_store_fu_549">
+  <ioNodes realName="store_ln105_store_fu_549">
     <nodeIds>87</nodeIds>
   </ioNodes>
   <ioNodes realName="tmp_out_dest_V_1_load_fu_479">
@@ -1435,13 +1435,22 @@
   <ioNodes realName="tmp_out_keep_V_1_load_fu_467">
     <nodeIds>58</nodeIds>
   </ioNodes>
+  <ioNodes realName="store_ln105_store_fu_557">
+    <nodeIds>89</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln105_store_fu_595">
+    <nodeIds>125</nodeIds>
+  </ioNodes>
   <ioNodes realName="tmp_out_strb_V_1_load_fu_470">
     <nodeIds>59</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln105_store_fu_553">
+    <nodeIds>88</nodeIds>
   </ioNodes>
   <ioNodes realName="grp_readreq_fu_192">
     <nodeIds>77</nodeIds>
   </ioNodes>
-  <ioNodes realName="store_ln26_store_fu_459">
+  <ioNodes realName="store_ln27_store_fu_459">
     <nodeIds>54</nodeIds>
   </ioNodes>
   <ioNodes realName="accumulate_loc_load_load_fu_531">
@@ -1455,15 +1464,6 @@
   </ioNodes>
   <ioNodes realName="state_1_load_fu_482">
     <nodeIds>63</nodeIds>
-  </ioNodes>
-  <ioNodes realName="store_ln92_store_fu_553">
-    <nodeIds>88</nodeIds>
-  </ioNodes>
-  <ioNodes realName="store_ln92_store_fu_595">
-    <nodeIds>125</nodeIds>
-  </ioNodes>
-  <ioNodes realName="store_ln92_store_fu_557">
-    <nodeIds>89</nodeIds>
   </ioNodes>
   <ioNodes realName="tmp_out_user_V_1_load_fu_473">
     <nodeIds>60</nodeIds>

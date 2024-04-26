@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'equalizer'" level="0">
-<item name = "Date">Fri Apr 26 02:52:25 2024
+<item name = "Date">Fri Apr 26 03:05:53 2024
 </item>
 <item name = "Version">2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)</item>
 <item name = "Project">equalizer</item>
@@ -33,7 +33,7 @@
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
 <column name="grp_equalizer_Pipeline_Shift_Accumulate_Loop_fu_386">equalizer_Pipeline_Shift_Accumulate_Loop, 110, 110, 1.100 us, 1.100 us, 110, 110, no</column>
 <column name="grp_equalizer_Pipeline_Coef_Clear_Loop_fu_396">equalizer_Pipeline_Coef_Clear_Loop, 107, 107, 1.070 us, 1.070 us, 107, 107, no</column>
-<column name="grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403">equalizer_Pipeline_VITIS_LOOP_48_1, 115, 115, 1.150 us, 1.150 us, 115, 115, no</column>
+<column name="grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403">equalizer_Pipeline_VITIS_LOOP_57_1, 115, 115, 1.150 us, 1.150 us, 115, 115, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">

@@ -1,8 +1,8 @@
 INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2022.1/bin/unwrapped/win64.o/vitis_hls.exe'
-INFO: [HLS 200-10] For user 'a01me' on host 'desktop-g7ja666' (Windows NT_amd64 version 6.2) on Fri Apr 26 02:52:01 -0400 2024
+INFO: [HLS 200-10] For user 'a01me' on host 'desktop-g7ja666' (Windows NT_amd64 version 6.2) on Fri Apr 26 03:19:23 -0400 2024
 INFO: [HLS 200-10] In directory 'C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis'
-Sourcing Tcl script 'C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution18/csynth.tcl'
-INFO: [HLS 200-1510] Running: source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution18/csynth.tcl
+Sourcing Tcl script 'C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution21/csynth.tcl'
+INFO: [HLS 200-1510] Running: source C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution21/csynth.tcl
 INFO: [HLS 200-1510] Running: open_project equalizer 
 INFO: [HLS 200-10] Opening project 'C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer'.
 INFO: [HLS 200-1510] Running: set_top equalizer 
@@ -12,9 +12,9 @@ INFO: [HLS 200-1510] Running: add_files equalizer.cpp
 INFO: [HLS 200-10] Adding design file 'equalizer.cpp' to the project
 INFO: [HLS 200-1510] Running: add_files -tb equalizer_test.cpp -cflags -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
 INFO: [HLS 200-10] Adding test bench file 'equalizer_test.cpp' to the project
-INFO: [HLS 200-1510] Running: open_solution solution18 -flow_target vivado 
-INFO: [HLS 200-10] Opening solution 'C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution18'.
-INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: open_solution solution21 -flow_target vivado 
+INFO: [HLS 200-10] Opening solution 'C:/Users/a01me/Documents/GitHub/College/EECE4632FinalProject/Increased_Coefs/Audio_Equalizer/Audio_Equalizer_Vitis/equalizer/solution21'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 6.2ns.
 INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
 INFO: [HLS 200-1505] Using flow_target 'vivado'
 Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-1505.html
@@ -23,15 +23,15 @@ INFO: [HLS 200-1464] Running solution command: config_compile -pipeline_loops=0
 INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
 INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
 INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
-INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: create_clock -period 6.2 -name default 
 INFO: [HLS 200-1510] Running: config_compile -pipeline_loops 0 
 INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog 
-INFO: [HLS 200-1510] Running: source ./equalizer/solution18/directives.tcl
+INFO: [HLS 200-1510] Running: source ./equalizer/solution21/directives.tcl
 INFO: [HLS 200-1510] Running: set_directive_top -name equalizer equalizer 
 INFO: [HLS 200-1510] Running: csynth_design 
-INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.035 seconds; current allocated memory: 1.649 GB.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.036 seconds; current allocated memory: 1.657 GB.
 INFO: [HLS 200-10] Analyzing design file 'equalizer.cpp' ... 
-INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 8.186 seconds; current allocated memory: 1.649 GB.
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 5.865 seconds; current allocated memory: 1.657 GB.
 INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
 INFO: [HLS 214-131] Inlining function 'hls::axis<ap_int<32>, 1ul, 1ul, 1ul>::get_user_ptr()' into 'hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>::read(hls::axis<ap_int<32>, 1ul, 1ul, 1ul>&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h:283:50)
 INFO: [HLS 214-131] Inlining function 'hls::axis<ap_int<32>, 1ul, 1ul, 1ul>::get_dest_ptr()' into 'hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>::read(hls::axis<ap_int<32>, 1ul, 1ul, 1ul>&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h:286:25)
@@ -49,38 +49,38 @@ INFO: [HLS 214-131] Inlining function 'hls::axis<ap_int<32>, 1ul, 1ul, 1ul>::get
 INFO: [HLS 214-131] Inlining function 'hls::axis<ap_int<32>, 1ul, 1ul, 1ul>::get_id_ptr()' into 'hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>::write(hls::axis<ap_int<32>, 1ul, 1ul, 1ul> const&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h:305:24)
 INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi1ELb0EEC2EDq1_j' into 'ap_int_base<1, false>::ap_int_base(int)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:260:67)
 INFO: [HLS 214-131] Inlining function 'ap_int_base<1, false>::ap_int_base(int)' into 'ap_uint<1>::ap_uint(int)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int.h:333:58)
-INFO: [HLS 214-131] Inlining function 'hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>::read(hls::axis<ap_int<32>, 1ul, 1ul, 1ul>&)' into 'equalizer(hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&, int*, hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&)' (equalizer.cpp:27:9)
-INFO: [HLS 214-131] Inlining function 'hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>::write(hls::axis<ap_int<32>, 1ul, 1ul, 1ul> const&)' into 'equalizer(hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&, int*, hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&)' (equalizer.cpp:97:9)
-INFO: [HLS 214-131] Inlining function 'ap_int_base<1, false>::operator unsigned long long() const' into 'equalizer(hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&, int*, hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&)' (equalizer.cpp:92:7)
-INFO: [HLS 214-131] Inlining function 'hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>::write(hls::axis<ap_int<32>, 1ul, 1ul, 1ul> const&)' into 'equalizer(hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&, int*, hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&)' (equalizer.cpp:87:12)
-INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::to_int() const' into 'equalizer(hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&, int*, hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&)' (equalizer.cpp:77:36)
-INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::to_int() const' into 'equalizer(hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&, int*, hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&)' (equalizer.cpp:76:28)
-INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::to_int() const' into 'equalizer(hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&, int*, hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&)' (equalizer.cpp:61:18)
-INFO: [HLS 214-131] Inlining function 'hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>::read(hls::axis<ap_int<32>, 1ul, 1ul, 1ul>&)' into 'equalizer(hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&, int*, hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&)' (equalizer.cpp:55:13)
-INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::to_int() const' into 'equalizer(hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&, int*, hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&)' (equalizer.cpp:52:42)
-INFO: [HLS 214-131] Inlining function 'hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>::read(hls::axis<ap_int<32>, 1ul, 1ul, 1ul>&)' into 'equalizer(hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&, int*, hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&)' (equalizer.cpp:50:8)
-INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::to_int() const' into 'equalizer(hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&, int*, hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&)' (equalizer.cpp:46:29)
-INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::to_int() const' into 'equalizer(hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&, int*, hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&)' (equalizer.cpp:31:18)
+INFO: [HLS 214-131] Inlining function 'hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>::read(hls::axis<ap_int<32>, 1ul, 1ul, 1ul>&)' into 'equalizer(hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&, int*, hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&)' (equalizer.cpp:28:9)
+INFO: [HLS 214-131] Inlining function 'hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>::write(hls::axis<ap_int<32>, 1ul, 1ul, 1ul> const&)' into 'equalizer(hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&, int*, hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&)' (equalizer.cpp:111:9)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<1, false>::operator unsigned long long() const' into 'equalizer(hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&, int*, hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&)' (equalizer.cpp:105:7)
+INFO: [HLS 214-131] Inlining function 'hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>::write(hls::axis<ap_int<32>, 1ul, 1ul, 1ul> const&)' into 'equalizer(hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&, int*, hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&)' (equalizer.cpp:100:12)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::to_int() const' into 'equalizer(hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&, int*, hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&)' (equalizer.cpp:89:36)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::to_int() const' into 'equalizer(hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&, int*, hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&)' (equalizer.cpp:88:28)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::to_int() const' into 'equalizer(hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&, int*, hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&)' (equalizer.cpp:71:18)
+INFO: [HLS 214-131] Inlining function 'hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>::read(hls::axis<ap_int<32>, 1ul, 1ul, 1ul>&)' into 'equalizer(hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&, int*, hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&)' (equalizer.cpp:64:13)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::to_int() const' into 'equalizer(hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&, int*, hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&)' (equalizer.cpp:61:42)
+INFO: [HLS 214-131] Inlining function 'hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>::read(hls::axis<ap_int<32>, 1ul, 1ul, 1ul>&)' into 'equalizer(hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&, int*, hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&)' (equalizer.cpp:59:8)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::to_int() const' into 'equalizer(hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&, int*, hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&)' (equalizer.cpp:55:29)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::to_int() const' into 'equalizer(hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&, int*, hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&)' (equalizer.cpp:35:18)
 INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.none.s_struct.ap_int<32>s.i32' into 'equalizer(hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&, int*, hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h:283:5)
 INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i1.s_struct.ap_uint<1>s' into 'equalizer(hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&, int*, hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h:304:5)
 INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i4.s_struct.ap_uint<4>s' into 'equalizer(hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&, int*, hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h:304:5)
 INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i32.s_struct.ap_int<32>s' into 'equalizer(hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&, int*, hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h:304:5)
 INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.none.s_struct.ap_uint<1>s.i1' into 'equalizer(hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&, int*, hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h:283:5)
 INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.none.s_struct.ap_uint<4>s.i4' into 'equalizer(hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&, int*, hls::stream<hls::axis<ap_int<32>, 1ul, 1ul, 1ul>, 0>&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h:283:5)
-INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 7.182 seconds; current allocated memory: 1.649 GB.
-INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.006 seconds; current allocated memory: 1.649 GB.
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 6.978 seconds; current allocated memory: 1.657 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.004 seconds; current allocated memory: 1.657 GB.
 INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.157 seconds; current allocated memory: 1.649 GB.
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.114 seconds; current allocated memory: 1.657 GB.
 INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.185 seconds; current allocated memory: 1.649 GB.
-INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.337 seconds; current allocated memory: 1.649 GB.
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.156 seconds; current allocated memory: 1.657 GB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.255 seconds; current allocated memory: 1.657 GB.
 WARNING: [HLS 200-960] Cannot flatten loop 'Coef_Read_Loop' (equalizer.cpp:14:9) in function 'equalizer' the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
 Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-960.html
 WARNING: [HLS 200-960] Cannot flatten loop 'Running_Loop' (equalizer.cpp:17:10) in function 'equalizer' more than one sub loop.
 Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-960.html
-INFO: [HLS 200-472] Inferring partial write operation for 'signal_shift_reg' (equalizer.cpp:72:22)
-INFO: [HLS 200-472] Inferring partial write operation for 'signal_shift_reg' (equalizer.cpp:77:25)
-INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.313 seconds; current allocated memory: 1.649 GB.
+INFO: [HLS 200-472] Inferring partial write operation for 'signal_shift_reg' (equalizer.cpp:84:22)
+INFO: [HLS 200-472] Inferring partial write operation for 'signal_shift_reg' (equalizer.cpp:89:25)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.216 seconds; current allocated memory: 1.657 GB.
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-10] Synthesizing 'equalizer' ...
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -88,15 +88,15 @@ INFO: [HLS 200-42] -- Implementing module 'equalizer_Pipeline_Shift_Accumulate_L
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'Shift_Accumulate_Loop'.
-INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 12, loop 'Shift_Accumulate_Loop'
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 15, loop 'Shift_Accumulate_Loop'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.335 seconds; current allocated memory: 1.649 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.262 seconds; current allocated memory: 1.657 GB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.187 seconds; current allocated memory: 1.649 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.137 seconds; current allocated memory: 1.657 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'equalizer_Pipeline_Coef_Clear_Loop' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -104,59 +104,59 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'Coef_Clear_Loop'.
 INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 8, loop 'Coef_Clear_Loop'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.19 seconds; current allocated memory: 1.649 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.144 seconds; current allocated memory: 1.657 GB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.14 seconds; current allocated memory: 1.649 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.095 seconds; current allocated memory: 1.657 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'equalizer_Pipeline_VITIS_LOOP_48_1' 
+INFO: [HLS 200-42] -- Implementing module 'equalizer_Pipeline_VITIS_LOOP_57_1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_48_1'.
-INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 16, loop 'VITIS_LOOP_48_1'
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_57_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 16, loop 'VITIS_LOOP_57_1'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.166 seconds; current allocated memory: 1.649 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.14 seconds; current allocated memory: 1.657 GB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.169 seconds; current allocated memory: 1.649 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.143 seconds; current allocated memory: 1.657 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'equalizer' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.217 seconds; current allocated memory: 1.649 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.19 seconds; current allocated memory: 1.657 GB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.25 seconds; current allocated memory: 1.649 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.227 seconds; current allocated memory: 1.657 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'equalizer_Pipeline_Shift_Accumulate_Loop' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'equalizer_Pipeline_Shift_Accumulate_Loop' pipeline 'Shift_Accumulate_Loop' pipeline type 'loop pipeline'
-INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_32_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_32_5_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'equalizer_Pipeline_Shift_Accumulate_Loop'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.257 seconds; current allocated memory: 1.649 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.217 seconds; current allocated memory: 1.657 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'equalizer_Pipeline_Coef_Clear_Loop' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'equalizer_Pipeline_Coef_Clear_Loop' pipeline 'Coef_Clear_Loop' pipeline type 'loop pipeline'
 INFO: [RTGEN 206-100] Finished creating RTL model for 'equalizer_Pipeline_Coef_Clear_Loop'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.315 seconds; current allocated memory: 1.649 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.271 seconds; current allocated memory: 1.657 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'equalizer_Pipeline_VITIS_LOOP_48_1' 
+INFO: [HLS 200-10] -- Generating RTL for module 'equalizer_Pipeline_VITIS_LOOP_57_1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'equalizer_Pipeline_VITIS_LOOP_48_1' pipeline 'VITIS_LOOP_48_1' pipeline type 'loop pipeline'
-INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_32_2_1': 1 instance(s).
-INFO: [RTGEN 206-100] Finished creating RTL model for 'equalizer_Pipeline_VITIS_LOOP_48_1'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.258 seconds; current allocated memory: 1.649 GB.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'equalizer_Pipeline_VITIS_LOOP_57_1' pipeline 'VITIS_LOOP_57_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_32_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'equalizer_Pipeline_VITIS_LOOP_57_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.212 seconds; current allocated memory: 1.657 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'equalizer' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -179,15 +179,15 @@ INFO: [RTGEN 206-500] Setting interface mode on port 'equalizer/input_r_V_id_V' 
 INFO: [RTGEN 206-500] Setting interface mode on port 'equalizer/input_r_V_dest_V' to 'axis' (register, both mode).
 INFO: [RTGEN 206-500] Setting interface mode on function 'equalizer' to 'ap_ctrl_none'.
 INFO: [RTGEN 206-100] Bundling port 'coefs' to AXI-Lite port control.
-INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_32_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_32_5_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'equalizer'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.696 seconds; current allocated memory: 1.649 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.573 seconds; current allocated memory: 1.657 GB.
 INFO: [RTMG 210-278] Implementing memory 'equalizer_signal_shift_reg_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs with power-on initialization.
-INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 1.628 seconds; current allocated memory: 1.649 GB.
-INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.251 seconds; current allocated memory: 1.649 GB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 1.305 seconds; current allocated memory: 1.657 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.194 seconds; current allocated memory: 1.657 GB.
 INFO: [VHDL 208-304] Generating VHDL RTL for equalizer.
 INFO: [VLOG 209-307] Generating Verilog RTL for equalizer.
 INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
-INFO: [HLS 200-789] **** Estimated Fmax: 136.99 MHz
-INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 5 seconds. CPU system time: 1 seconds. Elapsed time: 22.682 seconds; current allocated memory: 0.000 MB.
-INFO: [HLS 200-112] Total CPU user time: 13 seconds. Total CPU system time: 3 seconds. Total elapsed time: 29.304 seconds; peak allocated memory: 1.649 GB.
+INFO: [HLS 200-789] **** Estimated Fmax: 220.95 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 4 seconds. CPU system time: 1 seconds. Elapsed time: 18.943 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 12 seconds. Total CPU system time: 3 seconds. Total elapsed time: 25.291 seconds; peak allocated memory: 1.657 GB.

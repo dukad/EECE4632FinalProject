@@ -17,8 +17,8 @@
 <ID>396</ID>
 </Instance>
 <Instance>
-<InstName>grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403</InstName>
-<ModuleName>equalizer_Pipeline_VITIS_LOOP_48_1</ModuleName>
+<InstName>grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403</InstName>
+<ModuleName>equalizer_Pipeline_VITIS_LOOP_57_1</ModuleName>
 <IsCompInst>true</IsCompInst>
 <ID>403</ID>
 </Instance>
@@ -1451,9 +1451,9 @@
 </InterfaceSummary>
 </Module>
 <Module>
-<Name>equalizer_Pipeline_VITIS_LOOP_48_1</Name>
+<Name>equalizer_Pipeline_VITIS_LOOP_57_1</Name>
 <Loops>
-<VITIS_LOOP_48_1></VITIS_LOOP_48_1>
+<VITIS_LOOP_57_1></VITIS_LOOP_57_1>
 </Loops>
 <PerformanceEstimates>
 <SummaryOfTimingAnalysis>
@@ -1472,8 +1472,8 @@
 <PipelineType>no</PipelineType>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
-<VITIS_LOOP_48_1>
-<Name>VITIS_LOOP_48_1</Name>
+<VITIS_LOOP_57_1>
+<Name>VITIS_LOOP_57_1</Name>
 <TripCount>99</TripCount>
 <Latency>113</Latency>
 <AbsoluteTimeLatency>1.130 us</AbsoluteTimeLatency>
@@ -1482,7 +1482,7 @@
 <PipelineType>yes</PipelineType>
 <InstanceList>
 </InstanceList>
-</VITIS_LOOP_48_1>
+</VITIS_LOOP_57_1>
 </SummaryOfLoopLatency>
 </PerformanceEstimates>
 <AreaEstimates>
@@ -1507,7 +1507,7 @@
 <InterfaceSummary>
 <RtlPorts>
 <name>ap_clk</name>
-<Object>equalizer_Pipeline_VITIS_LOOP_48_1</Object>
+<Object>equalizer_Pipeline_VITIS_LOOP_57_1</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -1518,7 +1518,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_rst</name>
-<Object>equalizer_Pipeline_VITIS_LOOP_48_1</Object>
+<Object>equalizer_Pipeline_VITIS_LOOP_57_1</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -1529,7 +1529,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_start</name>
-<Object>equalizer_Pipeline_VITIS_LOOP_48_1</Object>
+<Object>equalizer_Pipeline_VITIS_LOOP_57_1</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -1540,7 +1540,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_done</name>
-<Object>equalizer_Pipeline_VITIS_LOOP_48_1</Object>
+<Object>equalizer_Pipeline_VITIS_LOOP_57_1</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -1551,7 +1551,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_idle</name>
-<Object>equalizer_Pipeline_VITIS_LOOP_48_1</Object>
+<Object>equalizer_Pipeline_VITIS_LOOP_57_1</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -1562,7 +1562,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_ready</name>
-<Object>equalizer_Pipeline_VITIS_LOOP_48_1</Object>
+<Object>equalizer_Pipeline_VITIS_LOOP_57_1</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -1573,7 +1573,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>grp_fu_527_p_din0</name>
-<Object>equalizer_Pipeline_VITIS_LOOP_48_1</Object>
+<Object>equalizer_Pipeline_VITIS_LOOP_57_1</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -1584,7 +1584,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>grp_fu_527_p_din1</name>
-<Object>equalizer_Pipeline_VITIS_LOOP_48_1</Object>
+<Object>equalizer_Pipeline_VITIS_LOOP_57_1</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -1595,7 +1595,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>grp_fu_527_p_dout0</name>
-<Object>equalizer_Pipeline_VITIS_LOOP_48_1</Object>
+<Object>equalizer_Pipeline_VITIS_LOOP_57_1</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -1606,7 +1606,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>grp_fu_527_p_ce</name>
-<Object>equalizer_Pipeline_VITIS_LOOP_48_1</Object>
+<Object>equalizer_Pipeline_VITIS_LOOP_57_1</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -2294,7 +2294,7 @@
 <PipelineDepth>118</PipelineDepth>
 <PipelineType>no</PipelineType>
 <InstanceList>
-<Instance>grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403</Instance>
+<Instance>grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403</Instance>
 </InstanceList>
 </Coef_Read_Loop>
 </Running_Loop>

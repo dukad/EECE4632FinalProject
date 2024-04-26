@@ -22,25 +22,34 @@ void equalizer(hls::stream<AXI_VAL>& output, coef_t coefs[NUM_COEFS], hls::strea
 
 	int state = IDLE;
 
+	// ***   MAIN LOOP   ***
 	Running_Loop:
 	while(running){
 		input.read(tmp);
 
+		// ***   COEF/SIGNAL READING FSM   ***
 		switch (state){
+			// ***   IDLE STATE   ***
 			case IDLE:
+				// Waits to receive START code and then initializes coefficient processing
 				if (tmp.data.to_int() == BEEF){
 					state = READ_COEFS;
 				}
 				break;
 
+			// ***   READ_COEFS STATE   ***
 			case READ_COEFS:
+				// Ensures that coefficients are only read once, and STOP code can be read at any time after
 				if (!read_coefs){
+					// Clears coefficient array by setting all values to 0
 					Coef_Clear_Loop:
 					for (i = NUM_COEFS - 1; i >= 0; i--){
 					#pragma HLS PIPELINE
 						coefs[i] = 0;
 					}
 
+					// Reads gain and coefficients for each frequency band of filter
+					// Scales and combines coefficients into block memory
 					Coef_Read_Loop:
 					for (j = 0; j < NUM_BANDS; j++){
 						coef_scale = tmp.data.to_int();
@@ -58,14 +67,17 @@ void equalizer(hls::stream<AXI_VAL>& output, coef_t coefs[NUM_COEFS], hls::strea
 					read_coefs = true;
 				}
 
+				// Waits to receive STOP code and then initializes filtering + output of signal
 				if (tmp.data.to_int() == ABBA){
 					state = OUTPUT_SIGNAL;
 				}
 				break;
 
+			// ***   OUTPUT_SIGNAL STATE   ***
 			case OUTPUT_SIGNAL:
 				accumulate = 0;
 
+				// Simple convolution (code from class but with tweaked optimizations)
 				Shift_Accumulate_Loop:
 				for (i = NUM_COEFS - 1; i > 0; i--){
 				#pragma HLS PIPELINE
@@ -76,6 +88,7 @@ void equalizer(hls::stream<AXI_VAL>& output, coef_t coefs[NUM_COEFS], hls::strea
 				accumulate += tmp.data.to_int() * coefs[0];
 				signal_shift_reg[0] = tmp.data.to_int();
 
+				// Write signal out
 				tmp_out.data = accumulate;
 				tmp_out.keep = tmp.keep;
 				tmp_out.strb = tmp.strb;
@@ -93,6 +106,7 @@ void equalizer(hls::stream<AXI_VAL>& output, coef_t coefs[NUM_COEFS], hls::strea
 			break;
 		}
 	}
+
 	tmp_out.last = 1;
 	output.write(tmp_out);
 }

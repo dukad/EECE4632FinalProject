@@ -5,7 +5,7 @@ set SynModuleInfo {
     }
   }
   {SRCNAME equalizer_Pipeline_Coef_Clear_Loop MODELNAME equalizer_Pipeline_Coef_Clear_Loop RTLNAME equalizer_equalizer_Pipeline_Coef_Clear_Loop}
-  {SRCNAME equalizer_Pipeline_VITIS_LOOP_48_1 MODELNAME equalizer_Pipeline_VITIS_LOOP_48_1 RTLNAME equalizer_equalizer_Pipeline_VITIS_LOOP_48_1}
+  {SRCNAME equalizer_Pipeline_VITIS_LOOP_57_1 MODELNAME equalizer_Pipeline_VITIS_LOOP_57_1 RTLNAME equalizer_equalizer_Pipeline_VITIS_LOOP_57_1}
   {SRCNAME equalizer MODELNAME equalizer RTLNAME equalizer IS_TOP 1
     SUBMODULES {
       {MODELNAME equalizer_mul_32s_32s_32_2_1 RTLNAME equalizer_mul_32s_32s_32_2_1 BINDTYPE op TYPE mul IMPL auto LATENCY 1 ALLOW_PRAGMA 1}

@@ -238,7 +238,7 @@ set RtlHierarchyInfo {[
 					{"Name" : "gmem_blk_n_AR", "Type" : "RtlSignal"},
 					{"Name" : "gmem_blk_n_R", "Type" : "RtlSignal"}],
 				"SubConnect" : [
-					{"ID" : "6", "SubInstance" : "grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403", "Port" : "gmem", "Inst_start_state" : "17", "Inst_end_state" : "18"},
+					{"ID" : "6", "SubInstance" : "grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403", "Port" : "gmem", "Inst_start_state" : "17", "Inst_end_state" : "18"},
 					{"ID" : "2", "SubInstance" : "grp_equalizer_Pipeline_Shift_Accumulate_Loop_fu_386", "Port" : "gmem", "Inst_start_state" : "2", "Inst_end_state" : "3"},
 					{"ID" : "4", "SubInstance" : "grp_equalizer_Pipeline_Coef_Clear_Loop_fu_396", "Port" : "gmem", "Inst_start_state" : "2", "Inst_end_state" : "16"}]},
 			{"Name" : "output_r_V_data_V", "Type" : "Axis", "Direction" : "O",
@@ -255,25 +255,25 @@ set RtlHierarchyInfo {[
 				"BlockSignal" : [
 					{"Name" : "input_r_TDATA_blk_n", "Type" : "RtlSignal"}],
 				"SubConnect" : [
-					{"ID" : "6", "SubInstance" : "grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403", "Port" : "input_r_V_data_V", "Inst_start_state" : "17", "Inst_end_state" : "18"}]},
+					{"ID" : "6", "SubInstance" : "grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403", "Port" : "input_r_V_data_V", "Inst_start_state" : "17", "Inst_end_state" : "18"}]},
 			{"Name" : "input_r_V_keep_V", "Type" : "Axis", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "6", "SubInstance" : "grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403", "Port" : "input_r_V_keep_V", "Inst_start_state" : "17", "Inst_end_state" : "18"}]},
+					{"ID" : "6", "SubInstance" : "grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403", "Port" : "input_r_V_keep_V", "Inst_start_state" : "17", "Inst_end_state" : "18"}]},
 			{"Name" : "input_r_V_strb_V", "Type" : "Axis", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "6", "SubInstance" : "grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403", "Port" : "input_r_V_strb_V", "Inst_start_state" : "17", "Inst_end_state" : "18"}]},
+					{"ID" : "6", "SubInstance" : "grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403", "Port" : "input_r_V_strb_V", "Inst_start_state" : "17", "Inst_end_state" : "18"}]},
 			{"Name" : "input_r_V_user_V", "Type" : "Axis", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "6", "SubInstance" : "grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403", "Port" : "input_r_V_user_V", "Inst_start_state" : "17", "Inst_end_state" : "18"}]},
+					{"ID" : "6", "SubInstance" : "grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403", "Port" : "input_r_V_user_V", "Inst_start_state" : "17", "Inst_end_state" : "18"}]},
 			{"Name" : "input_r_V_last_V", "Type" : "Axis", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "6", "SubInstance" : "grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403", "Port" : "input_r_V_last_V", "Inst_start_state" : "17", "Inst_end_state" : "18"}]},
+					{"ID" : "6", "SubInstance" : "grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403", "Port" : "input_r_V_last_V", "Inst_start_state" : "17", "Inst_end_state" : "18"}]},
 			{"Name" : "input_r_V_id_V", "Type" : "Axis", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "6", "SubInstance" : "grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403", "Port" : "input_r_V_id_V", "Inst_start_state" : "17", "Inst_end_state" : "18"}]},
+					{"ID" : "6", "SubInstance" : "grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403", "Port" : "input_r_V_id_V", "Inst_start_state" : "17", "Inst_end_state" : "18"}]},
 			{"Name" : "input_r_V_dest_V", "Type" : "Axis", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "6", "SubInstance" : "grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403", "Port" : "input_r_V_dest_V", "Inst_start_state" : "17", "Inst_end_state" : "18"}]},
+					{"ID" : "6", "SubInstance" : "grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403", "Port" : "input_r_V_dest_V", "Inst_start_state" : "17", "Inst_end_state" : "18"}]},
 			{"Name" : "signal_shift_reg", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
 					{"ID" : "2", "SubInstance" : "grp_equalizer_Pipeline_Shift_Accumulate_Loop_fu_386", "Port" : "signal_shift_reg", "Inst_start_state" : "2", "Inst_end_state" : "3"}]}],
@@ -334,8 +334,8 @@ set RtlHierarchyInfo {[
 			{"Name" : "Coef_Clear_Loop", "PipelineType" : "UPC",
 				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter7", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter7", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
 	{"ID" : "5", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_equalizer_Pipeline_Coef_Clear_Loop_fu_396.flow_control_loop_pipe_sequential_init_U", "Parent" : "4"},
-	{"ID" : "6", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403", "Parent" : "0", "Child" : ["7"],
-		"CDFG" : "equalizer_Pipeline_VITIS_LOOP_48_1",
+	{"ID" : "6", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403", "Parent" : "0", "Child" : ["7"],
+		"CDFG" : "equalizer_Pipeline_VITIS_LOOP_57_1",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
@@ -368,9 +368,9 @@ set RtlHierarchyInfo {[
 			{"Name" : "coef_scale", "Type" : "None", "Direction" : "I"},
 			{"Name" : "coefs", "Type" : "None", "Direction" : "I"}],
 		"Loop" : [
-			{"Name" : "VITIS_LOOP_48_1", "PipelineType" : "UPC",
+			{"Name" : "VITIS_LOOP_57_1", "PipelineType" : "UPC",
 				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter15", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter15", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "7", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403.flow_control_loop_pipe_sequential_init_U", "Parent" : "6"},
+	{"ID" : "7", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403.flow_control_loop_pipe_sequential_init_U", "Parent" : "6"},
 	{"ID" : "8", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.control_s_axi_U", "Parent" : "0"},
 	{"ID" : "9", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.gmem_m_axi_U", "Parent" : "0"},
 	{"ID" : "10", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_32s_32s_32_2_1_U19", "Parent" : "0"},
@@ -417,7 +417,7 @@ set ArgLastReadFirstWriteLatency {
 	equalizer_Pipeline_Coef_Clear_Loop {
 		gmem {Type O LastRead 3 FirstWrite 2}
 		coefs {Type I LastRead 0 FirstWrite -1}}
-	equalizer_Pipeline_VITIS_LOOP_48_1 {
+	equalizer_Pipeline_VITIS_LOOP_57_1 {
 		gmem {Type IO LastRead 11 FirstWrite 10}
 		input_r_V_data_V {Type I LastRead 0 FirstWrite -1}
 		input_r_V_keep_V {Type I LastRead 0 FirstWrite -1}

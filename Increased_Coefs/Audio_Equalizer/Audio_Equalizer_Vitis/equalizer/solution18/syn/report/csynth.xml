@@ -1042,24 +1042,24 @@
                     <ModuleName>equalizer_Pipeline_Shift_Accumulate_Loop</ModuleName>
                     <IsCompInst>true</IsCompInst>
                     <ID>386</ID>
-                    <BindInstances>add_ln72_fu_144_p2 add_ln73_fu_167_p2 accumulate_1_fu_209_p2</BindInstances>
+                    <BindInstances>add_ln84_fu_144_p2 add_ln85_fu_167_p2 accumulate_1_fu_209_p2</BindInstances>
                 </Instance>
                 <Instance>
                     <InstName>grp_equalizer_Pipeline_Coef_Clear_Loop_fu_396</InstName>
                     <ModuleName>equalizer_Pipeline_Coef_Clear_Loop</ModuleName>
                     <IsCompInst>true</IsCompInst>
                     <ID>396</ID>
-                    <BindInstances>add_ln41_fu_123_p2 add_ln39_fu_149_p2</BindInstances>
+                    <BindInstances>add_ln48_fu_123_p2 add_ln46_fu_149_p2</BindInstances>
                 </Instance>
                 <Instance>
-                    <InstName>grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403</InstName>
-                    <ModuleName>equalizer_Pipeline_VITIS_LOOP_48_1</ModuleName>
+                    <InstName>grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403</InstName>
+                    <ModuleName>equalizer_Pipeline_VITIS_LOOP_57_1</ModuleName>
                     <IsCompInst>true</IsCompInst>
                     <ID>403</ID>
-                    <BindInstances>add_ln48_fu_160_p2 add_ln52_fu_182_p2 add_ln52_1_fu_217_p2</BindInstances>
+                    <BindInstances>add_ln57_fu_160_p2 add_ln61_fu_182_p2 add_ln61_1_fu_217_p2</BindInstances>
                 </Instance>
             </InstancesList>
-            <BindInstances>mul_32s_32s_32_2_1_U19 accumulate_fu_534_p2 add_ln45_fu_575_p2 signal_shift_reg_U</BindInstances>
+            <BindInstances>mul_32s_32s_32_2_1_U19 accumulate_fu_534_p2 add_ln54_fu_575_p2 signal_shift_reg_U</BindInstances>
         </TopModule>
     </RTLDesignHierarchy>
     <ModuleInformation>
@@ -1117,9 +1117,9 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Shift_Accumulate_Loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln72_fu_144_p2" SOURCE="equalizer.cpp:72" URAM="0" VARIABLE="add_ln72"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Shift_Accumulate_Loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln73_fu_167_p2" SOURCE="equalizer.cpp:73" URAM="0" VARIABLE="add_ln73"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Shift_Accumulate_Loop" OPTYPE="add" PRAGMA="" RTLNAME="accumulate_1_fu_209_p2" SOURCE="equalizer.cpp:73" URAM="0" VARIABLE="accumulate_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Shift_Accumulate_Loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln84_fu_144_p2" SOURCE="equalizer.cpp:84" URAM="0" VARIABLE="add_ln84"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Shift_Accumulate_Loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln85_fu_167_p2" SOURCE="equalizer.cpp:85" URAM="0" VARIABLE="add_ln85"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Shift_Accumulate_Loop" OPTYPE="add" PRAGMA="" RTLNAME="accumulate_1_fu_209_p2" SOURCE="equalizer.cpp:85" URAM="0" VARIABLE="accumulate_1"/>
             </BindNodes>
         </Module>
         <Module>
@@ -1176,14 +1176,14 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Coef_Clear_Loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln41_fu_123_p2" SOURCE="equalizer.cpp:41" URAM="0" VARIABLE="add_ln41"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Coef_Clear_Loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln39_fu_149_p2" SOURCE="equalizer.cpp:39" URAM="0" VARIABLE="add_ln39"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Coef_Clear_Loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln48_fu_123_p2" SOURCE="equalizer.cpp:48" URAM="0" VARIABLE="add_ln48"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Coef_Clear_Loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln46_fu_149_p2" SOURCE="equalizer.cpp:46" URAM="0" VARIABLE="add_ln46"/>
             </BindNodes>
         </Module>
         <Module>
-            <Name>equalizer_Pipeline_VITIS_LOOP_48_1</Name>
+            <Name>equalizer_Pipeline_VITIS_LOOP_57_1</Name>
             <Loops>
-                <VITIS_LOOP_48_1/>
+                <VITIS_LOOP_57_1/>
             </Loops>
             <PerformanceEstimates>
                 <SummaryOfTimingAnalysis>
@@ -1202,8 +1202,8 @@
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
-                    <VITIS_LOOP_48_1>
-                        <Name>VITIS_LOOP_48_1</Name>
+                    <VITIS_LOOP_57_1>
+                        <Name>VITIS_LOOP_57_1</Name>
                         <TripCount>99</TripCount>
                         <Latency>113</Latency>
                         <AbsoluteTimeLatency>1.130 us</AbsoluteTimeLatency>
@@ -1211,7 +1211,7 @@
                         <PipelineDepth>16</PipelineDepth>
                         <PipelineType>yes</PipelineType>
                         <InstanceList/>
-                    </VITIS_LOOP_48_1>
+                    </VITIS_LOOP_57_1>
                 </SummaryOfLoopLatency>
             </PerformanceEstimates>
             <AreaEstimates>
@@ -1234,9 +1234,9 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_48_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln48_fu_160_p2" SOURCE="equalizer.cpp:48" URAM="0" VARIABLE="add_ln48"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_48_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln52_fu_182_p2" SOURCE="equalizer.cpp:52" URAM="0" VARIABLE="add_ln52"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_48_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln52_1_fu_217_p2" SOURCE="equalizer.cpp:52" URAM="0" VARIABLE="add_ln52_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_57_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln57_fu_160_p2" SOURCE="equalizer.cpp:57" URAM="0" VARIABLE="add_ln57"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_57_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln61_fu_182_p2" SOURCE="equalizer.cpp:61" URAM="0" VARIABLE="add_ln61"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_57_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln61_1_fu_217_p2" SOURCE="equalizer.cpp:61" URAM="0" VARIABLE="add_ln61_1"/>
             </BindNodes>
         </Module>
         <Module>
@@ -1289,7 +1289,7 @@
                             <PipelineDepth>118</PipelineDepth>
                             <PipelineType>no</PipelineType>
                             <InstanceList>
-                                <Instance>grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403</Instance>
+                                <Instance>grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403</Instance>
                             </InstanceList>
                         </Coef_Read_Loop>
                     </Running_Loop>
@@ -1315,9 +1315,9 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="1" LOOP="Running_Loop" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_2_1_U19" SOURCE="equalizer.cpp:76" URAM="0" VARIABLE="mul_ln76"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Running_Loop" OPTYPE="add" PRAGMA="" RTLNAME="accumulate_fu_534_p2" SOURCE="equalizer.cpp:76" URAM="0" VARIABLE="accumulate"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Coef_Read_Loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln45_fu_575_p2" SOURCE="equalizer.cpp:45" URAM="0" VARIABLE="add_ln45"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="1" LOOP="Running_Loop" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_2_1_U19" SOURCE="equalizer.cpp:88" URAM="0" VARIABLE="mul_ln88"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Running_Loop" OPTYPE="add" PRAGMA="" RTLNAME="accumulate_fu_534_p2" SOURCE="equalizer.cpp:88" URAM="0" VARIABLE="accumulate"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Coef_Read_Loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln54_fu_575_p2" SOURCE="equalizer.cpp:54" URAM="0" VARIABLE="add_ln54"/>
                 <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="signal_shift_reg_U" SOURCE="" URAM="0" VARIABLE="signal_shift_reg"/>
             </BindNodes>
         </Module>
@@ -1601,10 +1601,10 @@
             <item name="Inferred Bursts and Widening Missed">
                 <table>
                     <keys size="6">HW Interface, Variable, Loop, Problem, Resolution, Location</keys>
-                    <column name="m_axi_gmem">coefs, Coef_Clear_Loop, Stride is incompatible, 214-230, equalizer.cpp:39:6</column>
-                    <column name="m_axi_gmem">coefs, , Access is clobbered by store, 214-231, equalizer.cpp:52:17</column>
-                    <column name="m_axi_gmem">coefs, , Access is clobbered by load, 214-231, equalizer.cpp:52:17</column>
-                    <column name="m_axi_gmem">coefs, Shift_Accumulate_Loop, Stride is incompatible, 214-230, equalizer.cpp:70:5</column>
+                    <column name="m_axi_gmem">coefs, Coef_Clear_Loop, Stride is incompatible, 214-230, equalizer.cpp:46:6</column>
+                    <column name="m_axi_gmem">coefs, , Access is clobbered by store, 214-231, equalizer.cpp:61:17</column>
+                    <column name="m_axi_gmem">coefs, , Access is clobbered by load, 214-231, equalizer.cpp:61:17</column>
+                    <column name="m_axi_gmem">coefs, Shift_Accumulate_Loop, Stride is incompatible, 214-230, equalizer.cpp:82:5</column>
                 </table>
             </item>
         </section>
@@ -1614,9 +1614,9 @@
         <Pragma type="interface" location="equalizer.cpp:5" status="valid" parentFunction="equalizer" variable="input" isDirective="0" options="axis register both port=input"/>
         <Pragma type="interface" location="equalizer.cpp:6" status="valid" parentFunction="equalizer" variable="output" isDirective="0" options="axis register both port=output"/>
         <Pragma type="interface" location="equalizer.cpp:7" status="valid" parentFunction="equalizer" variable="return" isDirective="0" options="ap_ctrl_none port=return"/>
-        <Pragma type="pipeline" location="equalizer.cpp:40" status="valid" parentFunction="equalizer" variable="" isDirective="0" options=""/>
-        <Pragma type="pipeline" location="equalizer.cpp:49" status="valid" parentFunction="equalizer" variable="" isDirective="0" options=""/>
-        <Pragma type="pipeline" location="equalizer.cpp:71" status="valid" parentFunction="equalizer" variable="" isDirective="0" options=""/>
+        <Pragma type="pipeline" location="equalizer.cpp:47" status="valid" parentFunction="equalizer" variable="" isDirective="0" options=""/>
+        <Pragma type="pipeline" location="equalizer.cpp:58" status="valid" parentFunction="equalizer" variable="" isDirective="0" options=""/>
+        <Pragma type="pipeline" location="equalizer.cpp:83" status="valid" parentFunction="equalizer" variable="" isDirective="0" options=""/>
     </PragmaReport>
 </profile>
 

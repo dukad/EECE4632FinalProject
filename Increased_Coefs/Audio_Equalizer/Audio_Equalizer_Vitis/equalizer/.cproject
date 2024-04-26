@@ -197,7 +197,7 @@
                     					
                     <sourceEntries>
                         						
-                        <entry excluding=".apc|.settings|solution1|solution10|solution11|solution12|solution13|solution14|solution15|solution16|solution17|solution18|solution2|solution3|solution4|solution5|solution6|solution7|solution8|solution9|*.c*|*.C*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+                        <entry excluding=".apc|.settings|solution1|solution10|solution11|solution12|solution13|solution14|solution15|solution16|solution17|solution18|solution19|solution2|solution20|solution21|solution3|solution4|solution5|solution6|solution7|solution8|solution9|*.c*|*.C*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
                         					
                     </sourceEntries>
                     				
@@ -383,7 +383,7 @@
                     					
                     <sourceEntries>
                         						
-                        <entry excluding=".apc|.settings|solution1|solution10|solution11|solution12|solution13|solution14|solution15|solution16|solution17|solution18|solution2|solution3|solution4|solution5|solution6|solution7|solution8|solution9|*.c*|*.C*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+                        <entry excluding=".apc|.settings|solution1|solution10|solution11|solution12|solution13|solution14|solution15|solution16|solution17|solution18|solution19|solution2|solution20|solution21|solution3|solution4|solution5|solution6|solution7|solution8|solution9|*.c*|*.C*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
                         					
                     </sourceEntries>
                     				

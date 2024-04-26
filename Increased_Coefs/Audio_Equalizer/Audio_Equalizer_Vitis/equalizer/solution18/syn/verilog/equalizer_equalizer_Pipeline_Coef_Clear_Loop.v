@@ -154,16 +154,16 @@ reg    gmem_blk_n_W;
 reg    gmem_blk_n_B;
 reg    ap_block_pp0_stage0_11001;
 reg   [63:0] gmem_addr_reg_171;
-wire  signed [63:0] sext_ln41_fu_139_p1;
+wire  signed [63:0] sext_ln48_fu_139_p1;
 reg    ap_block_pp0_stage0_01001;
 reg   [7:0] i_1_fu_64;
-wire   [7:0] add_ln39_fu_149_p2;
+wire   [7:0] add_ln46_fu_149_p2;
 wire    ap_loop_init;
 reg   [7:0] ap_sig_allocacmp_i;
-wire   [6:0] trunc_ln41_fu_107_p1;
+wire   [6:0] trunc_ln48_fu_107_p1;
 wire   [8:0] shl_ln1_fu_111_p3;
-wire   [63:0] zext_ln41_fu_119_p1;
-wire   [63:0] add_ln41_fu_123_p2;
+wire   [63:0] zext_ln48_fu_119_p1;
+wire   [63:0] add_ln48_fu_123_p2;
 wire   [61:0] trunc_ln2_fu_129_p4;
 reg    ap_done_reg;
 wire    ap_continue_int;
@@ -302,7 +302,7 @@ end
 always @ (posedge ap_clk) begin
     if (((1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001))) begin
         if (((ap_enable_reg_pp0_iter0 == 1'b1) & (tmp_fu_99_p3 == 1'd0))) begin
-            i_1_fu_64 <= add_ln39_fu_149_p2;
+            i_1_fu_64 <= add_ln46_fu_149_p2;
         end else if ((ap_loop_init == 1'b1)) begin
             i_1_fu_64 <= 8'd98;
         end
@@ -327,7 +327,7 @@ end
 
 always @ (posedge ap_clk) begin
     if (((1'b1 == ap_CS_fsm_pp0_stage0) & (tmp_fu_99_p3 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001))) begin
-        gmem_addr_reg_171 <= sext_ln41_fu_139_p1;
+        gmem_addr_reg_171 <= sext_ln48_fu_139_p1;
     end
 end
 
@@ -438,9 +438,9 @@ always @ (*) begin
     endcase
 end
 
-assign add_ln39_fu_149_p2 = ($signed(ap_sig_allocacmp_i) + $signed(8'd255));
+assign add_ln46_fu_149_p2 = ($signed(ap_sig_allocacmp_i) + $signed(8'd255));
 
-assign add_ln41_fu_123_p2 = (zext_ln41_fu_119_p1 + coefs);
+assign add_ln48_fu_123_p2 = (zext_ln48_fu_119_p1 + coefs);
 
 assign ap_CS_fsm_pp0_stage0 = ap_CS_fsm[32'd0];
 
@@ -540,16 +540,16 @@ assign m_axi_gmem_WSTRB = 4'd15;
 
 assign m_axi_gmem_WUSER = 1'd0;
 
-assign sext_ln41_fu_139_p1 = $signed(trunc_ln2_fu_129_p4);
+assign sext_ln48_fu_139_p1 = $signed(trunc_ln2_fu_129_p4);
 
-assign shl_ln1_fu_111_p3 = {{trunc_ln41_fu_107_p1}, {2'd0}};
+assign shl_ln1_fu_111_p3 = {{trunc_ln48_fu_107_p1}, {2'd0}};
 
 assign tmp_fu_99_p3 = ap_sig_allocacmp_i[32'd7];
 
-assign trunc_ln2_fu_129_p4 = {{add_ln41_fu_123_p2[63:2]}};
+assign trunc_ln2_fu_129_p4 = {{add_ln48_fu_123_p2[63:2]}};
 
-assign trunc_ln41_fu_107_p1 = ap_sig_allocacmp_i[6:0];
+assign trunc_ln48_fu_107_p1 = ap_sig_allocacmp_i[6:0];
 
-assign zext_ln41_fu_119_p1 = shl_ln1_fu_111_p3;
+assign zext_ln48_fu_119_p1 = shl_ln1_fu_111_p3;
 
 endmodule //equalizer_equalizer_Pipeline_Coef_Clear_Loop

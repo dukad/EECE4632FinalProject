@@ -254,12 +254,12 @@ reg   [0:0] tmp_id_V_reg_733;
 reg   [0:0] tmp_dest_V_reg_740;
 reg  signed [31:0] gmem_addr_read_reg_750;
 wire   [31:0] grp_fu_527_p2;
-reg   [31:0] mul_ln76_reg_755;
+reg   [31:0] mul_ln88_reg_755;
 wire    ap_CS_fsm_state13;
 wire   [31:0] accumulate_fu_534_p2;
 reg   [31:0] accumulate_reg_760;
-wire   [1:0] add_ln45_fu_575_p2;
-reg   [1:0] add_ln45_reg_770;
+wire   [1:0] add_ln54_fu_575_p2;
+reg   [1:0] add_ln54_reg_770;
 wire    ap_CS_fsm_state17;
 wire    grp_equalizer_Pipeline_Shift_Accumulate_Loop_fu_386_ap_start;
 wire    grp_equalizer_Pipeline_Shift_Accumulate_Loop_fu_386_ap_done;
@@ -344,46 +344,46 @@ wire   [3:0] grp_equalizer_Pipeline_Coef_Clear_Loop_fu_396_m_axi_gmem_ARREGION;
 wire   [0:0] grp_equalizer_Pipeline_Coef_Clear_Loop_fu_396_m_axi_gmem_ARUSER;
 wire    grp_equalizer_Pipeline_Coef_Clear_Loop_fu_396_m_axi_gmem_RREADY;
 wire    grp_equalizer_Pipeline_Coef_Clear_Loop_fu_396_m_axi_gmem_BREADY;
-wire    grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_ap_start;
-wire    grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_ap_done;
-wire    grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_ap_idle;
-wire    grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_ap_ready;
-wire    grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_AWVALID;
-wire   [63:0] grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_AWADDR;
-wire   [0:0] grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_AWID;
-wire   [31:0] grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_AWLEN;
-wire   [2:0] grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_AWSIZE;
-wire   [1:0] grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_AWBURST;
-wire   [1:0] grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_AWLOCK;
-wire   [3:0] grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_AWCACHE;
-wire   [2:0] grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_AWPROT;
-wire   [3:0] grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_AWQOS;
-wire   [3:0] grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_AWREGION;
-wire   [0:0] grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_AWUSER;
-wire    grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_WVALID;
-wire   [31:0] grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_WDATA;
-wire   [3:0] grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_WSTRB;
-wire    grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_WLAST;
-wire   [0:0] grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_WID;
-wire   [0:0] grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_WUSER;
-wire    grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_ARVALID;
-wire   [63:0] grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_ARADDR;
-wire   [0:0] grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_ARID;
-wire   [31:0] grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_ARLEN;
-wire   [2:0] grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_ARSIZE;
-wire   [1:0] grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_ARBURST;
-wire   [1:0] grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_ARLOCK;
-wire   [3:0] grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_ARCACHE;
-wire   [2:0] grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_ARPROT;
-wire   [3:0] grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_ARQOS;
-wire   [3:0] grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_ARREGION;
-wire   [0:0] grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_ARUSER;
-wire    grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_RREADY;
-wire    grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_BREADY;
-wire    grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_input_r_TREADY;
-wire  signed [31:0] grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_grp_fu_527_p_din0;
-wire  signed [31:0] grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_grp_fu_527_p_din1;
-wire    grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_grp_fu_527_p_ce;
+wire    grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_ap_start;
+wire    grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_ap_done;
+wire    grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_ap_idle;
+wire    grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_ap_ready;
+wire    grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_AWVALID;
+wire   [63:0] grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_AWADDR;
+wire   [0:0] grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_AWID;
+wire   [31:0] grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_AWLEN;
+wire   [2:0] grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_AWSIZE;
+wire   [1:0] grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_AWBURST;
+wire   [1:0] grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_AWLOCK;
+wire   [3:0] grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_AWCACHE;
+wire   [2:0] grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_AWPROT;
+wire   [3:0] grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_AWQOS;
+wire   [3:0] grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_AWREGION;
+wire   [0:0] grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_AWUSER;
+wire    grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_WVALID;
+wire   [31:0] grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_WDATA;
+wire   [3:0] grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_WSTRB;
+wire    grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_WLAST;
+wire   [0:0] grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_WID;
+wire   [0:0] grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_WUSER;
+wire    grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_ARVALID;
+wire   [63:0] grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_ARADDR;
+wire   [0:0] grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_ARID;
+wire   [31:0] grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_ARLEN;
+wire   [2:0] grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_ARSIZE;
+wire   [1:0] grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_ARBURST;
+wire   [1:0] grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_ARLOCK;
+wire   [3:0] grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_ARCACHE;
+wire   [2:0] grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_ARPROT;
+wire   [3:0] grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_ARQOS;
+wire   [3:0] grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_ARREGION;
+wire   [0:0] grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_ARUSER;
+wire    grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_RREADY;
+wire    grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_BREADY;
+wire    grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_input_r_TREADY;
+wire  signed [31:0] grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_grp_fu_527_p_din0;
+wire  signed [31:0] grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_grp_fu_527_p_din1;
+wire    grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_grp_fu_527_p_ce;
 reg    gmem_AWVALID;
 wire    gmem_AWREADY;
 reg   [63:0] gmem_AWADDR;
@@ -424,14 +424,14 @@ wire    ap_CS_fsm_state16;
 reg   [31:0] coef_scale_reg_343;
 reg   [0:0] p_4_0_0_0132_phi_reg_353;
 wire   [0:0] read_coefs_load_load_fu_505_p1;
-wire   [0:0] icmp_ln45_fu_569_p2;
+wire   [0:0] icmp_ln54_fu_569_p2;
 reg   [31:0] tmp_data_V_2_reg_376;
 reg    grp_equalizer_Pipeline_Shift_Accumulate_Loop_fu_386_ap_start_reg;
 wire    ap_CS_fsm_state3;
 reg    grp_equalizer_Pipeline_Coef_Clear_Loop_fu_396_ap_start_reg;
-reg    grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_ap_start_reg;
+reg    grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_ap_start_reg;
 wire    ap_CS_fsm_state18;
-wire  signed [63:0] sext_ln76_fu_444_p1;
+wire  signed [63:0] sext_ln88_fu_444_p1;
 reg   [31:0] tmp_out_data_V_fu_132;
 reg   [3:0] tmp_out_keep_V_fu_136;
 reg   [3:0] tmp_out_strb_V_fu_140;
@@ -443,12 +443,12 @@ reg   [31:0] state_fu_160;
 wire   [31:0] select_ln16_1_fu_587_p3;
 wire   [31:0] select_ln16_fu_514_p3;
 wire   [61:0] trunc_ln_fu_434_p4;
-wire  signed [31:0] icmp_ln31_fu_508_p0;
-wire   [0:0] icmp_ln31_fu_508_p2;
+wire  signed [31:0] icmp_ln35_fu_508_p0;
+wire   [0:0] icmp_ln35_fu_508_p2;
 reg  signed [31:0] grp_fu_527_p0;
 reg  signed [31:0] grp_fu_527_p1;
 wire    ap_CS_fsm_state12;
-wire   [0:0] icmp_ln61_fu_581_p2;
+wire   [0:0] icmp_ln71_fu_581_p2;
 reg    grp_fu_527_ce;
 reg   [20:0] ap_NS_fsm;
 wire    ap_ST_fsm_state1_blk;
@@ -538,7 +538,7 @@ initial begin
 #0 ap_CS_fsm = 21'd1;
 #0 grp_equalizer_Pipeline_Shift_Accumulate_Loop_fu_386_ap_start_reg = 1'b0;
 #0 grp_equalizer_Pipeline_Coef_Clear_Loop_fu_396_ap_start_reg = 1'b0;
-#0 grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_ap_start_reg = 1'b0;
+#0 grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_ap_start_reg = 1'b0;
 end
 
 equalizer_signal_shift_reg_RAM_AUTO_1R1W #(
@@ -682,49 +682,49 @@ equalizer_equalizer_Pipeline_Coef_Clear_Loop grp_equalizer_Pipeline_Coef_Clear_L
     .coefs(coefs_read_reg_657)
 );
 
-equalizer_equalizer_Pipeline_VITIS_LOOP_48_1 grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403(
+equalizer_equalizer_Pipeline_VITIS_LOOP_57_1 grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
-    .ap_start(grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_ap_start),
-    .ap_done(grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_ap_done),
-    .ap_idle(grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_ap_idle),
-    .ap_ready(grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_ap_ready),
+    .ap_start(grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_ap_start),
+    .ap_done(grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_ap_done),
+    .ap_idle(grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_ap_idle),
+    .ap_ready(grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_ap_ready),
     .input_r_TVALID(input_r_TVALID_int_regslice),
-    .m_axi_gmem_AWVALID(grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_AWVALID),
+    .m_axi_gmem_AWVALID(grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_AWVALID),
     .m_axi_gmem_AWREADY(gmem_AWREADY),
-    .m_axi_gmem_AWADDR(grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_AWADDR),
-    .m_axi_gmem_AWID(grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_AWID),
-    .m_axi_gmem_AWLEN(grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_AWLEN),
-    .m_axi_gmem_AWSIZE(grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_AWSIZE),
-    .m_axi_gmem_AWBURST(grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_AWBURST),
-    .m_axi_gmem_AWLOCK(grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_AWLOCK),
-    .m_axi_gmem_AWCACHE(grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_AWCACHE),
-    .m_axi_gmem_AWPROT(grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_AWPROT),
-    .m_axi_gmem_AWQOS(grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_AWQOS),
-    .m_axi_gmem_AWREGION(grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_AWREGION),
-    .m_axi_gmem_AWUSER(grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_AWUSER),
-    .m_axi_gmem_WVALID(grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_WVALID),
+    .m_axi_gmem_AWADDR(grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_AWADDR),
+    .m_axi_gmem_AWID(grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_AWID),
+    .m_axi_gmem_AWLEN(grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_AWLEN),
+    .m_axi_gmem_AWSIZE(grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_AWSIZE),
+    .m_axi_gmem_AWBURST(grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_AWBURST),
+    .m_axi_gmem_AWLOCK(grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_AWLOCK),
+    .m_axi_gmem_AWCACHE(grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_AWCACHE),
+    .m_axi_gmem_AWPROT(grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_AWPROT),
+    .m_axi_gmem_AWQOS(grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_AWQOS),
+    .m_axi_gmem_AWREGION(grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_AWREGION),
+    .m_axi_gmem_AWUSER(grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_AWUSER),
+    .m_axi_gmem_WVALID(grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_WVALID),
     .m_axi_gmem_WREADY(gmem_WREADY),
-    .m_axi_gmem_WDATA(grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_WDATA),
-    .m_axi_gmem_WSTRB(grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_WSTRB),
-    .m_axi_gmem_WLAST(grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_WLAST),
-    .m_axi_gmem_WID(grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_WID),
-    .m_axi_gmem_WUSER(grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_WUSER),
-    .m_axi_gmem_ARVALID(grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_ARVALID),
+    .m_axi_gmem_WDATA(grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_WDATA),
+    .m_axi_gmem_WSTRB(grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_WSTRB),
+    .m_axi_gmem_WLAST(grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_WLAST),
+    .m_axi_gmem_WID(grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_WID),
+    .m_axi_gmem_WUSER(grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_WUSER),
+    .m_axi_gmem_ARVALID(grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_ARVALID),
     .m_axi_gmem_ARREADY(gmem_ARREADY),
-    .m_axi_gmem_ARADDR(grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_ARADDR),
-    .m_axi_gmem_ARID(grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_ARID),
-    .m_axi_gmem_ARLEN(grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_ARLEN),
-    .m_axi_gmem_ARSIZE(grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_ARSIZE),
-    .m_axi_gmem_ARBURST(grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_ARBURST),
-    .m_axi_gmem_ARLOCK(grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_ARLOCK),
-    .m_axi_gmem_ARCACHE(grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_ARCACHE),
-    .m_axi_gmem_ARPROT(grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_ARPROT),
-    .m_axi_gmem_ARQOS(grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_ARQOS),
-    .m_axi_gmem_ARREGION(grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_ARREGION),
-    .m_axi_gmem_ARUSER(grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_ARUSER),
+    .m_axi_gmem_ARADDR(grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_ARADDR),
+    .m_axi_gmem_ARID(grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_ARID),
+    .m_axi_gmem_ARLEN(grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_ARLEN),
+    .m_axi_gmem_ARSIZE(grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_ARSIZE),
+    .m_axi_gmem_ARBURST(grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_ARBURST),
+    .m_axi_gmem_ARLOCK(grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_ARLOCK),
+    .m_axi_gmem_ARCACHE(grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_ARCACHE),
+    .m_axi_gmem_ARPROT(grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_ARPROT),
+    .m_axi_gmem_ARQOS(grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_ARQOS),
+    .m_axi_gmem_ARREGION(grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_ARREGION),
+    .m_axi_gmem_ARUSER(grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_ARUSER),
     .m_axi_gmem_RVALID(gmem_RVALID),
-    .m_axi_gmem_RREADY(grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_RREADY),
+    .m_axi_gmem_RREADY(grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_RREADY),
     .m_axi_gmem_RDATA(gmem_RDATA),
     .m_axi_gmem_RLAST(1'b0),
     .m_axi_gmem_RID(1'd0),
@@ -732,12 +732,12 @@ equalizer_equalizer_Pipeline_VITIS_LOOP_48_1 grp_equalizer_Pipeline_VITIS_LOOP_4
     .m_axi_gmem_RUSER(1'd0),
     .m_axi_gmem_RRESP(2'd0),
     .m_axi_gmem_BVALID(gmem_BVALID),
-    .m_axi_gmem_BREADY(grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_BREADY),
+    .m_axi_gmem_BREADY(grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_BREADY),
     .m_axi_gmem_BRESP(2'd0),
     .m_axi_gmem_BID(1'd0),
     .m_axi_gmem_BUSER(1'd0),
     .input_r_TDATA(input_r_TDATA_int_regslice),
-    .input_r_TREADY(grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_input_r_TREADY),
+    .input_r_TREADY(grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_input_r_TREADY),
     .input_r_TKEEP(input_r_TKEEP_int_regslice),
     .input_r_TSTRB(input_r_TSTRB_int_regslice),
     .input_r_TUSER(input_r_TUSER_int_regslice),
@@ -746,10 +746,10 @@ equalizer_equalizer_Pipeline_VITIS_LOOP_48_1 grp_equalizer_Pipeline_VITIS_LOOP_4
     .input_r_TDEST(input_r_TDEST_int_regslice),
     .coef_scale(coef_scale_reg_343),
     .coefs(coefs_read_reg_657),
-    .grp_fu_527_p_din0(grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_grp_fu_527_p_din0),
-    .grp_fu_527_p_din1(grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_grp_fu_527_p_din1),
+    .grp_fu_527_p_din0(grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_grp_fu_527_p_din0),
+    .grp_fu_527_p_din1(grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_grp_fu_527_p_din1),
     .grp_fu_527_p_dout0(grp_fu_527_p2),
-    .grp_fu_527_p_ce(grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_grp_fu_527_p_ce)
+    .grp_fu_527_p_ce(grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_grp_fu_527_p_ce)
 );
 
 equalizer_control_s_axi #(
@@ -1114,12 +1114,12 @@ end
 
 always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
-        grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_ap_start_reg <= 1'b0;
+        grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_ap_start_reg <= 1'b0;
     end else begin
-        if (((icmp_ln45_fu_569_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state17))) begin
-            grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_ap_start_reg <= 1'b1;
-        end else if ((grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_ap_ready == 1'b1)) begin
-            grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_ap_start_reg <= 1'b0;
+        if (((icmp_ln54_fu_569_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state17))) begin
+            grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_ap_start_reg <= 1'b1;
+        end else if ((grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_ap_ready == 1'b1)) begin
+            grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_ap_start_reg <= 1'b0;
         end
     end
 end
@@ -1136,7 +1136,7 @@ always @ (posedge ap_clk) begin
     if (((grp_equalizer_Pipeline_Coef_Clear_Loop_fu_396_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state16))) begin
         j_reg_332 <= 2'd0;
     end else if (((input_r_TVALID_int_regslice == 1'b1) & (1'b1 == ap_CS_fsm_state19))) begin
-        j_reg_332 <= add_ln45_reg_770;
+        j_reg_332 <= add_ln54_reg_770;
     end
 end
 
@@ -1165,7 +1165,7 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((icmp_ln45_fu_569_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state17))) begin
+    if (((icmp_ln54_fu_569_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state17))) begin
         tmp_data_V_2_reg_376 <= coef_scale_reg_343;
     end else if (((input_r_TVALID_int_regslice == 1'b1) & (read_coefs_load_load_fu_505_p1 == 1'd1) & (1'b1 == ap_CS_fsm_state2) & (state_1_load_fu_482_p1 == 32'd16))) begin
         tmp_data_V_2_reg_376 <= input_r_TDATA_int_regslice;
@@ -1205,7 +1205,7 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((icmp_ln45_fu_569_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state17))) begin
+    if (((icmp_ln54_fu_569_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state17))) begin
         tmp_last_V_1_reg_365 <= p_4_0_0_0132_phi_reg_353;
     end else if (((input_r_TVALID_int_regslice == 1'b1) & (read_coefs_load_load_fu_505_p1 == 1'd1) & (1'b1 == ap_CS_fsm_state2) & (state_1_load_fu_482_p1 == 32'd16))) begin
         tmp_last_V_1_reg_365 <= input_r_TLAST_int_regslice;
@@ -1236,14 +1236,14 @@ end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state17)) begin
-        add_ln45_reg_770 <= add_ln45_fu_575_p2;
+        add_ln54_reg_770 <= add_ln54_fu_575_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state1)) begin
         coefs_read_reg_657 <= coefs;
-        gmem_addr_reg_670 <= sext_ln76_fu_444_p1;
+        gmem_addr_reg_670 <= sext_ln88_fu_444_p1;
     end
 end
 
@@ -1255,7 +1255,7 @@ end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state13)) begin
-        mul_ln76_reg_755 <= grp_fu_527_p2;
+        mul_ln88_reg_755 <= grp_fu_527_p2;
     end
 end
 
@@ -1331,7 +1331,7 @@ end
 assign ap_ST_fsm_state17_blk = 1'b0;
 
 always @ (*) begin
-    if ((grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_ap_done == 1'b0)) begin
+    if ((grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_ap_done == 1'b0)) begin
         ap_ST_fsm_state18_blk = 1'b1;
     end else begin
         ap_ST_fsm_state18_blk = 1'b0;
@@ -1443,8 +1443,8 @@ end
 always @ (*) begin
     if (((gmem_ARREADY == 1'b1) & (1'b1 == ap_CS_fsm_state4))) begin
         gmem_ARADDR = gmem_addr_reg_670;
-    end else if (((1'b1 == ap_CS_fsm_state18) | ((icmp_ln45_fu_569_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state17)))) begin
-        gmem_ARADDR = grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_ARADDR;
+    end else if (((1'b1 == ap_CS_fsm_state18) | ((icmp_ln54_fu_569_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state17)))) begin
+        gmem_ARADDR = grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_ARADDR;
     end else if (((1'b1 == ap_CS_fsm_state3) | ((1'b1 == ap_CS_fsm_state2) & (state_1_load_fu_482_p1 == 32'd256)))) begin
         gmem_ARADDR = grp_equalizer_Pipeline_Shift_Accumulate_Loop_fu_386_m_axi_gmem_ARADDR;
     end else begin
@@ -1455,8 +1455,8 @@ end
 always @ (*) begin
     if (((gmem_ARREADY == 1'b1) & (1'b1 == ap_CS_fsm_state4))) begin
         gmem_ARLEN = 32'd1;
-    end else if (((1'b1 == ap_CS_fsm_state18) | ((icmp_ln45_fu_569_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state17)))) begin
-        gmem_ARLEN = grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_ARLEN;
+    end else if (((1'b1 == ap_CS_fsm_state18) | ((icmp_ln54_fu_569_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state17)))) begin
+        gmem_ARLEN = grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_ARLEN;
     end else if (((1'b1 == ap_CS_fsm_state3) | ((1'b1 == ap_CS_fsm_state2) & (state_1_load_fu_482_p1 == 32'd256)))) begin
         gmem_ARLEN = grp_equalizer_Pipeline_Shift_Accumulate_Loop_fu_386_m_axi_gmem_ARLEN;
     end else begin
@@ -1467,8 +1467,8 @@ end
 always @ (*) begin
     if (((gmem_ARREADY == 1'b1) & (1'b1 == ap_CS_fsm_state4))) begin
         gmem_ARVALID = 1'b1;
-    end else if (((1'b1 == ap_CS_fsm_state18) | ((icmp_ln45_fu_569_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state17)))) begin
-        gmem_ARVALID = grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_ARVALID;
+    end else if (((1'b1 == ap_CS_fsm_state18) | ((icmp_ln54_fu_569_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state17)))) begin
+        gmem_ARVALID = grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_ARVALID;
     end else if (((1'b1 == ap_CS_fsm_state3) | ((1'b1 == ap_CS_fsm_state2) & (state_1_load_fu_482_p1 == 32'd256)))) begin
         gmem_ARVALID = grp_equalizer_Pipeline_Shift_Accumulate_Loop_fu_386_m_axi_gmem_ARVALID;
     end else begin
@@ -1477,8 +1477,8 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state18) | ((icmp_ln45_fu_569_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state17)))) begin
-        gmem_AWADDR = grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_AWADDR;
+    if (((1'b1 == ap_CS_fsm_state18) | ((icmp_ln54_fu_569_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state17)))) begin
+        gmem_AWADDR = grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_AWADDR;
     end else if (((1'b1 == ap_CS_fsm_state16) | ((read_coefs_load_load_fu_505_p1 == 1'd0) & (1'b1 == ap_CS_fsm_state2) & (state_1_load_fu_482_p1 == 32'd16)))) begin
         gmem_AWADDR = grp_equalizer_Pipeline_Coef_Clear_Loop_fu_396_m_axi_gmem_AWADDR;
     end else begin
@@ -1487,8 +1487,8 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state18) | ((icmp_ln45_fu_569_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state17)))) begin
-        gmem_AWLEN = grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_AWLEN;
+    if (((1'b1 == ap_CS_fsm_state18) | ((icmp_ln54_fu_569_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state17)))) begin
+        gmem_AWLEN = grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_AWLEN;
     end else if (((1'b1 == ap_CS_fsm_state16) | ((read_coefs_load_load_fu_505_p1 == 1'd0) & (1'b1 == ap_CS_fsm_state2) & (state_1_load_fu_482_p1 == 32'd16)))) begin
         gmem_AWLEN = grp_equalizer_Pipeline_Coef_Clear_Loop_fu_396_m_axi_gmem_AWLEN;
     end else begin
@@ -1497,8 +1497,8 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state18) | ((icmp_ln45_fu_569_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state17)))) begin
-        gmem_AWVALID = grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_AWVALID;
+    if (((1'b1 == ap_CS_fsm_state18) | ((icmp_ln54_fu_569_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state17)))) begin
+        gmem_AWVALID = grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_AWVALID;
     end else if (((1'b1 == ap_CS_fsm_state16) | ((read_coefs_load_load_fu_505_p1 == 1'd0) & (1'b1 == ap_CS_fsm_state2) & (state_1_load_fu_482_p1 == 32'd16)))) begin
         gmem_AWVALID = grp_equalizer_Pipeline_Coef_Clear_Loop_fu_396_m_axi_gmem_AWVALID;
     end else begin
@@ -1507,8 +1507,8 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state18) | ((icmp_ln45_fu_569_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state17)))) begin
-        gmem_BREADY = grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_BREADY;
+    if (((1'b1 == ap_CS_fsm_state18) | ((icmp_ln54_fu_569_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state17)))) begin
+        gmem_BREADY = grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_BREADY;
     end else if (((1'b1 == ap_CS_fsm_state16) | ((read_coefs_load_load_fu_505_p1 == 1'd0) & (1'b1 == ap_CS_fsm_state2) & (state_1_load_fu_482_p1 == 32'd16)))) begin
         gmem_BREADY = grp_equalizer_Pipeline_Coef_Clear_Loop_fu_396_m_axi_gmem_BREADY;
     end else begin
@@ -1519,8 +1519,8 @@ end
 always @ (*) begin
     if (((gmem_RVALID == 1'b1) & (1'b1 == ap_CS_fsm_state11))) begin
         gmem_RREADY = 1'b1;
-    end else if (((1'b1 == ap_CS_fsm_state18) | ((icmp_ln45_fu_569_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state17)))) begin
-        gmem_RREADY = grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_RREADY;
+    end else if (((1'b1 == ap_CS_fsm_state18) | ((icmp_ln54_fu_569_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state17)))) begin
+        gmem_RREADY = grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_RREADY;
     end else if (((1'b1 == ap_CS_fsm_state3) | ((1'b1 == ap_CS_fsm_state2) & (state_1_load_fu_482_p1 == 32'd256)))) begin
         gmem_RREADY = grp_equalizer_Pipeline_Shift_Accumulate_Loop_fu_386_m_axi_gmem_RREADY;
     end else begin
@@ -1529,8 +1529,8 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state18) | ((icmp_ln45_fu_569_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state17)))) begin
-        gmem_WDATA = grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_WDATA;
+    if (((1'b1 == ap_CS_fsm_state18) | ((icmp_ln54_fu_569_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state17)))) begin
+        gmem_WDATA = grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_WDATA;
     end else if (((1'b1 == ap_CS_fsm_state16) | ((read_coefs_load_load_fu_505_p1 == 1'd0) & (1'b1 == ap_CS_fsm_state2) & (state_1_load_fu_482_p1 == 32'd16)))) begin
         gmem_WDATA = grp_equalizer_Pipeline_Coef_Clear_Loop_fu_396_m_axi_gmem_WDATA;
     end else begin
@@ -1539,8 +1539,8 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state18) | ((icmp_ln45_fu_569_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state17)))) begin
-        gmem_WSTRB = grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_WSTRB;
+    if (((1'b1 == ap_CS_fsm_state18) | ((icmp_ln54_fu_569_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state17)))) begin
+        gmem_WSTRB = grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_WSTRB;
     end else if (((1'b1 == ap_CS_fsm_state16) | ((read_coefs_load_load_fu_505_p1 == 1'd0) & (1'b1 == ap_CS_fsm_state2) & (state_1_load_fu_482_p1 == 32'd16)))) begin
         gmem_WSTRB = grp_equalizer_Pipeline_Coef_Clear_Loop_fu_396_m_axi_gmem_WSTRB;
     end else begin
@@ -1549,8 +1549,8 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state18) | ((icmp_ln45_fu_569_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state17)))) begin
-        gmem_WVALID = grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_m_axi_gmem_WVALID;
+    if (((1'b1 == ap_CS_fsm_state18) | ((icmp_ln54_fu_569_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state17)))) begin
+        gmem_WVALID = grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_m_axi_gmem_WVALID;
     end else if (((1'b1 == ap_CS_fsm_state16) | ((read_coefs_load_load_fu_505_p1 == 1'd0) & (1'b1 == ap_CS_fsm_state2) & (state_1_load_fu_482_p1 == 32'd16)))) begin
         gmem_WVALID = grp_equalizer_Pipeline_Coef_Clear_Loop_fu_396_m_axi_gmem_WVALID;
     end else begin
@@ -1576,7 +1576,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state18)) begin
-        grp_fu_527_ce = grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_grp_fu_527_p_ce;
+        grp_fu_527_ce = grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_grp_fu_527_p_ce;
     end else if ((1'b1 == ap_CS_fsm_state3)) begin
         grp_fu_527_ce = grp_equalizer_Pipeline_Shift_Accumulate_Loop_fu_386_grp_fu_527_p_ce;
     end else begin
@@ -1586,7 +1586,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state18)) begin
-        grp_fu_527_p0 = grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_grp_fu_527_p_din0;
+        grp_fu_527_p0 = grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_grp_fu_527_p_din0;
     end else if ((1'b1 == ap_CS_fsm_state3)) begin
         grp_fu_527_p0 = grp_equalizer_Pipeline_Shift_Accumulate_Loop_fu_386_grp_fu_527_p_din0;
     end else if ((1'b1 == ap_CS_fsm_state12)) begin
@@ -1598,7 +1598,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state18)) begin
-        grp_fu_527_p1 = grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_grp_fu_527_p_din1;
+        grp_fu_527_p1 = grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_grp_fu_527_p_din1;
     end else if ((1'b1 == ap_CS_fsm_state3)) begin
         grp_fu_527_p1 = grp_equalizer_Pipeline_Shift_Accumulate_Loop_fu_386_grp_fu_527_p_din1;
     end else if ((1'b1 == ap_CS_fsm_state12)) begin
@@ -1620,7 +1620,7 @@ always @ (*) begin
     if ((((input_r_TVALID_int_regslice == 1'b1) & (1'b1 == ap_CS_fsm_state19)) | ((input_r_TVALID_int_regslice == 1'b1) & (1'b1 == ap_CS_fsm_state2)))) begin
         input_r_TREADY_int_regslice = 1'b1;
     end else if ((1'b1 == ap_CS_fsm_state18)) begin
-        input_r_TREADY_int_regslice = grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_input_r_TREADY;
+        input_r_TREADY_int_regslice = grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_input_r_TREADY;
     end else begin
         input_r_TREADY_int_regslice = 1'b0;
     end
@@ -1839,14 +1839,14 @@ always @ (*) begin
             end
         end
         ap_ST_fsm_state17 : begin
-            if (((icmp_ln45_fu_569_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state17))) begin
+            if (((icmp_ln54_fu_569_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state17))) begin
                 ap_NS_fsm = ap_ST_fsm_state20;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state18;
             end
         end
         ap_ST_fsm_state18 : begin
-            if (((grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state18))) begin
+            if (((grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state18))) begin
                 ap_NS_fsm = ap_ST_fsm_state19;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state18;
@@ -1875,9 +1875,9 @@ always @ (*) begin
     endcase
 end
 
-assign accumulate_fu_534_p2 = (mul_ln76_reg_755 + grp_equalizer_Pipeline_Shift_Accumulate_Loop_fu_386_accumulate_out);
+assign accumulate_fu_534_p2 = (mul_ln88_reg_755 + grp_equalizer_Pipeline_Shift_Accumulate_Loop_fu_386_accumulate_out);
 
-assign add_ln45_fu_575_p2 = (j_reg_332 + 2'd1);
+assign add_ln54_fu_575_p2 = (j_reg_332 + 2'd1);
 
 assign ap_CS_fsm_state1 = ap_CS_fsm[32'd0];
 
@@ -1935,17 +1935,17 @@ assign grp_equalizer_Pipeline_Coef_Clear_Loop_fu_396_ap_start = grp_equalizer_Pi
 
 assign grp_equalizer_Pipeline_Shift_Accumulate_Loop_fu_386_ap_start = grp_equalizer_Pipeline_Shift_Accumulate_Loop_fu_386_ap_start_reg;
 
-assign grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_ap_start = grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_403_ap_start_reg;
+assign grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_ap_start = grp_equalizer_Pipeline_VITIS_LOOP_57_1_fu_403_ap_start_reg;
 
 assign grp_fu_430_p1 = input_r_TLAST_int_regslice;
 
-assign icmp_ln31_fu_508_p0 = input_r_TDATA_int_regslice;
+assign icmp_ln35_fu_508_p0 = input_r_TDATA_int_regslice;
 
-assign icmp_ln31_fu_508_p2 = ((icmp_ln31_fu_508_p0 == 32'd48879) ? 1'b1 : 1'b0);
+assign icmp_ln35_fu_508_p2 = ((icmp_ln35_fu_508_p0 == 32'd48879) ? 1'b1 : 1'b0);
 
-assign icmp_ln45_fu_569_p2 = ((j_reg_332 == 2'd3) ? 1'b1 : 1'b0);
+assign icmp_ln54_fu_569_p2 = ((j_reg_332 == 2'd3) ? 1'b1 : 1'b0);
 
-assign icmp_ln61_fu_581_p2 = ((tmp_data_V_2_reg_376 == 32'd43962) ? 1'b1 : 1'b0);
+assign icmp_ln71_fu_581_p2 = ((tmp_data_V_2_reg_376 == 32'd43962) ? 1'b1 : 1'b0);
 
 assign input_r_TREADY = regslice_both_input_r_V_data_V_U_ack_in;
 
@@ -1953,11 +1953,11 @@ assign output_r_TVALID = regslice_both_output_r_V_data_V_U_vld_out;
 
 assign read_coefs_load_load_fu_505_p1 = read_coefs_fu_156;
 
-assign select_ln16_1_fu_587_p3 = ((icmp_ln61_fu_581_p2[0:0] == 1'b1) ? 32'd256 : 32'd16);
+assign select_ln16_1_fu_587_p3 = ((icmp_ln71_fu_581_p2[0:0] == 1'b1) ? 32'd256 : 32'd16);
 
-assign select_ln16_fu_514_p3 = ((icmp_ln31_fu_508_p2[0:0] == 1'b1) ? 32'd16 : 32'd0);
+assign select_ln16_fu_514_p3 = ((icmp_ln35_fu_508_p2[0:0] == 1'b1) ? 32'd16 : 32'd0);
 
-assign sext_ln76_fu_444_p1 = $signed(trunc_ln_fu_434_p4);
+assign sext_ln88_fu_444_p1 = $signed(trunc_ln_fu_434_p4);
 
 assign state_1_load_fu_482_p1 = state_fu_160;
 

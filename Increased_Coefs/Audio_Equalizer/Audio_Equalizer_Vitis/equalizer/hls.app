@@ -27,7 +27,10 @@
         <solution name="solution15" status="inactive"/>
         <solution name="solution16" status="inactive"/>
         <solution name="solution17" status="inactive"/>
-        <solution name="solution18" status="active"/>
+        <solution name="solution18" status="inactive"/>
+        <solution name="solution19" status="inactive"/>
+        <solution name="solution20" status="inactive"/>
+        <solution name="solution21" status="active"/>
     </solutions>
 </project>
 

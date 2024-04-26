@@ -181,7 +181,7 @@ wire    ap_block_state10_pp0_stage0_iter9;
 wire    ap_block_state11_pp0_stage0_iter10;
 wire    ap_block_state12_pp0_stage0_iter11;
 reg    ap_block_pp0_stage0_subdone;
-wire   [0:0] icmp_ln70_fu_138_p2;
+wire   [0:0] icmp_ln82_fu_138_p2;
 reg    ap_condition_exit_pp0_iter0_stage0;
 wire    ap_loop_exit_ready;
 reg    ap_ready_int;
@@ -190,16 +190,16 @@ wire    ap_block_pp0_stage0;
 reg    gmem_blk_n_R;
 reg    ap_block_pp0_stage0_11001;
 reg   [6:0] i_2_reg_238;
-reg   [0:0] icmp_ln70_reg_243;
-reg   [0:0] icmp_ln70_reg_243_pp0_iter1_reg;
-reg   [0:0] icmp_ln70_reg_243_pp0_iter2_reg;
-reg   [0:0] icmp_ln70_reg_243_pp0_iter3_reg;
-reg   [0:0] icmp_ln70_reg_243_pp0_iter4_reg;
-reg   [0:0] icmp_ln70_reg_243_pp0_iter5_reg;
-reg   [0:0] icmp_ln70_reg_243_pp0_iter6_reg;
-reg   [0:0] icmp_ln70_reg_243_pp0_iter7_reg;
-reg   [0:0] icmp_ln70_reg_243_pp0_iter8_reg;
-reg   [0:0] icmp_ln70_reg_243_pp0_iter9_reg;
+reg   [0:0] icmp_ln82_reg_243;
+reg   [0:0] icmp_ln82_reg_243_pp0_iter1_reg;
+reg   [0:0] icmp_ln82_reg_243_pp0_iter2_reg;
+reg   [0:0] icmp_ln82_reg_243_pp0_iter3_reg;
+reg   [0:0] icmp_ln82_reg_243_pp0_iter4_reg;
+reg   [0:0] icmp_ln82_reg_243_pp0_iter5_reg;
+reg   [0:0] icmp_ln82_reg_243_pp0_iter6_reg;
+reg   [0:0] icmp_ln82_reg_243_pp0_iter7_reg;
+reg   [0:0] icmp_ln82_reg_243_pp0_iter8_reg;
+reg   [0:0] icmp_ln82_reg_243_pp0_iter9_reg;
 reg   [63:0] gmem_addr_reg_252;
 reg  signed [31:0] signal_shift_reg_load_reg_258;
 reg  signed [31:0] signal_shift_reg_load_reg_258_pp0_iter2_reg;
@@ -210,20 +210,20 @@ reg  signed [31:0] signal_shift_reg_load_reg_258_pp0_iter6_reg;
 reg  signed [31:0] signal_shift_reg_load_reg_258_pp0_iter7_reg;
 reg  signed [31:0] signal_shift_reg_load_reg_258_pp0_iter8_reg;
 reg  signed [31:0] gmem_addr_read_reg_263;
-reg   [31:0] mul_ln73_reg_268;
-wire   [63:0] zext_ln72_fu_150_p1;
-wire   [63:0] zext_ln70_fu_198_p1;
-wire  signed [63:0] sext_ln73_fu_183_p1;
+reg   [31:0] mul_ln85_reg_268;
+wire   [63:0] zext_ln84_fu_150_p1;
+wire   [63:0] zext_ln82_fu_198_p1;
+wire  signed [63:0] sext_ln85_fu_183_p1;
 reg   [31:0] accumulate_fu_66;
 wire   [31:0] accumulate_1_fu_209_p2;
 wire    ap_loop_init;
 reg   [6:0] i_fu_70;
-wire   [6:0] add_ln72_fu_144_p2;
+wire   [6:0] add_ln84_fu_144_p2;
 reg   [6:0] ap_sig_allocacmp_i_2;
 reg    ap_block_pp0_stage0_01001;
 wire   [8:0] shl_ln_fu_155_p3;
-wire   [63:0] zext_ln73_fu_163_p1;
-wire   [63:0] add_ln73_fu_167_p2;
+wire   [63:0] zext_ln85_fu_163_p1;
+wire   [63:0] add_ln85_fu_167_p2;
 wire   [61:0] trunc_ln1_fu_173_p4;
 reg    grp_fu_202_ce;
 reg    ap_done_reg;
@@ -420,8 +420,8 @@ end
 
 always @ (posedge ap_clk) begin
     if (((1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001))) begin
-        if (((ap_enable_reg_pp0_iter0 == 1'b1) & (icmp_ln70_fu_138_p2 == 1'd0))) begin
-            i_fu_70 <= add_ln72_fu_144_p2;
+        if (((ap_enable_reg_pp0_iter0 == 1'b1) & (icmp_ln82_fu_138_p2 == 1'd0))) begin
+            i_fu_70 <= add_ln84_fu_144_p2;
         end else if ((ap_loop_init == 1'b1)) begin
             i_fu_70 <= 7'd98;
         end
@@ -439,15 +439,15 @@ always @ (posedge ap_clk) begin
         ap_loop_exit_ready_pp0_iter8_reg <= ap_loop_exit_ready_pp0_iter7_reg;
         ap_loop_exit_ready_pp0_iter9_reg <= ap_loop_exit_ready_pp0_iter8_reg;
         gmem_addr_read_reg_263 <= m_axi_gmem_RDATA;
-        icmp_ln70_reg_243_pp0_iter2_reg <= icmp_ln70_reg_243_pp0_iter1_reg;
-        icmp_ln70_reg_243_pp0_iter3_reg <= icmp_ln70_reg_243_pp0_iter2_reg;
-        icmp_ln70_reg_243_pp0_iter4_reg <= icmp_ln70_reg_243_pp0_iter3_reg;
-        icmp_ln70_reg_243_pp0_iter5_reg <= icmp_ln70_reg_243_pp0_iter4_reg;
-        icmp_ln70_reg_243_pp0_iter6_reg <= icmp_ln70_reg_243_pp0_iter5_reg;
-        icmp_ln70_reg_243_pp0_iter7_reg <= icmp_ln70_reg_243_pp0_iter6_reg;
-        icmp_ln70_reg_243_pp0_iter8_reg <= icmp_ln70_reg_243_pp0_iter7_reg;
-        icmp_ln70_reg_243_pp0_iter9_reg <= icmp_ln70_reg_243_pp0_iter8_reg;
-        mul_ln73_reg_268 <= grp_fu_527_p_dout0;
+        icmp_ln82_reg_243_pp0_iter2_reg <= icmp_ln82_reg_243_pp0_iter1_reg;
+        icmp_ln82_reg_243_pp0_iter3_reg <= icmp_ln82_reg_243_pp0_iter2_reg;
+        icmp_ln82_reg_243_pp0_iter4_reg <= icmp_ln82_reg_243_pp0_iter3_reg;
+        icmp_ln82_reg_243_pp0_iter5_reg <= icmp_ln82_reg_243_pp0_iter4_reg;
+        icmp_ln82_reg_243_pp0_iter6_reg <= icmp_ln82_reg_243_pp0_iter5_reg;
+        icmp_ln82_reg_243_pp0_iter7_reg <= icmp_ln82_reg_243_pp0_iter6_reg;
+        icmp_ln82_reg_243_pp0_iter8_reg <= icmp_ln82_reg_243_pp0_iter7_reg;
+        icmp_ln82_reg_243_pp0_iter9_reg <= icmp_ln82_reg_243_pp0_iter8_reg;
+        mul_ln85_reg_268 <= grp_fu_527_p_dout0;
         signal_shift_reg_load_reg_258_pp0_iter2_reg <= signal_shift_reg_load_reg_258;
         signal_shift_reg_load_reg_258_pp0_iter3_reg <= signal_shift_reg_load_reg_258_pp0_iter2_reg;
         signal_shift_reg_load_reg_258_pp0_iter4_reg <= signal_shift_reg_load_reg_258_pp0_iter3_reg;
@@ -463,14 +463,14 @@ always @ (posedge ap_clk) begin
         ap_loop_exit_ready_pp0_iter1_reg <= ap_loop_exit_ready;
         ap_loop_exit_ready_pp0_iter2_reg <= ap_loop_exit_ready_pp0_iter1_reg;
         i_2_reg_238 <= ap_sig_allocacmp_i_2;
-        icmp_ln70_reg_243 <= icmp_ln70_fu_138_p2;
-        icmp_ln70_reg_243_pp0_iter1_reg <= icmp_ln70_reg_243;
+        icmp_ln82_reg_243 <= icmp_ln82_fu_138_p2;
+        icmp_ln82_reg_243_pp0_iter1_reg <= icmp_ln82_reg_243;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b1 == ap_CS_fsm_pp0_stage0) & (icmp_ln70_fu_138_p2 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001))) begin
-        gmem_addr_reg_252 <= sext_ln73_fu_183_p1;
+    if (((1'b1 == ap_CS_fsm_pp0_stage0) & (icmp_ln82_fu_138_p2 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001))) begin
+        gmem_addr_reg_252 <= sext_ln85_fu_183_p1;
     end
 end
 
@@ -481,7 +481,7 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (*) begin
-    if (((icmp_ln70_reg_243_pp0_iter9_reg == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001))) begin
+    if (((icmp_ln82_reg_243_pp0_iter9_reg == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001))) begin
         accumulate_out_ap_vld = 1'b1;
     end else begin
         accumulate_out_ap_vld = 1'b0;
@@ -489,7 +489,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (icmp_ln70_fu_138_p2 == 1'd1) & (1'b0 == ap_block_pp0_stage0_subdone))) begin
+    if (((ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (icmp_ln82_fu_138_p2 == 1'd1) & (1'b0 == ap_block_pp0_stage0_subdone))) begin
         ap_condition_exit_pp0_iter0_stage0 = 1'b1;
     end else begin
         ap_condition_exit_pp0_iter0_stage0 = 1'b0;
@@ -611,13 +611,13 @@ always @ (*) begin
     endcase
 end
 
-assign accumulate_1_fu_209_p2 = (mul_ln73_reg_268 + accumulate_fu_66);
+assign accumulate_1_fu_209_p2 = (mul_ln85_reg_268 + accumulate_fu_66);
 
 assign accumulate_out = accumulate_fu_66;
 
-assign add_ln72_fu_144_p2 = ($signed(ap_sig_allocacmp_i_2) + $signed(7'd127));
+assign add_ln84_fu_144_p2 = ($signed(ap_sig_allocacmp_i_2) + $signed(7'd127));
 
-assign add_ln73_fu_167_p2 = (zext_ln73_fu_163_p1 + coefs);
+assign add_ln85_fu_167_p2 = (zext_ln85_fu_163_p1 + coefs);
 
 assign ap_CS_fsm_pp0_stage0 = ap_CS_fsm[32'd0];
 
@@ -673,7 +673,7 @@ assign grp_fu_527_p_din0 = gmem_addr_read_reg_263;
 
 assign grp_fu_527_p_din1 = signal_shift_reg_load_reg_258_pp0_iter8_reg;
 
-assign icmp_ln70_fu_138_p2 = ((ap_sig_allocacmp_i_2 == 7'd0) ? 1'b1 : 1'b0);
+assign icmp_ln82_fu_138_p2 = ((ap_sig_allocacmp_i_2 == 7'd0) ? 1'b1 : 1'b0);
 
 assign m_axi_gmem_ARADDR = gmem_addr_reg_252;
 
@@ -735,22 +735,22 @@ assign m_axi_gmem_WUSER = 1'd0;
 
 assign m_axi_gmem_WVALID = 1'b0;
 
-assign sext_ln73_fu_183_p1 = $signed(trunc_ln1_fu_173_p4);
+assign sext_ln85_fu_183_p1 = $signed(trunc_ln1_fu_173_p4);
 
 assign shl_ln_fu_155_p3 = {{ap_sig_allocacmp_i_2}, {2'd0}};
 
-assign signal_shift_reg_address0 = zext_ln70_fu_198_p1;
+assign signal_shift_reg_address0 = zext_ln82_fu_198_p1;
 
-assign signal_shift_reg_address1 = zext_ln72_fu_150_p1;
+assign signal_shift_reg_address1 = zext_ln84_fu_150_p1;
 
 assign signal_shift_reg_d0 = signal_shift_reg_q1;
 
-assign trunc_ln1_fu_173_p4 = {{add_ln73_fu_167_p2[63:2]}};
+assign trunc_ln1_fu_173_p4 = {{add_ln85_fu_167_p2[63:2]}};
 
-assign zext_ln70_fu_198_p1 = i_2_reg_238;
+assign zext_ln82_fu_198_p1 = i_2_reg_238;
 
-assign zext_ln72_fu_150_p1 = add_ln72_fu_144_p2;
+assign zext_ln84_fu_150_p1 = add_ln84_fu_144_p2;
 
-assign zext_ln73_fu_163_p1 = shl_ln_fu_155_p3;
+assign zext_ln85_fu_163_p1 = shl_ln_fu_155_p3;
 
 endmodule //equalizer_equalizer_Pipeline_Shift_Accumulate_Loop
