@@ -1,0 +1,182 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_compile -complex-mul-dsp=0
+INFO: [HLS 200-1464] Running solution command: config_compile -pipeline_loops=0
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_compile -pipeline_loops 0 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog 
+INFO: [HLS 200-1510] Running: source ./equalizer/solution16/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name equalizer equalizer 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.037 seconds; current allocated memory: 1.650 GB.
+INFO: [HLS 200-10] Analyzing design file 'equalizer.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 8.193 seconds; current allocated memory: 1.650 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-131] Inlining function 'hls::axis<ap_int<16>, 1ul, 1ul, 1ul>::get_user_ptr()' into 'hls::stream<hls::axis<ap_int<16>, 1ul, 1ul, 1ul>, 0>::read(hls::axis<ap_int<16>, 1ul, 1ul, 1ul>&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h:283:50)
+INFO: [HLS 214-131] Inlining function 'hls::axis<ap_int<16>, 1ul, 1ul, 1ul>::get_dest_ptr()' into 'hls::stream<hls::axis<ap_int<16>, 1ul, 1ul, 1ul>, 0>::read(hls::axis<ap_int<16>, 1ul, 1ul, 1ul>&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h:286:25)
+INFO: [HLS 214-131] Inlining function 'hls::axis<ap_int<16>, 1ul, 1ul, 1ul>::get_id_ptr()' into 'hls::stream<hls::axis<ap_int<16>, 1ul, 1ul, 1ul>, 0>::read(hls::axis<ap_int<16>, 1ul, 1ul, 1ul>&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h:285:67)
+INFO: [HLS 214-131] Inlining function 'hls::axis<ap_int<16>, 1ul, 1ul, 1ul>::get_user_ptr()' into 'hls::stream<hls::axis<ap_int<16>, 1ul, 1ul, 1ul>, 0>::read(hls::axis<ap_int<16>, 1ul, 1ul, 1ul>&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h:285:36)
+INFO: [HLS 214-131] Inlining function 'hls::axis<ap_int<16>, 1ul, 1ul, 1ul>::get_dest_ptr()' into 'hls::stream<hls::axis<ap_int<16>, 1ul, 1ul, 1ul>, 0>::read(hls::axis<ap_int<16>, 1ul, 1ul, 1ul>&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h:284:39)
+INFO: [HLS 214-131] Inlining function 'hls::axis<ap_int<16>, 1ul, 1ul, 1ul>::get_id_ptr()' into 'hls::stream<hls::axis<ap_int<16>, 1ul, 1ul, 1ul>, 0>::read(hls::axis<ap_int<16>, 1ul, 1ul, 1ul>&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h:284:23)
+INFO: [HLS 214-131] Inlining function 'ssdm_int<16, true>::ssdm_int(short)' into 'ap_int_base<16, true>::ap_int_base(int)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:260:67)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<16, true>::ap_int_base(int)' into 'ap_int<16>::ap_int(int)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int.h:179:57)
+INFO: [HLS 214-131] Inlining function 'hls::axis<ap_int<16>, 1ul, 1ul, 1ul>::get_user_ptr()' into 'hls::stream<hls::axis<ap_int<16>, 1ul, 1ul, 1ul>, 0>::write(hls::axis<ap_int<16>, 1ul, 1ul, 1ul> const&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h:304:51)
+INFO: [HLS 214-131] Inlining function 'hls::axis<ap_int<16>, 1ul, 1ul, 1ul>::get_dest_ptr()' into 'hls::stream<hls::axis<ap_int<16>, 1ul, 1ul, 1ul>, 0>::write(hls::axis<ap_int<16>, 1ul, 1ul, 1ul> const&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h:307:26)
+INFO: [HLS 214-131] Inlining function 'hls::axis<ap_int<16>, 1ul, 1ul, 1ul>::get_id_ptr()' into 'hls::stream<hls::axis<ap_int<16>, 1ul, 1ul, 1ul>, 0>::write(hls::axis<ap_int<16>, 1ul, 1ul, 1ul> const&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h:306:68)
+INFO: [HLS 214-131] Inlining function 'hls::axis<ap_int<16>, 1ul, 1ul, 1ul>::get_user_ptr()' into 'hls::stream<hls::axis<ap_int<16>, 1ul, 1ul, 1ul>, 0>::write(hls::axis<ap_int<16>, 1ul, 1ul, 1ul> const&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h:306:37)
+INFO: [HLS 214-131] Inlining function 'hls::axis<ap_int<16>, 1ul, 1ul, 1ul>::get_dest_ptr()' into 'hls::stream<hls::axis<ap_int<16>, 1ul, 1ul, 1ul>, 0>::write(hls::axis<ap_int<16>, 1ul, 1ul, 1ul> const&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h:305:40)
+INFO: [HLS 214-131] Inlining function 'hls::axis<ap_int<16>, 1ul, 1ul, 1ul>::get_id_ptr()' into 'hls::stream<hls::axis<ap_int<16>, 1ul, 1ul, 1ul>, 0>::write(hls::axis<ap_int<16>, 1ul, 1ul, 1ul> const&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h:305:24)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi1ELb0EEC2EDq1_j' into 'ap_int_base<1, false>::ap_int_base(int)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:260:67)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<1, false>::ap_int_base(int)' into 'ap_uint<1>::ap_uint(int)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int.h:333:58)
+INFO: [HLS 214-131] Inlining function 'hls::stream<hls::axis<ap_int<16>, 1ul, 1ul, 1ul>, 0>::read(hls::axis<ap_int<16>, 1ul, 1ul, 1ul>&)' into 'equalizer(hls::stream<hls::axis<ap_int<16>, 1ul, 1ul, 1ul>, 0>&, short*, hls::stream<hls::axis<ap_int<16>, 1ul, 1ul, 1ul>, 0>&)' (equalizer.cpp:27:9)
+INFO: [HLS 214-131] Inlining function 'hls::stream<hls::axis<ap_int<16>, 1ul, 1ul, 1ul>, 0>::write(hls::axis<ap_int<16>, 1ul, 1ul, 1ul> const&)' into 'equalizer(hls::stream<hls::axis<ap_int<16>, 1ul, 1ul, 1ul>, 0>&, short*, hls::stream<hls::axis<ap_int<16>, 1ul, 1ul, 1ul>, 0>&)' (equalizer.cpp:97:9)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<1, false>::operator unsigned long long() const' into 'equalizer(hls::stream<hls::axis<ap_int<16>, 1ul, 1ul, 1ul>, 0>&, short*, hls::stream<hls::axis<ap_int<16>, 1ul, 1ul, 1ul>, 0>&)' (equalizer.cpp:92:7)
+INFO: [HLS 214-131] Inlining function 'hls::stream<hls::axis<ap_int<16>, 1ul, 1ul, 1ul>, 0>::write(hls::axis<ap_int<16>, 1ul, 1ul, 1ul> const&)' into 'equalizer(hls::stream<hls::axis<ap_int<16>, 1ul, 1ul, 1ul>, 0>&, short*, hls::stream<hls::axis<ap_int<16>, 1ul, 1ul, 1ul>, 0>&)' (equalizer.cpp:87:12)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<16, true>::to_int() const' into 'equalizer(hls::stream<hls::axis<ap_int<16>, 1ul, 1ul, 1ul>, 0>&, short*, hls::stream<hls::axis<ap_int<16>, 1ul, 1ul, 1ul>, 0>&)' (equalizer.cpp:77:36)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<16, true>::to_int() const' into 'equalizer(hls::stream<hls::axis<ap_int<16>, 1ul, 1ul, 1ul>, 0>&, short*, hls::stream<hls::axis<ap_int<16>, 1ul, 1ul, 1ul>, 0>&)' (equalizer.cpp:76:28)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<16, true>::to_int() const' into 'equalizer(hls::stream<hls::axis<ap_int<16>, 1ul, 1ul, 1ul>, 0>&, short*, hls::stream<hls::axis<ap_int<16>, 1ul, 1ul, 1ul>, 0>&)' (equalizer.cpp:61:18)
+INFO: [HLS 214-131] Inlining function 'hls::stream<hls::axis<ap_int<16>, 1ul, 1ul, 1ul>, 0>::read(hls::axis<ap_int<16>, 1ul, 1ul, 1ul>&)' into 'equalizer(hls::stream<hls::axis<ap_int<16>, 1ul, 1ul, 1ul>, 0>&, short*, hls::stream<hls::axis<ap_int<16>, 1ul, 1ul, 1ul>, 0>&)' (equalizer.cpp:55:13)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<16, true>::to_int() const' into 'equalizer(hls::stream<hls::axis<ap_int<16>, 1ul, 1ul, 1ul>, 0>&, short*, hls::stream<hls::axis<ap_int<16>, 1ul, 1ul, 1ul>, 0>&)' (equalizer.cpp:52:42)
+INFO: [HLS 214-131] Inlining function 'hls::stream<hls::axis<ap_int<16>, 1ul, 1ul, 1ul>, 0>::read(hls::axis<ap_int<16>, 1ul, 1ul, 1ul>&)' into 'equalizer(hls::stream<hls::axis<ap_int<16>, 1ul, 1ul, 1ul>, 0>&, short*, hls::stream<hls::axis<ap_int<16>, 1ul, 1ul, 1ul>, 0>&)' (equalizer.cpp:50:8)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<16, true>::to_int() const' into 'equalizer(hls::stream<hls::axis<ap_int<16>, 1ul, 1ul, 1ul>, 0>&, short*, hls::stream<hls::axis<ap_int<16>, 1ul, 1ul, 1ul>, 0>&)' (equalizer.cpp:46:29)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<16, true>::to_int() const' into 'equalizer(hls::stream<hls::axis<ap_int<16>, 1ul, 1ul, 1ul>, 0>&, short*, hls::stream<hls::axis<ap_int<16>, 1ul, 1ul, 1ul>, 0>&)' (equalizer.cpp:31:18)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.none.s_struct.ap_int<16>s.i16' into 'equalizer(hls::stream<hls::axis<ap_int<16>, 1ul, 1ul, 1ul>, 0>&, short*, hls::stream<hls::axis<ap_int<16>, 1ul, 1ul, 1ul>, 0>&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h:283:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i1.s_struct.ap_uint<1>s' into 'equalizer(hls::stream<hls::axis<ap_int<16>, 1ul, 1ul, 1ul>, 0>&, short*, hls::stream<hls::axis<ap_int<16>, 1ul, 1ul, 1ul>, 0>&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h:304:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i2.s_struct.ap_uint<2>s' into 'equalizer(hls::stream<hls::axis<ap_int<16>, 1ul, 1ul, 1ul>, 0>&, short*, hls::stream<hls::axis<ap_int<16>, 1ul, 1ul, 1ul>, 0>&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h:304:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i16.s_struct.ap_int<16>s' into 'equalizer(hls::stream<hls::axis<ap_int<16>, 1ul, 1ul, 1ul>, 0>&, short*, hls::stream<hls::axis<ap_int<16>, 1ul, 1ul, 1ul>, 0>&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h:304:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.none.s_struct.ap_uint<1>s.i1' into 'equalizer(hls::stream<hls::axis<ap_int<16>, 1ul, 1ul, 1ul>, 0>&, short*, hls::stream<hls::axis<ap_int<16>, 1ul, 1ul, 1ul>, 0>&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h:283:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.none.s_struct.ap_uint<2>s.i2' into 'equalizer(hls::stream<hls::axis<ap_int<16>, 1ul, 1ul, 1ul>, 0>&, short*, hls::stream<hls::axis<ap_int<16>, 1ul, 1ul, 1ul>, 0>&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h:283:5)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 7.186 seconds; current allocated memory: 1.650 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.007 seconds; current allocated memory: 1.650 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.143 seconds; current allocated memory: 1.650 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.213 seconds; current allocated memory: 1.650 GB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.305 seconds; current allocated memory: 1.650 GB.
+WARNING: [HLS 200-960] Cannot flatten loop 'Coef_Read_Loop' (equalizer.cpp:14:9) in function 'equalizer' the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+WARNING: [HLS 200-960] Cannot flatten loop 'Running_Loop' (equalizer.cpp:17:10) in function 'equalizer' more than one sub loop.
+INFO: [HLS 200-472] Inferring partial write operation for 'signal_shift_reg' (equalizer.cpp:72:22)
+INFO: [HLS 200-472] Inferring partial write operation for 'signal_shift_reg' (equalizer.cpp:77:25)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.285 seconds; current allocated memory: 1.650 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'equalizer' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'equalizer_Pipeline_Shift_Accumulate_Loop' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln73) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'Shift_Accumulate_Loop'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 13, loop 'Shift_Accumulate_Loop'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.305 seconds; current allocated memory: 1.650 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.161 seconds; current allocated memory: 1.650 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'equalizer_Pipeline_Coef_Clear_Loop' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Coef_Clear_Loop'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 8, loop 'Coef_Clear_Loop'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.164 seconds; current allocated memory: 1.650 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.136 seconds; current allocated memory: 1.650 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'equalizer_Pipeline_VITIS_LOOP_48_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln52) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_48_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 17, loop 'VITIS_LOOP_48_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.214 seconds; current allocated memory: 1.650 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.175 seconds; current allocated memory: 1.650 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'equalizer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln76) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.242 seconds; current allocated memory: 1.650 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.238 seconds; current allocated memory: 1.650 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'equalizer_Pipeline_Shift_Accumulate_Loop' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'equalizer_Pipeline_Shift_Accumulate_Loop' pipeline 'Shift_Accumulate_Loop' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_16s_16s_32ns_32_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'equalizer_Pipeline_Shift_Accumulate_Loop'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.214 seconds; current allocated memory: 1.650 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'equalizer_Pipeline_Coef_Clear_Loop' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'equalizer_Pipeline_Coef_Clear_Loop' pipeline 'Coef_Clear_Loop' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'equalizer_Pipeline_Coef_Clear_Loop'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.306 seconds; current allocated memory: 1.650 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'equalizer_Pipeline_VITIS_LOOP_48_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'equalizer_Pipeline_VITIS_LOOP_48_1' pipeline 'VITIS_LOOP_48_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_16s_16s_16ns_16_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'equalizer_Pipeline_VITIS_LOOP_48_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.254 seconds; current allocated memory: 1.650 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'equalizer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'equalizer/gmem' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'equalizer/output_r_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'equalizer/output_r_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'equalizer/output_r_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'equalizer/output_r_V_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'equalizer/output_r_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'equalizer/output_r_V_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'equalizer/output_r_V_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'equalizer/coefs' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'equalizer/input_r_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'equalizer/input_r_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'equalizer/input_r_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'equalizer/input_r_V_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'equalizer/input_r_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'equalizer/input_r_V_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'equalizer/input_r_V_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on function 'equalizer' to 'ap_ctrl_none'.
+INFO: [RTGEN 206-100] Bundling port 'coefs' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_16s_16s_16ns_16_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'equalizer'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.647 seconds; current allocated memory: 1.650 GB.
+INFO: [RTMG 210-278] Implementing memory 'equalizer_signal_shift_reg_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs with power-on initialization.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.745 seconds; current allocated memory: 1.650 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 1.253 seconds; current allocated memory: 1.650 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for equalizer.
+INFO: [VLOG 209-307] Generating Verilog RTL for equalizer.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 136.99 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 4 seconds. CPU system time: 1 seconds. Elapsed time: 22.631 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 13 seconds. Total CPU system time: 3 seconds. Total elapsed time: 29.084 seconds; peak allocated memory: 1.650 GB.

@@ -1,0 +1,39 @@
+{
+	"version": "1.0",
+	"modules": {
+		"equalizer": {
+			"proto_instances": {
+				"grp_equalizer_Pipeline_Coef_Clear_Loop_fu_403/grp_equalizer_Pipeline_Coef_Clear_Loop_fu_403_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_equalizer_Pipeline_Shift_Accumulate_Loop_fu_393/grp_equalizer_Pipeline_Shift_Accumulate_Loop_fu_393_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_410/grp_equalizer_Pipeline_VITIS_LOOP_48_1_fu_410_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				}
+			}
+		}
+	}
+}

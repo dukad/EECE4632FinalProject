@@ -6,9 +6,8 @@ void equalizer(hls::stream<AXI_VAL>& output, coef_t coefs[NUM_COEFS], hls::strea
 #pragma HLS INTERFACE axis register both port=output
 #pragma HLS INTERFACE ap_ctrl_none port=return
 
-	int i = 0;
-	int j = 0;
-	int num_filters = 0;
+	char i = 0;
+	char j = 0;
 
 	acc_t accumulate;
 	data_t data;
@@ -17,8 +16,6 @@ void equalizer(hls::stream<AXI_VAL>& output, coef_t coefs[NUM_COEFS], hls::strea
 	AXI_VAL tmp;
 	AXI_VAL tmp_out;
 	static data_t signal_shift_reg[NUM_COEFS];
-
-	coef_t coefs_2[NUM_COEFS];
 
 	bool running = true;
 	bool read_coefs = false;
@@ -40,8 +37,8 @@ void equalizer(hls::stream<AXI_VAL>& output, coef_t coefs[NUM_COEFS], hls::strea
 				if (!read_coefs){
 					Coef_Clear_Loop:
 					for (i = NUM_COEFS - 1; i >= 0; i--){
+					#pragma HLS PIPELINE
 						coefs[i] = 0;
-						coefs_2[i] = 0;
 					}
 
 					Coef_Read_Loop:
@@ -52,10 +49,7 @@ void equalizer(hls::stream<AXI_VAL>& output, coef_t coefs[NUM_COEFS], hls::strea
 						#pragma HLS PIPELINE
 							input.read(tmp);
 
-							int temporary = tmp.data.to_int();
-
 							coefs[i] += coef_scale * tmp.data.to_int();
-							coefs_2[i] += coef_scale * tmp.data.to_int();
 						}
 
 						input.read(tmp);
@@ -79,8 +73,6 @@ void equalizer(hls::stream<AXI_VAL>& output, coef_t coefs[NUM_COEFS], hls::strea
 					accumulate += signal_shift_reg[i] * coefs[i];
 				}
 
-				int temp = tmp.data.to_int();
-				int first_coef = coefs[0];
 				accumulate += tmp.data.to_int() * coefs[0];
 				signal_shift_reg[0] = tmp.data.to_int();
 
