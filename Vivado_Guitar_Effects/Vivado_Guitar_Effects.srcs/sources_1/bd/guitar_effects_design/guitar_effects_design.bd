@@ -2717,8 +2717,8 @@
       },
       "guitar_effects_0": {
         "vlnv": "xilinx.com:hls:guitar_effects:1.0",
-        "xci_name": "guitar_effects_design_guitar_effects_0_33",
-        "xci_path": "ip\\guitar_effects_design_guitar_effects_0_33\\guitar_effects_design_guitar_effects_0_33.xci",
+        "xci_name": "guitar_effects_design_guitar_effects_0_34",
+        "xci_path": "ip\\guitar_effects_design_guitar_effects_0_34\\guitar_effects_design_guitar_effects_0_34.xci",
         "inst_hier_path": "guitar_effects_0",
         "interface_ports": {
           "m_axi_gmem": {

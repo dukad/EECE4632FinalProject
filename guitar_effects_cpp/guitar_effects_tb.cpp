@@ -20,7 +20,7 @@ int main() {
     hls::stream< ap_axis<32,2,5,6> > inputSignal, outputSignal;
 
     // Control parameters
-    int control = 0b0001; // change based on testing requirements
+    int control = 0b0100; // change based on testing requirements
     int distortion_threshold = 500;
     mult_float distortion_clip_factor = 0.5;
     int compression_min_threshold = 200, compression_max_threshold = 500, compression_zero_threshold = 50;
